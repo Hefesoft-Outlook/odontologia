@@ -1,0 +1,429 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL5" 
+	xmlns:ViewModel="clr-namespace:Cnt.Panacea.Xap.ViewModels" 
+	xmlns:Cnt_Panacea_Xap_Odontologia_Convertidor="clr-namespace:Cnt.Panacea.Xap.Odontologia.Convertidor" 
+    xmlns:Cnt_Panacea_Xap_Odontologia_Clases="clr-namespace:Cnt.Panacea.Xap.Odontologia.Clases" 
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+    xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+	xmlns:ig="http://schemas.infragistics.com/xaml"
+	xmlns:vm="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.Grillas.Wizard_Plan_de_tratamiento.vm" 
+    x:Name="userControl"
+	x:Class="Cnt.Panacea.Xap.Odontologia.UserControlGridPlanTratamientoProcedimientosWizard"
+	mc:Ignorable="d"	
+	DataContext="{Binding Wizard_Plan_Tratamiento, Source={StaticResource Locator}}"
+	d:DesignWidth="2000" d:DesignHeight="800">
+    
+    <UserControl.Resources>
+        <Cnt_Panacea_Xap_Odontologia_Convertidor:ConvertidorEstadoTratamientoFechas x:Key="ConvertidorEstadoTratamientoFechas"/>
+        <Cnt_Panacea_Xap_Odontologia_Clases:ConverterIsEnableProcedimientos x:Key="ConverterIsEnableProcedimientos"/>
+        <Cnt_Panacea_Xap_Odontologia_Convertidor:Convertir_Lista_Procedimientos x:Key="Convertir_Lista_Procedimientos"/>
+        <Cnt_Panacea_Xap_Odontologia_Clases:Convertir_Superficies x:Key="Convertir_Superficies"/>
+        <Storyboard x:Name="StoryboardComprobantesCerrar">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="GridComprobantes">
+                <SplineDoubleKeyFrame KeyTime="0" Value="-1500"/>
+                <SplineDoubleKeyFrame KeyTime="0:0:0.3" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardWizard1">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="StckPnl1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="StckPnl1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <BackEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="StckPnl2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="StckPnl2">
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CircleEase EasingMode="EaseInOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Name="StoryboardWizard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="StckPnl1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="StckPnl1">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleX)" Storyboard.TargetName="StckPnl2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.ScaleY)" Storyboard.TargetName="StckPnl2">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+	    
+
+    <Grid x:Name="LayoutRoot">
+        <Grid Margin="0,-1,0,0">
+            <Grid x:Name="StckPnl1" RenderTransformOrigin="0.5,0.5">
+                <Grid.RenderTransform>
+                    <CompositeTransform/>
+                </Grid.RenderTransform>
+
+
+                <sdk:DataGrid x:Name="dataGrid" Visibility="Collapsed"  Width="200" Height="200" ItemsSource="{Binding Listado}" />
+                
+                <ig:XamGrid x:Name="gridTratamientos" ItemsSource="{Binding Listado}" AutoGenerateColumns="false"  VerticalAlignment="Top" ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                            MaxHeight="200">
+                    <ig:XamGrid.FilteringSettings>
+                        <ig:FilteringSettings AllowFiltering="FilterRowTop" AllowFilterRow="Top" />
+                    </ig:XamGrid.FilteringSettings>
+                    <ig:XamGrid.Columns>
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Cambiar_Convenio, Source={StaticResource publicResource}}" 
+                                           Tag="Plantratamiento" 
+                                           Key="Seleccionar" 
+                                           IsFixed="Left" 
+                                           IsFixable="True" 
+                                           IsFilterable="False"  >
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <HyperlinkButton Name="HyprlnkBttnSeleccionado"  IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                                     Content="{Binding Mensajes.Seleccionar, Source={StaticResource publicResource}}" 
+                                                     VerticalAlignment="Center" 
+                                                     HorizontalAlignment="Left" 
+													 Command="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.cambiarConvenioCommand}"	
+                                                     CommandParameter="{Binding DataContext, ElementName=HyprlnkBttnSeleccionado}"
+                                                     />
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        <ig:TextColumn HeaderText="{Binding Mensajes.Dientes, Source={StaticResource publicResource}}"   Key="Odontograma.codigoSPiezaDental" FilterColumnSettings="{StaticResource FilterColumnSettingsText}" IsFixed="Left" IsFixable="True" />
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Superficie, Source={StaticResource publicResource}}" Key="NombreSuperficie" FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding NombreSuperficie}"/>
+                                </DataTemplate>
+                                
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Procedimientos, Source={StaticResource publicResource}}" Key="ProcedimientoEntity" FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding OdontogramaEntity.Procedimiento.Procedimiento.NombreAlterno}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Especialidad, Source={StaticResource publicResource}}" Tag="Plantratamiento" Key="ProcedimientosEspecialidad" FilterColumnSettings="{StaticResource FilterColumnSettingsText}" IsFilterable="False">
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox Width="120" x:Name="CmbxEspecialidades" 
+                                              IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}"                                               
+                                              ItemsSource="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.ProcedimientosEspecialidad, Mode=OneWay}"                                               
+                                              SelectedValue="{Binding ProcedimientosEspecialidadValor, Mode=TwoWay}"                                                
+                                              DisplayMemberPath="Nombre"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+
+
+
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Tipo_Sesion, Source={StaticResource publicResource}}"  
+                                           Key="OpcionesTratamiento" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsText}" 
+                                           IsFilterable="False">
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox  Width="110" 
+                                               IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                               ItemsSource="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.OpcionTratamiento, Mode=OneWay}" 
+                                               SelectedIndex="1"
+                                               SelectedValue="{Binding OpcionesTratamientoValor, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn  HeaderText="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}" Tag="Plantratamiento" Key="NumeroSesiones" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}" IsFilterable="false">
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox Width="60" 
+                                              IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                              ItemsSource="{Binding NumeroSesiones}" 
+                                              SelectedValue="{Binding OdontogramaEntity.PlanTratamiento.NumeroSesion, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Numero_Sesiones, Source={StaticResource publicResource}}" Tag="Plantratamiento" Key="NumeroSesionesProcedimiento" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBox IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                             Text="{Binding NumeroSesionesProcedimiento, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TextColumn HeaderText="Sesiones" Key="SesionesProcedimiento" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}"/>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Valor_Procedimiento, Source={StaticResource publicResource}}" Tag="Plantratamiento" Key="ValorProcedimiento" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}">
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding OdontogramaEntity.PlanTratamiento.ValorServicio, Mode=TwoWay, StringFormat=\{0:c\}}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Valor_Paciente, Source={StaticResource publicResource}}" Tag="Plantratamiento" Key="ValorPaciente" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}">
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding OdontogramaEntity.PlanTratamiento.ValorPaciente, Mode=TwoWay, StringFormat=\{0:c\}}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                    </ig:XamGrid.Columns>
+                </ig:XamGrid>
+                <sdk:DataPager PageSize="10" VerticalAlignment="Bottom" Source="{Binding ItemsSource, ElementName=gridTratamientos}" Margin="0,0,0,714"/>
+                <StackPanel Height="100" Visibility="Collapsed" Margin="0,87,0,0" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Valor total Paciente"/>
+                        <TextBlock x:Name="TxtBlokTotalPaciente" TextWrapping="Wrap" Text="TextBlock" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Valor total procedimientos"/>
+                        <TextBlock x:Name="TxtBlokTotalProcedimiento" TextWrapping="Wrap" Text="TextBlock" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid x:Name="StckPnl2" RenderTransformOrigin="0.5,0.5" >
+                <Grid.RenderTransform>
+                    <CompositeTransform ScaleX="0" ScaleY="0"/>
+                </Grid.RenderTransform>
+
+                <ig:XamGrid x:Name="gridTratamientos1" 
+                            ItemsSource="{Binding Listado}" 
+                            AutoGenerateColumns="false" 
+                            VerticalAlignment="Top" 
+                            ScrollViewer.HorizontalScrollBarVisibility="Visible">
+                    <ig:XamGrid.FilteringSettings>
+                        <ig:FilteringSettings AllowFiltering="FilterRowTop" AllowFilterRow="Top" ScrollViewer.HorizontalScrollBarVisibility="Visible" />
+                    </ig:XamGrid.FilteringSettings>
+                    <ig:XamGrid.Columns>
+                        
+                        <ig:TemplateColumn 
+                            HeaderText="{Binding Mensajes.Cambiar_Convenio, Source={StaticResource publicResource}}" 
+                            Tag="Plantratamiento" 
+                            Key="Seleccionar" 
+                            IsFixed="Left" 
+                            IsFixable="True" 
+                            IsFilterable="False"  >
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <HyperlinkButton Name="HyprlnkBttnSeleccionadoSegundaGrilla"  
+                                                     IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                                     Content="{Binding Mensajes.Seleccionar, Source={StaticResource publicResource}}" 
+                                                     VerticalAlignment="Center" 
+                                                     HorizontalAlignment="Left" 
+													 Command="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.cambiarConvenioCommand}"	
+                                                     CommandParameter="{Binding DataContext, ElementName=HyprlnkBttnSeleccionado}"
+                                                     />
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        
+                        <ig:TextColumn HeaderText="{Binding Mensajes.Dientes, Source={StaticResource publicResource}}"   
+                                       Key="Odontograma.codigoSPiezaDental" 
+                                       FilterColumnSettings="{StaticResource FilterColumnSettingsText}" 
+                                       IsFixed="Left" IsFixable="True" />
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Superficie, Source={StaticResource publicResource}}" Key="NombreSuperficie" FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding NombreSuperficie}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Procedimientos, Source={StaticResource publicResource}}" 
+                                           Key="ProcedimientoEntity" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding OdontogramaEntity.Procedimiento.Procedimiento.NombreAlterno}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Odontologo, Source={StaticResource publicResource}}" 
+                                           Tag="Plantratamiento" 
+                                           Key="OdontologosIps" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsText}" 
+                                           IsFilterable="False" >
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox x:Name="Odontologo" 
+                                              Width="154" 
+                                              IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                              ItemsSource="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                            Path=DataContext.OdontologosIps, Mode=OneWay}" 
+                                              DisplayMemberPath="NombreCompleto" 
+                                              SelectedValue="{Binding OdontologosIpsValor, Mode=TwoWay}">
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="SelectionChanged">
+                                                <cmd:EventToCommand Command="{Binding odontologoSeleccionadoCommand}" 
+                                                                    CommandParameter="{Binding DataContext, ElementName=Odontologo}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+                                    </ComboBox>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        
+                        <ig:TemplateColumn  
+                            HeaderText="{Binding Mensajes.Higienista, Source={StaticResource publicResource}}" 
+                            Tag="Plantratamiento" 
+                            Key="HigienistasIps" 
+                            FilterColumnSettings="{StaticResource FilterColumnSettingsText}" 
+                            IsFilterable="False" >
+                            <ig:TemplateColumn.FilterItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.FilterItemTemplate>
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <ComboBox x:Name="Higienista" Width="154" 
+                                              ItemsSource="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                            Path=DataContext.HigientistasIps, Mode=OneWay}" 
+                                              SelectedItem="{Binding HigienistasIpsValor, Mode=TwoWay}" 
+                                              SelectedValue="{Binding HigienistasIpsValor, Mode=TwoWay}"                                               
+                                              IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}">
+
+                                        <i:Interaction.Triggers>
+                                            <i:EventTrigger EventName="SelectionChanged">
+                                                <cmd:EventToCommand Command="{Binding higienistaSeleccionadoCommand}" 
+                                                                    CommandParameter="{Binding DataContext, ElementName=Higienista}"/>
+                                            </i:EventTrigger>
+                                        </i:Interaction.Triggers>
+
+                                    </ComboBox>
+
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Cobro, Source={StaticResource publicResource}}" 
+                                           Key="Cobra" 
+                                           Tag="Plantratamiento" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsBoolean}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <CheckBox VerticalAlignment="Center" 
+                                              IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" 
+                                              IsChecked="{Binding PlanTratamiento.Cobra}" 
+                                              HorizontalAlignment="Center"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Tercero, Source={StaticResource publicResource}}" 
+                                           Tag="Plantratamiento" 
+                                           Key="PrestadorAtencion.NombreCompleto" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding PrestadorAtencion.NombreCompleto}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                        
+                        <ig:TemplateColumn HeaderText="{Binding Mensajes.Convenio, Source={StaticResource publicResource}}" 
+                                           Tag="Plantratamiento" 
+                                           Key="Convenio" 
+                                           FilterColumnSettings="{StaticResource FilterColumnSettingsText}" >
+                            <ig:TemplateColumn.ItemTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding ConvenioAtencion.Nombre}"/>
+                                </DataTemplate>
+                            </ig:TemplateColumn.ItemTemplate>
+                        </ig:TemplateColumn>
+                    </ig:XamGrid.Columns>
+                    
+                </ig:XamGrid>
+                <sdk:DataPager PageSize="10" VerticalAlignment="Bottom" Source="{Binding ItemsSource, ElementName=gridTratamientos1}" Margin="0,0,0,867"/>
+                <StackPanel Height="100" Visibility="Collapsed" Margin="0,79,0,0" VerticalAlignment="Top">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Total_Procedimientos, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Name="TxtBlokTotalPaciente1" TextWrapping="Wrap" Text="TextBlock" Margin="10,0,0,0"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock TextWrapping="Wrap" Text="Valor total procedimientos"/>
+                        <TextBlock x:Name="TxtBlokTotalProcedimiento1" TextWrapping="Wrap" Text="TextBlock" Margin="10,0,0,0"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+
+</UserControl>

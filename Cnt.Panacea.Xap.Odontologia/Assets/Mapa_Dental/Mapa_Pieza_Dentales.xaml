@@ -1,0 +1,126 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" 
+	xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+	xmlns:local="clr-namespace:Cnt.Panacea.Xap.Odontologia" 
+	xmlns:Convertidor="clr-namespace:Cnt.Panacea.Xap.Odontologia.Convertidor" 
+	xmlns:Clases="clr-namespace:Cnt.Panacea.Xap.Odontologia.Clases" 
+	xmlns:Assets="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets" 
+	xmlns:RelativeSourceBindingDemo="clr-namespace:RelativeSourceBindingDemo" 
+	xmlns:Custom="http://www.galasoft.ch/mvvmlight" 
+	xmlns:System="clr-namespace:System;assembly=mscorlib"
+	xmlns:VM="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM"
+	xmlns:Pieza_Dental="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental"
+	xmlns:toolkit="http://schemas.microsoft.com/winfx/2006/xaml/presentation/toolkit"
+	xmlns:Behaviors="clr-namespace:Behaviors"
+	mc:Ignorable="d"
+	x:Class="Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.Mapa_Pieza_Dentales"
+	DataContext="{Binding Mapa_dental, Source={StaticResource Locator}}"
+	d:DesignWidth="892" d:DesignHeight="500">
+
+	<UserControl.Resources>
+	
+
+		<DataTemplate x:Key="DataTemplate">
+			<Viewbox x:Name="ViewBox" d:DesignWidth="47" d:DesignHeight="71.333" Height="88" Width="70" OpacityMask="Black" Cursor="Hand">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="MouseRightButtonUp">
+						<Custom:EventToCommand CommandParameter="{Binding DataContext, ElementName=ViewBox}"
+						Command="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.clickDerechoContenedorPiezaDentalCommand}"
+						/>
+					</i:EventTrigger>
+
+                    <i:EventTrigger EventName="ViewBox_MouseLeftButtonUp">
+                        <Custom:EventToCommand CommandParameter="{Binding DataContext, ElementName=ViewBox}"
+						Command="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.mostrarProcedimientosEvolucionCommand}"
+						/>
+                    </i:EventTrigger>
+
+                </i:Interaction.Triggers>
+				<StackPanel x:Name="stackPanel">
+					<HyperlinkButton x:Name="hyperlinkButton" Content="{Binding codigoSPiezaDental}" 
+					HorizontalAlignment="Center" Margin="0,0,0,5"
+					Command="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.clickNumeroSuperficieCommand}" CommandParameter="{Binding DataContext, ElementName=hyperlinkButton}"
+					/>
+					<Viewbox x:Name="grid" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" Margin="{Binding Margen}" >
+						<Viewbox.RenderTransform>
+							<CompositeTransform/>
+						</Viewbox.RenderTransform>
+						<Grid Height="30" Width="30">
+							<local:SuperficieCompleta Margin="1,-5,0,-2"/>
+						</Grid>
+					</Viewbox>
+				</StackPanel>
+			</Viewbox>
+		</DataTemplate>
+		
+		<ItemsPanelTemplate x:Key="ItemsPanelTemplateContainer">
+			<toolkit:WrapPanel>
+				<i:Interaction.Behaviors>
+					<ei:FluidMoveBehavior AppliesTo="Children"/>
+					<Behaviors:MagnifierOverBehavior activo="{Binding  RelativeSource={RelativeSource AncestorType=UserControl},
+                                                           Path=DataContext.Lupa_Activa}"/>
+				</i:Interaction.Behaviors>
+			</toolkit:WrapPanel>
+		</ItemsPanelTemplate>
+	</UserControl.Resources>
+
+	
+
+	<Grid x:Name="LayoutRoot">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="11*"/>
+			<RowDefinition Height="239*"/>
+		</Grid.RowDefinitions>
+		<Rectangle HorizontalAlignment="Left" Width="19" Margin="5,33.975,0,16" Grid.Row="1"/>
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+			<CheckBox x:Name="checkBox" Content="{Binding Mensajes.Deshacer, Source={StaticResource publicResource}}" VerticalAlignment="Top" IsChecked="{Binding EstadoAplicarDeshacer, Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,0,10,0">
+				<i:Interaction.Triggers>
+					<i:EventTrigger EventName="Click">
+						<Custom:EventToCommand Command="{Binding DeshacerCommand}" CommandParameter="{Binding IsChecked, ElementName=checkBox}"/>
+					</i:EventTrigger>
+				</i:Interaction.Triggers>
+			</CheckBox>
+			<CheckBox Content="Lupa" IsChecked="{Binding Lupa_Activa, Mode=TwoWay}" Margin="0,0,10,0"/>
+			<HyperlinkButton x:Name="VerImagenes" Command="{Binding verImagenesCommand}" Content="{Binding Mensajes.Ver_Imagenes, Source={StaticResource publicResource}}" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0">				
+			</HyperlinkButton>
+			<HyperlinkButton x:Name="AdjuntarImagenes" Content="{Binding Mensajes.Adjuntar_Imagenes, Source={StaticResource publicResource}}" HorizontalAlignment="Right" Command="{Binding AdjuntarImagenCommand}" VerticalAlignment="Top" Margin="0,0,10,0"/>
+            <HyperlinkButton x:Name="HyprlnkBttnImprimir" Content="{Binding Mensajes.Imprimir, Source={StaticResource publicResource}}"  HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,10,0" Command="{Binding imprimirCommand}"/>
+		</StackPanel>
+		<StackPanel Orientation="Vertical" Grid.Row="1">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="500*"/>
+					<ColumnDefinition Width="500*"/>
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="25*"/>
+					<RowDefinition Height="25*"/>
+					<RowDefinition Height="25*"/>
+					<RowDefinition Height="25*"/>
+				</Grid.RowDefinitions>
+				<ListBox x:Name="listBox1" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte1, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" HorizontalAlignment="Right" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox2" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte2, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" Grid.Column="1" HorizontalAlignment="Left" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox3" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte3, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox4" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte4, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" Grid.Row="1" HorizontalAlignment="Right" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox5" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte5, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" Grid.Row="2" HorizontalAlignment="Right" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox6" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte6, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" HorizontalAlignment="Left"  Grid.Column="2" Grid.Row="2" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox x:Name="listBox7" ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte7, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" HorizontalAlignment="Right"  Grid.Row="3" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+				<ListBox ItemTemplate="{StaticResource DataTemplate}" ItemsSource="{Binding LstOdontogramaParte8, Mode=TwoWay}" SelectedItem="{Binding LstSeleccionado, Mode=TwoWay}" HorizontalAlignment="Left"  Grid.Column="1" Grid.Row="3" ItemsPanel="{StaticResource ItemsPanelTemplateContainer}"/>
+			</Grid>
+			<StackPanel Orientation="Horizontal" Margin="0,30,0,0" VerticalAlignment="Center" HorizontalAlignment="Center">
+				<local:Boca x:Name="Boca"/>
+				<local:Pieza_Seleccionada x:Name="Seleccionado" Margin="100,0,0,0"/>
+			</StackPanel>
+		</StackPanel>
+
+        <TextBlock x:Name="TxtBlckTipoOdontograma" Text="{Binding Texto_Modo_Actual}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center"/>
+        
+	</Grid>
+</UserControl>

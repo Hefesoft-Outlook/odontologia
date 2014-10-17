@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C41C8CBB-B458-4567-8834-89516213D2CE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnt.Panacea.Xap.Odontologia.Vm</RootNamespace>
+    <AssemblyName>Cnt.Panacea.Xap.Odontologia.Vm</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile154</TargetFrameworkProfile>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>panacea.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Adjuntar\vm\vm.cs" />
+    <Compile Include="Boca\Boca.cs" />
+    <Compile Include="Bodega\Bodega.cs" />
+    <Compile Include="Contenedor\vm.cs" />
+    <Compile Include="Contexto\Contexto_Odontologia.cs" />
+    <Compile Include="Convenio\vm.cs" />
+    <Compile Include="Datos de prueba\Paleta.cs" />
+    <Compile Include="Diagnosticos Procedimientos\Tiene_Diagnosticos.cs" />
+    <Compile Include="Estaticas\Variables_Globales.cs" />
+    <Compile Include="Extensiones\Clases\ConfigurarDiagnosticoProcedimOtraEntity_Extend.cs" />
+    <Compile Include="Extensiones\Clases\DiagnosticoProcedimiento_Extend.cs" />
+    <Compile Include="Extensiones\Collection.cs" />
+    <Compile Include="Extensiones\EnumHelper.cs" />
+    <Compile Include="Extensiones\Nomenclatura.cs" />
+    <Compile Include="Extensiones\Numero_Sessiones.cs" />
+    <Compile Include="Extensiones\Odontograma_Entity.cs" />
+    <Compile Include="Grillas\Evolucion\Grid_Evolucion.cs" />
+    <Compile Include="Grillas\Evolucion\Util\ProcedimientosGrillaEvolucion.cs" />
+    <Compile Include="Grillas\General\Pedir_Datos_Grilla_Plan_Tratamiento.cs" />
+    <Compile Include="Grillas\Inicial\vm.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Listado_Procedimientos.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Vm.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Wizard.cs" />
+    <Compile Include="Mapa Dental\util\listado.cs" />
+    <Compile Include="Mapa Dental\Vm.cs" />
+    <Compile Include="Messenger\Barra\Barra.cs" />
+    <Compile Include="Messenger\Boca\Boca.cs" />
+    <Compile Include="Messenger\Finalizar\Consultar_Usuario_Cierra.cs" />
+    <Compile Include="Messenger\Finalizar\Finalizar.cs" />
+    <Compile Include="Messenger\Guardar\Activar_Elementos.cs" />
+    <Compile Include="Messenger\Guardar\Guardar.cs" />
+    <Compile Include="Messenger\Imagenes\Adjuntar.cs" />
+    <Compile Include="Messenger\Imagenes\Guardar_Imagenes.cs" />
+    <Compile Include="Messenger\Imagenes\listado_Imagenes_Cargadas.cs" />
+    <Compile Include="Messenger\Imprimir\Imprimir.cs" />
+    <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Carga_Odontograma_Inicial.cs" />
+    <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Recalcular_Indices.cs" />
+    <Compile Include="Messenger\Mapa_Dental\Pedir_Pintar_Datos.cs" />
+    <Compile Include="Messenger\Mapa_Dental\Validaciones.cs" />
+    <Compile Include="Messenger\Mensajes\Mostrar_Mensaje_Usuario.cs" />
+    <Compile Include="Messenger\Modo_Lectura\Modo_Lectuta.cs" />
+    <Compile Include="Messenger\Mostrar Ocupado\Busy.cs" />
+    <Compile Include="Messenger\Mostrar Ocupado\Mostrar_Cargando.cs" />
+    <Compile Include="Messenger\Odontograma\Cargar_Odontograma.cs" />
+    <Compile Include="Messenger\Odontograma\Diagnosticos procedimientos\Procedimiento_Realizado.cs" />
+    <Compile Include="Messenger\Odontograma\Estado_DesHacer.cs" />
+    <Compile Include="Messenger\Odontograma\Tipo\Cambiar_Tipo_Odontograma.cs" />
+    <Compile Include="Messenger\Paciente\Cargar_Recursos_Ui.cs" />
+    <Compile Include="Messenger\Paciente\Inicializar_Valor_Paciente.cs" />
+    <Compile Include="Messenger\Paleta\Aplicar_Tratamiento.cs" />
+    <Compile Include="Messenger\Paleta\Cargar_Diagnosticos.cs" />
+    <Compile Include="Messenger\Paleta\cargar_Diagnosticos_Procedimientos.cs" />
+    <Compile Include="Messenger\Paleta\Paleta.cs" />
+    <Compile Include="Messenger\Paleta\Placa Bacteriana\Placa.cs" />
+    <Compile Include="Messenger\PopUp\Cerrar_Pop_Up_Generico.cs" />
+    <Compile Include="Messenger\Pop_Up\Mostrar_Ventana.cs" />
+    <Compile Include="Odontograma\DiagnosticoProcedimiento.cs" />
+    <Compile Include="Odontograma\Odontograma.cs" />
+    <Compile Include="Odontograma\util\Inicializar_Datos.cs" />
+    <Compile Include="Paleta\Vm.cs" />
+    <Compile Include="Pieza Seleccionada\Seleccionado.cs" />
+    <Compile Include="Pieza Seleccionada\vm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Mensajes.Designer.cs" />
+    <Compile Include="Recursos\Mensajes.es-CO.Designer.cs">
+      <DependentUpon>Mensajes.es-CO.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Recursos\Mensajes1.Designer.cs">
+      <DependentUpon>Mensajes.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Recursos\PublicResource.cs" />
+    <Compile Include="Service References\Proxy.cs" />
+    <Compile Include="Servicio\Client.cs" />
+    <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
+    <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
+    <Compile Include="Tipos_Odontograma\Validaciones\Plan_Tratamiento.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Evolucion.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Odontograma_Inicial.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Plan_Tratamiento.cs" />
+    <Compile Include="Util\diagnosticoProcedimiento.cs" />
+    <Compile Include="Util\Evolucion\Convertir_Elementos_Grilla_Plan_Evolucion.cs" />
+    <Compile Include="Util\Evolucion\Finalizar_Tratamiento.cs" />
+    <Compile Include="Util\Imagenes\Imagenes.cs" />
+    <Compile Include="Util\Inicial\GrillaTratamiento.cs" />
+    <Compile Include="Util\Mapa dental\Supernumerario.cs" />
+    <Compile Include="Util\Mapa dental\ui.cs" />
+    <Compile Include="Util\Mapa dental\Validaciones.cs" />
+    <Compile Include="Util\Paleta.cs" />
+    <Compile Include="Util\Plan Tratamiento\PlanTratamientoEstadoNuevoEliminadoModificado.cs" />
+    <Compile Include="Util\Plan Tratamiento\ProcedimientosGrillaPlanTratamiento.cs" />
+    <Compile Include="Util\Plan Tratamiento\Validaciones.cs" />
+    <Compile Include="Util\PopUp\EstadoSobreEscribirAdicionar.cs" />
+    <Compile Include="Util\superficie.cs" />
+    <Compile Include="Util\TipoOdontograma.cs" />
+    <Compile Include="View Model Locator\MainViewModel.cs" />
+    <Compile Include="View Model Locator\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Std.SL">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="panacea.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Messenger\Validaciones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\Mensajes.es-CO.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.es-CO.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\Mensajes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

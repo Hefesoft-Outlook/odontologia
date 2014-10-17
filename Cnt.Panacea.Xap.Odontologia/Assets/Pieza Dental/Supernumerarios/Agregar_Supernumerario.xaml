@@ -1,0 +1,44 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:VM="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM" 
+	x:Class="Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Supernumerarios.Agregar_Supernumerario"
+	d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type=VM:Vm}"
+	
+    mc:Ignorable="d"
+    d:DesignHeight="100" d:DesignWidth="400">
+    
+	
+    
+	<Grid x:Name="LayoutRoot" Background="White">
+		<StackPanel Orientation="Vertical" VerticalAlignment="Center">
+			<StackPanel x:Name="StckPnlIzquierdaDercha" Orientation="Horizontal" HorizontalAlignment="Center">
+				
+                <HyperlinkButton x:Name="hyprlnkBttnIzquierda" Tag="Izquierda" 
+				Content="{Binding Mensajes.Supernumerario_Izquierda, Source={StaticResource publicResource}}" 
+				Command="{Binding agregarSuperNumerarioCommand}" CommandParameter="{Binding Tag, ElementName=hyprlnkBttnIzquierda}" />
+
+                <HyperlinkButton x:Name="hyprlnkBttnDerecha" Tag="Derecha"  
+				Content="{Binding Mensajes.Supernumerario_Derecha, Source={StaticResource publicResource}}"  
+				HorizontalAlignment="Right" 
+				Margin="10,0,0,0"
+				Command="{Binding agregarSuperNumerarioCommand}" CommandParameter="{Binding Tag, ElementName=hyprlnkBttnDerecha}" />
+			</StackPanel>
+			
+			<HyperlinkButton x:Name="HyprlnkBttnEliminar" Tag="Eliminar" 
+			Content="{Binding Mensajes.Eliminar, Source={StaticResource publicResource}}" 
+			VerticalAlignment="Center" 
+			HorizontalAlignment="Center" 
+			Margin="0,10,0,0"
+			Command="{Binding agregarSuperNumerarioCommand}" CommandParameter="{Binding Tag, ElementName=HyprlnkBttnEliminar}" />
+      
+
+
+		</StackPanel>
+      
+
+
+	</Grid>
+</UserControl>

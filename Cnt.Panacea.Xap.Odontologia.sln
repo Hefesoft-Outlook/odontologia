@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderEffectsLibrary", "ShaderEffectsLibrary\ShaderEffectsLibrary.csproj", "{16B96249-BE80-4E21-AE9E-529BFC8964C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cnt.Panacea.Xap.Odontologia.Vm", "Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm.csproj", "{C41C8CBB-B458-4567-8834-89516213D2CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cnt.Panacea.Xap.Odontologia", "Cnt.Panacea.Xap.Odontologia\Cnt.Panacea.Xap.Odontologia.csproj", "{AA69A2F2-3653-411E-9C71-38F67C8ACF11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cnt.Panacea.Xap.Odontologia.Mef.Dlls", "Cnt.Panacea.Xap.Odontologia.Mef.Dlls\Cnt.Panacea.Xap.Odontologia.Mef.Dlls.csproj", "{CD9489EE-CCCA-4385-B967-06D9CE322B77}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.4:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ShaderEffectsLibrary\\ShaderEffectsLibrary.csproj
+		SccProjectName1 = ShaderEffectsLibrary
+		SccLocalPath1 = ShaderEffectsLibrary
+		SccProjectUniqueName2 = Cnt.Panacea.Xap.Odontologia\\Cnt.Panacea.Xap.Odontologia.csproj
+		SccProjectName2 = Cnt.Panacea.Xap.Odontologia
+		SccLocalPath2 = Cnt.Panacea.Xap.Odontologia
+		SccProjectUniqueName3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls\\Cnt.Panacea.Xap.Odontologia.Mef.Dlls.csproj
+		SccProjectName3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls
+		SccLocalPath3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16B96249-BE80-4E21-AE9E-529BFC8964C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16B96249-BE80-4E21-AE9E-529BFC8964C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16B96249-BE80-4E21-AE9E-529BFC8964C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16B96249-BE80-4E21-AE9E-529BFC8964C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C41C8CBB-B458-4567-8834-89516213D2CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C41C8CBB-B458-4567-8834-89516213D2CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C41C8CBB-B458-4567-8834-89516213D2CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C41C8CBB-B458-4567-8834-89516213D2CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA69A2F2-3653-411E-9C71-38F67C8ACF11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA69A2F2-3653-411E-9C71-38F67C8ACF11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA69A2F2-3653-411E-9C71-38F67C8ACF11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA69A2F2-3653-411E-9C71-38F67C8ACF11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD9489EE-CCCA-4385-B967-06D9CE322B77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD9489EE-CCCA-4385-B967-06D9CE322B77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD9489EE-CCCA-4385-B967-06D9CE322B77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD9489EE-CCCA-4385-B967-06D9CE322B77}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

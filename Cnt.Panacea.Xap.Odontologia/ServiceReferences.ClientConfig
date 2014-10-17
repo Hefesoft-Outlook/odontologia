@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <system.serviceModel>
+    <bindings>
+      <customBinding>
+        <binding name="NetTcpBinding_General">
+          <binaryMessageEncoding />
+          <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+        </binding>
+        <binding name="CustomBinding_OdontologiaServicio">
+          <binaryMessageEncoding />
+          <tcpTransport maxReceivedMessageSize="2147483647" maxBufferSize="2147483647" />
+        </binding>
+      </customBinding>
+    </bindings>
+    <client>
+      <endpoint address="net.tcp://localhost:4520/Cnt.Panacea.Web.Host/Silverlight/Parametrizacion.SeguridadServicio.svc"
+        binding="customBinding" bindingConfiguration="NetTcpBinding_General"
+        contract="Parametros.SeguridadServicio" name="NetTcpBinding_SeguridadServicio" />
+      <endpoint address="net.tcp://localhost:4520/Cnt.Panacea.Web.Host/Silverlight/Parametrizacion.ControlesServicio.svc"
+        binding="customBinding" bindingConfiguration="NetTcpBinding_General"
+        contract="Controles.ControlesServicio" name="NetTcpBinding_ControlesServicio" />
+      <endpoint address="net.tcp://localhost:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc"
+        binding="customBinding" bindingConfiguration="NetTcpBinding_General"
+        contract="Proxy.OdontologiaServicio" name="CustomBinding_OdontologiaServicio" />
+    
+  
+    </client>
+    <extensions />
+  </system.serviceModel>
+
+</configuration>

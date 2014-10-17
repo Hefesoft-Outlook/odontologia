@@ -1,0 +1,194 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+	xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Extras.SL5" 
+	xmlns:ViewModel="clr-namespace:Cnt.Panacea.Xap.ViewModels" 
+	xmlns:Cnt_Panacea_Xap_Odontologia_Convertidor="clr-namespace:Cnt.Panacea.Xap.Odontologia.Convertidor" xmlns:Cnt_Panacea_Xap_Odontologia_Clases="clr-namespace:Cnt.Panacea.Xap.Odontologia.Clases" 
+	xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
+	xmlns:ig="http://schemas.infragistics.com/xaml"
+	mc:Ignorable="d"
+	d:DataContext="{d:DesignInstance IsDesignTimeCreatable=True, Type=ViewModel:Odontograma}"
+	x:Class="Cnt.Panacea.Xap.Odontologia.UserControlEvolucionProcedimientos"
+	d:DesignWidth="1004" d:DesignHeight="100">
+
+    <UserControl.Resources>
+        <Cnt_Panacea_Xap_Odontologia_Clases:ConverterIsEnableProcedimientos x:Key="ConverterIsEnableProcedimientos"/>
+        <Cnt_Panacea_Xap_Odontologia_Clases:ConverterIsEnableRealizado x:Key="ConverterIsEnableRealizado"/>
+        <Cnt_Panacea_Xap_Odontologia_Convertidor:Convertidor_Sesiones x:Key="Convertidor_Sesiones"/>
+        <Cnt_Panacea_Xap_Odontologia_Convertidor:Convertir_Lista_Procedimientos x:Key="Convertir_Lista_Procedimientos"/>
+        <Cnt_Panacea_Xap_Odontologia_Clases:Convertir_Superficies x:Key="Convertir_Superficies"/>
+
+
+
+    </UserControl.Resources>
+
+    <Grid x:Name="LayoutRoot">
+        <StackPanel Orientation="Vertical" Margin="0,0,0,-71">
+            <StackPanel Orientation="Horizontal" Margin="0,10">
+                <TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}" HorizontalAlignment="Left"></TextBlock>
+                <ComboBox x:Name="CmbxSesiones" Width="100" SelectedValue="{Binding SesionActualCarga, Mode=TwoWay}" SelectedItem="{Binding SesionActualCarga}" HorizontalAlignment="Left" Margin="10,0,0,0"  ItemsSource="{Binding NumeroSesionesConfiguradas}" SelectionChanged="ComboBox_SelectionChanged"></ComboBox>
+
+            </StackPanel>
+            <ig:XamGrid x:Name="gridTratamientos" AutoGenerateColumns="False"  ScrollViewer.HorizontalScrollBarVisibility="Auto" >
+
+                <ig:XamGrid.FilteringSettings>
+                    <ig:FilteringSettings AllowFiltering="FilterRowTop" AllowFilterRow="Top" />
+                </ig:XamGrid.FilteringSettings>
+
+                <ig:XamGrid.Columns>
+                    <ig:TemplateColumn Key="NombreSuperficieApp" HeaderText="{Binding Mensajes.Insumos, Source={StaticResource publicResource}}" IsFilterable="False" >
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <HyperlinkButton x:Name="HyprlnkBttnBodega" Content="{Binding Mensajes.Bodega, Source={StaticResource publicResource}}" Click="HyprlnkBttnBodega_Click"/>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="Sesion" HeaderText="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}">
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Sesion, Converter={StaticResource Convertidor_Sesiones}}" />
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="Odontograma.codigoSPiezaDental" HeaderText="{Binding Mensajes.Dientes, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsNumeric}"  >
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" />
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="NombreSuperficie"  HeaderText="{Binding Mensajes.Superficie, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsText}">
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding NombreSuperficie}" />
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="ProcedimientoEntity"  HeaderText="{Binding Mensajes.Procedimientos, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsText}">
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding ProcedimientoEntity.Procedimiento.Nombre}" />
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="PlanTratamientoEntity.EstadoProcedimiento"  HeaderText="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsBoolean}" >
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox VerticalAlignment="Center" IsEnabled="True" IsChecked="{Binding PlanTratamientoEntity.EstadoProcedimiento,Mode=TwoWay}" HorizontalAlignment="Center" Checked="CheckBox_Checked_1"/>
+                                <!-- <CheckBox VerticalAlignment="Center" IsEnabled="{Binding PlanTratamientoEntity, Converter={StaticResource ConverterIsEnableRealizado}}" IsChecked="{Binding PlanTratamientoEntity.EstadoProcedimiento,Mode=TwoWay}" HorizontalAlignment="Center"/>-->
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="Legalizado" HeaderText="{Binding Mensajes.Procedimientos_Legalizados, Source={StaticResource publicResource}}" FilterColumnSettings="{StaticResource FilterColumnSettingsBoolean}" >
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <CheckBox VerticalAlignment="Center" IsEnabled="False" IsChecked="{Binding Legalizado}"  HorizontalAlignment="Center"/>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="OdontologosIps" HeaderText="{Binding Mensajes.Odontologo, Source={StaticResource publicResource}}" IsFilterable="False" Visibility="Collapsed" >
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBox Width="154" Height="25" ItemsSource="{Binding OdontologosIps}" DisplayMemberPath="NombreCompleto" SelectedValue="{Binding OdontologosHigienistasIpsValor, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="HigienistasIps" HeaderText="{Binding Mensajes.Higienista, Source={StaticResource publicResource}}" IsFilterable="False" Visibility="Collapsed" >
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBox Width="154" Height="25" ItemsSource="{Binding HigientistasIps}" DisplayMemberPath="NombreCompleto" SelectedValue="{Binding HigientistasIpsValor, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+
+                    <ig:TemplateColumn Key="OdontologosHigienistasIps" HeaderText="{Binding Mensajes.Prestador, Source={StaticResource publicResource}}" IsFilterable="False" Width="160">
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBox Width="150" Height="25" ItemsSource="{Binding OdontologosHigienistasIps}" DisplayMemberPath="NombreCompleto" SelectedValue="{Binding OdontologosHigienistasIpsValor, Mode=TwoWay}"/>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+
+                    <ig:TemplateColumn Key="FinalidadesProcedimiento" HeaderText="{Binding Mensajes.Finalidad_Procedimiento, Source={StaticResource publicResource}}" IsFilterable="False" Width="140" >
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+                        <ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <ComboBox  IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" Width="130" Height="25" ItemsSource="{Binding FinalidadesProcedimiento}" DisplayMemberPath="Descripcion" SelectedValue="{Binding FinalidadesProcedimientoValor, Mode=TwoWay}" />
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                    <ig:TemplateColumn Key="Observaciones"  HeaderText="{Binding Mensajes.Observaciones, Source={StaticResource publicResource}}" Width="265" IsFilterable="False" >
+                        <ig:TemplateColumn.FilterItemTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                </TextBlock>
+                            </DataTemplate>
+                        </ig:TemplateColumn.FilterItemTemplate>
+						<ig:TemplateColumn.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox Height="35" Width="255" AcceptsReturn="True" Text="{Binding PlanTratamientoEntity.Observaciones,Mode=TwoWay}" IsEnabled="{Binding Realizado, Converter={StaticResource ConverterIsEnableProcedimientos}}" VerticalScrollBarVisibility="Visible" TextWrapping="Wrap"></TextBox>
+                            </DataTemplate>
+                        </ig:TemplateColumn.ItemTemplate>
+                    </ig:TemplateColumn>
+                </ig:XamGrid.Columns>
+            </ig:XamGrid>
+            <sdk:DataPager PageSize="10" VerticalAlignment="Bottom" Source="{Binding ItemsSource, ElementName=gridTratamientos}"/>
+        </StackPanel>
+        <Grid Background="White" x:Name="GridComprobantes" Opacity="0.85" Margin="0" HorizontalAlignment="Right" Width="{Binding ActualWidth, ElementName=LayoutRoot}" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Visibility="Collapsed">
+            <Grid.RenderTransform>
+                <CompositeTransform/>
+            </Grid.RenderTransform>
+            <StackPanel Orientation="Vertical">
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <RadioButton Content="Abandonado" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True"/>
+                    <RadioButton Content="Finalizado" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,0,0,0"/>
+                </StackPanel>
+                <TextBox TextWrapping="Wrap" Text="Observaciones" Width="300" Height="50"/>
+                <Button Content="Aceptar" Width="75" VerticalAlignment="Top" Margin="465,10,464,0">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <ei:ChangePropertyAction TargetObject="{Binding ElementName=GridComprobantes}" PropertyName="Visibility">
+                                <ei:ChangePropertyAction.Value>
+                                    <Visibility>Collapsed</Visibility>
+                                </ei:ChangePropertyAction.Value>
+                            </ei:ChangePropertyAction>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+    </Grid>
+</UserControl>

@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AA69A2F2-3653-411E-9C71-38F67C8ACF11}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cnt.Panacea.Xap.Odontologia</RootNamespace>
+    <AssemblyName>Cnt.Panacea.Xap.Odontologia</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Cnt.Panacea.Xap.Odontologia.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Cnt.Panacea.Xap.Odontologia.App</SilverlightAppEntry>
+    <TestPageFileName>Cnt.Panacea.Xap.AsignarCitasTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>true</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>12.0.50716.0</ExpressionBlendVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Release\</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>panacea.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion, Version=0.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Xap.Dinamico.CntToolkit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\..\FinalesCnt\Panacea\Xap\Cnt.Panacea.Xap.Dinamico.CntToolkit.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Xap.Dinamico.Controles, Version=1.0.0.0, Culture=neutral, PublicKeyToken=9d82918e8f2074f1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\..\FinalesCnt\Panacea\Xap\Cnt.Panacea.Xap.Dinamico.Controles.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Xap.Estilos">
+      <HintPath>C:\..\FinalesCnt\Std\Xap\Cnt.Panacea.Xap.Estilos.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cnt.Std.SL">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Cnt.Std.SL.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cnt.Std.Xap">
+      <HintPath>C:\..\FinalesCnt\Std\Xap\Cnt.Std.Xap.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cnt.Std.Xap.Controles">
+      <HintPath>C:\..\FinalesCnt\Std\Xap\Cnt.Std.Xap.Controles.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cnt.Std.Xap.Controles.PropertyGrid">
+      <HintPath>C:\..\FinalesCnt\Std\Xap\Cnt.Std.Xap.Controles.PropertyGrid.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Cnt.Std.Xap.Parser">
+      <HintPath>C:\..\FinalesCnt\Std\Xap\Cnt.Std.Xap.Parser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Devexpress\DevExpress.Data.v10.2.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Layout.v10.2.Core">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Devexpress\DevExpress.Xpf.Layout.v10.2.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="FJ.Core">
+      <HintPath>C:\FinalesCnt\Std\Xap\FJ.Core.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight, Version=4.1.26.28028, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras.SL5, Version=4.1.27.22814, Culture=neutral, PublicKeyToken=e7f91b7703710fe7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\GalaSoft.MvvmLight.Extras.SL5.dll</HintPath>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Editors.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Editors.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Editors.XamColorPicker.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Editors.XamColorPicker.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Editors.XamComboEditor.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Editors.XamComboEditor.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Editors.XamSlider.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Editors.XamSlider.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Grids.XamGrid.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Grids.XamGrid.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Interactions.XamDialogWindow.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Interactions.XamDialogWindow.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.Controls.Lists.XamTileView.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.Controls.Lists.XamTileView.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="InfragisticsSL4.v10.3">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Infragistics\InfragisticsSL4.v10.3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\..\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\Microsoft.CSharp.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Controls">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Microsoft.Expression.Controls.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Interactions">
+      <HintPath>C:\FinalesCnt\Panacea\Xap\Microsoft.Expression.Interactions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\Microsoft.Threading.Tasks.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions.Silverlight">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\Microsoft.Threading.Tasks.Extensions.Silverlight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="silverPDF">
+      <HintPath>C:\FinalesCnt\Std\Xap\silverPDF.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition.Initialization, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.Composition.Initialization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations, Version=5.0.5.0, Culture=neutral, PublicKeyToken=ddd0da4d3e678217, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ComponentModel.DataAnnotations.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.IO, Version=1.5.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=1.5.11.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="system">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.ServiceModel.NetTcp, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.ServiceModel.NetTcp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Sl\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Data.Input, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Data.Input.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Input.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Layout.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Navigation, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Controls.Navigation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Data, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Windows.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Interactivity, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvvmLightLibs.4.1.27.0\lib\SL5\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Browser">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Microsoft SDKs\Silverlight\v5.0\Libraries\Client\System.Xml.Linq.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Adjuntar\Listado_Imagenes.xaml.cs">
+      <DependentUpon>Listado_Imagenes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Control Ext\Virtual_Wrap.cs" />
+    <Compile Include="Assets\Convenios\Cambiar_Convenio.xaml.cs">
+      <DependentUpon>Cambiar_Convenio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Convenios\Vm\vm.cs" />
+    <Compile Include="Assets\Grillas\Evolucion\UserControlEvolucionProcedimientos.xaml.cs">
+      <DependentUpon>UserControlEvolucionProcedimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Inicial\UserControlDiagnosticosOdontogramaInicial.xaml.cs">
+      <DependentUpon>UserControlDiagnosticosOdontogramaInicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Mensajes\Mensaje.xaml.cs">
+      <DependentUpon>Mensaje.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Paleta\elementoMenu.xaml.cs">
+      <DependentUpon>elementoMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Paleta\Paleta.xaml.cs">
+      <DependentUpon>Paleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Abajo.xaml.cs">
+      <DependentUpon>Abajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Arriba.xaml.cs">
+      <DependentUpon>Arriba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Central.xaml.cs">
+      <DependentUpon>Central.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Derecha.xaml.cs">
+      <DependentUpon>Derecha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Inferior.xaml.cs">
+      <DependentUpon>Inferior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Izquierda.xaml.cs">
+      <DependentUpon>Izquierda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Pieza_Seleccionada.xaml.cs">
+      <DependentUpon>Pieza_Seleccionada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Pieza_Seleccionada_Mostrar_Click_Odontograma.xaml.cs">
+      <DependentUpon>Pieza_Seleccionada_Mostrar_Click_Odontograma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Superior.xaml.cs">
+      <DependentUpon>Superior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\Supernumerarios\Agregar_Supernumerario.xaml.cs">
+      <DependentUpon>Agregar_Supernumerario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Contenedor.xaml.cs">
+      <DependentUpon>Contenedor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Generico.xaml.cs">
+      <DependentUpon>Generico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tipos Odontogramas\Evolucion.xaml.cs">
+      <DependentUpon>Evolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tipos Odontogramas\Odontograma_Inicial.xaml.cs">
+      <DependentUpon>Odontograma_Inicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tipos Odontogramas\Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza Dental\UserControlColorDienteCompleto.xaml.cs">
+      <DependentUpon>UserControlColorDienteCompleto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Behaviors\MagnifierOverBehavior.cs" />
+    <Compile Include="Behaviors\Numeric.cs" />
+    <Compile Include="Behaviors\Superficie_Dental_Mouse_Hover.cs" />
+    <Compile Include="Assets\Boca\Boca.xaml.cs">
+      <DependentUpon>Boca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Assets\Valor_Evento.cs" />
+    <Compile Include="Clases\Helpers\Aplicar_A.cs" />
+    <Compile Include="Clases\Helpers\Color_Helper.cs" />
+    <Compile Include="Clases\Helpers\Image_Helper.cs" />
+    <Compile Include="Clases\Helpers\Tipo.cs" />
+    <Compile Include="Assets\Grillas\Plan Tratamiento\UserControlGridPlanTratamientoProcedimientosWizard.xaml.cs">
+      <DependentUpon>UserControlGridPlanTratamientoProcedimientosWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UserControlDiagnosticosOdontogramaInicial.xaml.cs">
+      <DependentUpon>UserControlDiagnosticosOdontogramaInicial.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Convertidor\ConverterIsEnableProcedimientos.cs" />
+    <Compile Include="Clases\Convertir_Superficies.cs" />
+    <Compile Include="Clases\Convertir_Valores_Nulos.cs" />
+    <Compile Include="Clases\GrillaHistorial.cs" />
+    <Compile Include="Clases\EnumHelper.cs" />
+    <Compile Include="Clases\ParametrosInsumos.cs" />
+    <Compile Include="Clases\PlanTratamientoEstadoNuevoEliminadoModificado.cs" />
+    <Compile Include="Clases\ProcedimientosSesion.cs" />
+    <Compile Include="Clases\GrillaProcedimientos.cs" />
+    <Compile Include="Clases\Estado_Aplicar_Tratamiento.cs" />
+    <Compile Include="Clases\GrillaTratamiento.cs" />
+    <Compile Include="Clases\ImageHelper.cs" />
+    <Compile Include="Clases\JpgEncoder.cs" />
+    <Compile Include="Clases\Boca.cs" />
+    <Compile Include="Clases\TipoOdontograma.cs" />
+    <Compile Include="Controles\UserControlEstadoTratamiento.xaml.cs">
+      <DependentUpon>UserControlEstadoTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UserControlEvolucionProcedimientos.xaml.cs">
+      <DependentUpon>UserControlEvolucionProcedimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UserControlGridPlanTratamientoProcedimientos.xaml.cs">
+      <DependentUpon>UserControlGridPlanTratamientoProcedimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Convertidor\ConvertidorEstadoTratamientoFechas.cs" />
+    <Compile Include="Convertidor\Convertidor_Aumento.cs" />
+    <Compile Include="Convertidor\Convertidor_Barra_Progreso.cs" />
+    <Compile Include="Convertidor\Convertidor_Caracteres.cs" />
+    <Compile Include="Convertidor\Convertidor_Color_Fuente.cs" />
+    <Compile Include="Convertidor\Convertidor_Elemento_Habilitado.cs" />
+    <Compile Include="Convertidor\Convertidor_Fuentes.cs" />
+    <Compile Include="Convertidor\Convertidor_Sesiones.cs" />
+    <Compile Include="Convertidor\Convertidor_Superficie_Sana.cs" />
+    <Compile Include="Convertidor\Convertir_Color.cs" />
+    <Compile Include="Convertidor\ConverterColor.cs" />
+    <Compile Include="Convertidor\Convertir_Lista_Diagnosticos.cs" />
+    <Compile Include="Convertidor\Convertir_Lista_Procedimientos.cs" />
+    <Compile Include="Convertidor\ConverterIsEnableRealizado.cs" />
+    <Compile Include="Assets\Mapa_Dental\Mapa_Pieza_Dentales.xaml.cs">
+      <DependentUpon>Mapa_Pieza_Dentales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Autorizacion.xaml.cs">
+      <DependentUpon>Autorizacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Aprueba_Cerrar_Tratamiento.xaml.cs">
+      <DependentUpon>Aprueba_Cerrar_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\SeleccionReporte.xaml.cs">
+      <DependentUpon>SeleccionReporte.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Aprueba_Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Aprueba_Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Bodega.xaml.cs">
+      <DependentUpon>Bodega.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\FinalizarTratamiento.xaml.cs">
+      <DependentUpon>FinalizarTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\MensajeCambioTab.xaml.cs">
+      <DependentUpon>MensajeCambioTab.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Mensaje_Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Mensaje_Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\DetalleModificacion_Eliminacion.xaml.cs">
+      <DependentUpon>DetalleModificacion_Eliminacion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\MensajeConfirmar.xaml.cs">
+      <DependentUpon>MensajeConfirmar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Descargar.xaml.cs">
+      <DependentUpon>Descargar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\MensajeRequiereClasificador.xaml.cs">
+      <DependentUpon>MensajeRequiereClasificador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Observaciones.xaml.cs">
+      <DependentUpon>Observaciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Procedimientos.xaml.cs">
+      <DependentUpon>Procedimientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\ProcedimientosEvolucion.xaml.cs">
+      <DependentUpon>ProcedimientosEvolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\SobreEscribirAdicionar.xaml.cs">
+      <DependentUpon>SobreEscribirAdicionar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Mensajes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\PublicResource.cs" />
+    <Compile Include="Assets\Pieza Dental\SuperficieCompleta.xaml.cs">
+      <DependentUpon>SuperficieCompleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Contenedor\Tipo_Odontogramas.xaml.cs">
+      <DependentUpon>Tipo_Odontogramas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Adjuntar Archivos\Adjuntar.cs" />
+    <Compile Include="Util\Debug\Debugger.cs" />
+    <Compile Include="Util\Grillas\Especialidades.cs" />
+    <Compile Include="Util\Main\Main.dp.Partial.cs" />
+    <Compile Include="Util\Mapa_Dental\Color_Aplica_Tratamiento.cs" />
+    <Compile Include="Util\Mapa_Dental\Diagnostico_Procedimiento.cs" />
+    <Compile Include="Util\Mef\Cargar_Xaps.cs" />
+    <Compile Include="Util\Mef\Pedir_Cargar_Xap.cs" />
+    <Compile Include="Util\Odontograma\OdontogramaEntitycs.cs" />
+    <Compile Include="Util\Pdf\Pdf.cs" />
+    <Compile Include="Util\Plan tratamiento\Numero_Sessiones.cs" />
+    <Compile Include="Util\Procedimientos\Procedimientos.cs" />
+    <Compile Include="ViewModels\MainPageViewModel.cs" />
+    <Compile Include="Assets\Contenedor\Contenedor.xaml.cs">
+      <DependentUpon>Contenedor.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Assets\Odontograma\Odontogramav2.xaml.cs">
+      <DependentUpon>Odontogramav2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tratamientos\PacienteTratamientos.xaml.cs">
+      <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Plan Tratamiento\UserControlGridPlanTratamiento.xaml.cs">
+      <DependentUpon>UserControlGridPlanTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Plan Tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
+      <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\UserControlCargando.xaml.cs">
+      <DependentUpon>UserControlCargando.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Adjuntar\Listado_Imagenes.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Convenios\Cambiar_Convenio.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Grillas\Evolucion\UserControlEvolucionProcedimientos.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Inicial\UserControlDiagnosticosOdontogramaInicial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Mensajes\Mensaje.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Paleta\elementoMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Paleta\Paleta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Abajo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Arriba.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Central.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Derecha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Inferior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Izquierda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Pieza_Seleccionada.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Pieza_Seleccionada_Mostrar_Click_Odontograma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Superior.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\Supernumerarios\Agregar_Supernumerario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Contenedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Generico.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Tipos Odontogramas\Evolucion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Tipos Odontogramas\Odontograma_Inicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Tipos Odontogramas\Plan_Tratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Pieza Dental\UserControlColorDienteCompleto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Boca\Boca.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Plan Tratamiento\UserControlGridPlanTratamientoProcedimientosWizard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UserControlDiagnosticosOdontogramaInicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UserControlEstadoTratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controles\UserControlEvolucionProcedimientos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UserControlGridPlanTratamientoProcedimientos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Mapa_Dental\Mapa_Pieza_Dentales.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\PopUp\Aprueba_Plan_Tratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Autorizacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Bodega.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Aprueba_Cerrar_Tratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\PopUp\FinalizarTratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\PopUp\MensajeCambioTab.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Mensaje_Plan_Tratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\PopUp\DetalleModificacion_Eliminacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\MensajeConfirmar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Descargar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\MensajeRequiereClasificador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Observaciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Procedimientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\ProcedimientosEvolucion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\SeleccionReporte.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\SobreEscribirAdicionar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Resource Include="Assets\Images\59229.png" />
+    <Resource Include="Assets\Images\striped.png" />
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Assets\Pieza Dental\SuperficieCompleta.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Contenedor\Contenedor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Contenedor\Tipo_Odontogramas.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ViewLocator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Odontograma\Odontogramav2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Tratamientos\PacienteTratamientos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Plan Tratamiento\UserControlGridPlanTratamiento.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Plan Tratamiento\UserControlGuardarPlanTratamiento.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\UserControlCargando.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="panacea.snk" />
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\OutOfBrowserSettings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\Mensajes.es-CO.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\Mensajes.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BlendEmbeddedFont Include="Fonts\WINGDNG2.TTF">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\wingding.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\WINGDNG3.TTF">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\Webdings.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+      <Characters>
+      </Characters>
+      <Uppercase>True</Uppercase>
+      <Lowercase>True</Lowercase>
+      <Numbers>True</Numbers>
+      <Punctuation>True</Punctuation>
+    </BlendEmbeddedFont>
+    <Content Include="ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Util\Metodos Extension\" />
+    <Folder Include="Util\Diagnosticos\" />
+    <Folder Include="Util\Validaciones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm.csproj">
+      <Project>{c41c8cbb-b458-4567-8834-89516213d2ce}</Project>
+      <Name>Cnt.Panacea.Xap.Odontologia.Vm</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\ShaderEffectsLibrary\ShaderEffectsLibrary.csproj">
+      <Project>{16b96249-be80-4e21-ae9e-529bfc8964c7}</Project>
+      <Name>ShaderEffectsLibrary</Name>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\Silverlight\v4.0\Microsoft.Expression.Blend.Silverlight.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /y  "$(TargetDir)*.xap" "C:\CNT\Version 1.2\DEV\Web\Cnt.Panacea.Web.Portal\Cnt.Panacea.Web.Portal\ClientBin"
+</PostBuildEvent>
+  </PropertyGroup>
+</Project>

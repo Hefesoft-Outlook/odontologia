@@ -1,0 +1,25 @@
+﻿<controls:ChildWindow 
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" 
+    xmlns:cntCtrl="clr-namespace:Cnt.Std.Xap.Controles;assembly=Cnt.Std.Xap.Controles" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:vm="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.PopUp.vm" 
+    mc:Ignorable="d" 
+    x:Class="Cnt.Panacea.Xap.Odontologia.PopUp.Bodega"        
+    DataContext="{Binding Bodega, Source={StaticResource Locator}}"
+    Title="Bodega">    
+	
+    
+	<Grid x:Name="LayoutRoot" Margin="2">
+		<Grid.RowDefinitions>
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<StackPanel>        
+			<cntCtrl:CntAplicarCanastaView  x:Name="ctrlBodega" IdPaciente="{Binding IdPaciente, Mode=TwoWay}" IdIps="{Binding IdIps, Mode=TwoWay}" IdProcedimiento="{Binding IdPx, Mode=TwoWay}" EstadoControl="{Binding EstadoControl}"
+				AplicacionesCanasta="{Binding AplicacionesCanasta, Mode=TwoWay}"  IdBodega="{Binding IdBodega}"/>
+			<Button x:Name="OKButton" Content="Cancelar" Click="OKButton_Click" Width="75" Height="23" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Grid.Row="1" />
+		</StackPanel>
+	</Grid>
+</controls:ChildWindow>

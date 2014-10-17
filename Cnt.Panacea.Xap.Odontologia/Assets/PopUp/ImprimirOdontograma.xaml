@@ -1,0 +1,629 @@
+﻿<sdk:ChildWindow xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+                      xmlns:reporting="clr-namespace:Cnt.Panacea.Xap.Odontologia.Imprimir;assembly=Cnt.Panacea.Xap.Odontologia.Imprimir"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls" xmlns:my="clr-namespace:Cnt.Panacea.Xap.Odontologia.Views" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk"
+  			  		  xmlns:Cnt_Panacea_Xap_Odontologia_Convertidor="clr-namespace:Cnt.Panacea.Xap.Odontologia.Convertidor" 
+
+           x:Name="childWindow" x:Class="Cnt.Panacea.Xap.Odontologia.PopUp.ImprimirOdontograma" 
+
+           Width="970" mc:Ignorable="d" Height="600"   
+           Background="White">
+	<sdk:ChildWindow.Resources>
+		<Cnt_Panacea_Xap_Odontologia_Convertidor:Convertir_Lista_Procedimientos x:Key="Convertir_Lista_Procedimientos"/>
+		<Cnt_Panacea_Xap_Odontologia_Convertidor:Convertir_Lista_Diagnosticos x:Key="Convertir_Lista_Diagnosticos"/>
+	</sdk:ChildWindow.Resources>
+	<sdk:ChildWindow.Title>
+		<Binding Path="Mensajes.Imprimir" Source="{StaticResource publicResource}"/>
+	</sdk:ChildWindow.Title>
+    <Grid x:Name="LayoutRoot" Margin="2" Width="908">
+        <Grid.RowDefinitions>
+        	<RowDefinition Height="0.87*" />
+        	<RowDefinition Height="0.13*"/>
+        	<RowDefinition Height="Auto" MinHeight="61" />
+        </Grid.RowDefinitions>
+    	<Grid Grid.RowSpan="2">
+    		<Grid x:Name="Grd" Margin="0,44,40,53">
+    			<Grid.RowDefinitions>
+    				<RowDefinition Height="0.156*"/>
+    				<RowDefinition Height="0.844*"/>
+    			</Grid.RowDefinitions>
+    			<Grid.ColumnDefinitions>
+    				<ColumnDefinition Width="0.745*"/>
+    				<ColumnDefinition Width="0.255*"/>
+    			</Grid.ColumnDefinitions>
+    			<Border HorizontalAlignment="Left" Margin="0,1,0,39" MinWidth="300" Grid.Row="1" Width="644" BorderThickness="3" CornerRadius="5" BorderBrush="#FF252323">
+    				<Grid Margin="5">
+    					<Grid x:Name="VwbxOdontograma" RenderTransformOrigin="0.5,0.5">
+    						<i:Interaction.Behaviors>
+    							<ei:MouseDragElementBehavior/>
+    						</i:Interaction.Behaviors>
+                            <!--HRR T19211-->
+                            <!--Source="/Cnt.Panacea.Xap.Odontologia;component/Views/Ejemplo.png"-->
+    						<Image x:Name="ImgOdontograma" Source="../Images/Ejemplo.png" Stretch="UniformToFill" RenderTransformOrigin="0.5,0.5">
+    							<Image.RenderTransform>
+    								<CompositeTransform ScaleX="{Binding Value, ElementName=slider}" ScaleY="{Binding Value, ElementName=slider}" Rotation="{Binding Value, ElementName=sliderRotar}"/>
+    							</Image.RenderTransform>
+    						</Image>
+    					</Grid>
+    					<Canvas HorizontalAlignment="Center" VerticalAlignment="Center">
+    						<Path Data="M303,105 L303,153" Fill="#FF040000" Stretch="Fill" Stroke="Black" StrokeThickness="2" UseLayoutRounding="False" Width="2" Height="50" Canvas.Left="26"/>
+    						<Path Data="M277,128 L330,128" Fill="#FF040000" Height="2" Stretch="Fill" Stroke="Black" StrokeThickness="2" UseLayoutRounding="False" Canvas.Top="23" Width="55"/>
+    					</Canvas>
+    				</Grid>
+    			</Border>
+    			<Rectangle Grid.ColumnSpan="2" Fill="White" Height="149" Grid.Row="1" StrokeThickness="2" VerticalAlignment="Bottom" Margin="-33,0,-70,-114"/>
+    		</Grid>
+    		<Grid Background="White" Margin="0,0,40,0" Height="65" VerticalAlignment="Bottom">
+    			<Slider x:Name="slider" Margin="0,1,0,22" HorizontalAlignment="Left" Width="267" Minimum="1" Maximum="6" Value="1"/>
+    			<Grid d:LayoutOverrides="Height, GridBox" HorizontalAlignment="Right" Width="202" Margin="0,20,10,22" RenderTransformOrigin="0.25,0.391"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="106,0,0,5" TextWrapping="Wrap" Text="{Binding Mensajes.Aumentar, Source={StaticResource publicResource}}" VerticalAlignment="Bottom"/>
+    			<Slider x:Name="sliderRotar" Margin="280,1,321,22" Maximum="180"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="372,0,0,5" TextWrapping="Wrap" Text="{Binding Mensajes.Rotar, Source={StaticResource publicResource}}" VerticalAlignment="Bottom"/>
+    		</Grid>
+    		<Canvas Background="White" Margin="0,6,40,0" Height="30" VerticalAlignment="Top">
+    			<HyperlinkButton x:Name="HyprlnkBttnIMprimir" Content="{Binding Mensajes.Imprimir, Source={StaticResource publicResource}}" Canvas.Left="753" Canvas.Top="444" Click="HyprlnkBttnIMprimir_Click" Width="101" Height="27" FontSize="18.667" FontWeight="Bold"/>
+    		</Canvas>
+
+    		<reporting:Report x:Name="Report"
+    			Title="Plan de tratamiento" Height="33" VerticalAlignment="Top">
+
+    			<reporting:Report.Resources>
+    				<Style x:Key="HeaderText"
+    					TargetType="TextBlock">
+    					<Setter Property="FontWeight"
+    						Value="Bold" />
+    					<Setter Property="TextAlignment"
+    						Value="Left" />
+    					<Setter Property="HorizontalAlignment"
+    						Value="Stretch" />
+    				</Style>
+    			</reporting:Report.Resources>
+
+
+
+    			<reporting:Report.PageHeaderTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 1 1 20">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.RowDefinitions>
+    								<RowDefinition Height="Auto" />
+    								<RowDefinition Height="Auto" />
+    							</Grid.RowDefinitions>
+
+    							<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}"
+    								Grid.Row="0"
+    								FontSize="16"
+    								FontWeight="Bold"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+    							<TextBlock Text="{Binding NombreSuperficie}"
+    								Grid.Row="0"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+
+    							<Grid Grid.Row="1" 
+    								HorizontalAlignment="Stretch"
+    								Margin="4 0 0 4">
+    								<Grid.RowDefinitions>
+    									<RowDefinition Height="Auto" />
+    								</Grid.RowDefinitions>
+    								<Grid.ColumnDefinitions>
+    									<ColumnDefinition Width="200" />
+    									<ColumnDefinition Width="200" />
+    									<ColumnDefinition Width="150" />
+    									<ColumnDefinition Width="150" />
+    								</Grid.ColumnDefinitions>
+
+    								<TextBlock Grid.Column="0"
+    									Style="{StaticResource HeaderText}"
+    									Text="Diente" />
+
+    								<TextBlock Grid.Column="1"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Superficie" />
+
+    								<TextBlock Grid.Column="2"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Diagnostico" />
+
+    								<TextBlock Grid.Column="3"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Procedimientos" />
+
+
+    							</Grid>
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageHeaderTemplate>
+
+    			<reporting:Report.ItemTemplate>
+    				<DataTemplate>
+    					<Grid HorizontalAlignment="Stretch"
+    						Margin="5 0 0 20">
+    						<Grid.RowDefinitions>
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    						</Grid.RowDefinitions>
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="200" />
+    							<ColumnDefinition Width="200" />
+    							<ColumnDefinition Width="150" />
+    							<ColumnDefinition Width="150" />
+    						</Grid.ColumnDefinitions>
+
+    						<StackPanel Grid.Column="0"
+    							Orientation="Horizontal">
+    							<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}"
+    								FontWeight="Bold" />                            
+    						</StackPanel>
+
+    						<TextBlock Grid.Column="1"
+    							Text="{Binding NombreSuperficie}"
+    							TextAlignment="Left" />
+								
+						<TextBlock Grid.Column="2"
+    							Text="{Binding DiagnosticoEntity, Converter={StaticResource Convertir_Lista_Diagnosticos}}"
+    							TextAlignment="Left" />
+								
+					<TextBlock Grid.Column="3"
+    							Text="{Binding ProcedimientoEntity, Converter={StaticResource Convertir_Lista_Procedimientos}}"
+    							TextAlignment="Left" />
+
+    						<TextBlock Grid.Row="2"
+    							Grid.ColumnSpan="4"
+    							TextWrapping="Wrap"
+    							Text="{Binding ReviewComments}" />
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ItemTemplate>
+
+    			<reporting:Report.PageFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+    						<StackPanel Orientation="Horizontal"
+    							HorizontalAlignment="Left"
+    							VerticalAlignment="Center"
+    							Margin="5">
+    							<TextBlock Text="{Binding CurrentPageNumber, StringFormat=Page \{0\}}" />
+    							<TextBlock Text="{Binding TotalPageCount, StringFormat=' of \{0\}'}" />
+
+    						</StackPanel>
+
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageFooterTemplate>
+
+    			<reporting:Report.ReportFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.ColumnDefinitions>
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="150" />
+    								<ColumnDefinition Width="150" />
+    							</Grid.ColumnDefinitions>
+
+    							<TextBlock Grid.Column="1"
+    								Text="{Binding EmployeeCount, StringFormat=\{0\} employees}"
+    								TextAlignment="Left" />
+
+    							<TextBlock Grid.Column="2"
+    								Text="{Binding TotalSalary, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+
+    							<TextBlock Grid.Column="3"
+    								Text="{Binding TotalBonus, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ReportFooterTemplate>
+
+
+    		</reporting:Report>
+    		<reporting:Report x:Name="ReportEvolucion"
+    			Title="Plan de tratamiento" Height="33" VerticalAlignment="Top" Margin="0,14,0,0">
+
+    			<reporting:Report.Resources>
+    				<Style x:Key="HeaderText"
+    					TargetType="TextBlock">
+    					<Setter Property="FontWeight"
+    						Value="Bold" />
+    					<Setter Property="TextAlignment"
+    						Value="Left" />
+    					<Setter Property="HorizontalAlignment"
+    						Value="Stretch" />
+    				</Style>
+    			</reporting:Report.Resources>
+
+
+
+    			<reporting:Report.PageHeaderTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 1 1 20">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.RowDefinitions>
+    								<RowDefinition Height="Auto" />
+    								<RowDefinition Height="Auto" />
+    							</Grid.RowDefinitions>
+
+    							<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}"
+    								Grid.Row="0"
+    								FontSize="16"
+    								FontWeight="Bold"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+    							<TextBlock Text="{Binding NombreSuperficie}"
+    								Grid.Row="0"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+
+    							<Grid Grid.Row="1" 
+    								HorizontalAlignment="Stretch"
+    								Margin="4 0 0 4">
+    								<Grid.RowDefinitions>
+    									<RowDefinition Height="Auto" />
+    								</Grid.RowDefinitions>
+    								<Grid.ColumnDefinitions>
+    									<ColumnDefinition Width="50" />
+    									<ColumnDefinition Width="100" />
+    									<ColumnDefinition Width="150" />
+    									<ColumnDefinition Width="50" />
+										<ColumnDefinition Width="100" />
+										<ColumnDefinition Width="100" />
+										<ColumnDefinition Width="100" />
+    								</Grid.ColumnDefinitions>
+
+    								<TextBlock Grid.Column="0"
+    									Style="{StaticResource HeaderText}"
+    									Text="Diente" />
+
+    								<TextBlock Grid.Column="1"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Superficie" />
+
+    								<TextBlock Grid.Column="2"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Diagnostico" />
+
+    								<TextBlock Grid.Column="3"
+										Margin="10,0,0,0"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Realizado" />
+										
+									<TextBlock Grid.Column="4"
+										Margin="10,0,0,0"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Legalizado" />
+										
+									<TextBlock Grid.Column="5"
+										Margin="10,0,0,0"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Prestador" />
+										
+									<TextBlock Grid.Column="6"
+										Margin="10,0,0,0"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Observaciones" />
+    							</Grid>
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageHeaderTemplate>
+
+    			<reporting:Report.ItemTemplate>
+    				<DataTemplate>
+    					<Grid HorizontalAlignment="Stretch"
+    						Margin="5 0 0 20">
+    						<Grid.RowDefinitions>
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    						</Grid.RowDefinitions>
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="50" />
+    							<ColumnDefinition Width="100" />
+    							<ColumnDefinition Width="150" />
+    							<ColumnDefinition Width="50" />
+								<ColumnDefinition Width="100" />
+								<ColumnDefinition Width="100" />
+								<ColumnDefinition Width="200" />
+    						</Grid.ColumnDefinitions>
+
+    						<StackPanel Grid.Column="0"
+    							Orientation="Horizontal">
+    							<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}"
+    								FontWeight="Bold" />                            
+    						</StackPanel>
+
+    						<TextBlock Grid.Column="1"
+    							Text="{Binding NombreSuperficie}"
+    							TextAlignment="Left" />
+								
+    						<TextBlock Grid.Column="2"
+    							Text="{Binding ProcedimientoEntity.Procedimiento.Nombre}"
+    							TextAlignment="Left" />								
+    						
+							<CheckBox Grid.Column="3" Margin="10,0,0,0" IsChecked="{Binding PlanTratamientoEntity.EstadoProcedimiento}"/>
+							<CheckBox Grid.Column="4" Margin="10,0,0,0" IsChecked="{Binding Legalizado}"/>
+							
+							<TextBlock Grid.Column="5"
+								Margin="10,0,0,0"
+    							Text="{Binding OdontologosHigienistasIpsValor.NombreCompleto}"
+    							TextAlignment="Left" />			
+								
+							<TextBlock Grid.Column="6"
+								Margin="10,0,0,0"
+    							Text="{Binding PlanTratamientoEntity.Observaciones}"
+    							TextAlignment="Left" />			
+							
+    						<TextBlock Grid.Row="2"
+    							Grid.ColumnSpan="4"
+    							TextWrapping="Wrap"
+    							Text="{Binding ReviewComments}" />
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ItemTemplate>
+
+    			<reporting:Report.PageFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+    						<StackPanel Orientation="Horizontal"
+    							HorizontalAlignment="Left"
+    							VerticalAlignment="Center"
+    							Margin="5">
+    							<TextBlock Text="{Binding CurrentPageNumber, StringFormat=Page \{0\}}" />
+    							<TextBlock Text="{Binding TotalPageCount, StringFormat=' of \{0\}'}" />
+
+    						</StackPanel>
+
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageFooterTemplate>
+
+    			<reporting:Report.ReportFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.ColumnDefinitions>
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="150" />
+    								<ColumnDefinition Width="150" />
+    							</Grid.ColumnDefinitions>
+
+    							<TextBlock Grid.Column="1"
+    								Text="{Binding EmployeeCount, StringFormat=\{0\} employees}"
+    								TextAlignment="Left" />
+
+    							<TextBlock Grid.Column="2"
+    								Text="{Binding TotalSalary, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+
+    							<TextBlock Grid.Column="3"
+    								Text="{Binding TotalBonus, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ReportFooterTemplate>
+
+
+    		</reporting:Report>
+    		<reporting:Report x:Name="ReportInicial"
+    			Title="Plan de tratamiento" Height="33" VerticalAlignment="Top">
+
+    			<reporting:Report.Resources>
+    				<Style x:Key="HeaderText"
+    					TargetType="TextBlock">
+    					<Setter Property="FontWeight"
+    						Value="Bold" />
+    					<Setter Property="TextAlignment"
+    						Value="Left" />
+    					<Setter Property="HorizontalAlignment"
+    						Value="Stretch" />
+    				</Style>
+    			</reporting:Report.Resources>
+
+
+
+    			<reporting:Report.PageHeaderTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 1 1 20">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.RowDefinitions>
+    								<RowDefinition Height="Auto" />
+    								<RowDefinition Height="Auto" />
+    							</Grid.RowDefinitions>
+
+    							<TextBlock Text="{Binding Diente}"
+    								Grid.Row="0"
+    								FontSize="16"
+    								FontWeight="Bold"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+    							<TextBlock Text="{Binding Superficie}"
+    								Grid.Row="0"
+    								Margin="5"
+    								HorizontalAlignment="Left"
+    								VerticalAlignment="Top" />
+
+
+    							<Grid Grid.Row="1" 
+    								HorizontalAlignment="Stretch"
+    								Margin="4 0 0 4">
+    								<Grid.RowDefinitions>
+    									<RowDefinition Height="Auto" />
+    								</Grid.RowDefinitions>
+    								<Grid.ColumnDefinitions>
+    									<ColumnDefinition Width="200" />
+    									<ColumnDefinition Width="200" />
+    									<ColumnDefinition Width="150" />
+    									<ColumnDefinition Width="150" />
+    								</Grid.ColumnDefinitions>
+
+    								<TextBlock Grid.Column="0"
+    									Style="{StaticResource HeaderText}"
+    									Text="Diente" />
+
+    								<TextBlock Grid.Column="1"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Superficie" />
+
+    								<TextBlock Grid.Column="2"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="Diagnosticos" />
+
+    								<TextBlock Grid.Column="3"
+    									Style="{StaticResource HeaderText}"
+    									TextAlignment="Left"
+    									Text="" />
+
+
+    							</Grid>
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageHeaderTemplate>
+
+    			<reporting:Report.ItemTemplate>
+    				<DataTemplate>
+    					<Grid HorizontalAlignment="Stretch"
+    						Margin="5 0 0 20">
+    						<Grid.RowDefinitions>
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    							<RowDefinition Height="Auto" />
+    						</Grid.RowDefinitions>
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="200" />
+    							<ColumnDefinition Width="200" />
+    							<ColumnDefinition Width="150" />
+    							<ColumnDefinition Width="150" />
+    						</Grid.ColumnDefinitions>
+
+    						<StackPanel Grid.Column="0"
+    							Orientation="Horizontal">
+    							<TextBlock Text="{Binding Diente}"
+    								FontWeight="Bold" />                            
+    						</StackPanel>
+
+    						<TextBlock Grid.Column="1"
+    							Text="{Binding Superficie}"
+    							TextAlignment="Left" />
+								
+    						<TextBlock Grid.Column="2"
+    							Text="{Binding Diagnostico}"
+    							TextAlignment="Left" />
+								
+    						
+    						<TextBlock Grid.Row="2"
+    							Grid.ColumnSpan="4"
+    							TextWrapping="Wrap"
+    							Text="{Binding ReviewComments}" />
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ItemTemplate>
+
+    			<reporting:Report.PageFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+    						<StackPanel Orientation="Horizontal"
+    							HorizontalAlignment="Left"
+    							VerticalAlignment="Center"
+    							Margin="5">
+    							<TextBlock Text="{Binding CurrentPageNumber, StringFormat=Page \{0\}}" />
+    							<TextBlock Text="{Binding TotalPageCount, StringFormat=' of \{0\}'}" />
+
+    						</StackPanel>
+
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.PageFooterTemplate>
+
+    			<reporting:Report.ReportFooterTemplate>
+    				<DataTemplate>
+    					<Grid Margin="1 20 1 1">
+    						<Rectangle Stroke="Black" />
+
+    						<Grid>
+    							<Grid.ColumnDefinitions>
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="200" />
+    								<ColumnDefinition Width="150" />
+    								<ColumnDefinition Width="150" />
+    							</Grid.ColumnDefinitions>
+
+    							<TextBlock Grid.Column="1"
+    								Text="{Binding EmployeeCount, StringFormat=\{0\} employees}"
+    								TextAlignment="Left" />
+
+    							<TextBlock Grid.Column="2"
+    								Text="{Binding TotalSalary, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+
+    							<TextBlock Grid.Column="3"
+    								Text="{Binding TotalBonus, StringFormat=\{0:C\}}"
+    								TextAlignment="Right" />
+    						</Grid>
+    					</Grid>
+    				</DataTemplate>
+    			</reporting:Report.ReportFooterTemplate>
+
+
+    		</reporting:Report>
+
+    	</Grid>
+    	<Rectangle Fill="White" Height="104" Margin="-82,0,-54,0" StrokeThickness="2" VerticalAlignment="Top"/>
+    	<Rectangle Fill="White" HorizontalAlignment="Right" Margin="0,0,-33,8" StrokeThickness="2" Width="294"/>
+    	<Rectangle Fill="White" HorizontalAlignment="Left" Margin="-113,0,0,-29" StrokeThickness="2" Width="109"/>
+    	<Grid Margin="0,132,63,71" HorizontalAlignment="Right" Width="167">
+    		<Grid.RowDefinitions>
+    			<RowDefinition Height="0.099*"/>
+    			<RowDefinition Height="0.088*"/>
+    			<RowDefinition Height="0.812*"/>
+    		</Grid.RowDefinitions>
+    		<CheckBox x:Name="ChckBxTexto" Content="{Binding Mensajes.Texto, Source={StaticResource publicResource}}" IsChecked="True" HorizontalAlignment="Left" Margin="0,0,0,6"/>
+    		<CheckBox x:Name="ChckBxImagen" Content="{Binding Mensajes.Imagen, Source={StaticResource publicResource}}" IsChecked="True" Grid.Row="1" Margin="0,0,0,4"/>
+    	</Grid>
+    	<TextBlock HorizontalAlignment="Left" Margin="13,0,0,7" TextWrapping="Wrap" Foreground="#FF1D1D1C" FontWeight="Bold" FontSize="14.667" TextDecorations="Underline" Grid.Row="2" VerticalAlignment="Bottom"><Run Text="{Binding Mensajes.Mensaje_Impresion, Source={StaticResource publicResource}}"/></TextBlock>
+
+    </Grid>
+	
+</sdk:ChildWindow>

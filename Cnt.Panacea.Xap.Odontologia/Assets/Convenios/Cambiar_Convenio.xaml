@@ -1,0 +1,17 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Vm="clr-namespace:Cnt.Panacea.Xap.Odontologia.Assets.Convenios.Vm" x:Class="Cnt.Panacea.Xap.Odontologia.Assets.Convenios.Cambiar_Convenio"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+
+    <UserControl.DataContext>
+        <Vm:vm/>
+    </UserControl.DataContext>
+
+    <Grid x:Name="LayoutRoot" Background="White">
+        <ListBox ItemsSource="{Binding ConveniosPaciente}" DisplayMemberPath="Convenio.Nombre" SelectedValue="{Binding ConvenioSeleccionado, Mode=TwoWay}" d:IsHidden="True" />
+    </Grid>
+</UserControl>

@@ -1,0 +1,18 @@
+﻿<controls:ChildWindow x:Class="Cnt.Panacea.Xap.Odontologia.PopUp.Observaciones"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+           xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls"
+           Width="400" Height="300" 
+           Title="{Binding Mensajes.Observaciones, Source={StaticResource publicResource}}">
+    <Grid x:Name="LayoutRoot" Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button x:Name="CancelButton" Content="{Binding Mensajes.Cancelar, Source={StaticResource publicResource}}" Click="CancelButton_Click" Height="23" Margin="0,12,103,0" Grid.Row="1" HorizontalAlignment="Right" Width="75" />
+        <Button x:Name="OKButton" Content="{Binding Mensajes.Guardar, Source={StaticResource publicResource}}" Click="OKButton_Click" Height="23" Margin="93,12,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="75" />
+        <TextBox Margin="8,59,8,27" TextWrapping="Wrap"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,8,0,0" TextWrapping="Wrap" Text="{Binding Mensajes.Procedimientos_No_Realizados, Source={StaticResource publicResource}}" VerticalAlignment="Top" Width="360"/>
+    </Grid>
+</controls:ChildWindow>
