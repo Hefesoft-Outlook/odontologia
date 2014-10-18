@@ -109,13 +109,13 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <ProjectReference Include="..\..\Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm.csproj">
+    <ProjectReference Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm.csproj">
       <Project>{c41c8cbb-b458-4567-8834-89516213d2ce}</Project>
       <Name>Cnt.Panacea.Xap.Odontologia.Vm</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm\View Model Locator\ViewModelLocator.cs">
+    <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\View Model Locator\ViewModelLocator.cs">
       <Link>ViewModel\ViewModelLocator.cs</Link>
     </Compile>
     <Compile Include="App.xaml.cs">
@@ -301,8 +301,9 @@
     <Reference Include="Cnt.Std.SL">
       <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
-    <Reference Include="GalaSoft.MvvmLight">
-      <HintPath>C:\FinalesCnt\Std\Xap\GalaSoft.MvvmLight.dll</HintPath>
+    <Reference Include="GalaSoft.MvvmLight, Version=4.1.26.28028, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
       <HintPath>C:\FinalesCnt\Std\Xap\GalaSoft.MvvmLight.Extras.dll</HintPath>
