@@ -11,6 +11,8 @@
     xmlns:Mapa_Dental1="using:App2.Mapa_Dental"
     xmlns:Pacientes="using:App2.Grillas"
     xmlns:Tipos_Odontograma="using:App2.Tipos_Odontograma"
+    xmlns:Generico="using:App2.Assets.PopUp"
+    xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     x:Name="pageRoot"
     x:Class="App2.HubPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
@@ -39,15 +41,16 @@
     This grid acts as a root panel for the page.
   -->
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">        
-        <Grid.ChildrenTransitions>
+		<Grid.ChildrenTransitions>
 			<TransitionCollection>
 				<EntranceThemeTransition/>
 			</TransitionCollection>
 		</Grid.ChildrenTransitions>
 
-        <Tipos_Odontograma:Odontograma_Inicial></Tipos_Odontograma:Odontograma_Inicial>
+		<Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
+		<Tipos_Odontograma:Odontograma_Inicial/>
 
-        <Hub SectionHeaderClick="Hub_SectionHeaderClick">
+		<Hub SectionHeaderClick="Hub_SectionHeaderClick">
 			<Hub.Header>
 				<!-- Back button and page title -->
 				<Grid>
@@ -73,10 +76,10 @@
 			</HubSection>
             
 			<HubSection Width="800" Margin="0,0,20,0">
-                <DataTemplate>
-                    <Pacientes:PacienteTratamientos></Pacientes:PacienteTratamientos>
-                </DataTemplate>
-            </HubSection>
+				<DataTemplate>
+					<Pacientes:PacienteTratamientos/>
+				</DataTemplate>
+			</HubSection>
             
 			<HubSection Width="270" x:Uid="Section1Header" Header="Diagnosticos procedimientos">
 				<DataTemplate>				
@@ -84,7 +87,7 @@
 				</DataTemplate>
 			</HubSection>
 			
-            <HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
+			<HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
 				<DataTemplate>
 					<StackPanel Orientation="Vertical">
 						<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,0,10" >
@@ -94,6 +97,7 @@
 						<Viewbox>						
 							<Mapa_Dental:Mapa_Dental/>
 						</Viewbox>
+						<Odontologia:Boca/>
 					</StackPanel>
 				</DataTemplate>
 			</HubSection>
@@ -108,10 +112,9 @@
 			</HubSection>
 		</Hub>
 
-        <Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
-            <ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
-            <TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
-        </Grid>
-
-    </Grid>
+		<Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
+			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
+			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
+		</Grid>
+	</Grid>
 </Page>

@@ -1,4 +1,5 @@
 ﻿using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -111,6 +112,14 @@ namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
                     listBox7.SelectedIndex = -1;
                 }
             });
+        }
+        
+        private void StackPanel_Holding(object sender, Windows.UI.Xaml.Input.HoldingRoutedEventArgs e)
+        {
+            StackPanel st = sender as StackPanel;
+            var item = st.DataContext as Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma;
+            var Vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
+            Vm.clickDerechoContenedorPiezaDental(item);
         }
     }
 }

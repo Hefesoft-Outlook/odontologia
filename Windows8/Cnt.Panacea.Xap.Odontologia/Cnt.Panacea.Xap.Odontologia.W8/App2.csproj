@@ -121,8 +121,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Boca\Boca.xaml.cs">
+      <DependentUpon>Boca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\PopUp\Generico.xaml.cs">
       <DependentUpon>Generico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Layouts\Agregar_Supernumerario.xaml.cs">
+      <DependentUpon>Agregar_Supernumerario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\PopUp\Layouts\SobreEscribirAdicionar.xaml.cs">
+      <DependentUpon>SobreEscribirAdicionar.xaml</DependentUpon>
     </Compile>
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
@@ -215,7 +224,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Assets\Boca\Boca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Assets\PopUp\Generico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Layouts\Agregar_Supernumerario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\PopUp\Layouts\SobreEscribirAdicionar.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -320,7 +341,7 @@
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\windows8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\windows8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>

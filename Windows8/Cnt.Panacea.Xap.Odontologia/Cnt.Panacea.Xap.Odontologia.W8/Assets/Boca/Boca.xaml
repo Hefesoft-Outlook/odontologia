@@ -1,0 +1,59 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:Clases="clr-namespace:Cnt.Panacea.Xap.Odontologia.Clases" 
+    xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"     
+    xmlns:Custom="http://www.galasoft.ch/mvvmlight"
+	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+	mc:Ignorable="d"
+	x:Class="Cnt.Panacea.Xap.Odontologia.Boca" 
+	d:DesignWidth="302" d:DesignHeight="190">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="47"/>
+				<ColumnDefinition Width="40"/>
+				<ColumnDefinition Width="215"/>
+			</Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="40"/>
+				<RowDefinition Height="39"/>
+				<RowDefinition Height="49"/>
+				<RowDefinition Height="31"/>
+			</Grid.RowDefinitions>
+			<Grid Height="7" Margin="9,0,18,-108" Grid.ColumnSpan="3" Grid.Row="3" VerticalAlignment="Bottom"/>
+
+
+			<TextBox x:Name="TxtBxBoca1" Margin="49,0,16,-4" Grid.Column="2" Width="150" Height="24" VerticalAlignment="Bottom" Tag="{Binding BocaSuperficie1}" Text="{Binding DiagnosticoProcedimiento.Boca[0].Descripcion, FallbackValue=Sano, Mode=TwoWay}" ToolTipService.ToolTip="{Binding BocaSuperficie1.ProcedimientosDiagnosticosBoca, Mode=TwoWay}" IsReadOnly="True"/>
+			<Path x:Name="PthBoca1" Data="M47.330456,42.499458 L213.19499,42.499462 L213.19499,34.500214" Margin="27,2,87,0" Stretch="Fill" Stroke="#FF0780CC" StrokeThickness="3" UseLayoutRounding="False" Grid.Column="2" Height="11" VerticalAlignment="Top" Grid.Row="1"/>
+			<Border Margin="18,12,-30,8" BorderBrush="#FF0780CC" CornerRadius="5" Grid.RowSpan="4" BorderThickness="3" Grid.ColumnSpan="2" >
+				<Canvas x:Name="canvas" Margin="0,0,0,-3">
+					<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="path3091" Data="M0,13.044909 C12.049988,6.2574029 25.149994,-1.080091 39.462494,0.13240287 C47.5,0.5699029 54.962494,6.4698968 63.137482,3.794909 C68.375,1.982409 73.799988,0.26991507 79.4375,0.5074029 C93,0.919909 105.9375,6.1949029 117.46249,13.082415 C107.25,28.669909 92.712494,42.444904 74.774994,48.444904 C59.424988,53.73241 42.649994,48.869892 29.387482,40.507404 C18.037476,33.29491 7.7999878,24.019915 0,13.044909 M8.9124756,13.43239 C10.962494,14.319902 23.067163,17.292999 25.254663,17.817993 C39.042171,21.205505 42.799988,22.694902 56.849976,24.794909 C65,26.094896 73.087494,23.178228 80.949982,21.315741 C90.324982,18.953222 99.6875,17.132402 108.82498,13.969896 C98.824982,8.2949085 87.224976,4.607409 75.637482,5.4449029 C70.012482,5.6573968 65.087494,8.9824085 59.474976,9.1823902 C51.212494,9.5573902 43.949982,4.2198968 35.674988,4.5948968 C26.125,4.982409 17.237488,9.0573902 8.9124756,13.43239 M9.1624756,17.257402 C16.199982,24.74489 23.9375,30.694901 32.762482,36.032402 C44.412476,43.232414 58.887482,47.419914 72.375,43.294914 C86.912476,38.757408 99.012482,29.419909 108.28748,17.607409 C92.949982,21.482409 75.500473,28.263817 59.587997,29.151329 C41.625473,27.801323 26.712494,20.944902 9.1624756,17.257402 z" Canvas.Top="10.02" UseLayoutRounding="False" Canvas.Left="8" Height="30.647" Width="77" Stretch="Fill">
+						<Path.Fill>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FFC61111" Offset="0"/>
+								<GradientStop Color="#FFA51818" Offset="1"/>
+							</LinearGradientBrush>
+						</Path.Fill>
+					</Path>
+
+					<Rectangle x:Name="Rectangle" Height="30" Canvas.Left="7" Canvas.Top="56" Width="80" Stroke="Black"/>
+					<Rectangle x:Name="Rectangle_fondo" DataContext="{Binding Boca, Source={StaticResource Locator}}"  Height="30" Canvas.Left="7" Canvas.Top="56" Width="80" Fill="#FFD32424" Opacity="0" Stroke="Black">
+                        
+						<Interactivity:Interaction.Behaviors>
+							<Core:EventTriggerBehavior EventName="Tapped">
+								<Core:InvokeCommandAction Command="{Binding ClickCommand}"/>
+							</Core:EventTriggerBehavior>
+						</Interactivity:Interaction.Behaviors>
+                        
+					</Rectangle>
+					<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Canvas.Top="69" Canvas.Left="40"/>
+
+				</Canvas>
+			</Border>
+		</Grid>
+	</Grid>
+</UserControl>

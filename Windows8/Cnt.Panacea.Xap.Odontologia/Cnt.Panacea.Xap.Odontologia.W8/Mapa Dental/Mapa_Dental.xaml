@@ -18,7 +18,7 @@
     	</ItemsPanelTemplate>
     	
         <DataTemplate x:Key="DataTemplate">
-        	<StackPanel>
+            <StackPanel Holding="StackPanel_Holding">
         		<HyperlinkButton Content="{Binding codigoSPiezaDental}" HorizontalAlignment="Center">
         		</HyperlinkButton>
         		<Odontologia:SuperficieCompleta HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="40" FontFamily="Global User Interface"/>
