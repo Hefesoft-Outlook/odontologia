@@ -121,6 +121,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\PopUp\Generico.xaml.cs">
+      <DependentUpon>Generico.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
     </Compile>
@@ -212,6 +215,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Assets\PopUp\Generico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Grillas\PacienteTratamientos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -287,26 +294,26 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
-      <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
-      <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
-      <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
-      <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Std.SL">
-      <HintPath>C:\FinalesCnt\Panacea\Portable\Cnt.Std.SL.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=4.1.26.28028, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
-      <HintPath>C:\FinalesCnt\Std\Xap\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\windows8\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
     <Reference Include="MetroEventToCommand">
       <HintPath>..\packages\MetroEventToCommand.2.1\lib\winrt45\MetroEventToCommand.dll</HintPath>
@@ -316,7 +323,7 @@
       <HintPath>..\..\..\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
-      <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\windows8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
