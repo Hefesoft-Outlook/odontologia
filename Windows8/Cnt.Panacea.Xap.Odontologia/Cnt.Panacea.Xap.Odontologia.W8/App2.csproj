@@ -142,8 +142,8 @@
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Grillas\Plan tratamiento\GridPlanTratamientoProcedimientosWizard.xaml.cs">
-      <DependentUpon>GridPlanTratamientoProcedimientosWizard.xaml</DependentUpon>
+    <Compile Include="Grillas\Plan tratamiento\SplitPlanTratamiento.xaml.cs">
+      <DependentUpon>SplitPlanTratamiento.xaml</DependentUpon>
     </Compile>
     <Compile Include="Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
       <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
@@ -266,7 +266,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Grillas\Plan tratamiento\GridPlanTratamientoProcedimientosWizard.xaml">
+    <Page Include="Grillas\Plan tratamiento\SplitPlanTratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

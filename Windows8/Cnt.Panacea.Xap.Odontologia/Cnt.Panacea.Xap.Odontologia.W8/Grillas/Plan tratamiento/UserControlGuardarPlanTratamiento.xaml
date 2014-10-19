@@ -35,7 +35,7 @@
                     </i:Interaction.Triggers>-->
                 </ComboBox>
 
-                <TextBox x:Name="txtCuotaInicial" Grid.Column="1" Margin="0" Grid.Row="2" TextWrapping="Wrap" Height="25" Width="200" HorizontalAlignment="Left" TextAlignment="Right" Text="{Binding ValorCuotaInicial, Mode=TwoWay}">
+                <TextBox x:Name="txtCuotaInicial" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorCuotaInicial, Mode=TwoWay}" VerticalAlignment="Center">
                     <!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="KeyUp">
                             <GalaSoft_MvvmLight_Command:EventToCommand Command="{Binding ValorCuotaInicialTratamientoCommand}" CommandParameter="{Binding Text, ElementName=txtCuotaInicial}"/>
@@ -48,11 +48,11 @@
                 <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111"><Run Text="{Binding Mensajes.Valor_Cuota_Sesion, Source={StaticResource publicResource}}"/></TextBlock>
                 <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Total, Source={StaticResource publicResource}}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="64"/>
 
-                <TextBox x:Name="TxtValorCuota" Grid.Column="4" Margin="8,2,0,1" Grid.Row="1" TextWrapping="Wrap" Height="25" Width="200" HorizontalAlignment="Left" TextAlignment="Right" Text="{Binding ValorCuotaTratamiento, Mode=TwoWay}"/>
+                <TextBox x:Name="TxtValorCuota" Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorCuotaTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
 
-                <TextBox x:Name="txtbxValorTotal"  Grid.Column="4" Margin="8,0,0,0" Grid.Row="2" TextWrapping="Wrap" VerticalAlignment="Center" Height="25" Width="200" HorizontalAlignment="Left" TextAlignment="Right" Text="{Binding ValorTotalTratamiento, Mode=TwoWay}"/>
+                <TextBox x:Name="txtbxValorTotal"  Grid.Column="4" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorTotalTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
 
-                <CheckBox x:Name="checkBox" Content="{Binding Mensajes.Cotizacion, Source={StaticResource publicResource}}" Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" IsChecked="{Binding EsCotizacion, Mode=TwoWay}" HorizontalAlignment="Left" Width="82">
+                <CheckBox x:Name="checkBox" Content="{Binding Mensajes.Cotizacion, Source={StaticResource publicResource}}" Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" IsChecked="{Binding EsCotizacion, Mode=TwoWay}">
                     <!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="Checked">
                             <ei:ControlStoryboardAction Storyboard="{StaticResource StoryboardComprobantes}"/>
@@ -91,7 +91,7 @@
 
                 <HyperlinkButton x:Name="HyprlnkBttnValores" Command="{Binding CalculoValoresTratamientoCommand, Mode=OneWay}"  Content="{Binding Mensajes.Valores, Source={StaticResource publicResource}}"   HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,0,0,0" Grid.Column="4" IsEnabled="{Binding PuedeModificar}" Visibility="Collapsed" />
             </Grid>
-            <local:GridPlanTratamientoProcedimientosWizard/>
+            <local:SplitPlanTratamiento/>
         </StackPanel>
     </Grid>
 </UserControl>
