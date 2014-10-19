@@ -9,7 +9,7 @@
     <Application.Resources>
         <!-- Application-specific resources -->
         <vm:ViewModelLocator x:Key="Locator" xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" />
-
+        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
         <x:String x:Key="AppName">Panacea odontologia</x:String>
 
     </Application.Resources>

@@ -7,6 +7,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta;
 using GalaSoft.MvvmLight.Messaging;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -58,6 +59,7 @@ namespace App2
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             oirMensaje();
             oirOcupado();
+            oirCambiosBotones();
         }
 
         private void oirOcupado()
@@ -92,24 +94,7 @@ namespace App2
             // Show the message dialog and wait
             await msg.ShowAsync();
         }
-
-        public void Dispose()
-        {
-            Messenger.Default.Unregister<Mostrar_Mensaje_Usuario>(this);
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Mostrar_Cargando>(this);
-        }
-
-        /// <summary>
-        /// Populates the page with content passed during navigation.  Any saved state is also
-        /// provided when recreating a page from a prior session.
-        /// </summary>
-        /// <param name="sender">
-        /// The source of the event; typically <see cref="NavigationHelper"/>
-        /// </param>
-        /// <param name="e">Event data that provides both the navigation parameter passed to
-        /// <see cref="Frame.Navigate(Type, Object)"/> when this page was initially requested and
-        /// a dictionary of state preserved by this page during an earlier
-        /// session.  The state will be null the first time a page is visited.</param>
+        
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
@@ -117,11 +102,7 @@ namespace App2
             this.DefaultViewModel["Section3Items"] = sampleDataGroup;
         }
 
-        /// <summary>
-        /// Invoked when a HubSection header is clicked.
-        /// </summary>
-        /// <param name="sender">The Hub that contains the HubSection whose header was clicked.</param>
-        /// <param name="e">Event data that describes how the click was initiated.</param>
+        
         void Hub_SectionHeaderClick(object sender, HubSectionHeaderClickEventArgs e)
         {
             HubSection section = e.Section;
@@ -129,12 +110,7 @@ namespace App2
             this.Frame.Navigate(typeof(SectionPage), ((SampleDataGroup)group).UniqueId);
         }
 
-        /// <summary>
-        /// Invoked when an item within a section is clicked.
-        /// </summary>
-        /// <param name="sender">The GridView or ListView
-        /// displaying the item clicked.</param>
-        /// <param name="e">Event data that describes the item clicked.</param>
+        
         void ItemView_ItemClick(object sender, ItemClickEventArgs e)
         {
             // Navigate to the appropriate destination page, configuring the new page
@@ -180,5 +156,89 @@ namespace App2
         }
 
         #endregion
+
+        private void oirCambiosBotones()
+        {
+            // Activa o desactiva botones deacuerdo al estado de la pagina
+            Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this, elemento =>
+            {
+                if (elemento.valor == "Nuevo")
+                {
+                    nuevoTratamientoUI();
+                    finalizaTratamientoBtn.Visibility = Visibility.Collapsed;
+                }
+                else if (elemento.valor == "Plan Tratamiento")
+                {
+                    planTratamientoUI();
+                    finalizaTratamientoBtn.Visibility = Visibility.Collapsed;
+                }
+                else if (elemento.valor == "Evolucion")
+                {
+                    evolucionUI();
+                    finalizaTratamientoBtn.Visibility = Visibility.Visible;
+                }
+                else if (elemento.valor == "Todos")
+                {
+                    finalizaTratamientoBtn.Visibility = Visibility.Collapsed;
+                    activarTodosUI();
+                }
+            });
+        }
+
+        private void inicial_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
+            vm.odontogramaInicial();
+        }
+
+        private void planTratamiento_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
+            vm.odontogramaPlanTratamiento();
+        }
+
+        private void evolucion_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
+            vm.odontogramaEvolucion();
+        }
+
+        private void nuevoTratamientoUI()
+        {
+            Variables_Globales.IdTratamientoActivo = 0;
+            odontogramaEvolucionBtn.IsEnabled = false;
+            odontogramaPlanTratamientoBtn.IsEnabled = false;
+        }
+
+        private void planTratamientoUI()
+        {
+            odontogramaPlanTratamientoBtn.IsEnabled = true;
+            odontogramaEvolucionBtn.IsEnabled = false;
+        }
+
+        private void evolucionUI()
+        {
+            odontogramaPlanTratamientoBtn.IsEnabled = true;
+            odontogramaEvolucionBtn.IsEnabled = true;
+        }
+
+        private void activarTodosUI()
+        {
+            odontogramaPlanTratamientoBtn.IsEnabled = true;
+            odontogramaEvolucionBtn.IsEnabled = true;
+        }
+
+        private void finalizaTratamientoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
+            vm.finalizar();
+        }
+
+        public void Dispose()
+        {
+            Messenger.Default.Unregister<Mostrar_Mensaje_Usuario>(this);
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Mostrar_Cargando>(this);
+            Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this);
+        }
     }
 }

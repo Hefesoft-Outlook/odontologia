@@ -48,7 +48,6 @@
 		</Grid.ChildrenTransitions>
 
 		<Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
-		<Tipos_Odontograma:Odontograma_Inicial/>
 
 		<Hub SectionHeaderClick="Hub_SectionHeaderClick">
 			<Hub.Header>
@@ -90,10 +89,7 @@
 			<HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
 				<DataTemplate>
 					<StackPanel Orientation="Vertical">
-						<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,0,10" >
-							<Button x:Name="BttnNuevo" Content="Nuevo" Click="BttnNuevo_Click" FontFamily="Global User Interface"/>
-							<Button x:Name="BttnGuardar" Content="Guardar" Click="BttnGuardar_Click" FontFamily="Global User Interface" Margin="10,0,0,0"/>
-						</StackPanel>
+                        <Tipos_Odontograma:Tipos></Tipos_Odontograma:Tipos>                        
 						<Viewbox>						
 							<Mapa_Dental:Mapa_Dental/>
 						</Viewbox>
@@ -111,10 +107,25 @@
 				</DataTemplate>
 			</HubSection>
 		</Hub>
+        <Generico:Modal padre="{Binding Frame, ElementName=pageRoot}"/>
 
 		<Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
 			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
 			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
 		</Grid>
 	</Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Name="barraComandos" IsOpen="True">
+            <AppBarToggleButton Name="inicial"  Icon="More" Label="Inicial" Click="inicial_Click"/>
+            <AppBarToggleButton Name="odontogramaPlanTratamientoBtn" Icon="More" Label="Plan tratamiento" Click="planTratamiento_Click"/>
+            <AppBarToggleButton Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion" Click="evolucion_Click"/>            
+            <AppBarSeparator/>
+            <AppBarToggleButton Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed" Click="finalizaTratamientoBtn_Click"></AppBarToggleButton>
+            <AppBarSeparator/>
+            <AppBarToggleButton Icon="Save"  Label="Guardar" Click="BttnGuardar_Click" />
+            <AppBarToggleButton Icon="Add" Label="Nuevo" Click="BttnNuevo_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
 </Page>

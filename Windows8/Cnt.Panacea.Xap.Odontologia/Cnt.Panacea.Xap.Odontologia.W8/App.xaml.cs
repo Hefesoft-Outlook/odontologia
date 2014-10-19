@@ -37,6 +37,7 @@ namespace App2
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.UnhandledException += App_UnhandledException;
            
  
             //Datos prueba
@@ -50,6 +51,11 @@ namespace App2
             // Metodo para pasarle los parametros al binding
             //Ya que windows 8 no tiene archivos client config de configuracion
             Contexto_Odontologia.inicializarContexto();
+        }
+
+        void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
         }
 
         /// <summary>

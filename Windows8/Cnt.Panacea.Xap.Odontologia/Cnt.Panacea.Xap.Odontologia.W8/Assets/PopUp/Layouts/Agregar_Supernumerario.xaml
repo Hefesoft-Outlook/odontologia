@@ -11,21 +11,16 @@
     d:DesignWidth="800">
     
     <Grid>
-        <StackPanel Orientation="Vertical" VerticalAlignment="Center">
-            <StackPanel x:Name="StckPnlIzquierdaDercha" Orientation="Horizontal" HorizontalAlignment="Center">
-
-                <HyperlinkButton x:Name="hyprlnkBttnIzquierda" Tag="Izquierda" 
-				Content="Supernumerario a la izquierda" 
-				Command="{Binding agregarSuperNumerarioCommand}" 
-                CommandParameter="{Binding Tag, ElementName=hyprlnkBttnIzquierda}"                 
+        <StackPanel Orientation="Vertical" VerticalAlignment="Center"><HyperlinkButton x:Name="hyprlnkBttnIzquierda" Tag="Izquierda" 
+        		Content="Supernumerario a la izquierda" 
+        		Command="{Binding agregarSuperNumerarioCommand}" 
+        		CommandParameter="{Binding Tag, ElementName=hyprlnkBttnIzquierda}" HorizontalAlignment="Center"                 
                 />
 
-                <HyperlinkButton x:Name="hyprlnkBttnDerecha" Tag="Derecha"  
-				Content="Supernumerario a la derecha"  
-				HorizontalAlignment="Right" 
-				Margin="10,0,0,0"
-				Command="{Binding agregarSuperNumerarioCommand}" CommandParameter="{Binding Tag, ElementName=hyprlnkBttnDerecha}" />
-            </StackPanel>
+        	<HyperlinkButton x:Name="hyprlnkBttnDerecha" Tag="Derecha"  
+        		Content="Supernumerario a la derecha"  
+        		HorizontalAlignment="Center"
+        		Command="{Binding agregarSuperNumerarioCommand}" CommandParameter="{Binding Tag, ElementName=hyprlnkBttnDerecha}" />
 
             <HyperlinkButton x:Name="HyprlnkBttnEliminar" Tag="Eliminar" 
 			Content="Eliminar" 

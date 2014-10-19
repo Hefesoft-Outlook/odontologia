@@ -115,6 +115,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\Recursos\PublicResource.cs">
+      <Link>Resources\PublicResource.cs</Link>
+    </Compile>
     <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\View Model Locator\ViewModelLocator.cs">
       <Link>ViewModel\ViewModelLocator.cs</Link>
     </Compile>
@@ -133,8 +136,17 @@
     <Compile Include="Assets\PopUp\Layouts\SobreEscribirAdicionar.xaml.cs">
       <DependentUpon>SobreEscribirAdicionar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\PopUp\Modal.xaml.cs">
+      <DependentUpon>Modal.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grillas\Plan tratamiento\GridPlanTratamientoProcedimientosWizard.xaml.cs">
+      <DependentUpon>GridPlanTratamientoProcedimientosWizard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
+      <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
     </Compile>
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
@@ -193,6 +205,12 @@
     <Compile Include="Tipos Odontograma\Odontograma_Inicial.xaml.cs">
       <DependentUpon>Odontograma_Inicial.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Tipos Odontograma\Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Tipos Odontograma\Tipos.xaml.cs">
+      <DependentUpon>Tipos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Util\Colores.cs" />
     <Compile Include="Util\Inicializar_Servicio.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
@@ -240,7 +258,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Assets\PopUp\Modal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Grillas\PacienteTratamientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grillas\Plan tratamiento\GridPlanTratamientoProcedimientosWizard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -309,6 +339,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Tipos Odontograma\Odontograma_Inicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tipos Odontograma\Plan_Tratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Tipos Odontograma\Tipos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

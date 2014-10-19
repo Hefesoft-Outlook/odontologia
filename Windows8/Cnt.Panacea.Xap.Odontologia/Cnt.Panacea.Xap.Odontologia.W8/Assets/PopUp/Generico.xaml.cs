@@ -59,11 +59,7 @@ namespace App2.Assets.PopUp
             else if (obj.Nombre == "Tratamientos")
             {
              
-            }
-            else if (obj.Nombre == "Plan tratamiento")
-            {
-             
-            }
+            }            
             else if (obj.Nombre == "Listado odontograma inicial")
             {
              
