@@ -228,3 +228,7 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+
+# Cnt
+*.pfx
+*.dll
