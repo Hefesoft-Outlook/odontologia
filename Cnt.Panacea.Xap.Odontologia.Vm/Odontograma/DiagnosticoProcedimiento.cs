@@ -587,13 +587,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
 
         internal void sobreEscribir(ConfigurarDiagnosticoProcedimOtraEntity item, Cambiar_Tipo_Odontograma Tipo_Odontograma_Actual, string SuperficieSeleccionada)
         {
-            var listadoEliminar = lst.Where(a => a.Superficie == SuperficieSeleccionada && a.Tipo_Odontograma_Actual == Tipo_Odontograma_Actual.Tipo_Odontograma);
+            var listadoEliminar = lst.Where(a => a.Superficie == SuperficieSeleccionada && a.Tipo_Odontograma_Actual == Tipo_Odontograma_Actual.Tipo_Odontograma).ToList();
 
             if (listadoEliminar.Any())
             {
-                foreach (var elemento in listadoEliminar)
-                {
-                    lst.Remove(elemento);
+                // Se usa asi para evitar excepciones del tipo
+                // Collection was modified; enumeration operation may not execute
+                // Basicamente lo que se hace es recorrer la coleccion a la inversa
+                for(int i = listadoEliminar.Count() - 1; i >= 0; i--) {
+                    lst.RemoveAt(i);
                 }
             }            
 

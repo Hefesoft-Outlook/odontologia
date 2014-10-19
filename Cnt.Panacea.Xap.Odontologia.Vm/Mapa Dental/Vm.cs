@@ -116,7 +116,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM
         }
 
 
-        private void clickDerechoContenedorPiezaDental(Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma obj)
+        public void clickDerechoContenedorPiezaDental(Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma obj)
         {           
             new Cnt.Panacea.Xap.Odontologia.Vm.Supernumerario.Agregar_Supernumerario().clickDerechoContenedorPiezaDental(this, obj);  
         }        
@@ -124,8 +124,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM
         //El parametro que se recibe es el tag del hyperlink
         //Que indica la accion a realizar si es izquierda derecha o eliminar
         private void agregarSupernumerario(object elemento)
-        {       
-            
+        {   
             new Cnt.Panacea.Xap.Odontologia.Vm.Supernumerario.Agregar_Supernumerario().menuSupernumerario(this, elemento);
         }
         #endregion

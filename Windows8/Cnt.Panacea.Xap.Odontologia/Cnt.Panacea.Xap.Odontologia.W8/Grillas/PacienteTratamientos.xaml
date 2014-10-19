@@ -1,0 +1,34 @@
+﻿<UserControl
+    x:Class="App2.Grillas.PacienteTratamientos"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2.Grillas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    DataContext="{Binding Procedimentos_Paciente, Source={StaticResource Locator}}"
+    xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+	
+	<UserControl.Resources>
+		<DataTemplate x:Key="Seleccionar">
+			<Grid>
+				<HyperlinkButton x:Name="HyprlnkBttnSeleccionar" Content="Seleccionar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="HyprlnkBttnSeleccionar_Click"/>
+			</Grid>
+		</DataTemplate>
+	</UserControl.Resources>
+    
+    <Grid>
+        <telerikGrid:RadDataGrid ItemsSource="{Binding tratamientosPaciente}" AutoGenerateColumns="False">
+            <telerikGrid:RadDataGrid.Columns>
+                <telerikGrid:DataGridTextColumn Header="Identificador" PropertyName="Identificador"/>
+                <telerikGrid:DataGridTextColumn Header="Descripcion" PropertyName="Descripcion"/>
+                <telerikGrid:DataGridTextColumn Header="Fecha inicial" PropertyName="FechaInicial"/>
+                <telerikGrid:DataGridTextColumn Header="Fecha final" PropertyName="FechaFinal"/>
+                <telerikGrid:DataGridTemplateColumn CellContentTemplate="{StaticResource Seleccionar}"/>
+            </telerikGrid:RadDataGrid.Columns>
+        </telerikGrid:RadDataGrid>       
+    </Grid>
+    
+</UserControl>

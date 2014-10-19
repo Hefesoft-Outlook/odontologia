@@ -40,7 +40,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contenedor
             }
         }
 
-        private void finalizar()
+        public void finalizar()
         {
             //Mensaje que oye el formulario de evolucion para cerrar el tratamiento
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Finalizar.Finalizar());
@@ -84,24 +84,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contenedor
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana() { Nombre = "Mostrar Procedimientos" });
         }
 
-        private void odontogramaEvolucion()
+        public void odontogramaEvolucion()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Evolucion });
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos() { valor = "Evolucion" });
         }
 
-        private void odontogramaPlanTratamiento()
+        public void odontogramaPlanTratamiento()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Plan_Tratamiento });
         }
 
-        private void odontogramaInicial()
+        public void odontogramaInicial()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new cargar_Diagnosticos_Procedimientos() { tipo = Tipo.todos });
         }
 
-        private void CargarInformes(string obj)
+        public void CargarInformes(string obj)
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana()
             {
