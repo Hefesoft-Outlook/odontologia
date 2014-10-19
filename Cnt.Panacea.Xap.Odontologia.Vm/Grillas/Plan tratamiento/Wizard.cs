@@ -155,6 +155,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             OdontologosIps = await Contexto_Odontologia.ListarOdontologosPorIps(Variables_Globales.IdIps);
             HigientistasIps = await Contexto_Odontologia.ListarHigienistasPorIps(Variables_Globales.IdIps);
 
+            //Se forza para que funcione en el xaml
             RaisePropertyChanged("OdontologosIps");
             RaisePropertyChanged("HigientistasIps");
         }
