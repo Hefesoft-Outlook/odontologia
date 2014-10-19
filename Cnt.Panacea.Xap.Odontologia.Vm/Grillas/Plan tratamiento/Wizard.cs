@@ -156,6 +156,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             HigientistasIps = await Contexto_Odontologia.ListarHigienistasPorIps(Variables_Globales.IdIps);
             
             //Forzar mostrar combos
+            //No solo basta con ser observables
             RaisePropertyChanged("OdontologosIps");
             RaisePropertyChanged("HigientistasIps");
         }
