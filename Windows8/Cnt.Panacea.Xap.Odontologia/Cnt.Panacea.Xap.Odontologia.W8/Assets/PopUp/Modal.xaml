@@ -21,7 +21,7 @@
 				<ColumnDefinition Width="348*"/>
 				<ColumnDefinition Width="23*"/>
 			</Grid.ColumnDefinitions>
-			<TextBlock x:Name="TxtBlckTitulo" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center"/>
+			<TextBlock x:Name="TxtBlckTitulo" Grid.Column="1" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16"/>
 			<Viewbox Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5">
 				<Grid HorizontalAlignment="Center" VerticalAlignment="Center">
 					<Rectangle Fill="#FFF4F4F5" Stroke="Black"/>

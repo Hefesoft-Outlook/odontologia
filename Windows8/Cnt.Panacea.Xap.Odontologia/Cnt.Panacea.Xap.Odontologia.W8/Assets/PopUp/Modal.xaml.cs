@@ -41,21 +41,22 @@ namespace App2.Assets.PopUp
             if (obj.Nombre == "Plan tratamiento")
             {
                 var wizard = new App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento() {HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch};
-                MostrarModal(wizard);
+                MostrarModal(wizard, "Plan de tratamiento");
             }
         }
 
-        private void MostrarModal(UIElement elementoMostrar)
+        private void MostrarModal(UIElement elementoMostrar, string titulo = "")
         {
-            
-            LayoutRoot.Children.Clear();
-            LayoutRoot.Children.Add(elementoMostrar);
+            TxtBlckTitulo.Text = titulo;
+            Contenedor.Children.Clear();
+            Contenedor.Children.Add(elementoMostrar);
             this.Visibility = Windows.UI.Xaml.Visibility.Visible;
         }
 
         private void ocultarModal()
         {
-            LayoutRoot.Children.Clear();            
+            TxtBlckTitulo.Text = "";
+            Contenedor.Children.Clear();            
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
         }
 
