@@ -231,3 +231,6 @@ $RECYCLE.BIN/
 # Cnt
 *.pfx
 *.dll
+
+# Telerik
+lib/
