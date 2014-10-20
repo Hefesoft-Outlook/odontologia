@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight;
+﻿using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes;
+using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
@@ -25,8 +26,61 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
         {
             if (Elemento_Seleccionado != null)
             {
-                Elemento_Seleccionado.click(obj);
+                if (validarElementoTieneDiagnosticos(Elemento_Seleccionado))
+                {
+                    Elemento_Seleccionado.click(obj);
+                }
+                else
+                {
+                    GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Mostrar_Mensaje_Usuario() 
+                    { 
+                        Mensaje = "El elemento seleccionado no posee diagnosticos en el odontograma inicial" 
+                    });
+                }
             }
+        }
+
+        private bool validarElementoTieneDiagnosticos(Odontograma.Odontograma Elemento_Seleccionado)
+        {
+            var valido = false;
+
+            if(Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie1.Any(a=>a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie2.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie3.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie4.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie5.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie6.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie7.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.Superficie8.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            if (Elemento_Seleccionado.DiagnosticoProcedimiento.PiezaCompleta.Any(a => a.TipoPanel == Entities.Odontologia.TipoPanel.Diagnostico))
+            {
+                valido = true;
+            }
+            return valido;
         }
      
         private void oirPiezaSeleccionada()

@@ -89,6 +89,7 @@
 			
 			<HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
 				<DataTemplate>
+                    <ScrollViewer>
 					<StackPanel Orientation="Vertical">
                         <Tipos_Odontograma:Tipos></Tipos_Odontograma:Tipos>                        
 						<Viewbox>						
@@ -96,7 +97,8 @@
 						</Viewbox>
 						<Odontologia:Boca/>
 					</StackPanel>
-				</DataTemplate>
+                    </ScrollViewer>
+                </DataTemplate>
 			</HubSection>
             
 			<HubSection IsHeaderInteractive="True"
