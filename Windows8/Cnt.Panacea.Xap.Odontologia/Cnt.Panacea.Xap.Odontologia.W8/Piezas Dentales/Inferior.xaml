@@ -13,38 +13,8 @@
 	x:Class="Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior"
     mc:Ignorable="d"     
     d:DesignHeight="8" d:DesignWidth="20">
-	<Grid>
-		
-		<!--<i:Interaction.Triggers>
-			<i:EventTrigger EventName="MouseEnter">
-				<ei:GoToStateAction x:Name="On_Mouse_Enter" StateName="VisualStateHover"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseLeave">
-				<ei:GoToStateAction x:Name="On_Mouse_Leave" StateName="VisualState"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseRightButtonUp">
-				<ei:GoToStateAction x:Name="On_Mouse_Right_Up" StateName="VisualState"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseLeftButtonDown">
-				<Custom:EventToCommand Command="{Binding ClickCommand, Mode=OneWay}" CommandParameter="Superficie7"/>				
-			</i:EventTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" Value="False">
-				<ei:GoToStateAction x:Name="inhabilitado" StateName="VisualStateInhabilitado"/>
-			</ei:DataTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" Value="True">
-				<ei:GoToStateAction x:Name="habilitado" StateName="VisualState"/>
-			</ei:DataTrigger>
-
-			--><!--Realizado Odontograma Evolucion--><!--
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie7}" Value="True">
-				<ei:GoToStateAction x:Name="realizado" StateName="VisualStateRealizado"/>
-			</ei:DataTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie7}" Value="False">
-				<ei:GoToStateAction x:Name="No_Realizado" StateName="VisualState"/>
-			</ei:DataTrigger>
-
-		</i:Interaction.Triggers>-->
-		
+	
+    <Grid>	
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">
 				<VisualStateGroup.Transitions>
@@ -79,12 +49,32 @@
 			<Core:EventTriggerBehavior x:Name="Touch" EventName="Tapped">
 				<Core:InvokeCommandAction Command="{Binding tabCommand}" CommandParameter="Superficie7"/>
 			</Core:EventTriggerBehavior>
+
+			<!--Inhabilitar Habilitar superficies-->
+			<Core:DataTriggerBehavior x:Name="Inhabilitar"  Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" Value="False">
+				<Core:GoToStateAction StateName="VisualStateInhabilitado"/>
+			</Core:DataTriggerBehavior>
+
+			<Core:DataTriggerBehavior x:Name="Habilitar"  Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" Value="True">
+				<Core:GoToStateAction StateName="VisualState"/>
+			</Core:DataTriggerBehavior>
+
+			<!--Inhabilitar realizado superficies-->
+            <Core:DataTriggerBehavior x:Name="realizado"  Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie7}" Value="True">
+				<Core:GoToStateAction StateName="VisualStateRealizado"/>
+			</Core:DataTriggerBehavior>
+
+            <Core:DataTriggerBehavior x:Name="noRealizado"  Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie7}" Value="False">
+				<Core:GoToStateAction StateName="VisualState"/>
+			</Core:DataTriggerBehavior>
+
+
 		</Interactivity:Interaction.Behaviors>
 		<Path x:Name="path" Data="M7.07812,28.3125 L5.34387,34.2817 L5.2186,34.5945 L15.9088,34.5318 L24.0677,34.438 L21.1923,28.4536 L19.0041,29.5474 L16.9253,29.9849 L14.8308,30.2036 L12.9865,30.2036 L11.6892,30.0161 L10.1574,29.6724 L9.00082,29.2193 L8.21932,28.8599 L7.60975,28.5161 L7.09396,28.3286" HorizontalAlignment="Left" Height="6.382" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="18.943"/>
 		<Path x:Name="path_fondo" Data="M7.07812,28.3125 L5.34387,34.2817 L5.2186,34.5945 L15.9088,34.5318 L24.0677,34.438 L21.1923,28.4536 L19.0041,29.5474 L16.9253,29.9849 L14.8308,30.2036 L12.9865,30.2036 L11.6892,30.0161 L10.1574,29.6724 L9.00082,29.2193 L8.21932,28.8599 L7.60975,28.5161 L7.09396,28.3286" HorizontalAlignment="Left" Height="6.382" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="18.943" Fill="#FFD31414" Opacity="0"/>
 		<Path x:Name="path_realizado" Data="M7.07812,28.3125 L5.34387,34.2817 L5.2186,34.5945 L15.9088,34.5318 L24.0677,34.438 L21.1923,28.4536 L19.0041,29.5474 L16.9253,29.9849 L14.8308,30.2036 L12.9865,30.2036 L11.6892,30.0161 L10.1574,29.6724 L9.00082,29.2193 L8.21932,28.8599 L7.60975,28.5161 L7.09396,28.3286" HorizontalAlignment="Left" Height="6.382" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="18.943" Opacity="0.8" Visibility="Collapsed">
 			<Path.Fill>
-				<ImageBrush Stretch="Fill" ImageSource="/Cnt.Panacea.Xap.Odontologia;component/Assets/Images/59229.png"/>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/59229.png"/>
 			</Path.Fill>
 		</Path>
 		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="6,-6,7,-3"/>

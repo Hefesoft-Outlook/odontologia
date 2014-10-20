@@ -22,7 +22,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util
             elemento.Habilitado_Boca = elemento.Boca.Any(a => a.Diagnostico != null);
 
             // Cuando es pieza completa habilite toda la superficie
-            if (elemento.Habilitado_Pieza_Completa)
+            if (elemento.Habilitado_Pieza_Completa == true)
             {
                 elemento.Habilitado_Superficie1 = true;
                 elemento.Habilitado_Superficie2 = true;

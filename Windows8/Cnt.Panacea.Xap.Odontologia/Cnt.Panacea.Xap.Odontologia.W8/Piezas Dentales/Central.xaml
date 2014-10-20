@@ -27,46 +27,27 @@
 			<Core:EventTriggerBehavior x:Name="Touch" EventName="Tapped">
 				<Core:InvokeCommandAction Command="{Binding tabCommand}" CommandParameter="Superficie1"/>
 			</Core:EventTriggerBehavior>
+
+			<!--Inhabilitar Habilitar superficies-->
+			<Core:DataTriggerBehavior x:Name="Inhabilitar"  Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" Value="False">
+				<Core:GoToStateAction StateName="VisualStateInhabilitado"/>
+			</Core:DataTriggerBehavior>
+
+			<Core:DataTriggerBehavior x:Name="Habilitar"  Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" Value="True">
+				<Core:GoToStateAction StateName="VisualState"/>
+			</Core:DataTriggerBehavior>
+
+			<!--Inhabilitar realizado superficies-->
+            <Core:DataTriggerBehavior x:Name="realizado"  Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie1}" Value="True">
+				<Core:GoToStateAction StateName="VisualStateRealizado"/>
+			</Core:DataTriggerBehavior>
+
+            <Core:DataTriggerBehavior x:Name="noRealizado"  Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie1}" Value="False">
+				<Core:GoToStateAction StateName="VisualState"/>
+			</Core:DataTriggerBehavior>
+
 		</Interactivity:Interaction.Behaviors>
-		<!--<Interactivity:Interaction.Behaviors>
-			<Core:EventTriggerBehavior EventName="PointerPressed">
-				<Core:InvokeCommandAction Command="{Binding ClickCommand, Mode=OneWay}" CommandParameter="Superficie1"/>
-			</Core:EventTriggerBehavior>
-		</Interactivity:Interaction.Behaviors>-->
-
-		<!--<i:Interaction.Triggers>
-			<i:EventTrigger EventName="MouseEnter">
-				<ei:GoToStateAction x:Name="On_Mouse_Enter" StateName="VisualStateHover"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseLeave">
-				<ei:GoToStateAction x:Name="On_Mouse_Leave" StateName="VisualState"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseRightButtonUp">
-				<ei:GoToStateAction x:Name="On_Mouse_Right_Up" StateName="VisualState"/>
-			</i:EventTrigger>
-			<i:EventTrigger EventName="MouseLeftButtonDown">
-				<Custom:EventToCommand Command="{Binding ClickCommand, Mode=OneWay}" CommandParameter="Superficie1"/>
-			</i:EventTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" Value="False">
-				<ei:GoToStateAction x:Name="inhabilitado" StateName="VisualStateInhabilitado"/>
-			</ei:DataTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" Value="True">
-				<ei:GoToStateAction x:Name="habilitado" StateName="VisualState"/>
-			</ei:DataTrigger>
-
-			-->
-
-		<!--Realizado Odontograma Evolucion-->
-
-		<!--
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie1}" Value="True">
-				<ei:GoToStateAction x:Name="realizado" StateName="VisualStateRealizado"/>
-			</ei:DataTrigger>
-			<ei:DataTrigger Binding="{Binding DiagnosticoProcedimiento.Realizado_Superficie1}" Value="False">
-				<ei:GoToStateAction x:Name="No_Realizado" StateName="VisualState"/>
-			</ei:DataTrigger>
-
-		</i:Interaction.Triggers>-->
+		
 		
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">
@@ -101,7 +82,7 @@
 		<Ellipse x:Name="Ellipse_Fondo" Fill="#FFF72A2A" Opacity="0" />
 		<Ellipse x:Name="Ellipse_Realizado" Opacity="0.8" Visibility="Collapsed" >
 			<Ellipse.Fill>
-				<ImageBrush Stretch="Fill" ImageSource="/Cnt.Panacea.Xap.Odontologia;component/Assets/Images/59229.png"/>
+                <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/59229.png"/>
 			</Ellipse.Fill>
 		</Ellipse>
 		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>

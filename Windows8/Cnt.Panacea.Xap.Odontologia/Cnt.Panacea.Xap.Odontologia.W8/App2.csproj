@@ -222,6 +222,9 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <Content Include="Images\59229.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="Common\ReadMe.txt" />
     <None Include="App2_TemporaryKey.pfx" />
     <None Include="packages.config" />

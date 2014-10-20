@@ -16,13 +16,19 @@
             <HyperlinkButton Content="{Binding Elemento_Seleccionado.codigoSPiezaDental}" HorizontalAlignment="Center" FontSize="26.667"/>
             <Grid Height="165" Width="150">
 				
-				<!--Se usa para mostrar la superficie xq el binding de w8 tiene errerores-->
-            	<Odontologia:SuperficieCompleta HorizontalAlignment="Center" VerticalAlignment="Top" DataContext="{Binding Elemento_Seleccionado}" IsEnabled="False" IsHitTestVisible="False" IsDoubleTapEnabled="False" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" />
+            	<Odontologia:SuperficieCompleta 
+            		HorizontalAlignment="Center" 
+            		VerticalAlignment="Top" 
+            		DataContext="{Binding Elemento_Seleccionado}" 
+            		IsEnabled="False" 
+            		IsHitTestVisible="False" 
+            		IsDoubleTapEnabled="False" 
+            		IsHoldingEnabled="False" 
+            		IsRightTapEnabled="False" 
+            		IsTapEnabled="False" />
             	
-				<!--Se usa para los eventos-->
-				<Grid Background="#FF54BD35" Opacity="0">
+            	<Grid Background="#FF54BD35" Opacity="0">
             		<Odontologia:SuperficieCompleta HorizontalAlignment="Center" VerticalAlignment="Top"/>
-
             	</Grid>
 				
             </Grid>

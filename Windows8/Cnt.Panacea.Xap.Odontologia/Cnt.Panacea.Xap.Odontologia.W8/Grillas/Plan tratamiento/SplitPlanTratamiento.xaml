@@ -119,13 +119,14 @@
                         <!--Sesion-->
                         <TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}"/>
                         <ComboBox 
+                                  SelectedIndex="1"
                                   ItemsSource="{Binding SelectedItem.NumeroSesiones, ElementName=itemListView}"                                               
                                   SelectedValue="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.NumeroSesion, ElementName=itemListView ,Mode=TwoWay}"
                                   />
 
                         <!--Numero de sesiones-->
                         <TextBlock Text="{Binding Mensajes.Numero_Sesiones, Source={StaticResource publicResource}}"/>
-                        <TextBox   Text="{Binding NumeroSesionesProcedimiento, Mode=TwoWay}"/>
+                        <TextBox   Text="{Binding NumeroSesionesProcedimiento, Mode=TwoWay}" InputScope="Number"/>
 
                         <!--Valor del procedimiento-->
                         <TextBlock Text="{Binding Mensajes.Valor_Procedimiento, Source={StaticResource publicResource}}"/>
