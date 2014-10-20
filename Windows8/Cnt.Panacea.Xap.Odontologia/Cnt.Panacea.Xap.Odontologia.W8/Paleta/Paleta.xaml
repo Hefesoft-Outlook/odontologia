@@ -32,8 +32,14 @@
     
 		<StackPanel Orientation="Horizontal" Grid.Row="1">
 			<ListView ItemsSource="{Binding Listado_Windows8}" SelectedItem="{Binding SeleccionadoW8, Mode=TwoWay}" ItemTemplate="{StaticResource DataTemplate}"/>
-			<ListView x:Name="listView" ItemsSource="{Binding NivelesSeveridad}" SelectedItem="{Binding NivelSeverdidadSeleccionado, Mode=TwoWay}" Margin="10,0,0,0"/>
-		</StackPanel>
+            <!--Diagnosticos y numero de piezas dentales-->
+            <StackPanel Margin="10,0,0,0">                
+			    <ListView x:Name="listView" ItemsSource="{Binding NivelesSeveridad}" SelectedItem="{Binding NivelSeverdidadSeleccionado, Mode=TwoWay}"/>
+                <TextBlock Text="# piezas dentales"></TextBlock>
+                <TextBox InputScope="Number" Text="{Binding Numero_Piezas_Dentales_Actual, Mode=TwoWay}"></TextBox>
+            </StackPanel>
+            
+        </StackPanel>
 		<TextBox x:Name="textBox" TextWrapping="Wrap" Margin="0,0,0,5">
 			<Interactivity:Interaction.Behaviors>
 				<Core:EventTriggerBehavior x:Name="Buscador" EventName="KeyUp">

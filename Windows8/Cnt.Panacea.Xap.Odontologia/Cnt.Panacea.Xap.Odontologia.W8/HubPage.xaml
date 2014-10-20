@@ -13,6 +13,7 @@
     xmlns:Tipos_Odontograma="using:App2.Tipos_Odontograma"
     xmlns:Generico="using:App2.Assets.PopUp"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
+    xmlns:Assets="using:App2.Assets.Indices"
     x:Name="pageRoot"
     x:Class="App2.HubPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
@@ -103,6 +104,7 @@
 				<DataTemplate>
 					<StackPanel Orientation="Vertical">
 						<Piezas_Dentales:Seleccionado HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>
+                        <Assets:Indices></Assets:Indices>
 					</StackPanel>
 				</DataTemplate>
 			</HubSection>

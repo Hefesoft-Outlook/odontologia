@@ -127,6 +127,9 @@
     <Compile Include="Assets\Boca\Boca.xaml.cs">
       <DependentUpon>Boca.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Indices\Indices.xaml.cs">
+      <DependentUpon>Indices.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\PopUp\Generico.xaml.cs">
       <DependentUpon>Generico.xaml</DependentUpon>
     </Compile>
@@ -245,6 +248,10 @@
     <Page Include="Assets\Boca\Boca.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Indices\Indices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\PopUp\Generico.xaml">
       <SubType>Designer</SubType>
