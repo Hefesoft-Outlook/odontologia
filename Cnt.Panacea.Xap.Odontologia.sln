@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2010
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaderEffectsLibrary", "ShaderEffectsLibrary\ShaderEffectsLibrary.csproj", "{16B96249-BE80-4E21-AE9E-529BFC8964C7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cnt.Panacea.Xap.Odontologia.Vm", "Cnt.Panacea.Xap.Odontologia.Vm\Cnt.Panacea.Xap.Odontologia.Vm.csproj", "{C41C8CBB-B458-4567-8834-89516213D2CE}"
@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cnt.Panacea.Xap.Odontologia
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 5
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = http://192.168.1.4:8080/
 		SccLocalPath0 = .
@@ -24,6 +24,9 @@ Global
 		SccProjectUniqueName3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls\\Cnt.Panacea.Xap.Odontologia.Mef.Dlls.csproj
 		SccProjectName3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls
 		SccLocalPath3 = Cnt.Panacea.Xap.Odontologia.Mef.Dlls
+		SccProjectUniqueName4 = Cnt.Panacea.Xap.Odontologia.Vm\\Cnt.Panacea.Xap.Odontologia.Vm.csproj
+		SccProjectName4 = Cnt.Panacea.Xap.Odontologia.Vm
+		SccLocalPath4 = Cnt.Panacea.Xap.Odontologia.Vm
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
