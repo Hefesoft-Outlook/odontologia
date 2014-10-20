@@ -9,7 +9,7 @@
 	xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" 
 	xmlns:Custom="http://www.galasoft.ch/mvvmlight" 
 	xmlns:System="clr-namespace:System;assembly=mscorlib" 
-	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core" 
+	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core" x:Name="userControl" 
 	x:Class="Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha"     
     mc:Ignorable="d"
     d:DesignHeight="20" d:DesignWidth="10">
@@ -32,6 +32,13 @@
 					<Storyboard>
 						<ColorAnimation Duration="0" To="#FF514C4C" Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" Storyboard.TargetName="path_fondo" d:IsOptimized="True"/>
 						<DoubleAnimation Duration="0" To="0.3" Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path_fondo" d:IsOptimized="True"/>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.IsEnabled)" Storyboard.TargetName="userControl">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<x:Boolean>False</x:Boolean>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
 				<VisualState x:Name="VisualStateRealizado">
