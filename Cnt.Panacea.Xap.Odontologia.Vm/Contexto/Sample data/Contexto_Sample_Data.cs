@@ -854,14 +854,21 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
         {
 
-            Dto.ParametroOdontologicoConvenio a = new Dto.ParametroOdontologicoConvenio() { Convenio = 2, id = Guid.NewGuid() };
+            Dto.ParametroOdontologicoConvenio a = new Dto.ParametroOdontologicoConvenio() 
+            { 
+                Convenio = 2, 
+                id = Guid.NewGuid(),
+                PartitionKey = "test",
+                RowKey = new Random().Next(1,10000000).ToString(),
+                nombreTabla = "ParametroOdontologicoConvenio"
+            };
 
             //Install-Package Newtonsoft.Json -Version 6.0.3
             string json = JsonConvert.SerializeObject(a);
 
             HttpClientHandler handler = new HttpClientHandler();
             var httpClient = new HttpClient(handler);
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:6010/api/convenio");
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:3481/api/values");
             request.Content = new StringContent(json);
             MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
             contentType.MediaType = "application/json";
