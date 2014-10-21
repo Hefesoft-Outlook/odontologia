@@ -183,14 +183,26 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.IO">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.IO.dll</HintPath>
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.Runtime.dll</HintPath>
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\System.Threading.Tasks.dll</HintPath>
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -210,6 +222,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Mensajes1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Dto\Dto.csproj">
+      <Project>{706cd8cb-d160-443c-ac3f-f3201aa67a24}</Project>
+      <Name>Dto</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

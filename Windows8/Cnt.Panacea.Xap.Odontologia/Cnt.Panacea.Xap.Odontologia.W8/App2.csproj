@@ -394,6 +394,9 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\windows8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.5\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />

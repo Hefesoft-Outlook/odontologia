@@ -1,10 +1,14 @@
 ﻿using Cnt.Panacea.Entities.Odontologia;
 using Cnt.Panacea.Entities.Parametrizacion;
+using Newtonsoft.Json;
 using Proxy;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -774,7 +778,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public  Task<ObservableCollection<OdontogramasPacienteEntity>> ListarOdontogramasSinTratamiento(int IdPaciente, short IdIps)
-        {            
+        {   
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramasPacienteEntity>>();
             var lst = new ObservableCollection<OdontogramasPacienteEntity>();
             tcs.SetResult(lst);
@@ -832,13 +836,50 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
+        //async Task UploadJsonObjectAsync<T>(Uri uri, T data)
+        //{
+        //    var client = new HttpClient();
+        //    var content = new PushStreamContent((stream, httpContent, transportContext) =>
+        //    {
+        //        var serializer = new JsonSerializer();
+        //        using (var writer = new StreamWriter(stream))
+        //        {
+        //            serializer.Serialize(writer, data);
+        //        }
+        //    });
+        //    var response = await client.PostAsync(uri, content);
+        //    response.EnsureSuccessStatusCode();
+        //}
 
-        public  Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
-        {   
+        public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
+        {
+
+            Dto.ParametroOdontologicoConvenio a = new Dto.ParametroOdontologicoConvenio() { Convenio = 2, id = Guid.NewGuid() };
+
+            //Install-Package Newtonsoft.Json -Version 6.0.3
+            string json = JsonConvert.SerializeObject(a);
+
+            HttpClientHandler handler = new HttpClientHandler();
+            var httpClient = new HttpClient(handler);
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:6010/api/convenio");
+            request.Content = new StringContent(json);
+            MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
+            contentType.MediaType = "application/json";
+
+            request.Content.Headers.ContentType = contentType;
+
+            if (handler.SupportsTransferEncodingChunked())
+            {
+                request.Headers.TransferEncodingChunked = true;
+            }
+            HttpResponseMessage response = await httpClient.SendAsync(request);
+
+
+
             var tcs = new TaskCompletionSource<ObservableCollection<ParametroOdontologicoConvenioEntity>>();
             ObservableCollection<ParametroOdontologicoConvenioEntity> lst = new ObservableCollection<ParametroOdontologicoConvenioEntity>();
             tcs.SetResult(lst);
-            return tcs.Task;
+            return lst;
         }
 
         public  Task<ParametroOdontologicoBodegaEntity> ListarParametrosBodega(short idIps)
