@@ -22,16 +22,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         public  void inicializarContexto()
         {
-            if (binding != null)
-            {
-                Uri serviceUri = new Uri(url, UriKind.Absolute);
-                EndpointAddress endpointAddress = new EndpointAddress(serviceUri);
-                cliente = new OdontologiaServicioClient(binding, endpointAddress);
-            }
-            else
-            {
-                cliente = new OdontologiaServicioClient();
-            }
+            
         }
         public  Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
         {
@@ -110,51 +101,13 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         /// </summary>
         public  Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps, int idPaciente)
         {
-            inicializarContexto();
+            
             var tcs = new TaskCompletionSource<ObservableCollection<TratamientoEntity>>();
-
-            var client = cliente;
-
-            client.ListarPacienteCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-
-            client.ListarPacienteAsync(idIps, idPaciente);
-
+            var lst = new ObservableCollection<TratamientoEntity>();
+            tcs.SetResult(lst);
             return tcs.Task;
 
         }
-
-        //public  Task<ObservableCollection<ConfiguracionDiagnosticoOdontologiaEntity>> ConsultarDiagnosticosConfigurados(short idIps)
-        //{
-
-        //    var tcs = new TaskCompletionSource<ObservableCollection<ConfiguracionDiagnosticoOdontologiaEntity>>();
-
-        //    cliente.ConsultarDiagnosticosCondiguradoCompleted += (s, e) =>
-        //    {
-        //        if (e.Error != null)
-        //            tcs.TrySetException(e.Error);
-        //        else if (e.Cancelled)
-        //            tcs.TrySetCanceled();
-        //        else
-        //            tcs.TrySetResult(e.Result);
-        //    };
-        //    cliente.ConsultarDiagnosticosCondiguradoAsync(idIps);
-
-        //    return tcs.Task;
-        //}
 
         public  Task<ObservableCollection<ConfiguracionProcedimientoOdontologiaDto>> ConsultarProcedimientosOdontologiaLigero(short idIps)
         {
@@ -821,27 +774,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public  Task<ObservableCollection<OdontogramasPacienteEntity>> ListarOdontogramasSinTratamiento(int IdPaciente, short IdIps)
-        {
-            inicializarContexto();
+        {            
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramasPacienteEntity>>();
-
-            cliente.ListarOdontogramasSinTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarOdontogramasSinTratamientoAsync(IdPaciente, IdIps);
-
+            var lst = new ObservableCollection<OdontogramasPacienteEntity>();
+            tcs.SetResult(lst);
             return tcs.Task;
         }
 
@@ -898,28 +834,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
 
         public  Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
-        {
-            inicializarContexto();
+        {   
             var tcs = new TaskCompletionSource<ObservableCollection<ParametroOdontologicoConvenioEntity>>();
-
-            cliente.ListarParametrosConvenioCompleted += (s, e) =>
-            {
-
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarParametrosConvenioAsync(IdIps, idConvenio);
-
+            ObservableCollection<ParametroOdontologicoConvenioEntity> lst = new ObservableCollection<ParametroOdontologicoConvenioEntity>();
+            tcs.SetResult(lst);
             return tcs.Task;
         }
 
@@ -1121,12 +1039,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         void IContexto_Odontologia.binding(dynamic valor)
         {
-            throw new NotImplementedException();
+            
         }
 
         void IContexto_Odontologia.url(string url)
         {
-            throw new NotImplementedException();
+            
         }
     }    
 }

@@ -1,6 +1,8 @@
 ﻿using App2.Common;
 using App2.Data;
+using App2.Util;
 using Cnt.Panacea.Xap.Odontologia.Util.Messenger;
+using Cnt.Panacea.Xap.Odontologia.Vm.Contexto;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes;
@@ -54,6 +56,16 @@ namespace App2
 
         public HubPage()
         {
+
+            var contexto = ServiceLocator.Current.GetInstance<IContexto_Odontologia>();
+            contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
+            contexto.url("net.tcp://192.168.1.245:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
+
+
+            // Metodo para pasarle los parametros al binding
+            //Ya que windows 8 no tiene archivos client config de configuracion
+            contexto.inicializarContexto();
+
             this.InitializeComponent();
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += navigationHelper_LoadState;

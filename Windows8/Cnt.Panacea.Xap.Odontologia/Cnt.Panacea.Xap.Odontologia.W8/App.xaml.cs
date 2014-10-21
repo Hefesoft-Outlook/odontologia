@@ -3,6 +3,7 @@ using App2.Util;
 using Cnt.Panacea.Xap.Odontologia.Vm.Contexto;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,15 +47,6 @@ namespace App2
             Variables_Globales.IdIps = 21;
             Variables_Globales.IdPaciente = 232431;
             Variables_Globales.IdTratamientoActivo = 2;
-
-            var contexto = SimpleIoc.Default.GetInstance<IContexto_Odontologia>();
-            contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
-            contexto.url("net.tcp://192.168.1.245:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
-            
-
-            // Metodo para pasarle los parametros al binding
-            //Ya que windows 8 no tiene archivos client config de configuracion
-            contexto.inicializarContexto();
         }
 
         void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)

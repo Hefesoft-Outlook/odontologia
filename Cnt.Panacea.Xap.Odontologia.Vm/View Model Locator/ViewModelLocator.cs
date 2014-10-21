@@ -28,11 +28,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
 
             SimpleIoc.Default.Register<MainViewModel>();
 
-            //Manejo de servicios
-            //SimpleIoc.Default.Register<IContexto_Odontologia, Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia>();
-            SimpleIoc.Default.Register<IContexto_Odontologia, Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia>();
-            
-
+            if (!SimpleIoc.Default.IsRegistered<IContexto_Odontologia>())
+            {
+                //Aca seleccionamos a que sevicio queremos conectarnos
+                SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
+                
+                //Conexion a wcf
+                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());                
+            }
 
             //View model donde se muestra el indice de placa bacteriana y demas
             SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Pieza_Seleccionada.vm.vm>();
