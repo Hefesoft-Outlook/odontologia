@@ -1,4 +1,5 @@
 ﻿using Cnt.Panacea.Xap.Odontologia.Recursos.ViewModelLocator;
+using Cnt.Panacea.Xap.Odontologia.Vm.Contexto;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Ioc;
 using Microsoft.Practices.ServiceLocation;
@@ -26,6 +27,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
 
 
             SimpleIoc.Default.Register<MainViewModel>();
+
+            //Manejo de servicios
+            //SimpleIoc.Default.Register<IContexto_Odontologia, Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia>();
+            SimpleIoc.Default.Register<IContexto_Odontologia, Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia>();
+            
+
 
             //View model donde se muestra el indice de placa bacteriana y demas
             SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Pieza_Seleccionada.vm.vm>();
@@ -249,6 +256,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                  return ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
              }
          }
+
 
         
          

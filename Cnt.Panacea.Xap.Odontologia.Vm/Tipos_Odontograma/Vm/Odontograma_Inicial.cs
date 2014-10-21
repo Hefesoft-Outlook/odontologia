@@ -73,12 +73,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             Busy.UserControlCargando();
 
-            var resultado = await Contexto_Odontologia.ConsultarOdontogramaPaciente(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
+            var resultado = await Contexto_Odontologia.obtenerContexto().ConsultarOdontogramaPaciente(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
             
             //Pedimos al control Mapa dental que pinte los datos que llegaron de la bd
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Pedir_Pintar_Datos() { lst = resultado });
 
-            var convenio = await Contexto_Odontologia.consultarConvenio(Variables_Globales.IdConvenio);
+            var convenio = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);
             ConvenioAtencion = convenio;
             RaisePropertyChanged("ConvenioAtencion");
             Busy.UserControlCargando(false);
@@ -86,14 +86,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             if (Variables_Globales.OdontogramaPacientetity != 0)
             {
 
-                var Prestador = await Contexto_Odontologia.ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006
+                var Prestador = await Contexto_Odontologia.obtenerContexto().ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006
                 PrestadorAtencion = Prestador;
                 RaisePropertyChanged("PrestadorAtencion");
                 //cargarProcedimientosAsociadosADiagnosticos(resultado);
                 TipoOdontograma.Inicial = false;
                 Odontologia.Clases.TipoOdontograma.InicialCargandoDatos = true;
                 //await tratamientoActivo(Variables_Globales.IdTratamientoActivo);
-                var OdontogramaPaciente = await Contexto_Odontologia.SelecionarOdontogramaPaciente(Variables_Globales.OdontogramaPacientetity);
+                var OdontogramaPaciente = await Contexto_Odontologia.obtenerContexto().SelecionarOdontogramaPaciente(Variables_Globales.OdontogramaPacientetity);
 
                 Messenger.Default.Send(new Carga_Odontograma_Inicial() { Cantidad_Dientes = OdontogramaPaciente.CantidadDientes });
                 Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta.Paleta() { NumeroPiezasDentales = OdontogramaPaciente.CantidadDientes });
@@ -173,9 +173,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         private async Task guardarOdontograma(TratamientoEntity tratamientoPadre, List<OdontogramaEntity> observableCollection, OdontogramasPacienteEntity odontogramaPaciente)
         {
             //Valida que no este guardando ya contra el servicio
-            if (!Contexto_Odontologia.guardado_En_Proceso)
-            {
-                var numeroOdontograma = await Contexto_Odontologia.GuardarOdontogramaInicial(tratamientoPadre, odontogramaPaciente, observableCollection, null, Variables_Globales.IdIps);
+            //if (!Contexto_Odontologia.obtenerContexto().guardado_En_Proceso)
+            //{
+                var numeroOdontograma = await Contexto_Odontologia.obtenerContexto().GuardarOdontogramaInicial(tratamientoPadre, odontogramaPaciente, observableCollection, null, Variables_Globales.IdIps);
 
                 Busy.UserControlCargando();
                 //Este numero se usara para guardar tambien plan de tratamiento y evolucion
@@ -183,7 +183,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 
                 //Unificar estos dos
                 //*********************************************/*
-                Variables_Globales.TratamientosPadre = await Contexto_Odontologia.SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
+                Variables_Globales.TratamientosPadre = await Contexto_Odontologia.obtenerContexto().SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
                 Variables_Globales.IdTratamientoActivo = Variables_Globales.TratamientosPadre.Identificador;
                 //*********************************************/*
 
@@ -198,7 +198,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
                     Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos() { valor = "Plan Tratamiento" });
                 }
-            }
+            //}
         }
 
         public Entities.Parametrizacion.ConvenioEntity ConvenioAtencion { get; set; }

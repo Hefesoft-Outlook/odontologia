@@ -52,7 +52,10 @@
     <Compile Include="Boca\Boca.cs" />
     <Compile Include="Bodega\Bodega.cs" />
     <Compile Include="Contenedor\vm.cs" />
-    <Compile Include="Contexto\Contexto_Odontologia.cs" />
+    <Compile Include="Contexto\Sample data\Contexto_Sample_Data.cs" />
+    <Compile Include="Contexto\Sample data\IContexto_Odontologia.cs" />
+    <Compile Include="Contexto\Wcf\Contexto.cs" />
+    <Compile Include="Contexto\Wcf\Contexto_Odontologia.cs" />
     <Compile Include="Convenio\vm.cs" />
     <Compile Include="Datos de prueba\Paleta.cs" />
     <Compile Include="Diagnosticos Procedimientos\Tiene_Diagnosticos.cs" />

@@ -151,7 +151,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
             //Valida que no este cargado antes
             if (Comprobantes == null)
             {
-                Comprobantes = await Contexto_Odontologia.ListarComprobantes(Variables_Globales.IdIps, Variables_Globales.UsuarioActual, Variables_Globales.IdSede);
+                Comprobantes = await Contexto_Odontologia.obtenerContexto().ListarComprobantes(Variables_Globales.IdIps, Variables_Globales.UsuarioActual, Variables_Globales.IdSede);
             }
 
             if (Comprobantes.Any())

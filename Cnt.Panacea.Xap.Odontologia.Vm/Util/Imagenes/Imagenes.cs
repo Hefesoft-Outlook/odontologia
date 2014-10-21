@@ -36,7 +36,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.Imagenes
                     item.Identificador = x+1;
                 }
 
-                await Contexto_Odontologia.GuardarImagenTratamiento(Variables_Globales.IdTratamientoActivo, vm.LstImagenes.ToObservableCollection());
+                await Contexto_Odontologia.obtenerContexto().GuardarImagenTratamiento(Variables_Globales.IdTratamientoActivo, vm.LstImagenes.ToObservableCollection());
             }
             Busy.UserControlCargando(false);
         }

@@ -85,7 +85,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             if (Variables_Globales.IdTratamientoActivo != 0)
             {
                 Busy.UserControlCargando(true, "Cargando plan de tratamiento");
-                var resultado = await Contexto_Odontologia.ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
+                var resultado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
                 Messenger.Default.Send(new Pedir_Pintar_Datos() { lst = resultado, Limpiar_Datos = false });
                 Busy.UserControlCargando(false);
             }
@@ -171,7 +171,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             TratamientoPadre.Modificado = DateTime.Now;
 
             PacienteEntity Paciente = new PacienteEntity() { Identificador = Variables_Globales.IdPaciente };
-            var result = await Contexto_Odontologia.GuardarPlanTratamiento(TratamientoPadre, 1, OdontogramasPacienteEntity, lstOdontogramaEntity.ToObservableCollection(), EsCotizacion, Paciente, comprobanteSeleccionado, Variables_Globales.IdIps, Variables_Globales.UsuarioActual, Variables_Globales.IdSede, Variables_Globales.IdConvenio);
+            var result = await Contexto_Odontologia.obtenerContexto().GuardarPlanTratamiento(TratamientoPadre, 1, OdontogramasPacienteEntity, lstOdontogramaEntity.ToObservableCollection(), EsCotizacion, Paciente, comprobanteSeleccionado, Variables_Globales.IdIps, Variables_Globales.UsuarioActual, Variables_Globales.IdSede, Variables_Globales.IdConvenio);
 
             tcs.SetResult(result);
             finalizarGuardarPlanTratamiento(result);
@@ -182,7 +182,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
         internal async Task<ObservableCollection<OdontogramaEntity>> listarOdontogramaPlanTratamiento()
         {
-            var resultado = await Contexto_Odontologia.ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
+            var resultado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
             
             PlanTratamientoEstadoNuevoEliminadoModificado = new PlanTratamientoEstadoNuevoEliminadoModificado();
 
@@ -419,7 +419,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 tratamientoActivo();
             }
 
-            ConvenioAtencion = await Contexto_Odontologia.consultarConvenio(Variables_Globales.IdConvenio);            
+            ConvenioAtencion = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);            
             RaisePropertyChanged("ConvenioAtencion");
         }
 
@@ -440,7 +440,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
             if (!string.IsNullOrEmpty(identificadores))
             {
-                ProcedimientosOdontogramaTratamiento = await Contexto_Odontologia.ConsultarProcedimientosPorDiagnostico(Variables_Globales.IdIps,identificadores);
+                ProcedimientosOdontogramaTratamiento = await Contexto_Odontologia.obtenerContexto().ConsultarProcedimientosPorDiagnostico(Variables_Globales.IdIps, identificadores);
 
                 List<int> lstProcedimientos = new List<int>();
                 foreach (var item in ProcedimientosOdontogramaTratamiento.ToList())
@@ -451,7 +451,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 // Los procedimientos asociados al diagnostico del odontograma inicial
                 Messenger.Default.Send(new cargar_Diagnosticos_Procedimientos() {listadoProcedimientos = lstProcedimientos, tipo = Tipo.listado});
 
-                var result = await Contexto_Odontologia.ConsultarEspecialidadesPorProcedimiento(Variables_Globales.IdSede, identificadores);
+                var result = await Contexto_Odontologia.obtenerContexto().ConsultarEspecialidadesPorProcedimiento(Variables_Globales.IdSede, identificadores);
 
                 if (result.Any())
                 {
@@ -472,7 +472,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             if (TiposTratamiento == null)
             {
-                TiposTratamiento = await Contexto_Odontologia.ConsultarTiposTratamiento(Variables_Globales.IdIps);
+                TiposTratamiento = await Contexto_Odontologia.obtenerContexto().ConsultarTiposTratamiento(Variables_Globales.IdIps);
                 RaisePropertyChanged("TiposTratamiento");
             }
             if (TratamientoPadre != null)

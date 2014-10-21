@@ -66,7 +66,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
         internal async Task listarOdontogramaEvolucion()
         {
-            Listado = await Contexto_Odontologia.ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
+            Listado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
 
             if (Listado.Any())
             {
@@ -140,7 +140,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 }
                 else
                 {
-                    await Contexto_Odontologia.ActualizarPlanesTratamiento(TratamientoPadre, Planes.PlanesTratamientoCollection);
+                    await Contexto_Odontologia.obtenerContexto().ActualizarPlanesTratamiento(TratamientoPadre, Planes.PlanesTratamientoCollection);
                     
                     GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                     {
@@ -173,7 +173,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             if ((bool)obj == true)
             {
-                await Contexto_Odontologia.ActualizarPlanesTratamiento(TratamientoPadre, Planes.PlanesTratamientoCollection);
+                await Contexto_Odontologia.obtenerContexto().ActualizarPlanesTratamiento(TratamientoPadre, Planes.PlanesTratamientoCollection);
             }
             else
             {

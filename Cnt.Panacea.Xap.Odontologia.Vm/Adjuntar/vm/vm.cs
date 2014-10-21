@@ -50,7 +50,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Adjuntar.vm
         /// <param name="idImagenTratamiento"></param>
         public async void DescargarImagen(int idImagenTratamiento)
         {
-            var resultado = await Contexto_Odontologia.ConsultarImagenTratamiento(idImagenTratamiento);
+            var resultado = await Contexto_Odontologia.obtenerContexto().ConsultarImagenTratamiento(idImagenTratamiento);
             var imagen = resultado.Contenido;
 
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana()

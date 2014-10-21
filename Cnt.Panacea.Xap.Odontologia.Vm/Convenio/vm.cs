@@ -33,7 +33,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm
         /// <param name="ProcedimientoSeleccionado">The procedimiento seleccionado.</param>
         public async void CambiarConvenio(short idIps, short idPaciente)
         {
-            ConveniosPaciente = await Contexto_Odontologia.ListarConveniosPaciente(idIps, idPaciente);
+            ConveniosPaciente = await Contexto_Odontologia.obtenerContexto().ListarConveniosPaciente(idIps, idPaciente);
             RaisePropertyChanged("ConveniosPaciente");
         }
 

@@ -53,7 +53,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         private async void bodega(ProcedimientosGrillaEvolucion obj)
         {
-            var bodega = await Contexto_Odontologia.ListarParametrosBodega(Variables_Globales.IdIps);
+            var bodega = await Contexto_Odontologia.obtenerContexto().ListarParametrosBodega(Variables_Globales.IdIps);
             Variables_Globales.IdBodega = bodega.BodegaInventario.Identificador;            
 
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana()
@@ -106,10 +106,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 tratamientoActivo(TratamientoPadre.Identificador);
                 await SesionesConfiguradasTratamientos();
 
-                FinalidadesProcedimiento = await Contexto_Odontologia.ListarFinalidadesProcedimiento(Variables_Globales.IdIps);
-                OdontologosHigienistasIps = await Contexto_Odontologia.ListarOdontologosPorIps(Variables_Globales.IdIps);
+                FinalidadesProcedimiento = await Contexto_Odontologia.obtenerContexto().ListarFinalidadesProcedimiento(Variables_Globales.IdIps);
+                OdontologosHigienistasIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
 
-                IdReciboCaja = await Contexto_Odontologia.ReciboCajaTratamiento(Variables_Globales.IdTratamientoActivo);
+                IdReciboCaja = await Contexto_Odontologia.obtenerContexto().ReciboCajaTratamiento(Variables_Globales.IdTratamientoActivo);
 
                 if (TratamientoPadre.IdSesionActual != null)
                 {
@@ -124,7 +124,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 }
 
 
-                ValorPagoTratamiento = await Contexto_Odontologia.ValorPagoTratamiento(TratamientoPadre.Identificador);
+                ValorPagoTratamiento = await Contexto_Odontologia.obtenerContexto().ValorPagoTratamiento(TratamientoPadre.Identificador);
                 ValorSaldoTratamiento = ValorTotalTratamiento - ValorPagoTratamiento;
                 Variables_Globales.SesionActual = (short)TratamientoPadre.IdSesionActual;
 
@@ -322,7 +322,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         private async Task SesionesConfiguradasTratamientos()
         {
-            SesionesConfiguradasTratamiento = await Contexto_Odontologia.ConsultarSesionesTratamiento(Variables_Globales.IdTratamientoActivo); 
+            SesionesConfiguradasTratamiento = await Contexto_Odontologia.obtenerContexto().ConsultarSesionesTratamiento(Variables_Globales.IdTratamientoActivo); 
 
             // Gnera el numero de sesiones que se mostraran en el combo
             if (SesionesConfiguradasTratamiento != null && SesionesConfiguradasTratamiento.Count > 0)

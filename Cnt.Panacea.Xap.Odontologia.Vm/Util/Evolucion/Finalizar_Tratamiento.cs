@@ -28,7 +28,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
 
         private async void validarUsuario(Consultar_Usuario_Cierra usuario)
         {
-            var resultado = await Contexto_Odontologia.ValidarusuarioCierraTratamiento(usuario.Nombre, usuario.Password);
+            var resultado = await Contexto_Odontologia.obtenerContexto().ValidarusuarioCierraTratamiento(usuario.Nombre, usuario.Password);
             if (resultado)
             {                
                 cerrarTratamientoTratamiento(Entities.Odontologia.EstadoTratamiento.Terminacion);
@@ -106,7 +106,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
         {
             Busy.UserControlCargando(true, "Cerrando tratamiento");            
             Variables_Globales.TratamientosPadre.EstadoTratamiento = estado;
-            var result = await Contexto_Odontologia.Actualizartratamiento(Variables_Globales.TratamientosPadre);
+            var result = await Contexto_Odontologia.obtenerContexto().Actualizartratamiento(Variables_Globales.TratamientosPadre);
             if (result)
             {
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Messenger.Modo_Lectura.Modo_Lectura() { Solo_Lectura = true });

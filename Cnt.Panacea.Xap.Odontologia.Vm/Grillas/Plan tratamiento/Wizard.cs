@@ -139,12 +139,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
 
         public async Task consultarConvenio()
         {
-            ConvenioAtencion = await Contexto_Odontologia.consultarConvenio(Variables_Globales.IdConvenio);
+            ConvenioAtencion = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);
         }
 
         public async Task consultarPrestador()
         {
-            Prestador = await Contexto_Odontologia.ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006            
+            Prestador = await Contexto_Odontologia.obtenerContexto().ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006            
         }
 
         /// <summary>
@@ -152,8 +152,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         /// </summary>
         public async Task CargarOdontologosEHigienistasIps()
         {
-            OdontologosIps = await Contexto_Odontologia.ListarOdontologosPorIps(Variables_Globales.IdIps);
-            HigientistasIps = await Contexto_Odontologia.ListarHigienistasPorIps(Variables_Globales.IdIps);            
+            OdontologosIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
+            HigientistasIps = await Contexto_Odontologia.obtenerContexto().ListarHigienistasPorIps(Variables_Globales.IdIps);            
             
             //Se forza porque el observable collection no funciona en todos los casos
             RaisePropertyChanged("OdontologosIps");

@@ -198,7 +198,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
             // Cargar los convenios si no estan cargados
             if (!Convenios.Any())
             {
-                Convenios = await Contexto_Odontologia.ConsultarProcedimientosConvenio(Variables_Globales.IdPaciente, Variables_Globales.IdConvenio, Variables_Globales.IdIps);
+                Convenios = await Contexto_Odontologia.obtenerContexto().ConsultarProcedimientosConvenio(Variables_Globales.IdPaciente, Variables_Globales.IdConvenio, Variables_Globales.IdIps);
 
                 foreach (var item in Convenios.ToList())
                 {
@@ -214,8 +214,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
                 if (Variables_Globales.IdIps != 0)
                 {
 
-                    var diagnosticos = await Contexto_Odontologia.ConsultarDiagnosticosConfigurados(Variables_Globales.IdIps);
-                    var procedimientos = await Contexto_Odontologia.ConsultarProcedimientosConfigurados(Variables_Globales.IdIps);
+                    var diagnosticos = await Contexto_Odontologia.obtenerContexto().ConsultarDiagnosticosConfigurados(Variables_Globales.IdIps);
+                    var procedimientos = await Contexto_Odontologia.obtenerContexto().ConsultarProcedimientosConfigurados(Variables_Globales.IdIps);
                                         
                     ListadoTodos = diagnosticos.OrderBy(a => a.Descripcion).ToList();
                     ListadoTodos.AddRange(procedimientos);
@@ -268,7 +268,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
         {
             try
             {
-                NivelesSeveridad = await Contexto_Odontologia.ConsultarNivelSeveridad();
+                NivelesSeveridad = await Contexto_Odontologia.obtenerContexto().ConsultarNivelSeveridad();
                 RaisePropertyChanged("NivelesSeveridad");
             }
             catch { }

@@ -63,7 +63,7 @@ namespace Cnt.Panacea.Xap.ViewModels
             Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paciente.Inicializar_Valor_Paciente());
 
             Busy.UserControlCargando();
-            Variables_Globales.TratamientosPadre = await Contexto_Odontologia.SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
+            Variables_Globales.TratamientosPadre = await Contexto_Odontologia.obtenerContexto().SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
             modoLectura();
             Busy.UserControlCargando(false);
         }
@@ -92,7 +92,7 @@ namespace Cnt.Panacea.Xap.ViewModels
 
             //Con esta variable se hacen la mayoria de calculos
             Busy.UserControlCargando(true, "Cargando tratamientos guardados");
-            Variables_Globales.TratamientosPadre = await Contexto_Odontologia.SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
+            Variables_Globales.TratamientosPadre = await Contexto_Odontologia.obtenerContexto().SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
             modoLectura();
             Busy.UserControlCargando(false);   
         }        
@@ -183,7 +183,7 @@ namespace Cnt.Panacea.Xap.ViewModels
 
         private async System.Threading.Tasks.Task odontogramasSinTratamiento()
         {
-            OdontogramasSinTratamiento = await Contexto_Odontologia.ListarOdontogramasSinTratamiento(Variables_Globales.IdPaciente, Variables_Globales.IdIps);            
+            OdontogramasSinTratamiento = await Contexto_Odontologia.obtenerContexto().ListarOdontogramasSinTratamiento(Variables_Globales.IdPaciente, Variables_Globales.IdIps);            
             RaisePropertyChanged("OdontogramasSinTratamiento");
         }
 
@@ -191,9 +191,8 @@ namespace Cnt.Panacea.Xap.ViewModels
         {
             try
             {
-                tratamientosPaciente = await Contexto_Odontologia.ConsultarTratamientosPaciente(Variables_Globales.IdIps, Variables_Globales.IdPaciente);
 
-                
+                tratamientosPaciente = await Contexto_Odontologia.obtenerContexto().ConsultarTratamientosPaciente(Variables_Globales.IdIps, Variables_Globales.IdPaciente);
 
                 Variables_Globales.TratamientosPaciente = new System.Collections.Generic.List<long>();
                 foreach (TratamientoEntity item in tratamientosPaciente)
@@ -241,8 +240,8 @@ namespace Cnt.Panacea.Xap.ViewModels
         /// Cargar los parametros de acuerdo al convenio.
         /// </summary>
         public async void CargarParametrosConvenio()
-        {            
-            var Convenio = await Contexto_Odontologia.ListarParametrosConvenio(Variables_Globales.IdIps, Variables_Globales.IdConvenio);
+        {
+            var Convenio = await Contexto_Odontologia.obtenerContexto().ListarParametrosConvenio(Variables_Globales.IdIps, Variables_Globales.IdConvenio);
 
             if (Convenio != null)
             {
@@ -266,13 +265,12 @@ namespace Cnt.Panacea.Xap.ViewModels
 
         #endregion metodos
 
-
-        
-
+        #region Commands
         public RelayCommand nuevoTratamientoCommand { get; set; }
 
         public RelayCommand<TratamientoEntity> seleccionarTratamientoCommand { get; set; }
 
         public RelayCommand<OdontogramasPacienteEntity> odontogramaSinTratamientoCommand { get; set; }
+        #endregion
     }
 }
