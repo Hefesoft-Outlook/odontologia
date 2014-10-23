@@ -860,13 +860,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                  Color = "Blanco",
                  Numero_Puertas = "4",
                  Modelo = "2014",
-                 estrellado = false,
-                 RowKey = "pruebaOscar"
+                 estrellado = false,             
             };
 
-            var test = await Verbos.postTable(auto);
+            auto.Tiendas.Add(new Dto.Automoviles.Tiendas() 
+            {
+                Ciudad = "Bogota",
+                Nombre = "Lago"
+            });
 
-            var listado =  await auto.getTableByPartition();
+            auto.Tiendas.Add(new Dto.Automoviles.Tiendas()
+            {
+                Ciudad = "Medellina",
+                Nombre = "Carrefour"
+            });
+
+            var test =   await CrudBlob.postBlob(auto);
+            var result = await CrudBlob.getBlobByPartition(auto);
+            
 
             //var a = new Dto.Estudiantes.Estudiante(){ Codigo_Estudiante = Guid.NewGuid().ToString(), Nombre_Estudiante = "Douglas" };
 

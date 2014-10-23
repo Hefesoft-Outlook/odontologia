@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public static class Verbos
+public static class crudTable
 {
     public static async Task<T> postTable<T>(this T entidad) where T : IEntidadBase
     {

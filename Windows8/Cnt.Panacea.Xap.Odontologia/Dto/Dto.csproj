@@ -44,8 +44,9 @@
     <Compile Include="Estudiantes\Estudiante.cs" />
     <Compile Include="IEntidadBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="util\CrudBlob.cs" />
     <Compile Include="util\Path_Servicio.cs" />
-    <Compile Include="util\Verbos.cs" />
+    <Compile Include="util\crudTable.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Threading.Tasks">
