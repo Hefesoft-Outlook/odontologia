@@ -76,10 +76,6 @@ public static class crudTable
         var httpClient = new HttpClient(handler);
         HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, Path_Servicio.obtenerUrlServicio() + parameters);
         
-        //MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
-        //contentType.MediaType = "application/json";
-        //request.Content.Headers.ContentType = contentType;
-
         if (handler.SupportsTransferEncodingChunked())
         {
             request.Headers.TransferEncodingChunked = true;
