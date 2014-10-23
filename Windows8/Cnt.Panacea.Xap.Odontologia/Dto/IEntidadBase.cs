@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Dto
 {
-    interface IEntidadBase
+    public interface IEntidadBase
     {
          string PartitionKey {get; set;}
          string RowKey { get; set; }

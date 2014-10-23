@@ -854,33 +854,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
         {
 
-            Dto.ParametroOdontologicoConvenio a = new Dto.ParametroOdontologicoConvenio() 
-            { 
-                Convenio = 2, 
-                id = Guid.NewGuid(),
-                PartitionKey = "test",
-                RowKey = new Random().Next(1,10000000).ToString(),
-                nombreTabla = "ParametroOdontologicoConvenio"
+            var auto = new Dto.Automoviles.Mazda() 
+            {
+                 Cilindraje = 1200,
+                 Color = "Blanco",
+                 Numero_Puertas = "4",
+                 Modelo = "2014",
+                 estrellado = false,
+                 RowKey = "pruebaOscar"
             };
 
-            //Install-Package Newtonsoft.Json -Version 6.0.3
-            string json = JsonConvert.SerializeObject(a);
+            var test = await Verbos.postTable(auto);
 
-            HttpClientHandler handler = new HttpClientHandler();
-            var httpClient = new HttpClient(handler);
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, "http://localhost:3481/api/values");
-            request.Content = new StringContent(json);
-            MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
-            contentType.MediaType = "application/json";
+            var listado =  await auto.getTableByPartition();
 
-            request.Content.Headers.ContentType = contentType;
+            //var a = new Dto.Estudiantes.Estudiante(){ Codigo_Estudiante = Guid.NewGuid().ToString(), Nombre_Estudiante = "Douglas" };
 
-            if (handler.SupportsTransferEncodingChunked())
-            {
-                request.Headers.TransferEncodingChunked = true;
-            }
-            HttpResponseMessage response = await httpClient.SendAsync(request);
-
+            //var insertar = await Verbos.postTable(a);
+            //var traerDatos = await a.getTableByPartition();
 
 
             var tcs = new TaskCompletionSource<ObservableCollection<ParametroOdontologicoConvenioEntity>>();
