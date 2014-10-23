@@ -1,5 +1,8 @@
-﻿using Cnt.Panacea.Entities.Odontologia;
+﻿using AutoMapper;
+using Cnt.Panacea.Entities.Odontologia;
 using Cnt.Panacea.Entities.Parametrizacion;
+using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
+using Hefesoft.Entities.Odontologia.Diagnostico;
 using Newtonsoft.Json;
 using Proxy;
 using System;
@@ -853,38 +856,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
         {
-
-            var auto = new Dto.Automoviles.Mazda() 
-            {
-                 Cilindraje = 1200,
-                 Color = "Blanco",
-                 Numero_Puertas = "4",
-                 Modelo = "2014",
-                 estrellado = false,             
-            };
-
-            auto.Tiendas.Add(new Dto.Automoviles.Tiendas() 
-            {
-                Ciudad = "Bogota",
-                Nombre = "Lago"
-            });
-
-            auto.Tiendas.Add(new Dto.Automoviles.Tiendas()
-            {
-                Ciudad = "Medellina",
-                Nombre = "Carrefour"
-            });
-
-            var test =   await CrudBlob.postBlob(auto);
-            var result = await CrudBlob.getBlobByPartition(auto);
-            
-
-            //var a = new Dto.Estudiantes.Estudiante(){ Codigo_Estudiante = Guid.NewGuid().ToString(), Nombre_Estudiante = "Douglas" };
-
-            //var insertar = await Verbos.postTable(a);
-            //var traerDatos = await a.getTableByPartition();
-
-
             var tcs = new TaskCompletionSource<ObservableCollection<ParametroOdontologicoConvenioEntity>>();
             ObservableCollection<ParametroOdontologicoConvenioEntity> lst = new ObservableCollection<ParametroOdontologicoConvenioEntity>();
             tcs.SetResult(lst);

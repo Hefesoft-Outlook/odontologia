@@ -47,6 +47,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
                 cargaNivelSeveridad();
                 cargarDiagnosticos();
                 Listado = new Cnt.Panacea.Xap.Odontologia.Vm.Datos_de_prueba.Paleta().datos.ToObservableCollection();
+
+                Listado.fillTables();
+
                 datosProvenientesOtrosFormularios();
                 oirNumeroPiezasDentalesDelOdontogramaInicial();
                 oirNuevoTratamiento();
@@ -223,7 +226,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
                     Listado = ListadoTodos.OrderBy(a => a.Descripcion).Where(a => a.TipoPanel != TipoPanel.ProcedimientoNoCubreConvenio).ToObservableCollection();
 
                     cargarListadoWindows8(Listado);
-                    
+
+                    ListadoTodos.ToObservableCollection().fillTables();
 
                     RaisePropertyChanged("Listado");
                 }

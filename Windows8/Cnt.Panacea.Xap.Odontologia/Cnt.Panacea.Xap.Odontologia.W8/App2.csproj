@@ -113,6 +113,14 @@
       <Project>{c41c8cbb-b458-4567-8834-89516213d2ce}</Project>
       <Name>Cnt.Panacea.Xap.Odontologia.Vm</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dto\Dto.csproj">
+      <Project>{706cd8cb-d160-443c-ac3f-f3201aa67a24}</Project>
+      <Name>Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\Recursos\PublicResource.cs">
@@ -362,6 +370,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.WinRT">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>

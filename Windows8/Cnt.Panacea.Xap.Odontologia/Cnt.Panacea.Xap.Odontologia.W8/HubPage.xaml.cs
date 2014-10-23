@@ -59,7 +59,7 @@ namespace App2
 
             var contexto = ServiceLocator.Current.GetInstance<IContexto_Odontologia>();
             contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
-            contexto.url("net.tcp://192.168.1.245:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
+            contexto.url("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
 
 
             // Metodo para pasarle los parametros al binding

@@ -64,6 +64,7 @@
     <Compile Include="Extensiones\Clases\DiagnosticoProcedimiento_Extend.cs" />
     <Compile Include="Extensiones\Collection.cs" />
     <Compile Include="Extensiones\EnumHelper.cs" />
+    <Compile Include="Extensiones\fillTable.cs" />
     <Compile Include="Extensiones\Nomenclatura.cs" />
     <Compile Include="Extensiones\Numero_Sessiones.cs" />
     <Compile Include="Extensiones\Odontograma_Entity.cs" />
@@ -153,6 +154,9 @@
     <Compile Include="View Model Locator\ViewModelLocator.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -224,6 +228,10 @@
     <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Dto\Dto.csproj">
       <Project>{706cd8cb-d160-443c-ac3f-f3201aa67a24}</Project>
       <Name>Dto</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

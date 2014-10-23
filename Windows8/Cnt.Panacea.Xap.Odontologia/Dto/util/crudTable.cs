@@ -15,7 +15,7 @@ public static class crudTable
     {
         if(string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.PartitionKey))
@@ -61,7 +61,7 @@ public static class crudTable
 
         if (string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
         
         if (string.IsNullOrEmpty(entidad.PartitionKey))
@@ -106,7 +106,7 @@ public static class crudTable
 
         if (string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.PartitionKey))

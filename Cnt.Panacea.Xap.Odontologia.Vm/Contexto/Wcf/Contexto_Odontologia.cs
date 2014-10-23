@@ -47,10 +47,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf
             {
                 cliente = new OdontologiaServicioClient();
             }
+
+            
         }
         public Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
         {
-
             foreach (PlanTratamientoEntity pivot in Planes)
             {
                 if (pivot.Articulos != null)

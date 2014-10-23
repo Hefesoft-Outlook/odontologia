@@ -31,10 +31,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             if (!SimpleIoc.Default.IsRegistered<IContexto_Odontologia>())
             {
                 //Aca seleccionamos a que sevicio queremos conectarnos
-                SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
+                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
                 
                 //Conexion a wcf
-                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());                
+                SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());                
             }
 
             //View model donde se muestra el indice de placa bacteriana y demas

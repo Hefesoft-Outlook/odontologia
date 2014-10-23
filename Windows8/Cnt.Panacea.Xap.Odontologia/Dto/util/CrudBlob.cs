@@ -15,18 +15,18 @@ public static class CrudBlob
     {
         if (string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.PartitionKey))
         {
-            entidad.PartitionKey = entidad.GetType().FullName.ToLower();
+            entidad.PartitionKey = entidad.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.RowKey))
         {
             string row = string.Format("{0}{1}{2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
-            entidad.RowKey = entidad.GetType().Namespace.ToLower() + row;
+            entidad.RowKey = entidad.GetType().Namespace.Replace('_','.').ToLower() + row;
         }
 
         T valorRetorno;
@@ -61,7 +61,7 @@ public static class CrudBlob
 
         if (string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.PartitionKey))
@@ -106,12 +106,12 @@ public static class CrudBlob
 
         if (string.IsNullOrEmpty(entidad.nombreTabla))
         {
-            entidad.nombreTabla = entidad.GetType().Name.ToLower();
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
         }
 
         if (string.IsNullOrEmpty(entidad.PartitionKey))
         {
-            entidad.PartitionKey = entidad.GetType().FullName.ToLower();
+            entidad.PartitionKey = entidad.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
         }
 
         string json = JsonConvert.SerializeObject(entidad);
