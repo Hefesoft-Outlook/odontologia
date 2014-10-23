@@ -154,34 +154,34 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Std.SL">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
-      <HintPath>..\..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
