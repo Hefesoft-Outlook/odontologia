@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proxy;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.ServiceModel;
@@ -40,6 +41,10 @@ namespace App2.Util
                 ReceiveTimeout = tenMinutes,
                 SendTimeout = oneMinute,
             };
+
+            
+
+         
 
             return binding;
         }

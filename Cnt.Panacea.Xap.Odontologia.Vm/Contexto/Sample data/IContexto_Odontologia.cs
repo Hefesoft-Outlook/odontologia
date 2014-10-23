@@ -42,9 +42,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto
         System.Threading.Tasks.Task<decimal> ValorPagoTratamiento(long idTratamiento);
 
         void binding(dynamic valor);
-
         void url(string url);
-        
+
+        dynamic servicio(dynamic cliente);
 
     }
 }

@@ -21,8 +21,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf
         private OdontologiaServicioClient cliente;
         private dynamic _binding;        
         private string _url;
-
         
+
+        public dynamic servicio(dynamic clienteProxy)
+        {
+            cliente = clienteProxy;
+            return cliente;
+        }
+ 
 
         public void binding(dynamic valor)
         {
@@ -36,12 +42,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf
         }
 
         public void inicializarContexto()
-        {
+        {           
+
             if (_binding != null)
             {
-                Uri serviceUri = new Uri(_url, UriKind.Absolute);
-                EndpointAddress endpointAddress = new EndpointAddress(serviceUri);
-                cliente = new OdontologiaServicioClient(_binding, endpointAddress);
+                
             }
             else
             {
@@ -1133,5 +1138,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf
             cliente.ConsultarDiagnosticosConfiguradosAsync(idIps);
             return tcs.Task;
         }
+
+
     }
 }

@@ -10,11 +10,13 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
+using Proxy;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.ServiceModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -61,6 +63,11 @@ namespace App2
             contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
             contexto.url("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
 
+            EndpointAddress endpointAddress = new EndpointAddress("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
+            var cliente = new OdontologiaServicioClient(new Inicializar_Servicio().CreateCustomBinding(), endpointAddress);
+            cliente.Endpoint.EndpointBehaviors.Add(new MyBehavior());
+
+            contexto.servicio(cliente);
 
             // Metodo para pasarle los parametros al binding
             //Ya que windows 8 no tiene archivos client config de configuracion

@@ -47,19 +47,19 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
-      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
-      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
-      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
-      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
     </Reference>
     <Reference Include="Cnt.Std.SL">
-      <HintPath>..\..\..\..\..\..\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />

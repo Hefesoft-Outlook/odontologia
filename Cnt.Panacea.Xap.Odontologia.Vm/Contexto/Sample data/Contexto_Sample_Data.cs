@@ -31,6 +31,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         {
             
         }
+
+        public dynamic servicio(dynamic cliente)
+        {
+            return null;
+        }
+
         public  Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
         {
 
@@ -1067,5 +1073,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         {
             
         }
+
+
     }    
 }

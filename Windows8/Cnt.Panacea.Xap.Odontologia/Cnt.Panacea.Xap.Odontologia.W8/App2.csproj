@@ -224,6 +224,7 @@
     </Compile>
     <Compile Include="Util\Colores.cs" />
     <Compile Include="Util\Inicializar_Servicio.cs" />
+    <Compile Include="Util\Inspector.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
