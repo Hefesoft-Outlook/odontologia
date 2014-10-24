@@ -65,7 +65,10 @@ namespace App2
 
             EndpointAddress endpointAddress = new EndpointAddress("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
             var cliente = new OdontologiaServicioClient(new Inicializar_Servicio().CreateCustomBinding(), endpointAddress);
-            cliente.Endpoint.EndpointBehaviors.Add(new MyBehavior());
+            
+            //El inspector hay que seguir trabajando en el para guardar los datos en table storage
+            //Dinamicamente
+            //cliente.Endpoint.EndpointBehaviors.Add(new MyBehavior());
 
             contexto.servicio(cliente);
 

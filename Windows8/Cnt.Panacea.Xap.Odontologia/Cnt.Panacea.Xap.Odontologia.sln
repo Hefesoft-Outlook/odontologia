@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dto", "Dto\Dto.csproj", "{7
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hefesoft.Entities.Odontologia", "Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj", "{B6817929-A852-471D-8BE3-5D9DEDD02B7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hefesoft.Portable.xml", "Hefesoft.Portable.xml\Hefesoft.Portable.xml.csproj", "{450A6BBE-E963-4CAD-8454-976C224D910F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,16 @@ Global
 		{B6817929-A852-471D-8BE3-5D9DEDD02B7E}.Release|ARM.ActiveCfg = Release|Any CPU
 		{B6817929-A852-471D-8BE3-5D9DEDD02B7E}.Release|x64.ActiveCfg = Release|Any CPU
 		{B6817929-A852-471D-8BE3-5D9DEDD02B7E}.Release|x86.ActiveCfg = Release|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Release|ARM.ActiveCfg = Release|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Release|x64.ActiveCfg = Release|Any CPU
+		{450A6BBE-E963-4CAD-8454-976C224D910F}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

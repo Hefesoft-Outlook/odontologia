@@ -121,6 +121,10 @@
       <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
       <Name>Hefesoft.Entities.Odontologia</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hefesoft.Portable.xml\Hefesoft.Portable.xml.csproj">
+      <Project>{450a6bbe-e963-4cad-8454-976c224d910f}</Project>
+      <Name>Hefesoft.Portable.xml</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\Recursos\PublicResource.cs">
@@ -222,11 +226,9 @@
     <Compile Include="Tipos Odontograma\Tipos.xaml.cs">
       <DependentUpon>Tipos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Util\Class1.cs" />
     <Compile Include="Util\Colores.cs" />
     <Compile Include="Util\Inicializar_Servicio.cs" />
     <Compile Include="Util\Inspector.cs" />
-    <Compile Include="Util\xml.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
