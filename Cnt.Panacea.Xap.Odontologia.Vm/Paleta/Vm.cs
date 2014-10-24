@@ -48,8 +48,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
                 cargarDiagnosticos();
                 Listado = new Cnt.Panacea.Xap.Odontologia.Vm.Datos_de_prueba.Paleta().datos.ToObservableCollection();
 
-                Listado.fillTables();
-
                 datosProvenientesOtrosFormularios();
                 oirNumeroPiezasDentalesDelOdontogramaInicial();
                 oirNuevoTratamiento();

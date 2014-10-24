@@ -13,45 +13,52 @@ public static class CrudBlob
 {
     public static async Task<T> postBlob<T>(this T entidad) where T : IEntidadBase
     {
-        if (string.IsNullOrEmpty(entidad.nombreTabla))
+        try
         {
-            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
-        }
+            if (string.IsNullOrEmpty(entidad.nombreTabla))
+            {
+                entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
+            }
 
-        if (string.IsNullOrEmpty(entidad.PartitionKey))
+            if (string.IsNullOrEmpty(entidad.PartitionKey))
+            {
+                entidad.PartitionKey = entidad.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
+            }
+
+            if (string.IsNullOrEmpty(entidad.RowKey))
+            {
+                string row = string.Format("{0}{1}{2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+                entidad.RowKey = entidad.GetType().Namespace.Replace('_', '.').ToLower() + row;
+            }
+
+            T valorRetorno;
+            string json = JsonConvert.SerializeObject(entidad);
+
+            HttpClientHandler handler = new HttpClientHandler();
+            var httpClient = new HttpClient(handler);
+            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, Path_Servicio.obtenerUrlServicio() + "blob");
+            request.Content = new StringContent(json);
+            MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
+            contentType.MediaType = "application/json";
+
+            request.Content.Headers.ContentType = contentType;
+
+            if (handler.SupportsTransferEncodingChunked())
+            {
+                request.Headers.TransferEncodingChunked = true;
+            }
+            HttpResponseMessage response = await httpClient.SendAsync(request);
+
+            var resultadoString = response.Content.ReadAsStringAsync().Result;
+
+            valorRetorno = JsonConvert.DeserializeObject<T>(resultadoString);
+
+            return valorRetorno;
+        }
+        catch
         {
-            entidad.PartitionKey = entidad.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
+            return entidad;
         }
-
-        if (string.IsNullOrEmpty(entidad.RowKey))
-        {
-            string row = string.Format("{0}{1}{2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
-            entidad.RowKey = entidad.GetType().Namespace.Replace('_','.').ToLower() + row;
-        }
-
-        T valorRetorno;
-        string json = JsonConvert.SerializeObject(entidad);
-
-        HttpClientHandler handler = new HttpClientHandler();
-        var httpClient = new HttpClient(handler);
-        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, Path_Servicio.obtenerUrlServicio() + "blob");
-        request.Content = new StringContent(json);
-        MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
-        contentType.MediaType = "application/json";
-
-        request.Content.Headers.ContentType = contentType;
-
-        if (handler.SupportsTransferEncodingChunked())
-        {
-            request.Headers.TransferEncodingChunked = true;
-        }
-        HttpResponseMessage response = await httpClient.SendAsync(request);
-
-        var resultadoString = response.Content.ReadAsStringAsync().Result;
-
-        valorRetorno = JsonConvert.DeserializeObject<T>(resultadoString);
-
-        return valorRetorno;
     }
 
 
