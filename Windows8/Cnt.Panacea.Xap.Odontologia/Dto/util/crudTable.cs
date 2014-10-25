@@ -96,7 +96,7 @@ public static class crudTable
     }
 
 
-    public static async Task<List<T>> getTableByPartitionAndRowKey<T>(this T entidad, string rowKey) where T : IEntidadBase
+    public static async Task<List<T>> getTableByPartitionAndRowKey<T>(this T entidad, string rowKey)  where T : IEntidadBase
     {
         List<T> valorRetorno = null;
 

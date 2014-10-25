@@ -31,9 +31,16 @@ public static class Convertir_Observables
 
          foreach (var item in source)
          {
-             Mapper.CreateMap<T, P>();
-             P elemento = Mapper.Map<P>(item);
-             lst.Add(elemento);
+             try
+             {
+                 Mapper.CreateMap<T, P>();
+                 P elemento = Mapper.Map<P>(item);
+                 lst.Add(elemento);
+             }
+             catch
+             {
+
+             }
          }
 
          return lst;

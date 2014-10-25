@@ -225,12 +225,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
 
                     cargarListadoWindows8(Listado);
 
-                    ListadoTodos.ToObservableCollection().fillTables(new Hefesoft.Entities.Odontologia.Diagnostico.DiagnosticoProcedimiento());
+                    //ListadoTodos.ToObservableCollection().fillTables(new Hefesoft.Entities.Odontologia.Diagnostico.DiagnosticoProcedimiento());
 
                     RaisePropertyChanged("Listado");
                 }
             }
-            catch { }
+            catch 
+            { 
+            
+            }
 
         }
 

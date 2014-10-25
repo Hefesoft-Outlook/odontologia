@@ -63,7 +63,7 @@ public static class CrudBlob
     }
 
 
-    public static async Task<List<T>> getBlobByPartition<T>(this T entidad) where T : IEntidadBase
+    public static async Task<List<T>> getBlobByPartition<T>(this T entidad)  where T : IEntidadBase
     {
         List<T> valorRetorno = null;
 

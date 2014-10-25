@@ -1,4 +1,5 @@
 ﻿using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System;
@@ -17,16 +18,27 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
             }
             else
             {
+                Modo_Odontograma = Tipo_Odontograma.Inicial;
                 oirPiezaSeleccionada();
+                oirTipoOdontogramaSeleccionado();
                 tabCommand = new RelayCommand<string>(tab);
             }
+        }
+
+        private void oirTipoOdontogramaSeleccionado()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cambiar_Tipo_Odontograma>(this, elemento => 
+            {
+                Modo_Odontograma = elemento.Tipo_Odontograma;
+            });
         }
 
         private void tab(string obj)
         {
             if (Elemento_Seleccionado != null)
             {
-                if (validarElementoTieneDiagnosticos(Elemento_Seleccionado))
+                //Cuando es odontograma inicial no se debe validar
+                if (validarElementoTieneDiagnosticos(Elemento_Seleccionado) || Modo_Odontograma == Tipo_Odontograma.Inicial)
                 {
                     Elemento_Seleccionado.click(obj);
                 }
@@ -97,8 +109,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
         public void Dispose()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma>(this);
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cambiar_Tipo_Odontograma>(this);
         }
 
         public RelayCommand<string> tabCommand { get; set; }
+
+        public Tipo_Odontograma Modo_Odontograma { get; set; }
     }
 }

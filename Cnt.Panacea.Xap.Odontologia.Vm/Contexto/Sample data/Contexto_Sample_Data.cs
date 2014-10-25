@@ -2,7 +2,6 @@
 using Cnt.Panacea.Entities.Odontologia;
 using Cnt.Panacea.Entities.Parametrizacion;
 using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
-using Hefesoft.Entities.Odontologia.Diagnostico;
 using Newtonsoft.Json;
 using Proxy;
 using System;
@@ -15,7 +14,7 @@ using System.Net.Http.Headers;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
-using Hefesoft.Entities.Odontologia.Diagnostico;
+
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 {
@@ -248,51 +247,18 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<NivelSeveridadDXEntity>> ConsultarNivelSeveridad()
-        {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<NivelSeveridadDXEntity>>();
-            cliente.ConsultaNivelesSeveridadCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ConsultaNivelesSeveridadAsync(String.Empty);
-            return tcs.Task;
+        public async Task<ObservableCollection<NivelSeveridadDXEntity>> ConsultarNivelSeveridad()
+        {   
+            var result = new ObservableCollection<NivelSeveridadDXEntity>();
+            var blob = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity(), "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
+            blob.ToObservableCollection().ConvertirObservables(result);            
+            return result;
         }
 
         public  Task<ObservableCollection<OdontogramaEntity>> ConsultarOdontogramaPaciente(Int64 idOdontogramaPaciente, short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramaEntity>>();
-
-            cliente.ListarOdontogramaPacienteCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarOdontogramaPacienteAsync(idOdontogramaPaciente, idIps);
-
             return tcs.Task;
         }
 
@@ -1017,26 +983,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public  Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarProcedimientosConfigurados(short idIps)
-        {
-            inicializarContexto();
+        {   
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
-
-            cliente.ConsultarProcedimientosConfiguradosCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ConsultarProcedimientosConfiguradosAsync(idIps);
+            tcs.SetResult(new ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>());
             return tcs.Task;
         }
 

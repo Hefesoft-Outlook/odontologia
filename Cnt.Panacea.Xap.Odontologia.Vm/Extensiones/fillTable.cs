@@ -27,7 +27,9 @@ using System.Text;
             }
         }
 
-        public static async void fillTables<T,P>(this ObservableCollection<T> lst, P otherClas) where T : class where P : Dto.IEntidadBase
+        public static async void fillTables<T,P>(this ObservableCollection<T> lst, P otherClas)             
+            where T : class 
+            where P : Dto.IEntidadBase
         {
             try
             {
@@ -39,6 +41,8 @@ using System.Text;
                     ElementoInsertar.nombreTabla = item.GetType().Name.eliminarCaracteresEspeciales().ToLower();
                     ElementoInsertar.PartitionKey = item.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
                     ElementoInsertar.RowKey = item.Identificador.ToString();
+                    
+
                     await CrudBlob.postBlob(ElementoInsertar);
                 }
             }

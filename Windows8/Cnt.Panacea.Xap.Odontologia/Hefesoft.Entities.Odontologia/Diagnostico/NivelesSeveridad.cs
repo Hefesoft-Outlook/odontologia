@@ -4,15 +4,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Hefesoft.Entities.Odontologia.Util
+namespace Hefesoft.Entities.Odontologia.Diagnostico
 {
-    public class Odontologia : IEntidadBase
+
+    public sealed class NivelSeveridadDXEntity : IEntidadBase
     {
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
-        public object Item { get; set; }
 
-        public int Identificador { get; set; }
+        public string Descripcion { get; set; }
+
+        public bool Estado { get; set; }
+
+        public short Identificador { get; set; }
     }
 }

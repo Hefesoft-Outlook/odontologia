@@ -8,6 +8,7 @@ namespace Hefesoft.Entities.Odontologia.Diagnostico
 {
     public class DiagnosticoProcedimiento : IEntidadBase
     {
+        
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
@@ -50,6 +51,8 @@ namespace Hefesoft.Entities.Odontologia.Diagnostico
         public string Simbolo { get; set; }
            
         public TipoPanel TipoPanel { get; set; }
+
+        public int Identificador { get; set; }
     }
 
 }

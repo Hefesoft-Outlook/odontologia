@@ -15,6 +15,8 @@ namespace Dto
         public string RowKey {get; set;}
 
         public string nombreTabla { get; set; }
+
+        
         
     }
 }
