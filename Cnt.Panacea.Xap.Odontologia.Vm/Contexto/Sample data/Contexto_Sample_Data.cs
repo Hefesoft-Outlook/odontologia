@@ -474,40 +474,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 }
             }
             odontogramaPaciente.IdIps = idIps;
-
-            inicializarContexto();
             var tcs = new TaskCompletionSource<long>();
 
-            //Se guarda una referencia al evento
-            //Para que no se dispara multiples veces
-            //Luego le hacemos unsuscribe
-            EventHandler<guardarOdontogramaInicialCompletedEventArgs> evento = null;
-            evento = delegate(object sender, guardarOdontogramaInicialCompletedEventArgs e)
-            {
-                cliente.guardarOdontogramaInicialCompleted -= evento;
-                guardado_En_Proceso = false;
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-
-            cliente.guardarOdontogramaInicialCompleted += evento;
-
-
-            if (tratamiento.AtencionInicial == null || tratamiento.AtencionInicial == 0)
-            {
-                tratamiento.AtencionInicial = -1;
-            }
-            cliente.guardarOdontogramaInicialAsync(tratamiento, odontogramaPaciente, odontograma.ToObservableCollection(), adjuntosImagen.ToObservableCollection());
+            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
+            odontogramaInsertar.idIps = idIps;
+            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
+            odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
+            
+            //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
+            odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
+            adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
 
             return tcs.Task;
         }

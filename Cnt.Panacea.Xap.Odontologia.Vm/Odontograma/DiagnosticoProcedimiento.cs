@@ -734,7 +734,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
         #endregion
 
         #region realizado
-        private bool realizado_Superficie1 = true;
+        private bool realizado_Superficie1;
 
         public bool Realizado_Superficie1
         {
@@ -742,7 +742,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie1 = value; RaisePropertyChanged("Realizado_Superficie1"); }
         }
 
-        private bool realizado_Superficie2 = true;
+        private bool realizado_Superficie2;
 
         public bool Realizado_Superficie2
         {
@@ -750,7 +750,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie2 = value; RaisePropertyChanged("Realizado_Superficie2"); }
         }
 
-        private bool realizado_Superficie3 = true;
+        private bool realizado_Superficie3;
 
         public bool Realizado_Superficie3
         {
@@ -758,7 +758,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie3 = value; RaisePropertyChanged("Realizado_Superficie3"); }
         }
 
-        private bool realizado_Superficie4 = true;
+        private bool realizado_Superficie4;
 
         public bool Realizado_Superficie4
         {
@@ -766,7 +766,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie4 = value; RaisePropertyChanged("Realizado_Superficie4"); }
         }
 
-        private bool realizado_Superficie5 = true;
+        private bool realizado_Superficie5;
 
         public bool Realizado_Superficie5
         {
@@ -774,7 +774,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie5 = value; RaisePropertyChanged("Realizado_Superficie5"); }
         }
 
-        private bool realizado_Superficie6 = true;
+        private bool realizado_Superficie6;
 
         public bool Realizado_Superficie6
         {
@@ -782,7 +782,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie6 = value; RaisePropertyChanged("Realizado_Superficie6"); }
         }
 
-        private bool realizado_Superficie7 = true;
+        private bool realizado_Superficie7;
 
         public bool Realizado_Superficie7
         {
@@ -790,7 +790,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             set { realizado_Superficie7 = value; RaisePropertyChanged("Realizado_Superficie7"); }
         }
 
-        private bool realizado_Superficie8 = true;
+        private bool realizado_Superficie8;
 
         public bool Realizado_Superficie8
         {

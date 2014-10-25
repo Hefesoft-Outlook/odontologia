@@ -45,5 +45,27 @@ public static class Convertir_Observables
 
          return lst;
      }
+
+     public static IEnumerable<P> ConvertirIEnumerable<P, T>(this IEnumerable<T> source, IEnumerable<P> lst)
+         where T : class
+         where P : class
+     {
+
+         foreach (var item in source)
+         {
+             try
+             {
+                 Mapper.CreateMap<T, P>();
+                 P elemento = Mapper.Map<P>(item);
+                 lst.ToList().Add(elemento);
+             }
+             catch
+             {
+
+             }
+         }
+
+         return lst;
+     }
 }
 
