@@ -15,6 +15,7 @@ using System.Net.Http.Headers;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
+using Hefesoft.Entities.Odontologia.Diagnostico;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 {
@@ -1039,28 +1040,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarDiagnosticosConfigurados(short idIps)
-        {
-            inicializarContexto();
+        public async Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarDiagnosticosConfigurados(short idIps)
+        {            
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
+            var result = new ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>();
 
-            cliente.ConsultarDiagnosticosConfiguradosCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ConsultarDiagnosticosConfiguradosAsync(idIps);
-            return tcs.Task;
+            var blob = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Diagnostico.DiagnosticoProcedimiento(), "configurardiagnosticoprocedimotraentity", "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
+            blob.ToObservableCollection().ConvertirObservables(result);
+
+            return result;
         }
 
 

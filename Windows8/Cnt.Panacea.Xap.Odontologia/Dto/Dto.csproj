@@ -39,9 +39,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Automoviles\Mazda.cs" />
     <Compile Include="DtoParametroOdontologicoConvenio.cs" />
-    <Compile Include="Estudiantes\Estudiante.cs" />
     <Compile Include="Extension\removerCaracteresEspeciales.cs" />
     <Compile Include="IEntidadBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

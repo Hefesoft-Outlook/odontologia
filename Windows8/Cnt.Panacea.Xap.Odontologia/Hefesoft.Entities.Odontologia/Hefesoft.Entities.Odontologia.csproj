@@ -35,8 +35,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Diagnostico\DiagnosticoProcedimiento.cs" />
-    <Compile Include="Diagnostico\HefesoftDiagnosticoProcedimiento.cs" />
+    <Compile Include="Diagnostico\TipoPanel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Convertir_Observables.cs" />
     <Compile Include="Util\Odontologia.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -46,6 +47,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -61,6 +65,9 @@
     <Reference Include="Cnt.Std.SL">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

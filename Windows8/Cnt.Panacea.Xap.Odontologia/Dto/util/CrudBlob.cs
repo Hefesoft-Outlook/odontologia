@@ -32,6 +32,7 @@ public static class CrudBlob
             }
 
             T valorRetorno;
+            
             string json = JsonConvert.SerializeObject(entidad);
 
             HttpClientHandler handler = new HttpClientHandler();
@@ -136,6 +137,39 @@ public static class CrudBlob
 
         try
         {
+            var resultadoString = response.Content.ReadAsStringAsync().Result;
+            valorRetorno = JsonConvert.DeserializeObject<List<T>>(resultadoString);
+        }
+        catch
+        {
+
+        }
+
+        return valorRetorno;
+    }
+
+    public static async Task<List<T>> getBlobByPartition<T>(this T entidad, string nombreTabla = "", string PartitionKey = "") where T : class
+    {
+        List<T> valorRetorno = null;
+
+        string json = JsonConvert.SerializeObject(entidad);
+        string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}", nombreTabla, PartitionKey);
+
+        HttpClientHandler handler = new HttpClientHandler();
+        var httpClient = new HttpClient(handler);
+        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, Path_Servicio.obtenerUrlServicio() + parameters);
+
+        
+        if (handler.SupportsTransferEncodingChunked())
+        {
+            request.Headers.TransferEncodingChunked = true;
+        }
+        HttpResponseMessage response = await httpClient.SendAsync(request);
+
+        try
+        {
+            
+
             var resultadoString = response.Content.ReadAsStringAsync().Result;
             valorRetorno = JsonConvert.DeserializeObject<List<T>>(resultadoString);
         }
