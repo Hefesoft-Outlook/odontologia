@@ -11,7 +11,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         
         public bool cubiertoConvenio { get; set; }
         
-        public override int Identificador { get; set; }
+        public int Identificador { get; set; }
         public int IdProcedimiento { get; set; }
         public string NombreProcedimiento { get; set; }
         

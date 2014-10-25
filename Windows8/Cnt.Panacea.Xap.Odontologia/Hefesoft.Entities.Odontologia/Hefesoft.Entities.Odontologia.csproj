@@ -83,11 +83,14 @@
     <Compile Include="Diagnostico\DiagnosticoProcedimiento.cs" />
     <Compile Include="Diagnostico\NivelesSeveridad.cs" />
     <Compile Include="Diagnostico\TipoPanel.cs" />
+    <Compile Include="Extension\Automapper.cs" />
     <Compile Include="Historia\CapituloDiagnosticoEntity.cs" />
     <Compile Include="Historia\CategoriaAislamientoEntity.cs" />
     <Compile Include="Historia\CategoriaDiagnosticoEntity.cs" />
     <Compile Include="Historia\ClasificacionEpidemiologicaEntity.cs" />
     <Compile Include="Historia\ConfiguracionDiagnosticoOdontologiaEntity.cs" />
+    <Compile Include="Historia\SesionesPlanTratamientoEntity.cs" />
+    <Compile Include="Historia\SesionesPlanTratamientosCollection.cs" />
     <Compile Include="Odontograma\ConfiguracionProcedimientoOdontologiaEntity.cs" />
     <Compile Include="Historia\DiagnosticoCieEntity.cs" />
     <Compile Include="Historia\DiagnosticosCieCollection.cs" />

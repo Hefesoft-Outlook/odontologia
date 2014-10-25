@@ -20,7 +20,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         
         public DateTime? Fecha { get; set; }
         
-        public override short Identificador { get; set; }
+        public short Identificador { get; set; }
         
         public string Nombre { get; set; }
         

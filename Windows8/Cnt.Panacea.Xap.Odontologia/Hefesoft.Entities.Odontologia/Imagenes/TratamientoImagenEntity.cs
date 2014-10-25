@@ -9,7 +9,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
     {
         public object Contenido { get; set; }
         public bool Estado { get; set; }
-        public override int Identificador { get; set; }
+        public int Identificador { get; set; }
         public object Imagen { get; set; }
         public string Nombre { get; set; }
         public string Ruta { get; set; }

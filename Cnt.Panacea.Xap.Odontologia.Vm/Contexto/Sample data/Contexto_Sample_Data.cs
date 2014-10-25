@@ -436,7 +436,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-        public  Task<long> GuardarOdontogramaInicial(TratamientoEntity tratamiento, OdontogramasPacienteEntity odontogramaPaciente, List<OdontogramaEntity> odontograma, List<TratamientoImagenEntity> adjuntosImagen, short idIps)
+        public async  Task<long> GuardarOdontogramaInicial(TratamientoEntity tratamiento, OdontogramasPacienteEntity odontogramaPaciente, List<OdontogramaEntity> odontograma, List<TratamientoImagenEntity> adjuntosImagen, short idIps)
         {
             guardado_En_Proceso = true;
             foreach (OdontogramaEntity pivot in odontograma)
@@ -476,16 +476,25 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             odontogramaPaciente.IdIps = idIps;
             var tcs = new TaskCompletionSource<long>();
 
+
             var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
             odontogramaInsertar.idIps = idIps;
             odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
+
+            //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
+            odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
+
+
             odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
             
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
-            odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
-            adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
+            odontogramaInsertar.odontograma = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
+            odontogramaInsertar.adjuntosImagen =adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
 
-            return tcs.Task;
+            var result = await CrudBlob.postBlob(odontogramaInsertar);
+
+            var id = Convert.ToInt64(odontogramaInsertar.RowKey);
+            return id;
         }
 
         public  Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,

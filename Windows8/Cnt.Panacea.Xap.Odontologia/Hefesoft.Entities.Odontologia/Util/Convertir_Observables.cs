@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Hefesoft.Entities.Odontologia.Extension;
 
 /// <summary>
 /// Convierte una entidad observable a otra
@@ -19,8 +20,18 @@ public static class Convertir_Observables
      /// <returns></returns>
      public static P ConvertirEntidades<P,T>(this T source) where T : class where P : class
      {
-         Mapper.CreateMap<T, P>();
-         return Mapper.Map<P>(source);
+         P Entidad = null;
+         try
+         {   
+             Mapper.CreateMap<T, P>();
+             Entidad = Mapper.DynamicMap<P>(source);
+         }
+         catch
+         {
+
+         }
+
+         return Entidad;
      }
 
 
@@ -34,7 +45,7 @@ public static class Convertir_Observables
              try
              {
                  Mapper.CreateMap<T, P>();
-                 P elemento = Mapper.Map<P>(item);
+                 P elemento = Mapper.DynamicMap<P>(item);
                  lst.Add(elemento);
              }
              catch
@@ -46,22 +57,26 @@ public static class Convertir_Observables
          return lst;
      }
 
-     public static IEnumerable<P> ConvertirIEnumerable<P, T>(this IEnumerable<T> source, IEnumerable<P> lst)
+     public static List<P> ConvertirIEnumerable<P, T>(this IEnumerable<T> source, List<P> lst)
          where T : class
          where P : class
      {
 
-         foreach (var item in source)
-         {
-             try
+         if (source != null)
+         { 
+             lst = new List<P>();
+             foreach (var item in source)
              {
-                 Mapper.CreateMap<T, P>();
-                 P elemento = Mapper.Map<P>(item);
-                 lst.ToList().Add(elemento);
-             }
-             catch
-             {
+                 try
+                 {
+                     Mapper.CreateMap<T, P>().IgnoreAllNonExisting();
+                     P elemento = Mapper.DynamicMap<P>(item);
+                     lst.Add(elemento);
+                 }
+                 catch
+                 {
 
+                 }
              }
          }
 

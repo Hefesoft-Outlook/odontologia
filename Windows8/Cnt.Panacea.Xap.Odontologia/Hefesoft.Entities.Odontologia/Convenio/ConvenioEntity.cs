@@ -61,7 +61,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         public bool GeneraRips { get; set; }
         public ConvenioGruposEtareosCiudadesCollection GruposEtareosCiudades { get; set; }
         public ConvenioHistoricosCollection HistorialCambios { get; set; }
-        public override short Identificador { get; set; }
+        public  short Identificador { get; set; }
 
         public int IdPptoAsignado { get; set; }
 

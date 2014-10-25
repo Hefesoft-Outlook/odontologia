@@ -10,6 +10,6 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         
         public DiagnosticoCieEntity Diagnostico { get; set; }
         
-        public override int Identificador { get; set; }
+        public int Identificador { get; set; }
     }
 }

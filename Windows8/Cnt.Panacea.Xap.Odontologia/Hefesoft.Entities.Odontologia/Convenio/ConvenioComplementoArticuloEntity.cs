@@ -20,7 +20,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         
         public short? Convenio { get; set; }
         
-        public override int Identificador { get; set; }
+        public int Identificador { get; set; }
         
         public decimal ValorTope { get; set; }
 

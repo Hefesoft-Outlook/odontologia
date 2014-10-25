@@ -42,7 +42,7 @@ namespace Hefesoft.Entities.Odontologia.Articulos
 
         public ArticuloHistoricoCollection Historial { get; set; }
 
-        public override int Identificador { get; set; }
+        public  int Identificador { get; set; }
 
         public Guid IdentificadorBitacora { get; set; }
 

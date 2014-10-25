@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hefesoft.Entities.Odontologia.Odontograma
 {
-    public public class ProcedimientoServicioEntity
+    public class ProcedimientoServicioEntity
     {
     }
 }

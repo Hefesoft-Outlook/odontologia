@@ -17,7 +17,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         
         public string Descripcion { get; set; }
         
-        public override long Identificador { get; set; }
+        public long Identificador { get; set; }
         
         public short? IdIps { get; set; }
         
