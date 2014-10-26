@@ -484,7 +484,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
             odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
 
-
             odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
             
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
@@ -494,6 +493,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             var result = await CrudBlob.postBlob(odontogramaInsertar);
 
             var id = Convert.ToInt64(odontogramaInsertar.RowKey);
+
             return id;
         }
 
@@ -844,29 +844,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
-        {
-            inicializarContexto();
+        public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
+        {            
             var tcs = new TaskCompletionSource<TratamientoEntity>();
-
-            cliente.SeleccionarTratamientoActivoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.SeleccionarTratamientoActivoAsync(idTratamiento);
-
-            return tcs.Task;
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await CrudBlob.getBlobByPartitionAndRowKey(new Hefesoft.Entities.Odontologia.Odontograma.Odontograma(), idTratamiento.ToString());            
+            var entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento, new TratamientoEntity());
+            return entidadConvertida;
         }
 
         public  Task<OdontogramasPacienteEntity> SelecionarOdontogramaPaciente(long idOdontogramaPaciente)

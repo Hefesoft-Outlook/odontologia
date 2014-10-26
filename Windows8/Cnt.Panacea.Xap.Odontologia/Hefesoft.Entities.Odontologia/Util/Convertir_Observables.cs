@@ -34,6 +34,23 @@ public static class Convertir_Observables
          return Entidad;
      }
 
+     public static P ConvertirEntidades<P, T>(T source, P Transform)
+         where T : class
+         where P : class
+     {
+         P Entidad = null;
+         try
+         {
+             Mapper.CreateMap<T, P>();
+             Entidad = Mapper.DynamicMap<P>(source);
+         }
+         catch
+         {
+
+         }
+
+         return Entidad;
+     }
 
      public static ObservableCollection<P> ConvertirObservables<P, T>(this ObservableCollection<T> source, ObservableCollection<P> lst)
          where T : class
