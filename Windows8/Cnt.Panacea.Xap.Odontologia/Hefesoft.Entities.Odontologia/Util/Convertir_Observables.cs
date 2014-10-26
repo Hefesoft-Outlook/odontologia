@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Hefesoft.Entities.Odontologia.Extension;
+using System.Reflection;
 
 /// <summary>
 /// Convierte una entidad observable a otra
@@ -43,6 +44,11 @@ public static class Convertir_Observables
          {
              Mapper.CreateMap<T, P>();
              Entidad = Mapper.DynamicMap<P>(source);
+
+             var identificador = Convert.ToInt64((source.GetType().GetProperty("RowKey").GetValue(source, null)));
+             PropertyInfo propertyInfo = Entidad.GetType().GetProperty("Identificador");
+             propertyInfo.SetValue(Entidad, identificador, null);
+
          }
          catch
          {

@@ -13,8 +13,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
 
-        //
-        //public ConfiguracionDiagnosticoOdontologiaEntity Diagnostico { get; set; }
+        public ConfiguracionDiagnosticoOdontologiaEntity Diagnostico { get; set; }
 
         public DientesEntity Diente { get; set; }
 

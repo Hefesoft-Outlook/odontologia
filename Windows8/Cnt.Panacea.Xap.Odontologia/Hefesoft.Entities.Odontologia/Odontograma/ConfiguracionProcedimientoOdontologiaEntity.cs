@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Hefesoft.Entities.Odontologia.Diagnostico;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Hefesoft.Entities.Odontologia.Odontograma
 {
-    public class ConfiguracionProcedimientoOdontologiaEntity
+    public class ConfiguracionProcedimientoOdontologiaEntity : DiagnosticoProcedimientoOdontologiaEntity
     {
         public string CodigoProcedimiento { get; set; }
         

@@ -11,11 +11,12 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Indices__Ceo__Ceop_;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Clases;
+using System.Collections.ObjectModel;
 
 
 namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 {
-    public class Odontograma_Inicial : ViewModelBase, IDisposable
+    public partial class Odontograma_Inicial : ViewModelBase, IDisposable
     {
         public Odontograma_Inicial()
         {
@@ -28,12 +29,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 //Cuando algun evento dentro del modulo le pide que por favor cargue
                 //El odontograma inicial dado una variable global
                 oirCargarOdontogramaInicial();
+                
+                //Implementacion alternativa
+                oirCargadoOdontogramaInicial();
 
                 //Cuando se le indica que debe guardar entonces, este pide los datos al mapa dental (user control)
                 //Este le devuelve un listado de entidades que el odontograma guardara
                 oirGuardar();
             }
         }
+
+        
 
         private void mostrarGrillaTratamientos()
         {
@@ -71,37 +77,39 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
         public async void CargarOdontograma()
         {
-            Busy.UserControlCargando();
-
+            Busy.UserControlCargando();            
             var resultado = await Contexto_Odontologia.obtenerContexto().ConsultarOdontogramaPaciente(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
-            
-            //Pedimos al control Mapa dental que pinte los datos que llegaron de la bd
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Pedir_Pintar_Datos() { lst = resultado });
 
-            var convenio = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);
-            ConvenioAtencion = convenio;
-            RaisePropertyChanged("ConvenioAtencion");
-            Busy.UserControlCargando(false);
-
-            if (Variables_Globales.OdontogramaPacientetity != 0)
+            if (resultado.Count > 0)
             {
+                //Pedimos al control Mapa dental que pinte los datos que llegaron de la bd
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Pedir_Pintar_Datos() { lst = resultado });
 
-                var Prestador = await Contexto_Odontologia.obtenerContexto().ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006
-                PrestadorAtencion = Prestador;
-                RaisePropertyChanged("PrestadorAtencion");
-                //cargarProcedimientosAsociadosADiagnosticos(resultado);
-                TipoOdontograma.Inicial = false;
-                Odontologia.Clases.TipoOdontograma.InicialCargandoDatos = true;
-                //await tratamientoActivo(Variables_Globales.IdTratamientoActivo);
-                var OdontogramaPaciente = await Contexto_Odontologia.obtenerContexto().SelecionarOdontogramaPaciente(Variables_Globales.OdontogramaPacientetity);
+                var convenio = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);
+                ConvenioAtencion = convenio;
+                RaisePropertyChanged("ConvenioAtencion");
+                Busy.UserControlCargando(false);
 
-                Messenger.Default.Send(new Carga_Odontograma_Inicial() { Cantidad_Dientes = OdontogramaPaciente.CantidadDientes });
-                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta.Paleta() { NumeroPiezasDentales = OdontogramaPaciente.CantidadDientes });
-            }
-            else
-            {
-                Odontologia.Clases.TipoOdontograma.Inicial = true;
-                Odontologia.Clases.TipoOdontograma.InicialCargandoDatos = false;
+                if (Variables_Globales.OdontogramaPacientetity != 0)
+                {
+
+                    var Prestador = await Contexto_Odontologia.obtenerContexto().ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006
+                    PrestadorAtencion = Prestador;
+                    RaisePropertyChanged("PrestadorAtencion");
+                    //cargarProcedimientosAsociadosADiagnosticos(resultado);
+                    TipoOdontograma.Inicial = false;
+                    Odontologia.Clases.TipoOdontograma.InicialCargandoDatos = true;
+                    //await tratamientoActivo(Variables_Globales.IdTratamientoActivo);
+                    var OdontogramaPaciente = await Contexto_Odontologia.obtenerContexto().SelecionarOdontogramaPaciente(Variables_Globales.OdontogramaPacientetity);
+
+                    Messenger.Default.Send(new Carga_Odontograma_Inicial() { Cantidad_Dientes = OdontogramaPaciente.CantidadDientes });
+                    Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta.Paleta() { NumeroPiezasDentales = OdontogramaPaciente.CantidadDientes });
+                }
+                else
+                {
+                    Odontologia.Clases.TipoOdontograma.Inicial = true;
+                    Odontologia.Clases.TipoOdontograma.InicialCargandoDatos = false;
+                }
             }
         }        
 
@@ -209,6 +217,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Util.Messenger.Cargar_Odontograma>(this);
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar_Barra_Comando>(this);
+            Messenger.Default.Unregister<ObservableCollection<OdontogramaEntity>>(this, "Odontograma cargado");
         }
 
         public RelayCommand mostrarGrillaTratamientosCommand { get; set; }

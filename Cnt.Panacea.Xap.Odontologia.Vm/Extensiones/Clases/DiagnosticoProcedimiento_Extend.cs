@@ -16,6 +16,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Extensiones.Clases
         public bool Es_Supernumerario { get; set; }
         public string Superficie { get; set; }
         public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
+
         public Tipo_Odontograma Tipo_Odontograma_Actual { get; set; }
         public NivelSeveridadDXEntity Nivel_Severidad { get; set; }
     }

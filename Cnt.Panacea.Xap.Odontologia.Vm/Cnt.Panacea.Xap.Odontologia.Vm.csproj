@@ -131,6 +131,7 @@
     <Compile Include="Servicio\Client.cs" />
     <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
     <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Inicial.cs" />
     <Compile Include="Tipos_Odontograma\Validaciones\Plan_Tratamiento.cs" />
     <Compile Include="Tipos_Odontograma\Vm\Evolucion.cs" />
     <Compile Include="Tipos_Odontograma\Vm\Odontograma_Inicial.cs" />

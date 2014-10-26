@@ -81,6 +81,7 @@
     <Compile Include="Convenio\TiposSedesContrato.cs" />
     <Compile Include="Convenio\TiposValorConvenio.cs" />
     <Compile Include="Diagnostico\DiagnosticoProcedimiento.cs" />
+    <Compile Include="Diagnostico\DiagnosticoProcedimientoOdontologiaEntity.cs" />
     <Compile Include="Diagnostico\NivelesSeveridad.cs" />
     <Compile Include="Diagnostico\TipoPanel.cs" />
     <Compile Include="Extension\Automapper.cs" />

@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-public static class CrudBlob
+public static partial class CrudBlob
 {
     public static async Task<T> postBlob<T>(this T entidad) where T : IEntidadBase
     {
@@ -35,22 +35,7 @@ public static class CrudBlob
             
             string json = JsonConvert.SerializeObject(entidad);
 
-            HttpClientHandler handler = new HttpClientHandler();
-            var httpClient = new HttpClient(handler);
-            HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Post, Path_Servicio.obtenerUrlServicio() + "blob");
-            request.Content = new StringContent(json);
-            MediaTypeHeaderValue contentType = request.Content.Headers.ContentType;
-            contentType.MediaType = "application/json";
-
-            request.Content.Headers.ContentType = contentType;
-
-            if (handler.SupportsTransferEncodingChunked())
-            {
-                request.Headers.TransferEncodingChunked = true;
-            }
-            HttpResponseMessage response = await httpClient.SendAsync(request);
-
-            var resultadoString = response.Content.ReadAsStringAsync().Result;
+            var resultadoString = await doPost(json);
 
             valorRetorno = JsonConvert.DeserializeObject<T>(resultadoString);
 
@@ -62,8 +47,31 @@ public static class CrudBlob
         }
     }
 
-
+    
     public static async Task<List<T>> getBlobByPartition<T>(this T entidad)  where T : IEntidadBase
+    {
+        List<T> valorRetorno = null;
+
+        if (string.IsNullOrEmpty(entidad.nombreTabla))
+        {
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
+        }
+
+        if (string.IsNullOrEmpty(entidad.PartitionKey))
+        {
+            entidad.PartitionKey = entidad.GetType().FullName.ToLower();
+        }
+
+        string json = JsonConvert.SerializeObject(entidad);
+        
+        string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}", entidad.nombreTabla, entidad.PartitionKey);
+
+        valorRetorno = await doGet<T>(valorRetorno, parameters);
+
+        return valorRetorno;
+    }
+
+    public static async Task<List<T>> getBlobByByName<T>(this T entidad, string terminosBusqueda) where T : IEntidadBase
     {
         List<T> valorRetorno = null;
 
@@ -80,29 +88,45 @@ public static class CrudBlob
         string json = JsonConvert.SerializeObject(entidad);
         string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}", entidad.nombreTabla, entidad.PartitionKey);
 
-        HttpClientHandler handler = new HttpClientHandler();
-        var httpClient = new HttpClient(handler);
-        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, Path_Servicio.obtenerUrlServicio() + parameters);
-
-        if (handler.SupportsTransferEncodingChunked())
+        //Cuando se introducen terminos de busqueda usamos otro servicio
+        if (!string.IsNullOrEmpty(terminosBusqueda))
         {
-            request.Headers.TransferEncodingChunked = true;
+            parameters = string.Format("blobBusquedas/?nombreTabla={0}&partitionKey={1}&terminosBusqueda={2}", entidad.nombreTabla, entidad.PartitionKey, terminosBusqueda);
         }
-        HttpResponseMessage response = await httpClient.SendAsync(request);
 
-        try
-        {
-            var resultadoString = response.Content.ReadAsStringAsync().Result;
-            valorRetorno = JsonConvert.DeserializeObject<List<T>>(resultadoString);
-        }
-        catch
-        {
-
-        }
+        valorRetorno = await doGet<T>(valorRetorno, parameters);
 
         return valorRetorno;
     }
 
+    public static async Task<List<T>> getBlobByByNamePaginated<T>(this T entidad, string terminosBusqueda, int take, int skip) where T : IEntidadBase
+    {
+        List<T> valorRetorno = null;
+
+        if (string.IsNullOrEmpty(entidad.nombreTabla))
+        {
+            entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
+        }
+
+        if (string.IsNullOrEmpty(entidad.PartitionKey))
+        {
+            entidad.PartitionKey = entidad.GetType().FullName.ToLower();
+        }
+
+        string json = JsonConvert.SerializeObject(entidad);
+        string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}&take={2}&skip{3}", entidad.nombreTabla, entidad.PartitionKey, take, skip);
+
+        //Cuando se introducen terminos de busqueda usamos otro servicio
+        if (!string.IsNullOrEmpty(terminosBusqueda))
+        {
+            parameters = string.Format("blobBusquedas/?nombreTabla={0}&partitionKey={1}&terminosBusqueda={2}&take={3}&skip{4}", entidad.nombreTabla, entidad.PartitionKey, terminosBusqueda, take, skip);
+        }
+
+
+        valorRetorno = await doGet<T>(valorRetorno, parameters);
+
+        return valorRetorno;
+    }
 
     public static async Task<T> getBlobByPartitionAndRowKey<T>(this T entidad, string rowKey) where T : IEntidadBase
     {
@@ -121,28 +145,12 @@ public static class CrudBlob
         string json = JsonConvert.SerializeObject(entidad);
         string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}&rowKey={2}", entidad.nombreTabla, entidad.PartitionKey, rowKey);
 
-        HttpClientHandler handler = new HttpClientHandler();
-        var httpClient = new HttpClient(handler);
-        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, Path_Servicio.obtenerUrlServicio() + parameters);
-
-        if (handler.SupportsTransferEncodingChunked())
-        {
-            request.Headers.TransferEncodingChunked = true;
-        }
-        HttpResponseMessage response = await httpClient.SendAsync(request);
-
-        try
-        {
-            var resultadoString = response.Content.ReadAsStringAsync().Result;
-            valorRetorno = JsonConvert.DeserializeObject<T>(resultadoString);
-        }
-        catch
-        {
-
-        }
+        valorRetorno = await doGetParameters<T>(valorRetorno, parameters);
 
         return valorRetorno;
     }
+
+    
 
     public static async Task<List<T>> getBlobByPartition<T>(this T entidad, string nombreTabla = "", string PartitionKey = "") where T : class
     {
@@ -151,30 +159,11 @@ public static class CrudBlob
         string json = JsonConvert.SerializeObject(entidad);
         string parameters = string.Format("blob/?nombreTabla={0}&partitionKey={1}", nombreTabla, PartitionKey);
 
-        HttpClientHandler handler = new HttpClientHandler();
-        var httpClient = new HttpClient(handler);
-        HttpRequestMessage request = new HttpRequestMessage(HttpMethod.Get, Path_Servicio.obtenerUrlServicio() + parameters);
-
-        
-        if (handler.SupportsTransferEncodingChunked())
-        {
-            request.Headers.TransferEncodingChunked = true;
-        }
-        HttpResponseMessage response = await httpClient.SendAsync(request);
-
-        try
-        {
-            
-
-            var resultadoString = response.Content.ReadAsStringAsync().Result;
-            valorRetorno = JsonConvert.DeserializeObject<List<T>>(resultadoString);
-        }
-        catch
-        {
-
-        }
+        valorRetorno = await doGetByPartition<T>(valorRetorno, parameters);
 
         return valorRetorno;
     }
+
+
 }
 

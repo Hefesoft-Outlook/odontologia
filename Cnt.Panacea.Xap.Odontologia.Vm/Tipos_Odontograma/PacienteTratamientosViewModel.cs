@@ -191,7 +191,6 @@ namespace Cnt.Panacea.Xap.ViewModels
         {
             try
             {
-
                 tratamientosPaciente = await Contexto_Odontologia.obtenerContexto().ConsultarTratamientosPaciente(Variables_Globales.IdIps, Variables_Globales.IdPaciente);
 
                 Variables_Globales.TratamientosPaciente = new System.Collections.Generic.List<long>();

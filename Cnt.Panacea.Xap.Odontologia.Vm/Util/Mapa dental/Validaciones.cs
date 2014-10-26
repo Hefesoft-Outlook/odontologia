@@ -128,6 +128,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
                     OdontogramaEntity Odontologia = new OdontogramaEntity();
                     Odontologia.Diente = new DientesEntity() { Identificador = item.codigoPiezaDental };
                     Odontologia.Superficie = itemB.Superficie.superficieNomenclatura();
+                    extraerCaracteristicas(itemB, Odontologia);
 
                     if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Diagnostico)
                     {
@@ -157,6 +158,21 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
             }
         }
 
+        private static void extraerCaracteristicas(DiagnosticoProcedimiento_Extend itemB, OdontogramaEntity Odontologia)
+        {
+            //Para la version de windows 8 si se deben guardar datos como color letra etc
+            //En la version de cnt solo se guarda el codigo del diagnostico ye n wcf se cargan por un
+            // foreach
+            if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Diagnostico)
+            {
+                Odontologia.Diagnostico = Convertir_Observables.ConvertirEntidades(itemB.ConfigurarDiagnosticoProcedimOtraEntity, Odontologia.Diagnostico);
+            }
+            else if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Procedimiento)
+            {             
+                Odontologia.Procedimiento = Convertir_Observables.ConvertirEntidades(itemB.ConfigurarDiagnosticoProcedimOtraEntity, Odontologia.Procedimiento);
+            }
+        }
+
         private static void extraeBoca(ref List<OdontogramaEntity> lst)
         {
             var boca = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
@@ -166,6 +182,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
                 OdontogramaEntity Odontologia = new OdontogramaEntity();
                 Odontologia.Diente = new DientesEntity() { Identificador = 99};
                 Odontologia.Superficie = itemB.Superficie.superficieNomenclatura();
+                extraerCaracteristicas(itemB, Odontologia);
 
                 if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Diagnostico)
                 {
@@ -205,6 +222,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
                 OdontologiaSupernumerario.Diente = new DientesEntity() { Identificador = 98 };
                 OdontologiaSupernumerario.Superficie = Superficie.SuperficieTotal;
                 OdontologiaSupernumerario.FechaRealizacion = DateTime.Now;
+
 
                 //Cuando se agrega el supernumerario como tal van en nulo
                 OdontologiaSupernumerario.Diagnostico = null;
