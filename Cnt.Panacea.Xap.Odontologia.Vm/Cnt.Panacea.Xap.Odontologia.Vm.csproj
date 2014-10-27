@@ -73,6 +73,7 @@
     <Compile Include="Grillas\General\Pedir_Datos_Grilla_Plan_Tratamiento.cs" />
     <Compile Include="Grillas\Inicial\vm.cs" />
     <Compile Include="Grillas\Plan tratamiento\Listado_Procedimientos.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\Wizard.cs" />
     <Compile Include="Grillas\Plan tratamiento\Vm.cs" />
     <Compile Include="Grillas\Plan tratamiento\Wizard.cs" />
     <Compile Include="Mapa Dental\util\listado.cs" />
@@ -131,7 +132,9 @@
     <Compile Include="Servicio\Client.cs" />
     <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
     <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
-    <Compile Include="Tipos_Odontograma\Partial\Inicial.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Inicial\Json Objects\Inicial.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Json Implementation\vm.partial.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Sample Data\Sample.cs" />
     <Compile Include="Tipos_Odontograma\Validaciones\Plan_Tratamiento.cs" />
     <Compile Include="Tipos_Odontograma\Vm\Evolucion.cs" />
     <Compile Include="Tipos_Odontograma\Vm\Odontograma_Inicial.cs" />

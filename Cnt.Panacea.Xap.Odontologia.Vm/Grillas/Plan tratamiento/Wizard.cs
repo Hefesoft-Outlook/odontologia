@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
 {
-    public class GridPlanTratamientoProcedimientosWizard : ViewModelBase
+    public partial class GridPlanTratamientoProcedimientosWizard : ViewModelBase
     {
         public GridPlanTratamientoProcedimientosWizard()
         {
@@ -39,6 +39,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             }
             else
             {
+                //datosPruebaOdontologosHigienistas();
+
                 cambiarConvenioCommand = new RelayCommand<ProcedimientosGrillaPlanTratamiento>(cambiarConvenio);
                 opcionTratamiento();
                 procedimientosEspecialidad();
@@ -53,6 +55,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         {
             NumeroSesionesTratamiento = short.Parse(Listado.Sum(a => a.NumeroSesionesProcedimiento).ToString());
             ValorTotalTratamiento = Decimal.Parse(Listado.Where(a => a.Cobra == true).Sum(a => a.ValorPaciente).ToString());
+            
             if (TieneCuotaInicial)
             {
                 ValorCuotaTratamiento = ((ValorTotalTratamiento - ValorCuotaInicial) / NumeroSesionesTratamiento);
@@ -163,12 +166,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         #endregion
 
         #region Propiedades
-        private ObservableCollection<ProcedimientosGrillaPlanTratamiento> listado;
+        private ObservableCollection<ProcedimientosGrillaPlanTratamiento> listado = new ObservableCollection<ProcedimientosGrillaPlanTratamiento>();
 
         public ObservableCollection<ProcedimientosGrillaPlanTratamiento> Listado
         {
             get { return listado; }
-            set { listado = value; RaisePropertyChanged("Listado"); }
+            set { listado = value;  RaisePropertyChanged("Listado"); }
         }
 
 

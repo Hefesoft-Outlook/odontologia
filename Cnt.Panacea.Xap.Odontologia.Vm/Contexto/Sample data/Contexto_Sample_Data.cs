@@ -1,36 +1,25 @@
-﻿using AutoMapper;
-using Cnt.Panacea.Entities.Odontologia;
-using Cnt.Panacea.Entities.Parametrizacion;
-using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
-using Newtonsoft.Json;
-using Proxy;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.ServiceModel;
-using System.Text;
 using System.Threading.Tasks;
+using Cnt.Panacea.Entities.Odontologia;
+using Cnt.Panacea.Entities.Parametrizacion;
 using Dto.Extension;
-
+using Hefesoft.Entities.Odontologia.Diagnostico;
+using Proxy;
+using NivelSeveridadDXEntity = Cnt.Panacea.Entities.Parametrizacion.NivelSeveridadDXEntity;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 {
     public class Contexto_Odontologia : IContexto_Odontologia
     {
-        public  bool guardado_En_Proceso = false;
+        public dynamic binding;
+        private OdontologiaServicioClient cliente;
+        public bool guardado_En_Proceso = false;
+        public string url;
 
-        private  OdontologiaServicioClient cliente;
-
-        public  dynamic binding;
-        public  string url;
-
-        public  void inicializarContexto()
+        public void inicializarContexto()
         {
-            
         }
 
         public dynamic servicio(dynamic cliente)
@@ -38,9 +27,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return null;
         }
 
-        public  Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
+        public Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
         {
-
             foreach (PlanTratamientoEntity pivot in Planes)
             {
                 if (pivot.Articulos != null)
@@ -68,9 +56,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<bool> Actualizartratamiento(TratamientoEntity Tratamiento)
+        public Task<bool> Actualizartratamiento(TratamientoEntity Tratamiento)
         {
-
             var tcs = new TaskCompletionSource<bool>();
 
             cliente.ActualizarTratamientoCompleted += (s, e) =>
@@ -87,7 +74,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ConvenioEntity> consultarConvenio(short id)
+        public Task<ConvenioEntity> consultarConvenio(short id)
         {
             //Validar
             var tcs = new TaskCompletionSource<ConvenioEntity>();
@@ -97,24 +84,31 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
 
         /// <summary>
-        /// Lista los tratamientos activos d eun paciente
+        ///     Lista los tratamientos activos d eun paciente
         /// </summary>
-        public async Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps, int idPaciente)
-        {   
+        public async Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps,
+            int idPaciente)
+        {
             var tcs = new TaskCompletionSource<ObservableCollection<TratamientoEntity>>();
             var lst = new ObservableCollection<TratamientoEntity>();
 
-            var blob = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Odontograma.Odontograma());
+            List<Hefesoft.Entities.Odontologia.Odontograma.Odontograma> blob =
+                await new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartition();
 
             // Saca una propiedad de un listado y devuelve una propiedad de la misma
             // Ademas llena el rowkey con el identificador
-            var lstTratamientos = blob.obtenerListadoDadoPropiedad<Hefesoft.Entities.Odontologia.Odontograma.Odontograma, Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity>("tratamiento");            
+            List<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity> lstTratamientos =
+                blob
+                    .obtenerListadoDadoPropiedad
+                    <Hefesoft.Entities.Odontologia.Odontograma.Odontograma,
+                        Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity>("tratamiento");
             lstTratamientos.ToObservableCollection().ConvertirObservables(lst);
 
             return lst;
         }
 
-        public  Task<ObservableCollection<ConfiguracionProcedimientoOdontologiaDto>> ConsultarProcedimientosOdontologiaLigero(short idIps)
+        public Task<ObservableCollection<ConfiguracionProcedimientoOdontologiaDto>>
+            ConsultarProcedimientosOdontologiaLigero(short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<ConfiguracionProcedimientoOdontologiaDto>>();
@@ -138,83 +132,41 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<TipoTratamientoEntity>> ConsultarTiposTratamiento(short IdIps)
+        public async Task<ObservableCollection<TipoTratamientoEntity>> ConsultarTiposTratamiento(short IdIps)
         {
-            inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<TipoTratamientoEntity>>();
 
-            cliente.consultarTiposTratamientosActivosCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.consultarTiposTratamientosActivosAsync(IdIps);
+            List<Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity> result =
+                await
+                    new Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity().getBlobByPartition(
+                        "tipotratamientoentity", "cnt.panacea.entities.odontologia.tipotratamientoentity");
+            ObservableCollection<TipoTratamientoEntity> lstTiposTratamiento =
+                result.ToObservableCollection().ConvertirObservables(new ObservableCollection<TipoTratamientoEntity>());
 
-            return tcs.Task;
+            return lstTiposTratamiento;
         }
 
-        public  Task<ObservableCollection<RelaDiagnosticoProcedEntity>> ConsultarProcedimientosPorDiagnostico(short idIps, String Diagnosticos)
+        public Task<ObservableCollection<RelaDiagnosticoProcedEntity>> ConsultarProcedimientosPorDiagnostico(
+            short idIps, String Diagnosticos)
         {
-            inicializarContexto();
+            //Validar si se puedo hacer
+            //La idea es trear los procedimientos asociados en el diagnostico inicial
             var tcs = new TaskCompletionSource<ObservableCollection<RelaDiagnosticoProcedEntity>>();
-
-            cliente.ConsultarProcedimientosPorDiagnosticoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-
-            cliente.ConsultarProcedimientosPorDiagnosticoAsync(idIps, Diagnosticos);
-
+            tcs.TrySetResult(new ObservableCollection<RelaDiagnosticoProcedEntity>());
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ProcedimientoEspecialidadSedeEntity>> ConsultarEspecialidadesPorProcedimiento(short idSede, string Procedimientos)
+        public async Task<ObservableCollection<ProcedimientoEspecialidadSedeEntity>> ConsultarEspecialidadesPorProcedimiento(
+            short idSede, string Procedimientos)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<ProcedimientoEspecialidadSedeEntity>>();
-
-            cliente.ListarEspecialidadesPorProcedimientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarEspecialidadesPorProcedimientoAsync(idSede, Procedimientos);
-
-            return tcs.Task;
+            //Validar como se haria esto
+            //Se deben cargar las especialidades asociadas a cada procedimiento
+            List<Hefesoft.Entities.Odontologia.Especialidades.ProcedimientoEspecialidadSedeEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Especialidades.ProcedimientoEspecialidadSedeEntity(), "procedimientoespecialidadsedeentity", "cnt.panacea.entities.parametrizacion.procedimientoespecialidadsedeentity");
+            var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<ProcedimientoEspecialidadSedeEntity>());
+            return resultadoDevolver;
         }
 
-        public  Task<TratamientoImagenEntity> ConsultarImagenTratamiento(int idImagenTratamiento)
+        public Task<TratamientoImagenEntity> ConsultarImagenTratamiento(int idImagenTratamiento)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<TratamientoImagenEntity>();
@@ -240,21 +192,26 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public async Task<ObservableCollection<NivelSeveridadDXEntity>> ConsultarNivelSeveridad()
-        {   
+        {
             var result = new ObservableCollection<NivelSeveridadDXEntity>();
-            var blob = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity(), "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
-            blob.ToObservableCollection().ConvertirObservables(result);            
+            List<Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity> blob =
+                await
+                    new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity().getBlobByPartition(
+                        "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
+            blob.ToObservableCollection().ConvertirObservables(result);
             return result;
         }
 
         //No tiene uso aca porque se carga en SeleccionarTratamientoActivo
-        public  Task<ObservableCollection<OdontogramaEntity>> ConsultarOdontogramaPaciente(Int64 idOdontogramaPaciente, short idIps)
-        {            
+        public Task<ObservableCollection<OdontogramaEntity>> ConsultarOdontogramaPaciente(Int64 idOdontogramaPaciente,
+            short idIps)
+        {
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramaEntity>>();
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarOtrasCaracteristicasConfig(short idIps)
+        public Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarOtrasCaracteristicasConfig(
+            short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
@@ -279,17 +236,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         //Validar
-        public  Task<TerceroEntity> ConsultarPrestador(int IdPrestador)//LFDO Bug 16006
-        {   
-            var tcs = new TaskCompletionSource<TerceroEntity>();            
-            cliente.ConsultarPrestadorAtencionAsync(IdPrestador);
+        public Task<TerceroEntity> ConsultarPrestador(int IdPrestador) //LFDO Bug 16006
+        {
+            var tcs = new TaskCompletionSource<TerceroEntity>();
             tcs.TrySetResult(new TerceroEntity());
             return tcs.Task;
         }
 
-        
 
-        public  Task<ObservableCollection<SesionesPlanTratamientoEntity>> ConsultarSesionesTratamiento(long IdTratamiento)
+        public Task<ObservableCollection<SesionesPlanTratamientoEntity>> ConsultarSesionesTratamiento(long IdTratamiento)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<SesionesPlanTratamientoEntity>>();
@@ -313,7 +268,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarProcedimientosConvenio(int idPaciente, short idConvenio, short idIps)
+        public Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarProcedimientosConvenio(
+            int idPaciente, short idConvenio, short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
@@ -338,8 +294,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-
-        public  Task<ObservableCollection<PlanTratamientoEntity>> ConsultarValoresProcedimiento(short IdIps, int idPaciente, PlanesTratamientoCollection Planes, bool gestante, short IdConvenio, short idEspecialidad)
+        public Task<ObservableCollection<PlanTratamientoEntity>> ConsultarValoresProcedimiento(short IdIps,
+            int idPaciente, PlanesTratamientoCollection Planes, bool gestante, short IdConvenio, short idEspecialidad)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<PlanTratamientoEntity>>();
@@ -359,20 +315,22 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                     tcs.TrySetResult(e.Result);
                 }
             };
-            cliente.ConsultarValoresProcedimientoAsync(IdIps, idPaciente, gestante, idEspecialidad, IdConvenio, Planes.ToObservableCollection());
+            cliente.ConsultarValoresProcedimientoAsync(IdIps, idPaciente, gestante, idEspecialidad, IdConvenio,
+                Planes.ToObservableCollection());
 
             return tcs.Task;
         }
 
 
-        public async  Task<long> GuardarOdontogramaInicial(TratamientoEntity tratamiento, OdontogramasPacienteEntity odontogramaPaciente, List<OdontogramaEntity> odontograma, List<TratamientoImagenEntity> adjuntosImagen, short idIps)
+        public async Task<long> GuardarOdontogramaInicial(TratamientoEntity tratamiento,
+            OdontogramasPacienteEntity odontogramaPaciente, List<OdontogramaEntity> odontograma,
+            List<TratamientoImagenEntity> adjuntosImagen, short idIps)
         {
             guardado_En_Proceso = true;
             foreach (OdontogramaEntity pivot in odontograma)
             {
                 if (pivot.DienteReferencia1 != null)
                 {
-
                     if (pivot.DienteReferencia1.Identificador == 0)
                     {
                         pivot.DienteReferencia1 = null;
@@ -380,7 +338,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 }
                 if (pivot.DienteReferencia2 != null)
                 {
-
                     if (pivot.DienteReferencia2.Identificador == 0)
                     {
                         pivot.DienteReferencia2 = null;
@@ -408,27 +365,32 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
             odontogramaInsertar.idIps = idIps;
-            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
+            odontogramaInsertar.tratamiento =
+                tratamiento
+                    .ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
 
             //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
             odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
 
 
-            odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
-            
+            odontogramaInsertar.odontogramaPaciente =
+                odontogramaPaciente
+                    .ConvertirEntidades
+                    <Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
+
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
             odontogramaInsertar.odontograma = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
-            odontogramaInsertar.adjuntosImagen =adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
+            odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
 
-            var result = await CrudBlob.postBlob(odontogramaInsertar);
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
 
-            var id = Convert.ToInt64(odontogramaInsertar.RowKey);
+            long id = Convert.ToInt64(odontogramaInsertar.RowKey);
 
             return id;
         }
 
-        public  Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,
+        public Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,
             short idTipoTratamiento,
             OdontogramasPacienteEntity OdontogramasPacienteEntity,
             ObservableCollection<OdontogramaEntity> odontogramaTratamiento,
@@ -441,7 +403,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             short idConvenio
             )
         {
-
             foreach (OdontogramaEntity pivot in odontogramaTratamiento)
             {
                 if (pivot.DienteReferencia1 != null)
@@ -454,7 +415,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
                 if (pivot.DienteReferencia2 != null)
                 {
-
                     if (pivot.DienteReferencia2.Identificador == 0)
                     {
                         pivot.DienteReferencia2 = null;
@@ -464,20 +424,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 if (pivot.PlanTratamiento.PrestadorOdontologo == 0)
                 {
                     pivot.PlanTratamiento.PrestadorOdontologo = null;
-
                 }
                 if (pivot.PlanTratamiento.PrestadorHigienista == 0)
                 {
                     pivot.PlanTratamiento.PrestadorHigienista = null;
-
                 }
                 if (pivot.PlanTratamiento.FinalidadProcedimiento == 0)
                 {
                     pivot.PlanTratamiento.FinalidadProcedimiento = null;
-
                 }
-
-
             }
             OdontogramasPacienteEntity.IdIps = idIps;
             OdontogramasPacienteEntity.Usuario = usuario;
@@ -514,8 +469,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-
-        public  Task<bool> GuardarImagenTratamiento(long idTratamientoPaciente, ObservableCollection<TratamientoImagenEntity> adjuntoImagenes)
+        public Task<bool> GuardarImagenTratamiento(long idTratamientoPaciente,
+            ObservableCollection<TratamientoImagenEntity> adjuntoImagenes)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<bool>();
@@ -544,32 +499,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ComprobanteEntity>> ListarComprobantes(short idIps, string usuario, short idSede)
+        public Task<ObservableCollection<ComprobanteEntity>> ListarComprobantes(short idIps, string usuario,
+            short idSede)
         {
-            inicializarContexto();
+            //Validar
             var tcs = new TaskCompletionSource<ObservableCollection<ComprobanteEntity>>();
-
-            cliente.ListarComprobantesCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarComprobantesAsync(idIps, usuario, idSede);
-
+            tcs.TrySetResult(new ObservableCollection<ComprobanteEntity>());
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<OdontogramaEntity>> ListarHistorial(long idTratamiento, short idIps)
+        public Task<ObservableCollection<OdontogramaEntity>> ListarHistorial(long idTratamiento, short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramaEntity>>();
@@ -594,83 +533,31 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<TerceroEntity>> ListarHigienistasPorIps(short IdIps)
+        public async Task<ObservableCollection<TerceroEntity>> ListarHigienistasPorIps(short IdIps)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<TerceroEntity>>();
-
-            cliente.ListarHigienistasIpsCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-
-            };
-            cliente.ListarHigienistasIpsAsync(IdIps);
-            return tcs.Task;
+            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "terceroentity", "cnt.panacea.entities.parametrizacion.terceroentity");
+            var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<TerceroEntity>());
+            return resultadoDevolver;
         }
 
-        public  Task<ObservableCollection<TerceroEntity>> ListarOdontologosPorIps(short IdIps)
+        public async Task<ObservableCollection<TerceroEntity>> ListarOdontologosPorIps(short IdIps)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<TerceroEntity>>();
-
-            cliente.ListarOdontologosIpsCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarOdontologosIpsAsync(IdIps);
-
-            return tcs.Task;
+            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "terceroentity", "cnt.panacea.entities.parametrizacion.terceroentity");
+            var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<TerceroEntity>());
+            return resultadoDevolver;
         }
 
-        public  Task<ObservableCollection<OdontogramaEntity>> ListarOdontogramaTratamiento(Int64 idOdontogramaPaciente, short idIps)
+        public Task<ObservableCollection<OdontogramaEntity>> ListarOdontogramaTratamiento(Int64 idOdontogramaPaciente,
+            short idIps)
         {
-            inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramaEntity>>();
-
-            cliente.ListarOdontogramaTratamientoPacienteCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ListarOdontogramaTratamientoPacienteAsync(idOdontogramaPaciente, idIps);
-
+            tcs.TrySetResult(new ObservableCollection<OdontogramaEntity>());
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<OdontogramasPacienteEntity>> ListarOdontogramasSinTratamiento(int IdPaciente, short IdIps)
-        {   
+        public Task<ObservableCollection<OdontogramasPacienteEntity>> ListarOdontogramasSinTratamiento(int IdPaciente,
+            short IdIps)
+        {
             var tcs = new TaskCompletionSource<ObservableCollection<OdontogramasPacienteEntity>>();
             var lst = new ObservableCollection<OdontogramasPacienteEntity>();
             tcs.SetResult(lst);
@@ -678,7 +565,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-        public  Task<ObservableCollection<FinalidadProcedimientoEntity>> ListarFinalidadesProcedimiento(short idIps)
+        public Task<ObservableCollection<FinalidadProcedimientoEntity>> ListarFinalidadesProcedimiento(short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<FinalidadProcedimientoEntity>>();
@@ -703,7 +590,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<PacienteConvenioEntity>> ListarConveniosPaciente(short idIps, int idPaciente)
+        public Task<ObservableCollection<PacienteConvenioEntity>> ListarConveniosPaciente(short idIps, int idPaciente)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ObservableCollection<PacienteConvenioEntity>>();
@@ -728,30 +615,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        //async Task UploadJsonObjectAsync<T>(Uri uri, T data)
-        //{
-        //    var client = new HttpClient();
-        //    var content = new PushStreamContent((stream, httpContent, transportContext) =>
-        //    {
-        //        var serializer = new JsonSerializer();
-        //        using (var writer = new StreamWriter(stream))
-        //        {
-        //            serializer.Serialize(writer, data);
-        //        }
-        //    });
-        //    var response = await client.PostAsync(uri, content);
-        //    response.EnsureSuccessStatusCode();
-        //}
 
-        public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(short IdIps, short idConvenio)
+        public async Task<ObservableCollection<ParametroOdontologicoConvenioEntity>> ListarParametrosConvenio(
+            short IdIps, short idConvenio)
         {
             var tcs = new TaskCompletionSource<ObservableCollection<ParametroOdontologicoConvenioEntity>>();
-            ObservableCollection<ParametroOdontologicoConvenioEntity> lst = new ObservableCollection<ParametroOdontologicoConvenioEntity>();
+            var lst = new ObservableCollection<ParametroOdontologicoConvenioEntity>();
             tcs.SetResult(lst);
             return lst;
         }
 
-        public  Task<ParametroOdontologicoBodegaEntity> ListarParametrosBodega(short idIps)
+        public Task<ParametroOdontologicoBodegaEntity> ListarParametrosBodega(short idIps)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<ParametroOdontologicoBodegaEntity>();
@@ -776,14 +650,19 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
-        {            
+        {
             var tcs = new TaskCompletionSource<TratamientoEntity>();
-            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await CrudBlob.getBlobByPartitionAndRowKey(new Hefesoft.Entities.Odontologia.Odontograma.Odontograma(), idTratamiento.ToString());
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result =
+                await
+                    new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartitionAndRowKey(
+                        idTratamiento.ToString());
             result.tratamiento.RowKey = result.RowKey;
-            
 
-            var entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento, new TratamientoEntity());
-            var lstOdontogramas = Convertir_Observables.ConvertirObservables(result.odontograma.ToObservableCollection(), new ObservableCollection<OdontogramaEntity>());
+            TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento,
+                new TratamientoEntity());
+            ObservableCollection<OdontogramaEntity> lstOdontogramas =
+                result.odontograma.ToObservableCollection()
+                    .ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
 
 
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(lstOdontogramas, "Odontograma cargado");
@@ -791,7 +670,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return entidadConvertida;
         }
 
-        public  Task<OdontogramasPacienteEntity> SelecionarOdontogramaPaciente(long idOdontogramaPaciente)
+        public Task<OdontogramasPacienteEntity> SelecionarOdontogramaPaciente(long idOdontogramaPaciente)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<OdontogramasPacienteEntity>();
@@ -817,7 +696,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-        public  Task<long> ReciboCajaTratamiento(long idTratamiento)
+        public Task<long> ReciboCajaTratamiento(long idTratamiento)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<long>();
@@ -841,7 +720,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<decimal> ValorPagoTratamiento(long idTratamiento)
+        public Task<decimal> ValorPagoTratamiento(long idTratamiento)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<decimal>();
@@ -865,7 +744,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<bool> ValidarusuarioCierraTratamiento(string idUsuario, string Clave)
+        public Task<bool> ValidarusuarioCierraTratamiento(string idUsuario, string Clave)
         {
             inicializarContexto();
             var tcs = new TaskCompletionSource<bool>();
@@ -889,19 +768,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public  Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarProcedimientosConfigurados(short idIps)
-        {   
+        public Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarProcedimientosConfigurados(
+            short idIps)
+        {
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
             tcs.SetResult(new ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>());
             return tcs.Task;
         }
 
-        public async Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>> ConsultarDiagnosticosConfigurados(short idIps)
-        {            
+        public async Task<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>
+            ConsultarDiagnosticosConfigurados(short idIps)
+        {
             var tcs = new TaskCompletionSource<ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>>();
             var result = new ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity>();
 
-            var blob = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Diagnostico.DiagnosticoProcedimiento(), "configurardiagnosticoprocedimotraentity", "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
+            List<DiagnosticoProcedimiento> blob =
+                await
+                    new DiagnosticoProcedimiento().getBlobByPartition("configurardiagnosticoprocedimotraentity",
+                        "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
             blob.ToObservableCollection().ConvertirObservables(result);
 
             return result;
@@ -910,14 +794,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         void IContexto_Odontologia.binding(dynamic valor)
         {
-            
         }
 
         void IContexto_Odontologia.url(string url)
         {
-            
         }
-
-
-    }    
+    }
 }

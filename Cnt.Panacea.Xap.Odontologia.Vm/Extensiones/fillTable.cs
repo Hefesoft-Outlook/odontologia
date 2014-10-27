@@ -37,7 +37,7 @@ using System.Text;
                 {
                     var item = (Cnt.Std.IEntidadBase)itemB;
                     Mapper.CreateMap<T, P>();
-                    P ElementoInsertar = Mapper.Map<P>(item);
+                    P ElementoInsertar = Mapper.DynamicMap<P>(item);
                     ElementoInsertar.nombreTabla = item.GetType().Name.eliminarCaracteresEspeciales().ToLower();
                     ElementoInsertar.PartitionKey = item.GetType().FullName.eliminarCaracteresEspeciales().ToLower();
                     ElementoInsertar.RowKey = item.Identificador.ToString();
