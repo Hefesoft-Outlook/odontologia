@@ -24,6 +24,12 @@ using System.Text;
             for (int i = 0; i <= elemento.PlanTratamiento.NumeroSesionesProcedimiento - 1; i++)
             {
                 SesionesPlanTratamientoEntity sesion = new SesionesPlanTratamientoEntity();
+
+                if (elemento.PlanTratamiento.NumeroSesion == null)
+                {
+                    elemento.PlanTratamiento.NumeroSesion = 0;
+                }
+
                 sesion.IdSesion = (short)(elemento.PlanTratamiento.NumeroSesion + i);
                 sesion.Estado = true;
                 sesion.IdIps = Variables_Globales.IdIps;

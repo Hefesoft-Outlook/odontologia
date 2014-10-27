@@ -99,6 +99,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();            
             Listado = Listado.inicializarListaYLimpiar();
             Listado = planTratamiento.Listado;
+            
         }
 
         private void opcionTratamiento()
