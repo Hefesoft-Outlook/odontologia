@@ -73,6 +73,7 @@
     <Compile Include="Grillas\General\Pedir_Datos_Grilla_Plan_Tratamiento.cs" />
     <Compile Include="Grillas\Inicial\vm.cs" />
     <Compile Include="Grillas\Plan tratamiento\Listado_Procedimientos.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\UserControlGuardarPlanTratamiento.cs" />
     <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\Wizard.cs" />
     <Compile Include="Grillas\Plan tratamiento\Vm.cs" />
     <Compile Include="Grillas\Plan tratamiento\Wizard.cs" />

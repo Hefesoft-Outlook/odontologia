@@ -18,7 +18,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
     // Este formulario carga los datos que estan fuera de la grilla
     // La grilla se carga en un control que se llama Wizard adentro de la vista a la que hacer
     // referencia este View Model
-    public class UserControlGuardarPlanTratamiento : ViewModelBase, IDisposable
+    public partial class UserControlGuardarPlanTratamiento : ViewModelBase, IDisposable
     {
         public UserControlGuardarPlanTratamiento()
         {
@@ -28,6 +28,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
             }
             else
             {
+                //datosPruebaComprobantes();
+
                 TratamientoPadre = Variables_Globales.TratamientosPadre;
                 ValidarSesionesCommand = new RelayCommand(ValidarSesionesConfiguradas);
                 CalculoValoresTratamientoCommand = new RelayCommand(CalculoValoresTratamiento);                

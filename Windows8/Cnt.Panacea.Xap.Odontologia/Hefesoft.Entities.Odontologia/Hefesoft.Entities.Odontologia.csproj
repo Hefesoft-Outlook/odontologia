@@ -48,6 +48,14 @@
     <Compile Include="Articulos\TiposUnidadMedida.cs" />
     <Compile Include="Articulos\UnidadesPeriodicidad.cs" />
     <Compile Include="Articulos\UnidadMedidaEntity.cs" />
+    <Compile Include="Comprobantes\ComprobanteDetallesCollection.cs" />
+    <Compile Include="Comprobantes\ComprobanteEntity.cs" />
+    <Compile Include="Comprobantes\ComprobanteHistoricoCollection.cs" />
+    <Compile Include="Comprobantes\ComprobantesDependenciaCollection.cs" />
+    <Compile Include="Comprobantes\ComprobantesReporteCollection.cs" />
+    <Compile Include="Comprobantes\ModuloFuncionalEntity.cs" />
+    <Compile Include="Comprobantes\TipoComprobanteEntity.cs" />
+    <Compile Include="Comprobantes\TiposConsecutivo.cs" />
     <Compile Include="Tercero\ActividadesEconomicasCollection.cs" />
     <Compile Include="Convenio\ClasesTercero.cs" />
     <Compile Include="Convenio\ContratoLiquidacionEntity.cs" />

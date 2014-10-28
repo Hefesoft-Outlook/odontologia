@@ -19,6 +19,10 @@ public static partial class CrudBlob
             {
                 entidad.nombreTabla = entidad.GetType().Name.eliminarCaracteresEspeciales().ToLower();
             }
+            else
+            {
+                entidad.nombreTabla = entidad.nombreTabla.ToLower();
+            }
 
             if (string.IsNullOrEmpty(entidad.PartitionKey))
             {

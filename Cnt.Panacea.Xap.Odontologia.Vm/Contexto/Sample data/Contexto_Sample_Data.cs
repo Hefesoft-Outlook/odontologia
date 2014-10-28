@@ -365,24 +365,18 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
             odontogramaInsertar.idIps = idIps;
-            odontogramaInsertar.tratamiento =
-                tratamiento
-                    .ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
+            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
 
             //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
             odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
 
 
-            odontogramaInsertar.odontogramaPaciente =
-                odontogramaPaciente
-                    .ConvertirEntidades
-                    <Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
+            odontogramaInsertar.odontogramaPaciente =odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
 
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
             odontogramaInsertar.odontograma = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
             odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
-
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
 
             long id = Convert.ToInt64(odontogramaInsertar.RowKey);
@@ -390,7 +384,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return id;
         }
 
-        public Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,
+        public async Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,
             short idTipoTratamiento,
             OdontogramasPacienteEntity OdontogramasPacienteEntity,
             ObservableCollection<OdontogramaEntity> odontogramaTratamiento,
@@ -403,69 +397,23 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             short idConvenio
             )
         {
-            foreach (OdontogramaEntity pivot in odontogramaTratamiento)
-            {
-                if (pivot.DienteReferencia1 != null)
-                {
-                    if (pivot.DienteReferencia1.Identificador == 0)
-                    {
-                        pivot.DienteReferencia1 = null;
-                    }
-                }
+            //Validar esto
+            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma() { nombreTabla = "plantratamientoentity"};
+            odontogramaInsertar.idIps = idIps;
+            odontogramaInsertar.tratamiento = TratamientoEntity.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
 
-                if (pivot.DienteReferencia2 != null)
-                {
-                    if (pivot.DienteReferencia2.Identificador == 0)
-                    {
-                        pivot.DienteReferencia2 = null;
-                    }
-                }
-
-                if (pivot.PlanTratamiento.PrestadorOdontologo == 0)
-                {
-                    pivot.PlanTratamiento.PrestadorOdontologo = null;
-                }
-                if (pivot.PlanTratamiento.PrestadorHigienista == 0)
-                {
-                    pivot.PlanTratamiento.PrestadorHigienista = null;
-                }
-                if (pivot.PlanTratamiento.FinalidadProcedimiento == 0)
-                {
-                    pivot.PlanTratamiento.FinalidadProcedimiento = null;
-                }
-            }
-            OdontogramasPacienteEntity.IdIps = idIps;
-            OdontogramasPacienteEntity.Usuario = usuario;
+            //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
+            odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
+            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
 
 
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<long>>();
+            odontogramaInsertar.odontogramaPaciente = OdontogramasPacienteEntity.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
 
-            EventHandler<GuardarPlanDeTratamientoCompletedEventArgs> evento = null;
-            evento = delegate(object sender, GuardarPlanDeTratamientoCompletedEventArgs e)
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-                cliente.GuardarPlanDeTratamientoCompleted -= evento;
-            };
+            //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
+            odontogramaInsertar.odontograma = odontogramaTratamiento.ConvertirIEnumerable(odontogramaInsertar.odontograma);
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
 
-            cliente.GuardarPlanDeTratamientoCompleted += evento;
-
-            cliente.GuardarPlanDeTratamientoAsync(TratamientoEntity,
-                OdontogramasPacienteEntity,
-                odontogramaTratamiento, Cotizacion, Paciente, idSede, idIps, idConvenio, Comprobante, usuario);
-
-            return tcs.Task;
+            return new ObservableCollection<long>();
         }
 
 
@@ -499,13 +447,13 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return tcs.Task;
         }
 
-        public Task<ObservableCollection<ComprobanteEntity>> ListarComprobantes(short idIps, string usuario,
+        public async Task<ObservableCollection<ComprobanteEntity>> ListarComprobantes(short idIps, string usuario,
             short idSede)
         {
             //Validar
-            var tcs = new TaskCompletionSource<ObservableCollection<ComprobanteEntity>>();
-            tcs.TrySetResult(new ObservableCollection<ComprobanteEntity>());
-            return tcs.Task;
+            List<Hefesoft.Entities.Odontologia.Comprobantes.ComprobanteEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Comprobantes.ComprobanteEntity(), "comprobanteentity", "cnt.panacea.entities.parametrizacion.comprobanteentity");
+            var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<ComprobanteEntity>());
+            return resultadoDevolver;
         }
 
         public Task<ObservableCollection<OdontogramaEntity>> ListarHistorial(long idTratamiento, short idIps)
