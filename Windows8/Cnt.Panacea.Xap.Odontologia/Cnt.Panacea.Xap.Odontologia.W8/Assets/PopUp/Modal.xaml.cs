@@ -39,7 +39,7 @@ namespace App2.Assets.PopUp
         {
             Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this, elemento=>
             {
-                ocultarModal();
+                ocultarModal(false);
             });
         }
 
@@ -65,7 +65,10 @@ namespace App2.Assets.PopUp
             if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Plan tratamiento")
             {
                 var datacontext = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
-                elementoOtraVentana.Resultado(datacontext);
+                if (datacontext.lstOdontogramaEntity != null && datacontext.lstOdontogramaEntity.Any())
+                {
+                    elementoOtraVentana.Resultado(datacontext);
+                }
             }
 
         }
@@ -81,15 +84,18 @@ namespace App2.Assets.PopUp
             return ventanaCerrada;
         }
 
-        private void ocultarModal()
+        private void ocultarModal(bool dialogResult)
         {
             TxtBlckTitulo.Text = "";
             Contenedor.Children.Clear();            
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            
-            //Callback
-            ventanaCerrada = cerrar;
-            ventanaCerrada(null);
+
+            if (dialogResult)
+            {
+                //Callback
+                ventanaCerrada = cerrar;
+                ventanaCerrada(null);
+            }
         }
 
 
@@ -128,7 +134,7 @@ namespace App2.Assets.PopUp
 
         private void Grid_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            ocultarModal();
+            ocultarModal(true);
         }
 
         private Action<object> ventanaCerrada { get; set; }
