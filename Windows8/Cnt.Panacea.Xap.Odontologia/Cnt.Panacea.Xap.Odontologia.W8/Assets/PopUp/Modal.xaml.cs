@@ -38,7 +38,7 @@ namespace App2.Assets.PopUp
         {
             Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this, elemento=>
             {
-                ocultarModal(false);
+                ocultarModal(true);
             });
         }
 
@@ -75,7 +75,7 @@ namespace App2.Assets.PopUp
                     elementoOtraVentana.Resultado(datacontext);
                 }
             }
-            if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Evolucion")
+            else if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Evolucion")
             {
                 Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
             }
@@ -142,7 +142,7 @@ namespace App2.Assets.PopUp
 
         private void Grid_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            ocultarModal(true);
+            ocultarModal(false);
         }
 
         private Action<object> ventanaCerrada { get; set; }

@@ -64,13 +64,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             if (Variables_Globales.IdTratamientoActivo != 0)
             {
                 Busy.UserControlCargando(true, "Cargando plan de tratamiento");
-                ObservableCollection<OdontogramaEntity> resultado =
-                    await
-                        Contexto_Odontologia.obtenerContexto()
-                            .ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo,
-                                Variables_Globales.IdIps);
-                Messenger.Default.Send(new Pedir_Pintar_Datos {lst = resultado, Limpiar_Datos = false});
+                ObservableCollection<OdontogramaEntity> resultado = new ObservableCollection<OdontogramaEntity>();
+                resultado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
                 Busy.UserControlCargando(false);
+
+                if (resultado.Any())
+                {
+                    Messenger.Default.Send(new Pedir_Pintar_Datos { lst = resultado, Limpiar_Datos = false });
+                }
             }
         }
 

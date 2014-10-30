@@ -47,6 +47,8 @@ namespace App2
             Variables_Globales.IdIps = 21;
             Variables_Globales.IdPaciente = 232431;
             Variables_Globales.IdTratamientoActivo = 2;
+            Variables_Globales.Modo = Cnt.Panacea.Xap.Odontologia.Vm.Util.Modos.Modo.windows8;
+            Variables_Globales.PCL = new PCL();
         }
 
         void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)

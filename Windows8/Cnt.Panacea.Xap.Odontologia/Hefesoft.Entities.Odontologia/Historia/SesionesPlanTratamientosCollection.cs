@@ -7,6 +7,6 @@ namespace Hefesoft.Entities.Odontologia.Historia
 {
     public class SesionesPlanTratamientosCollection
     {
-        public IEnumerable<SesionesPlanTratamientoEntity> MyProperty { get; set; }
+        public IEnumerable<SesionesPlanTratamientoEntity> SesionesPlanTratamientoEntity { get; set; }
     }
 }

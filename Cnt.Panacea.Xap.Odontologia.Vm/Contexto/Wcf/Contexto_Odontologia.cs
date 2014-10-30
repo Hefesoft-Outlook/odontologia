@@ -1138,7 +1138,5 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf
             cliente.ConsultarDiagnosticosConfiguradosAsync(idIps);
             return tcs.Task;
         }
-
-
     }
 }

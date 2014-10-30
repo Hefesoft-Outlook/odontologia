@@ -145,5 +145,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Estaticas
         public static double Indice_Placa_Bacteriana { get; set; }
 
         public static double Numero_Piezas_Dentales { get; set; }
+
+        public static PCL PCL { get; set; }
+
+        public static Util.Modos.Modo Modo { get; set; }
+    }
+
+    public class PCL
+    {
+
+        public Hefesoft.Entities.Odontologia.Odontograma.Odontograma PlanTratamiento { get; set; }
     }
 }

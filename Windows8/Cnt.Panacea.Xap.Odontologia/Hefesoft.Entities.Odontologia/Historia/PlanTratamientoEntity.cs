@@ -74,10 +74,8 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         public int? PrestadorOdontologo { get; set; }
         
         public int? Procedimiento { get; set; }
-        
-        public SesionesPlanTratamientosCollection SesionesPlanTratamiento { get; set; }
 
-        
+        public IEnumerable<SesionesPlanTratamientoEntity> SesionesPlanTratamiento { get; set; }
         
         public string UsuarioModificador { get; set; }
         

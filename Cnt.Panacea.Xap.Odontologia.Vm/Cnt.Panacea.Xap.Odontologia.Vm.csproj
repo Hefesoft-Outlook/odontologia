@@ -148,6 +148,7 @@
     <Compile Include="Util\Mapa dental\Supernumerario.cs" />
     <Compile Include="Util\Mapa dental\ui.cs" />
     <Compile Include="Util\Mapa dental\Validaciones.cs" />
+    <Compile Include="Util\Modos\Modo.cs" />
     <Compile Include="Util\Paleta.cs" />
     <Compile Include="Util\Plan Tratamiento\PlanTratamientoEstadoNuevoEliminadoModificado.cs" />
     <Compile Include="Util\Plan Tratamiento\ProcedimientosGrillaPlanTratamiento.cs" />

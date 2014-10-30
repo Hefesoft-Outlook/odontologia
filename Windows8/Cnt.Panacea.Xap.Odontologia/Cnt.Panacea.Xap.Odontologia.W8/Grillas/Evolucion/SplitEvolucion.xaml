@@ -25,40 +25,61 @@
             <ColumnDefinition x:Name="secondaryColumn" Width="*"/>
         </Grid.ColumnDefinitions>
 
+        <!-- Details for selected item -->
+        <StackPanel>
+            
+    		<TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}" 
+    			HorizontalAlignment="Center" FontSize="16"/>
+
+    		<ComboBox x:Name="CmbxSesiones"
+    			SelectedValue="{Binding SesionActualCarga, Mode=TwoWay}"
+    			ItemsSource="{Binding NumeroSesionesConfiguradas}" FontFamily="Global User Interface"
+					>
+    			<!--
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <Custom:EventToCommand Command="{Binding cambioSesionCommand}" CommandParameter="{Binding SelectedValue, ElementName=CmbxSesiones}"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            -->
+    		</ComboBox>
         
-        <!-- Vertical scrolling item list -->
-        <ListView
-            x:Name="itemListView"
-            AutomationProperties.AutomationId="ItemsListView"
-            AutomationProperties.Name="Items"
-            TabIndex="1"
-            Padding="120,0,0,60"
-            ItemsSource="{Binding ListadoEvolucion}"
-            IsSwipeEnabled="False"
+
+    		<ListView
+    			x:Name="itemListView"
+    			AutomationProperties.AutomationId="ItemsListView"
+    			AutomationProperties.Name="Items"
+    			TabIndex="1"
+    			Padding="120,0,0,60"
+    			ItemsSource="{Binding ListadoEvolucion}"
+    			IsSwipeEnabled="False"
             >
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <Grid Margin="6">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
-                            <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
-                        </Border>
-                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
-                            <TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
-                            <TextBlock Text="{Binding NombreSuperficie}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
-                        </StackPanel>
-                    </Grid>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="FrameworkElement">
-                    <Setter Property="Margin" Value="0,0,0,10"/>
-                </Style>
-            </ListView.ItemContainerStyle>
-        </ListView>
+    			<ListView.ItemTemplate>
+    				<DataTemplate>
+    					<Grid Margin="6">
+    						<Grid.ColumnDefinitions>
+    							<ColumnDefinition Width="Auto"/>
+    							<ColumnDefinition Width="*"/>
+    						</Grid.ColumnDefinitions>
+    						<Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="60" Height="60">
+    							<Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+    						</Border>
+    						<StackPanel Grid.Column="1" Margin="10,0,0,0">
+    							<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
+    							<TextBlock Text="{Binding NombreSuperficie}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
+    						</StackPanel>
+    					</Grid>
+    				</DataTemplate>
+    			</ListView.ItemTemplate>
+    			<ListView.ItemContainerStyle>
+    				<Style TargetType="FrameworkElement">
+    					<Setter Property="Margin" Value="0,0,0,10"/>
+    				</Style>
+    			</ListView.ItemContainerStyle>
+    		</ListView>
+
+
+    	</StackPanel>
 
 
         <!-- Details for selected item -->
@@ -92,7 +113,7 @@
                         <!--Estado del procedimiento-->
                         <TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
                         <CheckBox VerticalAlignment="Stretch" 
-                                    Name="checkBox"
+                                    x:Name="checkBox"
 									IsEnabled="True" 
 									IsChecked="{Binding PlanTratamientoEntity.EstadoProcedimiento, Mode=TwoWay}" FontFamily="Global User Interface">                           
                             <!--
@@ -115,7 +136,7 @@
                         <!--Odontologos e Higienistas-->
                         <TextBlock Text="{Binding Mensajes.Prestador, Source={StaticResource publicResource}}"/>
                         <ComboBox 
-									ItemsSource="{Binding  OdontologosHigienistasIps, Mode=OneWay}"                                          
+									ItemsSource="{Binding OdontologosHigienistasIps, Mode=OneWay}"                                          
 									DisplayMemberPath="NombreCompleto" 
 									SelectedValue="{Binding OdontologosHigienistasIpsValor, Mode=TwoWay}" FontFamily="Global User Interface"/>
 

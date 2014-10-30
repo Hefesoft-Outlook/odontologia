@@ -45,6 +45,5 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto
         void url(string url);
 
         dynamic servicio(dynamic cliente);
-
     }
 }
