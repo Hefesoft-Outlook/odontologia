@@ -30,7 +30,6 @@ namespace App2.Assets.PopUp
             oirCerraVentana();
 
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-
             this.Titulo.Margin = new Thickness(20, 20, 20, 0);
             this.LayoutRoot.Margin = new Thickness(20, 0, 20, 20);
         }
@@ -55,7 +54,13 @@ namespace App2.Assets.PopUp
                 elementoOtraVentana = obj;
                 var wizard = new App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento() {HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch};
                 var vCerrada = MostrarModal(wizard, "Plan de tratamiento");
-
+                vCerrada = cerrar;
+            }
+            else if (obj.Nombre == "Evolucion")
+            {
+                elementoOtraVentana = obj;
+                var wizard = new App2.Grillas.Evolucion.SplitEvolucion() { HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch };
+                var vCerrada = MostrarModal(wizard, "Evolucion");
                 vCerrada = cerrar;
             }
         }
@@ -70,7 +75,10 @@ namespace App2.Assets.PopUp
                     elementoOtraVentana.Resultado(datacontext);
                 }
             }
-
+            if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Evolucion")
+            {
+                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
+            }
         }
 
         private Action<object> MostrarModal(UIElement elementoMostrar, string titulo = "")

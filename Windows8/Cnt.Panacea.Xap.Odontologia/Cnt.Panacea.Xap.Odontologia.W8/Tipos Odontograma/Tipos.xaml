@@ -42,10 +42,23 @@
 						</ObjectAnimationUsingKeyFrames>
 					</Storyboard>
 				</VisualState>
+				<VisualState x:Name="VisualStateEvolucion">
+					<Storyboard>
+						<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="odontogramaEvolucion">
+							<DiscreteObjectKeyFrame KeyTime="0">
+								<DiscreteObjectKeyFrame.Value>
+									<Visibility>Visible</Visibility>
+								</DiscreteObjectKeyFrame.Value>
+							</DiscreteObjectKeyFrame>
+						</ObjectAnimationUsingKeyFrames>
+					</Storyboard>
+				</VisualState>
 			</VisualStateGroup>
 		</VisualStateManager.VisualStateGroups>
+        
         <!--Tipos de odontograma-->
 		<Tipos_Odontograma:Odontograma_Inicial x:Name="odontogramaInicial" Visibility="Collapsed"/>
 		<Tipos_Odontograma:Plan_Tratamiento x:Name="odontogramaPlanTratamiento" Visibility="Collapsed"/>
+        <Tipos_Odontograma:Odontograma_Evolucion x:Name="odontogramaEvolucion" Visibility="Collapsed"/>
 	</StackPanel>
 </UserControl>

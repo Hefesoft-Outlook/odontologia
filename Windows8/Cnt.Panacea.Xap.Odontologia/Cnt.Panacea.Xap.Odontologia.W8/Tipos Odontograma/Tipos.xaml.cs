@@ -42,9 +42,8 @@ namespace App2.Tipos_Odontograma
                 }
                 else if (item.Tipo_Odontograma == Tipo_Odontograma.Evolucion)
                 {
-
+                    VisualStateManager.GoToState(this, "VisualStateEvolucion", true);
                 }
-
             });
         }
 
