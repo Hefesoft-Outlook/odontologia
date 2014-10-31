@@ -44,7 +44,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 Identificador = 4
             });
 
-            lst.ToObservableCollection().fillTables(new Hefesoft.Entities.Odontologia.Finalidad.FinalidadProcedimientoEntity());
+            //lst.ToObservableCollection().fillTables(new Hefesoft.Entities.Odontologia.Finalidad.FinalidadProcedimientoEntity());
         }
     }
 }

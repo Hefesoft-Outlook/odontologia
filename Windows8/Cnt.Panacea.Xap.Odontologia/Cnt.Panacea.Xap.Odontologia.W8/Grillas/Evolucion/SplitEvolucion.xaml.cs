@@ -1,4 +1,5 @@
 ﻿using App2.Common;
+using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -23,15 +24,18 @@ namespace App2.Grillas.Evolucion
     {
         public SplitEvolucion()
         {
-            this.InitializeComponent();
-            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();                        
+            this.InitializeComponent();           
+        }
+
+        internal void inicializar()
+        {
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+            vm.InicializarEvolucion();
         }
 
         private void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            //Por ioc se trae el viewmodel que se encarga de formatear los datos
-            var item = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
-            item.pedirDatosGrilla();
+            Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
         }        
     }
 }

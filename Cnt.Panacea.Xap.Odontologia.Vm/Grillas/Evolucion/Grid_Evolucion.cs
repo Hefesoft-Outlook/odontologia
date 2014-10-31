@@ -116,6 +116,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 if (TratamientoPadre.IdSesionActual != null)
                 {
                     SesionActualCarga = (int)TratamientoPadre.IdSesionActual;
+                    Variables_Globales.SesionActual = (short)TratamientoPadre.IdSesionActual;
                 }
                 else
                 {
@@ -128,7 +129,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
                 ValorPagoTratamiento = await Contexto_Odontologia.obtenerContexto().ValorPagoTratamiento(TratamientoPadre.Identificador);
                 ValorSaldoTratamiento = ValorTotalTratamiento - ValorPagoTratamiento;
-                Variables_Globales.SesionActual = (short)TratamientoPadre.IdSesionActual;
 
                 RaisePropertyChanged("NumeroSesionesConfiguradas");
                 RaisePropertyChanged("FinalidadesProcedimiento");

@@ -42,19 +42,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 }
             }
 
-            inicializarContexto();
+            
             var tcs = new TaskCompletionSource<bool>();
-            cliente.ActualizarPlanesTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                    tcs.TrySetException(e.Error);
-                else if (e.Cancelled)
-                    tcs.TrySetCanceled();
-                else
-                    tcs.TrySetResult(e.Result);
-            };
-            cliente.ActualizarPlanesTratamientoAsync(Tratamiento, Planes.ToObservableCollection());
-
+            tcs.TrySetResult(true);
             return tcs.Task;
         }
 
@@ -654,26 +644,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public Task<decimal> ValorPagoTratamiento(long idTratamiento)
-        {
-            inicializarContexto();
+        {            
             var tcs = new TaskCompletionSource<decimal>();
-
-            cliente.ValorPagoTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ValorPagoTratamientoAsync(idTratamiento);
+            tcs.TrySetResult(100000);
             return tcs.Task;
         }
 
