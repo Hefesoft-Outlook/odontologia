@@ -22,7 +22,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 {
-    public class Grid_Evolucion : ViewModelBase, IDisposable
+    public partial class Grid_Evolucion : ViewModelBase, IDisposable
     {
         public Grid_Evolucion()
         {
@@ -31,12 +31,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
             }
             else
             {
+                //Crear datos de prueba
+                datosPruebaFinalidadProcedimiento();
+
+
                 realizadoCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(procedimientoRealizado);
                 bodegaCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(bodega);
                 cambioSesionCommand = new RelayCommand<int>(SesionCambiada);
                 InicializarEvolucion();
-
-
             }
         }
                

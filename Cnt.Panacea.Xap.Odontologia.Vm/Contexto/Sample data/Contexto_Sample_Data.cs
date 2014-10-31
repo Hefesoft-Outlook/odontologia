@@ -539,29 +539,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-        public Task<ObservableCollection<FinalidadProcedimientoEntity>> ListarFinalidadesProcedimiento(short idIps)
+        public async Task<ObservableCollection<FinalidadProcedimientoEntity>> ListarFinalidadesProcedimiento(short idIps)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<ObservableCollection<FinalidadProcedimientoEntity>>();
-
-            cliente.ListarFinalidadProcedimientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-
-            cliente.ListarFinalidadProcedimientoAsync(idIps);
-            return tcs.Task;
+            List<Hefesoft.Entities.Odontologia.Finalidad.FinalidadProcedimientoEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Finalidad.FinalidadProcedimientoEntity(), "finalidadprocedimientoentity", "cnt.panacea.entities.parametrizacion.finalidadprocedimientoentity");
+            var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<FinalidadProcedimientoEntity>());            
+            return resultadoDevolver;
         }
 
         public Task<ObservableCollection<PacienteConvenioEntity>> ListarConveniosPaciente(short idIps, int idPaciente)
@@ -665,26 +647,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
 
         public Task<long> ReciboCajaTratamiento(long idTratamiento)
-        {
-            inicializarContexto();
+        {   
             var tcs = new TaskCompletionSource<long>();
-
-            cliente.ReciboCajaTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ReciboCajaTratamientoAsync(idTratamiento);
+            tcs.TrySetResult(1);            
             return tcs.Task;
         }
 

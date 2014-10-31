@@ -16,7 +16,7 @@ using GalaSoft.MvvmLight.Command;
 
 namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 {
-    public class Evolucion : ViewModelBase, IDisposable
+    public partial class Evolucion : ViewModelBase, IDisposable
     {
         public Evolucion()
         {

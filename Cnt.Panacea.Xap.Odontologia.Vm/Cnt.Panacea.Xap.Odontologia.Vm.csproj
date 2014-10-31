@@ -133,6 +133,7 @@
     <Compile Include="Servicio\Client.cs" />
     <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
     <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Evolucion\Evolucion.partial.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Inicial\Json Objects\Inicial.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Json Implementation\vm.partial.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Sample Data\Sample.cs" />
