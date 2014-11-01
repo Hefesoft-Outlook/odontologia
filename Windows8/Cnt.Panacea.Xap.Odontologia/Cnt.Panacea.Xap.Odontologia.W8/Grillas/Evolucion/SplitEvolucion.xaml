@@ -164,16 +164,13 @@
                         
 						<!--Estado del procedimiento-->
 						<TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
-						<CheckBox VerticalAlignment="Stretch" 
+						<CheckBox 
+                            Click="realizado_Click"
+                            VerticalAlignment="Stretch" 
 							x:Name="checkBox"
 							IsEnabled="True" 
 							IsChecked="{Binding SelectedItem.PlanTratamientoEntity.EstadoProcedimiento, ElementName=itemListView, Mode=TwoWay}" 
 							FontFamily="Global User Interface">							
-							<Interactivity:Interaction.Behaviors>
-								<Core:EventTriggerBehavior EventName="Click">
-									<Core:InvokeCommandAction Command="{Binding Grid_Evolucion.realizadoCommand, Source={StaticResource Locator}}" CommandParameter="{Binding DataContext, ElementName=checkBox}"/>
-								</Core:EventTriggerBehavior>
-							</Interactivity:Interaction.Behaviors>
 						</CheckBox>
 
 						<!--Legalizado-->

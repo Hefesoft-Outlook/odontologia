@@ -1,4 +1,5 @@
 ﻿using App2.Common;
+using Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 using System;
@@ -36,6 +37,14 @@ namespace App2.Grillas.Evolucion
         private void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
+        }
+
+        private void realizado_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox ch = sender as CheckBox;
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+            var item = ch.DataContext as ProcedimientosGrillaEvolucion;
+            vm.procedimientoRealizado(item);
         }        
     }
 }

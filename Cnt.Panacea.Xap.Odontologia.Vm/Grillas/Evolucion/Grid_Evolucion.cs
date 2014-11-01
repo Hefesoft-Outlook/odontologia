@@ -66,7 +66,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         }
 
-        private void procedimientoRealizado(ProcedimientosGrillaEvolucion obj)
+        public void procedimientoRealizado(ProcedimientosGrillaEvolucion obj)
         {
             var item = obj.OdontogramaEntity.odontogramaEntityToDiagnosticoProcedimiento_Extend();
 
