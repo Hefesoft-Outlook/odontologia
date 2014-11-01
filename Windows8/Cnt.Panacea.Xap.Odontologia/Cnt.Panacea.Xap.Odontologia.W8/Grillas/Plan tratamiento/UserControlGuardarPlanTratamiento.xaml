@@ -11,87 +11,18 @@
     d:DesignWidth="900">
     
     <Grid Background="White">
-        <StackPanel>
-            <Grid x:Name="grid2" Height="114">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="0.25*"/>
-                    <RowDefinition Height="0.25*"/>
-                    <RowDefinition Height="0.25*"/>
-                    <RowDefinition Height="0.25*"/>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="0.151*"/>
-                    <ColumnDefinition Width="0.217*"/>
-                    <ColumnDefinition Width="0.098*"/>
-                    <ColumnDefinition Width="0.271*"/>
-                    <ColumnDefinition Width="0.263*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Margin="0" TextWrapping="Wrap" Text="{Binding Mensajes.Pago_Por, Source={StaticResource publicResource}}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="54"/>
-                <ComboBox Grid.Column="1" Margin="0,2" Height="25" Width="200" HorizontalAlignment="Left" ItemsSource="{Binding FormaPagoOdontologia}" DisplayMemberPath="Value" SelectedItem="{Binding FormaPagoSeleccionado, Mode=TwoWay}"  SelectedValue="{Binding FormaPagoSeleccionado, Mode=TwoWay}">
-                    <!--<i:Interaction.Triggers>
-                        <i:EventTrigger EventName="SelectionChanged">
-                            <GalaSoft_MvvmLight_Command:EventToCommand Command="{Binding ValidarSesionesCommand}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>-->
-                </ComboBox>
-
-                <TextBox x:Name="txtCuotaInicial" Grid.Column="1" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorCuotaInicial, Mode=TwoWay}" VerticalAlignment="Center">
-                    <!--<i:Interaction.Triggers>
-                        <i:EventTrigger EventName="KeyUp">
-                            <GalaSoft_MvvmLight_Command:EventToCommand Command="{Binding ValorCuotaInicialTratamientoCommand}" CommandParameter="{Binding Text, ElementName=txtCuotaInicial}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>-->
-                </TextBox>
-
-                <TextBlock Margin="0,0,70,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center"><Run Text="{Binding Mensajes.Sesion_Cuotas, Source={StaticResource publicResource}}"/></TextBlock>
-                <TextBlock  x:Name="txtSesiones" Grid.Column="1" Margin="0,2,0,1" Grid.Row="3" TextWrapping="Wrap" Height="25" Width="200" HorizontalAlignment="Left" Text="{Binding NumeroSesionesTratamiento, Mode=TwoWay}"/>
-                <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111"><Run Text="{Binding Mensajes.Valor_Cuota_Sesion, Source={StaticResource publicResource}}"/></TextBlock>
-                <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Total, Source={StaticResource publicResource}}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="64"/>
-
-                <TextBox x:Name="TxtValorCuota" Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorCuotaTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
-
-                <TextBox x:Name="txtbxValorTotal"  Grid.Column="4" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorTotalTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
-
-                <CheckBox x:Name="checkBox" Content="{Binding Mensajes.Cotizacion, Source={StaticResource publicResource}}" Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" IsChecked="{Binding EsCotizacion, Mode=TwoWay}">
-                    <!--<i:Interaction.Triggers>
-                        <i:EventTrigger EventName="Checked">
-                            <ei:ControlStoryboardAction Storyboard="{StaticResource StoryboardComprobantes}"/>
-                        </i:EventTrigger>
-                    </i:Interaction.Triggers>-->
-                </CheckBox>
-
-                <TextBlock TextWrapping="Wrap" Text="{Binding Mensajes.Cuota_Inicial, Source={StaticResource publicResource}}" Margin="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="73"/>
-
-                <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" >
-                    <RadioButton Content="{Binding Mensajes.Si, Source={StaticResource publicResource}}" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="{Binding TieneCuotaInicial, Mode=TwoWay}">
-                        <!--<i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ei:ChangePropertyAction TargetObject="{Binding ElementName=txtCuotaInicial}" PropertyName="IsEnabled" Value="True"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>-->
-                    </RadioButton>
-
-
-                    <RadioButton Content="{Binding Mensajes.No, Source={StaticResource publicResource}}" Margin="5,0,0,0" Grid.Column="1" Grid.Row="1" d:LayoutOverrides="Height" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="True">
-                        <!--i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <ei:ChangePropertyAction TargetObject="{Binding ElementName=txtCuotaInicial}" PropertyName="IsEnabled" Value="False"/>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>-->
-                     </RadioButton>
-
-                </StackPanel>
-
-                <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" Text="{Binding Mensajes.Maximo_Procedimientos_Por_Sesion, Source={StaticResource publicResource}}"/>
-
-
-                <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" Text="{Binding Path=MaximoProcedimientosSesion}"/>
-
-                <TextBlock Grid.Row="2" TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Cuota_Inicial, Source={StaticResource publicResource}}" VerticalAlignment="Center" Margin="0"/>
-
-                <HyperlinkButton x:Name="HyprlnkBttnValores" Command="{Binding CalculoValoresTratamientoCommand, Mode=OneWay}"  Content="{Binding Mensajes.Valores, Source={StaticResource publicResource}}"   HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,0,0,0" Grid.Column="4" IsEnabled="{Binding PuedeModificar}" Visibility="Collapsed" />
-            </Grid>
-            <local:SplitPlanTratamiento/>
-        </StackPanel>
+        
+        <Hub Header="Plan de tratamiento">
+        	<HubSection Header="Procedimientos a realizar" Width="1200" HorizontalAlignment="Stretch">
+        		<DataTemplate>
+                    <local:SplitPlanTratamiento Width="1100"/>
+                </DataTemplate>
+        	</HubSection>
+        	<HubSection Header="Forma de pago" Width="1200" HorizontalAlignment="Stretch">
+        		<DataTemplate>
+        			<local:Forma_Pago HorizontalAlignment="Left" VerticalAlignment="Top" Width="1100"/>
+        		</DataTemplate>
+        	</HubSection>
+        </Hub>        
     </Grid>
 </UserControl>

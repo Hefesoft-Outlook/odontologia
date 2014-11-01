@@ -160,6 +160,9 @@
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Grillas\Plan tratamiento\Forma_Pago.xaml.cs">
+      <DependentUpon>Forma_Pago.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Grillas\Plan tratamiento\SplitPlanTratamiento.xaml.cs">
       <DependentUpon>SplitPlanTratamiento.xaml</DependentUpon>
     </Compile>
@@ -296,6 +299,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Grillas\PacienteTratamientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grillas\Plan tratamiento\Forma_Pago.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

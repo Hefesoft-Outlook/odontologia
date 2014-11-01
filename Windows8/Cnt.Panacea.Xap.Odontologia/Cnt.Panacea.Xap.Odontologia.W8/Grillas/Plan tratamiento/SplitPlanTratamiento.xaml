@@ -148,8 +148,7 @@
 
                         <!--Convenio-->
                         <TextBlock Text="{Binding Mensajes.Convenio, Source={StaticResource publicResource}}"/>
-                        <TextBlock Text="{Binding ConvenioAtencion.Nombre}"/>
-                        <Button x:Name="BttnGuardar" Content="Guardar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BttnGuardar_Click"/>                        
+                        <TextBlock Text="{Binding ConvenioAtencion.Nombre}"/>                        
 
                     </StackPanel>
 
