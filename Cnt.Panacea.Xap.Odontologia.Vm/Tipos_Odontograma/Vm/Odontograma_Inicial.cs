@@ -137,6 +137,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 tratamientoPadre.EstadoTratamiento = EstadoTratamiento.ValoracionInicial;
                 primerInicial = true;
             }
+
             tratamientoPadre.Sede = Variables_Globales.IdSede;
             tratamientoPadre.Paciente = Variables_Globales.IdPaciente;
             tratamientoPadre.EstadoTratamiento = EstadoTratamiento.ValoracionInicial;

@@ -94,11 +94,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
                     consultarPrestador(),
                     CargarOdontologosEHigienistasIps()
                 );
-
+            
             //Por ioc traigo el vm de plan de tratamiento
             var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();            
             Listado = Listado.inicializarListaYLimpiar();
             Listado = planTratamiento.Listado;
+
+            Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);
+            
+           
             
         }
 

@@ -48,6 +48,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         }
 
         #region Propiedades
+
+        public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
+
         /// <summary>
         /// Superficie a la cual se le ingresaran los datos
         /// </summary>

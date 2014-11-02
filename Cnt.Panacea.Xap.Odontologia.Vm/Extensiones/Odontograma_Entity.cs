@@ -12,6 +12,7 @@ public static class OdontogramaEntity_Ext
 
         try
         {
+            
             if (item.Diagnostico != null && item.Diagnostico.Identificador != 0)
             {
                 elemento.Identificador = item.Diagnostico.Identificador;
@@ -25,7 +26,15 @@ public static class OdontogramaEntity_Ext
                 elemento.IndiceCEO = item.Diagnostico.IndiceCEO;
                 elemento.IndiceCOP = item.Diagnostico.IndiceCOP;
                 elemento.IndicePlacaBacteriana = item.Diagnostico.IndicePlacaBacteriana;
-                elemento.Descripcion = item.Diagnostico.Diagnostico.DescripcionCie;
+
+                if (!string.IsNullOrEmpty(item.Diagnostico.Diagnostico.DescripcionCie))
+                {
+                    elemento.Descripcion = item.Diagnostico.Diagnostico.DescripcionCie;
+                }
+                else if (!string.IsNullOrEmpty(item.Diagnostico.Diagnostico.NombreAlterno))
+                {
+                    elemento.Descripcion = item.Diagnostico.Diagnostico.NombreAlterno;
+                }
             }
             else if (item.Procedimiento != null && item.Procedimiento.Identificador != 0)
             {
@@ -41,6 +50,15 @@ public static class OdontogramaEntity_Ext
                 elemento.IndiceCOP = item.Procedimiento.IndiceCOP;
                 elemento.IndicePlacaBacteriana = item.Procedimiento.IndicePlacaBacteriana;
                 elemento.Descripcion = item.Procedimiento.NombreProcedimiento;
+
+                if (!string.IsNullOrEmpty(item.Procedimiento.NombreProcedimiento))
+                {
+                    elemento.Descripcion = item.Procedimiento.NombreProcedimiento;
+                }
+                else if (!string.IsNullOrEmpty(item.Procedimiento.Procedimiento.NombreAlterno))
+                {
+                    elemento.Descripcion = item.Procedimiento.Procedimiento.NombreAlterno;
+                }
             }
         }
         catch(Exception ex)

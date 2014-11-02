@@ -68,13 +68,23 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         public void procedimientoRealizado(ProcedimientosGrillaEvolucion obj)
         {
-            var item = obj.OdontogramaEntity.odontogramaEntityToDiagnosticoProcedimiento_Extend();
-
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Procedimiento_Realizado()
+            if (obj != null)
             {
-                Superficie = item.Superficie,
-                Realizado = obj.PlanTratamientoEntity.EstadoProcedimiento
-            }, obj.Odontograma.codigoSPiezaDental); // Este parametro o token lo enviamos para que solo nos oiga el diente al que vamos a cambiar
+                var item = obj.OdontogramaEntity.odontogramaEntityToDiagnosticoProcedimiento_Extend();
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Procedimiento_Realizado()
+                {
+                    Superficie = item.Superficie,
+                    Realizado = obj.PlanTratamientoEntity.EstadoProcedimiento
+                }, obj.Odontograma.codigoSPiezaDental); // Este parametro o token lo enviamos para que solo nos oiga el diente al que vamos a cambiar
+            }
+            else
+            {
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
+                {
+                    Mensaje = "Por favor seleccione una pieza dental"
+                });
+            }
+
         }
 
         private void numeroSessiones()
@@ -163,6 +173,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
             {
                 ListadoEvolucion = ListadoEvolucion.inicializarListaYLimpiar();
                 ListadoEvolucion = elementosMostrar;
+
+                Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(ListadoEvolucion);
             }
             else
             {
@@ -318,9 +330,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 new Finalizar_Tratamiento().FinalizarTratamiento();
             }
         }
-
-        
-
 
         private async Task SesionesConfiguradasTratamientos()
         {

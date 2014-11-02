@@ -173,7 +173,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             var OdontogramasPacienteEntity = new OdontogramasPacienteEntity();
             OdontogramasPacienteEntity.Tratamiento = Padre.Identificador;
 
-
             TratamientoPadre.Convenio = new ConvenioEntity {Identificador = Variables_Globales.IdConvenio};
 
             TratamientoPadre.Descripcion = DescripcionTratamiento;

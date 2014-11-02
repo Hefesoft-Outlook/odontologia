@@ -135,7 +135,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
                         Odontologia.Diagnostico.Identificador = Convert.ToInt32(itemB.ConfigurarDiagnosticoProcedimOtraEntity.Identificador);
                         Odontologia.Diagnostico.Diagnostico.Identificador = Convert.ToInt32(itemB.ConfigurarDiagnosticoProcedimOtraEntity.Diagnostico);
                         Odontologia.Procedimiento = null;
-                        Odontologia.Diagnostico.Diagnostico.NombreAlterno = itemB.ConfigurarDiagnosticoProcedimOtraEntity.Descripcion;
+                        Odontologia.Diagnostico.Diagnostico.NombreAlterno = itemB.ConfigurarDiagnosticoProcedimOtraEntity.Descripcion;                        
                     }
                     else if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Procedimiento)
                     {

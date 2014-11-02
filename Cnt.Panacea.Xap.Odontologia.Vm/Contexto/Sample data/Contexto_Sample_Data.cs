@@ -44,7 +44,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             // Actualiza el odontograma con el plan de tratamiento despues de
             // Hacer los cambios en evolucion
-            foreach (var item in Variables_Globales.PCL.PlanTratamiento.odontograma)
+            foreach (var item in Variables_Globales.PCL.PlanTratamiento.odontogramaEvolucion)
             {
                 var existe = Planes.Any(a => a.Identificador == item.Identificador);
                 if(existe)
@@ -258,7 +258,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //Validar
             var tcs = new TaskCompletionSource<ObservableCollection<SesionesPlanTratamientoEntity>>();
 
-            var odontogramas = Variables_Globales.PCL.PlanTratamiento.odontograma;
+            var odontogramas = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento;
             var listadoSesiones = new List<SesionesPlanTratamientoEntity>();
 
             //Se convierte de las entidades de hefesoft a las de cnt
@@ -383,7 +383,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             odontogramaInsertar.odontogramaPaciente =odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
 
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
-            odontogramaInsertar.odontograma = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontograma);
+            odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
             odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
 
@@ -392,7 +392,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return id;
         }
 
-        public async Task<ObservableCollection<long>> GuardarPlanTratamiento(TratamientoEntity TratamientoEntity,
+        public async Task<ObservableCollection<long>> GuardarPlanTratamiento(
+            TratamientoEntity TratamientoEntity,
             short idTipoTratamiento,
             OdontogramasPacienteEntity OdontogramasPacienteEntity,
             ObservableCollection<OdontogramaEntity> odontogramaTratamiento,
@@ -405,26 +406,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             short idConvenio
             )
         {
-            //Validar esto
-            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma() 
-            { 
-                nombreTabla = "plantratamientoentity",
-                RowKey = Variables_Globales.IdTratamientoActivo.ToString(),
-                //Para llamarlo igual a odontograma inicial
-                PartitionKey = "hefesoft.entities.odontologia.odontograma.odontograma"
-            };
-            odontogramaInsertar.idIps = idIps;
-            odontogramaInsertar.tratamiento = TratamientoEntity.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
 
-            //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres            
-            odontogramaInsertar.tratamiento.RowKey = Variables_Globales.IdTratamientoActivo.ToString();
+            // 1 forma
+            Variables_Globales.PCL.PlanTratamiento.tratamiento = Convertir_Observables.ConvertirEntidades(TratamientoEntity, new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity());
+            Variables_Globales.PCL.PlanTratamiento.odontogramaPaciente = OdontogramasPacienteEntity.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
 
-
-            odontogramaInsertar.odontogramaPaciente = OdontogramasPacienteEntity.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
-
-            //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
-            odontogramaInsertar.odontograma = odontogramaTratamiento.ConvertirIEnumerable(odontogramaInsertar.odontograma);
-            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
+            // 2 forma
+            Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento = odontogramaTratamiento.ConvertirIEnumerable(Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento);
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await Variables_Globales.PCL.PlanTratamiento.postBlob();
 
             return new ObservableCollection<long>();
         }
@@ -512,23 +501,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             short idIps)
         {
             ObservableCollection<OdontogramaEntity> lstOdontogramas = new ObservableCollection<OdontogramaEntity>();
-            var entidadBuscar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
-            entidadBuscar.nombreTabla = "plantratamientoentity";
-            entidadBuscar.RowKey = Variables_Globales.IdTratamientoActivo.ToString();
-
-            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await CrudBlob.getBlobByPartitionAndRowKey(entidadBuscar, entidadBuscar.RowKey);
 
             //Cuando se crea un odontograma inicial y se navega a el de tratamiento
             //No se encontraran registros por esto es necesario validar este caso
-            if (result != null && result.RowKey != null)
-            {
-                result.tratamiento.RowKey = result.RowKey;
-                Variables_Globales.PCL.PlanTratamiento = result;
-
+            if (Variables_Globales.PCL.PlanTratamiento != null && Variables_Globales.PCL.PlanTratamiento.RowKey != null && Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento.Any())
+            { 
                 Variables_Globales.TratamientosPadre = Convertir_Observables.ConvertirEntidades(Variables_Globales.PCL.PlanTratamiento.tratamiento, new TratamientoEntity());
+                Variables_Globales.IdTratamientoActivo = Variables_Globales.TratamientosPadre.Identificador;
 
-                TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento, new TratamientoEntity());
-                lstOdontogramas = result.odontograma.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
+                TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(Variables_Globales.PCL.PlanTratamiento.tratamiento, new TratamientoEntity());
+                lstOdontogramas = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
             }
             else
             {
@@ -615,17 +597,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
-        {
-            var tcs = new TaskCompletionSource<TratamientoEntity>();
+        {            
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartitionAndRowKey(idTratamiento.ToString());
             result.tratamiento.RowKey = result.RowKey;
-
+            
+            Variables_Globales.PCL.PlanTratamiento = result;
+            
             TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento, new TratamientoEntity());
-            ObservableCollection<OdontogramaEntity> lstOdontogramas = result.odontograma.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
-
-
+            ObservableCollection<OdontogramaEntity> lstOdontogramas = result.odontogramaInicial.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(lstOdontogramas, "Odontograma cargado");
-
             return entidadConvertida;
         }
 

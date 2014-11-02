@@ -109,7 +109,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
                     RaisePropertyChanged("OpcionesTratamientoValor");
                 }
             }
-        }//LFDO Bug 17885
+        }
 
         /// <summary>
         /// Especialidad seleccionada
@@ -313,6 +313,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         }
 
         public OdontogramaEntity OdontogramaEntity { get; set; }
+
+        public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
 
         #endregion
     }

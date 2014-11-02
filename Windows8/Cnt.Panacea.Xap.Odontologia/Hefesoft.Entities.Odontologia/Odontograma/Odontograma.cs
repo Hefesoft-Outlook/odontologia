@@ -19,13 +19,19 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
 
         public OdontogramasPacienteEntity odontogramaPaciente { get; set; }
 
-        public List<OdontogramaEntity> odontograma { get; set; }
+        public List<OdontogramaEntity> odontogramaInicial { get; set; }
+
+        public List<OdontogramaEntity> odontogramaPlanTratamiento { get; set; }
+
+        public List<OdontogramaEntity> odontogramaEvolucion { get; set; }
 
         public List<TratamientoImagenEntity> adjuntosImagen { get; set; }
 
         public Odontograma()
         {
-            odontograma = new List<OdontogramaEntity>();
+            odontogramaInicial = new List<OdontogramaEntity>();
+            odontogramaPlanTratamiento = new List<OdontogramaEntity>();
+            odontogramaEvolucion = new List<OdontogramaEntity>();
             adjuntosImagen = new List<TratamientoImagenEntity>();
         }
     
