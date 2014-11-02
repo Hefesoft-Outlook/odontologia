@@ -84,6 +84,12 @@ namespace App2
             oirCambiosBotones();
         }
 
+        private async void snap()
+        {
+            App2.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
+            await snap.snapShot(LayoutRoot,"imagenprueba.png");
+        }
+
         private void oirOcupado()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Mostrar_Cargando>(this, item => 
@@ -230,6 +236,8 @@ namespace App2
             Variables_Globales.IdTratamientoActivo = 0;
             odontogramaEvolucionBtn.IsEnabled = false;
             odontogramaPlanTratamientoBtn.IsEnabled = false;
+
+            snap();
         }
 
         private void planTratamientoUI()
