@@ -38,16 +38,15 @@
                 <TextBlock Text="# piezas dentales"></TextBlock>
                 <TextBox InputScope="Number" Text="{Binding Numero_Piezas_Dentales_Actual, Mode=TwoWay}"></TextBox>
             </StackPanel>
-            
         </StackPanel>
-		<TextBox x:Name="textBox" TextWrapping="Wrap" Margin="0,0,0,5">
+				
+		<SearchBox  x:Name="textBox" Margin="0,0,0,5">
 			<Interactivity:Interaction.Behaviors>
-				<Core:EventTriggerBehavior x:Name="Buscador" EventName="KeyUp">
-					<Core:InvokeCommandAction Command="{Binding Buscador}" CommandParameter="{Binding Text, ElementName=textBox}"/>
+				<Core:EventTriggerBehavior x:Name="Buscador" EventName="QueryChanged">
+					<Core:InvokeCommandAction Command="{Binding Buscador}" CommandParameter="{Binding QueryText, ElementName=textBox}"/>
 				</Core:EventTriggerBehavior>
 			</Interactivity:Interaction.Behaviors>
-		</TextBox>
-    
+		</SearchBox>
     
     
 	</Grid>
