@@ -241,8 +241,19 @@
       <DependentUpon>Tipos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\Colores.cs" />
+    <Compile Include="Util\Helpers\Layout.cs" />
     <Compile Include="Util\Inicializar_Servicio.cs" />
     <Compile Include="Util\Inspector.cs" />
+    <Compile Include="Util\Messenger\Capturar_Imagen.cs" />
+    <Compile Include="Util\Reportes\Events.cs" />
+    <Compile Include="Util\Reportes\Reportes_Template.Build.cs" />
+    <Compile Include="Util\Reportes\Reportes_Template.cs" />
+    <Compile Include="Util\Reportes\Templates\Inicial.xaml.cs">
+      <DependentUpon>Inicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util\Reportes\Templates\Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -396,6 +407,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Tipos Odontograma\Tipos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Util\Reportes\Templates\Inicial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Util\Reportes\Templates\Plan_Tratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -26,7 +26,6 @@
             <ColumnDefinition x:Name="primaryColumn" Width="420"/>
             <ColumnDefinition x:Name="secondaryColumn" Width="*"/>
         </Grid.ColumnDefinitions>
-
         
         <!-- Vertical scrolling item list -->
         <ListView
