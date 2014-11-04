@@ -63,6 +63,12 @@ namespace App2.Assets.PopUp
                 var vCerrada = MostrarModal(wizard, "Evolucion");
                 vCerrada = cerrar;
             }
+            else if (obj.Nombre == "Tratamientos")
+            {
+                elementoOtraVentana = obj;
+                var reporte = new App2.Util.Reportes.Templates.Plan_Tratamiento();
+                MostrarModal(reporte, "Reporte plan de tratamiento");                
+            }
         }
 
         private void cerrar(object obj)

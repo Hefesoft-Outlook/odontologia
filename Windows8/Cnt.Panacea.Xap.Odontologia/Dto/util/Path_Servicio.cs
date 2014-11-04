@@ -12,5 +12,11 @@ public static class Path_Servicio
         //return "http://localhost:3481/api/";
         return "http://hefesoftdynamicbackend.azurewebsites.net/api/";
     }
+
+    public static string obtenerUrlServicioPdf()
+    {
+        //return "http://localhost:11274/api/";
+        return "http://hefesoftpdfendpoint.azurewebsites.net//api/";
+    }
 }
 

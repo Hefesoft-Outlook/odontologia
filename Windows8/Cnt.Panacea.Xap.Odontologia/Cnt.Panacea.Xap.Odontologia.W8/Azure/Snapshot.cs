@@ -25,7 +25,7 @@ namespace App2.Hub_Partial
 {
     class Snapshot
     {
-        public async Task snapShot(FrameworkElement uielement, string nombreImagen)
+        public async Task<string> snapShot(FrameworkElement uielement, string nombreImagen)
         {
             var bitmap = new RenderTargetBitmap();
             await bitmap.RenderAsync(uielement);
@@ -47,7 +47,15 @@ namespace App2.Hub_Partial
             await reader.LoadAsync((uint)stream.Size);
             reader.ReadBytes(bytes);
 
-            await Hefesoft.Azure.Helpers.Azure_Helper.PutBlob_async("imagenes", nombreImagen, bytes);
+            var result = await Hefesoft.Azure.Helpers.Azure_Helper.PutBlob_async("imagenes", nombreImagen, bytes);
+            return result;
+        }
+
+        public async Task<RenderTargetBitmap> snapShot(FrameworkElement uielement)
+        {
+            var bitmap = new RenderTargetBitmap();
+            await bitmap.RenderAsync(uielement);
+            return bitmap;
         }
 
         public async Task<RenderTargetBitmap> SaveScreenshotAsync(FrameworkElement uielement)

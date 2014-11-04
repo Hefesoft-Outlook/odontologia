@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Azure\AzureStorageConstants.cs" />
     <Compile Include="Azure\Azure_Helper.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

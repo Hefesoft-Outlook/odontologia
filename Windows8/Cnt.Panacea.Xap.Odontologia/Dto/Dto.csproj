@@ -47,8 +47,12 @@
     <Compile Include="util\CrudBlob.cs" />
     <Compile Include="util\Path_Servicio.cs" />
     <Compile Include="util\crudTable.cs" />
+    <Compile Include="util\Pdf\Pdf.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Hefesoft.Pdf.Entities">
+      <HintPath>..\..\..\..\..\..\finaleshefesoft\dlls\release\Hefesoft.Pdf.Entities.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>

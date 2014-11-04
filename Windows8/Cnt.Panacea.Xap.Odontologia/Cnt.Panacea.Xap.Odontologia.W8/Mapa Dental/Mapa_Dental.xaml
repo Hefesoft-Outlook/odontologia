@@ -30,7 +30,7 @@
 		<Binding Path="Mapa_dental" Source="{StaticResource Locator}"/>
 	</UserControl.DataContext>
     
-	<Grid>
+	<Grid Name="LayoutRoot">
 
 		<StackPanel Orientation="Vertical" Grid.Row="1">
 			<Grid>

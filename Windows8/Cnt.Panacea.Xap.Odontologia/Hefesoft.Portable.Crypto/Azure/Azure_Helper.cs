@@ -49,16 +49,17 @@ namespace Hefesoft.Azure.Helpers
             HttpContent requestContent = new ByteArrayContent(blobContent);
             HttpResponseMessage response = await client.PutAsync(uri, requestContent);
             
-            if (response.IsSuccessStatusCode == true)
-            {
-                foreach (var aHeader in response.Headers)
-                {
-                    if (aHeader.Key == "ETag") return aHeader.Value.ElementAt(0);
-                }
-            }
-            
-            return null;
+            //if (response.IsSuccessStatusCode == true)
+            //{
+            //    foreach (var aHeader in response.Headers)
+            //    {
+            //        if (aHeader.Key == "ETag") return aHeader.Value.ElementAt(0);
+            //    }
+            //}
 
+
+            var result = uri;
+            return result;
         }
 
         private static String CreateAuthorizationHeader(String canonicalizedString)

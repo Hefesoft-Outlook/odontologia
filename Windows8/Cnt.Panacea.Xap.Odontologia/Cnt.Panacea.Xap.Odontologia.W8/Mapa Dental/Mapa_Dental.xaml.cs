@@ -13,19 +13,40 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
 namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
 {
-    public sealed partial class Mapa_Dental : UserControl
+    public sealed partial class Mapa_Dental : UserControl, IDisposable
     {
         public Mapa_Dental()
         {
             this.InitializeComponent();
             oirOdontogramaSeleccionado();
+
+            oirCapturarImagen();
         }
+
+        //Captura la imagen del contenedor para los reportes
+        private void oirCapturarImagen()
+        {            
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<App2.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental", elemento => 
+            {
+                sacarImagen(elemento);                        
+            });
+        }
+
+        private async void sacarImagen(App2.Util.Messenger.Capturar_Imagen item)
+        {            
+            var snap = new App2.Hub_Partial.Snapshot();
+            RenderTargetBitmap result = await snap.snapShot(this.LayoutRoot);
+            item.Imagen(result);
+        }
+
+        
 
         private void oirOdontogramaSeleccionado()
         {
@@ -120,6 +141,11 @@ namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
             var item = st.DataContext as Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma;
             var Vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
             Vm.clickDerechoContenedorPiezaDental(item);
+        }
+
+        public void Dispose()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<App2.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental");
         }
     }
 }
