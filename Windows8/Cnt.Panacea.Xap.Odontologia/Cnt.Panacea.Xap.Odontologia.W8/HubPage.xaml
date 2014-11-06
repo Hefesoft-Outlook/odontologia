@@ -126,6 +126,7 @@
             <AppBarToggleButton Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion" Click="evolucion_Click"/>            
             <AppBarSeparator/>
             <AppBarToggleButton Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed" Click="finalizaTratamientoBtn_Click"></AppBarToggleButton>
+            <AppBarToggleButton Name="deshacer" Icon="Undo" Label="Deshacer" Click="deshacer_Click"></AppBarToggleButton>
             <AppBarSeparator/>
             <AppBarToggleButton Icon="Save"  Label="Guardar" Click="BttnGuardar_Click" />
             <AppBarToggleButton Icon="Add" Label="Nuevo" Click="BttnNuevo_Click"/>

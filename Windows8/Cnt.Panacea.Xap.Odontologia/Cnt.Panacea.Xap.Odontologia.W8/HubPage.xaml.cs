@@ -270,5 +270,25 @@ namespace App2
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Mostrar_Cargando>(this);
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this);
         }
+
+        private void deshacer_Click(object sender, RoutedEventArgs e)
+        {
+            AppBarToggleButton appBtn = sender as AppBarToggleButton;
+
+            if(desHacerBool)
+            {
+                desHacerBool = false;
+                appBtn.IsChecked = true;
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Estado_DesHacer() { Estado = true });
+            }
+            else
+            {
+                desHacerBool = true;
+                appBtn.IsChecked = false;
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Estado_DesHacer() { Estado = false });
+            }
+        }
+
+        bool desHacerBool;
     }
 }

@@ -146,12 +146,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             var tcs = new TaskCompletionSource<ObservableCollection<TipoTratamientoEntity>>();
 
             List<Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity> result =
-                await
-                    new Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity().getBlobByPartition(
-                        "tipotratamientoentity", "cnt.panacea.entities.odontologia.tipotratamientoentity");
-            ObservableCollection<TipoTratamientoEntity> lstTiposTratamiento =
-                result.ToObservableCollection().ConvertirObservables(new ObservableCollection<TipoTratamientoEntity>());
-
+                await  new Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity().getBlobByPartition("tipotratamientoentity", "cnt.panacea.entities.odontologia.tipotratamientoentity");
+            ObservableCollection<TipoTratamientoEntity> lstTiposTratamiento = result.ToObservableCollection().ConvertirObservables(new ObservableCollection<TipoTratamientoEntity>());
             return lstTiposTratamiento;
         }
 
@@ -203,9 +199,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<NivelSeveridadDXEntity>> ConsultarNivelSeveridad()
         {
             var result = new ObservableCollection<NivelSeveridadDXEntity>();
-            List<Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity> blob =
-                await
-                    new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity().getBlobByPartition(
+            List<Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity> blob = await new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity().getBlobByPartition(
                         "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
             blob.ToObservableCollection().ConvertirObservables(result);
             return result;
