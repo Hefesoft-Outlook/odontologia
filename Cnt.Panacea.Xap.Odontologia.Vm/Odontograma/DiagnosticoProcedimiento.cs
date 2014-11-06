@@ -272,10 +272,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
         #region Odontograma Plan tratamiento
         internal DiagnosticoProcedimiento_Validaciones agregarOdontogramaPlanTratamiento(ConfigurarDiagnosticoProcedimOtraEntity item, Cambiar_Tipo_Odontograma Tipo_Odontograma_Actual, string SuperficieSeleccionada, int CodigoPiezaDental)
         {
-            if (SuperficieSeleccionada == "Superficie1" || SuperficieSeleccionada == "Pieza_Completa")
+            if (SuperficieSeleccionada == "Superficie1")
             {
                 //Valida que la superficie ya tengo un plan de tratamiento para mostrar el menu adicionaro sobreescribir superficie
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie1.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -287,9 +287,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie2" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie2")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie2.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -301,9 +301,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie3" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie3")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie3.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -315,9 +315,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie4" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie4")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie4.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -329,9 +329,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie5" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie5")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie5.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -343,9 +343,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie6" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie6")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie6.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
@@ -357,9 +357,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                     return DiagnosticoProcedimiento_Validaciones.Ya_posee_elementos;
                 }
             }
-            else if (SuperficieSeleccionada == "Superficie7" || SuperficieSeleccionada == "Pieza_Completa")
+            else if (SuperficieSeleccionada == "Superficie7")
             {
-                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && a.Superficie == SuperficieSeleccionada))
+                if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
                     Superficie7.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });

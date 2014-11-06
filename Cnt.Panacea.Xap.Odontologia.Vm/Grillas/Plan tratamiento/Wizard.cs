@@ -95,15 +95,21 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
                     CargarOdontologosEHigienistasIps()
                 );
             
+            //Pinta con colores la pieza dental del procedimiento para que sea mas visual
+            pintarProcedimientosColoresPiezadental();
+        }
+
+        public void pintarProcedimientosColoresPiezadental()
+        {
             //Por ioc traigo el vm de plan de tratamiento
             var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();            
-            Listado = Listado.inicializarListaYLimpiar();
             Listado = planTratamiento.Listado;
 
-            Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);
-            
-           
-            
+            if (Listado.Any())
+            {
+                Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);
+                RaisePropertyChanged("Listado");
+            }
         }
 
         private void opcionTratamiento()

@@ -46,7 +46,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
 
             // Traiga todos menos los de la boca
             foreach (var item in listado.Where(a=>a.Codigo_Pieza_Dental !=99))
-            {
+            {                
                 // Obtiene el el elemento dentro de los list que estan pintados dentro del ui
                 var elementoEncontrado = buscadorElementosOdontograma.obtenerElementoEnElOdontograma(vm, item);
                 if (elementoEncontrado != null)

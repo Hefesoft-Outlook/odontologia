@@ -60,6 +60,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             if (obj.Tipo_Odontograma == Tipo_Odontograma.Evolucion)
             {
+                Variables_Globales.Tipo_Odontograma_Activo = Tipo_Odontograma.Evolucion;
                 await listarOdontogramaEvolucion();
             }
         }

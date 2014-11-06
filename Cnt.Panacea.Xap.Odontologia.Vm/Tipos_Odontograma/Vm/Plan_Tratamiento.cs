@@ -79,6 +79,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         {
             if (item.Tipo_Odontograma == Tipo_Odontograma.Plan_Tratamiento)
             {
+                Variables_Globales.Tipo_Odontograma_Activo = Tipo_Odontograma.Plan_Tratamiento;
+
                 //Se limpian los elementos que puedan estar inicializados
                 TratamientoPadre = null;
                 TratamientoPadre = new TratamientoEntity();
@@ -174,7 +176,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             OdontogramasPacienteEntity.Tratamiento = Padre.Identificador;
 
             TratamientoPadre.Convenio = new ConvenioEntity {Identificador = Variables_Globales.IdConvenio};
-
             TratamientoPadre.Descripcion = DescripcionTratamiento;
 
             if (JustificacionModificacionTratamiento != String.Empty)
@@ -196,8 +197,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
             var Paciente = new PacienteEntity {Identificador = Variables_Globales.IdPaciente};
             ObservableCollection<long> result =
-                await
-                    Contexto_Odontologia.obtenerContexto()
+                await    Contexto_Odontologia.obtenerContexto()
                         .GuardarPlanTratamiento(TratamientoPadre, 1, OdontogramasPacienteEntity,
                             lstOdontogramaEntity.ToObservableCollection(), EsCotizacion, Paciente,
                             comprobanteSeleccionado, Variables_Globales.IdIps, Variables_Globales.UsuarioActual,

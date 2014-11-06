@@ -29,7 +29,8 @@ namespace App2.Grillas.Plan_tratamiento
         public SplitPlanTratamiento()
         {
             this.InitializeComponent();
-            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();            
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
+            vm.pintarProcedimientosColoresPiezadental();
         }
     }
 }

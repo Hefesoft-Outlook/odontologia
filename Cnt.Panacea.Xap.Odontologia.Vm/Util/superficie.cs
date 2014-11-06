@@ -1,4 +1,5 @@
 ﻿using Cnt.Panacea.Entities.Odontologia;
+using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using Cnt.Panacea.Xap.Odontologia.Vm.Extensiones.Clases;
 using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
 using System;
@@ -21,6 +22,7 @@ public static class superficie
         elementosCrear.Nivel_Severidad = elemento.NivelSeveridad;
         elementosCrear.ConfigurarDiagnosticoProcedimOtraEntity = elemento.OdontogramaEntityToConfigurarDiagnosticoProcedimOtraEntity();
         elementosCrear.Codigo_Pieza_Dental = elemento.Diente.Identificador;
+        elementosCrear.Tipo_Odontograma_Actual = Variables_Globales.Tipo_Odontograma_Activo;
         return elementosCrear;
     }
 
