@@ -54,7 +54,6 @@ public static class crudTable
         return valorRetorno;
     }
 
-
     public static async Task<List<T>> getTableByPartition<T>(this T entidad) where T : IEntidadBase
     {
         List<T> valorRetorno = null;

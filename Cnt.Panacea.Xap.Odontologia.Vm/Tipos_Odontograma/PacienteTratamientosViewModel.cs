@@ -22,7 +22,7 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace Cnt.Panacea.Xap.ViewModels
 {
-    public class PacienteTratamientosViewModel : ViewModelBase
+    public class PacienteTratamientosViewModel : ViewModelBase, IDisposable
     {
 
         #region Variables
@@ -45,12 +45,29 @@ namespace Cnt.Panacea.Xap.ViewModels
                 seleccionarTratamientoCommand = new RelayCommand<TratamientoEntity>(seleccionarTratamiento);
                 odontogramaSinTratamientoCommand = new RelayCommand<OdontogramasPacienteEntity>(odontogramaSinTratamiento);
                 cargarDatosPaciente();
+                oirNuevoElementoAgregado();
             }
             catch (Exception ex)
             {
                 //Mostrar mensaje ex
             }
 
+        }
+
+        /// <summary>
+        /// Sucede cuando se agrega un nuevo odontograma y deseamos que se muestre en el listado inicial
+        /// </summary>
+        private void oirNuevoElementoAgregado()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<TratamientoEntity>(this, "Agregar Listado inicial",item => 
+            {
+                if (tratamientosPaciente == null)
+                {
+                    tratamientosPaciente = new ObservableCollection<TratamientoEntity>();
+                }
+
+                tratamientosPaciente.Add(item);
+            });
         }
 
         public async void odontogramaSinTratamiento(OdontogramasPacienteEntity odonto)
@@ -274,5 +291,10 @@ namespace Cnt.Panacea.Xap.ViewModels
 
         public RelayCommand<OdontogramasPacienteEntity> odontogramaSinTratamientoCommand { get; set; }
         #endregion
+
+        public void Dispose()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<TratamientoEntity>(this, "Agregar Listado inicial");
+        }
     }
 }
