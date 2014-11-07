@@ -196,7 +196,10 @@ namespace Cnt.Panacea.Xap.ViewModels
                 Variables_Globales.TratamientosPaciente = new System.Collections.Generic.List<long>();
                 foreach (TratamientoEntity item in tratamientosPaciente)
                 {
-                    if (item.EstadoTratamiento != EstadoTratamiento.Abandono && item.EstadoTratamiento != EstadoTratamiento.Terminacion)
+                    if (item.EstadoTratamiento != EstadoTratamiento.Abandono 
+                        && item.EstadoTratamiento != EstadoTratamiento.Terminacion
+                        && item.TipoTratamiento != null
+                        && item.TipoTratamiento.Identificador != 0 )
                     {
                         Variables_Globales.TratamientosPaciente.Add(item.TipoTratamiento.Identificador);
                     }

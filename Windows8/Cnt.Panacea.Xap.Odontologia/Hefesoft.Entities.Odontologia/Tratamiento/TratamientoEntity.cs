@@ -13,10 +13,9 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
 
-        public long? AtencionInicial { get; set; }
+        public long? AtencionInicial { get; set; }        
         
-        //Validar Para el automapper que se necesita
-        //public ConvenioEntity Convenio { get; set; }
+        public ConvenioEntity Convenio { get; set; }
 
         public bool Cotizacion { get; set; }
         public decimal? CuotaInicial { get; set; }
@@ -35,10 +34,8 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public string JustificacionCambio { get; set; }
         public string JustificacionCancelacion { get; set; }
         public string ObservacionesTerminacion { get; set; }
-        public int Paciente { get; set; }
-
-        //Validar Para el automapper que se necesita
-        //public TerceroEntity Prestador { get; set; }
+        public int Paciente { get; set; }        
+        public TerceroEntity Prestador { get; set; }
         public decimal SaldoCuotaInicial { get; set; }
         public short? Sede { get; set; }
         public short? Sesiones { get; set; }
@@ -46,8 +43,8 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public int? SesionesRealizadas { get; set; }
         public short? TipoPago { get; set; }
 
-        //
-        //public TipoTratamientoEntity TipoTratamiento { get; set; }
+        
+        public TipoTratamientoEntity TipoTratamiento { get; set; }
         public decimal? ValorCuota { get; set; }
         public decimal? ValorSesion { get; set; }
 

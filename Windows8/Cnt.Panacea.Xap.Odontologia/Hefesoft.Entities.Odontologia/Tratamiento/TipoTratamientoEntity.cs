@@ -8,7 +8,6 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
 {
     public class TipoTratamientoEntity : IEntidadBase
     {
-
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }

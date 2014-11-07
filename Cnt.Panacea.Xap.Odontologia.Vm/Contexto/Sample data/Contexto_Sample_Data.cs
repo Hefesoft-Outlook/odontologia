@@ -98,7 +98,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps,
             int idPaciente)
         {
-            var tcs = new TaskCompletionSource<ObservableCollection<TratamientoEntity>>();
+            
             var lst = new ObservableCollection<TratamientoEntity>();
 
             List<Hefesoft.Entities.Odontologia.Odontograma.Odontograma> blob =
@@ -107,8 +107,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             // Saca una propiedad de un listado y devuelve una propiedad de la misma
             // Ademas llena el rowkey con el identificador
             List<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity> lstTratamientos =
-                blob
-                    .obtenerListadoDadoPropiedad
+                blob.obtenerListadoDadoPropiedad
                     <Hefesoft.Entities.Odontologia.Odontograma.Odontograma,
                         Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity>("tratamiento");
             lstTratamientos.ToObservableCollection().ConvertirObservables(lst);
@@ -143,8 +142,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         public async Task<ObservableCollection<TipoTratamientoEntity>> ConsultarTiposTratamiento(short IdIps)
         {
-            var tcs = new TaskCompletionSource<ObservableCollection<TipoTratamientoEntity>>();
-
             List<Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity> result =
                 await  new Hefesoft.Entities.Odontologia.Tratamiento.TipoTratamientoEntity().getBlobByPartition("tipotratamientoentity", "cnt.panacea.entities.odontologia.tipotratamientoentity");
             ObservableCollection<TipoTratamientoEntity> lstTiposTratamiento = result.ToObservableCollection().ConvertirObservables(new ObservableCollection<TipoTratamientoEntity>());

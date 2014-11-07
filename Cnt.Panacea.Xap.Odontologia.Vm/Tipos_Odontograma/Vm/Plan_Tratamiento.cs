@@ -86,10 +86,18 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 TratamientoPadre = new TratamientoEntity();
 
                 TratamientoPadre = Variables_Globales.TratamientosPadre;
-                inicializarElementos();
-                cargarNumeroSessiones();
-                pedirDiagnosticosProcedimientosOdontogramaInicial();
-                ValidarModoLectura();
+
+                try
+                {
+                    inicializarElementos();
+                    cargarNumeroSessiones();
+                    pedirDiagnosticosProcedimientosOdontogramaInicial();
+                    ValidarModoLectura();
+                }
+                catch
+                {
+
+                }
             }
         }
 
@@ -507,11 +515,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             Busy.UserControlCargando();
             TratamientoPadre = Variables_Globales.TratamientosPadre;
 
-            if (TiposTratamiento != null && TratamientoPadre != null)
+            if (TiposTratamiento != null && TratamientoPadre != null && TratamientoPadre.TipoTratamiento != null)
             {
-                TiposTratamientoSeleccionado =
-                    TiposTratamiento.FirstOrDefault(
-                        p => p.Identificador == TratamientoPadre.TipoTratamiento.Identificador);
+                TiposTratamientoSeleccionado =  TiposTratamiento.FirstOrDefault(p => p.Identificador == TratamientoPadre.TipoTratamiento.Identificador);
             }
             if (TratamientoPadre.TipoTratamiento != null && TratamientoPadre.TipoTratamiento.Identificador != 0)
             {
