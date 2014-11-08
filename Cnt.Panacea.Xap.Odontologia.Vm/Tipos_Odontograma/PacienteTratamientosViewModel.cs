@@ -67,6 +67,7 @@ namespace Cnt.Panacea.Xap.ViewModels
                 }
 
                 tratamientosPaciente.Add(item);
+                RaisePropertyChanged("tratamientosPaciente");
             });
         }
 

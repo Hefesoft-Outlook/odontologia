@@ -393,6 +393,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //Despues de insertado deberia llegar el consecutivo
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
             odontogramaInsertar.tratamiento.Identificador = long.Parse(odontogramaInsertar.RowKey);
+           
 
             //Cuando se guarda un odontograma inicial agregarlo a listado inicial sin hacer otra llamada al servicio
             var elementoAgregarListado = Convertir_Observables.ConvertirEntidades(odontogramaInsertar.tratamiento, new TratamientoEntity());

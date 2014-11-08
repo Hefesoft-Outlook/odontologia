@@ -16,7 +16,7 @@ public static class Path_Servicio
     public static string obtenerUrlServicioPdf()
     {
         //return "http://localhost:11274/api/";
-        return "http://hefesoftpdfendpoint.azurewebsites.net//api/";
+        return "http://hefesoftpdfendpoint.azurewebsites.net/api/";
     }
 }
 
