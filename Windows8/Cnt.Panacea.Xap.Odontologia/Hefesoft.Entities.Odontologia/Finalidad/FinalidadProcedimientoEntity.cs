@@ -19,5 +19,7 @@ namespace Hefesoft.Entities.Odontologia.Finalidad
         public bool Estado { get; set; }
         
         public short Identificador { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

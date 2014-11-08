@@ -54,5 +54,7 @@ namespace Hefesoft.Entities.Odontologia.Comprobantes
         public string TipoEntidadBitacora { get; set; }
         
         public ComprobantesDependenciaCollection TiposComprobanteDependencia { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

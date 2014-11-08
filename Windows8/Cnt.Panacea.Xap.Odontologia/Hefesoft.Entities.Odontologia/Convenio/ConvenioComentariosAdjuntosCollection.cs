@@ -11,7 +11,8 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         public string PartitionKey { get; set; }
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
-
         public IEnumerable<ConvenioComentarioAdjuntoEntity> ConvenioComentarioAdjuntoEntity { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

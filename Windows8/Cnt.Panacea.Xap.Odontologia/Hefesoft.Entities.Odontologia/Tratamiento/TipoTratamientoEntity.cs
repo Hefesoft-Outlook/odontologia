@@ -19,5 +19,7 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public short Ips { get; set; }
         
         public string Nombre { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

@@ -68,5 +68,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         public TiposPersonaSinAmbos TipoPersona { get; set; }
 
         public TiposProfesionalSalud TipoProfesional { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

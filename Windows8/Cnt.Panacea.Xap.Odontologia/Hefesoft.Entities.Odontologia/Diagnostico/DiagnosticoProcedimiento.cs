@@ -53,6 +53,8 @@ namespace Hefesoft.Entities.Odontologia.Diagnostico
         public TipoPanel TipoPanel { get; set; }
 
         public int Identificador { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 
 }

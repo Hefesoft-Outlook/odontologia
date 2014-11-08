@@ -30,5 +30,7 @@ namespace Hefesoft.Entities.Odontologia.Especialidades
         public TiposProcedimiento TipoProcedimiento { get; set; }
         
         public string UsuarioAutoriza { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

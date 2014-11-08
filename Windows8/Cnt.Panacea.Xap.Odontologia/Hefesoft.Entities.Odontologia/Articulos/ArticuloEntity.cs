@@ -100,5 +100,7 @@ namespace Hefesoft.Entities.Odontologia.Articulos
 
         public byte? UnidadVigenciaPre { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
     }
 }

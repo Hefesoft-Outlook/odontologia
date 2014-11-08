@@ -48,5 +48,7 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public decimal? ValorCuota { get; set; }
         public decimal? ValorSesion { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
     }
 }

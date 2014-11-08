@@ -454,7 +454,7 @@
       <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Pdf.Entities">
-      <HintPath>..\..\..\..\..\..\finaleshefesoft\dlls\release\Hefesoft.Pdf.Entities.dll</HintPath>
+      <HintPath>C:\FinalesHefesoft\Dlls\Release\Hefesoft.Pdf.Entities.dll</HintPath>
     </Reference>
     <Reference Include="MetroEventToCommand">
       <HintPath>..\packages\MetroEventToCommand.2.1\lib\winrt45\MetroEventToCommand.dll</HintPath>

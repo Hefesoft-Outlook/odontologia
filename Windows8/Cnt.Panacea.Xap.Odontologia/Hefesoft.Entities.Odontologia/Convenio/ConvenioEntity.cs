@@ -137,10 +137,11 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         
         public TiposValorConvenio TipoValor { get; set; }
         
-        public ConvenioTopesPacientesCollection TopesPacientes { get; set; }
-        
+        public ConvenioTopesPacientesCollection TopesPacientes { get; set; }      
         
         public UnidadesPeriodicidad UnidadMedidaCargue { get; set; }
+
+        public bool generarIdentificador { get; set; }
         
     }
 }

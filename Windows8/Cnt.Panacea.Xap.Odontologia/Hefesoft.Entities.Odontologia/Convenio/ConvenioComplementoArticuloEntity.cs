@@ -24,5 +24,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         
         public decimal ValorTope { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
     }
 }

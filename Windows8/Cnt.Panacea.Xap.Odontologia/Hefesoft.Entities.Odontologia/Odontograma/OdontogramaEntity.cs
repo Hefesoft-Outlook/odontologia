@@ -43,5 +43,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
 
         public long Tratamiento { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
     }
 }

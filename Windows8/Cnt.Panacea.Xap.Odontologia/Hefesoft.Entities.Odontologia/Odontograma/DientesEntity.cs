@@ -16,5 +16,7 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
         public int Cuandrante { get; set; }
         public string Descripcion { get; set; }
         public  int Identificador { get; set; }
+
+        public bool generarIdentificador { get; set; }
     }
 }

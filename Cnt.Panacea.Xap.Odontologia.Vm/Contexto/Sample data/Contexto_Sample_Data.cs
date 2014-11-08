@@ -372,22 +372,27 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
             odontogramaInsertar.idIps = idIps;
-            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
-
-            //En la implementacion de hefesoft esto deberia cambiar para evitar conflictos como que se repitan caracteres
-            odontogramaInsertar.RowKey = new Random().Next(1, 1000000000).ToString();
-            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
-            odontogramaInsertar.tratamiento.Identificador = long.Parse(odontogramaInsertar.RowKey);
+            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();            
+            
 
             odontogramaInsertar.odontogramaPaciente =odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
 
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
             odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
             odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
+            odontogramaInsertar.generarIdentificador = true;
+
+
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
+            odontogramaInsertar = result;
             
             //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
+            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
             var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
+
+            //Despues de insertado deberia llegar el consecutivo
+            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
+            odontogramaInsertar.tratamiento.Identificador = long.Parse(odontogramaInsertar.RowKey);
 
             //Cuando se guarda un odontograma inicial agregarlo a listado inicial sin hacer otra llamada al servicio
             var elementoAgregarListado = Convertir_Observables.ConvertirEntidades(odontogramaInsertar.tratamiento, new TratamientoEntity());

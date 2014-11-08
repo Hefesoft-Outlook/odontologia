@@ -14,5 +14,8 @@ namespace Hefesoft.Entities.Odontologia.Util
         public object Item { get; set; }
 
         public int Identificador { get; set; }
+
+        public bool generarIdentificador { get; set; }
+        
     }
 }

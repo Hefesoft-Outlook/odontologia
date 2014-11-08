@@ -34,5 +34,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         
         public string UsuarioComentario { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
     }
 }

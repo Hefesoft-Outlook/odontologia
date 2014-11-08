@@ -27,6 +27,8 @@ namespace Hefesoft.Entities.Odontologia.Odontograma
 
         public List<TratamientoImagenEntity> adjuntosImagen { get; set; }
 
+        public bool generarIdentificador { get; set; }
+
         public Odontograma()
         {
             odontogramaInicial = new List<OdontogramaEntity>();
