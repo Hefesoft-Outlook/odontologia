@@ -388,6 +388,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             
             //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
+            odontogramaInsertar.tratamiento.Identificador = Convert.ToInt64(odontogramaInsertar.RowKey);
             var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
 
             //Despues de insertado deberia llegar el consecutivo
