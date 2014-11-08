@@ -177,6 +177,7 @@
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hub\Hub.Partial.BarClick.cs" />
     <Compile Include="Mapa Dental\Mapa_Dental.xaml.cs">
       <DependentUpon>Mapa_Dental.xaml</DependentUpon>
     </Compile>
