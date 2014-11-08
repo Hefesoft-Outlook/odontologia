@@ -477,8 +477,8 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
-    <SDKReference Include="Telerik UI for Windows 8.1 XAML, Version=2014.2.617">
-      <Name>Telerik UI for Windows 8.1 XAML</Name>
+    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1105">
+      <Name>RadControls for Windows 8</Name>
     </SDKReference>
   </ItemGroup>
   <ItemGroup>

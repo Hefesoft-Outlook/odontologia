@@ -211,6 +211,9 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Tasks">
       <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
     </Reference>
