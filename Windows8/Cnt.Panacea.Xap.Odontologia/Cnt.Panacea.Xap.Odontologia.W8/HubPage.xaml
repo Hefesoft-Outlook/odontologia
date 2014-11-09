@@ -124,12 +124,18 @@
             <AppBarToggleButton Name="inicial"  Icon="More" Label="Inicial" Click="inicial_Click"/>
             <AppBarToggleButton Name="odontogramaPlanTratamientoBtn" Icon="More" Label="Plan tratamiento" Click="planTratamiento_Click"/>
             <AppBarToggleButton Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion" Click="evolucion_Click"/>            
+            
             <AppBarSeparator/>
-            <AppBarToggleButton Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed" Click="finalizaTratamientoBtn_Click"></AppBarToggleButton>
-            <AppBarToggleButton Name="adjuntarImagen" Icon="Attach"  Label="Adjuntar imagen" Click="adjuntar_Click"></AppBarToggleButton>
-            <AppBarToggleButton Name="foto" Icon="WebCam"  Label="Foto" Click="foto_Click"></AppBarToggleButton>
-            <AppBarToggleButton Name="deshacer" Icon="Undo" Label="Deshacer" Click="deshacer_Click"></AppBarToggleButton>
+                <AppBarToggleButton Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed" Click="finalizaTratamientoBtn_Click"></AppBarToggleButton>
+                <AppBarToggleButton Name="adjuntarImagen" Icon="Attach"  Label="Adjuntar imagen" Click="adjuntar_Click"></AppBarToggleButton>
+                <AppBarToggleButton Name="foto" Icon="WebCam"  Label="Foto" Click="foto_Click"></AppBarToggleButton>
+                <AppBarToggleButton Name="deshacer" Icon="Undo" Label="Deshacer" Click="deshacer_Click"></AppBarToggleButton>
             <AppBarSeparator/>
+
+            <AppBarSeparator/>
+                <AppBarToggleButton Name="verImagenes" Icon="Pictures" Label="Ver imagenes" Click="verImagenes_Click"></AppBarToggleButton>
+            <AppBarSeparator/>
+
             <AppBarToggleButton Icon="Save"  Label="Guardar" Click="BttnGuardar_Click" />
             <AppBarToggleButton Icon="Add" Label="Nuevo" Click="BttnNuevo_Click"/>
         </CommandBar>

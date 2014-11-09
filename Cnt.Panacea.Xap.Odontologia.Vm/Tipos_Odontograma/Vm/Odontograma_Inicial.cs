@@ -184,7 +184,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             //Valida que no este guardando ya contra el servicio
             //if (!Contexto_Odontologia.obtenerContexto().guardado_En_Proceso)
             //{
-                var numeroOdontograma = await Contexto_Odontologia.obtenerContexto().GuardarOdontogramaInicial(tratamientoPadre, odontogramaPaciente, observableCollection, null, Variables_Globales.IdIps);
+                var numeroOdontograma = await Contexto_Odontologia.obtenerContexto().GuardarOdontogramaInicial(tratamientoPadre, odontogramaPaciente, observableCollection, listadoImagenesGuardar, Variables_Globales.IdIps);
 
                 Busy.UserControlCargando();
                 //Este numero se usara para guardar tambien plan de tratamiento y evolucion
@@ -222,5 +222,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         }
 
         public RelayCommand mostrarGrillaTratamientosCommand { get; set; }
+
+        public List<TratamientoImagenEntity> listadoImagenesGuardar { get; set; }
     }
 }

@@ -69,6 +69,14 @@ namespace App2.Assets.PopUp
                 var reporte = new App2.Util.Reportes.Templates.Plan_Tratamiento();
                 MostrarModal(reporte, "Reporte plan de tratamiento");                
             }
+            else if (obj.Nombre == "Listado imagenes")
+            {
+                elementoOtraVentana = obj;
+                var reporte = new App2.Fotos.SplitFotos() { DataContext = obj.Propiedad_Adicional };
+                MostrarModal(reporte, "Imagenes");
+            }
+
+             
         }
 
         private void cerrar(object obj)

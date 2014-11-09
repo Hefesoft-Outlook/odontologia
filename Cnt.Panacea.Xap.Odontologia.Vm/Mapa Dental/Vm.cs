@@ -95,7 +95,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM
         private void oirGuardarImagenes()
         {
             Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Util.vm.Messenger.Imagenes.Guardar_Imagenes>(this, elemento => 
-            {
+            {                
                 new Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.Imagenes.Imagenes().GuardarImagenes(this);
             });
         }
@@ -199,7 +199,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM
             });
         }
 
-        private void verImagenes()
+        public void verImagenes()
         {
             new Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.Imagenes.Imagenes().mostrarImagenes(this);
         }

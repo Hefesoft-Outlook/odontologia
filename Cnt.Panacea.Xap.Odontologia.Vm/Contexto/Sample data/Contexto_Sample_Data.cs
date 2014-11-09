@@ -10,6 +10,7 @@ using Proxy;
 using NivelSeveridadDXEntity = Cnt.Panacea.Entities.Parametrizacion.NivelSeveridadDXEntity;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using System.Linq;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 {
@@ -102,22 +103,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps,
             int idPaciente)
         {
-            
             var lst = new ObservableCollection<TratamientoEntity>();
-
             var result = await new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity().getTableByPartition();
-
-            //List<Hefesoft.Entities.Odontologia.Odontograma.Odontograma> blob =
-            //    await new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartition();
-
-            // Saca una propiedad de un listado y devuelve una propiedad de la misma
-            // Ademas llena el rowkey con el identificador
-            //List<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity> lstTratamientos =
-            //    blob.obtenerListadoDadoPropiedad
-            //        <Hefesoft.Entities.Odontologia.Odontograma.Odontograma,
-            //            Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity>("tratamiento");
-            //lstTratamientos.ToObservableCollection().ConvertirObservables(lst);
-
             lst = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), lst);
 
             return lst;
@@ -176,29 +163,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return resultadoDevolver;
         }
 
-        public Task<TratamientoImagenEntity> ConsultarImagenTratamiento(int idImagenTratamiento)
+        public async Task<TratamientoImagenEntity> ConsultarImagenTratamiento(int idImagenTratamiento)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<TratamientoImagenEntity>();
-
-            cliente.ConsultarImagenTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.ConsultarImagenTratamientoAsync(idImagenTratamiento);
-
-            return tcs.Task;
+            //No se lista individualmente xq el metodo de hefesoft de guardarlos en blobs es mas optimo
+            return new TratamientoImagenEntity();
         }
 
         public async Task<ObservableCollection<NivelSeveridadDXEntity>> ConsultarNivelSeveridad()
@@ -333,7 +301,59 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             OdontogramasPacienteEntity odontogramaPaciente, List<OdontogramaEntity> odontograma,
             List<TratamientoImagenEntity> adjuntosImagen, short idIps)
         {
-            guardado_En_Proceso = true;
+            
+            limpiarReferenciasDientesDiagnosticos(odontograma);
+            //En la implementacion de hefesoft no se guarda el byte de la imagen si no la ruta al blob
+            eliminarBytesImagenes(adjuntosImagen);
+
+            odontogramaPaciente.IdIps = idIps;
+
+            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
+            odontogramaInsertar.idIps = idIps;
+            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
+            odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
+
+            //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
+            odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
+            odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
+            odontogramaInsertar.generarIdentificador = true;
+
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
+            odontogramaInsertar = result;
+            
+
+            //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
+            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
+            odontogramaInsertar.tratamiento.Identificador = Convert.ToInt64(odontogramaInsertar.RowKey);
+            var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
+
+            //Despues de insertado deberia llegar el consecutivo
+            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
+            odontogramaInsertar.tratamiento.Identificador = long.Parse(odontogramaInsertar.RowKey);
+           
+
+            //Cuando se guarda un odontograma inicial agregarlo a listado inicial sin hacer otra llamada al servicio
+            var elementoAgregarListado = Convertir_Observables.ConvertirEntidades(odontogramaInsertar.tratamiento, new TratamientoEntity());
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(elementoAgregarListado, "Agregar Listado inicial");
+
+
+            long id = Convert.ToInt64(odontogramaInsertar.RowKey);
+            return id;
+        }
+
+        private static void eliminarBytesImagenes(List<TratamientoImagenEntity> adjuntosImagen)
+        {
+            if (adjuntosImagen != null)
+            {
+                foreach (var item in adjuntosImagen)
+                {
+                    item.Contenido = null;
+                }
+            }
+        }
+
+        private static void limpiarReferenciasDientesDiagnosticos(List<OdontogramaEntity> odontograma)
+        {
             foreach (OdontogramaEntity pivot in odontograma)
             {
                 if (pivot.DienteReferencia1 != null)
@@ -366,42 +386,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                     //}
                 }
             }
-            odontogramaPaciente.IdIps = idIps;
-            var tcs = new TaskCompletionSource<long>();
-
-
-            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
-            odontogramaInsertar.idIps = idIps;
-            odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();            
-            
-
-            odontogramaInsertar.odontogramaPaciente =odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
-
-            //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
-            odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
-            odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
-            odontogramaInsertar.generarIdentificador = true;
-
-
-            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
-            odontogramaInsertar = result;
-            
-            //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
-            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
-            odontogramaInsertar.tratamiento.Identificador = Convert.ToInt64(odontogramaInsertar.RowKey);
-            var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
-
-            //Despues de insertado deberia llegar el consecutivo
-            odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
-            odontogramaInsertar.tratamiento.Identificador = long.Parse(odontogramaInsertar.RowKey);
-           
-
-            //Cuando se guarda un odontograma inicial agregarlo a listado inicial sin hacer otra llamada al servicio
-            var elementoAgregarListado = Convertir_Observables.ConvertirEntidades(odontogramaInsertar.tratamiento, new TratamientoEntity());
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(elementoAgregarListado, "Agregar Listado inicial");
-
-            long id = Convert.ToInt64(odontogramaInsertar.RowKey);
-            return id;
         }
 
         public async Task<ObservableCollection<long>> GuardarPlanTratamiento(
@@ -436,34 +420,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
 
-        public Task<bool> GuardarImagenTratamiento(long idTratamientoPaciente,
+        public async Task<bool> GuardarImagenTratamiento(long idTratamientoPaciente,
             ObservableCollection<TratamientoImagenEntity> adjuntoImagenes)
         {
-            inicializarContexto();
-            var tcs = new TaskCompletionSource<bool>();
-
-            for (int i = 0; i <= adjuntoImagenes.Count - 1; i++)
-            {
-                adjuntoImagenes[i].Identificador = i;
-            }
-
-            cliente.guardarImagenesTratamientoCompleted += (s, e) =>
-            {
-                if (e.Error != null)
-                {
-                    tcs.TrySetException(e.Error);
-                }
-                else if (e.Cancelled)
-                {
-                    tcs.TrySetCanceled();
-                }
-                else
-                {
-                    tcs.TrySetResult(e.Result);
-                }
-            };
-            cliente.guardarImagenesTratamientoAsync(idTratamientoPaciente, adjuntoImagenes);
-            return tcs.Task;
+            var guardo = true;
+            eliminarBytesImagenes(adjuntoImagenes.ToList());
+            Variables_Globales.PCL.PlanTratamiento.adjuntosImagen = adjuntoImagenes.ConvertirIEnumerable(Variables_Globales.PCL.PlanTratamiento.adjuntosImagen);
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await Variables_Globales.PCL.PlanTratamiento.postBlob();
+            return guardo;
         }
 
         public async Task<ObservableCollection<ComprobanteEntity>> ListarComprobantes(short idIps, string usuario,
@@ -616,14 +580,32 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
         {            
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartitionAndRowKey(idTratamiento.ToString());
-            result.tratamiento.RowKey = result.RowKey;
+            long identificador = long.Parse(result.RowKey);
+
+            result.tratamiento.RowKey = identificador.ToString();
+            result.tratamiento.Identificador = identificador;
+            result.odontogramaPaciente.Identificador = identificador;
             
             Variables_Globales.PCL.PlanTratamiento = result;
+
+            //Agrega las imagenes al mapa dental para ser mostradas cuando se necesite
+            procesarImagenesExistentes();
             
             TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(result.tratamiento, new TratamientoEntity());
             ObservableCollection<OdontogramaEntity> lstOdontogramas = result.odontogramaInicial.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(lstOdontogramas, "Odontograma cargado");
             return entidadConvertida;
+        }
+
+        private void procesarImagenesExistentes()
+        {
+            if (Variables_Globales.PCL.PlanTratamiento.adjuntosImagen.Any())
+            {
+                var listadoImagenes = Variables_Globales.PCL.PlanTratamiento.adjuntosImagen.ConvertirIEnumerable(new List<TratamientoImagenEntity>());
+                var vmMapaDental = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
+                vmMapaDental.LstImagenes = new List<TratamientoImagenEntity>();
+                vmMapaDental.LstImagenes.AddRange(listadoImagenes);
+            }
         }
 
         public Task<OdontogramasPacienteEntity> SelecionarOdontogramaPaciente(long idOdontogramaPaciente)

@@ -81,8 +81,8 @@ namespace App2
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             oirMensaje();
             oirOcupado();
-            oirCambiosBotones();
-        }
+            oirCambiosBotones();            
+        }        
 
         private async void snap()
         {
