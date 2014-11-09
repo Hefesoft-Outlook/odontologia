@@ -1,6 +1,7 @@
 ﻿using App2.Common;
 using App2.Hub_Partial;
 using Cnt.Panacea.Xap.Odontologia;
+using Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
 using System;
@@ -31,6 +32,33 @@ namespace App2.Grillas.Plan_tratamiento
             this.InitializeComponent();
             var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
             vm.pintarProcedimientosColoresPiezadental();
+            itemListView.SelectionChanged += itemListView_SelectionChanged;
+        }
+
+        /// <summary>
+        /// Se usa para dejar el numero de sesiones predeterminado
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        void itemListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var lst = sender as ListView;
+
+            if (lst.SelectedItem != null)
+            {
+                var item = lst.SelectedItem as ProcedimientosGrillaPlanTratamiento;
+                CmbBxNumeroSesiones.SelectedIndex = item.numeroSesion -1;
+                CmbBxTipoSesion.SelectedIndex = (int)item.OpcionesTratamientoValor;
+            }
+        }
+
+        private void HyprlnkBaseBttn_Click(object sender, RoutedEventArgs e)
+        {
+            var hp = sender as HyperlinkButton;
+            var item = hp.DataContext as ProcedimientosGrillaPlanTratamiento;
+
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
+            vm.tomarElementoComoBase(item);
         }
     }
 }

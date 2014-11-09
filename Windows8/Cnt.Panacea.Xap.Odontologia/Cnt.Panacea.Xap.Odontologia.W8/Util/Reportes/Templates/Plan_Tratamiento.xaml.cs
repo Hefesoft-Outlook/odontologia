@@ -73,6 +73,7 @@ namespace App2.Util.Reportes.Templates
 
         private async void HyprlnkBttnExportarPdf_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            Busy.UserControlCargando(true, "Exportando... tomara un tiempo...");
             App2.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
             int i = 0;
             foreach (var item in Report._pageTrees)
@@ -82,7 +83,8 @@ namespace App2.Util.Reportes.Templates
                 i = i + 1;
             }
 
-            exportarPdf();
+            await exportarPdf();
+            Busy.UserControlCargando(false);
         }
 
         private async Task<string> guardarImagen(App2.Hub_Partial.Snapshot snap, UIElement item, string nombre)
@@ -93,7 +95,7 @@ namespace App2.Util.Reportes.Templates
             return result;
         }
 
-        public async void exportarPdf()
+        public async Task exportarPdf()
         {
             var pathPdf = await Pdf.postPdf(document);
             await Launcher.LaunchUriAsync(new Uri(pathPdf, UriKind.Absolute));

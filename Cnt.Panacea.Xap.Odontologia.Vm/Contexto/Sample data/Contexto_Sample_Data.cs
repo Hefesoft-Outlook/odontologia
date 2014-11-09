@@ -103,10 +103,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         public async Task<ObservableCollection<TratamientoEntity>> ConsultarTratamientosPaciente(short idIps,
             int idPaciente)
         {
+            Busy.UserControlCargando();
             var lst = new ObservableCollection<TratamientoEntity>();
             var result = await new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity().getTableByPartition();
             lst = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), lst);
-
+            Busy.UserControlCargando(false);
             return lst;
         }
 

@@ -24,27 +24,13 @@ namespace App2.Assets.PopUp
     {
         public Modal()
         {            
-            this.InitializeComponent();
-            
+            this.InitializeComponent();            
             oirMostrarVentana();
-            oirCerraVentana();
+            oirCerraVentana();            
 
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
             this.Titulo.Margin = new Thickness(20, 20, 20, 0);
             this.LayoutRoot.Margin = new Thickness(20, 0, 20, 20);
-        }
-
-        private void oirCerraVentana()
-        {
-            Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this, elemento=>
-            {
-                ocultarModal(true);
-            });
-        }
-
-        private void oirMostrarVentana()
-        {
-            Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana>(this, generarVentana);
         }
 
         private void generarVentana(Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana obj)
@@ -75,78 +61,7 @@ namespace App2.Assets.PopUp
                 var reporte = new App2.Fotos.SplitFotos() { DataContext = obj.Propiedad_Adicional };
                 MostrarModal(reporte, "Imagenes");
             }
-
-             
         }
-
-        private void cerrar(object obj)
-        {
-            if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Plan tratamiento")
-            {
-                var datacontext = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
-                if (datacontext.lstOdontogramaEntity != null && datacontext.lstOdontogramaEntity.Any())
-                {
-                    elementoOtraVentana.Resultado(datacontext);
-                }
-            }
-            else if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Evolucion")
-            {
-                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
-            }
-        }
-
-        private Action<object> MostrarModal(UIElement elementoMostrar, string titulo = "")
-        {
-            TxtBlckTitulo.Text = titulo;
-            Contenedor.Children.Clear();
-            Contenedor.Children.Add(elementoMostrar);
-            this.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-
-            return ventanaCerrada;
-        }
-
-        private void ocultarModal(bool dialogResult)
-        {
-            TxtBlckTitulo.Text = "";
-            Contenedor.Children.Clear();            
-            this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-
-            if (dialogResult)
-            {
-                //Callback
-                ventanaCerrada = cerrar;
-                ventanaCerrada(null);
-            }
-        }
-
-
-        #region padre (DependencyProperty)
-
-        /// <summary>
-        /// A description of the property.
-        /// </summary>
-        public FrameworkElement padre
-        {
-            get { return (FrameworkElement)GetValue(padreProperty); }
-            set { SetValue(padreProperty, value); }
-        }
-        public static readonly DependencyProperty padreProperty =
-            DependencyProperty.Register("padre", typeof(FrameworkElement), typeof(Modal),
-            new PropertyMetadata(null, new PropertyChangedCallback(OnpadreChanged)));
-
-        private static void OnpadreChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            ((Modal)d).OnpadreChanged(e);
-        }
-
-        private void OnpadreChanged(DependencyPropertyChangedEventArgs e)
-        {
-            
-        }
-
-        #endregion
-
 
         public void Dispose()
         {
@@ -154,13 +69,6 @@ namespace App2.Assets.PopUp
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this);
         }
 
-        private void Grid_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
-        {
-            ocultarModal(false);
-        }
-
-        private Action<object> ventanaCerrada { get; set; }
-
-        public Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana elementoOtraVentana { get; set; }
+        
     }
 }

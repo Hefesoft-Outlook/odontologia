@@ -155,6 +155,7 @@
     <Compile Include="Assets\PopUp\Layouts\SobreEscribirAdicionar.xaml.cs">
       <DependentUpon>SobreEscribirAdicionar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\PopUp\Modal.Partial\Modal.UiWindow.cs" />
     <Compile Include="Assets\PopUp\Modal.xaml.cs">
       <DependentUpon>Modal.xaml</DependentUpon>
     </Compile>

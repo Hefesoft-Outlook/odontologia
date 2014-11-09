@@ -64,6 +64,7 @@
                             <TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
                             <TextBlock Text="{Binding NombreSuperficie}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
                             <TextBlock Text="{Binding ConfigurarDiagnosticoProcedimOtraEntity.Descripcion}"></TextBlock>
+                            <HyperlinkButton Name="HyprlnkBaseBttn" Content="usar como base" Click="HyprlnkBaseBttn_Click"></HyperlinkButton>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
@@ -120,21 +121,22 @@
                         <TextBlock Text="{Binding Mensajes.Especialidad, Source={StaticResource publicResource}}"/>                    
                         <ComboBox  
                                   ItemsSource="{Binding Wizard_Plan_Tratamiento.ProcedimientosEspecialidad, Source={StaticResource Locator}}"
-                                  SelectedValue="{Binding ProcedimientosEspecialidadValor, Mode=TwoWay}"
+                                  SelectedValue="{Binding SelectedItem.ProcedimientosEspecialidadValor, ElementName=itemListView, Mode=TwoWay}"
                                   DisplayMemberPath="Nombre"/>
 
                         <!--Tipo de sesion-->
                         <TextBlock Text="{Binding Mensajes.Tipo_Sesion, Source={StaticResource publicResource}}"/>
                         <ComboBox 
+                                  Name="CmbBxTipoSesion"
                                   ItemsSource="{Binding Wizard_Plan_Tratamiento.OpcionTratamiento, Source={StaticResource Locator}}" 
-                                  SelectedValue="{Binding OpcionesTratamientoValor, Mode=TwoWay}"                                                
+                                  SelectedValue="{Binding SelectedItem.OpcionesTratamientoValor, ElementName=itemListView, Mode=TwoWay}"                 
                                   />
 
                         <!--Sesion-->
                         <TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}"/>
-                        <ComboBox 
+                        <ComboBox Name="CmbBxNumeroSesiones"
                                   ItemsSource="{Binding SelectedItem.NumeroSesiones, ElementName=itemListView}"                                               
-                                  SelectedValue="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.NumeroSesion, ElementName=itemListView, Mode=TwoWay}"
+                                  SelectedValue="{Binding SelectedItem.numeroSesion, ElementName=itemListView, Mode=TwoWay}"
                                   />
 
                         <!--Numero de sesiones-->
@@ -143,18 +145,18 @@
 
                         <!--Valor del procedimiento-->
                         <TextBlock Text="{Binding Mensajes.Valor_Procedimiento, Source={StaticResource publicResource}}"/>
-                        <TextBlock Text="{Binding OdontogramaEntity.PlanTratamiento.ValorServicio, Mode=TwoWay}"/>
+                        <TextBlock Text="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.ValorServicio, ElementName=itemListView, Mode=TwoWay}"/>
 
                         <!--Valor paciente-->
                         <TextBlock Text="{Binding Mensajes.Valor_Paciente, Source={StaticResource publicResource}}"/>
-                        <TextBlock Text="{Binding OdontogramaEntity.PlanTratamiento.ValorPaciente, Mode=TwoWay}"/>
+                        <TextBlock Text="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.ValorPaciente, ElementName=itemListView, Mode=TwoWay}"/>
 
                         <!--Odontologo-->
                         <TextBlock Text="{Binding Mensajes.Odontologo, Source={StaticResource publicResource}}"/>
                         <ComboBox
                                   ItemsSource="{Binding Wizard_Plan_Tratamiento.OdontologosIps, Source={StaticResource Locator}}" 
                                   DisplayMemberPath="NombreCompleto"                                   
-                                  SelectedValue="{Binding OdontologosIpsValor, Mode=TwoWay}"                                                
+                                  SelectedValue="{Binding SelectedItem.OdontologosIpsValor, ElementName=itemListView, Mode=TwoWay}"
                                   />
 
                         <!--Higienista-->
@@ -162,21 +164,21 @@
                         <ComboBox
                                   DisplayMemberPath="NombreCompleto" 
                                   ItemsSource="{Binding Wizard_Plan_Tratamiento.HigientistasIps, Source={StaticResource Locator}}" 
-                                  SelectedValue="{Binding HigienistasIpsValor, Mode=TwoWay}"                                                
+                                  SelectedValue="{Binding SelectedItem.HigienistasIpsValor, ElementName=itemListView, Mode=TwoWay}"
                                   />
                         
                         <!--Cobro-->
                         <TextBlock Text="{Binding Mensajes.Cobro, Source={StaticResource publicResource}}"/>
                         <CheckBox VerticalAlignment="Center"                                               
-                                              IsChecked="{Binding PlanTratamiento.Cobra}" 
+                                              IsChecked="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.Cobra, ElementName=itemListView, Mode=TwoWay}" 
                                               />
                         <!--Tercero-->
                         <TextBlock Text="{Binding Mensajes.Tercero, Source={StaticResource publicResource}}"/>
-                        <TextBlock Text="{Binding PrestadorAtencion.NombreCompleto}"/>
+                        <TextBlock Text="{Binding SelectedItem.PrestadorAtencion.NombreCompleto, ElementName=itemListView, Mode=TwoWay}"/>
 
                         <!--Convenio-->
                         <TextBlock Text="{Binding Mensajes.Convenio, Source={StaticResource publicResource}}"/>
-                        <TextBlock Text="{Binding ConvenioAtencion.Nombre}"/>                        
+                        <TextBlock Text="{Binding SelectedItem.ConvenioAtencion.Nombre, ElementName=itemListView, Mode=TwoWay}"/>                        
 
                     </StackPanel>
 

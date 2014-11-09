@@ -15,8 +15,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         #region Variables
         private decimal valorPaciente;
         private decimal valorProcedimiento;
-        private ConvenioEntity convenio;
-        private Cnt.Panacea.Entities.Odontologia.OpcionesTratamiento opcionesTratamientoValor = new OpcionesTratamiento();
+        private ConvenioEntity convenio;        
         ConfiguracionProcedimientoOdontologiaEntity procedimientoEntity = new ConfiguracionProcedimientoOdontologiaEntity();
         bool cobro = true;
         string color = "Transparent";
@@ -48,6 +47,22 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         }
 
         #region Propiedades
+
+        
+
+        private short _numeroSesion;
+
+        public short numeroSesion
+        {
+            get { return _numeroSesion; }
+            set 
+            { 
+                _numeroSesion = value;
+                RaisePropertyChanged("numeroSesion");
+                this.OdontogramaEntity.PlanTratamiento.NumeroSesion = value;
+            }
+        }
+        
 
         public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
 
@@ -99,8 +114,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         /// <summary>
         /// Plan de tratamiento para el procedimiento
         /// </summary>
-        public PlanTratamientoEntity PlanTratamientoEntity { get; set; }
+        private PlanTratamientoEntity planTratamientoEntity = new PlanTratamientoEntity();
 
+        public PlanTratamientoEntity PlanTratamientoEntity
+        {
+            get { return planTratamientoEntity; }
+            set { planTratamientoEntity = value; RaisePropertyChanged("PlanTratamientoEntity"); }
+        }
+
+
+        public Cnt.Panacea.Entities.Odontologia.OpcionesTratamiento _opcionesTratamientoValor = Entities.Odontologia.OpcionesTratamiento.Tratamiento;
         /// <summary>
         /// Opciones de procedimiento seleccionado
         /// </summary>
@@ -108,7 +131,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         {
             get
             {
-                return Entities.Odontologia.OpcionesTratamiento.Tratamiento;
+                return _opcionesTratamientoValor;
             }
             set
             {
@@ -118,9 +141,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
                 }
                 else
                 {
-                    opcionesTratamientoValor = value;
-                    OdontogramaEntity.PlanTratamiento.OpcionTratamiento = Int16.Parse(value.GetHashCode().ToString());
-                    RaisePropertyChanged("OpcionesTratamientoValor");
+                    _opcionesTratamientoValor = value;
+                    OdontogramaEntity.PlanTratamiento.OpcionTratamiento = Int16.Parse(value.GetHashCode().ToString());                    
+                    //Cuando se hace el raise se pierde graficamente la propiedad xq se esta manejando con un evento
+                    //RaisePropertyChanged("OpcionesTratamientoValor");
                 }
             }
         }//LFDO Bug 17885
@@ -128,13 +152,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         /// <summary>
         /// Especialidad seleccionada
         /// </summary>
-        public EspecialidadEntity ProcedimientosEspecialidadValor
+        public EspecialidadEntity OpcionesTratamientoValorProcedimientosEspecialidadValor
         {
             get { return procedimientosEspecialidadValor; }
             set
             {
                 procedimientosEspecialidadValor = value;
-
                 RaisePropertyChanged("ProcedimientosEspecialidadValor");
             }
         }
@@ -320,6 +343,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
             {
                 procedimientoAplicado = value;
                 RaisePropertyChanged("ProcedimientoAplicado");
+            }
+        }
+
+        public EspecialidadEntity ProcedimientosEspecialidadValor
+        {
+            get { return procedimientosEspecialidadValor; }
+            set
+            {
+                procedimientosEspecialidadValor = value;
+
+                RaisePropertyChanged("ProcedimientosEspecialidadValor");
             }
         }
 

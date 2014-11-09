@@ -38,5 +38,23 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             
             //tercero.ToObservableCollection().fillTables(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity());
         }
+
+        //Toma un elemento como referencia y llena los demas igual
+        public void tomarElementoComoBase(Vm.Util.Plan_Tratamiento.ProcedimientosGrillaPlanTratamiento elementoReferencia)
+        {
+            foreach (var item in Listado)
+            {
+                item.OpcionesTratamientoValor = elementoReferencia.OpcionesTratamientoValor;
+                item.OdontologosIpsValor = elementoReferencia.OdontologosIpsValor;
+                item.HigienistasIpsValor = elementoReferencia.HigienistasIpsValor;
+                item.PlanTratamientoEntity.Cobra = elementoReferencia.PlanTratamientoEntity.Cobra;
+
+                item.ProcedimientosEspecialidadValor = elementoReferencia.ProcedimientosEspecialidadValor;
+                item.OdontogramaEntity.PlanTratamiento.ValorServicio = elementoReferencia.OdontogramaEntity.PlanTratamiento.ValorServicio;
+                item.OdontogramaEntity.PlanTratamiento.ValorPaciente = elementoReferencia.OdontogramaEntity.PlanTratamiento.ValorPaciente;
+            }
+
+            RaisePropertyChanged("Listado");
+        }
     }
 }

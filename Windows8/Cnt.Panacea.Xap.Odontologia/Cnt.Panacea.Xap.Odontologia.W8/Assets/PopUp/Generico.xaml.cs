@@ -26,6 +26,7 @@ namespace App2.Assets.PopUp
             this.InitializeComponent();
             oirMostrarVentana();
             flyout = new Flyout();
+
         }
 
         private void oirMostrarVentana()

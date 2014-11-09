@@ -100,16 +100,25 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         }
 
         public void pintarProcedimientosColoresPiezadental()
-        {
+        {            
             //Por ioc traigo el vm de plan de tratamiento
             var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();            
             Listado = planTratamiento.Listado;
 
+            short i = 1;
+            foreach (var item in Listado)
+            {                
+                item.NumeroSesionesProcedimiento = 1;
+                item.numeroSesion = i;
+                i = Convert.ToInt16(i + 1);
+            }
+
             if (Listado.Any())
             {
-                Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);
-                RaisePropertyChanged("Listado");
+                Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);                
             }
+
+            RaisePropertyChanged("Listado");
         }
 
         private void opcionTratamiento()
