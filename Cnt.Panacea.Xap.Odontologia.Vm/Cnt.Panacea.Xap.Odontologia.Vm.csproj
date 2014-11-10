@@ -76,6 +76,7 @@
     <Compile Include="Grillas\Plan tratamiento\Listado_Procedimientos.cs" />
     <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\UserControlGuardarPlanTratamiento.cs" />
     <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\Wizard.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Fijar elementos modo edicion\Wizard.FijarEelementosCombos.cs" />
     <Compile Include="Grillas\Plan tratamiento\Util\Convertir_Elemento_Grilla_Dibujo_Odontograma.cs" />
     <Compile Include="Grillas\Plan tratamiento\Vm.cs" />
     <Compile Include="Grillas\Plan tratamiento\Wizard.cs" />

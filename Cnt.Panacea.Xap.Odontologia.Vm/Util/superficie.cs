@@ -23,6 +23,10 @@ public static class superficie
         elementosCrear.ConfigurarDiagnosticoProcedimOtraEntity = elemento.OdontogramaEntityToConfigurarDiagnosticoProcedimOtraEntity();
         elementosCrear.Codigo_Pieza_Dental = elemento.Diente.Identificador;
         elementosCrear.Tipo_Odontograma_Actual = Variables_Globales.Tipo_Odontograma_Activo;
+        
+        //Para no perder caracteristicas cuando se pidan los procedimientos a otros formularios
+        elementosCrear.OdontogramaEntity = elemento;
+
         return elementosCrear;
     }
 

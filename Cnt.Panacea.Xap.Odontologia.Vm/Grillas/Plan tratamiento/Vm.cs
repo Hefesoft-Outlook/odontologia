@@ -12,6 +12,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento;
 using Cnt.Panacea.Xap.Odontologia.Vm.Grillas.General;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp;
 using Cnt.Panacea.Entities.Parametrizacion;
+using Microsoft.Practices.ServiceLocation;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
 {
@@ -38,6 +39,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
                 FormaPagoOdontologia.RemoveAt(0);
                 cargarSesiones();
                 inicializarTratamiento();
+
             }
         }
 

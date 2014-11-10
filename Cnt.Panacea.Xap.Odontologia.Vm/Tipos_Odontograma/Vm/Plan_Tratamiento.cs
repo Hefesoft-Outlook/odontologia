@@ -54,9 +54,29 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
                 //Muestra la ventana donde se configuran los procedimientos seleccionados
                 siguientePasoCommand = new RelayCommand(siguientePaso);
+
+                inicializarListados();
             }
         }
 
+        private async void inicializarListados()
+        {
+            //Cargar los medicos e higienistas
+            await CargarOdontologosEHigienistasIps();
+        }
+
+        /// <summary>
+        /// Carga los odontologos e Higienistas de una ips 
+        /// </summary>
+        public async Task CargarOdontologosEHigienistasIps()
+        {
+            OdontologosIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
+            HigientistasIps = await Contexto_Odontologia.obtenerContexto().ListarHigienistasPorIps(Variables_Globales.IdIps);
+
+            //Se forza porque el observable collection no funciona en todos los casos
+            RaisePropertyChanged("OdontologosIps");
+            RaisePropertyChanged("HigientistasIps");
+        }
 
         private async Task cargarOdontogramaPlanTratamiento()
         {
@@ -68,6 +88,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 resultado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
                 Busy.UserControlCargando(false);
 
+                //Hasta aca va bien
                 if (resultado.Any())
                 {
                     Messenger.Default.Send(new Pedir_Pintar_Datos { lst = resultado, Limpiar_Datos = false });
@@ -139,32 +160,41 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                     {
                         codigoSPiezaDental = item.Diente.Identificador.ToString()
                     };
+
                     elementoAgregar.NombreSuperficie = item.Superficie.ToString();
                     elementoAgregar.NombreSuperficieApp = item.Superficie.nomenclaturaSuperficie();
                     elementoAgregar.NumeroSesiones = NumeroSesiones;
                     elementoAgregar.PrestadorAtencion = Prestador;
                     elementoAgregar.ConvenioAtencion = ConvenioAtencion;
+                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Procedimiento = item.Procedimiento.Identificador;                        
 
-                    elementoAgregar.OdontogramaEntity = new OdontogramaEntity();
-                    elementoAgregar.OdontogramaEntity = item;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento = new PlanTratamientoEntity();
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Convenio = Variables_Globales.IdConvenio;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Procedimiento = item.Procedimiento.Identificador;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.EstadoProcedimiento = false;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.EstadoRegistro = EstadosEntidad.Creado;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.FechaRegistro = DateTime.Now;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.IdAtencion = Variables_Globales.IdAtencion;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.SesionesPlanTratamiento =
-                        new SesionesPlanTratamientosCollection();
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Usuario = Variables_Globales.UsuarioActual;
+                    if (Variables_Globales.Modo == Odontologia.Vm.Util.Modos.Modo.windows8)
+                    {
+                        //funcionalidad para mostrarnOdontologos e higienistas
+                        elementoAgregar.OdontogramaEntity = item;
+                        elementoAgregar.PlanTratamientoEntity = item.PlanTratamiento;
+                        
+                    }
+                    else
+                    {
+                        elementoAgregar.OdontogramaEntity = new OdontogramaEntity();
+                        elementoAgregar.OdontogramaEntity = item;
+
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento = new PlanTratamientoEntity();
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.Convenio = Variables_Globales.IdConvenio;                        
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.EstadoProcedimiento = false;
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.EstadoRegistro = EstadosEntidad.Creado;
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.FechaRegistro = DateTime.Now;
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.IdAtencion = Variables_Globales.IdAtencion;
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.SesionesPlanTratamiento = new SesionesPlanTratamientosCollection();
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.Usuario = Variables_Globales.UsuarioActual;
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento.Activo = true;
 
 
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Procedimiento = item.Procedimiento.Identificador;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Prestador = Variables_Globales.IdPrestador;
-                    elementoAgregar.OdontogramaEntity.Identificador = i + 1;
-                    elementoAgregar.OdontogramaEntity.Inicial = false;
-                    elementoAgregar.OdontogramaEntity.PlanTratamiento.Activo = true;
+                        elementoAgregar.OdontogramaEntity.Identificador = i + 1;
+                        elementoAgregar.OdontogramaEntity.Inicial = false;
 
+                    }
                     // Contador identificador
                     i = i + 1;
                     Listado.Add(elementoAgregar);

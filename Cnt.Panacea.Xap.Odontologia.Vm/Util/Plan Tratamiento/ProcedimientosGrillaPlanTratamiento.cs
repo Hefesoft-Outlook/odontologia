@@ -119,7 +119,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         public PlanTratamientoEntity PlanTratamientoEntity
         {
             get { return planTratamientoEntity; }
-            set { planTratamientoEntity = value; RaisePropertyChanged("PlanTratamientoEntity"); }
+            set 
+            { 
+                planTratamientoEntity = value; 
+                RaisePropertyChanged("PlanTratamientoEntity"); 
+            }
         }
 
 
@@ -222,7 +226,19 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         /// <summary>
         /// Seleccion de la mezcla de la lista de higienista y odontologo en odontograma evolucion
         /// </summary>
-        public TerceroEntity OdontologosHigienistasIpsValor { get; set; }
+        private TerceroEntity odontologosHigienistasIpsValor;
+
+        public TerceroEntity OdontologosHigienistasIpsValor
+        {
+            get { return odontologosHigienistasIpsValor; }
+            set 
+            { 
+                odontologosHigienistasIpsValor = value;                
+            }
+        }
+        
+
+
         /// <summary>
         /// Numero de session seleccionado
         /// </summary>
@@ -252,8 +268,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
             {
                 numeroSesionesProcedimiento = value;
                 NumeroSesionesValor = value;
-                OdontogramaEntity.PlanTratamiento.NumeroSesionesProcedimiento = value;
                 OdontogramaEntity.numeroSessiones();
+                if (OdontogramaEntity.PlanTratamiento != null)
+                {
+                    OdontogramaEntity.PlanTratamiento.NumeroSesionesProcedimiento = value;
+                }                
             }
         }
 

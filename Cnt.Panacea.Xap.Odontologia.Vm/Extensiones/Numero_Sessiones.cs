@@ -39,7 +39,7 @@ using System.Text;
                     sesion.Procedimiento = (int)elemento.PlanTratamiento.Procedimiento;
                 }
 
-                if (elemento.PlanTratamiento.SesionesPlanTratamiento != null)
+                if (elemento.PlanTratamiento.SesionesPlanTratamiento != null && elemento.PlanTratamiento.Procedimiento != null)
                 {
                     if ((elemento.PlanTratamiento.SesionesPlanTratamiento.Where(p => p.IdSesion == (short)(elemento.PlanTratamiento.NumeroSesion + i)).Where(p => p.Procedimiento == (int)elemento.PlanTratamiento.Procedimiento).Any()))
                     {

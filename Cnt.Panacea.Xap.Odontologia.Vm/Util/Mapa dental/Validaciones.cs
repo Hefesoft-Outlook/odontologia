@@ -125,10 +125,21 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
             {
                 foreach (var itemB in item.DiagnosticoProcedimiento.lst)
                 {
-                    OdontogramaEntity Odontologia = new OdontogramaEntity();
+                    OdontogramaEntity Odontologia = null;
+
+                    if (itemB.OdontogramaEntity != null)
+                    {
+                        Odontologia = itemB.OdontogramaEntity;
+                    }
+                    else
+                    {
+                        Odontologia = new OdontogramaEntity();
+                    }                        
+                        
                     Odontologia.Diente = new DientesEntity() { Identificador = item.codigoPiezaDental };
                     Odontologia.Superficie = itemB.Superficie.superficieNomenclatura();
                     extraerCaracteristicas(itemB, Odontologia);
+                                        
 
                     if (itemB.ConfigurarDiagnosticoProcedimOtraEntity.TipoPanel == TipoPanel.Diagnostico)
                     {

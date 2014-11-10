@@ -41,6 +41,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             {
                 //datosPruebaOdontologosHigienistas();
 
+                var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();
+                OdontologosIps = planTratamiento.OdontologosIps;
+                HigientistasIps = planTratamiento.HigientistasIps;
+                Listado = planTratamiento.Listado;
+
                 cambiarConvenioCommand = new RelayCommand<ProcedimientosGrillaPlanTratamiento>(cambiarConvenio);
                 opcionTratamiento();
                 procedimientosEspecialidad();
@@ -91,35 +96,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             await TaskEx.WhenAll
                 (
                     consultarConvenio(),
-                    consultarPrestador(),
-                    CargarOdontologosEHigienistasIps()
+                    consultarPrestador()
                 );
             
             //Pinta con colores la pieza dental del procedimiento para que sea mas visual
             pintarProcedimientosColoresPiezadental();
         }
 
-        public void pintarProcedimientosColoresPiezadental()
-        {            
-            //Por ioc traigo el vm de plan de tratamiento
-            var planTratamiento = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();            
-            Listado = planTratamiento.Listado;
-
-            short i = 1;
-            foreach (var item in Listado)
-            {                
-                item.NumeroSesionesProcedimiento = 1;
-                item.numeroSesion = i;
-                i = Convert.ToInt16(i + 1);
-            }
-
-            if (Listado.Any())
-            {
-                Util.Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(Listado);                
-            }
-
-            RaisePropertyChanged("Listado");
-        }
+        
 
         private void opcionTratamiento()
         {
@@ -146,6 +130,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Pedir_Datos_Grilla_Plan_Tratamiento>(this, pedido =>
             {
                 var result = Listado.validaListadoGrilla();
+
                 if (result.valido)
                 {
                     pedido.lst(Listado);
@@ -168,20 +153,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         public async Task consultarPrestador()
         {
             Prestador = await Contexto_Odontologia.obtenerContexto().ConsultarPrestador(Variables_Globales.IdPrestador);//LFDO Bug 16006            
-        }
-
-        /// <summary>
-        /// Carga los odontologos e Higienistas de una ips 
-        /// </summary>
-        public async Task CargarOdontologosEHigienistasIps()
-        {
-            OdontologosIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
-            HigientistasIps = await Contexto_Odontologia.obtenerContexto().ListarHigienistasPorIps(Variables_Globales.IdIps);            
-            
-            //Se forza porque el observable collection no funciona en todos los casos
-            RaisePropertyChanged("OdontologosIps");
-            RaisePropertyChanged("HigientistasIps");
-        }
+        }        
 
         #endregion
 

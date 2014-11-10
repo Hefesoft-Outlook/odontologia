@@ -47,7 +47,7 @@ namespace App2.Grillas.Plan_tratamiento
             if (lst.SelectedItem != null)
             {
                 var item = lst.SelectedItem as ProcedimientosGrillaPlanTratamiento;
-                CmbBxNumeroSesiones.SelectedIndex = item.numeroSesion -1;
+                CmbBxNumeroSesiones.SelectedIndex = item.numeroSesion - 1;
                 CmbBxTipoSesion.SelectedIndex = (int)item.OpcionesTratamientoValor;
             }
         }
