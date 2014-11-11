@@ -372,6 +372,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
             {
                 procedimientosEspecialidadValor = value;
 
+                OdontogramaEntity.PlanTratamiento.Especialidad = value.Identificador;
+                OdontogramaEntity.PlanTratamiento.NombreEspecialidad = value.Nombre;
+
                 RaisePropertyChanged("ProcedimientosEspecialidadValor");
             }
         }

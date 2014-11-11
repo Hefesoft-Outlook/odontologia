@@ -63,17 +63,20 @@ public static class Convertir_Observables
          where P : class
      {
 
-         foreach (var item in source)
+         if(source != null)
          {
-             try
+             foreach (var item in source)
              {
-                 Mapper.CreateMap<T, P>();
-                 P elemento = Mapper.DynamicMap<P>(item);
-                 lst.Add(elemento);
-             }
-             catch
-             {
+                 try
+                 {
+                     Mapper.CreateMap<T, P>();
+                     P elemento = Mapper.DynamicMap<P>(item);
+                     lst.Add(elemento);
+                 }
+                 catch
+                 {
 
+                 }
              }
          }
 

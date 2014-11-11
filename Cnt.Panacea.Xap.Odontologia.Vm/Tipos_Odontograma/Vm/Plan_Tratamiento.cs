@@ -78,6 +78,54 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             RaisePropertyChanged("HigientistasIps");
         }
 
+        private void tratamientoActivo()
+        {
+            //Disparar el mensaje de carga
+            Busy.UserControlCargando();
+            TratamientoPadre = Variables_Globales.TratamientosPadre;
+
+            if (TiposTratamiento != null && TratamientoPadre != null && TratamientoPadre.TipoTratamiento != null)
+            {
+                TiposTratamientoSeleccionado = TiposTratamiento.FirstOrDefault(p => p.Identificador == TratamientoPadre.TipoTratamiento.Identificador);
+            }
+            if (TratamientoPadre.TipoTratamiento != null && TratamientoPadre.TipoTratamiento.Identificador != 0)
+            {
+                HabilitarTipoTratamiento = false;
+            }
+            else
+            {
+                HabilitarTipoTratamiento = true;
+            }
+
+            DescripcionTratamiento = TratamientoPadre.Descripcion;
+            EsCotizacion = TratamientoPadre.Cotizacion;
+
+            if (TratamientoPadre.CuotaInicial != null)
+            {
+                ValorCuotaInicial = (decimal)TratamientoPadre.CuotaInicial;
+            }
+            if (TratamientoPadre.Cuotas != null)
+            {
+                NumeroSesionesTratamiento = (short)TratamientoPadre.Cuotas;
+            }
+            if (TratamientoPadre.ValorCuota != null)
+            {
+                ValorCuotaTratamiento = (decimal)TratamientoPadre.ValorCuota;
+            }         
+
+
+            if (TratamientoPadre.TipoTratamiento != null)
+            {
+                MostrarOpcionesNuevoTratamiento = true;
+            }
+
+            RaisePropertyChanged("MuestraOpcionesNuevoTratamiento");
+            RaisePropertyChanged("HabilitarTipoTratamiento");
+            RaisePropertyChanged("DescripcionTratamiento");
+            RaisePropertyChanged("TiposTratamientoSeleccionado");
+            Busy.UserControlCargando(false);
+        }
+
         private async Task cargarOdontogramaPlanTratamiento()
         {
             // La validacion indica si es un nuevo plan de tratamiento
@@ -86,7 +134,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 Busy.UserControlCargando(true, "Cargando plan de tratamiento");
                 ObservableCollection<OdontogramaEntity> resultado = new ObservableCollection<OdontogramaEntity>();
                 resultado = await Contexto_Odontologia.obtenerContexto().ListarOdontogramaTratamiento(Variables_Globales.IdTratamientoActivo, Variables_Globales.IdIps);
-                Busy.UserControlCargando(false);
+                Busy.UserControlCargando(false);               
 
                 //Hasta aca va bien
                 if (resultado.Any())
@@ -166,6 +214,13 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                     elementoAgregar.NumeroSesiones = NumeroSesiones;
                     elementoAgregar.PrestadorAtencion = Prestador;
                     elementoAgregar.ConvenioAtencion = ConvenioAtencion;
+
+                    if (elementoAgregar.OdontogramaEntity == null)
+                    {
+                        elementoAgregar.OdontogramaEntity = new OdontogramaEntity();
+                        elementoAgregar.OdontogramaEntity.PlanTratamiento = new PlanTratamientoEntity();
+                    }
+
                     elementoAgregar.OdontogramaEntity.PlanTratamiento.Procedimiento = item.Procedimiento.Identificador;                        
 
                     if (Variables_Globales.Modo == Odontologia.Vm.Util.Modos.Modo.windows8)
@@ -392,11 +447,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         private async void inicializarElementos()
         {
             TiposTratamientoSeleccionado = new TipoTratamientoEntity();
-
             await cargarOdontogramaPlanTratamiento();
-
-            FormaPagoOdontologia = typeof (FormaPago).ToExtendedList<FormaPago, byte>();
-            FormaPagoOdontologia.RemoveAt(0);
 
             //Este carga el combo de tipo de atencion
             //Y debe ir primero para que se pueda mostrar el tipo al que esta asociado el procedimiento
@@ -411,6 +462,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             ConvenioAtencion = await Contexto_Odontologia.obtenerContexto().consultarConvenio(Variables_Globales.IdConvenio);
             RaisePropertyChanged("ConvenioAtencion");
         }
+
 
         private void listadoOdontogramaInicial(List<OdontogramaEntity> obj)
         {
@@ -539,63 +591,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             }
         }
 
-        private void tratamientoActivo()
-        {
-            //Disparar el mensaje de carga
-            Busy.UserControlCargando();
-            TratamientoPadre = Variables_Globales.TratamientosPadre;
-
-            if (TiposTratamiento != null && TratamientoPadre != null && TratamientoPadre.TipoTratamiento != null)
-            {
-                TiposTratamientoSeleccionado =  TiposTratamiento.FirstOrDefault(p => p.Identificador == TratamientoPadre.TipoTratamiento.Identificador);
-            }
-            if (TratamientoPadre.TipoTratamiento != null && TratamientoPadre.TipoTratamiento.Identificador != 0)
-            {
-                HabilitarTipoTratamiento = false;
-            }
-            else
-            {
-                HabilitarTipoTratamiento = true;
-            }
-
-            DescripcionTratamiento = TratamientoPadre.Descripcion;
-            EsCotizacion = TratamientoPadre.Cotizacion;
-
-            if (TratamientoPadre.CuotaInicial != null)
-            {
-                ValorCuotaInicial = (decimal) TratamientoPadre.CuotaInicial;
-            }
-            if (TratamientoPadre.Cuotas != null)
-            {
-                NumeroSesionesTratamiento = (short) TratamientoPadre.Cuotas;
-            }
-            if (TratamientoPadre.TipoPago != null)
-            {
-                FormaPagoSeleccionado =
-                    FormaPagoOdontologia.Where(a => a.NumericKey == TratamientoPadre.TipoPago).First();
-            }
-            if (TratamientoPadre.ValorCuota != null)
-            {
-                ValorCuotaTratamiento = (decimal) TratamientoPadre.ValorCuota;
-            }
-
-            Sesiones = TratamientoPadre.Sesiones.ToString();
-            CuotaInicial = TratamientoPadre.CuotaInicial.ToString();
-            ValorCuota = TratamientoPadre.ValorCuota.ToString();
-
-
-            if (TratamientoPadre.TipoTratamiento != null)
-            {
-                MostrarOpcionesNuevoTratamiento = true;
-            }
-
-            RaisePropertyChanged("MuestraOpcionesNuevoTratamiento");
-            RaisePropertyChanged("FormaPagoSeleccionado");
-            RaisePropertyChanged("HabilitarTipoTratamiento");
-            RaisePropertyChanged("DescripcionTratamiento");
-            RaisePropertyChanged("TiposTratamientoSeleccionado");
-            Busy.UserControlCargando(false);
-        }
+       
 
         /// <summary>
         ///     Validar modo lectura.
@@ -649,16 +645,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
         public ConvenioEntity ConvenioAtencion { get; set; }
 
-        public string CuotaInicial { get; set; }
+      
 
         public string DescripcionTratamiento { get; set; }
 
         public RelayCommand<string> DescripcionTratamientoCommand { get; private set; }
         public bool EsCotizacion { get; set; }
 
-        public List<KeyValueTriplet<FormaPago, byte, string>> FormaPagoOdontologia { get; set; }
 
-        public KeyValueTriplet<FormaPago, byte, string> FormaPagoSeleccionado { get; set; }
 
         public bool HabilitarTipoTratamiento { get; set; }
 
@@ -712,7 +706,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         /// <value><c>true</c> if [puede modificar]; otherwise, <c>false</c>.</value>
         public bool PuedeModificar { get; set; }
 
-        public string Sesiones { get; set; }
+     
 
         public RelayCommand siguientePasoCommand { get; set; }
 
@@ -728,9 +722,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                 tratamientoPadre = value;
                 RaisePropertyChanged("TratamientoPadre");
             }
-        }
-
-        public string ValorCuota { get; set; }
+        }      
 
         public decimal ValorCuotaInicial { get; set; }
 

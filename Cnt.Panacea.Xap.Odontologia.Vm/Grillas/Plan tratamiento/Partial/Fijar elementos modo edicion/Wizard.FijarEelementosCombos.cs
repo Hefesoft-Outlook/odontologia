@@ -41,11 +41,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
                     {
                         item.HigienistasIpsValor = HigientistasIps.FirstOrDefault(a => a.Identificador == item.PlanTratamientoEntity.PrestadorHigienista);
                     }
+                    if (item.PlanTratamientoEntity != null && item.PlanTratamientoEntity.Especialidad > 0)
+                    {
+                       item.ProcedimientosEspecialidadValor = ProcedimientosEspecialidad.FirstOrDefault(a => a.Identificador == item.PlanTratamientoEntity.Especialidad);
+                    }
                 }
             }
             catch(Exception ex)
             {
-
+                throw new ArgumentException(ex.Message, ex);
             }
         }
     }
