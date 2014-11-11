@@ -1,5 +1,7 @@
 ﻿using Cnt.Panacea.Entities.Odontologia;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
+using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -34,6 +36,7 @@ namespace App2.Grillas
             Variables_Globales.IdTratamientoActivo = item.Identificador;
             var PacienteViewModel = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
             PacienteViewModel.seleccionarTratamiento(item);
+            Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
         }
     }
 }

@@ -269,7 +269,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             OdontogramasPacienteEntity.Tratamiento = Padre.Identificador;
 
             TratamientoPadre.Convenio = new ConvenioEntity {Identificador = Variables_Globales.IdConvenio};
-            TratamientoPadre.Descripcion = DescripcionTratamiento;
+
+            // Para windows 8 no funciona el command de descripcion command entonces se usa el binding            
+            if (Variables_Globales.Modo != Odontologia.Vm.Util.Modos.Modo.windows8)
+            {
+                TratamientoPadre.Descripcion = DescripcionTratamiento;
+            }
 
             if (JustificacionModificacionTratamiento != String.Empty)
             {

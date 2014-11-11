@@ -31,7 +31,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public async Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
-        {   
+        {
+            Busy.UserControlCargando(true, "Guardando odontograma evolucion");
+
+            //Se guarda lo mismo que en plan de tratamiento pero con el plan actualizado
+            //Es decir hoy se le realiza una calsa entonces se actualiza eso
+            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
+            odontogramaInsertar = Variables_Globales.PCL.PlanTratamiento;
+            odontogramaInsertar.odontogramaEvolucion = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento;
+
+
             foreach (PlanTratamientoEntity pivot in Planes)
             {                
                 if (pivot.Articulos != null)
@@ -53,21 +62,19 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                     var elemento = Planes.First(a => a.Identificador == item.Identificador);
                     item.PlanTratamiento = Convertir_Observables.ConvertirEntidades(elemento, new Hefesoft.Entities.Odontologia.Odontograma.PlanTratamientoEntity());
                 }
-            }
-                        
-            //Se guarda lo mismo que en plan de tratamiento pero con el plan actualizado
-            //Es decir hoy se le realiza una calsa entonces se actualiza eso
-            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();            
-            odontogramaInsertar = Variables_Globales.PCL.PlanTratamiento;
+            }                        
+            
             
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
 
             //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
             //Se actualizan los valores
             Variables_Globales.PCL.PlanTratamiento.tratamiento.RowKey = Variables_Globales.PCL.PlanTratamiento.RowKey;
-            var tratamientoTableStorage = await Variables_Globales.PCL.PlanTratamiento.tratamiento.postTable();            
-            
-            return true;
+            var tratamientoTableStorage = await Variables_Globales.PCL.PlanTratamiento.tratamiento.postTable();
+
+            Busy.UserControlCargando(false);
+
+            return true;            
         }
 
         public Task<bool> Actualizartratamiento(TratamientoEntity Tratamiento)

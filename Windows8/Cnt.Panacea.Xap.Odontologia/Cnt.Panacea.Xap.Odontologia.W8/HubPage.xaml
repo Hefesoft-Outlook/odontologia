@@ -75,7 +75,7 @@
 				</HubSection.Background>
 			</HubSection>
             
-			<HubSection Width="800" Margin="0,0,20,0">
+			<HubSection Width="900" Margin="0,0,20,0">
 				<DataTemplate>
 					<Pacientes:PacienteTratamientos/>
 				</DataTemplate>

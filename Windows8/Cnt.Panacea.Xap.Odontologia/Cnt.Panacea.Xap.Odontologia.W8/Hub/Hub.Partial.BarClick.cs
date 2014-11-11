@@ -1,5 +1,10 @@
-﻿using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
+﻿using Cnt.Panacea.Xap.Odontologia.Util.Messenger;
+using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta;
+using GalaSoft.MvvmLight.Messaging;
 using Hefesoft.Entities.Odontologia.Odontograma;
 using Microsoft.Practices.ServiceLocation;
 using System;
@@ -17,6 +22,36 @@ namespace App2
 {
     public sealed partial class HubPage : Page, IDisposable
     {
+
+        private void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            if (Variables_Globales.Tipo_Odontograma_Activo == Tipo_Odontograma.Inicial)
+            {
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Guardar_Barra_Comando(), "Inicial");
+            }
+            else if (Variables_Globales.Tipo_Odontograma_Activo == Tipo_Odontograma.Plan_Tratamiento)
+            {
+                var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
+                vm.pedirDatosGrilla();
+            }
+            else if (Variables_Globales.Tipo_Odontograma_Activo == Tipo_Odontograma.Evolucion)
+            {
+                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
+            }
+        }
+
+        private void BttnNuevo_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            // Indicarle a los formularios que deben estar en estado  odontograma inicial
+            Variables_Globales.IdTratamientoActivo = 2;
+            Variables_Globales.Tipo_Odontograma_Activo = Tipo_Odontograma.Inicial;
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Pedir_Pintar_Datos() { nuevoOdontograma = true });
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new cargar_Diagnosticos_Procedimientos() { tipo = Tipo.todos });
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Activar_Elementos() { valor = "Nuevo" });
+            Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
+        }
+
         private void inicial_Click(object sender, RoutedEventArgs e)
         {
             var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
