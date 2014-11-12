@@ -85,7 +85,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         /// <summary>
         /// Plan de tratamiento para el procedimiento
         /// </summary>
-        public PlanTratamientoEntity PlanTratamientoEntity { get; set; }
+        private PlanTratamientoEntity planTratamientoEntity = new PlanTratamientoEntity();
+
+        public PlanTratamientoEntity PlanTratamientoEntity
+        {
+            get { return planTratamientoEntity; }
+            set { planTratamientoEntity = value; RaisePropertyChanged("PlanTratamientoEntity"); }
+        }
+        
 
         /// <summary>
         /// Opciones de procedimiento seleccionado
@@ -253,7 +260,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         /// <summary>
         /// El procedimiento se encuentra realizado
         /// </summary>
-        public bool Realizado { get; set; }
+        public bool Realizado { get; set; }  
+      
         /// <summary>
         /// Numero de factura asociado al procedimiento
         /// </summary>
@@ -316,6 +324,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
 
         public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
 
-        #endregion
+        #endregion        
     }
 }

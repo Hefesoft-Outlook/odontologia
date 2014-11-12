@@ -121,31 +121,37 @@
 								</Grid.ColumnDefinitions>
 								<Border Width="60" Height="60">
 
-                                    <StackPanel Orientation="Horizontal">
+                                    <Grid>
+                                        <Odontologia:SuperficieCompleta
+                                            HorizontalAlignment="Center" 
+            		                        VerticalAlignment="Top" 
+            		                        DataContext="{Binding Odontograma}" 
+            		                        IsEnabled="False" 
+            		                        IsHitTestVisible="False" 
+            		                        IsDoubleTapEnabled="False" 
+            		                        IsHoldingEnabled="False" 
+            		                        IsRightTapEnabled="False"                                             
+            		                        IsTapEnabled="False" />
 
-                                        <Odontologia:SuperficieCompleta                                 
-            		            HorizontalAlignment="Center" 
-            		            VerticalAlignment="Top" 
-            		            DataContext="{Binding Odontograma}" 
-            		            IsEnabled="False" 
-            		            IsHitTestVisible="False" 
-            		            IsDoubleTapEnabled="False" 
-            		            IsHoldingEnabled="False" 
-            		            IsRightTapEnabled="False" 
-            		            IsTapEnabled="False" />
+                                        <!--Muestra si el procedimiento esta realizado -->
+                                        <Odontologia:SuperficieCompleta
+                                            HorizontalAlignment="Center" 
+            		                        VerticalAlignment="Top"             		                        
+            		                        IsEnabled="False" 
+            		                        IsHitTestVisible="False" 
+            		                        IsDoubleTapEnabled="False" 
+            		                        IsHoldingEnabled="False" 
+            		                        IsRightTapEnabled="False" 
+                                            realizadoPiezaCompleta="{Binding PlanTratamientoEntity.EstadoProcedimiento, Mode=TwoWay}"
+            		                        IsTapEnabled="False" />
 
-                                        <!--Falta-->
-                                        <Assets:elementoMenu 
-                                        Visibility="Collapsed"
-                                        Item="{Binding ConfigurarDiagnosticoProcedimOtraEntity}" FontFamily="Global User Interface"  />
-
-                                    </StackPanel>
+                                    </Grid>
 
                                 </Border>
 								<StackPanel Grid.Column="1" Margin="10,0,0,0">
 									<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
 									<TextBlock Text="{Binding NombreSuperficie}" Style="{StaticResource CaptionTextBlockStyle}" TextWrapping="NoWrap"/>
-									           <TextBlock Text="{Binding ConfigurarDiagnosticoProcedimOtraEntity.Descripcion}"></TextBlock>
+									<TextBlock Text="{Binding ConfigurarDiagnosticoProcedimOtraEntity.Descripcion}"></TextBlock>
 								</StackPanel>
 							</Grid>
 						</DataTemplate>
@@ -190,8 +196,8 @@
 								<TextBlock Text="{Binding Odontograma.codigoSPiezaDental, FallbackValue=No Pieza dental}" Style="{StaticResource SubheaderTextBlockStyle}" Margin="0,-10,0,0"/>
 								<TextBlock Text="{Binding NombreSuperficie, FallbackValue=Nombre superficie}" Style="{StaticResource SubtitleTextBlockStyle}" Margin="0,10,0,0"/>
 								<TextBlock Text="{Binding OdontogramaEntity.Procedimiento.Procedimiento.NombreAlterno, FallbackValue=Nombre procedimiento}" Margin="0,10,0,0"/>
-
 							</StackPanel>
+                            
 							<Assets:elementoMenu
 								Width="100"
 								Item="{Binding SelectedItem.ConfigurarDiagnosticoProcedimOtraEntity, ElementName=itemListView, Mode=TwoWay}" HorizontalAlignment="Center" Margin="20,0,0,0"  />
@@ -203,7 +209,7 @@
 						<!--Estado del procedimiento-->
 							<TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
 							<CheckBox 
-								Click="realizado_Click"
+								Click="realizado_Click"                                
 								VerticalAlignment="Stretch" 
 								x:Name="checkBox"
 								IsEnabled="True" 
