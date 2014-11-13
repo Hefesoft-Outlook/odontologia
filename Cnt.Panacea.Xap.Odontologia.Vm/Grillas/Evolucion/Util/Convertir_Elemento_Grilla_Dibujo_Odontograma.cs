@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -18,5 +19,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
                 item.ConfigurarDiagnosticoProcedimOtraEntity = diagnosticoExtend.ConfigurarDiagnosticoProcedimOtraEntity;
             }
         }
+
+      
     }
 }

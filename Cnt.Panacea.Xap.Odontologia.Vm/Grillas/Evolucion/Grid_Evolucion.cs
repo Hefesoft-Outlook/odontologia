@@ -34,7 +34,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 //Crear datos de prueba
                 datosPruebaFinalidadProcedimiento();
 
-
                 realizadoCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(procedimientoRealizado);
                 bodegaCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(bodega);
                 cambioSesionCommand = new RelayCommand<int>(SesionCambiada);
@@ -191,13 +190,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         private Task<bool> generarGrilla(ObservableCollection<OdontogramaEntity> resultado)
         {
+            Busy.UserControlCargando(true, "Cargando sesiones");
+
             var tarea = new TaskCompletionSource<bool>();
             List<ProcedimientosGrillaEvolucion> lst = new List<ProcedimientosGrillaEvolucion>(); 
 
             foreach (var item in resultado)
             {
                 var elementoAgregar = new ProcedimientosGrillaEvolucion()
-                {
+                {                    
                     NombreSuperficie = item.Superficie.ToString(),
                     OdontogramaEntity = item,                    
                     PlanTratamientoEntity = item.PlanTratamiento,
@@ -238,6 +239,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
             tarea.TrySetResult(true);
 
+
+            Busy.UserControlCargando(false);
             return tarea.Task;
         }
 

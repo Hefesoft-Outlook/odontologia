@@ -1,5 +1,7 @@
 ﻿using App2.Common;
+using Cnt.Panacea.Xap.Odontologia;
 using Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util;
+using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
 using GalaSoft.MvvmLight.Messaging;
 using Microsoft.Practices.ServiceLocation;
 using System;
@@ -45,7 +47,10 @@ namespace App2.Grillas.Evolucion
             var item = ch.DataContext as ProcedimientosGrillaEvolucion;
             vm.procedimientoRealizado(item);
         }
+<<<<<<< HEAD
 
         public Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion vm { get; set; }        
+=======
+>>>>>>> origin/master
     }
 }
