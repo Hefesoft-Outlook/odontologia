@@ -103,7 +103,30 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         public PlanTratamientoEntity PlanTratamientoEntity
         {
             get { return planTratamientoEntity; }
-            set { planTratamientoEntity = value; RaisePropertyChanged("PlanTratamientoEntity"); }
+            set 
+            { 
+                planTratamientoEntity = value; 
+                RaisePropertyChanged("PlanTratamientoEntity"); 
+            }
+        }
+
+        private string observaciones;
+
+        /// <summary>
+        /// Observaciones que se realizan en el odontograma evolucion
+        /// </summary>
+        public string Observaciones
+        {
+            get { return observaciones; }
+            set 
+            { 
+                observaciones = value;
+                
+                PlanTratamientoEntity.Observaciones = value;
+                OdontogramaEntity.PlanTratamiento.Observaciones = value;
+
+                RaisePropertyChanged("Observaciones");
+            }
         }
         
 
@@ -265,15 +288,29 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         /// <summary>
         /// Numero de sessiones para este procedimiento
         /// </summary>
-        public string SesionesProcedimiento { get; set; }
-        /// <summary>
-        /// Observaciones que se realizan en el odontograma evolucion
-        /// </summary>
-        public string Observaciones { get; set; }
+        public string SesionesProcedimiento { get; set; }        
+        
         /// <summary>
         /// El procedimiento se encuentra realizado
         /// </summary>
-        public bool Realizado { get; set; }  
+        private bool realizado;
+
+        public bool Realizado
+        {
+            get { return realizado; }
+            set 
+            { 
+                realizado = value; 
+
+                if(PlanTratamientoEntity != null)
+                {
+                    PlanTratamientoEntity.EstadoProcedimiento = value;
+                }
+
+                RaisePropertyChanged("Realizado"); 
+            }
+        }
+        
       
         /// <summary>
         /// Numero de factura asociado al procedimiento

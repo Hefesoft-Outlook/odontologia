@@ -12,7 +12,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
     public class Convertir_Elementos_Grilla_Plan_Evolucion
     {
         // Convierte lo que viene de la grilla en un listado que se puede guardar
-        internal PlanesTratamientoCollection_Extend convertirGrillaPlanes(ObservableCollection<ProcedimientosGrillaEvolucion> lst)
+        internal PlanesTratamientoCollection_Extend convertirGrillaPlanes(IEnumerable<ProcedimientosGrillaEvolucion> lst)
         {
             var Planes = new PlanesTratamientoCollection_Extend();
             Planes.PlanesTratamientoCollection = new PlanesTratamientoCollection();
@@ -23,13 +23,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
                 {
                     Planes.FinalizaTratamiento = false;
                 }
-
-                OdontogramaEntity odontograma = new Entities.Odontologia.OdontogramaEntity() { Identificador = pivot.PlanTratamientoEntity.Identificador };
+                
                 pivot.PlanTratamientoEntity.EstadoRegistro = EstadosEntidad.Modificado;
-                pivot.PlanTratamientoEntity.Padre = odontograma;
+                pivot.PlanTratamientoEntity.Padre = pivot.OdontogramaEntity;
+                pivot.PlanTratamientoEntity.Identificador = pivot.OdontogramaEntity.Identificador;
 
-
-                if (pivot.PlanTratamientoEntity.EstadoProcedimiento && !pivot.Realizado)
+                if (pivot.PlanTratamientoEntity.EstadoProcedimiento)
                 {
                     pivot.PlanTratamientoEntity.FinalidadProcedimiento = pivot.FinalidadesProcedimientoValor.Identificador;
 
@@ -37,7 +36,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
                     {
                         pivot.PlanTratamientoEntity.IdPrestadorRealiza = pivot.OdontologosHigienistasIpsValor.Identificador;
                     }
-
 
                     pivot.PlanTratamientoEntity.SesionesPlanTratamiento.FirstOrDefault().SesionRealizada = true;
                     pivot.PlanTratamientoEntity.SesionesPlanTratamiento.FirstOrDefault().EstadoRegistro = EstadosEntidad.Modificado;

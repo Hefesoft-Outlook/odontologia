@@ -34,6 +34,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 //Crear datos de prueba
                 datosPruebaFinalidadProcedimiento();
 
+                var vmEvolucion = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Evolucion>();
+                FinalidadesProcedimiento = vmEvolucion.FinalidadesProcedimiento;
+                OdontologosHigienistasIps = vmEvolucion.OdontologosHigienistasIps;
+
                 realizadoCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(procedimientoRealizado);
                 bodegaCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(bodega);
                 cambioSesionCommand = new RelayCommand<int>(SesionCambiada);
@@ -117,9 +121,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 tratamientoActivo(TratamientoPadre.Identificador);
                 await SesionesConfiguradasTratamientos();
 
-                FinalidadesProcedimiento = await Contexto_Odontologia.obtenerContexto().ListarFinalidadesProcedimiento(Variables_Globales.IdIps);
-                OdontologosHigienistasIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
-
                 IdReciboCaja = await Contexto_Odontologia.obtenerContexto().ReciboCajaTratamiento(Variables_Globales.IdTratamientoActivo);
 
                 if (TratamientoPadre.IdSesionActual != null)
@@ -194,17 +195,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
             var tarea = new TaskCompletionSource<bool>();
             List<ProcedimientosGrillaEvolucion> lst = new List<ProcedimientosGrillaEvolucion>(); 
-
+            
             foreach (var item in resultado)
             {
+                var finalidadProcedimientoValor = FinalidadesProcedimiento.FirstOrDefault(a => a.Identificador == item.PlanTratamiento.FinalidadProcedimiento);
+                var odontologoHigienista = OdontologosHigienistasIps.FirstOrDefault(a=>a.Identificador == item.PlanTratamiento.PrestadorOdontologo);
+
                 var elementoAgregar = new ProcedimientosGrillaEvolucion()
                 {                    
+                    Realizado = item.PlanTratamiento.EstadoProcedimiento,
                     NombreSuperficie = item.Superficie.ToString(),
                     OdontogramaEntity = item,                    
                     PlanTratamientoEntity = item.PlanTratamiento,
                     Sesion = item.PlanTratamiento.SesionesPlanTratamiento,
                     Odontograma = new Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma(item.Diente.Identificador.ToString()),
-                    ProcedimientoEntity = item.Procedimiento
+                    ProcedimientoEntity = item.Procedimiento,
+                    FinalidadesProcedimientoValor = finalidadProcedimientoValor,
+                    OdontologosHigienistasIpsValor = odontologoHigienista,
+                    Observaciones = item.PlanTratamiento.Observaciones
                 };
 
                 //Le decimos al mapa dental que marque el procedimiento como realizado

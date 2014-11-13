@@ -30,6 +30,12 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             return null;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Tratamiento"></param>
+        /// <param name="Planes"></param>
+        /// <returns></returns>
         public async Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
         {
             Busy.UserControlCargando(true, "Guardando odontograma evolucion");
@@ -38,19 +44,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //Es decir hoy se le realiza una calsa entonces se actualiza eso
             var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
             odontogramaInsertar = Variables_Globales.PCL.PlanTratamiento;
-            odontogramaInsertar.odontogramaEvolucion = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento;
 
-
-            foreach (PlanTratamientoEntity pivot in Planes)
-            {                
-                if (pivot.Articulos != null)
-                {
-                    for (int i = 0; i <= pivot.Articulos.Count - 1; i++)
-                    {
-                        pivot.Articulos[i].Identificador = i;
-                    }
-                }
+            if (!odontogramaInsertar.odontogramaEvolucion.Any())
+            {
+                odontogramaInsertar.odontogramaEvolucion = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento;
             }
+
+
+            articulos(Planes);
 
             // Actualiza el odontograma con el plan de tratamiento despues de
             // Hacer los cambios en evolucion
@@ -59,6 +60,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 var existe = Planes.Any(a => a.Identificador == item.Identificador);
                 if(existe)
                 {
+                    //El identificador de plan de tratamiento es el mismo del odontograma
                     var elemento = Planes.First(a => a.Identificador == item.Identificador);
                     item.PlanTratamiento = Convertir_Observables.ConvertirEntidades(elemento, new Hefesoft.Entities.Odontologia.Odontograma.PlanTratamientoEntity());
                 }
@@ -75,6 +77,20 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             Busy.UserControlCargando(false);
 
             return true;            
+        }
+
+        private static void articulos(PlanesTratamientoCollection Planes)
+        {
+            foreach (PlanTratamientoEntity pivot in Planes)
+            {
+                if (pivot.Articulos != null)
+                {
+                    for (int i = 0; i <= pivot.Articulos.Count - 1; i++)
+                    {
+                        pivot.Articulos[i].Identificador = i;
+                    }
+                }
+            }
         }
 
         public Task<bool> Actualizartratamiento(TratamientoEntity Tratamiento)
@@ -499,7 +515,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
                 Variables_Globales.IdTratamientoActivo = Variables_Globales.TratamientosPadre.Identificador;
 
                 TratamientoEntity entidadConvertida = Convertir_Observables.ConvertirEntidades(Variables_Globales.PCL.PlanTratamiento.tratamiento, new TratamientoEntity());
-                lstOdontogramas = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
+
+                if (Variables_Globales.Tipo_Odontograma_Activo == Messenger.Odontograma.Tipo.Tipo_Odontograma.Plan_Tratamiento)
+                {
+                    lstOdontogramas = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
+                }
+                else if (Variables_Globales.Tipo_Odontograma_Activo == Messenger.Odontograma.Tipo.Tipo_Odontograma.Evolucion)
+                {
+                    lstOdontogramas = Variables_Globales.PCL.PlanTratamiento.odontogramaEvolucion.ToObservableCollection().ConvertirObservables(new ObservableCollection<OdontogramaEntity>());
+                }
             }
             else
             {

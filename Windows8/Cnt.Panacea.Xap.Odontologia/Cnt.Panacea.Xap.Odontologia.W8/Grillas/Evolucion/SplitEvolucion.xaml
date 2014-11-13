@@ -120,28 +120,6 @@
 									<ColumnDefinition Width="*"/>
 								</Grid.ColumnDefinitions>
 								<Border Width="60" Height="60">
-
-<<<<<<< HEAD
-                                    <StackPanel Orientation="Horizontal">
-
-                                        <Odontologia:SuperficieCompleta                                            
-            		                        HorizontalAlignment="Center" 
-            		                        VerticalAlignment="Top" 
-            		                        DataContext="{Binding Odontograma}" 
-            		                        IsEnabled="False"                                            
-            		                        IsHitTestVisible="False" 
-            		                        IsDoubleTapEnabled="False" 
-            		                        IsHoldingEnabled="False" 
-            		                        IsRightTapEnabled="False" 
-            		                        IsTapEnabled="False" />
-
-                                        <!--Falta-->
-                                        <Assets:elementoMenu 
-                                        Visibility="Collapsed"
-                                        Item="{Binding ConfigurarDiagnosticoProcedimOtraEntity}" FontFamily="Global User Interface"  />
-
-                                    </StackPanel>
-=======
                                     <Grid>
                                         <Odontologia:SuperficieCompleta
                                             HorizontalAlignment="Center" 
@@ -163,12 +141,9 @@
             		                        IsDoubleTapEnabled="False" 
             		                        IsHoldingEnabled="False" 
             		                        IsRightTapEnabled="False" 
-                                            realizadoPiezaCompleta="{Binding PlanTratamientoEntity.EstadoProcedimiento, Mode=TwoWay}"
+                                            realizadoPiezaCompleta="{Binding Realizado, Mode=TwoWay}"
             		                        IsTapEnabled="False" />
-
                                     </Grid>
->>>>>>> origin/master
-
                                 </Border>
 								<StackPanel Grid.Column="1" Margin="10,0,0,0">
 									<TextBlock Text="{Binding Odontograma.codigoSPiezaDental}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
@@ -230,16 +205,12 @@
                         
 						<!--Estado del procedimiento-->
 							<TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
-							<CheckBox 
-<<<<<<< HEAD
-								Click="realizado_Click"                        
-=======
-								Click="realizado_Click"                                
->>>>>>> origin/master
+							<CheckBox
+								Click="realizado_Click"
 								VerticalAlignment="Stretch" 
 								x:Name="checkBox"
 								IsEnabled="True" 
-								IsChecked="{Binding SelectedItem.PlanTratamientoEntity.EstadoProcedimiento, ElementName=itemListView, Mode=TwoWay}" 
+								IsChecked="{Binding SelectedItem.Realizado, ElementName=itemListView, Mode=TwoWay}" 
 								FontFamily="Global User Interface"/>
 
 						<!--Legalizado-->
@@ -268,9 +239,10 @@
                         
 						<!--Observaciones-->
 							<TextBlock Text="{Binding Mensajes.Observaciones, Source={StaticResource publicResource}}"/>
-							<TextBox 
+							
+                            <TextBox 
 								AcceptsReturn="True" 
-								Text="{Binding SelectedItem.PlanTratamientoEntity.Observaciones, ElementName=itemListView, Mode=TwoWay}" 
+								Text="{Binding SelectedItem.Observaciones, ElementName=itemListView, Mode=TwoWay}" 
 								TextWrapping="Wrap" FontFamily="Global User Interface"/>
 
 							<Button x:Name="BttnGuardar" Content="Guardar" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BttnGuardar_Click"/>

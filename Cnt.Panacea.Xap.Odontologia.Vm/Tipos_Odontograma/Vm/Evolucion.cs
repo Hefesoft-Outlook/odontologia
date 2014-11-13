@@ -13,6 +13,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using GalaSoft.MvvmLight.Command;
+using System.Collections.ObjectModel;
 
 namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 {
@@ -25,11 +26,18 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             }
             else
             {
+                inicializarElementos();
                 usuarioAbandonoCommand = new RelayCommand(Abandono);
                 oirGuardar();
                 oirCambioOdontograma();
                 oirFinalizarTratamiento();
             }
+        }
+
+        private async void inicializarElementos()
+        {
+            FinalidadesProcedimiento = await Contexto_Odontologia.obtenerContexto().ListarFinalidadesProcedimiento(Variables_Globales.IdIps);
+            OdontologosHigienistasIps = await Contexto_Odontologia.obtenerContexto().ListarOdontologosPorIps(Variables_Globales.IdIps);
         }
 
         private void Abandono()
@@ -112,7 +120,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             var GrillaEvolucion = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
             
             bool mensajeObservacion = false;
-            Planes = new Convertir_Elementos_Grilla_Plan_Evolucion().convertirGrillaPlanes(GrillaEvolucion.ListadoEvolucion);
+            Planes = new Convertir_Elementos_Grilla_Plan_Evolucion().convertirGrillaPlanes(GrillaEvolucion.ListadoEvolucionTodos);
 
             if (Planes.PlanesTratamientoCollection.Any())
             {
@@ -194,6 +202,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
         public TratamientoEntity TratamientoPadre { get; set; }
 
         public bool FinalizaCumplimientoProcedimientos { get; set; }
+
+        public ObservableCollection<Entities.Parametrizacion.FinalidadProcedimientoEntity> FinalidadesProcedimiento { get; set; }
+
+        public ObservableCollection<Entities.Parametrizacion.TerceroEntity> OdontologosHigienistasIps { get; set; }
+
         #endregion
 
         public void Dispose()

@@ -100,7 +100,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
             lstTemp.AddRange(ls8);
 
             lst = extraerProcedimientosDiagnosticos(lstTemp);
-
             return lst;
         }
 

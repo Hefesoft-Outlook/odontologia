@@ -27,7 +27,7 @@ namespace App2.Grillas.Evolucion
     {
         public SplitEvolucion()
         {
-            this.InitializeComponent();
+            InitializeComponent();
             vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
         }
 
@@ -47,10 +47,9 @@ namespace App2.Grillas.Evolucion
             var item = ch.DataContext as ProcedimientosGrillaEvolucion;
             vm.procedimientoRealizado(item);
         }
-<<<<<<< HEAD
+
 
         public Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion vm { get; set; }        
-=======
->>>>>>> origin/master
+
     }
 }

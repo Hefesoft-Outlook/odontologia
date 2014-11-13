@@ -81,6 +81,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
             {
                 var valido = validaciones.validarTieneElementos(vm, vm.Modo.Tipo_Odontograma);
                 var elementos = validaciones.convertirAEntidadesOdontogramaEntityTodos(vm);
+                generarConsecutivosOdontograma(elementos);
+
                 // Envia la respuesta a la peticion
                 peticion.lstGuardar(elementos);
             }
@@ -88,6 +90,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
             {
                 var valido = validaciones.validarTieneElementos(vm, vm.Modo.Tipo_Odontograma);
                 var elementos = validaciones.convertirAEntidadesOdontogramaEntity(vm, vm.Modo.Tipo_Odontograma);
+                generarConsecutivosOdontograma(elementos);
                 // Envia la respuesta a la peticion
                 peticion.lstGuardar(elementos);
             }
@@ -97,6 +100,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Mapa_dental
                 var elementos = validaciones.convertirAEntidadesOdontogramaEntity(vm, peticion.Pedir_Tipos_Guardar);
                 // Envia la respuesta a la peticion
                 peticion.lstGuardar(elementos);
+            }
+        }
+
+        private static void generarConsecutivosOdontograma(List<OdontogramaEntity> elementos)
+        {
+            int i = 1;
+            foreach (var item in elementos)
+            {
+                item.Identificador = i;
+                i = i + 1;
             }
         }
 

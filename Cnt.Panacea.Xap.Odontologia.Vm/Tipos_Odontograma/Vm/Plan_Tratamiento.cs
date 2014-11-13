@@ -234,7 +234,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                     {
                         elementoAgregar.OdontogramaEntity = new OdontogramaEntity();
                         elementoAgregar.OdontogramaEntity = item;
-
                         elementoAgregar.OdontogramaEntity.PlanTratamiento = new PlanTratamientoEntity();
                         elementoAgregar.OdontogramaEntity.PlanTratamiento.Convenio = Variables_Globales.IdConvenio;                        
                         elementoAgregar.OdontogramaEntity.PlanTratamiento.EstadoProcedimiento = false;
@@ -244,11 +243,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                         elementoAgregar.OdontogramaEntity.PlanTratamiento.SesionesPlanTratamiento = new SesionesPlanTratamientosCollection();
                         elementoAgregar.OdontogramaEntity.PlanTratamiento.Usuario = Variables_Globales.UsuarioActual;
                         elementoAgregar.OdontogramaEntity.PlanTratamiento.Activo = true;
-
-
                         elementoAgregar.OdontogramaEntity.Identificador = i + 1;
                         elementoAgregar.OdontogramaEntity.Inicial = false;
-
                     }
                     // Contador identificador
                     i = i + 1;
@@ -430,7 +426,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             {
                 Listado = Listado.inicializarListaYLimpiar();
                 convertirProcedimientosGrillaPlanTratamiento(obj);
-
                 mostrarVentana();
             }
             catch { }
