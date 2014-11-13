@@ -63,6 +63,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                 Tiene_Diagnosticos = new Tiene_Diagnosticos();
                 Estado_Deshacer = new Estado_DesHacer();                
                 ClickCommand = new RelayCommand<string>(click);
+                Estado_Deshacer.Estado = false;
+
                 diagnosticoSeleccionado();
                 oirTipoOdontograma();
                 oirDesHacer();                
@@ -344,7 +346,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
             if (Paleta_Selecionado != null)
             {
                 //Cuando el check de deshacer esta seleccionado se va por este lado
-                if (Estado_Deshacer.Estado)
+                if (Estado_Deshacer != null && Estado_Deshacer.Estado)
                 {
                     var resultadoDeshacer = DiagnosticoProcedimiento.desHacerOdontograma(Paleta_Selecionado, Tipo_Odontograma_Actual, SuperficieSeleccionada);
                 }

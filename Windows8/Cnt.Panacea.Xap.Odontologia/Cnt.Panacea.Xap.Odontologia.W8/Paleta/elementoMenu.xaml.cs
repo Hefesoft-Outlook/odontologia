@@ -124,9 +124,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets
             {
                 border1.BorderBrush = new SolidColorBrush(Colors.Blue);
             }
-        }
-
-     
+        }     
 
         #endregion
 

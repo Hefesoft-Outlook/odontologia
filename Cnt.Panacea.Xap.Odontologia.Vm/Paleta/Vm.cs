@@ -48,6 +48,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
                 cargarDiagnosticos();
                 Listado = new Cnt.Panacea.Xap.Odontologia.Vm.Datos_de_prueba.Paleta().datos.ToObservableCollection();
 
+                oirCambioOdontograma();
                 datosProvenientesOtrosFormularios();
                 oirNumeroPiezasDentalesDelOdontogramaInicial();
                 oirNuevoTratamiento();
@@ -62,6 +63,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
             oirCargarProcedimientosdaoListadoIds();
             oirNumeroPiezasDentalesDelOdontogramaInicial();
             RaisePropertyChanged("NivelesSeveridad");
+        }
+
+        private void oirCambioOdontograma()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cambiar_Tipo_Odontograma>(this, item => 
+            { 
+                if(item.Tipo_Odontograma == Tipo_Odontograma.Inicial)
+                {
+                    Listado = ListadoTodos.ToObservableCollection();
+                    cargarListadoWindows8(Listado);
+                }
+                else if (item.Tipo_Odontograma == Tipo_Odontograma.Plan_Tratamiento)
+                {
+                    Listado = ListadoTodos.Where(a => a.TipoPanel != TipoPanel.Diagnostico).OrderBy(a => a.Descripcion).ToObservableCollection();
+                    cargarListadoWindows8(Listado);
+                }
+            
+            });
         }
 
         private void diagnosticoProcedimientoSeleccionado(ConfigurarDiagnosticoProcedimOtraEntity obj)
@@ -261,13 +280,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
 
         private void datosProvenientesOtrosFormularios()
         {
-
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Paleta>(this, Item =>
             {
 
             });
         }
-
 
         private async void cargaNivelSeveridad()
         {
@@ -341,6 +358,30 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
             }
         }
 
+        public double Numero_Piezas_Dentales_Actual { get; set; }
+
+        public RelayCommand<ConfigurarDiagnosticoProcedimOtraEntity> seleccionadoCommand { get; set; }
+
+        public ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity_Extend> Listado_Windows8 { get; set; }
+
+        private ConfigurarDiagnosticoProcedimOtraEntity_Extend seleccionadoW8;
+
+        public ConfigurarDiagnosticoProcedimOtraEntity_Extend SeleccionadoW8
+        {
+            get { return seleccionadoW8; }
+            set
+            {
+                if (value != null)
+                {
+                    seleccionadoW8 = value;
+                    GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(value.ConfigurarDiagnosticoProcedimOtraEntity);
+                    RaisePropertyChanged("SeleccionadoW8");
+                }
+            }
+        }
+
+        public string Texto_Aplica_A { get; set; }
+
 
         public ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity> Convenios { get; set; }
 
@@ -355,32 +396,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Paleta
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<double>(this);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Carga_Odontograma_Inicial>(this);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this);
-        }
-
-
-        public double Numero_Piezas_Dentales_Actual { get; set; }
-
-        public RelayCommand<ConfigurarDiagnosticoProcedimOtraEntity> seleccionadoCommand { get; set; }
-
-        public ObservableCollection<ConfigurarDiagnosticoProcedimOtraEntity_Extend> Listado_Windows8 { get; set; }
-
-        private ConfigurarDiagnosticoProcedimOtraEntity_Extend seleccionadoW8;
-
-        public ConfigurarDiagnosticoProcedimOtraEntity_Extend SeleccionadoW8
-        {
-            get { return seleccionadoW8; }
-            set 
-            {
-                if (value != null)
-                {
-                    seleccionadoW8 = value;
-                    GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(value.ConfigurarDiagnosticoProcedimOtraEntity);
-                    RaisePropertyChanged("SeleccionadoW8");
-                }
-            }
-        }
-
-
-        public string Texto_Aplica_A { get; set; }
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cambiar_Tipo_Odontograma>(this);
+        }        
     }
 }

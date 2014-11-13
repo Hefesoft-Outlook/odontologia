@@ -45,10 +45,12 @@ public static class Convertir_Observables
              Mapper.CreateMap<T, P>();
              Entidad = Mapper.DynamicMap<P>(source);
 
-             var identificador = Convert.ToInt64((source.GetType().GetProperty("RowKey").GetValue(source, null)));
-             PropertyInfo propertyInfo = Entidad.GetType().GetProperty("Identificador");
-             propertyInfo.SetValue(Entidad, identificador, null);
-
+             if (HasProperty(source, "RowKey"))
+             {
+                 var identificador = Convert.ToInt64((source.GetType().GetProperty("RowKey").GetValue(source, null)));
+                 PropertyInfo propertyInfo = Entidad.GetType().GetProperty("Identificador");
+                 propertyInfo.SetValue(Entidad, identificador, null);
+             }
          }
          catch
          {
@@ -107,6 +109,11 @@ public static class Convertir_Observables
          }
 
          return lst;
+     }
+
+     public static bool HasProperty(this object obj, string propertyName)
+     {
+         return obj.GetType().GetProperty(propertyName) != null;
      }
 }
 

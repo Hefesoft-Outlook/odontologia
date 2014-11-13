@@ -433,6 +433,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             // 2 forma
             Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento = odontogramaTratamiento.ConvertirIEnumerable(Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento);
+            
+            //Se inicializa el odontogram de evolucion con datos
+            Variables_Globales.PCL.PlanTratamiento.odontogramaEvolucion = Variables_Globales.PCL.PlanTratamiento.odontogramaPlanTratamiento;
+
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await Variables_Globales.PCL.PlanTratamiento.postBlob();
 
             //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
