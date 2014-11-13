@@ -104,7 +104,7 @@
         
 
 				<ListView
-					x:Name="itemListView"
+					x:Name="itemListView"                    
 					AutomationProperties.AutomationId="ItemsListView"
 					AutomationProperties.Name="Items"
 					TabIndex="1"
@@ -123,16 +123,16 @@
 
                                     <StackPanel Orientation="Horizontal">
 
-                                        <Odontologia:SuperficieCompleta                                 
-            		            HorizontalAlignment="Center" 
-            		            VerticalAlignment="Top" 
-            		            DataContext="{Binding Odontograma}" 
-            		            IsEnabled="False" 
-            		            IsHitTestVisible="False" 
-            		            IsDoubleTapEnabled="False" 
-            		            IsHoldingEnabled="False" 
-            		            IsRightTapEnabled="False" 
-            		            IsTapEnabled="False" />
+                                        <Odontologia:SuperficieCompleta                                            
+            		                        HorizontalAlignment="Center" 
+            		                        VerticalAlignment="Top" 
+            		                        DataContext="{Binding Odontograma}" 
+            		                        IsEnabled="False"                                            
+            		                        IsHitTestVisible="False" 
+            		                        IsDoubleTapEnabled="False" 
+            		                        IsHoldingEnabled="False" 
+            		                        IsRightTapEnabled="False" 
+            		                        IsTapEnabled="False" />
 
                                         <!--Falta-->
                                         <Assets:elementoMenu 
@@ -203,7 +203,7 @@
 						<!--Estado del procedimiento-->
 							<TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
 							<CheckBox 
-								Click="realizado_Click"
+								Click="realizado_Click"                        
 								VerticalAlignment="Stretch" 
 								x:Name="checkBox"
 								IsEnabled="True" 
@@ -213,7 +213,8 @@
 						<!--Legalizado-->
 							<TextBlock Text="{Binding Mensajes.Procedimientos_Legalizados, Source={StaticResource publicResource}}"/>
 							<CheckBox VerticalAlignment="Stretch" 
-								IsEnabled="False" IsChecked="{Binding SelectedItem.Legalizado, ElementName=itemListView, Mode=TwoWay}" 
+								IsEnabled="False" 
+                                IsChecked="{Binding SelectedItem.Legalizado, ElementName=itemListView, Mode=TwoWay}" 
 								FontFamily="Global User Interface"/>
 
 						<!--Odontologos e Higienistas-->

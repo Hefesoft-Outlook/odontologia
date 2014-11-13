@@ -40,7 +40,20 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util
         /// <summary>
         /// Superficie a la cual se le ingresaran los datos
         /// </summary>
-        public Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma Odontograma { get; set; }
+        private Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma odontograma = new Odontograma.Odontograma();
+
+        public Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma Odontograma
+        {
+            get { return odontograma; }
+            set 
+            { 
+                odontograma = value; 
+                RaisePropertyChanged("Odontograma"); 
+            }
+        }
+        
+
+
         /// <summary>
         /// Nombre de la superficie
         /// </summary>

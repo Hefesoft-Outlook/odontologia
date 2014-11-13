@@ -166,7 +166,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         private void SesionCambiada(int obj)
         {
-
             var elementosMostrar = new Convertir_Elementos_Grilla_Plan_Evolucion().obtenerElementosParaNumeroSesion(ListadoEvolucionTodos, obj).ToObservableCollection();
 
             if (elementosMostrar.Any())

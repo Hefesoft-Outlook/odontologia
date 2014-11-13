@@ -25,12 +25,12 @@ namespace App2.Grillas.Evolucion
     {
         public SplitEvolucion()
         {
-            this.InitializeComponent();           
+            this.InitializeComponent();
+            vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
         }
 
         internal void inicializar()
-        {
-            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+        {            
             vm.InicializarEvolucion();
         }
 
@@ -41,10 +41,11 @@ namespace App2.Grillas.Evolucion
 
         private void realizado_Click(object sender, RoutedEventArgs e)
         {
-            CheckBox ch = sender as CheckBox;
-            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+            CheckBox ch = sender as CheckBox;         
             var item = ch.DataContext as ProcedimientosGrillaEvolucion;
             vm.procedimientoRealizado(item);
-        }        
+        }
+
+        public Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion vm { get; set; }        
     }
 }

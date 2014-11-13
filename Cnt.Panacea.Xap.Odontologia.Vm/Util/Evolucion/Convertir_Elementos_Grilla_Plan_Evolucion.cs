@@ -93,6 +93,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Evolucion
             {
                 if (item.Sesion.Any(a => a.IdSesion == numeroSesion))
                 {
+                    item.Odontograma.DiagnosticoProcedimiento.Realizado_Pieza_Completa = true;
                     lstTemp.Add(item);
                 }
             }
