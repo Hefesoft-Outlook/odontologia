@@ -162,8 +162,22 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
 
         public ObservableCollection<ProcedimientosGrillaPlanTratamiento> Listado
         {
-            get { return listado; }
-            set { listado = value;  RaisePropertyChanged("Listado"); }
+            get 
+            { 
+                return listado; 
+            }
+            set 
+            { 
+                listado = value;  
+                RaisePropertyChanged("Listado");
+
+                if(value.Any())
+                {
+                    //Este elemento se usa para dejar seleccionado el primer elemento de la lista
+                    ElementoSeleccionado = value.FirstOrDefault();
+                    RaisePropertyChanged("ElementoSeleccionado");
+                }
+            }
         }
 
 
@@ -203,5 +217,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento
         public ObservableCollection<EspecialidadEntity> ProcedimientosEspecialidad { get; set; }
 
         #endregion
+
+        public ProcedimientosGrillaPlanTratamiento ElementoSeleccionado { get; set; }
     }
 }

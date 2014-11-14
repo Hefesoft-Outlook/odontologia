@@ -487,8 +487,8 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
-    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1105">
-      <Name>RadControls for Windows 8</Name>
+    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1015">
+      <Name>RadControls for Windows 8 %28RadControls for Windows 8, Version=2013.3.1015%29</Name>
     </SDKReference>
   </ItemGroup>
   <ItemGroup>

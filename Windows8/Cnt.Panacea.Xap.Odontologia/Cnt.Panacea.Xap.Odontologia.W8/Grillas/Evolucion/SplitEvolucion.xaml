@@ -16,7 +16,7 @@
     
 	<StackPanel Orientation="Vertical">
 		<VisualStateManager.VisualStateGroups>
-<!-- Visual states reflect the application's view state -->
+        <!-- Visual states reflect the application's view state -->
 			<VisualStateGroup x:Name="ViewStates">
 				<VisualState x:Name="PrimaryView" />
 				<VisualState x:Name="SinglePane">
@@ -92,8 +92,8 @@
 					HorizontalAlignment="Center" FontSize="16"/>
 
 				<ComboBox x:Name="CmbxSesiones"
-					SelectedValue="{Binding SesionActualCarga, Mode=TwoWay}"
-					ItemsSource="{Binding NumeroSesionesConfiguradas}" FontFamily="Global User Interface"
+					SelectedValue="{Binding SesionActualCarga, Mode=TwoWay}"                    
+					ItemsSource="{Binding NumeroSesionesConfiguradas}"
 					>
 					<Interactivity:Interaction.Behaviors>
 						<Core:EventTriggerBehavior EventName="SelectionChanged">
@@ -110,6 +110,7 @@
 					TabIndex="1"
 					Padding="120,0,0,60"
 					ItemsSource="{Binding ListadoEvolucion}"
+                    SelectedItem="{Binding ElementoSeleccionado}"
 					IsSwipeEnabled="False"
             >
 					<ListView.ItemTemplate>

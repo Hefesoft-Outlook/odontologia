@@ -23,18 +23,40 @@ using Windows.UI.Xaml.Navigation;
 
 namespace App2.Grillas.Evolucion
 {
-    public sealed partial class SplitEvolucion : UserControl
+    public sealed partial class SplitEvolucion : UserControl, IDisposable
     {
         public SplitEvolucion()
-        {
+        {          
             InitializeComponent();
-            vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+            cargarElementos();            
         }
 
-        internal void inicializar()
-        {            
-            vm.InicializarEvolucion();
+        private async void cargarElementos()
+        {           
+            vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+            oirEventosViewModel();
+            await vm.InicializarEvolucion();            
         }
+
+        private void oirEventosViewModel()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Evolucion Elemento seleccionado", elemento => 
+            {
+                if (itemListView.ItemsSource != null)
+                {
+                    itemListView.SelectedIndex = 0;
+                }
+            });
+
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Evolucion listado sesiones cargado", elemento => 
+            {
+                //Hay algun error en los binding y toco configurarlo por behind
+                CmbxSesiones.ItemsSource = vm.NumeroSesionesConfiguradas;
+                CmbxSesiones.SelectedIndex = 0;
+            });            
+        }
+
+     
 
         private void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
@@ -49,7 +71,13 @@ namespace App2.Grillas.Evolucion
         }
 
 
-        public Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion vm { get; set; }        
+        public Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion vm { get; set; }
 
+
+        public void Dispose()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<string>(this, "Evolucion Elemento seleccionado");
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<string>(this, "Evolucion listado sesiones cargado");
+        }
     }
 }

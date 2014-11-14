@@ -40,8 +40,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
                 realizadoCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(procedimientoRealizado);
                 bodegaCommand = new RelayCommand<ProcedimientosGrillaEvolucion>(bodega);
-                cambioSesionCommand = new RelayCommand<int>(SesionCambiada);
-                InicializarEvolucion();
+                cambioSesionCommand = new RelayCommand<int>(SesionCambiada);                
             }
         }
                
@@ -49,7 +48,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
         #region metodos
 
 
-        private async void cargarListadoMostrar()
+        private async Task cargarListadoMostrar()
         {
             
             TratamientoPadre = Variables_Globales.TratamientosPadre;
@@ -105,10 +104,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
         /// <summary>
         /// Inicializar el plan de evolucion.
         /// </summary>
-        public async void InicializarEvolucion()
+        public async Task InicializarEvolucion()
         {
-            cargarListadoMostrar();           
-
+            Busy.UserControlCargando(true, "Cargando sesiones");
+            await cargarListadoMostrar();
             numeroSessiones();
             TratamientoPadre = new TratamientoEntity();
             TratamientoPadre.Identificador = Variables_Globales.IdTratamientoActivo;
@@ -119,7 +118,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
             if (TratamientoPadre != null)
             {
                 tratamientoActivo(TratamientoPadre.Identificador);
-                await SesionesConfiguradasTratamientos();
+                await SesionesConfiguradasTratamientos();                
 
                 IdReciboCaja = await Contexto_Odontologia.obtenerContexto().ReciboCajaTratamiento(Variables_Globales.IdTratamientoActivo);
 
@@ -139,13 +138,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
                 ValorPagoTratamiento = await Contexto_Odontologia.obtenerContexto().ValorPagoTratamiento(TratamientoPadre.Identificador);
                 ValorSaldoTratamiento = ValorTotalTratamiento - ValorPagoTratamiento;
-
-                RaisePropertyChanged("NumeroSesionesConfiguradas");
+                
                 RaisePropertyChanged("FinalidadesProcedimiento");
                 RaisePropertyChanged("OdontologosHigienistasIps");
                 RaisePropertyChanged("ValorPagoTratamiento");
-                RaisePropertyChanged("ValorSaldoTratamiento");
-                RaisePropertyChanged("SesionActualCarga");
+                RaisePropertyChanged("ValorSaldoTratamiento");                
                 RaisePropertyChanged("IdReciboCaja");
                 RaisePropertyChanged("DescripcionTratamiento");
                 RaisePropertyChanged("TiposTratamientoSeleccionado");
@@ -153,6 +150,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 RaisePropertyChanged("FormaPagoSeleccionado");
                 RaisePropertyChanged("HabilitarTipoTratamiento");
                 RaisePropertyChanged("PuedeModificar");
+
+                SesionCambiada(Variables_Globales.SesionActual);
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send("Evolucion", "Evolucion listado sesiones cargado");
+                Busy.UserControlCargando(false);
             }
             else 
             {
@@ -166,33 +167,42 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         private void SesionCambiada(int obj)
         {
-            var elementosMostrar = new Convertir_Elementos_Grilla_Plan_Evolucion().obtenerElementosParaNumeroSesion(ListadoEvolucionTodos, obj).ToObservableCollection();
-
-            if (elementosMostrar.Any())
+            try
             {
-                ListadoEvolucion = ListadoEvolucion.inicializarListaYLimpiar();
-                ListadoEvolucion = elementosMostrar;
-
-                Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(ListadoEvolucion);
+                if (obj != 0)
+                {
+                    var elementosMostrar = new Convertir_Elementos_Grilla_Plan_Evolucion().obtenerElementosParaNumeroSesion(ListadoEvolucionTodos, obj).ToObservableCollection();
+                    if (elementosMostrar.Any())
+                    {
+                        ListadoEvolucion = ListadoEvolucion.inicializarListaYLimpiar();
+                        foreach (var item in elementosMostrar)
+                        {
+                            ListadoEvolucion.Add(item);
+                        }                        
+                        Convertir_Elemento_Grilla_Dibujo_Odontograma.Convertir(ListadoEvolucion);
+                        ElementoSeleccionado = ListadoEvolucion.First();
+                        GalaSoft.MvvmLight.Messaging.Messenger.Default.Send("", "Evolucion Elemento seleccionado");
+                    }
+                    else
+                    {
+                        elementosMostrar.Clear();
+                    }
+                }
             }
-            else
+            catch
             {
-                elementosMostrar.Clear();
+
             }
-            RaisePropertyChanged("ListadoEvolucion");
         }
 
         internal async Task listarOdontogramaPlanTratamiento()
         {
             var vmEvolucion = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Evolucion>();
-            await generarGrilla(vmEvolucion.Listado);
-            
+            await generarGrilla(vmEvolucion.Listado);            
         }
 
         private Task<bool> generarGrilla(ObservableCollection<OdontogramaEntity> resultado)
         {
-            Busy.UserControlCargando(true, "Cargando sesiones");
-
             var tarea = new TaskCompletionSource<bool>();
             List<ProcedimientosGrillaEvolucion> lst = new List<ProcedimientosGrillaEvolucion>(); 
             
@@ -223,14 +233,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
                 lst.Add(elementoAgregar);
             }
-
-            ListadoEvolucion = ListadoEvolucion.inicializarListaYLimpiar();
-            ListadoEvolucion = lst.ToObservableCollection();
+           
             ListadoEvolucionTodos = new List<ProcedimientosGrillaEvolucion>();
             ListadoEvolucionTodos = lst;
-            RaisePropertyChanged("ListadoEvolucion");
-
-            PlanTratamientoEstadoNuevoEliminadoModificado = new PlanTratamientoEstadoNuevoEliminadoModificado();
+            PlanTratamientoEstadoNuevoEliminadoModificado = new PlanTratamientoEstadoNuevoEliminadoModificado();         
 
             if (resultado.Any())
             {
@@ -246,9 +252,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
             }
 
             tarea.TrySetResult(true);
-
-
-            Busy.UserControlCargando(false);
             return tarea.Task;
         }
 
@@ -368,6 +371,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 });
             }
 
+            RaisePropertyChanged("NumeroSesionesConfiguradas");
             RaisePropertyChanged("SesionesConfiguradasTratamiento");            
         }
         #endregion
@@ -508,9 +512,24 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
                 passUsuarioFinaliza = value;
                 RaisePropertyChanged("PassUsuarioFinaliza");
             }
-        }
+        }        
 
-        public int SesionActualCarga { get; set; }
+        private int sesionActualCarga;
+
+        public int SesionActualCarga
+        {
+            get { return sesionActualCarga; }
+            set 
+            { 
+                sesionActualCarga = value; 
+
+                if(value != 0)
+                {
+                    RaisePropertyChanged("SesionActualCarga");
+                }
+            }
+        }
+        
         
         public decimal ValorPagoTratamiento { get; set; }
         /// <summary>
@@ -527,7 +546,25 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
         public bool PuedeModificar { get; set; }
 
-        public ObservableCollection<ProcedimientosGrillaEvolucion> ListadoEvolucion { get; set; }
+        private ObservableCollection<ProcedimientosGrillaEvolucion> listadoEvolucion = new ObservableCollection<ProcedimientosGrillaEvolucion>();
+
+        public ObservableCollection<ProcedimientosGrillaEvolucion> ListadoEvolucion 
+        {
+            get { return listadoEvolucion; }
+            set 
+            { 
+                listadoEvolucion = value;
+                RaisePropertyChanged("ListadoEvolucion");
+
+                if (value.Any())
+                {
+                    //Este elemento se usa para dejar seleccionado el primer elemento de la lista
+                    ElementoSeleccionado = value.FirstOrDefault();
+                    RaisePropertyChanged("ElementoSeleccionado");
+                }
+            }
+        }
+        
 
         public ObservableCollection<Entities.Parametrizacion.FinalidadProcedimientoEntity> FinalidadesProcedimiento { get; set; }
 
@@ -557,6 +594,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
         public void Dispose()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Guardar>(this);
-        }        
+        }
+
+        public ProcedimientosGrillaEvolucion ElementoSeleccionado { get; set; }
     }
 }

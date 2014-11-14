@@ -24,26 +24,28 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
         TerceroEntity higienistasIpsValor = new TerceroEntity();
         Cnt.Panacea.Entities.Odontologia.SesionesPlanTratamientosCollection sesion = new SesionesPlanTratamientosCollection();
         EspecialidadEntity procedimientosEspecialidadValor = new EspecialidadEntity();
-        public RelayCommand<ProcedimientosGrillaPlanTratamiento> odontologoSeleccionadoCommand { get; set; }
-        public RelayCommand<ProcedimientosGrillaPlanTratamiento> higienistaSeleccionadoCommand { get; set; }
+        public RelayCommand<TerceroEntity> odontologoSeleccionadoCommand { get; set; }
+        public RelayCommand<TerceroEntity> higienistaSeleccionadoCommand { get; set; }
 
         #endregion
 
         public ProcedimientosGrillaPlanTratamiento()
         {
-            odontologoSeleccionadoCommand = new RelayCommand<ProcedimientosGrillaPlanTratamiento>(odontologoSeleccionado);
-            higienistaSeleccionadoCommand = new RelayCommand<ProcedimientosGrillaPlanTratamiento>(higienistaSeleccionado);
+            odontologoSeleccionadoCommand = new RelayCommand<TerceroEntity>(odontologoSeleccionado);
+            higienistaSeleccionadoCommand = new RelayCommand<TerceroEntity>(higienistaSeleccionado);
         }
 
 
-        private void higienistaSeleccionado(ProcedimientosGrillaPlanTratamiento obj)
+        private void higienistaSeleccionado(TerceroEntity obj)
         {
             OdontologosIpsValor = null;
+            HigienistasIpsValor = obj;
         }
 
-        private void odontologoSeleccionado(ProcedimientosGrillaPlanTratamiento obj)
+        private void odontologoSeleccionado(TerceroEntity obj)
         {
             HigienistasIpsValor = null;
+            OdontologosIpsValor = obj;
         }
 
         #region Propiedades

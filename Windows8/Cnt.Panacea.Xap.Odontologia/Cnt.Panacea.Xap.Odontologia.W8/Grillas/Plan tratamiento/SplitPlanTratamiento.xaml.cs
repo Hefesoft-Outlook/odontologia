@@ -32,8 +32,9 @@ namespace App2.Grillas.Plan_tratamiento
             this.InitializeComponent();
             var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
             vm.pintarProcedimientosColoresPiezadental();
-            itemListView.SelectionChanged += itemListView_SelectionChanged;
+            itemListView.SelectionChanged += itemListView_SelectionChanged;            
         }
+        
 
         /// <summary>
         /// Se usa para dejar el numero de sesiones predeterminado
