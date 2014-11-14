@@ -57,8 +57,7 @@ namespace App2
         }
 
         public HubPage()
-        {
-
+        {            
             var contexto = ServiceLocator.Current.GetInstance<IContexto_Odontologia>();
             contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
             contexto.url("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");

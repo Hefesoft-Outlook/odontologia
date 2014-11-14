@@ -137,5 +137,9 @@ namespace App2
             await SuspensionManager.SaveAsync();
             deferral.Complete();
         }
+
+        public static string FacebookId { get; set; }
+
+        public static string Token { get; set; }
     }
 }

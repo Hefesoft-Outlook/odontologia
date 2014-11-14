@@ -14,6 +14,7 @@
     xmlns:Generico="using:App2.Assets.PopUp"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:App2.Assets.Indices"
+    xmlns:fb="using:App2.Auth"
     x:Name="pageRoot"
     x:Class="App2.HubPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
@@ -69,7 +70,17 @@
 						VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" FontFamily="Global User Interface" />
 				</Grid>
 			</Hub.Header>
-			<HubSection Width="600" Margin="0,0,20,0">
+
+            <HubSection Width="600" Margin="0,0,20,0">
+                <DataTemplate>
+                    <StackPanel>
+                        <fb:fbLogin></fb:fbLogin>
+                        <fb:windows></fb:windows>
+                    </StackPanel>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Width="600" Margin="0,0,20,0">
 				<HubSection.Background>
 					<ImageBrush ImageSource="Assets/Images/Odontologia.jpg" Stretch="UniformToFill" />
 				</HubSection.Background>
