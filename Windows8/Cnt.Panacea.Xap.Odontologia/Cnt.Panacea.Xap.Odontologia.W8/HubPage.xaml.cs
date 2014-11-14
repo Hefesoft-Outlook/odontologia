@@ -80,7 +80,13 @@ namespace App2
             this.navigationHelper.LoadState += navigationHelper_LoadState;
             oirMensaje();
             oirOcupado();
-            oirCambiosBotones();            
+            oirCambiosBotones();
+            Loaded += HubPage_Loaded;
+        }
+
+        void HubPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            login();
         }        
 
         private async void snap()

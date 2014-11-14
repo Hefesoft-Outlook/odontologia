@@ -188,6 +188,7 @@
     <Compile Include="HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Hub\Hub.Partial.Login.cs" />
     <Compile Include="Hub\Hub.Partial.Fotos.cs" />
     <Compile Include="Hub\Hub.Partial.BarClick.cs" />
     <Compile Include="Mapa Dental\Mapa_Dental.xaml.cs">

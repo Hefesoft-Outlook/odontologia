@@ -5,9 +5,11 @@ using System.Dynamic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Security.Authentication.Web;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -21,16 +23,34 @@ using Windows.UI.Xaml.Navigation;
 
 namespace App2.Auth
 {
-    public sealed partial class fbLogin : UserControl
+    public sealed partial class fbLogin : UserControl, IDisposable
     {
         public fbLogin()
         {
-            this.InitializeComponent();
+            oirAutologin();
+            this.InitializeComponent();            
+        }
+
+        private void oirAutologin()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login>(this, "Facebook", ingreso);
+        }
+
+        private async void ingreso(Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login obj)
+        {
+            var result = await logIn();
+            obj.Resultado(result);
         }
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.FacebookId = "734443959971377";            
+            await logIn();
+            Busy.UserControlCargando(false);
+        }
+
+        private async Task<dynamic> logIn()
+        {            
+            App.FacebookId = "734443959971377";
 
             FacebookClient _fb = new FacebookClient();
             var loginUrl = _fb.GetLoginUrl(new
@@ -42,6 +62,7 @@ namespace App2.Auth
                 response_type = "token"
             });
 
+            Busy.UserControlCargando(true, "Ingresando");
             WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(
                   WebAuthenticationOptions.None,
                   loginUrl);
@@ -55,20 +76,21 @@ namespace App2.Auth
                 // using the Access Token.
                 var accessToken = facebookOAuthResult.AccessToken;
                 App.Token = accessToken;
-
-                LoadUserInfo(accessToken);
+                return await LoadUserInfo(accessToken);
             }
             else if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.ErrorHttp)
             {
                 // handle authentication failure
+                return null;
             }
             else
             {
                 // The user canceled the authentication
+                return null;
             }
         }
 
-        private async void LoadUserInfo(string token)
+        private async Task<dynamic> LoadUserInfo(string token)
         {
             FacebookClient fb = new FacebookClient(token);
 
@@ -82,6 +104,9 @@ namespace App2.Auth
 
             this.Imagen.Source = new BitmapImage(new Uri(profilePictureUrl));
             this.Nombre.Text = result.name;
+
+            ApplicationData.Current.LocalSettings.Values["login"] = "Facebook";
+            return result;
         }
 
         public async void getInformation(string token) 
@@ -98,6 +123,11 @@ namespace App2.Auth
                 string friendName = (string)friend["name"];
                 string friendFacebookId = (string)friend["id"];
             }
+        }
+
+        public void Dispose()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login>(this, "Facebook");
         }
     }
 }

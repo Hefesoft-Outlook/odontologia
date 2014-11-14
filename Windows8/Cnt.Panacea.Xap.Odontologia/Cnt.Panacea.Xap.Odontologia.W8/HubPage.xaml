@@ -74,8 +74,8 @@
             <HubSection Width="600" Margin="0,0,20,0">
                 <DataTemplate>
                     <StackPanel>
-                        <fb:fbLogin></fb:fbLogin>
-                        <fb:windows></fb:windows>
+                        <fb:fbLogin Name="facebook"></fb:fbLogin>
+                        <fb:windows Name="outlook"></fb:windows>
                     </StackPanel>
                 </DataTemplate>
             </HubSection>

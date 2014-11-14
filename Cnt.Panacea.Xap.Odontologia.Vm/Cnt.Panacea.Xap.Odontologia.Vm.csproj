@@ -97,6 +97,7 @@
     <Compile Include="Messenger\Imprimir\Imprimir.cs" />
     <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Carga_Odontograma_Inicial.cs" />
     <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Recalcular_Indices.cs" />
+    <Compile Include="Messenger\Login\Login.cs" />
     <Compile Include="Messenger\Mapa_Dental\Pedir_Pintar_Datos.cs" />
     <Compile Include="Messenger\Mapa_Dental\Validaciones.cs" />
     <Compile Include="Messenger\Mensajes\Mostrar_Mensaje_Usuario.cs" />
