@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6817929-A852-471D-8BE3-5D9DEDD02B7E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hefesoft.Entities.Odontologia</RootNamespace>
+    <AssemblyName>Hefesoft.Entities.Odontologia</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile154</TargetFrameworkProfile>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Articulos\ArticuloEntity.cs" />
+    <Compile Include="Articulos\ArticuloHistoricoCollection.cs" />
+    <Compile Include="Articulos\ArticulosLaboratoriosCollection.cs" />
+    <Compile Include="Articulos\ClasesArticulo.cs" />
+    <Compile Include="Articulos\EspecialidadesCollection.cs" />
+    <Compile Include="Articulos\FormaFarmaceuticaEntity.cs" />
+    <Compile Include="Articulos\ImpuestoEntity.cs" />
+    <Compile Include="Articulos\InformacionBibliograficaNoPosCollection.cs" />
+    <Compile Include="Articulos\ProgramacionesCollection.cs" />
+    <Compile Include="Articulos\TiposArticuloAsistencial.cs" />
+    <Compile Include="Articulos\TiposCostoArticulo.cs" />
+    <Compile Include="Articulos\TiposUnidadMedida.cs" />
+    <Compile Include="Articulos\UnidadesPeriodicidad.cs" />
+    <Compile Include="Articulos\UnidadMedidaEntity.cs" />
+    <Compile Include="Comprobantes\ComprobanteDetallesCollection.cs" />
+    <Compile Include="Comprobantes\ComprobanteEntity.cs" />
+    <Compile Include="Comprobantes\ComprobanteHistoricoCollection.cs" />
+    <Compile Include="Comprobantes\ComprobantesDependenciaCollection.cs" />
+    <Compile Include="Comprobantes\ComprobantesReporteCollection.cs" />
+    <Compile Include="Comprobantes\ModuloFuncionalEntity.cs" />
+    <Compile Include="Comprobantes\TipoComprobanteEntity.cs" />
+    <Compile Include="Comprobantes\TiposConsecutivo.cs" />
+    <Compile Include="Finalidad\FinalidadProcedimientoEntity.cs" />
+    <Compile Include="Historia\ClasificacionesProcedimiento.cs" />
+    <Compile Include="Historia\Collection.cs" />
+    <Compile Include="Historia\EventosPaquetes.cs" />
+    <Compile Include="Historia\NivelesComplejidad.cs" />
+    <Compile Include="Historia\PaqueteArticulosCollection.cs" />
+    <Compile Include="Historia\PaqueteOtrosConceptosFacturacionCollection.cs" />
+    <Compile Include="Historia\PaqueteProcedimientosCollection.cs" />
+    <Compile Include="Historia\ProcedimientoHistoricosCollection.cs" />
+    <Compile Include="Historia\ProcedimientosIncapacidadesCollection.cs" />
+    <Compile Include="Historia\PruebaPreTransfusionCollection.cs" />
+    <Compile Include="Historia\TiposAtencion.cs" />
+    <Compile Include="Historia\TiposPaquete.cs" />
+    <Compile Include="Historia\UnidadesMedidaEdad.cs" />
+    <Compile Include="Tercero\ActividadesEconomicasCollection.cs" />
+    <Compile Include="Convenio\ClasesTercero.cs" />
+    <Compile Include="Convenio\ContratoLiquidacionEntity.cs" />
+    <Compile Include="Convenio\ContratosSeccionesCollection.cs" />
+    <Compile Include="Convenio\ConvenioCoberturasCollection.cs" />
+    <Compile Include="Convenio\ConvenioComentarioAdjuntoEntity.cs" />
+    <Compile Include="Convenio\ConvenioComentariosAdjuntosCollection.cs" />
+    <Compile Include="Convenio\ConvenioComplementoArticuloEntity.cs" />
+    <Compile Include="Convenio\ConvenioComplementoArticulosCollection.cs" />
+    <Compile Include="Convenio\ConvenioComplementoOtrosConceptosCollection.cs" />
+    <Compile Include="Convenio\ConvenioComplementoProcedimientosCollection.cs" />
+    <Compile Include="Convenio\ConvenioContactosCollection.cs" />
+    <Compile Include="Convenio\ConvenioControlesCollection.cs" />
+    <Compile Include="Convenio\ConvenioDocumentosSoporteCollection.cs" />
+    <Compile Include="Convenio\ConvenioEntity.cs" />
+    <Compile Include="Convenio\ConvenioGruposEtareosCiudadesCollection.cs" />
+    <Compile Include="Convenio\ConvenioHistoricosCollection.cs" />
+    <Compile Include="Convenio\ConvenioRenegociacionesCollection.cs" />
+    <Compile Include="Convenio\ConvenioSeccionesCollection.cs" />
+    <Compile Include="Convenio\ConvenioSedesCollection.cs" />
+    <Compile Include="Convenio\ConvenioTopesPacientesCollection.cs" />
+    <Compile Include="Convenio\EtapasConvenio.cs" />
+    <Compile Include="Convenio\FuentesConvenio.cs" />
+    <Compile Include="Convenio\MotivoCambioDatoEntity.cs" />
+    <Compile Include="Convenio\NivelesTriageCollection.cs" />
+    <Compile Include="Convenio\OrigenConvenioEntity.cs" />
+    <Compile Include="Convenio\PrestadoresCollection.cs" />
+    <Compile Include="Tercero\PeriodosFiscalesCollection.cs" />
+    <Compile Include="Tercero\TerceroClasesCollection.cs" />
+    <Compile Include="Tercero\TerceroContableEntity.cs" />
+    <Compile Include="Tercero\TerceroContactosCollection.cs" />
+    <Compile Include="Tercero\TerceroEmpresaContactoCollection.cs" />
+    <Compile Include="Tercero\TerceroEntity.cs" />
+    <Compile Include="Convenio\TipoConvenioMovimiento.cs" />
+    <Compile Include="Convenio\TiposAlarmas.cs" />
+    <Compile Include="Convenio\TiposDesagregacionPoblacion.cs" />
+    <Compile Include="Convenio\TiposSedesContrato.cs" />
+    <Compile Include="Convenio\TiposValorConvenio.cs" />
+    <Compile Include="Diagnostico\DiagnosticoProcedimiento.cs" />
+    <Compile Include="Diagnostico\DiagnosticoProcedimientoOdontologiaEntity.cs" />
+    <Compile Include="Diagnostico\NivelesSeveridad.cs" />
+    <Compile Include="Diagnostico\TipoPanel.cs" />
+    <Compile Include="Especialidades\EspecialidadEntity.cs" />
+    <Compile Include="Especialidades\ProcedimientoEspecialidadSedeEntity.cs" />
+    <Compile Include="Especialidades\SedeEntity.cs" />
+    <Compile Include="Especialidades\TiposProcedimiento.cs" />
+    <Compile Include="Extension\Automapper.cs" />
+    <Compile Include="Historia\CapituloDiagnosticoEntity.cs" />
+    <Compile Include="Historia\CategoriaAislamientoEntity.cs" />
+    <Compile Include="Historia\CategoriaDiagnosticoEntity.cs" />
+    <Compile Include="Historia\ClasificacionEpidemiologicaEntity.cs" />
+    <Compile Include="Historia\ConfiguracionDiagnosticoOdontologiaEntity.cs" />
+    <Compile Include="Historia\SesionesPlanTratamientoEntity.cs" />
+    <Compile Include="Historia\SesionesPlanTratamientosCollection.cs" />
+    <Compile Include="Odontograma\ConfiguracionProcedimientoOdontologiaEntity.cs" />
+    <Compile Include="Historia\DiagnosticoCieEntity.cs" />
+    <Compile Include="Historia\DiagnosticosCieCollection.cs" />
+    <Compile Include="Historia\DiagnosticosIncapacidadesCollection.cs" />
+    <Compile Include="Odontograma\DientesEntity.cs" />
+    <Compile Include="Historia\GenerosConTodos.cs" />
+    <Compile Include="Historia\GrupoDiagnosticoEntity.cs" />
+    <Compile Include="Historia\GruposIncapacidadCollection.cs" />
+    <Compile Include="Odontograma\Odontograma.cs" />
+    <Compile Include="Odontograma\OdontogramaEntity.cs" />
+    <Compile Include="Odontograma\OdontogramasPacienteEntity.cs" />
+    <Compile Include="Historia\PartesCuerpoHumanoCollection.cs" />
+    <Compile Include="Historia\PlantillasHCCollection.cs" />
+    <Compile Include="Historia\PlanTratamientoEntity.cs" />
+    <Compile Include="Historia\ProcedimientosServiciosCollection.cs" />
+    <Compile Include="Historia\RangosHCCollection.cs" />
+    <Compile Include="Historia\SintomasCollection.cs" />
+    <Compile Include="Historia\SistemasCuerpoHumanoCollection.cs" />
+    <Compile Include="Historia\ProcedimientoServicioEntity.cs" />
+    <Compile Include="Odontograma\Superficie.cs" />
+    <Compile Include="Historia\TipoAltoCostoEntity.cs" />
+    <Compile Include="Historia\TiposNotificacionDx.cs" />
+    <Compile Include="Historia\VersionDiagnosticoEntity.cs" />
+    <Compile Include="Imagenes\TiposImagenes.cs" />
+    <Compile Include="Imagenes\TratamientoImagenEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tercero\TerceroHistoricosCollection.cs" />
+    <Compile Include="Tercero\TerceroImagenesCollection.cs" />
+    <Compile Include="Tercero\TerceroIntegracion.cs" />
+    <Compile Include="Tercero\TercerosAutoretenedoresCollection.cs" />
+    <Compile Include="Tercero\TerceroTributarioEntity.cs" />
+    <Compile Include="Tercero\TipoIdentificacionEntity.cs" />
+    <Compile Include="Tercero\TiposPersonaSinAmbos.cs" />
+    <Compile Include="Tercero\TiposProfesionalSalud.cs" />
+    <Compile Include="Tercero\TiposRetencion.cs" />
+    <Compile Include="Tratamiento\EstadoTratamiento.cs" />
+    <Compile Include="Tratamiento\TipoTratamientoEntity.cs" />
+    <Compile Include="Tratamiento\TratamientoEntity.cs" />
+    <Compile Include="Util\Convertir_Observables.cs" />
+    <Compile Include="Util\Odontologia.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Std.SL">
+      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="Dto">
+      <HintPath>..\..\dlls\Dto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy /y  "$(TargetFileName)" "$(SolutionDir)..\..\dlls\"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\Hefesoft.Entidades\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\Hefesoft.Entidades\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\Hefesoft.Entidades\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\Hefesoft.Entidades\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

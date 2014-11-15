@@ -185,11 +185,23 @@
     <Reference Include="Cnt.Std.SL">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
+    <Reference Include="Dto">
+      <HintPath>..\Hefesoft\dlls\Dto.dll</HintPath>
+    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Entities.Odontologia">
+      <HintPath>..\Hefesoft\dlls\Hefesoft.Entities.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\Hefesoft\dlls\Hefesoft.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Usuario">
+      <HintPath>..\Hefesoft\dlls\Hefesoft.Usuario.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
@@ -216,7 +228,7 @@
       <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime">
-      <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp71+wpa81\System.Runtime.dll</HintPath>
+      <HintPath>..\Hefesoft\Entidades\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="System.Threading.Tasks">
       <HintPath>..\Windows8\Cnt.Panacea.Xap.Odontologia\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
@@ -239,24 +251,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Mensajes1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Dto\Dto.csproj">
-      <Project>{706cd8cb-d160-443c-ac3f-f3201aa67a24}</Project>
-      <Name>Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
-      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
-      <Name>Hefesoft.Entities.Odontologia</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
-      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
-      <Name>Hefesoft.Usuario</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Standard\Hefesoft.Standard.csproj">
-      <Project>{be8a7bbe-489a-496b-8817-005f76005cc6}</Project>
-      <Name>Hefesoft.Standard</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

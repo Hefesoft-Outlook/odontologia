@@ -114,30 +114,6 @@
       <Project>{c41c8cbb-b458-4567-8834-89516213d2ce}</Project>
       <Name>Cnt.Panacea.Xap.Odontologia.Vm</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Dto\Dto.csproj">
-      <Project>{706cd8cb-d160-443c-ac3f-f3201aa67a24}</Project>
-      <Name>Dto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
-      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
-      <Name>Hefesoft.Entities.Odontologia</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
-      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
-      <Name>Hefesoft.Usuario</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Portable.Crypto\Hefesoft.Portable.Crypto.csproj">
-      <Project>{f3d9b690-f76a-4d8f-bb82-d34bade1a056}</Project>
-      <Name>Hefesoft.Portable.Crypto</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Portable.xml\Hefesoft.Portable.xml.csproj">
-      <Project>{450a6bbe-e963-4cad-8454-976c224d910f}</Project>
-      <Name>Hefesoft.Portable.xml</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Standard\Hefesoft.Standard.csproj">
-      <Project>{be8a7bbe-489a-496b-8817-005f76005cc6}</Project>
-      <Name>Hefesoft.Standard</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\..\..\Cnt.Panacea.Xap.Odontologia.Vm\Recursos\PublicResource.cs">
@@ -485,6 +461,9 @@
     <Reference Include="Cnt.Std.SL">
       <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\Cnt.Std.SL.dll</HintPath>
     </Reference>
+    <Reference Include="Dto">
+      <HintPath>..\..\..\Hefesoft\dlls\Dto.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook">
       <HintPath>..\packages\Facebook.6.4.0\lib\win8\Facebook.dll</HintPath>
     </Reference>
@@ -498,8 +477,23 @@
     <Reference Include="GalaSoft.MvvmLight.Extras">
       <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.Extras.dll</HintPath>
     </Reference>
+    <Reference Include="Hefesoft.Entities.Odontologia">
+      <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Entities.Odontologia.dll</HintPath>
+    </Reference>
     <Reference Include="Hefesoft.Pdf.Entities">
       <HintPath>C:\FinalesHefesoft\Dlls\Release\Hefesoft.Pdf.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.Crypto">
+      <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Portable.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.xml">
+      <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Portable.xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Usuario">
+      <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Usuario.dll</HintPath>
     </Reference>
     <Reference Include="MetroEventToCommand">
       <HintPath>..\packages\MetroEventToCommand.2.1\lib\winrt45\MetroEventToCommand.dll</HintPath>
@@ -525,8 +519,8 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
-    <SDKReference Include="RadControls for Windows 8, Version=2013.2.611">
-      <Name>RadControls for Windows 8</Name>
+    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1105">
+      <Name>RadControls for Windows 8 %28RadControls for Windows 8, Version=2013.3.1105%29</Name>
     </SDKReference>
   </ItemGroup>
   <ItemGroup>
