@@ -37,7 +37,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         /// <param name="Planes"></param>
         /// <returns></returns>
         public async Task<bool> ActualizarPlanesTratamiento(TratamientoEntity Tratamiento, PlanesTratamientoCollection Planes)
-        {
+        {            
             Busy.UserControlCargando(true, "Guardando odontograma evolucion");
 
             //Se guarda lo mismo que en plan de tratamiento pero con el plan actualizado

@@ -110,6 +110,20 @@ namespace App2
                     TxtBlckCargando.Text = "Cargando....";
                 }            
             });
+
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Standard.BusyBox.Mostrar_Cargando>(this, item =>
+            {
+                if (item.mostrar_Cargando)
+                {
+                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                    TxtBlckCargando.Text = item.texto;
+                }
+                else
+                {
+                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                    TxtBlckCargando.Text = "Cargando....";
+                }
+            });
         }
 
         private void oirMensaje()
@@ -234,6 +248,7 @@ namespace App2
             Messenger.Default.Unregister<Mostrar_Mensaje_Usuario>(this);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Mostrar_Cargando>(this);
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this);
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Messenger.Usuario_Cargado>(this);
         }
         bool desHacerBool;
     }

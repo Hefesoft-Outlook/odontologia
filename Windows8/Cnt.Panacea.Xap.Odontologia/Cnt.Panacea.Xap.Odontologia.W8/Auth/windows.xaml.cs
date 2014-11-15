@@ -30,10 +30,10 @@ namespace App2.Auth
 
         private void oirAutologin()
         {
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login>(this, "Outlook", ingreso);
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Usuario.Messenger.Login>(this, "Outlook", ingreso);
         }
 
-        private async void ingreso(Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login obj)
+        private async void ingreso(Hefesoft.Usuario.Messenger.Login obj)
         {
             var resultado = await logIn();
             obj.Resultado(resultado);
@@ -82,7 +82,7 @@ namespace App2.Auth
 
         public void Dispose()
         {
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login>(this, "Outlook");
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Messenger.Login>(this, "Outlook");
         }
     }
 }

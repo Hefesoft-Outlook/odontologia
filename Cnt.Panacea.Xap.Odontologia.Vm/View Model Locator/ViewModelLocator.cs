@@ -34,7 +34,10 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                 SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
                 
                 //Conexion a wcf
-                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());                
+                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());
+
+                //Implementacion hefesoft
+                SimpleIoc.Default.Register<Hefesoft.Usuario.Interfaces.IUsuarios>(() => new Hefesoft.Usuario.Data.Usuarios());
             }
 
             //View model donde se muestra el indice de placa bacteriana y demas
@@ -55,6 +58,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.Listado_Procedimientos>();
             SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado>();
             SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
+
+            //Hefesoft Implementacion 
+            SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
         }
 
         /// <summary>
@@ -259,6 +265,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                  return ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
              }
          }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Usuario.ViewModel.Usuarios Usuarios
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+            }
+        }
 
 
         

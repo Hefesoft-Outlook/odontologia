@@ -23,43 +23,22 @@ namespace App2
     public sealed partial class HubPage : Page, IDisposable
     {
 
-        internal async void login()
+        internal void login()
         {
             string login = (string)ApplicationData.Current.LocalSettings.Values["login"];
-
-            if(!string.IsNullOrEmpty(login))
-            {  
-                if (login.Equals("Facebook"))
-                {
-                    item = new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login() { Modo = Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.tipoLogin.Facebook, Resultado = loginCallBack };
-                    GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(item, "Facebook");
-                }
-                else if (login.Equals("Outlook"))
-                {
-                    item = new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login() { Modo = Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.tipoLogin.Outlook, Resultado = loginCallBack };
-                    GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(item, "Outlook");
-                }
-            }
-            else
-            {
-
-            }
+            var vmUsuarios = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+            vmUsuarios.login(login);
+            oirUsuarioCreado();
         }
 
-        private void loginCallBack(dynamic obj)
+
+        private void oirUsuarioCreado()
         {
-            if(item.Modo == Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.tipoLogin.Facebook)
+            //Ocurre cuando el usuario a sido creado
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Usuario.Messenger.Usuario_Cargado>(this, item => 
             {
-
-            }
-            else if (item.Modo == Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.tipoLogin.Outlook)            
-            {
-
-            }
-            Busy.UserControlCargando(false);
+                var valorUsuario = item.Usuario;
+            });
         }
-
-
-        public Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Login.Login item { get; set; }
     }
 }

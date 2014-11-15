@@ -16,3 +16,12 @@ public static class Contexto_Odontologia
     }
 }
 
+public static class Contexto_Usuarios
+{
+    public static Hefesoft.Usuario.Interfaces.IUsuarios obtenerContexto()
+    {
+        var contexto = SimpleIoc.Default.GetInstance<Hefesoft.Usuario.Interfaces.IUsuarios>();
+        return contexto;
+    }
+}
+

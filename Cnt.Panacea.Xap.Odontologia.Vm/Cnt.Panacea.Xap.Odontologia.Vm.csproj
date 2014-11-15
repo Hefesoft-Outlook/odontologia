@@ -53,8 +53,8 @@
     <Compile Include="Bodega\Bodega.cs" />
     <Compile Include="Contenedor\vm.cs" />
     <Compile Include="Contexto\Sample data\Contexto_Sample_Data.cs" />
-    <Compile Include="Contexto\Sample data\IContexto_Odontologia.cs" />
-    <Compile Include="Contexto\Wcf\Contexto.cs" />
+    <Compile Include="Contexto\Interfaces\IContexto_Odontologia.cs" />
+    <Compile Include="Contexto\Variables Globales\Contexto.cs" />
     <Compile Include="Contexto\Wcf\Contexto_Odontologia.cs" />
     <Compile Include="Convenio\vm.cs" />
     <Compile Include="Datos de prueba\Paleta.cs" />
@@ -97,7 +97,6 @@
     <Compile Include="Messenger\Imprimir\Imprimir.cs" />
     <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Carga_Odontograma_Inicial.cs" />
     <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Recalcular_Indices.cs" />
-    <Compile Include="Messenger\Login\Login.cs" />
     <Compile Include="Messenger\Mapa_Dental\Pedir_Pintar_Datos.cs" />
     <Compile Include="Messenger\Mapa_Dental\Validaciones.cs" />
     <Compile Include="Messenger\Mensajes\Mostrar_Mensaje_Usuario.cs" />
@@ -249,6 +248,14 @@
     <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
       <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
       <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
+      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
+      <Name>Hefesoft.Usuario</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Windows8\Cnt.Panacea.Xap.Odontologia\Hefesoft.Standard\Hefesoft.Standard.csproj">
+      <Project>{be8a7bbe-489a-496b-8817-005f76005cc6}</Project>
+      <Name>Hefesoft.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
