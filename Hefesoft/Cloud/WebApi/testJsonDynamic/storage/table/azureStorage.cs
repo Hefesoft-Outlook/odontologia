@@ -73,6 +73,9 @@ namespace testJsonDynamic.storage
                 foreach (var item in resultado)
                 {
                     var elemento = new Expando();
+                    elemento["PartitionKey"] = item.PartitionKey;
+                    elemento["RowKey"] = item.RowKey;
+
                     foreach (var itemB in item.Properties)
                     {   
                         var propiedad = ConvertToEntityProperty(itemB.Key, itemB.Value);
@@ -104,6 +107,8 @@ namespace testJsonDynamic.storage
                 dynamic result = retrievedResult.Result;
 
                 var elemento = new Expando();
+                elemento["PartitionKey"] = result.PartitionKey;
+                elemento["RowKey"] = result.RowKey;
 
                 foreach (var item in result.Properties)
                 {   

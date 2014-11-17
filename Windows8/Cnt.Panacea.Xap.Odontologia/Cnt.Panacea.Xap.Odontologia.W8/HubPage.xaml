@@ -14,7 +14,7 @@
     xmlns:Generico="using:App2.Assets.PopUp"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:App2.Assets.Indices"
-    xmlns:fb="using:App2.Auth"
+    xmlns:login="using:App2.Auth"
     x:Name="pageRoot"
     x:Class="App2.HubPage"
     DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
@@ -74,8 +74,7 @@
             <HubSection Width="600" Margin="0,0,20,0">
                 <DataTemplate>
                     <StackPanel>
-                        <fb:fbLogin Name="facebook"></fb:fbLogin>
-                        <fb:windows Name="outlook"></fb:windows>
+                        <login:Login></login:Login>                        
                     </StackPanel>
                 </DataTemplate>
             </HubSection>
@@ -132,6 +131,7 @@
 
     <Page.BottomAppBar>
         <CommandBar Name="barraComandos" IsOpen="True">
+            <AppBarToggleButton Name="adicionarPaciente"  Icon="More" Label="Pacientes" Click="adicionarPaciente_Click"/>
             <AppBarToggleButton Name="inicial"  Icon="More" Label="Inicial" Click="inicial_Click"/>
             <AppBarToggleButton Name="odontogramaPlanTratamientoBtn" Icon="More" Label="Plan tratamiento" Click="planTratamiento_Click"/>
             <AppBarToggleButton Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion" Click="evolucion_Click"/>            

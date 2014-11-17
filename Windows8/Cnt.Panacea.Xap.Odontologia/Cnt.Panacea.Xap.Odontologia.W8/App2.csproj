@@ -147,6 +147,12 @@
     <Compile Include="Auth\fbLogin.xaml.cs">
       <DependentUpon>fbLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Auth\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Auth\Usuario.xaml.cs">
+      <DependentUpon>Usuario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Auth\windows.xaml.cs">
       <DependentUpon>windows.xaml</DependentUpon>
     </Compile>
@@ -156,6 +162,12 @@
     </Compile>
     <Compile Include="Grillas\Evolucion\SplitEvolucion.xaml.cs">
       <DependentUpon>SplitEvolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grillas\Pacientes\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Grillas\Pacientes\SplitPacientes.xaml.cs">
+      <DependentUpon>SplitPacientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
@@ -177,6 +189,9 @@
     <Compile Include="Hub\Hub.Partial.BarClick.cs" />
     <Compile Include="Mapa Dental\Mapa_Dental.xaml.cs">
       <DependentUpon>Mapa_Dental.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pacientes\Pacientes.xaml.cs">
+      <DependentUpon>Pacientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Paleta\Paleta.xaml.cs">
       <DependentUpon>Paleta.xaml</DependentUpon>
@@ -239,6 +254,7 @@
       <DependentUpon>Tipos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\Colores.cs" />
+    <Compile Include="Util\Fotos\WebCam.cs" />
     <Compile Include="Util\Helpers\Layout.cs" />
     <Compile Include="Util\Inicializar_Servicio.cs" />
     <Compile Include="Util\Inspector.cs" />
@@ -252,6 +268,7 @@
     <Compile Include="Util\Reportes\Templates\Plan_Tratamiento.xaml.cs">
       <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\Storage\Usuario.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -317,6 +334,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Auth\Login.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auth\Usuario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Auth\windows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -326,6 +351,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Grillas\Evolucion\SplitEvolucion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Grillas\Pacientes\Add.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Grillas\Pacientes\SplitPacientes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -352,6 +385,10 @@
     <Page Include="Mapa Dental\Mapa_Dental.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pacientes\Pacientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Paleta\Paleta.xaml">
       <SubType>Designer</SubType>

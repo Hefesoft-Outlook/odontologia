@@ -11,9 +11,7 @@
     d:DesignWidth="400">
 
     <Grid>
-        <StackPanel>
-            <Image Name="Imagen"></Image>
-            <TextBlock Name="Nombre"></TextBlock>
+        <StackPanel>            
             <Button Click="Button_Click"
                     Width="100"
                     >

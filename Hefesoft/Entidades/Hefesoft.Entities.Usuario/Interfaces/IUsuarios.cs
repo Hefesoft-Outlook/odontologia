@@ -10,5 +10,6 @@ namespace Hefesoft.Usuario.Interfaces
     public interface IUsuarios
     {
         Task<IUsuario> crearUsuario(IUsuario usuario);
+        Task<IEnumerable<Usuario.Entidades.Usuario>> listarUsuarios(string partitionKey = "", string rowKey = "", string nombreTabla = "");
     }
 }

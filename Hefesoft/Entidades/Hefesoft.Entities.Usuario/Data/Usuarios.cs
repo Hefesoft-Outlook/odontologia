@@ -18,5 +18,29 @@ namespace Hefesoft.Usuario.Data
             var result = await usuarioInsertar.postTable();
             return result;
         }
+
+
+        public async Task<IEnumerable<Entidades.Usuario>> listarUsuarios(string partitionKey = "", string rowKey = "", string nombreTabla = "")
+        {
+            var entidad = new Hefesoft.Usuario.Entidades.Usuario();
+
+            if(!string.IsNullOrEmpty(partitionKey))
+            {
+                entidad.PartitionKey = partitionKey;
+            }
+
+            if (!string.IsNullOrEmpty(rowKey))
+            {
+                entidad.RowKey = rowKey;
+            }
+
+            if (!string.IsNullOrEmpty(nombreTabla))
+            {
+                entidad.nombreTabla = nombreTabla;
+            }
+
+            var result = await entidad.getTableByPartition();
+            return result;
+        }
     }
 }

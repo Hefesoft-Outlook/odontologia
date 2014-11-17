@@ -108,6 +108,11 @@ namespace App2
         {
             var vmMapaDental = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
             vmMapaDental.verImagenes();
-        }   
+        }
+
+        private void adicionarPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Pacientes.Pacientes));
+        }
     }
 }

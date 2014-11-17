@@ -10,6 +10,10 @@ namespace Hefesoft.Usuario.Entidades
     {
         string id { get; set; }
         string nombre { get; set; }
-        string imagenRuta { get; set; }
+        string imagenRuta { get; set; }        
+        string correo { get; set; }
+        string telefono { get; set; }
+        string telefono2 { get; set; }
+        
     }
 }

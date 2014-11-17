@@ -1,4 +1,5 @@
 ﻿using Facebook;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Dynamic;
@@ -27,8 +28,11 @@ namespace App2.Auth
     {
         public fbLogin()
         {
+            App.FacebookId = "734443959971377";
             oirAutologin();
-            this.InitializeComponent();            
+            UserVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+            this.InitializeComponent();
+            
         }
 
         private void oirAutologin()
@@ -49,13 +53,12 @@ namespace App2.Auth
         }
 
         private async Task<dynamic> logIn()
-        {            
-            App.FacebookId = "734443959971377";
-
+        {   
             FacebookClient _fb = new FacebookClient();
+            
             var loginUrl = _fb.GetLoginUrl(new
             {
-                client_id = "734443959971377",
+                client_id = App.FacebookId,
                 redirect_uri = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri().AbsoluteUri,
                 scope = "public_profile",
                 display = "popup",
@@ -93,20 +96,29 @@ namespace App2.Auth
         private async Task<dynamic> LoadUserInfo(string token)
         {
             FacebookClient fb = new FacebookClient(token);
-
             dynamic parameters = new ExpandoObject();
             parameters.access_token = token;
-            parameters.fields = "name";
+            parameters.fields = "name,picture";
 
             dynamic result = await fb.GetTaskAsync("me", parameters);
-
-            string profilePictureUrl = string.Format("https://graph.facebook.com/{0}/picture?type={1}&access_token={2}", App.FacebookId, "large", fb.AccessToken);
-
-            this.Imagen.Source = new BitmapImage(new Uri(profilePictureUrl));
-            this.Nombre.Text = result.name;
-
+            string profilePictureUrl = string.Format("https://graph.facebook.com/{0}/picture", result.id);
+            
             ApplicationData.Current.LocalSettings.Values["login"] = "Facebook";
+            await crearUsuario(result, profilePictureUrl);
             return result;
+        }
+
+        private async Task crearUsuario(dynamic result, string profilePictureUrl)
+        {
+            Hefesoft.Usuario.Entidades.Facebook fbUser = new Hefesoft.Usuario.Entidades.Facebook();
+            fbUser.nombre = result.name;
+            fbUser.imagenRuta = profilePictureUrl;
+            fbUser.id = result.id;
+            fbUser.RowKey = result.id;
+            await UserVm.insert(fbUser);
+
+            var usuario = Hefesoft.Standard.Util.Convertir_Entidades.Convertir_Entidades.ConvertirEntidades(fbUser, new Hefesoft.Usuario.Entidades.Usuario());
+            UserVm.UsuarioActivo = usuario;
         }
 
         public async void getInformation(string token) 
@@ -129,5 +141,7 @@ namespace App2.Auth
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Messenger.Login>(this, "Facebook");
         }
+
+        public Hefesoft.Usuario.ViewModel.Usuarios UserVm { get; set; }
     }
 }

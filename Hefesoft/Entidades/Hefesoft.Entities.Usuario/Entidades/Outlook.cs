@@ -15,5 +15,9 @@ namespace Hefesoft.Usuario.Entidades
         public string id { get; set; }
         public string nombre { get; set; }
         public string imagenRuta { get; set; }
+
+        public string correo { get; set; }
+        public string telefono { get; set; }
+        public string telefono2 { get; set; }
     }
 }

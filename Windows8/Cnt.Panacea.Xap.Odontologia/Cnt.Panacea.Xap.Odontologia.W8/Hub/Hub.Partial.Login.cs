@@ -25,9 +25,14 @@ namespace App2
 
         internal void login()
         {
-            string login = (string)ApplicationData.Current.LocalSettings.Values["login"];
-            var vmUsuarios = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
-            vmUsuarios.login(login);
+            var usuario = App2.Util.Storage.Usuario.obtenerUsuario();
+
+            if(!string.IsNullOrEmpty(usuario.id))
+            {
+                var UsuarioVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+                UsuarioVm.UsuarioActivo = usuario;
+            }
+
             oirUsuarioCreado();
         }
 
@@ -38,6 +43,7 @@ namespace App2
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Usuario.Messenger.Usuario_Cargado>(this, item => 
             {
                 var valorUsuario = item.Usuario;
+                App2.Util.Storage.Usuario.guardarUsuario(item.Usuario);
             });
         }
     }

@@ -10,6 +10,6 @@ namespace Hefesoft.Standard.Interfaces
         string PartitionKey { get; set; }
         string RowKey { get; set; }
         string nombreTabla { get; set; }
-        bool generarIdentificador { get; set; }
+        bool generarIdentificador { get; set; }        
     }
 }

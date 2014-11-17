@@ -1,4 +1,5 @@
 ﻿using Microsoft.Live;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -25,6 +26,7 @@ namespace App2.Auth
         public windows()
         {
             this.InitializeComponent();
+            UserVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
             oirAutologin();
         }
 
@@ -58,9 +60,14 @@ namespace App2.Auth
                     var connectClient = new LiveConnectClient(result.Session);
                     var meResult = await connectClient.GetAsync("me");
                     dynamic meData = meResult.Result;
+
+                    var photoResult = await connectClient.GetAsync("me/picture");
+                    dynamic photoResultdyn = photoResult.Result;
+                    string profileUrl = photoResultdyn.location;
                     
                     //updateUI(meData);
-                    ApplicationData.Current.LocalSettings.Values["login"] = "Outlook";                    
+                    ApplicationData.Current.LocalSettings.Values["login"] = "Outlook";
+                    crearUsuario(meData, profileUrl);
                     return meData;
                 }
                 else
@@ -80,9 +87,24 @@ namespace App2.Auth
             }
         }
 
+        private async Task crearUsuario(dynamic result, string profilePictureUrl)
+        {
+            Hefesoft.Usuario.Entidades.Outlook outlook = new Hefesoft.Usuario.Entidades.Outlook();
+            outlook.nombre = result.name;
+            outlook.imagenRuta = profilePictureUrl;
+            outlook.id = result.id;
+            outlook.RowKey = result.id;
+            await UserVm.insert(outlook);
+
+            var usuario = Hefesoft.Standard.Util.Convertir_Entidades.Convertir_Entidades.ConvertirEntidades(outlook, new Hefesoft.Usuario.Entidades.Usuario());
+            UserVm.UsuarioActivo = usuario;
+        }
+
         public void Dispose()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Messenger.Login>(this, "Outlook");
         }
+
+        public Hefesoft.Usuario.ViewModel.Usuarios UserVm { get; set; }
     }
 }

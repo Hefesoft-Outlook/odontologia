@@ -250,6 +250,6 @@ namespace App2
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos>(this);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Messenger.Usuario_Cargado>(this);
         }
-        bool desHacerBool;
+        bool desHacerBool;        
     }
 }

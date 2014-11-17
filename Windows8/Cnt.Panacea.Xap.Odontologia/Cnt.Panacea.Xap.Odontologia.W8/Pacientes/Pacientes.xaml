@@ -1,0 +1,68 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="App2.Pacientes.Pacientes"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2.Pacientes"
+    xmlns:common="using:App2.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Grillas="using:App2.Grillas.Pacientes"
+    mc:Ignorable="d">
+
+    
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+
+        <Hub>
+            <Hub.Header>
+                <!-- Back button and page title -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button  x:Name="backButton" Margin="-1,-1,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+                    <TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Top"/>
+                    
+                </Grid>
+            </Hub.Header>
+
+            <HubSection Width="780" Margin="0,0,80,0">
+                <HubSection.Background>
+                    <ImageBrush Stretch="UniformToFill" />
+                </HubSection.Background>
+                <DataTemplate>
+                    <Grillas:SplitPacientes Width="700"></Grillas:SplitPacientes>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Width="500" Margin="0,0,0,0">
+                <HubSection.Background>
+                    <ImageBrush Stretch="UniformToFill" />
+                </HubSection.Background>
+                <DataTemplate>
+                    <Grillas:Add Width="500"></Grillas:Add>
+                </DataTemplate>
+            </HubSection>
+
+        </Hub>
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Name="barraComandos" IsOpen="True">
+            <AppBarToggleButton Name="tratamientos"  Icon="More" Label="Listado tratamientos" Click="tratamientos_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
+</Page>

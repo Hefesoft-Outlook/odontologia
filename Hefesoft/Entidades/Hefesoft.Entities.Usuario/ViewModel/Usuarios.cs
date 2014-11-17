@@ -83,5 +83,18 @@ namespace Hefesoft.Usuario.ViewModel
         }
 
         public Login item { get; set; }
+
+        private Usuario.Entidades.Usuario usuarioActivo = new Entidades.Usuario() { imagenRuta = "http://www.flaticon.com/png/256/37943.png", nombre = "-----------" };
+
+        public Usuario.Entidades.Usuario UsuarioActivo
+        {
+            get { return usuarioActivo; }
+            set 
+            { 
+                usuarioActivo = value; 
+                RaisePropertyChanged("UsuarioActivo"); 
+            }
+        }
+        
     }
 }

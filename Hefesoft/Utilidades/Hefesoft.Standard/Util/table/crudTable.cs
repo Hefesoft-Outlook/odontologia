@@ -29,7 +29,7 @@ namespace Hefesoft.Standard.Util.table
 
             if (string.IsNullOrEmpty(entidad.RowKey))
             {
-                string row = string.Format("{0}{1}{2}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year);
+                string row = string.Format("{0}{1}{2}tick{3}", DateTime.Now.Day, DateTime.Now.Month, DateTime.Now.Year, DateTime.Now.Ticks);
                 entidad.RowKey = entidad.GetType().Namespace.ToLower() + row;
             }
 
