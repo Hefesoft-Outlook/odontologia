@@ -20,6 +20,6 @@ internal static class Colores
         byte num1 = Convert.ToByte(str.Substring(2, 2), 16);
         byte num2 = Convert.ToByte(str.Substring(4, 2), 16);
         return Color.FromArgb(255, num, num1, num2);
-    }
+    }    
 }
 

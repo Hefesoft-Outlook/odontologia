@@ -62,6 +62,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             //Hefesoft Implementacion 
             SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
             SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
+            SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos>();
         }
 
         /// <summary>
@@ -290,6 +291,16 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
         }
 
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos Diagnosticos_Procedimientos
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos>();
+            }
+        }
         
          
 
