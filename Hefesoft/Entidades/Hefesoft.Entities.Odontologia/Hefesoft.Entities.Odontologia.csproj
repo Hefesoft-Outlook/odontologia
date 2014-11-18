@@ -169,6 +169,8 @@
     <Compile Include="Entidades\Tratamiento\TratamientoEntity.cs" />
     <Compile Include="Entidades\Util\Convertir_Observables.cs" />
     <Compile Include="Entidades\Util\Odontologia.cs" />
+    <Compile Include="Util\fillRowKey.cs" />
+    <Compile Include="Util\Observable.cs" />
     <Compile Include="ViewModel\Diagnosticos_Procedimientos\Diagnosticos_Procedimientos.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -30,6 +30,6 @@
             VerticalAlignment="Stretch"
             ItemTemplate="{StaticResource DataTemplate}"
             ItemsSource="{Binding Listado}" 
-            SelectedItem="{Binding diagnosticoOdontologia, Mode=TwoWay}"/>
+            SelectedItem="{Binding diagnosticoOdontologiaCnt, Mode=TwoWay}"/>
     </Grid>
 </UserControl>

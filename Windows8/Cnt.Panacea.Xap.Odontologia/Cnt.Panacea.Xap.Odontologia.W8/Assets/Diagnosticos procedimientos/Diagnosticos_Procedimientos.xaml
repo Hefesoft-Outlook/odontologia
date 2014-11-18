@@ -44,9 +44,11 @@
 			<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>			
 		</Grid>
-		<StackPanel Grid.Row="1" Orientation="Horizontal">
-			<Diagnosticos_procedimientos:List/>
-			<Diagnosticos_procedimientos:Add Margin="10,0,0,0"/>
-		</StackPanel>
+		<ScrollViewer Grid.Row="1" >
+			<StackPanel Orientation="Horizontal" Height="628" Width="1366">
+				<Diagnosticos_procedimientos:List/>
+				<Diagnosticos_procedimientos:Add Margin="10,0,0,0"/>
+			</StackPanel>
+		</ScrollViewer>
 	</Grid>
 </Page>

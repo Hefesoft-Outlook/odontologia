@@ -20,21 +20,26 @@
 					<RowDefinition Height="553*"/>
 				</Grid.RowDefinitions>
 				<StackPanel Orientation="Horizontal" Grid.Row="1">
-					<Assets:elementoMenu x:Name="elemento" Item="{Binding diagnosticoOdontologia}" Width="250"/>
+                    <Assets:elementoMenu x:Name="elemento" Item="{Binding diagnosticoOdontologiaCnt}" Width="250"/>
 					<xc:Clr_Pckr Width="300" x:Name="Color" SelectedColor="#FF2291DE" />
-					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0" Height="200">
+					
+                    <StackPanel VerticalAlignment="Center" Margin="10,0,0,0" Height="200">
 						<TextBlock TextWrapping="Wrap" Text="Letra o simbolo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-						<TextBox x:Name="textBox" TextWrapping="Wrap" FontFamily="Global User Interface" Width="100" Height="50" VerticalAlignment="Center">
+
+                        <TextBox x:Name="textBox" TextWrapping="Wrap" FontFamily="Global User Interface" Width="100" Height="50" VerticalAlignment="Center" Text="{Binding Letra_Simbolo}">
 							<Interactivity:Interaction.Behaviors>
 								<Core:EventTriggerBehavior EventName="KeyUp">
 									<Core:InvokeCommandAction Command="{Binding ingresoTextoCommand}" CommandParameter="{Binding Text, ElementName=textBox}"/>
 								</Core:EventTriggerBehavior>
 							</Interactivity:Interaction.Behaviors>
 						</TextBox>
+                        
 					</StackPanel>
-					<StackPanel VerticalAlignment="Center">
-						<TextBlock TextWrapping="Wrap" Text="Descripcion" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-						<TextBox x:Name="textBox1" TextWrapping="Wrap" FontFamily="Global User Interface" Width="200" Height="180">
+					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
+						
+                        <TextBlock TextWrapping="Wrap" Text="Descripcion" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+                        <TextBox x:Name="textBox1" TextWrapping="Wrap" FontFamily="Global User Interface" Width="200" Height="180" Margin="0" Text="{Binding Descripcion}">
 							<Interactivity:Interaction.Behaviors>
 								<Core:EventTriggerBehavior EventName="KeyUp">
 									<Core:InvokeCommandAction Command="{Binding descripcionCommand}" CommandParameter="{Binding Text, ElementName=textBox1}"/>
@@ -43,38 +48,49 @@
 						</TextBox>
 					</StackPanel>
 				</StackPanel>
+                
 				<StackPanel Orientation="Horizontal">
-					<StackPanel VerticalAlignment="Center">
+					
+                    <StackPanel VerticalAlignment="Center">
 						<TextBlock TextWrapping="Wrap" Text="Tipo" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Tipos}" DisplayMemberPath="Descripcion" SelectedItem="{Binding TipoSeleccionado, Mode=TwoWay}"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="Aplica a" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" ItemsSource="{Binding Aplica_A}" DisplayMemberPath="Descripcion" FontFamily="Global User Interface" SelectedItem="{Binding AplicaSeleccionado, Mode=TwoWay}"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="Fuente" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" ItemsSource="{Binding TipoFuente}" DisplayMemberPath="Descripcion" FontFamily="Global User Interface" SelectedItem="{Binding TipoFuenteSeleccionado, Mode=TwoWay}"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="Tipo elemento" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<ComboBox HorizontalAlignment="Left" VerticalAlignment="Top" Width="120" ItemsSource="{Binding TipoElemento}" DisplayMemberPath="Descripcion" FontFamily="Global User Interface" SelectedItem="{Binding TipoElementoSeleccionado, Mode=TwoWay}"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="CEO" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<CheckBox Content="" VerticalAlignment="Stretch" IsChecked="{Binding DiagnosticoProcedimiento.IndiceCEO, Mode=TwoWay}"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="COP" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<CheckBox Content="" VerticalAlignment="Stretch" IsChecked="{Binding DiagnosticoProcedimiento.IndiceCOP, Mode=TwoWay}" FontFamily="Global User Interface"/>
 					</StackPanel>
+                    
 					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0">
 						<TextBlock TextWrapping="Wrap" Text="Indice placa bacteriana" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 						<CheckBox Content="" VerticalAlignment="Stretch" IsChecked="{Binding DiagnosticoProcedimiento.IndicePlacaBacteriana, Mode=TwoWay}" FontFamily="Global User Interface" HorizontalAlignment="Center"/>
 					</StackPanel>
-					<StackPanel VerticalAlignment="Center" Margin="10,17,0,17">
+                    
+					<StackPanel VerticalAlignment="Center" Margin="10,0,0,0" Orientation="Horizontal">
 						<Button Content="Guardar" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding guardarCommand}"/>
+                        <Button Content="Nuevo" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Command="{Binding nuevoCommand}" Margin="10,0,0,0"/>
 					</StackPanel>
+                    
 				</StackPanel>
 			</Grid> 
 		</ScrollViewer> 

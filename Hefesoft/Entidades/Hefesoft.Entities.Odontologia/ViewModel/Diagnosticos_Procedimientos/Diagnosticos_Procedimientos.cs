@@ -4,8 +4,10 @@ using Hefesoft.Entities.Odontologia.Diagnostico;
 using Hefesoft.Entities.Odontologia.Entidades.Diagnostico;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Hefesoft.Entities.Odontologia.Util;
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 {
@@ -43,6 +45,8 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
                 Aplica_A.Add(new Aplica_A() { Codigo = 2, Descripcion = "Superficies" });
                 Aplica_A.Add(new Aplica_A() { Codigo = 1, Descripcion = "Pieza completa" });
 
+
+                TipoFuente.Add(new Tipo_Fuente() { Codigo = 0, Descripcion = "Webdings" });
                 TipoFuente.Add(new Tipo_Fuente() { Codigo = 1, Descripcion = "Wingdings 1" });
                 TipoFuente.Add(new Tipo_Fuente() { Codigo = 2, Descripcion = "Wingdings 2" });
                 TipoFuente.Add(new Tipo_Fuente() { Codigo = 3, Descripcion = "Wingdings 3" });
@@ -54,19 +58,48 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
                 ingresoTextoCommand = new RelayCommand<string>(ingresoTexto);
                 descripcionCommand = new RelayCommand<string>(descripcion);
                 guardarCommand = new RelayCommand(guardar);
+                nuevoCommand = new RelayCommand(nuevo);
             }
+        }
+
+        private void nuevo()
+        {
+            Identificador = 0;
+            diagnosticoProcedimiento = null;
+            _diagnosticoOdontologiaCnt = null;
+
+            diagnosticoProcedimiento = new ConfigurarDiagnosticoProcedimOtraEntity();
+            _diagnosticoOdontologiaCnt = new Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity();
+            
+            Letra_Simbolo = "";
+            Descripcion = "";
+            tipoSeleccionado = null;
+            aplicaSeleccionado = null;
+            tipoFuenteSeleccionado = null;
+            tipoElementoSeleccionado = null;
+
+            RaisePropertyChanged("Letra_Simbolo");
+            RaisePropertyChanged("Descripcion");
+            RaisePropertyChanged("TipoSeleccionado");
+            RaisePropertyChanged("AplicaSeleccionado");
+            RaisePropertyChanged("TipoFuenteSeleccionado");
+            RaisePropertyChanged("TipoElementoSeleccionado");
+            RaisePropertyChanged("DiagnosticoProcedimiento");
+            RaisePropertyChanged("diagnosticoOdontologiaCnt");
         }
 
         public async void listarElementos()
         {
             List<DiagnosticoProcedimiento> blob = await new DiagnosticoProcedimiento().getBlobByPartition("configurardiagnosticoprocedimotraentity", "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
-            Listado = Convertir_Observables.ConvertirIEnumerable(blob, new List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>());
+            Listado = Convertir_Observables.ConvertirIEnumerable(blob, new List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>()).ToObservableCollection();
             RaisePropertyChanged("Listado");
         }
 
         private void descripcion(string obj)
         {
             DiagnosticoProcedimiento.Descripcion = obj;
+            diagnosticoOdontologiaCnt.Descripcion = obj;
+
             forceUiDiagnosticoProcedimiento();
         }
 
@@ -74,9 +107,40 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
         {
             DiagnosticoProcedimiento.nombreTabla = "configurardiagnosticoprocedimotraentity";
             DiagnosticoProcedimiento.PartitionKey = "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity";
-            DiagnosticoProcedimiento.RowKey = new Random().Next().ToString();
 
-            await DiagnosticoProcedimiento.postBlob();
+            // Modo Insercion
+            if (Identificador == 0)
+            {
+                DiagnosticoProcedimiento.RowKey = new Random().Next().ToString();
+                DiagnosticoProcedimiento.Identificador = Convert.ToInt32(DiagnosticoProcedimiento.RowKey);
+                Listado.Add(diagnosticoOdontologiaCnt);
+                await DiagnosticoProcedimiento.postBlob();
+            }
+            else
+            {
+                var item = Listado.FirstOrDefault(a => a.Identificador == diagnosticoOdontologiaCnt.Identificador);
+
+                if (item != null)
+                {                    
+                    item = Convertir_Observables.ConvertirEntidadesComptabilidad(DiagnosticoProcedimiento, new Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity());
+                    item.Identificador = Identificador;
+
+                    DiagnosticoProcedimiento.Identificador = Identificador;
+                    DiagnosticoProcedimiento.RowKey = Identificador.ToString();
+
+                    await DiagnosticoProcedimiento.postBlob();
+
+                    var index = Listado.IndexOf(item);
+                    Listado.Remove(item);
+                    Listado.Insert(index,item);
+
+                    nuevo();
+                }
+
+            }
+
+            
+            
         }
 
         private void ingresoTexto(string obj)
@@ -88,7 +152,9 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
             else if (TipoElementoSeleccionado.Codigo == 2)
             {
                 DiagnosticoProcedimiento.Letra = obj;
-                DiagnosticoProcedimiento.Simbolo = obj;                
+                DiagnosticoProcedimiento.Simbolo = obj;
+                diagnosticoOdontologiaCnt.Letra = obj;
+                diagnosticoOdontologiaCnt.Simbolo = obj;
             }
 
             forceUiDiagnosticoProcedimiento();
@@ -96,15 +162,10 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
         public void forceUiDiagnosticoProcedimiento()
         {
-            var elemento = diagnosticoProcedimiento;
-            DiagnosticoProcedimiento = null;
-            diagnosticoProcedimiento = elemento;
-            RaisePropertyChanged("DiagnosticoProcedimiento");
-
-            //Para compatibilidad con cnt
-            diagnosticoOdontologia = new Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity();
-            diagnosticoOdontologia = Convertir_Observables.ConvertirEntidadesComptabilidad(DiagnosticoProcedimiento, new Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity());
-            RaisePropertyChanged("diagnosticoOdontologia");
+            //Al final estoy hay que cambiarlo xq solo debe quedar la implementacion de hefesoft
+            var elemento = Convertir_Observables.ConvertirEntidadesComptabilidad(DiagnosticoProcedimiento, new Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity());
+            elemento.Identificador = diagnosticoOdontologiaCnt.Identificador;
+            diagnosticoOdontologiaCnt = elemento;
         }
 
         private ConfigurarDiagnosticoProcedimOtraEntity diagnosticoProcedimiento = new ConfigurarDiagnosticoProcedimOtraEntity();
@@ -240,22 +301,85 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
         
 
-        private Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity _diagnosticoOdontologia;
+        private Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity _diagnosticoOdontologiaCnt;
 
-        public Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity diagnosticoOdontologia
+        public Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity diagnosticoOdontologiaCnt
         {
-            get { return _diagnosticoOdontologia; }
+            get { return _diagnosticoOdontologiaCnt; }
             set 
             {
-                _diagnosticoOdontologia = value;
-                RaisePropertyChanged("diagnosticoOdontologia");
-
+                _diagnosticoOdontologiaCnt = value;
+                RaisePropertyChanged("diagnosticoOdontologiaCnt");                
                 DiagnosticoProcedimiento = Convertir_Observables.ConvertirEntidadesComptabilidad(value, new ConfigurarDiagnosticoProcedimOtraEntity());
+                Identificador = value.Identificador;                
+
+                fijarElementosModoEdicion();
             }
         }
 
+        private void fijarElementosModoEdicion()
+        {
+            if (!string.IsNullOrEmpty(DiagnosticoProcedimiento.Letra))
+            {
+                Letra_Simbolo = DiagnosticoProcedimiento.Letra;
+                tipoElementoSeleccionado = TipoElemento.FirstOrDefault(a => a.Codigo == 2);
+            }
+            else if (!string.IsNullOrEmpty(DiagnosticoProcedimiento.Simbolo))
+            {
+                Letra_Simbolo = DiagnosticoProcedimiento.Simbolo;
+                tipoElementoSeleccionado = TipoElemento.FirstOrDefault(a => a.Codigo == 2);
+            }
+            else
+            {
+                tipoElementoSeleccionado = TipoElemento.FirstOrDefault(a => a.Codigo == 1);
+            }
+            
+            if (!string.IsNullOrEmpty(DiagnosticoProcedimiento.Descripcion))
+            {
+                Descripcion = DiagnosticoProcedimiento.Descripcion;
+            }
 
-        public List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity> Listado { get; set; }
-        
+            if(DiagnosticoProcedimiento.TipoPanel == TipoPanel.Diagnostico)
+            {
+                tipoSeleccionado = Tipos.FirstOrDefault(a => a.Codigo == 1);
+            }
+            else if (DiagnosticoProcedimiento.TipoPanel == TipoPanel.Procedimiento)
+            {
+                tipoSeleccionado = Tipos.FirstOrDefault(a => a.Codigo == 2);
+            }
+
+            if(DiagnosticoProcedimiento.AplicaTratamiento == 1)
+            {
+                aplicaSeleccionado = Aplica_A.FirstOrDefault(a => a.Codigo == 1);
+            }
+            else if (DiagnosticoProcedimiento.AplicaTratamiento == 2)
+            {
+                aplicaSeleccionado = Aplica_A.FirstOrDefault(a => a.Codigo == 2);
+            }
+            else if (DiagnosticoProcedimiento.AplicaTratamiento == 3)
+            {
+                aplicaSeleccionado = Aplica_A.FirstOrDefault(a => a.Codigo == 2);
+            }
+
+            tipoFuenteSeleccionado = TipoFuente.FirstOrDefault(a => a.Descripcion == DiagnosticoProcedimiento.Fuente);
+
+            RaisePropertyChanged("Letra_Simbolo");
+            RaisePropertyChanged("Descripcion");
+            RaisePropertyChanged("TipoSeleccionado");
+            RaisePropertyChanged("AplicaSeleccionado");
+            RaisePropertyChanged("TipoFuenteSeleccionado");
+            RaisePropertyChanged("TipoElementoSeleccionado");
+        }
+
+        public string Letra_Simbolo { get; set; }
+        public string Descripcion { get; set; }
+
+
+        public ObservableCollection<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity> Listado { get; set; }
+
+
+        public RelayCommand nuevoCommand { get; set; }
+
+        public int Identificador { get; set; }
     }
 }
