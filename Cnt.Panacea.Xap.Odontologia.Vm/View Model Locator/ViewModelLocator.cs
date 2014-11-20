@@ -64,6 +64,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
             SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos>();
             SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad.Niveles_Severidad>();
+            SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Odontologo>();
+            SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Higienista>();
         }
 
         /// <summary>
@@ -311,6 +313,29 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             get
             {
                 return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad.Niveles_Severidad>();
+            }
+        }
+
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Entities.Odontologia.ViewModel.Tercero.Odontologo Odontologo
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Odontologo>();
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Entities.Odontologia.ViewModel.Tercero.Higienista Higienista
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Higienista>();
             }
         }
         

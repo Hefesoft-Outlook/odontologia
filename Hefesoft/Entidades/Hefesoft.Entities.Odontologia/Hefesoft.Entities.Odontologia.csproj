@@ -173,6 +173,8 @@
     <Compile Include="Util\Observable.cs" />
     <Compile Include="ViewModel\Diagnosticos_Procedimientos\Diagnosticos_Procedimientos.cs" />
     <Compile Include="ViewModel\Niveles_Severidad\Niveles_Severidad.cs" />
+    <Compile Include="ViewModel\Tercero\Higienista.cs" />
+    <Compile Include="ViewModel\Tercero\Odontologo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
@@ -201,6 +203,9 @@
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
       <HintPath>..\Hefesoft.Entidades\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\..\dlls\Hefesoft.Standard.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\Hefesoft.Entidades\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>

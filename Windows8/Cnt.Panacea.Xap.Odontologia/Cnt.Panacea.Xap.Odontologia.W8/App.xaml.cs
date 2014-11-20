@@ -111,7 +111,9 @@ namespace App2
                 
                 //rootFrame.Navigate(typeof(HubPage), e.Arguments);
                 //rootFrame.Navigate(typeof(Assets.Diagnosticos_procedimientos.Diagnosticos_Procedimientos), e.Arguments);
-                rootFrame.Navigate(typeof(Assets.Niveles_de_severidad.Niveles_Severidad), e.Arguments);
+                //rootFrame.Navigate(typeof(Assets.Niveles_de_severidad.Niveles_Severidad), e.Arguments);
+                //rootFrame.Navigate(typeof(Assets.Tercero.Odontologo.Odontologo), e.Arguments);
+                rootFrame.Navigate(typeof(Assets.Tercero.Higienista.Higienista), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

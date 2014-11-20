@@ -494,14 +494,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         public async Task<ObservableCollection<TerceroEntity>> ListarHigienistasPorIps(short IdIps)
         {
-            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "terceroentity", "cnt.panacea.entities.parametrizacion.terceroentity");
+            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "higienista", "cnt.panacea.entities.parametrizacion.terceroentity");
             var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<TerceroEntity>());
             return resultadoDevolver;
         }
 
         public async Task<ObservableCollection<TerceroEntity>> ListarOdontologosPorIps(short IdIps)
         {
-            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "terceroentity", "cnt.panacea.entities.parametrizacion.terceroentity");
+            List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), "odontologo", "cnt.panacea.entities.parametrizacion.terceroentity");
             var resultadoDevolver = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), new ObservableCollection<TerceroEntity>());
             return resultadoDevolver;
         }

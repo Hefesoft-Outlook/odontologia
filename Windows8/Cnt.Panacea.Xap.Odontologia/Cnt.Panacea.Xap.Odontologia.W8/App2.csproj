@@ -143,6 +143,18 @@
     <Compile Include="Assets\Grillas\Niveles de severidad\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Grillas\Tercero\Higienista\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Tercero\Higienista\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Tercero\Odontologo\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Tercero\Odontologo\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Indices\Indices.xaml.cs">
       <DependentUpon>Indices.xaml</DependentUpon>
     </Compile>
@@ -173,6 +185,12 @@
     </Compile>
     <Compile Include="Assets\Auth\windows.xaml.cs">
       <DependentUpon>windows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tercero\Higienista\Higienista.xaml.cs">
+      <DependentUpon>Higienista.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Tercero\Odontologo\Odontologo.xaml.cs">
+      <DependentUpon>Odontologo.xaml</DependentUpon>
     </Compile>
     <Compile Include="Azure\Snapshot.cs" />
     <Compile Include="Fotos\SplipFotos.xaml.cs">
@@ -348,6 +366,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Assets\Grillas\Tercero\Higienista\Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Tercero\Higienista\List.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Tercero\Odontologo\Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Tercero\Odontologo\List.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Assets\Indices\Indices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -387,6 +421,14 @@
     <Page Include="Assets\Auth\windows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Tercero\Higienista\Higienista.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Tercero\Odontologo\Odontologo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Fotos\SplipFotos.xaml">
       <Generator>MSBuild:Compile</Generator>

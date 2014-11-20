@@ -48,6 +48,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\Blob\Verbs.cs" />
     <Compile Include="Util\Blob\CrudBlob.cs" />
+    <Compile Include="Util\Collection\Observables\Observables.cs" />
     <Compile Include="Util\Common\Colors.cs" />
     <Compile Include="Util\Convertir_Entidades\Convertir_Entidades.cs" />
     <Compile Include="Util\table\crudTable.cs" />
