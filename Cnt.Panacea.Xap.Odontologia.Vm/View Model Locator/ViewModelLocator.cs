@@ -63,6 +63,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
             SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
             SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos>();
+            SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad.Niveles_Severidad>();
         }
 
         /// <summary>
@@ -299,6 +300,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             get
             {
                 return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos.Diagnosticos_Procedimientos>();
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad.Niveles_Severidad Niveles_Severidad
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad.Niveles_Severidad>();
             }
         }
         

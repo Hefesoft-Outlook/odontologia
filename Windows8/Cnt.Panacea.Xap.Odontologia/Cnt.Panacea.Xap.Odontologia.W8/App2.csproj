@@ -137,8 +137,17 @@
     <Compile Include="Assets\Grillas\Diagnosticos procedimientos\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Grillas\Niveles de severidad\Add.xaml.cs">
+      <DependentUpon>Add.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Grillas\Niveles de severidad\List.xaml.cs">
+      <DependentUpon>List.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Indices\Indices.xaml.cs">
       <DependentUpon>Indices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Niveles de severidad\Niveles_Severidad.xaml.cs">
+      <DependentUpon>Niveles_Severidad.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\PopUp\Generico.xaml.cs">
       <DependentUpon>Generico.xaml</DependentUpon>
@@ -331,7 +340,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Assets\Grillas\Niveles de severidad\Add.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Grillas\Niveles de severidad\List.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Assets\Indices\Indices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Niveles de severidad\Niveles_Severidad.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

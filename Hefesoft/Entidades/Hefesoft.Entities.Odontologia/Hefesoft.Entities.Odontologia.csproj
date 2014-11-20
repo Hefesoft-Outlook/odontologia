@@ -172,6 +172,7 @@
     <Compile Include="Util\fillRowKey.cs" />
     <Compile Include="Util\Observable.cs" />
     <Compile Include="ViewModel\Diagnosticos_Procedimientos\Diagnosticos_Procedimientos.cs" />
+    <Compile Include="ViewModel\Niveles_Severidad\Niveles_Severidad.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AutoMapper">
