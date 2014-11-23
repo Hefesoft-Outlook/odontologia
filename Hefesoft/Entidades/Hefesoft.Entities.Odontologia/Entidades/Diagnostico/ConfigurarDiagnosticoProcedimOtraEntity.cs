@@ -51,8 +51,10 @@ namespace Hefesoft.Entities.Odontologia.Entidades.Diagnostico
         
         public bool Severidad { get; set; }
         
-        public string Simbolo { get; set; }
+        public string Simbolo { get; set; }        
         
         public TipoPanel TipoPanel { get; set; }
+        
+        public bool? Activo { get; set; }
     }
 }

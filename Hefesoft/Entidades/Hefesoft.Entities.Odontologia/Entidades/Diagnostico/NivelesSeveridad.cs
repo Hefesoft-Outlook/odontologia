@@ -20,5 +20,7 @@ namespace Hefesoft.Entities.Odontologia.Diagnostico
         public short Identificador { get; set; }
 
         public bool generarIdentificador { get; set; }
+
+        public bool? Activo { get; set; }
     }
 }

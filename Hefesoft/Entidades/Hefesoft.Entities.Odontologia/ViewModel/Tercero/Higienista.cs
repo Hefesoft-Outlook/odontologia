@@ -27,6 +27,17 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
                 load();
                 insertCommand = new RelayCommand(insert);
                 newCommand = new RelayCommand(nuevo);
+                deleteCommand = new RelayCommand<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity>(delete);
+            }
+        }
+
+        private async void delete(Hefesoft.Entities.Odontologia.Convenio.TerceroEntity elemento)
+        {
+            if (elemento != null)
+            {
+                elemento.Activo = false;
+                await elemento.postBlob();
+                Listado.Remove(elemento);
             }
         }
 
@@ -43,6 +54,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
                 if (string.IsNullOrEmpty(Seleccionado.RowKey))
                 {
                     Seleccionado.nombreTabla = "higienista";
+                    Seleccionado.Activo = true;
                     Seleccionado.PartitionKey = "cnt.panacea.entities.parametrizacion.terceroentity";
                     Seleccionado.RowKey = new Random().Next().ToString();
                     await Seleccionado.postBlob();
@@ -60,7 +72,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
         {
             List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), 
                 "higienista", "cnt.panacea.entities.parametrizacion.terceroentity");
-            Listado = result.ToObservableCollection();
+            Listado = result.Where(a=> (a.Activo == null || a.Activo == true)).ToObservableCollection();
             RaisePropertyChanged("Listado");
         }
 
@@ -81,5 +93,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
         public RelayCommand insertCommand { get; set; }
 
         public RelayCommand newCommand { get; set; }
+
+        public RelayCommand<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> deleteCommand { get; set; }
     }
 }

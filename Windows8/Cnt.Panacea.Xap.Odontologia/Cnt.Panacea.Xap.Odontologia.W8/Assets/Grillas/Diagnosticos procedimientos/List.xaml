@@ -17,9 +17,15 @@
     <UserControl.Resources>
         <DataTemplate x:Key="DataTemplate">
             <Grid>
-                <Assets:elementoMenu Width="100"                                     
-                Item="{Binding Mode=OneWay}"  
-                />
+                <StackPanel>
+                    <Assets:elementoMenu Width="100"                                     
+                        Item="{Binding Mode=OneWay}"  
+                    />
+                    <HyperlinkButton Content="Eliminar" Command="{Binding Diagnosticos_Procedimientos.deleteCommand, Source={StaticResource Locator}}"
+                                     FontFamily="Global User Interface" 
+                                     CommandParameter="{Binding Mode=OneWay}">
+                    </HyperlinkButton>
+                </StackPanel>                
             </Grid>
         </DataTemplate>
     </UserControl.Resources>

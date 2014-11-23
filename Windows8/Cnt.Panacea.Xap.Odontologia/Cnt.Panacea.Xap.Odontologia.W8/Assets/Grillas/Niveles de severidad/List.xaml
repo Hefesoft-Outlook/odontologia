@@ -14,7 +14,13 @@
     <UserControl.Resources>
         <DataTemplate x:Key="DataTemplate">
             <Grid>
-                <TextBlock Text="{Binding Descripcion}"></TextBlock>
+                <StackPanel>
+                    <TextBlock Text="{Binding Descripcion}"></TextBlock>
+                    <HyperlinkButton Content="Eliminar" Command="{Binding Niveles_Severidad, Mode=OneWay, Source={StaticResource Locator}}"
+                                     FontFamily="Global User Interface" 
+                                     CommandParameter="{Binding Mode=OneWay}">
+                    </HyperlinkButton>
+                </StackPanel>
             </Grid>
         </DataTemplate>
     </UserControl.Resources>

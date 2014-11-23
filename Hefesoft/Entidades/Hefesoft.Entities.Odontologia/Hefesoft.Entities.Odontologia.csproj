@@ -75,6 +75,13 @@
     <Compile Include="Entidades\Historia\TiposAtencion.cs" />
     <Compile Include="Entidades\Historia\TiposPaquete.cs" />
     <Compile Include="Entidades\Historia\UnidadesMedidaEdad.cs" />
+    <Compile Include="Entidades\Periodontograma\Entidades\PeriodontogramaEntity.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Arriba_Abajo.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Cara.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Parte.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Tipo_Pieza.cs" />
+    <Compile Include="Entidades\Periodontograma\Util\Generar_datos.cs" />
+    <Compile Include="Entidades\Periodontograma\ViewModel\Periodontograma.cs" />
     <Compile Include="Entidades\Tercero\ActividadesEconomicasCollection.cs" />
     <Compile Include="Entidades\Convenio\ClasesTercero.cs" />
     <Compile Include="Entidades\Convenio\ContratoLiquidacionEntity.cs" />

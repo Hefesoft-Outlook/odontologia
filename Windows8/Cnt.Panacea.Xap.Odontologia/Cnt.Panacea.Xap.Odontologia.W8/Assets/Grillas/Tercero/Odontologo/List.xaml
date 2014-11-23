@@ -14,7 +14,13 @@
     <UserControl.Resources>
         <DataTemplate x:Key="DataTemplate">
             <Grid>
-                <TextBlock Text="{Binding NombreCompleto}"></TextBlock>
+                <StackPanel>
+                    <TextBlock Text="{Binding NombreCompleto}" FontFamily="Global User Interface"></TextBlock>
+                    <HyperlinkButton Content="Eliminar" Command="{Binding Odontologo.deleteCommand, Source={StaticResource Locator}}"
+                                     FontFamily="Global User Interface" 
+                                     CommandParameter="{Binding Mode=OneWay}">
+                    </HyperlinkButton>
+                </StackPanel>
             </Grid>
         </DataTemplate>
     </UserControl.Resources>

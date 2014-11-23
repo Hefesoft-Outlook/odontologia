@@ -26,6 +26,17 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
                 load();
                 insertCommand = new RelayCommand(insert);
                 newCommand = new RelayCommand(nuevo);
+                deleteCommand = new RelayCommand<Diagnostico.NivelSeveridadDXEntity>(delete);
+            }
+        }
+
+        private async void delete(Diagnostico.NivelSeveridadDXEntity elemento)
+        {
+            if (elemento != null)
+            {
+                elemento.Activo = false;
+                await elemento.postBlob();
+                Listado.Remove(elemento);
             }
         }
 
@@ -41,6 +52,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
             {
                 if (string.IsNullOrEmpty(Seleccionado.RowKey))
                 {
+                    Seleccionado.Activo = true;
                     Seleccionado.nombreTabla = "nivelseveridaddxentity";
                     Seleccionado.PartitionKey = "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity";
                     Seleccionado.RowKey = new Random().Next().ToString();
@@ -62,7 +74,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
         {
             List<Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity> blob = await new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity().getBlobByPartition(
                 "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
-            Listado = blob.ToObservableCollection();
+            Listado = blob.Where(a => (a.Activo == null || a.Activo == true)).ToObservableCollection();
             RaisePropertyChanged("Listado");
         }
 
@@ -83,5 +95,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
         public RelayCommand insertCommand { get; set; }
 
         public RelayCommand newCommand { get; set; }
+
+        public RelayCommand<Diagnostico.NivelSeveridadDXEntity> deleteCommand { get; set; }
     }
 }

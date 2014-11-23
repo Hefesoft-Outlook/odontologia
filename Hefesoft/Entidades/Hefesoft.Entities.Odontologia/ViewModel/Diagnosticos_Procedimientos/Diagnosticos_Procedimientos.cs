@@ -59,6 +59,24 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
                 descripcionCommand = new RelayCommand<string>(descripcion);
                 guardarCommand = new RelayCommand(guardar);
                 nuevoCommand = new RelayCommand(nuevo);
+                deleteCommand = new RelayCommand<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>(delete);
+            }
+        }
+
+        private async void delete(Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity elemento)
+        {
+            if (elemento != null)
+            {
+                var entidad = Convertir_Observables.ConvertirEntidades(elemento, new ConfigurarDiagnosticoProcedimOtraEntity());
+
+                entidad.nombreTabla = "configurardiagnosticoprocedimotraentity";
+                entidad.PartitionKey = "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity";
+                entidad.Identificador = elemento.Identificador;
+                entidad.RowKey = elemento.Identificador.ToString();
+                entidad.Activo = false;
+
+                await entidad.postBlob();
+                Listado.Remove(elemento);
             }
         }
 
@@ -91,7 +109,8 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
         public async void listarElementos()
         {
             List<DiagnosticoProcedimiento> blob = await new DiagnosticoProcedimiento().getBlobByPartition("configurardiagnosticoprocedimotraentity", "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
-            Listado = Convertir_Observables.ConvertirIEnumerable(blob, new List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>()).ToObservableCollection();
+            var resultado = blob.Where(a => (a.Activo == null || a.Activo == true));
+            Listado = Convertir_Observables.ConvertirIEnumerable(resultado, new List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>()).ToObservableCollection();
             RaisePropertyChanged("Listado");
         }
 
@@ -111,6 +130,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
             // Modo Insercion
             if (Identificador == 0)
             {
+                DiagnosticoProcedimiento.Activo = true;
                 DiagnosticoProcedimiento.RowKey = new Random().Next().ToString();
                 DiagnosticoProcedimiento.Identificador = Convert.ToInt32(DiagnosticoProcedimiento.RowKey);
                 Listado.Add(diagnosticoOdontologiaCnt);
@@ -136,11 +156,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
                     nuevo();
                 }
-
             }
-
-            
-            
         }
 
         private void ingresoTexto(string obj)
@@ -381,5 +397,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
         public RelayCommand nuevoCommand { get; set; }
 
         public int Identificador { get; set; }
+
+        public RelayCommand<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity> deleteCommand { get; set; }
     }
 }

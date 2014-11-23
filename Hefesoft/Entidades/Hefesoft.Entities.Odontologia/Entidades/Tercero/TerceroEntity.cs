@@ -14,7 +14,6 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         public string RowKey { get; set; }
         public string nombreTabla { get; set; }
 
-        
         public ActividadesEconomicasCollection ActividadesEconomicas { get; set; }
         
         public bool Aprobado { get; set; }
@@ -70,5 +69,7 @@ namespace Hefesoft.Entities.Odontologia.Convenio
         public TiposProfesionalSalud TipoProfesional { get; set; }
 
         public bool generarIdentificador { get; set; }
+
+        public bool? Activo { get; set; }
     }
 }
