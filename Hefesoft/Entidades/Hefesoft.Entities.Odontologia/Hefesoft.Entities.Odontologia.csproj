@@ -78,6 +78,7 @@
     <Compile Include="Entidades\Periodontograma\Entidades\PeriodontogramaEntity.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Arriba_Abajo.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Cara.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Furca.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Parte.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Tipo_Pieza.cs" />
     <Compile Include="Entidades\Periodontograma\Util\Generar_datos.cs" />

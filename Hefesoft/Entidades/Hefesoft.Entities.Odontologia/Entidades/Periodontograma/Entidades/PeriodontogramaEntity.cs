@@ -28,6 +28,8 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             RaisePropertyChanged("profundidadSondaje");
             RaisePropertyChanged("margenGingivalColor");
             RaisePropertyChanged("profundidadSondajeColor");
+
+            Furca = Enumeradores.Furca.mediolleno;
         }
 
         private int numero;
@@ -78,6 +80,15 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
                 RaisePropertyChanged("Tipo_Pieza");
             }
         }
+
+        private Furca furca = Furca.ninguno;
+
+        public Furca Furca
+        {
+            get { return furca; }
+            set { furca = value; RaisePropertyChanged("Furca"); }
+        }
+        
 
         public Parte Parte { get; set; }
 
