@@ -177,6 +177,12 @@
     <Compile Include="Assets\Periodontograma\Pieza\Pieza.xaml.cs">
       <DependentUpon>Pieza.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Periodontograma\Placa\PlacaElemento.xaml.cs">
+      <DependentUpon>PlacaElemento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Periodontograma\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xaml.cs">
+      <DependentUpon>Sangrado_Supuracion_Elemento.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\PopUp\Generico.xaml.cs">
       <DependentUpon>Generico.xaml</DependentUpon>
     </Compile>
@@ -622,6 +628,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\Periodontograma\Pieza\Pieza.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Periodontograma\Placa\PlacaElemento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Periodontograma\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
