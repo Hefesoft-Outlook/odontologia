@@ -79,6 +79,7 @@
     <Compile Include="Entidades\Periodontograma\Enumeradores\Arriba_Abajo.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Cara.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Furca.cs" />
+    <Compile Include="Entidades\Periodontograma\Enumeradores\Implante.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Parte.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Placa.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Sangrado_Supuracion.cs" />

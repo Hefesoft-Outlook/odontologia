@@ -8,8 +8,7 @@
     xmlns:Pieza="using:App2.Assets.Periodontograma.Pieza"
     xmlns:Margenes="using:App2.Assets.Periodontograma.Margenes"
     xmlns:Furca="using:App2.Assets.Periodontograma.Furca"
-    xmlns:Sangrado_Supuracion="using:App2.Assets.Periodontograma.Sangrado_Supuracion"
-    xmlns:Placa="using:App2.Assets.Periodontograma.Placa"
+    xmlns:Menu_Opciones="using:App2.Assets.Periodontograma.Menu_Opciones"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
@@ -51,44 +50,8 @@
                         FurcaProperty="{Binding Furca}">                        
                     </Furca:Furca>
                 </Grid>
-                
-                <StackPanel Orientation="Horizontal" Width="60">
-                    
-                    <Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
-						Sangrado_Supuracion="{Binding SangradoSupuracion1}" 
-						Width="20">                        
-                    </Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
 
-                    <Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
-						Sangrado_Supuracion="{Binding SangradoSupuracion2}" 
-						Width="20">
-                    </Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
-
-                    <Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
-						Sangrado_Supuracion="{Binding SangradoSupuracion3}" 
-						Width="20">
-                    </Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
-
-                </StackPanel>
-
-                <StackPanel Orientation="Horizontal" Width="60">
-
-                    <Placa:PlacaElemento 
-						Placa="{Binding Placa1}" 
-						Width="20">
-                    </Placa:PlacaElemento>
-
-                    <Placa:PlacaElemento 
-						Placa="{Binding Placa2}" 
-						Width="20">
-                    </Placa:PlacaElemento>
-
-                    <Placa:PlacaElemento 
-						Placa="{Binding Placa3}" 
-						Width="20">
-                    </Placa:PlacaElemento>
-
-                </StackPanel>
+                <Menu_Opciones:Menu_Opciones></Menu_Opciones:Menu_Opciones>
 
             </StackPanel>
         </DataTemplate>
