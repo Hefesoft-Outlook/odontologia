@@ -1,4 +1,5 @@
 ﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,6 +19,21 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             else
             {
                 inicializarDatos();
+                implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);
+            }
+        }
+
+        private void implanteMetodo(Entidades.PeriodontogramaEntity obj)
+        {            
+            if (obj.Implante == Enumeradores.Implante.ninguno)
+            {
+                obj.Tipo_Pieza = Enumeradores.Tipo_Pieza.tornillo;
+                obj.Implante = Enumeradores.Implante.black;                
+            }
+            else if (obj.Implante == Enumeradores.Implante.black)
+            {
+                obj.Tipo_Pieza = Enumeradores.Tipo_Pieza.normal;
+                obj.Implante = Enumeradores.Implante.ninguno;
             }
         }
 
@@ -36,8 +52,6 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
         }
 
-        
-
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte1 { get; set; }
 
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte2 { get; set; }
@@ -54,6 +68,8 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte8 { get; set; }
 
-        
+
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> implante { get; set; }
     }
 }

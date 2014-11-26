@@ -157,13 +157,60 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             set { movilidad = value; RaisePropertyChanged("Movilidad"); }
         }
 
-        private Implante implante = Implante.black;
+        private Implante implante = Implante.ninguno;
 
         public Implante Implante
         {
             get { return implante; }
             set { implante = value; RaisePropertyChanged("Implante"); }
         }
-        
+
+        private int? margenGingival1;
+
+        public int? MargenGingival1
+        {
+            get { return margenGingival1; }
+            set { margenGingival1 = value; RaisePropertyChanged("MargenGingival1"); }
+        }
+
+        private int? margenGingival2;
+
+        public int? MargenGingival2
+        {
+            get { return margenGingival2; }
+            set { margenGingival2 = value; RaisePropertyChanged("MargenGingival2"); }
+        }
+
+        private int? margenGingival3;
+
+        public int? MargenGingival3
+        {
+            get { return margenGingival3; }
+            set { margenGingival3 = value; RaisePropertyChanged("MargenGingival3"); }
+        }
+
+        private int? produndidadSondaje1;
+
+        public int? ProdundidadSondaje1
+        {
+            get { return produndidadSondaje1; }
+            set { produndidadSondaje1 = value; RaisePropertyChanged("ProdundidadSondaje1"); }
+        }
+
+        private int? produndidadSondaje2;
+
+        public int? ProdundidadSondaje2
+        {
+            get { return produndidadSondaje2; }
+            set { produndidadSondaje2 = value; RaisePropertyChanged("ProdundidadSondaje2"); }
+        }
+
+        private int? produndidadSondaje3;
+
+        public int? ProdundidadSondaje3
+        {
+            get { return produndidadSondaje3; }
+            set { produndidadSondaje3 = value; RaisePropertyChanged("ProdundidadSondaje3"); }
+        }
     }
 }

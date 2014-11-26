@@ -14,12 +14,37 @@
     d:DesignWidth="400" d:DataContext="{d:DesignInstance Entidades:PeriodontogramaEntity}">
     
 	<Grid>
-		<StackPanel Orientation="Vertical" Width="60">
+		
+        <StackPanel Orientation="Vertical" Width="60">
 			
             <TextBox TextWrapping="Wrap" Text="{Binding Movilidad, Mode=TwoWay}" TextAlignment="Center"/>
             
+            <Grid Height="32">
+            	<Grid.ColumnDefinitions>
+            		<ColumnDefinition Width="3*"/>
+            		<ColumnDefinition Width="3*"/>
+            		<ColumnDefinition Width="3*"/>
+            	</Grid.ColumnDefinitions>
+            	<TextBox Text="{Binding MargenGingival1, Mode=TwoWay}"/>
+            	<TextBox Text="{Binding MargenGingival2, Mode=TwoWay}" Grid.Column="1"/>
+            	<TextBox Text="{Binding MargenGingival3, Mode=TwoWay}" Grid.Column="2"/>
+            </Grid>
+
+			<Grid Height="32">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="3*"/>
+					<ColumnDefinition Width="3*"/>
+					<ColumnDefinition Width="3*"/>
+				</Grid.ColumnDefinitions>
+				<TextBox Text="{Binding ProdundidadSondaje1, Mode=TwoWay}"/>
+				<TextBox Text="{Binding ProdundidadSondaje2, Mode=TwoWay}" Grid.Column="1"/>
+				<TextBox Text="{Binding ProdundidadSondaje3, Mode=TwoWay}" Grid.Column="2"/>
+			</Grid>
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                <Implante:Implante ImplanteElemento="{Binding Implante}" ></Implante:Implante>
+                <Implante:Implante 
+                    ImplanteElemento="{Binding Implante}">                    
+                </Implante:Implante>
             </StackPanel>
 
 			<StackPanel Orientation="Horizontal">
