@@ -15,7 +15,7 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             profundidadSondajeColor = "Blue";
             RaisePropertyChanged("margenGingivalColor");
             RaisePropertyChanged("profundidadSondajeColor");
-            Furca = Enumeradores.Furca.mediolleno;
+            Furca = Enumeradores.Furca.ninguno;
         }
 
         private int numero;

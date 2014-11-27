@@ -51,25 +51,34 @@ namespace App2.Assets.Periodontograma.Furca
 
             imagen.Source = null;
 
-            if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.vacio)
+            if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.ninguno)
             {
-                url = string.Format("ms-appx:///Assets/Images/Periodontograma/vacio.png");
-                imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));                
+                imagen.Visibility = Windows.UI.Xaml.Visibility.Collapsed;                
             }
-            else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.mediolleno)
+            else
             {
-                url = string.Format("ms-appx:///Assets/Images/Periodontograma/mediolleno.png");
-                imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
-            }
-            else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.lleno)
-            {
-                url = string.Format("ms-appx:///Assets/Images/Periodontograma/lleno.png");
-                imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
-            }
-            else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.cuadrado)
-            {
-                url = string.Format("ms-appx:///Assets/Images/Periodontograma/cuadrado.png");
-                imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
+                imagen.Visibility = Windows.UI.Xaml.Visibility.Visible;                
+
+                if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.vacio)
+                {
+                    url = string.Format("ms-appx:///Assets/Images/Periodontograma/vacio.png");
+                    imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
+                }
+                else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.mediolleno)
+                {
+                    url = string.Format("ms-appx:///Assets/Images/Periodontograma/mediolleno.png");
+                    imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
+                }
+                else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.lleno)
+                {
+                    url = string.Format("ms-appx:///Assets/Images/Periodontograma/lleno.png");
+                    imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
+                }
+                else if (item == Hefesoft.Odontologia.Periodontograma.Enumeradores.Furca.cuadrado)
+                {
+                    url = string.Format("ms-appx:///Assets/Images/Periodontograma/cuadrado.png");
+                    imagen.Source = new BitmapImage(new Uri(url, UriKind.RelativeOrAbsolute));
+                }
             }
         }
 

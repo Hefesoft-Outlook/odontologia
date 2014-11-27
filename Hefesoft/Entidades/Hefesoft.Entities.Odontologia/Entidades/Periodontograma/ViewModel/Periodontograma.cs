@@ -19,8 +19,33 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             else
             {
                 inicializarDatos();
-                implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);        
+                implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);
+                furcaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(furcaMetodo);
             }
+        }
+
+        private void furcaMetodo(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.Furca == Enumeradores.Furca.ninguno)
+            {
+                obj.Furca = Enumeradores.Furca.vacio;
+            }
+            else if(obj.Furca == Enumeradores.Furca.vacio)
+            {
+                obj.Furca = Enumeradores.Furca.mediolleno;
+            }
+            else if (obj.Furca == Enumeradores.Furca.mediolleno)
+            {
+                obj.Furca = Enumeradores.Furca.lleno;
+            }
+            else if (obj.Furca == Enumeradores.Furca.lleno)
+            {
+                obj.Furca = Enumeradores.Furca.cuadrado;
+            }
+            else if (obj.Furca == Enumeradores.Furca.cuadrado)
+            {
+                obj.Furca = Enumeradores.Furca.ninguno;
+            }            
         }
         
 
@@ -90,5 +115,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
         public RelayCommand<object> margeGingivalCommand2 { get; set; }
 
         public RelayCommand<object> margeGingivalCommand3 { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> furcaCommand { get; set; }
     }
 }

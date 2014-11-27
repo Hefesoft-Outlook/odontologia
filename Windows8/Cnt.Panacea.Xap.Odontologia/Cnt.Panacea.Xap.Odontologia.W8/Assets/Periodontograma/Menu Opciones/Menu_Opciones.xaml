@@ -9,6 +9,7 @@
     xmlns:Implante="using:App2.Assets.Periodontograma.Implante"
     xmlns:Entidades="using:Hefesoft.Odontologia.Periodontograma.Entidades"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:Furca="using:App2.Assets.Periodontograma.Furca"
     x:Class="App2.Assets.Periodontograma.Menu_Opciones.Menu_Opciones"
     mc:Ignorable="d"
     d:DesignHeight="300"
@@ -19,6 +20,7 @@
 		<StackPanel Orientation="Vertical" Width="60">
 			
 			<TextBox TextWrapping="Wrap" Text="{Binding Movilidad, Mode=TwoWay}" TextAlignment="Center"/>
+			<Furca:Furca x:Name="furca" Height="32"/>
             
 			<Grid Height="32">
 				<Grid.ColumnDefinitions>
@@ -27,16 +29,13 @@
 					<ColumnDefinition Width="3*"/>
 				</Grid.ColumnDefinitions>
 				
-                <TextBox x:Name="txtBxMargen1" Text="{Binding MargenGingival1, Mode=TwoWay}" >					
-				</TextBox>
+				<TextBox x:Name="txtBxMargen1" Text="{Binding MargenGingival1, Mode=TwoWay}" />
 
-                <TextBox x:Name="txtBxMargen2" Text="{Binding MargenGingival2, Mode=TwoWay}" Grid.Column="1">                    
-                </TextBox>
+				<TextBox x:Name="txtBxMargen2" Text="{Binding MargenGingival2, Mode=TwoWay}" Grid.Column="1"/>
 
-                <TextBox x:Name="txtBxMargen3" Text="{Binding MargenGingival3, Mode=TwoWay}" Grid.Column="2">                    
-                </TextBox>
+				<TextBox x:Name="txtBxMargen3" Text="{Binding MargenGingival3, Mode=TwoWay}" Grid.Column="2"/>
                 
-            </Grid>
+			</Grid>
 
 			<Grid Height="32">
 				<Grid.ColumnDefinitions>
