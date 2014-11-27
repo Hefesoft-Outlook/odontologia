@@ -161,6 +161,9 @@
     <Compile Include="Assets\Niveles de severidad\Niveles_Severidad.xaml.cs">
       <DependentUpon>Niveles_Severidad.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Periodontograma\Control\Item_Template.xaml.cs">
+      <DependentUpon>Item_Template.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Periodontograma\Control\Periodontograma.xaml.cs">
       <DependentUpon>Periodontograma.xaml</DependentUpon>
     </Compile>
@@ -614,6 +617,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\Niveles de severidad\Niveles_Severidad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Periodontograma\Control\Item_Template.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

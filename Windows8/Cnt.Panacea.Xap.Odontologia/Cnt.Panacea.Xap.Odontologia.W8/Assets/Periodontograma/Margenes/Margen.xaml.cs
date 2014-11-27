@@ -57,44 +57,100 @@ namespace App2.Assets.Periodontograma.Margenes
 
 
 
-        #region puntos (DependencyProperty)
+        #region margen1 (DependencyProperty)
 
         /// <summary>
         /// A description of the property.
         /// </summary>
-        public Dictionary<int,int> puntos
+        public int margen1
         {
-            get { return (Dictionary<int,int>)GetValue(puntosProperty); }
-            set { SetValue(puntosProperty, value); }
+            get { return (int)GetValue(margen1Property); }
+            set { SetValue(margen1Property, value); }
         }
-        public static readonly DependencyProperty puntosProperty =
-            DependencyProperty.Register("puntos", typeof(Dictionary<int,int>), typeof(Margen),
-            new PropertyMetadata(new Dictionary<int,int>(), new PropertyChangedCallback(OnpuntosChanged)));
+        public static readonly DependencyProperty margen1Property =
+            DependencyProperty.Register("margen1", typeof(int), typeof(Margen),
+            new PropertyMetadata(0, new PropertyChangedCallback(Onmargen1Changed)));
 
-        private static void OnpuntosChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void Onmargen1Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            ((Margen)d).OnpuntosChanged(e);
+            ((Margen)d).Onmargen1Changed(e);
         }
 
-        private void OnpuntosChanged(DependencyPropertyChangedEventArgs e)
+        private void Onmargen1Changed(DependencyPropertyChangedEventArgs e)
         {
-            var item = (Dictionary<int, int>)e.NewValue;
+            Linea.Points.Clear();
+            var item = (int)e.NewValue;
+            Linea.Points.Add(new Point(0, margen1));
+            Linea.Points.Add(new Point(50, margen2));
+            Linea.Points.Add(new Point(100, margen3));
+        }
+        #endregion
 
-            if (item.Any())
-            {
-                Linea.Points.Clear();
 
-                foreach (var elemento in item)
-                {
-                    Linea.Points.Add(new Point(elemento.Key, elemento.Value));
-                }
-            }
+        #region margen2 (DependencyProperty)
+
+        /// <summary>
+        /// A description of the property.
+        /// </summary>
+        public int margen2
+        {
+            get { return (int)GetValue(margen2Property); }
+            set { SetValue(margen2Property, value); }
+        }
+        public static readonly DependencyProperty margen2Property =
+            DependencyProperty.Register("margen2", typeof(int), typeof(Margen),
+            new PropertyMetadata(0, new PropertyChangedCallback(Onmargen2Changed)));
+
+        private static void Onmargen2Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((Margen)d).Onmargen2Changed(e);
+        }
+
+        private void Onmargen2Changed(DependencyPropertyChangedEventArgs e)
+        {
+            Linea.Points.Clear();
+            var item = (int)e.NewValue;
+            Linea.Points.Add(new Point(0, margen1));
+            Linea.Points.Add(new Point(50, margen2));
+            Linea.Points.Add(new Point(100, 0));
         }
 
         
 
         #endregion
-                
+
+
+        #region margen3 (DependencyProperty)
+
+        /// <summary>
+        /// A description of the property.
+        /// </summary>
+        public int margen3
+        {
+            get { return (int)GetValue(margen3Property); }
+            set { SetValue(margen3Property, value); }
+        }
+        public static readonly DependencyProperty margen3Property =
+            DependencyProperty.Register("margen3", typeof(int), typeof(Margen),
+            new PropertyMetadata(0, new PropertyChangedCallback(Onmargen3Changed)));
+
+        private static void Onmargen3Changed(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((Margen)d).Onmargen3Changed(e);
+        }
+
+        private void Onmargen3Changed(DependencyPropertyChangedEventArgs e)
+        {
+            Linea.Points.Clear();
+            var item = (int)e.NewValue;
+            Linea.Points.Add(new Point(0, margen1));
+            Linea.Points.Add(new Point(50, margen2));
+            Linea.Points.Add(new Point(100, margen3));
+        }
+
+        
+
+        #endregion
         
     }
 }

@@ -10,25 +10,11 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
     public class PeriodontogramaEntity : ViewModelBase
     {
         public PeriodontogramaEntity()
-        {
-            margenGingival = new Dictionary<int, int>();
-            margenGingival.Add(0, 0);
-            margenGingival.Add(50, 20);
-            margenGingival.Add(100, 0);
-
-            profundidadSondaje = new Dictionary<int, int>();
-            profundidadSondaje.Add(0, 0);
-            profundidadSondaje.Add(50, 50);
-            profundidadSondaje.Add(100, 0);
-
+        {            
             margenGingivalColor = "Red";
             profundidadSondajeColor = "Blue";
-
-            RaisePropertyChanged("margenGingival");
-            RaisePropertyChanged("profundidadSondaje");
             RaisePropertyChanged("margenGingivalColor");
             RaisePropertyChanged("profundidadSondajeColor");
-
             Furca = Enumeradores.Furca.mediolleno;
         }
 
@@ -91,11 +77,7 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
         
 
         public Parte Parte { get; set; }
-
-        public Dictionary<int, int> margenGingival { get; set; }
-
-        public Dictionary<int, int> profundidadSondaje { get; set; }
-
+        
         public string margenGingivalColor { get; set; }
 
         public string profundidadSondajeColor { get; set; }
@@ -165,52 +147,76 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             set { implante = value; RaisePropertyChanged("Implante"); }
         }
 
-        private int? margenGingival1;
+        private int margenGingival1 = 0;
 
-        public int? MargenGingival1
+        public int MargenGingival1
         {
             get { return margenGingival1; }
-            set { margenGingival1 = value; RaisePropertyChanged("MargenGingival1"); }
+            set 
+            {
+                margenGingival1 = value;
+                RaisePropertyChanged("MargenGingival1"); 
+            }
         }
 
-        private int? margenGingival2;
+        private int margenGingival2;
 
-        public int? MargenGingival2
+        public int MargenGingival2
         {
             get { return margenGingival2; }
-            set { margenGingival2 = value; RaisePropertyChanged("MargenGingival2"); }
+            set 
+            { 
+                margenGingival2 = value;                
+                RaisePropertyChanged("MargenGingival2"); 
+            }
         }
 
-        private int? margenGingival3;
+        private int margenGingival3;
 
-        public int? MargenGingival3
+        public int MargenGingival3
         {
             get { return margenGingival3; }
-            set { margenGingival3 = value; RaisePropertyChanged("MargenGingival3"); }
+            set 
+            {
+                margenGingival3 = value;                
+                RaisePropertyChanged("MargenGingival3"); 
+            }
         }
 
-        private int? produndidadSondaje1;
+        private int produndidadSondaje1;
 
-        public int? ProdundidadSondaje1
+        public int ProdundidadSondaje1
         {
             get { return produndidadSondaje1; }
-            set { produndidadSondaje1 = value; RaisePropertyChanged("ProdundidadSondaje1"); }
+            set 
+            { 
+                produndidadSondaje1 = value;                
+                RaisePropertyChanged("ProdundidadSondaje1"); 
+            }
         }
 
-        private int? produndidadSondaje2;
+        private int produndidadSondaje2;
 
-        public int? ProdundidadSondaje2
+        public int ProdundidadSondaje2
         {
             get { return produndidadSondaje2; }
-            set { produndidadSondaje2 = value; RaisePropertyChanged("ProdundidadSondaje2"); }
+            set 
+            { 
+                produndidadSondaje2 = value;                
+                RaisePropertyChanged("ProdundidadSondaje2"); 
+            }
         }
 
-        private int? produndidadSondaje3;
+        private int produndidadSondaje3;
 
-        public int? ProdundidadSondaje3
+        public int ProdundidadSondaje3
         {
             get { return produndidadSondaje3; }
-            set { produndidadSondaje3 = value; RaisePropertyChanged("ProdundidadSondaje3"); }
+            set 
+            { 
+                produndidadSondaje3 = value;                
+                RaisePropertyChanged("ProdundidadSondaje3"); 
+            }
         }
     }
 }

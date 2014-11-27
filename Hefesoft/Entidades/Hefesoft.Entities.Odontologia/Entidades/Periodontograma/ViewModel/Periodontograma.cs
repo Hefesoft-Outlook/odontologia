@@ -14,14 +14,15 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
         {
             if(IsInDesignMode)
             {
-                inicializarDatos();
+                
             }
             else
             {
                 inicializarDatos();
-                implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);
+                implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);        
             }
         }
+        
 
         private void implanteMetodo(Entidades.PeriodontogramaEntity obj)
         {            
@@ -68,8 +69,26 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte8 { get; set; }
 
+        private Entidades.PeriodontogramaEntity seleccionado;
+
+        public Entidades.PeriodontogramaEntity Seleccionado
+        {
+            get { return seleccionado; }
+            set 
+            { 
+                seleccionado = value;
+                RaisePropertyChanged("Seleccionado");
+            }
+        }
+        
 
 
         public RelayCommand<Entidades.PeriodontogramaEntity> implante { get; set; }
+
+        public RelayCommand<object> margeGingivalCommand { get; set; }
+
+        public RelayCommand<object> margeGingivalCommand2 { get; set; }
+
+        public RelayCommand<object> margeGingivalCommand3 { get; set; }
     }
 }
