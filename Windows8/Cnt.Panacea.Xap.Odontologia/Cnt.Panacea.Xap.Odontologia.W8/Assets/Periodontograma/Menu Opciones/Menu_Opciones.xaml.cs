@@ -22,6 +22,7 @@ namespace App2.Assets.Periodontograma.Menu_Opciones
         public Menu_Opciones()
         {
             this.InitializeComponent();
+            
         }
     }
 }

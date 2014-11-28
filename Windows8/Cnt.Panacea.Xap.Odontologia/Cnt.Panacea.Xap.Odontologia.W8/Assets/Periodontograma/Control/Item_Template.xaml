@@ -16,6 +16,43 @@
     d:DesignWidth="400">
 
     <StackPanel>
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="VisualStateGroup">
+    			<VisualState x:Name="VisualState"/>
+    			<VisualState x:Name="VisualStateDosElementos">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Furca2">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.FontFamily)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<FontFamily>Global User Interface</FontFamily>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<x:Int32>1</x:Int32>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<HorizontalAlignment>Left</HorizontalAlignment>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
         <Grid>
         <Pieza:Pieza 
                         Numero="{Binding Numero}"
@@ -39,14 +76,31 @@
                          margen3="{Binding ProdundidadSondaje3}"
                          >
         </Margenes:Margen>
+        
+		<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="60">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="5*"/>
+        		<ColumnDefinition Width="5*"/>
+        	</Grid.ColumnDefinitions>
 
-        <Furca:Furca
-                Width="30"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center"
-                FurcaProperty="{Binding Furca}">
-        </Furca:Furca>
+        	<Furca:Furca x:Name="Furca1"
+                mostraRecuadro="False"
+        		Width="30"
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Center"
+        		FurcaProperty="{Binding Furca}" Grid.ColumnSpan="2" Height="30"/>
+
+        	<Furca:Furca x:Name="Furca2"
+                mostraRecuadro="False"
+        		Width="30"
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Right"
+        		FurcaProperty="{Binding Furca2}" Visibility="Collapsed" Grid.ColumnSpan="1" Grid.Column="1" Height="30"/>
+
+        </Grid>
+
     </Grid>        
-        <Menu_Opciones:Menu_Opciones></Menu_Opciones:Menu_Opciones>
+        <Menu_Opciones:Menu_Opciones x:Name="menuOpciones">
+		</Menu_Opciones:Menu_Opciones>
     </StackPanel>
 </UserControl>

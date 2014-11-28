@@ -11,22 +11,11 @@
     d:DesignWidth="60" d:DataContext="{d:DesignInstance ViewModel:Periodontograma}">
     
 	<Grid>
-		<Rectangle x:Name="Rectangle"  Fill="#FFE8E8FB">
-			<Interactivity:Interaction.Behaviors>
-				<Core:EventTriggerBehavior EventName="PointerPressed">
-					<Core:InvokeCommandAction Command="{Binding Periodontograma.furcaCommand, Source={StaticResource Locator}}" 
-					CommandParameter="{Binding Mode=OneWay}"/>
-				</Core:EventTriggerBehavior>
-			</Interactivity:Interaction.Behaviors>
+        
+		<Rectangle x:Name="Rectangle" x:FieldModifier="public" Fill="#FFE8E8FB" Stroke="Black">
 		</Rectangle>
         
-		<Image x:Name="imagen" Visibility="Collapsed" Stretch="None" >
-			<Interactivity:Interaction.Behaviors>
-				<Core:EventTriggerBehavior EventName="PointerPressed">
-					<Core:InvokeCommandAction Command="{Binding Periodontograma.furcaCommand, Source={StaticResource Locator}}" 
-					CommandParameter="{Binding Mode=OneWay}"/>
-				</Core:EventTriggerBehavior>
-			</Interactivity:Interaction.Behaviors>
+		<Image x:Name="imagen" Visibility="Collapsed" Stretch="None" >			
 		</Image>
         
 	</Grid>

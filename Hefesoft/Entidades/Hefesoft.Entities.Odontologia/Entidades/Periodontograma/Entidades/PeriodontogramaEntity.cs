@@ -72,7 +72,23 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
         public Furca Furca
         {
             get { return furca; }
-            set { furca = value; RaisePropertyChanged("Furca"); }
+            set 
+            { 
+                furca = value; 
+                RaisePropertyChanged("Furca"); 
+            }
+        }
+
+        private Furca furca2 = Furca.ninguno;
+
+        public Furca Furca2
+        {
+            get { return furca2; }
+            set
+            {
+                furca2 = value;
+                RaisePropertyChanged("Furca2");
+            }
         }
         
 
@@ -218,5 +234,18 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
                 RaisePropertyChanged("ProdundidadSondaje3"); 
             }
         }
+
+        private Furca_Visualizacion furcaVisualizacion = Furca_Visualizacion.No_Visible;
+
+        public Furca_Visualizacion FurcaVisualizacion
+        {
+            get { return furcaVisualizacion; }
+            set 
+            { 
+                furcaVisualizacion = value;
+                RaisePropertyChanged("FurcaVisualizacion");
+            }
+        }
+        
     }
 }

@@ -26,6 +26,44 @@ namespace App2.Assets.Periodontograma.Furca
         }
 
 
+        #region mostraRecuadro (DependencyProperty)
+
+        /// <summary>
+        /// A description of the property.
+        /// </summary>
+        public bool mostraRecuadro
+        {
+            get { return (bool)GetValue(mostraRecuadroProperty); }
+            set { SetValue(mostraRecuadroProperty, value); }
+        }
+        public static readonly DependencyProperty mostraRecuadroProperty =
+            DependencyProperty.Register("mostraRecuadro", typeof(bool), typeof(Furca),
+            new PropertyMetadata(false, new PropertyChangedCallback(OnmostraRecuadroChanged)));
+
+        private static void OnmostraRecuadroChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((Furca)d).OnmostraRecuadroChanged(e);
+        }
+
+        private void OnmostraRecuadroChanged(DependencyPropertyChangedEventArgs e)
+        {
+            var item = (bool)e.NewValue;
+
+            if(item)
+            {
+                Rectangle.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+            else
+            {
+                Rectangle.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            }
+        }
+
+        
+
+        #endregion
+        
+
         #region FurcaProperty (DependencyProperty)
 
         /// <summary>

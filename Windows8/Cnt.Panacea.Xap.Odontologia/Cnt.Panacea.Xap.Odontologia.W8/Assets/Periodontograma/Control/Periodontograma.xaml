@@ -22,7 +22,9 @@
 
         <DataTemplate x:Key="DataTemplate">
             <StackPanel Margin="0,0,-15,0">
-                <local:Item_Template></local:Item_Template>
+                <local:Item_Template 
+                    furcaVisualizacion="{Binding FurcaVisualizacion}">                    
+                </local:Item_Template>
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>

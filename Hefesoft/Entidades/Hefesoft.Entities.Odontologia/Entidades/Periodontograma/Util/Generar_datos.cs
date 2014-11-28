@@ -13,9 +13,9 @@ namespace Hefesoft.Odontologia.Periodontograma.Util
             ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaTodos = new ObservableCollection<Entidades.PeriodontogramaEntity>();
 
             //Parte 1
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 18, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 17, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 16, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 18, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Un_Elemento });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 17, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Un_Elemento });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 16, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Un_Elemento });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 15, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 14, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 13, Parte = Enumeradores.Parte.parte1, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba });
@@ -43,9 +43,9 @@ namespace Hefesoft.Odontologia.Periodontograma.Util
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 28, Parte = Enumeradores.Parte.parte3, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
 
             //Parte 4
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 18, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 17, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
-            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 16, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 18, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Dos_Elementos });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 17, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Dos_Elementos });
+            LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 16, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b, FurcaVisualizacion = Enumeradores.Furca_Visualizacion.Visible_Un_Elemento });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 15, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 14, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
             LstPeriodontogramaTodos.Add(new Entidades.PeriodontogramaEntity() { Numero = 13, Parte = Enumeradores.Parte.parte4, Arriba_Abajo = Enumeradores.Arriba_Abajo.arriba, Cara = Enumeradores.Cara.b });
