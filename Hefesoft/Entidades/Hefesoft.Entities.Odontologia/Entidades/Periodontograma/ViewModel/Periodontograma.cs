@@ -22,6 +22,92 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
                 implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);
                 furcaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(furcaMetodo);
                 furcaCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(furcaMetodo2);
+                sangradoSupuracionCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(sangradoSupuracionMetodo);
+                sangradoSupuracionCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(sangradoSupuracionMetodo2);
+                sangradoSupuracionCommand3 = new RelayCommand<Entidades.PeriodontogramaEntity>(sangradoSupuracionMetodo3);
+                placaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo);
+                placaCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo2);
+                placaCommand3 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo3);
+            }
+        }
+
+        private void placaMetodonMetodo(Entidades.PeriodontogramaEntity obj)
+        {
+            if(obj.Placa1 == Enumeradores.Placa.ninguno)
+            {
+                obj.Placa1 = Enumeradores.Placa.blue;
+            }
+            else if (obj.Placa1 == Enumeradores.Placa.blue)
+            {
+                obj.Placa1 = Enumeradores.Placa.ninguno;
+            }
+        }
+        private void placaMetodonMetodo2(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.Placa2 == Enumeradores.Placa.ninguno)
+            {
+                obj.Placa2 = Enumeradores.Placa.blue;
+            }
+            else if (obj.Placa2 == Enumeradores.Placa.blue)
+            {
+                obj.Placa2 = Enumeradores.Placa.ninguno;
+            }
+        }
+        private void placaMetodonMetodo3(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.Placa3 == Enumeradores.Placa.ninguno)
+            {
+                obj.Placa3 = Enumeradores.Placa.blue;
+            }
+            else if (obj.Placa3 == Enumeradores.Placa.blue)
+            {
+                obj.Placa3 = Enumeradores.Placa.ninguno;
+            }
+        }
+
+        private void sangradoSupuracionMetodo(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.SangradoSupuracion1 == Enumeradores.Sangrado_Supuracion.ninguno)
+            {
+                obj.SangradoSupuracion1 = Enumeradores.Sangrado_Supuracion.red;
+            }
+            else if (obj.SangradoSupuracion1 == Enumeradores.Sangrado_Supuracion.red)
+            {
+                obj.SangradoSupuracion1 = Enumeradores.Sangrado_Supuracion.red_yellow;
+            }
+            else if (obj.SangradoSupuracion1 == Enumeradores.Sangrado_Supuracion.red_yellow)
+            {
+                obj.SangradoSupuracion1 = Enumeradores.Sangrado_Supuracion.ninguno;
+            }
+        }
+        private void sangradoSupuracionMetodo2(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.SangradoSupuracion2 == Enumeradores.Sangrado_Supuracion.ninguno)
+            {
+                obj.SangradoSupuracion2 = Enumeradores.Sangrado_Supuracion.red;
+            }
+            else if (obj.SangradoSupuracion2 == Enumeradores.Sangrado_Supuracion.red)
+            {
+                obj.SangradoSupuracion2 = Enumeradores.Sangrado_Supuracion.red_yellow;
+            }
+            else if (obj.SangradoSupuracion2 == Enumeradores.Sangrado_Supuracion.red_yellow)
+            {
+                obj.SangradoSupuracion2 = Enumeradores.Sangrado_Supuracion.ninguno;
+            }
+        }
+        private void sangradoSupuracionMetodo3(Entidades.PeriodontogramaEntity obj)
+        {
+            if (obj.SangradoSupuracion3 == Enumeradores.Sangrado_Supuracion.ninguno)
+            {
+                obj.SangradoSupuracion3 = Enumeradores.Sangrado_Supuracion.red;
+            }
+            else if (obj.SangradoSupuracion3 == Enumeradores.Sangrado_Supuracion.red)
+            {
+                obj.SangradoSupuracion3 = Enumeradores.Sangrado_Supuracion.red_yellow;
+            }
+            else if (obj.SangradoSupuracion3 == Enumeradores.Sangrado_Supuracion.red_yellow)
+            {
+                obj.SangradoSupuracion3 = Enumeradores.Sangrado_Supuracion.ninguno;
             }
         }
 
@@ -71,8 +157,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             {
                 obj.Furca = Enumeradores.Furca.ninguno;
             }            
-        }
-        
+        }        
 
         private void implanteMetodo(Entidades.PeriodontogramaEntity obj)
         {            
@@ -144,5 +229,17 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
         public RelayCommand<Entidades.PeriodontogramaEntity> furcaCommand { get; set; }
 
         public RelayCommand<Entidades.PeriodontogramaEntity> furcaCommand2 { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> sangradoSupuracionCommand { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> sangradoSupuracionCommand2 { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> sangradoSupuracionCommand3 { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> placaCommand { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> placaCommand2 { get; set; }
+
+        public RelayCommand<Entidades.PeriodontogramaEntity> placaCommand3 { get; set; }
     }
 }

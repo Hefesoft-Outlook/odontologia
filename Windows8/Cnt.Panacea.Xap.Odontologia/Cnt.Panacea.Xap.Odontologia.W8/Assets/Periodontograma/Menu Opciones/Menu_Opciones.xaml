@@ -77,15 +77,33 @@
 
 				<Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
 					Sangrado_Supuracion="{Binding SangradoSupuracion1}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+							<Core:InvokeCommandAction Command="{Binding Periodontograma.sangradoSupuracionCommand, Source={StaticResource Locator}}" CommandParameter="{Binding Mode=OneWay}"/>
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
 
 				<Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
 					Sangrado_Supuracion="{Binding SangradoSupuracion2}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+							<Core:InvokeCommandAction Command="{Binding Periodontograma.sangradoSupuracionCommand2, Source={StaticResource Locator}}" CommandParameter="{Binding Mode=OneWay}"/>
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
 
 				<Sangrado_Supuracion:Sangrado_Supuracion_Elemento 
 					Sangrado_Supuracion="{Binding SangradoSupuracion3}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+							<Core:InvokeCommandAction Command="{Binding Periodontograma.sangradoSupuracionCommand3, Source={StaticResource Locator}}" CommandParameter="{Binding Mode=OneWay}"/>
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Sangrado_Supuracion:Sangrado_Supuracion_Elemento>
 
 			</StackPanel>
 
@@ -93,15 +111,39 @@
 
 				<Placa:PlacaElemento 
 					Placa="{Binding Placa1}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+                            <Core:InvokeCommandAction Command="{Binding Periodontograma.placaCommand, Source={StaticResource Locator}}"
+                                                      CommandParameter="{Binding }"
+                                                      />
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Placa:PlacaElemento>
 
 				<Placa:PlacaElemento 
 					Placa="{Binding Placa2}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+							<Core:InvokeCommandAction Command="{Binding Periodontograma.placaCommand2, Source={StaticResource Locator}}"
+                                                      CommandParameter="{Binding }"
+                                                      />
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Placa:PlacaElemento>
 
 				<Placa:PlacaElemento 
 					Placa="{Binding Placa3}" 
-					Width="20"/>
+					Width="20">
+					<Interactivity:Interaction.Behaviors>
+						<Core:EventTriggerBehavior EventName="PointerPressed">
+							<Core:InvokeCommandAction Command="{Binding Periodontograma.placaCommand3, Source={StaticResource Locator}}"
+                                                      CommandParameter="{Binding }"
+                                                      />
+						</Core:EventTriggerBehavior>
+					</Interactivity:Interaction.Behaviors>
+				</Placa:PlacaElemento>
 
 			</StackPanel>
 

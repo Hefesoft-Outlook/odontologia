@@ -54,7 +54,9 @@
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
         <Grid>
-        <Pieza:Pieza 
+        <Pieza:Pieza             
+                        x:FieldModifier="public"
+                        x:Name="Pieza"
                         Numero="{Binding Numero}"
                         Arriba_Abajo="{Binding Arriba_Abajo}"
                         cara="{Binding Cara}"
@@ -83,14 +85,18 @@
         		<ColumnDefinition Width="5*"/>
         	</Grid.ColumnDefinitions>
 
-        	<Furca:Furca x:Name="Furca1"
+        	<Furca:Furca 
+                x:Name="Furca1"
+                x:FieldModifier="public"
                 mostraRecuadro="False"
         		Width="30"
         		VerticalAlignment="Center"
         		HorizontalAlignment="Center"
         		FurcaProperty="{Binding Furca}" Grid.ColumnSpan="2" Height="30"/>
 
-        	<Furca:Furca x:Name="Furca2"
+        	<Furca:Furca
+                x:Name="Furca2"
+                x:FieldModifier="public"
                 mostraRecuadro="False"
         		Width="30"
         		VerticalAlignment="Center"
@@ -100,7 +106,7 @@
         </Grid>
 
     </Grid>        
-        <Menu_Opciones:Menu_Opciones x:Name="menuOpciones">
+        <Menu_Opciones:Menu_Opciones x:FieldModifier="public" x:Name="menuOpciones">
 		</Menu_Opciones:Menu_Opciones>
     </StackPanel>
 </UserControl>

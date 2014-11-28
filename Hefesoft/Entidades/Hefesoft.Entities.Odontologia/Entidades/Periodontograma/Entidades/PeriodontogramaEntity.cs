@@ -98,16 +98,16 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
 
         public string profundidadSondajeColor { get; set; }
 
-        
-        private Sangrado_Supuracion sangradoSupuracion1 = Sangrado_Supuracion.ninguno;
+
+        private Sangrado_Supuracion sangradoSupuracion1;
 
         public Sangrado_Supuracion SangradoSupuracion1
         {
             get { return sangradoSupuracion1; }
-            set { sangradoSupuracion1 = value; RaisePropertyChanged("SangradoSupuracion"); }
+            set { sangradoSupuracion1 = value; RaisePropertyChanged("SangradoSupuracion1"); }
         }
 
-        private Sangrado_Supuracion sangradoSupuracion2 = Sangrado_Supuracion.red;
+        private Sangrado_Supuracion sangradoSupuracion2;
 
         public Sangrado_Supuracion SangradoSupuracion2
         {
@@ -115,12 +115,12 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             set { sangradoSupuracion2 = value; RaisePropertyChanged("SangradoSupuracion2"); }
         }
 
-        private Sangrado_Supuracion sangradoSupuracion3 = Sangrado_Supuracion.red_yellow;
+        private Sangrado_Supuracion sangradoSupuracion3;
 
         public Sangrado_Supuracion SangradoSupuracion3
         {
             get { return sangradoSupuracion3; }
-            set { sangradoSupuracion2 = value; RaisePropertyChanged("SangradoSupuracion2"); }
+            set { sangradoSupuracion3 = value; RaisePropertyChanged("SangradoSupuracion3"); }
         }
 
         private Placa placa1 = Placa.ninguno;
@@ -139,7 +139,7 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             set { placa2 = value; RaisePropertyChanged("Placa2"); }
         }
 
-        private Placa placa3 = Placa.blue;
+        private Placa placa3;
 
         public Placa Placa3
         {

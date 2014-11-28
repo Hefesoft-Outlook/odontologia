@@ -4,13 +4,31 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App2.Assets.Periodontograma"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:PeriodontogramaControl="using:App2.Assets.Periodontograma.Control"    
+    xmlns:Seleccionado="using:App2.Assets.Periodontograma.Seleccionado"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    	<Viewbox Height="600" VerticalAlignment="Top">
-    		<PeriodontogramaControl:Periodontograma Height="768" Width="1366"/>       
-    	</Viewbox>        
+    	<Hub Header="Periodontograma" HorizontalAlignment="Left" VerticalAlignment="Top">
+    		
+            <HubSection Header="Listado">
+    			<DataTemplate>
+    				<Grid>
+					<Viewbox Height="600" VerticalAlignment="Top">
+    					<PeriodontogramaControl:Periodontograma Height="768" Width="1366"/>       
+    				</Viewbox>        
+					</Grid>
+    			</DataTemplate>
+    		</HubSection>
+            
+    		<HubSection Header="Seleccionado">
+    			<DataTemplate>
+    				<Grid>
+                        <Seleccionado:Seleccionado></Seleccionado:Seleccionado>
+					</Grid>
+    			</DataTemplate>
+    		</HubSection>
+    	</Hub>
     </Grid>    
 </Page>
