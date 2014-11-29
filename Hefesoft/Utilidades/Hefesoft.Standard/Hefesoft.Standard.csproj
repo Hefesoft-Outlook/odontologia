@@ -41,8 +41,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusyBox\BusyBox.cs" />
     <Compile Include="BusyBox\Busy.cs" />
-    <Compile Include="BusyBox\Mostrar_Cargando.cs" />
     <Compile Include="Extensiones\Automapper.cs" />
     <Compile Include="Extensiones\obtenerListadoDadoPropiedad.cs" />
     <Compile Include="Extensiones\removerCaracteresEspeciales.cs" />
@@ -53,6 +53,7 @@
     <Compile Include="Util\Collection\Observables\Observables.cs" />
     <Compile Include="Util\Common\Colors.cs" />
     <Compile Include="Util\Convertir_Entidades\Convertir_Entidades.cs" />
+    <Compile Include="Util\SimpleIoc\SimpleIoc.cs" />
     <Compile Include="Util\table\crudTable.cs" />
     <Compile Include="Util\Path_Servicio.cs" />
     <Compile Include="Util\Pdf\Pdf.cs" />

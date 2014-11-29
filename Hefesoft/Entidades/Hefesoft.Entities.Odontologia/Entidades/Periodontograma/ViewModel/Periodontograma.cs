@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using Hefesoft.Standard.BusyBox;
 
 
 namespace Hefesoft.Odontologia.Periodontograma.ViewModel
@@ -37,6 +38,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
         public async void save()
         {
+            BusyBox.UserControlCargando(true, "Guardando...");
             Data.Periodontograma periodontograma = new Data.Periodontograma();
             periodontograma.Listado.AddRange(LstPeriodontogramaParte1);
             periodontograma.Listado.AddRange(LstPeriodontogramaParte2);
@@ -49,6 +51,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
             Data.Crud crud = new Data.Crud();            
             await crud.guardar(periodontograma);
+            BusyBox.UserControlCargando(false);
         }
 
         private void placaMetodonMetodo(Entidades.PeriodontogramaEntity obj)
@@ -212,6 +215,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
         private async void obtenerDatos()
         {
+            BusyBox.UserControlCargando(true);
             Data.Crud crud = new Data.Crud();
             var result = await crud.get();
             var data = result.First().Listado;
@@ -242,6 +246,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             RaisePropertyChanged("LstPeriodontogramaParte6");
             RaisePropertyChanged("LstPeriodontogramaParte7");
             RaisePropertyChanged("LstPeriodontogramaParte8");
+            BusyBox.UserControlCargando(false);
         }
 
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte1 { get; set; }

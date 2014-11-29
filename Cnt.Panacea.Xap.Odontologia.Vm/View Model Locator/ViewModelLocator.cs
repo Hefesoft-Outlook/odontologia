@@ -67,6 +67,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Odontologo>();
             SimpleIoc.Default.Register<Hefesoft.Entities.Odontologia.ViewModel.Tercero.Higienista>();
             SimpleIoc.Default.Register<Hefesoft.Odontologia.Periodontograma.ViewModel.Periodontograma>();
+            SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+            
         }
 
         /// <summary>
@@ -348,6 +350,17 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             get
             {
                 return ServiceLocator.Current.GetInstance<Hefesoft.Odontologia.Periodontograma.ViewModel.Periodontograma>();
+            }
+        }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Standard.BusyBox.Busy Busy
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
             }
         }
         

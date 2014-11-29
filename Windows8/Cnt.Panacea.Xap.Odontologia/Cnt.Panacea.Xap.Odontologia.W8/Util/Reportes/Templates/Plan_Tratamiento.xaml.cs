@@ -73,7 +73,7 @@ namespace App2.Util.Reportes.Templates
 
         private async void HyprlnkBttnExportarPdf_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
-            Busy.UserControlCargando(true, "Exportando... tomara un tiempo...");
+            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Exportando... tomara un tiempo...");
             App2.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
             int i = 0;
             foreach (var item in Report._pageTrees)
@@ -84,7 +84,7 @@ namespace App2.Util.Reportes.Templates
             }
 
             await exportarPdf();
-            Busy.UserControlCargando(false);
+            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(false);
         }
 
         private async Task<string> guardarImagen(App2.Hub_Partial.Snapshot snap, UIElement item, string nombre)

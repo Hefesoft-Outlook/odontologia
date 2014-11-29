@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using App2.Intefaz;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -22,18 +23,25 @@ namespace App2.Assets.Periodontograma
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Periodontograma : Page
+    public sealed partial class Periodontograma : Page, IBusyBox
     {
 
         public Periodontograma()
         {
-            this.InitializeComponent();        
+            this.InitializeComponent();
+            addBusy();
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
         {
             var vm = ServiceLocator.Current.GetInstance<Hefesoft.Odontologia.Periodontograma.ViewModel.Periodontograma>();
             vm.save();
-        }    
+        }
+
+        public void addBusy()
+        {
+            var elemento = App2.Util.Busy.Busy.addBusy();
+            LayoutRoot.Children.Add(elemento);
+        }
     }
 }

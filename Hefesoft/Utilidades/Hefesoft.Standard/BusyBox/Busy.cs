@@ -1,15 +1,32 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 namespace Hefesoft.Standard.BusyBox
 {
-    public static class BusyBox
+    public class Busy : ViewModelBase
     {
-        public static void UserControlCargando(bool cargando = true, string mensaje = "Cargando")
+        public Busy()
         {
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send((new Mostrar_Cargando() { mostrar_Cargando = cargando, texto = mensaje }));
+            
+        }
+
+        private bool isBusy;
+                
+        public bool IsBusy
+        {
+            get { return isBusy; }
+            set { isBusy = value; RaisePropertyChanged("IsBusy"); }
+        }
+
+        private string texto;
+
+        public string Texto
+        {
+            get { return texto; }
+            set { texto = value; RaisePropertyChanged("Texto"); }
         }
     }
 }

@@ -109,21 +109,7 @@ namespace App2
                     GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                     TxtBlckCargando.Text = "Cargando....";
                 }            
-            });
-
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Standard.BusyBox.Mostrar_Cargando>(this, item =>
-            {
-                if (item.mostrar_Cargando)
-                {
-                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                    TxtBlckCargando.Text = item.texto;
-                }
-                else
-                {
-                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                    TxtBlckCargando.Text = "Cargando....";
-                }
-            });
+            });            
         }
 
         private void oirMensaje()

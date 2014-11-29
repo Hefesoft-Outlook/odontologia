@@ -128,6 +128,9 @@
     <Compile Include="Assets\Boca\Boca.xaml.cs">
       <DependentUpon>Boca.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\BusyBox\BusyBox.xaml.cs">
+      <DependentUpon>BusyBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Diagnosticos procedimientos\Diagnosticos_Procedimientos.xaml.cs">
       <DependentUpon>Diagnosticos_Procedimientos.xaml</DependentUpon>
     </Compile>
@@ -308,6 +311,7 @@
     <Compile Include="Assets\Piezas Dentales\UserControlColorDienteCompleto.xaml.cs">
       <DependentUpon>UserControlColorDienteCompleto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Intefaz\IBusyBox.cs" />
     <Compile Include="SectionPage.xaml.cs">
       <DependentUpon>SectionPage.xaml</DependentUpon>
     </Compile>
@@ -332,6 +336,7 @@
     <Compile Include="Assets\Tipos Odontograma\Tipos.xaml.cs">
       <DependentUpon>Tipos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\Busy\Busy.cs" />
     <Compile Include="Util\Colores.cs" />
     <Compile Include="Util\Fotos\WebCam.cs" />
     <Compile Include="Util\Helpers\Layout.cs" />
@@ -587,6 +592,10 @@
     <Page Include="Assets\Boca\Boca.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\BusyBox\BusyBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\Diagnosticos procedimientos\Diagnosticos_Procedimientos.xaml">
       <SubType>Designer</SubType>

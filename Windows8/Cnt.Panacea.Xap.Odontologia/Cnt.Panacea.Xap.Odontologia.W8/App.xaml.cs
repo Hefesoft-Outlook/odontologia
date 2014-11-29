@@ -49,6 +49,9 @@ namespace App2
             Variables_Globales.IdTratamientoActivo = 2;
             Variables_Globales.Modo = Cnt.Panacea.Xap.Odontologia.Vm.Util.Modos.Modo.windows8;
             Variables_Globales.PCL = new PCL();
+
+            //Se registra el busy Para que solo se cree una vez en memoria
+            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();
         }
 
         void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)

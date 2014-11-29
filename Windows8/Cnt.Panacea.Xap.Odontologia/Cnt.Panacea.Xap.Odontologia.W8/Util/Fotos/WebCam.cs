@@ -12,6 +12,7 @@ using Windows.Media.Capture;
 using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Hefesoft.Standard.BusyBox;
 
 namespace App2.Util.Fotos
 {
@@ -26,10 +27,10 @@ namespace App2.Util.Fotos
             byte[] bytes = new byte[fileStream.AsStream().Length];
             await fileStream.AsStream().ReadAsync(bytes, 0, bytes.Length);
 
-            Busy.UserControlCargando(true, "Subiendo imagen");
+            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Subiendo imagen");
             var nombreImagen = string.Format("{0}_{1}", nombreImagenGuardar, file.Name);
-            var result = await Hefesoft.Azure.Helpers.Azure_Helper.PutBlob_async("imagenes", nombreImagen, bytes);                
-            Busy.UserControlCargando(false);
+            var result = await Hefesoft.Azure.Helpers.Azure_Helper.PutBlob_async("imagenes", nombreImagen, bytes);
+            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(false);
             return result;
         }
     }

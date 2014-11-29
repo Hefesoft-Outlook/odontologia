@@ -6,11 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:PeriodontogramaControl="using:App2.Assets.Periodontograma.Control"    
     xmlns:Seleccionado="using:App2.Assets.Periodontograma.Seleccionado"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Busy="using:App2.Assets.BusyBox"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-    	<Hub Header="Periodontograma" HorizontalAlignment="Left" VerticalAlignment="Top">
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Hub Header="Periodontograma" HorizontalAlignment="Left" VerticalAlignment="Top">
     		
             <HubSection Header="Listado">
     			<DataTemplate>
