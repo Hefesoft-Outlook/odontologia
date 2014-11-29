@@ -75,6 +75,9 @@
     <Compile Include="Entidades\Historia\TiposAtencion.cs" />
     <Compile Include="Entidades\Historia\TiposPaquete.cs" />
     <Compile Include="Entidades\Historia\UnidadesMedidaEdad.cs" />
+    <Compile Include="Entidades\Menu\Entidades\Menu.cs" />
+    <Compile Include="Entidades\Menu\Enumeradores\Paginas.cs" />
+    <Compile Include="Entidades\Menu\ViewModel\Menu.cs" />
     <Compile Include="Entidades\Periodontograma\Data\Crud.cs" />
     <Compile Include="Entidades\Periodontograma\Data\Periodontograma.cs" />
     <Compile Include="Entidades\Periodontograma\Entidades\PeriodontogramaEntity.cs" />

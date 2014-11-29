@@ -161,6 +161,12 @@
     <Compile Include="Assets\Indices\Indices.xaml.cs">
       <DependentUpon>Indices.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Menu\Controles\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Menu\Menu.xaml.cs">
+      <DependentUpon>Menu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Niveles de severidad\Niveles_Severidad.xaml.cs">
       <DependentUpon>Niveles_Severidad.xaml</DependentUpon>
     </Compile>
@@ -634,6 +640,14 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Assets\Indices\Indices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Menu\Controles\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu\Menu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

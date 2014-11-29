@@ -51,8 +51,9 @@ namespace App2
             Variables_Globales.PCL = new PCL();
 
             //Se registra el busy Para que solo se cree una vez en memoria
-            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();
+            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();        
         }
+
 
         void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
@@ -117,12 +118,14 @@ namespace App2
                 //rootFrame.Navigate(typeof(Assets.Niveles_de_severidad.Niveles_Severidad), e.Arguments);
                 //rootFrame.Navigate(typeof(Assets.Tercero.Odontologo.Odontologo), e.Arguments);
                 //rootFrame.Navigate(typeof(Assets.Tercero.Higienista.Higienista), e.Arguments);
-                rootFrame.Navigate(typeof(App2.Assets.Periodontograma.Periodontograma), e.Arguments);
-                
+                //rootFrame.Navigate(typeof(App2.Assets.Periodontograma.Periodontograma), e.Arguments);
+                rootFrame.Navigate(typeof(App2.Assets.Menu.Menu), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
         }
+
+      
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails
