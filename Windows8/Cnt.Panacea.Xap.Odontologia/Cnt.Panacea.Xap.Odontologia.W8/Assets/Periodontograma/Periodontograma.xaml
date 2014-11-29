@@ -30,5 +30,12 @@
     			</DataTemplate>
     		</HubSection>
     	</Hub>
-    </Grid>    
+    </Grid>
+
+    <Page.BottomAppBar>
+        <CommandBar Name="barraComandos" IsOpen="True">            
+            <AppBarToggleButton x:Name="Guardar" Icon="Save" Label="Guardar" Click="Guardar_Click"/>
+        </CommandBar>
+    </Page.BottomAppBar>
+
 </Page>

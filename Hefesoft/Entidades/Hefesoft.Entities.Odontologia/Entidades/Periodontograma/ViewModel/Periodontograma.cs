@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
+
 namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 {
     public class Periodontograma : ViewModelBase
@@ -20,6 +21,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             else
             {
                 inicializarDatos();
+                obtenerDatos();
                 implante = new RelayCommand<Entidades.PeriodontogramaEntity>(implanteMetodo);
                 furcaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(furcaMetodo);
                 furcaCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(furcaMetodo2);
@@ -29,7 +31,24 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
                 placaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo);
                 placaCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo2);
                 placaCommand3 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo3);
+                saveCommand = new RelayCommand(save);
             }
+        }
+
+        public async void save()
+        {
+            Data.Periodontograma periodontograma = new Data.Periodontograma();
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte1);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte2);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte3);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte4);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte5);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte6);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte7);
+            periodontograma.Listado.AddRange(LstPeriodontogramaParte8);
+
+            Data.Crud crud = new Data.Crud();            
+            await crud.guardar(periodontograma);
         }
 
         private void placaMetodonMetodo(Entidades.PeriodontogramaEntity obj)
@@ -191,6 +210,40 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
         }
 
+        private async void obtenerDatos()
+        {
+            Data.Crud crud = new Data.Crud();
+            var result = await crud.get();
+            var data = result.First().Listado;
+
+            LstPeriodontogramaParte1 = null;
+            LstPeriodontogramaParte2 = null;
+            LstPeriodontogramaParte3 = null;
+            LstPeriodontogramaParte4 = null;
+            LstPeriodontogramaParte5 = null;
+            LstPeriodontogramaParte6 = null;
+            LstPeriodontogramaParte7 = null;
+            LstPeriodontogramaParte8 = null;
+
+            LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1);
+            LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2);
+            LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3);
+            LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4);
+            LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5);
+            LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6);
+            LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7);
+            LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
+
+            RaisePropertyChanged("LstPeriodontogramaParte1");
+            RaisePropertyChanged("LstPeriodontogramaParte2");
+            RaisePropertyChanged("LstPeriodontogramaParte3");
+            RaisePropertyChanged("LstPeriodontogramaParte4");
+            RaisePropertyChanged("LstPeriodontogramaParte5");
+            RaisePropertyChanged("LstPeriodontogramaParte6");
+            RaisePropertyChanged("LstPeriodontogramaParte7");
+            RaisePropertyChanged("LstPeriodontogramaParte8");
+        }
+
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte1 { get; set; }
 
         public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte2 { get; set; }
@@ -244,5 +297,7 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
         public RelayCommand<Entidades.PeriodontogramaEntity> placaCommand2 { get; set; }
 
         public RelayCommand<Entidades.PeriodontogramaEntity> placaCommand3 { get; set; }
+
+        public RelayCommand saveCommand { get; set; }
     }
 }

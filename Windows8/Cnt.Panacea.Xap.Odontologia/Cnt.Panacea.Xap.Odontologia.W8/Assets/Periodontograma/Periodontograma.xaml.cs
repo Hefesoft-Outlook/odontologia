@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,6 +29,11 @@ namespace App2.Assets.Periodontograma
         {
             this.InitializeComponent();        
         }
-    
+
+        private void Guardar_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Hefesoft.Odontologia.Periodontograma.ViewModel.Periodontograma>();
+            vm.save();
+        }    
     }
 }
