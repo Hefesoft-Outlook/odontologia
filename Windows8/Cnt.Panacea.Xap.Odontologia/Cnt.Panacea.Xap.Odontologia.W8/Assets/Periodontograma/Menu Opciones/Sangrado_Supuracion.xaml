@@ -1,0 +1,35 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App2.Assets.Periodontograma.Menu_Opciones"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Sangrado_Supuracion="using:App2.Assets.Periodontograma.Sangrado_Supuracion" xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    x:Class="App2.Assets.Periodontograma.Menu_Opciones.Sangrado_Supuracion"
+    mc:Ignorable="d"
+    d:DesignHeight="20"
+    d:DesignWidth="60">
+    
+	<Grid>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+				<ColumnDefinition/>
+			</Grid.ColumnDefinitions>
+			<Sangrado_Supuracion:Sangrado_Supuracion_Elemento x:Name="sangradoSupuracion1" 
+				Sangrado_Supuracion="{Binding SangradoSupuracion1}" 
+				PointerPressed="sangradoSupuracion1_PointerPressed" Margin="1,0,0,0" VerticalAlignment="Center"/>
+
+			<Sangrado_Supuracion:Sangrado_Supuracion_Elemento x:Name="sangradoSupuracion2" 
+				Sangrado_Supuracion="{Binding SangradoSupuracion2}" 
+				PointerPressed="sangradoSupuracion2_PointerPressed" Grid.Column="1" Margin="1,0,0,0" VerticalAlignment="Center"/>
+
+			<Sangrado_Supuracion:Sangrado_Supuracion_Elemento x:Name="sangradoSupuracion3" 
+				Sangrado_Supuracion="{Binding SangradoSupuracion3}" 
+				PointerPressed="sangradoSupuracion3_PointerPressed" Grid.Column="2" Margin="1,0,0,0" VerticalAlignment="Center"/>
+
+		</Grid>
+
+	</Grid>
+</UserControl>

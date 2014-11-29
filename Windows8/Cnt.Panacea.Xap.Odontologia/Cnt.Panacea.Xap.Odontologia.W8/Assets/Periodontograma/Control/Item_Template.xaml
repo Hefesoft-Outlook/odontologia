@@ -53,7 +53,9 @@
     			</VisualState>
     		</VisualStateGroup>
     	</VisualStateManager.VisualStateGroups>
-        <Grid>
+        
+		
+		<Grid Width="100">
         <Pieza:Pieza             
                         x:FieldModifier="public"
                         x:Name="Pieza"

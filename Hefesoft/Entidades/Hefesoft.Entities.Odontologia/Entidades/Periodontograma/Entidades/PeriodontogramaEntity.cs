@@ -147,12 +147,16 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             set { placa3 = value; RaisePropertyChanged("Placa3"); }
         }
 
-        private int? movilidad;
+        private int movilidad;
 
-        public int? Movilidad
+        public int Movilidad
         {
             get { return movilidad; }
-            set { movilidad = value; RaisePropertyChanged("Movilidad"); }
+            set 
+            {
+                movilidad = value; 
+                RaisePropertyChanged("Movilidad"); 
+            }
         }
 
         private Implante implante = Implante.ninguno;

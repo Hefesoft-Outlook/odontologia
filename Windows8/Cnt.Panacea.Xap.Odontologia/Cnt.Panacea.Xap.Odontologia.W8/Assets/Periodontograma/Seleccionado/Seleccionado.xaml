@@ -1,39 +1,94 @@
 ﻿<UserControl
-    x:Class="App2.Assets.Periodontograma.Seleccionado.Seleccionado"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:App2.Assets.Periodontograma.Seleccionado"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:PeriodontogramaControl="using:App2.Assets.Periodontograma.Control"    
+    xmlns:Implante="using:App2.Assets.Periodontograma.Implante"
+    xmlns:Furca="using:App2.Assets.Periodontograma.Furca" 
+	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+	xmlns:MenuFurca="using:App2.Assets.Periodontograma.Menu_Opciones"
+	xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    x:Class="App2.Assets.Periodontograma.Seleccionado.Seleccionado"    
     mc:Ignorable="d"
-    d:DesignHeight="300"
+    d:DesignHeight="900"
     d:DesignWidth="400" 
-    DataContext="{Binding Periodontograma, Source={StaticResource Locator}}">
+    >
     
-    <Grid>
+	<UserControl.DataContext>
+		<Binding Path="Periodontograma" Source="{StaticResource Locator}"/>
+	</UserControl.DataContext>
+    
+	<Grid>
+		<ScrollViewer>
         
-        <StackPanel>
+			<StackPanel>
 
-            <PeriodontogramaControl:Item_Template 
-                        x:Name="Item"
-						HorizontalAlignment="Stretch" 
+				<StackPanel Orientation="Horizontal">
+
+					<PeriodontogramaControl:Item_Template 
+						x:Name="Item"
+						mostrarRecuadro="False"
+						mostrarOpciones="False"
+						HorizontalAlignment="Left" 
 						VerticalAlignment="Stretch" DataContext="{Binding Seleccionado}" 
 						/>
+					<StackPanel Orientation="Vertical" Width="140" Margin="10,0,0,0">
+						<StackPanel Orientation="Vertical">
+							<TextBlock TextWrapping="Wrap" Text="Placa"/>
+							<MenuFurca:Placa DataContext="{Binding DataContext, ElementName=Item}"/>
+						</StackPanel>
+						<StackPanel Orientation="Vertical">
+							<TextBlock TextWrapping="Wrap" Text="Sangrado / Supuracion"/>
+							<MenuFurca:Sangrado_Supuracion DataContext="{Binding DataContext, ElementName=Item}"/>
+						</StackPanel>
 
-            <TextBlock Text="Margen Gingival"></TextBlock>
+					</StackPanel>
+
+				</StackPanel>
+
+				<TextBlock Text="Margen Gingival"/>
             
-            <Slider Value="{Binding Seleccionado.MargenGingival1, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
-            <Slider Value="{Binding Seleccionado.MargenGingival2, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
-            <Slider Value="{Binding Seleccionado.MargenGingival3, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.MargenGingival1, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.MargenGingival2, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.MargenGingival3, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
 
-            <TextBlock Text="Placa"></TextBlock>
+				<TextBlock Text="Placa"/>
 
-            <Slider Value="{Binding Seleccionado.ProdundidadSondaje1, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
-            <Slider Value="{Binding Seleccionado.ProdundidadSondaje2, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
-            <Slider Value="{Binding Seleccionado.ProdundidadSondaje3, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.ProdundidadSondaje1, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.ProdundidadSondaje2, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
+				<Slider Value="{Binding Seleccionado.ProdundidadSondaje3, Mode=TwoWay}" Minimum="-100" Maximum="100"/>
 
-        </StackPanel>
+				<TextBlock Text="Movilidad"/>            
+				<Slider Value="{Binding Seleccionado.Movilidad, Mode=TwoWay}" Minimum="-3" Maximum="3"/>
+				<StackPanel Orientation="Horizontal">
+				
+					<StackPanel Orientation="Vertical">
+
+						<TextBlock Text="Implante" HorizontalAlignment="Left"/>
+						<Implante:Implante Width="50" Height="50" DataContext="{Binding DataContext, ElementName=Item}" HorizontalAlignment="Left"/>
+
+					</StackPanel>
+
+					<StackPanel Orientation="Vertical" Width="60" Margin="10,0,0,0">
+
+						<TextBlock TextWrapping="Wrap" Text="Furca"/>
+
+						<StackPanel x:FieldModifier="public" Height="48" Orientation="Horizontal">
+							<MenuFurca:Menu_Furca 
+							Width="60" 
+							UnoODosElementos="{Binding FurcaVisualizacion}" 
+							DataContext="{Binding DataContext, ElementName=Item}"/>
+						</StackPanel>
+
+					</StackPanel>
+
+				</StackPanel>
+
+			</StackPanel>
         
-    </Grid>
+		</ScrollViewer>
+        
+	</Grid>
 </UserControl>

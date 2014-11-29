@@ -26,6 +26,90 @@ namespace App2.Assets.Periodontograma.Control
         }
 
 
+       
+        #region mostrarRecuadro (DependencyProperty)
+
+        /// <summary>
+        /// Para que no muestre el cuadrado morado en la pieza dental
+        /// </summary>
+        public bool mostrarRecuadro
+        {
+            get { return (bool)GetValue(mostrarRecuadroProperty); }
+            set { SetValue(mostrarRecuadroProperty, value); }
+        }
+        public static readonly DependencyProperty mostrarRecuadroProperty =
+            DependencyProperty.Register("mostrarRecuadro", typeof(bool), typeof(Item_Template),
+            new PropertyMetadata(true, new PropertyChangedCallback(OnmostrarRecuadroChanged)));
+
+        private static void OnmostrarRecuadroChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((Item_Template)d).OnmostrarRecuadroChanged(e);
+        }
+
+        private void OnmostrarRecuadroChanged(DependencyPropertyChangedEventArgs e)
+        {
+            var item = (bool)e.NewValue;
+
+            if(item)
+            {
+                Furca1.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Furca2.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Visible;
+                Furca1.mostraRecuadro = true;
+                Furca2.mostraRecuadro = true;
+            }
+            else
+            {
+                Furca1.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Furca2.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Furca1.mostraRecuadro = false;
+                Furca2.mostraRecuadro = false;
+            }  
+
+        }
+
+        
+
+        #endregion
+        
+
+        #region mostrarOpciones (DependencyProperty)
+
+        /// <summary>
+        /// A description of the property.
+        /// </summary>
+        public bool mostrarOpciones
+        {
+            get { return (bool)GetValue(mostrarOpcionesProperty); }
+            set { SetValue(mostrarOpcionesProperty, value); }
+        }
+        public static readonly DependencyProperty mostrarOpcionesProperty =
+            DependencyProperty.Register("mostrarOpciones", typeof(bool), typeof(Item_Template),
+            new PropertyMetadata(true, new PropertyChangedCallback(OnmostrarOpcionesChanged)));
+
+        private static void OnmostrarOpcionesChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((Item_Template)d).OnmostrarOpcionesChanged(e);
+        }
+
+        private void OnmostrarOpcionesChanged(DependencyPropertyChangedEventArgs e)
+        {
+            var item = (bool)e.NewValue;
+
+            if(item)
+            {
+                menuOpciones.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            }
+            else
+            {
+                menuOpciones.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            }
+        }
+
+        
+
+        #endregion
+        
+
         #region furcaVisualizacion (DependencyProperty)
 
         /// <summary>
@@ -57,29 +141,19 @@ namespace App2.Assets.Periodontograma.Control
             if (item == Furca_Visualizacion.No_Visible)
             {
                 Furca1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                Furca2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                menuOpciones.furca1.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                menuOpciones.furca2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                Furca2.Visibility = Windows.UI.Xaml.Visibility.Collapsed;               
                 
             }
             else if (item == Furca_Visualizacion.Visible_Un_Elemento)
             {
                 VisualStateManager.GoToState(this, "VisualState", true);
-                Furca1.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                menuOpciones.furca1.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                menuOpciones.furca1.Width = 60;
+                Furca1.Visibility = Windows.UI.Xaml.Visibility.Visible;              
             }
             else if (item == Furca_Visualizacion.Visible_Dos_Elementos)
             {
                 VisualStateManager.GoToState(this, "VisualStateDosElementos", true);
                 Furca1.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                Furca2.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-                menuOpciones.furca1.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                menuOpciones.furca2.Visibility = Windows.UI.Xaml.Visibility.Visible;                
-                
-                menuOpciones.furca1.Width = 28;
-                menuOpciones.furca2.Width = 28;
+                Furca2.Visibility = Windows.UI.Xaml.Visibility.Visible;           
             }
         }
 

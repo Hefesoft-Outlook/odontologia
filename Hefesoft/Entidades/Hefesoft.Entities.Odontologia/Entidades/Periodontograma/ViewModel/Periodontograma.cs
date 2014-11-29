@@ -1,5 +1,6 @@
 ﻿using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Hefesoft.Odontologia.Periodontograma.Entidades;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -135,8 +136,10 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             }            
         }
 
-        private void furcaMetodo(Entidades.PeriodontogramaEntity obj)
+        private void furcaMetodo(PeriodontogramaEntity item)
         {
+            var obj = (PeriodontogramaEntity)(item);
+
             if (obj.Furca == Enumeradores.Furca.ninguno)
             {
                 obj.Furca = Enumeradores.Furca.vacio;

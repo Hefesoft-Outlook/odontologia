@@ -176,8 +176,17 @@
     <Compile Include="Assets\Periodontograma\Margenes\Margen.xaml.cs">
       <DependentUpon>Margen.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Periodontograma\Menu Opciones\Menu_Furca.xaml.cs">
+      <DependentUpon>Menu_Furca.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Periodontograma\Menu Opciones\Menu_Opciones.xaml.cs">
       <DependentUpon>Menu_Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Periodontograma\Menu Opciones\Placa.xaml.cs">
+      <DependentUpon>Placa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Periodontograma\Menu Opciones\Sangrado_Supuracion.xaml.cs">
+      <DependentUpon>Sangrado_Supuracion.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Periodontograma\Periodontograma.xaml.cs">
       <DependentUpon>Periodontograma.xaml</DependentUpon>
@@ -643,7 +652,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Assets\Periodontograma\Menu Opciones\Menu_Furca.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Assets\Periodontograma\Menu Opciones\Menu_Opciones.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Periodontograma\Menu Opciones\Placa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Periodontograma\Menu Opciones\Sangrado_Supuracion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

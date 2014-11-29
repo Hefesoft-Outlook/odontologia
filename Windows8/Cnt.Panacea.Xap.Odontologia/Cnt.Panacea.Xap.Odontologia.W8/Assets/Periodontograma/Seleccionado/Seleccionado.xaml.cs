@@ -21,14 +21,7 @@ namespace App2.Assets.Periodontograma.Seleccionado
     {
         public Seleccionado()
         {
-            this.InitializeComponent();
-            Item.menuOpciones.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-
-            Item.Furca1.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Item.Furca2.Rectangle.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Item.Furca1.mostraRecuadro = false;
-            Item.Furca2.mostraRecuadro = false;
-            
+            this.InitializeComponent();                      
         }
     }
 }
