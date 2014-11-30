@@ -1,4 +1,5 @@
-﻿using App2.Intefaz;
+﻿using App2.Common;
+using App2.Intefaz;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -28,8 +29,16 @@ namespace App2.Assets.Periodontograma
 
         public Periodontograma()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();            
             addBusy();
+            this.navigationHelper = new NavigationHelper(this);
+        }
+
+        private NavigationHelper navigationHelper;
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)

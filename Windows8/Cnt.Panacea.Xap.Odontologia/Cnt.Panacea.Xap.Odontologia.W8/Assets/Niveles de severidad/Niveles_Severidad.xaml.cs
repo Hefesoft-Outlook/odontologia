@@ -20,7 +20,15 @@ namespace App2.Assets.Niveles_de_severidad
     {     
         public Niveles_Severidad()
         {
-            this.InitializeComponent();     
-        }        
+            this.InitializeComponent(); 
+            this.navigationHelper = new NavigationHelper(this);
+        }
+
+        private NavigationHelper navigationHelper;
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
+        }
     }
 }

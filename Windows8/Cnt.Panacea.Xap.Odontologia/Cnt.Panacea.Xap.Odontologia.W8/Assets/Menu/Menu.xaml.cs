@@ -44,12 +44,24 @@ namespace App2.Assets.Menu
                     case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Periodontograma:
                         this.Frame.Navigate(typeof(Assets.Periodontograma.Periodontograma));
                         break;
+                    case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Parametrizacion_Diagnosticos_Procedimientos:
+                        this.Frame.Navigate(typeof(Assets.Diagnosticos_procedimientos.Diagnosticos_Procedimientos));
+                        break;
+                    case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Parametrizacion_Niveles_Severidad:
+                        this.Frame.Navigate(typeof(Assets.Niveles_de_severidad.Niveles_Severidad));
+                        break;
+                    case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Parametrizacion_Odontologos:
+                        this.Frame.Navigate(typeof(Assets.Tercero.Odontologo.Odontologo));
+                        break;
+                    case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Parametrizacion_Higienista:
+                        this.Frame.Navigate(typeof(Assets.Tercero.Higienista.Higienista));
+                        break;
+                    case Hefesoft.Odontologia.Menu.Enumeradores.Paginas.Adicionar_Paciente:
+                        this.Frame.Navigate(typeof(App2.Pacientes.Pacientes));
+                        break;
                     default:
                         break;
-                }
-                
-                
-                
+                }                
             });
         }
     }

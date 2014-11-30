@@ -9,5 +9,10 @@ namespace Hefesoft.Odontologia.Menu.Enumeradores
     {
         Odontograma = 0,
         Periodontograma = 1,
+        Parametrizacion_Diagnosticos_Procedimientos = 2,
+        Parametrizacion_Niveles_Severidad = 3,
+        Parametrizacion_Odontologos = 4,
+        Parametrizacion_Higienista = 5,
+        Adicionar_Paciente = 6,
     }
 }

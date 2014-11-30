@@ -50,6 +50,56 @@ namespace Hefesoft.Odontologia.Menu.ViewModel
                 Descripcion = @"El periodontograma está diseñado para representar gráficamente el estado del paciente durante el examen inicial del mismo, a lo largo del tratamiento, al finalizar la terapia y en el proceso de mantenimiento. La realización del periodontograma viene acompañada por el cálculo del índice de placa y de sangrado. Su utilización permite a los dentistas en Propdental idear un pronóstico en cuanto al estado futuro del diente con tratamiento."
             });
 
+            Listado.Add(new Entidades.Menu()
+            {
+                Codigo = 3,
+                Nombre = "Parametrizacion diagnosticos procedimientos",
+                Pagina = Enumeradores.Paginas.Parametrizacion_Diagnosticos_Procedimientos,
+                UrlImagen = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                UrlMini = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                Descripcion = @"Parametrizacion de diagnosticos procedimientos."
+            });
+
+            Listado.Add(new Entidades.Menu()
+            {
+                Codigo = 4,
+                Nombre = "Parametrizacion niveles de severidad",
+                Pagina = Enumeradores.Paginas.Parametrizacion_Niveles_Severidad,
+                UrlImagen = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                UrlMini = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                Descripcion = @"Parametrizacion de niveles de severidad."
+            });
+
+            Listado.Add(new Entidades.Menu()
+            {
+                Codigo = 5,
+                Nombre = "Parametrizacion odontologos",
+                Pagina = Enumeradores.Paginas.Parametrizacion_Odontologos,
+                UrlImagen = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                UrlMini = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                Descripcion = @"Parametrizacion odontologos."
+            });
+
+            Listado.Add(new Entidades.Menu()
+            {
+                Codigo = 6,
+                Nombre = "Parametrizacion higienista",
+                Pagina = Enumeradores.Paginas.Parametrizacion_Higienista,
+                UrlImagen = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                UrlMini = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                Descripcion = @"Parametrizacion higienista."
+            });
+
+            Listado.Add(new Entidades.Menu()
+            {
+                Codigo = 7,
+                Nombre = "Adicionar paciente",
+                Pagina = Enumeradores.Paginas.Adicionar_Paciente,
+                UrlImagen = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                UrlMini = "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR7lOANLXbHFELpd-le5-lFjBwmBkxehR62-HzpFrzE1wlOL_jhOw",
+                Descripcion = @"Adicionar pacientes."
+            });
+
             ElementoSeleccionado = Listado.First();
         }
 

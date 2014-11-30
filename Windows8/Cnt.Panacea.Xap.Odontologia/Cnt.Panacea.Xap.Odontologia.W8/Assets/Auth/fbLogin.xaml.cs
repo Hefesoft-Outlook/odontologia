@@ -32,7 +32,6 @@ namespace App2.Auth
             oirAutologin();
             UserVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
             this.InitializeComponent();
-            
         }
 
         private void oirAutologin()

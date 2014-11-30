@@ -125,7 +125,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Boca\Boca.xaml.cs">
+    <Compile Include="Assets\Auth\Autentication.xaml.cs">
+      <DependentUpon>Autentication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Odontograma\Boca\Boca.xaml.cs">
       <DependentUpon>Boca.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\BusyBox\BusyBox.xaml.cs">
@@ -134,31 +137,31 @@
     <Compile Include="Assets\Diagnosticos procedimientos\Diagnosticos_Procedimientos.xaml.cs">
       <DependentUpon>Diagnosticos_Procedimientos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Diagnosticos procedimientos\Add.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Diagnosticos procedimientos\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Diagnosticos procedimientos\List.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Diagnosticos procedimientos\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Niveles de severidad\Add.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Niveles de severidad\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Niveles de severidad\List.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Niveles de severidad\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Tercero\Higienista\Add.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Tercero\Higienista\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Tercero\Higienista\List.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Tercero\Higienista\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Tercero\Odontologo\Add.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Tercero\Odontologo\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Tercero\Odontologo\List.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Tercero\Odontologo\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Indices\Indices.xaml.cs">
+    <Compile Include="Assets\Odontograma\Indices\Indices.xaml.cs">
       <DependentUpon>Indices.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Menu\Controles\Menu.xaml.cs">
@@ -248,34 +251,34 @@
     <Compile Include="Fotos\SplipFotos.xaml.cs">
       <DependentUpon>SplipFotos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Evolucion\SplitEvolucion.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml.cs">
       <DependentUpon>SplitEvolucion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Pacientes\Add.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Pacientes\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Pacientes\SplitPacientes.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Pacientes\SplitPacientes.xaml.cs">
       <DependentUpon>SplitPacientes.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\PacienteTratamientos.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Plan tratamiento\Forma_Pago.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml.cs">
       <DependentUpon>Forma_Pago.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml.cs">
       <DependentUpon>SplitPlanTratamiento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
+    <Compile Include="Assets\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
       <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HubPage.xaml.cs">
+    <Compile Include="Assets\Odontograma\HubPage.xaml.cs">
       <DependentUpon>HubPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Hub\Hub.Partial.Login.cs" />
-    <Compile Include="Hub\Hub.Partial.Fotos.cs" />
-    <Compile Include="Hub\Hub.Partial.BarClick.cs" />
-    <Compile Include="Assets\Mapa Dental\Mapa_Dental.xaml.cs">
+    <Compile Include="Assets\Odontograma\Hub\Hub.Partial.Login.cs" />
+    <Compile Include="Assets\Odontograma\Hub\Hub.Partial.Fotos.cs" />
+    <Compile Include="Assets\Odontograma\Hub\Hub.Partial.BarClick.cs" />
+    <Compile Include="Assets\Odontograma\Mapa Dental\Mapa_Dental.xaml.cs">
       <DependentUpon>Mapa_Dental.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Pacientes\Pacientes.xaml.cs">
@@ -287,59 +290,53 @@
     <Compile Include="Assets\Paleta\elementoMenu.xaml.cs">
       <DependentUpon>elementoMenu.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Abajo.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Abajo.xaml.cs">
       <DependentUpon>Abajo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Arriba.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Arriba.xaml.cs">
       <DependentUpon>Arriba.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Central.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Central.xaml.cs">
       <DependentUpon>Central.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Derecha.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Derecha.xaml.cs">
       <DependentUpon>Derecha.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Inferior.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Inferior.xaml.cs">
       <DependentUpon>Inferior.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Izquierda.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Izquierda.xaml.cs">
       <DependentUpon>Izquierda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Seleccionado.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Seleccionado.xaml.cs">
       <DependentUpon>Seleccionado.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\SuperficieCompleta.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\SuperficieCompleta.xaml.cs">
       <DependentUpon>SuperficieCompleta.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\Superior.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\Superior.xaml.cs">
       <DependentUpon>Superior.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Piezas Dentales\UserControlColorDienteCompleto.xaml.cs">
+    <Compile Include="Assets\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml.cs">
       <DependentUpon>UserControlColorDienteCompleto.xaml</DependentUpon>
     </Compile>
     <Compile Include="Intefaz\IBusyBox.cs" />
-    <Compile Include="SectionPage.xaml.cs">
-      <DependentUpon>SectionPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ItemPage.xaml.cs">
-      <DependentUpon>ItemPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataModel\SampleDataSource.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\ObservableDictionary.cs" />
-    <Compile Include="Assets\Tipos Odontograma\Odontograma_Evolucion.xaml.cs">
+    <Compile Include="Assets\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml.cs">
       <DependentUpon>Odontograma_Evolucion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Tipos Odontograma\Odontograma_Inicial.xaml.cs">
+    <Compile Include="Assets\Odontograma\Tipos Odontograma\Odontograma_Inicial.xaml.cs">
       <DependentUpon>Odontograma_Inicial.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Tipos Odontograma\Plan_Tratamiento.xaml.cs">
+    <Compile Include="Assets\Odontograma\Tipos Odontograma\Plan_Tratamiento.xaml.cs">
       <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Tipos Odontograma\Tipos.xaml.cs">
+    <Compile Include="Assets\Odontograma\Tipos Odontograma\Tipos.xaml.cs">
       <DependentUpon>Tipos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Util\Busy\Busy.cs" />
@@ -566,7 +563,7 @@
     <Content Include="Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28b.png" />
     <Content Include="Assets\Images\Periodontograma\periodontograma-oblicuas.png" />
     <Content Include="Assets\Images\Periodontograma\vacio.png" />
-    <Content Include="Images\59229.png">
+    <Content Include="Assets\Odontograma\Images\59229.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="App2_StoreKey.pfx" />
@@ -595,7 +592,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Assets\Boca\Boca.xaml">
+    <Page Include="Assets\Auth\Autentication.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Odontograma\Boca\Boca.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -607,39 +608,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Diagnosticos procedimientos\Add.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Diagnosticos procedimientos\Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Diagnosticos procedimientos\List.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Diagnosticos procedimientos\List.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Niveles de severidad\Add.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Niveles de severidad\Add.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Niveles de severidad\List.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Niveles de severidad\List.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Tercero\Higienista\Add.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Tercero\Higienista\Add.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Tercero\Higienista\List.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Tercero\Higienista\List.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Tercero\Odontologo\Add.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Tercero\Odontologo\Add.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Tercero\Odontologo\List.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Tercero\Odontologo\List.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Indices\Indices.xaml">
+    <Page Include="Assets\Odontograma\Indices\Indices.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -755,39 +756,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Evolucion\SplitEvolucion.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\Pacientes\Add.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Pacientes\Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Pacientes\SplitPacientes.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Pacientes\SplitPacientes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Grillas\PacienteTratamientos.xaml">
+    <Page Include="Assets\Odontograma\Grillas\PacienteTratamientos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Plan tratamiento\Forma_Pago.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml">
+    <Page Include="Assets\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="HubPage.xaml">
+    <Page Include="Assets\Odontograma\HubPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Mapa Dental\Mapa_Dental.xaml">
+    <Page Include="Assets\Odontograma\Mapa Dental\Mapa_Dental.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -803,67 +804,59 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Abajo.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Abajo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Arriba.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Arriba.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Central.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Central.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Derecha.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Derecha.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Inferior.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Inferior.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Izquierda.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Izquierda.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Seleccionado.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Seleccionado.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Piezas Dentales\SuperficieCompleta.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\SuperficieCompleta.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\Superior.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\Superior.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Piezas Dentales\UserControlColorDienteCompleto.xaml">
+    <Page Include="Assets\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="SectionPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="ItemPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Assets\Tipos Odontograma\Odontograma_Evolucion.xaml">
+    <Page Include="Assets\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Tipos Odontograma\Odontograma_Inicial.xaml">
+    <Page Include="Assets\Odontograma\Tipos Odontograma\Odontograma_Inicial.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Tipos Odontograma\Plan_Tratamiento.xaml">
+    <Page Include="Assets\Odontograma\Tipos Odontograma\Plan_Tratamiento.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Tipos Odontograma\Tipos.xaml">
+    <Page Include="Assets\Odontograma\Tipos Odontograma\Tipos.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

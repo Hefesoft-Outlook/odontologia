@@ -189,7 +189,10 @@ namespace App2.Common
         /// </summary>
         public virtual void GoBack()
         {
-            if (this.Frame != null && this.Frame.CanGoBack) this.Frame.GoBack();
+            if (this.Frame != null && this.Frame.CanGoBack)
+            {
+                this.Frame.GoBack();
+            }
         }
         /// <summary>
         /// Virtual method used by the <see cref="GoForwardCommand"/> property

@@ -21,8 +21,15 @@ namespace App2.Assets.Diagnosticos_procedimientos
     {
         public Diagnosticos_Procedimientos()
         {
-            this.InitializeComponent();
-            
+            this.InitializeComponent(); 
+            this.navigationHelper = new NavigationHelper(this);
+        }
+
+        private NavigationHelper navigationHelper;
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
         }
     }
 }

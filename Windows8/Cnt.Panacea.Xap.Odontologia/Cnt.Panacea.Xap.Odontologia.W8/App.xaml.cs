@@ -112,14 +112,7 @@ namespace App2
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                
-                //rootFrame.Navigate(typeof(HubPage), e.Arguments);
-                //rootFrame.Navigate(typeof(Assets.Diagnosticos_procedimientos.Diagnosticos_Procedimientos), e.Arguments);
-                //rootFrame.Navigate(typeof(Assets.Niveles_de_severidad.Niveles_Severidad), e.Arguments);
-                //rootFrame.Navigate(typeof(Assets.Tercero.Odontologo.Odontologo), e.Arguments);
-                //rootFrame.Navigate(typeof(Assets.Tercero.Higienista.Higienista), e.Arguments);
-                //rootFrame.Navigate(typeof(App2.Assets.Periodontograma.Periodontograma), e.Arguments);
-                rootFrame.Navigate(typeof(App2.Assets.Menu.Menu), e.Arguments);
+                rootFrame.Navigate(typeof(App2.Assets.Auth.Autentication), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();

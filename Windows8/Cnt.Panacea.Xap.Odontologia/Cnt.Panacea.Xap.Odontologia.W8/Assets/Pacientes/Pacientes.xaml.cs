@@ -13,19 +13,22 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=321224
-
 namespace App2.Pacientes
-{
-    /// <summary>
-    /// A page that displays a grouped collection of items.
-    /// </summary>
+{    
     public sealed partial class Pacientes : Page, IDisposable
     {
         public Pacientes()
         {
             this.InitializeComponent();
+            this.navigationHelper = new NavigationHelper(this);
             oirPacienteSeleccionado();
+        }
+
+        private NavigationHelper navigationHelper;
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
         }
 
         private void oirPacienteSeleccionado()

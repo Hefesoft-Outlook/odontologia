@@ -20,7 +20,15 @@ namespace App2.Assets.Tercero.Odontologo
     {
         public Odontologo()
         {
-            this.InitializeComponent();     
-        }        
+            this.InitializeComponent(); 
+            this.navigationHelper = new NavigationHelper(this);
+        }
+
+        private NavigationHelper navigationHelper;
+
+        public NavigationHelper NavigationHelper
+        {
+            get { return this.navigationHelper; }
+        }
     }
 }
