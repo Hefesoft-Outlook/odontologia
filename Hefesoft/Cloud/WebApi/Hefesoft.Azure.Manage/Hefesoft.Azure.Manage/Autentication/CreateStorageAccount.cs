@@ -14,6 +14,8 @@ namespace Hefesoft.Azure.Manage.Autentication
         private string _name;        
         private SubscriptionCloudCredentials _credential;
         private StorageManagementClient _storage;
+        private StorageAccountListResponse result;
+        
         public CreateStorageAccount(string name, string id, string cert)
         {
             _name = name;            
@@ -53,5 +55,16 @@ namespace Hefesoft.Azure.Manage.Autentication
             }
         }
 
+        public async Task<CheckNameAvailabilityResponse> exist()
+        {
+            try
+            {
+                return await _storage.StorageAccounts.CheckNameAvailabilityAsync(_name);                
+            }
+            catch
+            {
+                return new CheckNameAvailabilityResponse() { IsAvailable = false, Reason = "Error en la consulta" };
+            }
+        }
     }
 }
