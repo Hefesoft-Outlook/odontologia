@@ -6,6 +6,7 @@ using System.Text;
 using GalaSoft.MvvmLight.Command;
 using Hefesoft.Standard.Util.Collection.Observables;
 using System.Collections.ObjectModel;
+using Hefesoft.Standard.BusyBox;
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
 {
@@ -33,12 +34,14 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
 
         private async void delete(Hefesoft.Entities.Odontologia.Convenio.TerceroEntity elemento)
         {
+            BusyBox.UserControlCargando(true);
             if (elemento != null)
             {
                 elemento.Activo = false;
                 await elemento.postBlob();
                 Listado.Remove(elemento);
             }
+            BusyBox.UserControlCargando(false);
         }
 
         private void nuevo()
@@ -49,6 +52,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
 
         private async void insert()
         {
+            BusyBox.UserControlCargando(true);
             if (!string.IsNullOrEmpty(Seleccionado.NombreCompleto))
             {
                 if (string.IsNullOrEmpty(Seleccionado.RowKey))
@@ -66,14 +70,17 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Tercero
                     Listado.UpdateElementCollection(Seleccionado);
                 }
             }
+            BusyBox.UserControlCargando(false);
         }
 
         private async void load()
         {
+            BusyBox.UserControlCargando(true);
             List<Hefesoft.Entities.Odontologia.Convenio.TerceroEntity> result = await CrudBlob.getBlobByPartition(new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity(), 
                 "higienista", "cnt.panacea.entities.parametrizacion.terceroentity");
             Listado = result.Where(a=> (a.Activo == null || a.Activo == true)).ToObservableCollection();
             RaisePropertyChanged("Listado");
+            BusyBox.UserControlCargando(false);
         }
 
         private Hefesoft.Entities.Odontologia.Convenio.TerceroEntity seleccionado = new Hefesoft.Entities.Odontologia.Convenio.TerceroEntity();

@@ -20,7 +20,15 @@ namespace App2.Util.Busy
         public static BusyBox addBusy()
         {
             var locator = App.Current.Resources["Locator"];
-            var busy = ServiceLocator.Current.GetInstance<Assets.BusyBox.BusyBox>();            
+            var busy = ServiceLocator.Current.GetInstance<Assets.BusyBox.BusyBox>();
+
+            var parent = busy.Parent;
+
+            if (parent != null && parent is Windows.UI.Xaml.Controls.Grid)
+            {
+                ((Windows.UI.Xaml.Controls.Grid)parent).Children.Remove(busy);
+            }
+
             busy.SetBinding(Assets.BusyBox.BusyBox.IsBusyProperty, new Binding() { Source = locator, Path = new Windows.UI.Xaml.PropertyPath("Busy.IsBusy") });
             busy.SetBinding(Assets.BusyBox.BusyBox.TextoProperty, new Binding() { Source = locator, Path = new Windows.UI.Xaml.PropertyPath("Busy.Texto") });
             return busy;

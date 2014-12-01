@@ -1,4 +1,5 @@
-﻿using Hefesoft.Standard.Interfaces;
+﻿using App2.Common;
+using Hefesoft.Standard.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -28,7 +29,11 @@ namespace App2.Assets.Menu
         {            
             this.InitializeComponent();
             oirClick();
+            NavigationHelper = ServiceLocator.Current.GetInstance<App2.Common.NavigationHelper>();
+            NavigationHelper.setPage(this);
         }
+
+        public NavigationHelper NavigationHelper { get; set; }
 
         private void oirClick()
         {

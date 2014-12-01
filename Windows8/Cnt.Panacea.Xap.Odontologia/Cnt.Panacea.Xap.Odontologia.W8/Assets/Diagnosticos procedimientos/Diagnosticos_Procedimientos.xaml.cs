@@ -1,4 +1,5 @@
 ﻿using App2.Common;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,15 +22,31 @@ namespace App2.Assets.Diagnosticos_procedimientos
     {
         public Diagnosticos_Procedimientos()
         {
-            this.InitializeComponent(); 
-            this.navigationHelper = new NavigationHelper(this);
+            this.InitializeComponent();
+            addBusy();
+            NavigationHelper = ServiceLocator.Current.GetInstance<App2.Common.NavigationHelper>();
+            NavigationHelper.setPage(this);
         }
 
-        private NavigationHelper navigationHelper;
+        public NavigationHelper NavigationHelper { get; set; }     
 
-        public NavigationHelper NavigationHelper
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            get { return this.navigationHelper; }
+            removeBusyFromVisualThree(e);
+        }
+
+        private void removeBusyFromVisualThree(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            UIElement item = LayoutRoot.Children.LastOrDefault();
+            LayoutRoot.Children.Remove(item);
+        }
+
+        public void addBusy()
+        {
+            var elemento = App2.Util.Busy.Busy.addBusy();
+            Grid.SetRowSpan(elemento, 2);
+            LayoutRoot.Children.Add(elemento);
         }
     }
 }

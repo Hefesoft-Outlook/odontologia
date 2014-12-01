@@ -8,12 +8,30 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400" 
-    DataContext="{Binding Usuarios, Mode=OneWay, Source={StaticResource Locator}}">    
+    DataContext="{Binding Usuarios, Source={StaticResource Locator}}">    
 
     <Grid>
         <StackPanel>
-            <Image Width="60" Source="{Binding UsuarioActivo.imagenRuta}"/>
+            
+            <Button Background="White">
+                <Image Width="60" Source="{Binding UsuarioActivo.imagenRuta}"/>
+
+                <Button.Flyout>
+                    <MenuFlyout>
+                        <MenuFlyoutItem 
+                            Command="{Binding changeUserCommand}"
+                            x:Name="MnFlytItmCambiarUsuario"                            
+                            Text="Cambiar de usuario"/>
+                        <MenuFlyoutSeparator/>                        
+                    </MenuFlyout>
+                </Button.Flyout>
+
+            </Button>
+            
+            
+            
             <TextBlock Text="{Binding UsuarioActivo.nombre}" HorizontalAlignment="Center"/>
         </StackPanel>
     </Grid>
+    
 </UserControl>

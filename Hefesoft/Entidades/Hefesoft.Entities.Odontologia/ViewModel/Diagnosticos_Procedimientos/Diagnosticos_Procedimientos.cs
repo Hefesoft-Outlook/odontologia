@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Hefesoft.Entities.Odontologia.Util;
+using Hefesoft.Standard.BusyBox;
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 {
@@ -67,6 +68,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
         {
             if (elemento != null)
             {
+                BusyBox.UserControlCargando(true, "Eliminando...");
                 var entidad = Convertir_Observables.ConvertirEntidades(elemento, new ConfigurarDiagnosticoProcedimOtraEntity());
 
                 entidad.nombreTabla = "configurardiagnosticoprocedimotraentity";
@@ -77,6 +79,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
                 await entidad.postBlob();
                 Listado.Remove(elemento);
+                BusyBox.UserControlCargando(false);
             }
         }
 
@@ -108,10 +111,12 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
         public async void listarElementos()
         {
+            BusyBox.UserControlCargando(true, "Cargando...");
             List<DiagnosticoProcedimiento> blob = await new DiagnosticoProcedimiento().getBlobByPartition("configurardiagnosticoprocedimotraentity", "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity");
             var resultado = blob.Where(a => (a.Activo == null || a.Activo == true));
             Listado = Convertir_Observables.ConvertirIEnumerable(resultado, new List<Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity>()).ToObservableCollection();
             RaisePropertyChanged("Listado");
+            BusyBox.UserControlCargando(false);
         }
 
         private void descripcion(string obj)
@@ -124,6 +129,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
 
         private async void guardar()
         {
+            BusyBox.UserControlCargando(true, "Guardando...");
             DiagnosticoProcedimiento.nombreTabla = "configurardiagnosticoprocedimotraentity";
             DiagnosticoProcedimiento.PartitionKey = "cnt.panacea.entities.odontologia.configurardiagnosticoprocedimotraentity";
 
@@ -157,6 +163,8 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos
                     nuevo();
                 }
             }
+
+            BusyBox.UserControlCargando(false);
         }
 
         private void ingresoTexto(string obj)

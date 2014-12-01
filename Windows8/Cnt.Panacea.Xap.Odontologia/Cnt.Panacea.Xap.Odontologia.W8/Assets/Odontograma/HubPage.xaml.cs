@@ -54,19 +54,15 @@ namespace App2
             //Ya que windows 8 no tiene archivos client config de configuracion
             contexto.inicializarContexto();
 
-            this.InitializeComponent();
-            this.navigationHelper = new NavigationHelper(this);            
+            this.InitializeComponent();            
             oirMensaje();
             oirOcupado();
-            oirCambiosBotones();            
+            oirCambiosBotones(); 
+            NavigationHelper = ServiceLocator.Current.GetInstance<App2.Common.NavigationHelper>();
+            NavigationHelper.setPage(this);
         }
 
-        private NavigationHelper navigationHelper;
-
-        public NavigationHelper NavigationHelper
-        {
-            get { return this.navigationHelper; }
-        }       
+        public NavigationHelper NavigationHelper { get; set; }
 
         private async void snap()
         {

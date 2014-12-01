@@ -31,14 +31,22 @@ namespace App2.Assets.Periodontograma
         {
             this.InitializeComponent();            
             addBusy();
-            this.navigationHelper = new NavigationHelper(this);
+            NavigationHelper = ServiceLocator.Current.GetInstance<App2.Common.NavigationHelper>();
+            NavigationHelper.setPage(this);
         }
 
-        private NavigationHelper navigationHelper;
+        public NavigationHelper NavigationHelper { get; set; }
 
-        public NavigationHelper NavigationHelper
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            get { return this.navigationHelper; }
+            removeBusyFromVisualThree(e);
+        }
+
+        private void removeBusyFromVisualThree(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            UIElement item = LayoutRoot.Children.LastOrDefault();
+            LayoutRoot.Children.Remove(item);
         }
 
         private void Guardar_Click(object sender, RoutedEventArgs e)
@@ -50,6 +58,7 @@ namespace App2.Assets.Periodontograma
         public void addBusy()
         {
             var elemento = App2.Util.Busy.Busy.addBusy();
+            Grid.SetRowSpan(elemento, 2);
             LayoutRoot.Children.Add(elemento);
         }
     }

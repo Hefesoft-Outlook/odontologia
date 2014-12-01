@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using App2.Common;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -23,18 +24,21 @@ namespace App2.Assets.Auth
     /// </summary>
     public sealed partial class Autentication : Page
     {
+        public static bool ingresoInicial = false;
         public Autentication()
         {
-            this.InitializeComponent();
+            this.InitializeComponent();            
             Loaded += Autentication_Loaded;
         }
 
         void Autentication_Loaded(object sender, RoutedEventArgs e)
         {
-            login();
-        }
-
-
+            if (!ingresoInicial)
+            {
+                ingresoInicial = true;
+                login();
+            }
+        }               
 
         internal void login()
         {
@@ -49,7 +53,6 @@ namespace App2.Assets.Auth
 
             oirUsuarioCreado();
         }
-
 
         private void oirUsuarioCreado()
         {

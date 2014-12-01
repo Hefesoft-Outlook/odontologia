@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Hefesoft.Standard.BusyBox;
+using GalaSoft.MvvmLight.Command;
 
 namespace Hefesoft.Usuario.ViewModel
 {
@@ -19,8 +20,13 @@ namespace Hefesoft.Usuario.ViewModel
             }
             else
             {
-
+                changeUserCommand = new RelayCommand(changeUser);
             }
+        }
+
+        private void changeUser()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send("Cambio Usuario", "Cambio Usuario");
         }        
 
         // Obtiene un string de lo que esta guardado en el storage y pide que se loguee de esa manera
@@ -95,6 +101,8 @@ namespace Hefesoft.Usuario.ViewModel
                 RaisePropertyChanged("UsuarioActivo"); 
             }
         }
-        
+
+
+        public RelayCommand changeUserCommand { get; set; }
     }
 }

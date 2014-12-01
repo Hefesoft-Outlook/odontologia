@@ -72,6 +72,7 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
 
         private async void addElement()
         {
+            BusyBox.UserControlCargando(true);
             if (!string.IsNullOrEmpty(Paciente.RowKey) && ListadoTodos.Any(a => a.RowKey == Paciente.RowKey))
             {
                 var item = ListadoTodos.FirstOrDefault(a => a.RowKey == Paciente.RowKey);
@@ -85,13 +86,16 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
             {
                 await insert(Paciente);
             }
+            BusyBox.UserControlCargando(false);
         }
 
         private async void listar()
         {
+           BusyBox.UserControlCargando(true);
            ListadoTodos = await data.listarUsuarios(vmUsuario.UsuarioActivo.id, "", "Pacientes");
            Listado = ListadoTodos;
            RaisePropertyChanged("Listado");
+           BusyBox.UserControlCargando(false);
         }
 
         public async Task<Hefesoft.Usuario.Entidades.IUsuario> insert(Hefesoft.Usuario.Entidades.IUsuario usuario)

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using Hefesoft.Entities.Odontologia.Util;
 using GalaSoft.MvvmLight.Command;
+using Hefesoft.Standard.BusyBox;
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
 {
@@ -32,12 +33,14 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
 
         private async void delete(Diagnostico.NivelSeveridadDXEntity elemento)
         {
+            BusyBox.UserControlCargando(true);
             if (elemento != null)
             {
                 elemento.Activo = false;
                 await elemento.postBlob();
                 Listado.Remove(elemento);
             }
+            BusyBox.UserControlCargando(false);
         }
 
         private void nuevo()
@@ -48,6 +51,7 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
 
         private async void insert()
         {
+            BusyBox.UserControlCargando(true);
             if (!string.IsNullOrEmpty(Seleccionado.Descripcion))
             {
                 if (string.IsNullOrEmpty(Seleccionado.RowKey))
@@ -68,14 +72,18 @@ namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
                     Listado.Insert(index, item);
                 }
             }
+            
+            BusyBox.UserControlCargando(false);
         }
 
         private async void load()
         {
+            BusyBox.UserControlCargando(true);
             List<Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity> blob = await new Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity().getBlobByPartition(
                 "nivelseveridaddxentity", "cnt.panacea.entities.parametrizacion.nivelseveridaddxentity");
             Listado = blob.Where(a => (a.Activo == null || a.Activo == true)).ToObservableCollection();
             RaisePropertyChanged("Listado");
+            BusyBox.UserControlCargando(false);
         }
 
         private Hefesoft.Entities.Odontologia.Diagnostico.NivelSeveridadDXEntity seleccionado = new Diagnostico.NivelSeveridadDXEntity();

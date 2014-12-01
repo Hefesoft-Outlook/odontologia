@@ -62,50 +62,32 @@ namespace App2.Common
         private Page Page { get; set; }
         private Frame Frame { get { return this.Page.Frame; } }
 
+        private static bool isRegister { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="NavigationHelper"/> class.
         /// </summary>
         /// <param name="page">A reference to the current page used for navigation.  
         /// This reference allows for frame manipulation and to ensure that keyboard 
         /// navigation requests only occur when the page is occupying the entire window.</param>
-        public NavigationHelper(Page page)
+        public NavigationHelper()
         {
-            this.Page = page;
+            
+        }        
 
-            // When this page is part of the visual tree make two changes:
-            // 1) Map application view state to visual state for the page
-            // 2) Handle hardware navigation requests
-            this.Page.Loaded += (sender, e) =>
+        private void listenerChangeUser()
+        {
+            if (!isRegister)
             {
-#if WINDOWS_PHONE_APP
-                Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
-#else
-                // Keyboard and mouse navigation only apply when occupying the entire window
-                if (this.Page.ActualHeight == Window.Current.Bounds.Height &&
-                    this.Page.ActualWidth == Window.Current.Bounds.Width)
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Cambio Usuario", iten =>
                 {
-                    // Listen to the window directly so focus isn't required
-                    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
-                        CoreDispatcher_AcceleratorKeyActivated;
-                    Window.Current.CoreWindow.PointerPressed +=
-                        this.CoreWindow_PointerPressed;
-                }
-#endif
-            };
+                    this.Frame.Navigate(typeof(Assets.Auth.Autentication), false);
+                });
 
-            // Undo the same changes when the page is no longer visible
-            this.Page.Unloaded += (sender, e) =>
-            {
-#if WINDOWS_PHONE_APP
-                Windows.Phone.UI.Input.HardwareButtons.BackPressed -= HardwareButtons_BackPressed;
-#else
-                Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated -=
-                    CoreDispatcher_AcceleratorKeyActivated;
-                Window.Current.CoreWindow.PointerPressed -=
-                    this.CoreWindow_PointerPressed;
-#endif
-            };
+                isRegister = true;
+            }
         }
+
 
         #region Navigation support
 
@@ -371,6 +353,46 @@ namespace App2.Common
         }
 
         #endregion
+
+        internal void setPage(Page page)
+        {
+            this.Page = page;
+            listenerChangeUser();
+
+            // When this page is part of the visual tree make two changes:
+            // 1) Map application view state to visual state for the page
+            // 2) Handle hardware navigation requests
+            this.Page.Loaded += (sender, e) =>
+            {
+#if WINDOWS_PHONE_APP
+                Windows.Phone.UI.Input.HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+#else
+                // Keyboard and mouse navigation only apply when occupying the entire window
+                if (this.Page.ActualHeight == Window.Current.Bounds.Height &&
+                    this.Page.ActualWidth == Window.Current.Bounds.Width)
+                {
+                    // Listen to the window directly so focus isn't required
+                    Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated +=
+                        CoreDispatcher_AcceleratorKeyActivated;
+                    Window.Current.CoreWindow.PointerPressed +=
+                        this.CoreWindow_PointerPressed;
+                }
+#endif
+            };
+
+            // Undo the same changes when the page is no longer visible
+            this.Page.Unloaded += (sender, e) =>
+            {
+#if WINDOWS_PHONE_APP
+                Windows.Phone.UI.Input.HardwareButtons.BackPressed -= HardwareButtons_BackPressed;
+#else
+                Window.Current.CoreWindow.Dispatcher.AcceleratorKeyActivated -=
+                    CoreDispatcher_AcceleratorKeyActivated;
+                Window.Current.CoreWindow.PointerPressed -=
+                    this.CoreWindow_PointerPressed;
+#endif
+            };
+        }
     }
 
     /// <summary>

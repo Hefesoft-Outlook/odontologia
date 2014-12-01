@@ -1,4 +1,5 @@
 ﻿using App2.Common;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -20,15 +21,29 @@ namespace App2.Assets.Tercero.Higienista
     {
         public Higienista()
         {
-            this.InitializeComponent(); 
-            this.navigationHelper = new NavigationHelper(this);
+            this.InitializeComponent();
+            addBusy();
+            ServiceLocator.Current.GetInstance<App2.Common.NavigationHelper>().setPage(this);
+        }
+        
+        
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            removeBusyFromVisualThree(e);
         }
 
-        private NavigationHelper navigationHelper;
-
-        public NavigationHelper NavigationHelper
+        private void removeBusyFromVisualThree(NavigationEventArgs e)
         {
-            get { return this.navigationHelper; }
+            base.OnNavigatedFrom(e);
+            UIElement item = LayoutRoot.Children.LastOrDefault();
+            LayoutRoot.Children.Remove(item);
+        }
+
+        public void addBusy()
+        {
+            var elemento = App2.Util.Busy.Busy.addBusy();
+            Grid.SetRowSpan(elemento, 2);
+            LayoutRoot.Children.Add(elemento);
         }
     }
 }

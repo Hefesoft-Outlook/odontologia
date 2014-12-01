@@ -119,6 +119,7 @@
 			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
 			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
 		</Grid>
+		<login:Usuario HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,12,10,0"/>
 	</Grid>
 
     <Page.BottomAppBar>
