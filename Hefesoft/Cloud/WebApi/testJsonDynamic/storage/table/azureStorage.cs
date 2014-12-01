@@ -17,9 +17,6 @@ namespace testJsonDynamic.storage
         {
             var connectionString = "DefaultEndpointsProtocol=https;AccountName=hefesoft;AccountKey=dodn17DT7hBi3lXrWlvXihLS9J7xuItHLIpWLBZn2QEMdBHm02Lqxr055rNCpP5z3FhfcjjX3MhPy1Npk3VF3Q==";
             storageAccount = CloudStorageAccount.Parse(connectionString);
-
-            //var generator = new SnowMaker.UniqueIdGenerator(storageAccount);
-            //var orderNumber = generator.NextId("orderNumbers");
         }
 
         public dynamic delete(string nombreTabla, string partitionKey, string rowKey)
@@ -27,8 +24,14 @@ namespace testJsonDynamic.storage
             try
             {
                 var client = storageAccount.CreateCloudTableClient();
-                var table = client.GetTableReference(nombreTabla);
+                
+                client.DefaultRequestOptions = new TableRequestOptions() 
+                { 
+                    PayloadFormat = TablePayloadFormat.JsonNoMetadata 
+                };
 
+                var table = client.GetTableReference(nombreTabla);
+                
 
                 TableOperation retrieveOperation = TableOperation.Retrieve(partitionKey, rowKey);
                 TableResult retrievedResult = table.Execute(retrieveOperation);
@@ -62,6 +65,12 @@ namespace testJsonDynamic.storage
             try
             {
                 var client = storageAccount.CreateCloudTableClient();
+
+                client.DefaultRequestOptions = new TableRequestOptions()
+                {
+                    PayloadFormat = TablePayloadFormat.JsonNoMetadata
+                };
+
                 var table = client.GetTableReference(nombreTabla);
 
                 TableQuery query = new TableQuery().Where(TableQuery.GenerateFilterCondition("PartitionKey", QueryComparisons.Equal, partitionKey));
@@ -100,6 +109,12 @@ namespace testJsonDynamic.storage
             try
             {
                 var client = storageAccount.CreateCloudTableClient();
+
+                client.DefaultRequestOptions = new TableRequestOptions()
+                {
+                    PayloadFormat = TablePayloadFormat.JsonNoMetadata
+                };
+
                 var table = client.GetTableReference(nombreTabla);
 
                 TableOperation retrieveOperation = TableOperation.Retrieve(partitionKey, rowKey);
@@ -164,6 +179,12 @@ namespace testJsonDynamic.storage
             try
             {
                 var client = storageAccount.CreateCloudTableClient();
+
+                client.DefaultRequestOptions = new TableRequestOptions()
+                {
+                    PayloadFormat = TablePayloadFormat.JsonNoMetadata
+                };
+
                 var table = client.GetTableReference(entidad.nombreTabla);
                 table.CreateIfNotExists();
 
@@ -191,6 +212,12 @@ namespace testJsonDynamic.storage
             try
             {
                 var client = storageAccount.CreateCloudTableClient();
+
+                client.DefaultRequestOptions = new TableRequestOptions()
+                {
+                    PayloadFormat = TablePayloadFormat.JsonNoMetadata
+                };
+
                 var table = client.GetTableReference(nombreTabla);
                 table.CreateIfNotExists();
                 table.Execute(TableOperation.InsertOrReplace(entidad));
