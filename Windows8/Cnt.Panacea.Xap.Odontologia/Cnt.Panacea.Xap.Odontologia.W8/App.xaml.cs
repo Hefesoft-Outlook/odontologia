@@ -51,7 +51,9 @@ namespace App2
             Variables_Globales.PCL = new PCL();
 
             //Se registra el busy Para que solo se cree una vez en memoria
-            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();        
+            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();
+            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<App2.Common.NavigationHelper>();
+            
         }
 
 
