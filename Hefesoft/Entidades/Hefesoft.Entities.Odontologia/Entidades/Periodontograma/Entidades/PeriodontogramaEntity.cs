@@ -250,6 +250,5 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
                 RaisePropertyChanged("FurcaVisualizacion");
             }
         }
-        
     }
 }

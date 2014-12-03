@@ -8,6 +8,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Busy="using:App2.Assets.BusyBox"
     xmlns:Auth="using:App2.Auth"
+    xmlns:Pacientes="using:App2.Grillas.Pacientes"
     x:Name="pageRoot"
     x:Class="App2.Assets.Periodontograma.Periodontograma"
     mc:Ignorable="d">
@@ -48,9 +49,22 @@
 			<Auth:Usuario HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1" Margin="0,0,10,0"/>
 		</Grid>
 
-		<Hub HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Padding="40,0">
-    		
-			<HubSection Header="Listado">
+        <Hub 
+            x:Name="HbPeriododntograma"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Grid.Row="1" 
+            Padding="40,0">
+
+            <HubSection Header="Pacientes">
+                <DataTemplate>
+                    <Grid>
+                        <Pacientes:SplitPacientes verTitulo="False"></Pacientes:SplitPacientes>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Header="Periodontograma">
 				<DataTemplate>
 					<Grid>
 						<Viewbox Height="600" VerticalAlignment="Top">

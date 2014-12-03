@@ -256,7 +256,12 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
+      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
+      <Name>Hefesoft.Usuario</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>copy /y  "$(TargetFileName)" "$(SolutionDir)..\..\dlls\"</PostBuildEvent>

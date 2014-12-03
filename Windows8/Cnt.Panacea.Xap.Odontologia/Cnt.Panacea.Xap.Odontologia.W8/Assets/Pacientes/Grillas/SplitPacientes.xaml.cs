@@ -30,11 +30,6 @@ namespace App2.Grillas.Pacientes
             InitializeComponent();        
         }
 
-        public void Dispose()
-        {
-        
-        }
-
         private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
         {
             HyperlinkButton hp = sender as HyperlinkButton;
@@ -42,6 +37,11 @@ namespace App2.Grillas.Pacientes
             var vm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
             vm.seleccionar(item);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(item, "Paciente seleccionado");
-        }
+        }        
+
+        public void Dispose()
+        {
+        
+        }       
     }
 }

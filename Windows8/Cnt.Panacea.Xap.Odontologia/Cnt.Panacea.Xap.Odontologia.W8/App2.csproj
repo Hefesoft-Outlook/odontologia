@@ -173,6 +173,7 @@
     <Compile Include="Assets\Niveles de severidad\Niveles_Severidad.xaml.cs">
       <DependentUpon>Niveles_Severidad.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Pacientes\Grillas\Partial\SplitPacientes\Titulos.cs" />
     <Compile Include="Assets\Periodontograma\Control\Item_Template.xaml.cs">
       <DependentUpon>Item_Template.xaml</DependentUpon>
     </Compile>
@@ -254,10 +255,10 @@
     <Compile Include="Assets\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml.cs">
       <DependentUpon>SplitEvolucion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Odontograma\Grillas\Pacientes\Add.xaml.cs">
+    <Compile Include="Assets\Pacientes\Grillas\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Assets\Odontograma\Grillas\Pacientes\SplitPacientes.xaml.cs">
+    <Compile Include="Assets\Pacientes\Grillas\SplitPacientes.xaml.cs">
       <DependentUpon>SplitPacientes.xaml</DependentUpon>
     </Compile>
     <Compile Include="Assets\Odontograma\Grillas\PacienteTratamientos.xaml.cs">
@@ -760,11 +761,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Assets\Odontograma\Grillas\Pacientes\Add.xaml">
+    <Page Include="Assets\Pacientes\Grillas\Add.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Assets\Odontograma\Grillas\Pacientes\SplitPacientes.xaml">
+    <Page Include="Assets\Pacientes\Grillas\SplitPacientes.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -870,10 +871,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
+    <Reference Include="AutoMapper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll</HintPath>
     </Reference>
-    <Reference Include="AutoMapper.WinRT">
+    <Reference Include="AutoMapper.WinRT, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
     </Reference>
     <Reference Include="bouncy_castle_hmac_sha_pcl">
@@ -908,10 +911,14 @@
     </Reference>
     <Reference Include="GalaSoft.MvvmLight, Version=4.1.26.28028, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\FinalesCnt\Std\Xap\Hefesoft\Portable\GalaSoft.MvvmLight.dll</HintPath>
+      <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
-    <Reference Include="GalaSoft.MvvmLight.Extras">
-      <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=4.1.26.28028, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platforms.NetCore45">
+      <HintPath>..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Entities.Odontologia">
       <HintPath>..\..\..\Hefesoft\dlls\Hefesoft.Entities.Odontologia.dll</HintPath>
@@ -937,8 +944,9 @@
     <Reference Include="Microsoft.Live">
       <HintPath>..\packages\LiveSDK.5.6\WindowsXAML\Microsoft.Live.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Practices.ServiceLocation">
-      <HintPath>C:\FinalesCnt\Std\Xap\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -958,10 +966,13 @@
     <Reference Include="System.Net.Http.Primitives">
       <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Windows.UI.Interactivity">
+      <HintPath>..\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
-    <SDKReference Include="RadControls for Windows 8, Version=2013.3.1105">
+    <SDKReference Include="RadControls for Windows 8, Version=2013.2.611">
       <Name>RadControls for Windows 8</Name>
     </SDKReference>
   </ItemGroup>

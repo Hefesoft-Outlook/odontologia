@@ -21,6 +21,21 @@ namespace Hefesoft.Odontologia.Periodontograma.Data
         public string id { get; set; }
         public string idPaciente { get; set; }
 
+        private Hefesoft.Usuario.Entidades.Usuario paciente = new Usuario.Entidades.Usuario();
+
+        public Hefesoft.Usuario.Entidades.Usuario  Paciente
+        {
+            get { return paciente; }
+            set 
+            { 
+                paciente = value;
+                PacienteIdentificador = value.id;
+                PacienteNombre = value.nombre;
+                PacienteImagen = value.imagenRuta;
+            }
+        }
+        
+
         public DateTime Fecha_Ultima_Modificacion { get; set; }
 
         private List<Entidades.PeriodontogramaEntity> listado = new List<Entidades.PeriodontogramaEntity>();
@@ -29,5 +44,11 @@ namespace Hefesoft.Odontologia.Periodontograma.Data
             get { return listado; }
             set { listado = value; }
         }
+
+        public string PacienteIdentificador { get; set; }
+
+        public string PacienteNombre { get; set; }
+
+        public string PacienteImagen { get; set; }
     }
 }

@@ -44,12 +44,11 @@ namespace App2.Pacientes
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Usuario.Entidades.Usuario>(this, "Paciente seleccionado", item => 
             {
-                this.Frame.Navigate(typeof(HubPage),item);
+                
             });
         }
 
-
-        private void tratamientos_Click(object sender, RoutedEventArgs e)
+        private void odontograma_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(HubPage));
         }
@@ -64,6 +63,6 @@ namespace App2.Pacientes
         public void Dispose()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Usuario.Entidades.Usuario>(this, "Paciente seleccionado");
-        }
+        }        
     }
 }

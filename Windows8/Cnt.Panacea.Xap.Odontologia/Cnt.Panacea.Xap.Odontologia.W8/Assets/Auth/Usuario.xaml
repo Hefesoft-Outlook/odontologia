@@ -13,8 +13,12 @@
     <Grid>
         <StackPanel>
             
-            <Button Background="White">
-                <Image Width="60" Source="{Binding UsuarioActivo.imagenRuta}"/>
+            <Button Background="White" HorizontalAlignment="Center" Height="96" Width="109" FontFamily="Global User Interface">
+                
+				<Grid Height="70" Width="80">
+            		<Image Source="{Binding UsuarioActivo.imagenRuta}"/>
+            		<Path Data="M57.5,30 L57.5,57.5 L30,57.5 C45.1878,57.5 57.5,45.1878 57.5,30 z M2.5,30 C2.5,45.1878 14.8122,57.5 30,57.5 L2.5,57.5 z M30,2.5 L57.5,2.5 L57.5,30 C57.5,14.8122 45.1878,2.5 30,2.5 z M2.5,2.5 L30,2.5 C14.8122,2.5 2.5,14.8122 2.5,30 z" Stretch="Fill" Stroke="White" StrokeThickness="5" UseLayoutRounding="False" Fill="White"/>
+            	</Grid>
 
                 <Button.Flyout>
                     <MenuFlyout>
@@ -26,11 +30,10 @@
                     </MenuFlyout>
                 </Button.Flyout>
 
-            </Button>
+            </Button>            
             
             
-            
-            <TextBlock Text="{Binding UsuarioActivo.nombre}" HorizontalAlignment="Center"/>
+            <TextBlock Text="{Binding UsuarioActivo.nombre}" HorizontalAlignment="Center" FontSize="13.333"/>
         </StackPanel>
     </Grid>
     

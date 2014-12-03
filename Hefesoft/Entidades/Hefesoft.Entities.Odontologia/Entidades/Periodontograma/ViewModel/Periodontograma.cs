@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using Hefesoft.Standard.BusyBox;
+using Microsoft.Practices.ServiceLocation;
 
 
 namespace Hefesoft.Odontologia.Periodontograma.ViewModel
@@ -38,20 +39,32 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
 
         public async void save()
         {
-            BusyBox.UserControlCargando(true, "Guardando...");
-            Data.Periodontograma periodontograma = new Data.Periodontograma();
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte1);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte2);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte3);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte4);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte5);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte6);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte7);
-            periodontograma.Listado.AddRange(LstPeriodontogramaParte8);
+            var vmUsuario = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
 
-            Data.Crud crud = new Data.Crud();            
-            await crud.guardar(periodontograma);
-            BusyBox.UserControlCargando(false);
+            if (vmUsuario.Paciente != null)
+            {
+                BusyBox.UserControlCargando(true, "Guardando...");
+                Data.Periodontograma periodontograma = new Data.Periodontograma();
+                periodontograma.Paciente = vmUsuario.Paciente;
+                periodontograma.RowKey = vmUsuario.Paciente.PartitionKey;
+
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte1);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte2);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte3);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte4);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte5);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte6);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte7);
+                periodontograma.Listado.AddRange(LstPeriodontogramaParte8);
+
+                Data.Crud crud = new Data.Crud();
+                await crud.guardar(periodontograma);
+                BusyBox.UserControlCargando(false);
+            }
+            else
+            {
+                // Mensaje seleccione un usuario
+            }
         }
 
         private void placaMetodonMetodo(Entidades.PeriodontogramaEntity obj)
@@ -218,34 +231,39 @@ namespace Hefesoft.Odontologia.Periodontograma.ViewModel
             BusyBox.UserControlCargando(true);
             Data.Crud crud = new Data.Crud();
             var result = await crud.get();
-            var data = result.First().Listado;
 
-            LstPeriodontogramaParte1 = null;
-            LstPeriodontogramaParte2 = null;
-            LstPeriodontogramaParte3 = null;
-            LstPeriodontogramaParte4 = null;
-            LstPeriodontogramaParte5 = null;
-            LstPeriodontogramaParte6 = null;
-            LstPeriodontogramaParte7 = null;
-            LstPeriodontogramaParte8 = null;
+            if (result.Any())
+            {
+                var data = result.First().Listado;
 
-            LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1);
-            LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2);
-            LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3);
-            LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4);
-            LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5);
-            LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6);
-            LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7);
-            LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
+                LstPeriodontogramaParte1 = null;
+                LstPeriodontogramaParte2 = null;
+                LstPeriodontogramaParte3 = null;
+                LstPeriodontogramaParte4 = null;
+                LstPeriodontogramaParte5 = null;
+                LstPeriodontogramaParte6 = null;
+                LstPeriodontogramaParte7 = null;
+                LstPeriodontogramaParte8 = null;
 
-            RaisePropertyChanged("LstPeriodontogramaParte1");
-            RaisePropertyChanged("LstPeriodontogramaParte2");
-            RaisePropertyChanged("LstPeriodontogramaParte3");
-            RaisePropertyChanged("LstPeriodontogramaParte4");
-            RaisePropertyChanged("LstPeriodontogramaParte5");
-            RaisePropertyChanged("LstPeriodontogramaParte6");
-            RaisePropertyChanged("LstPeriodontogramaParte7");
-            RaisePropertyChanged("LstPeriodontogramaParte8");
+                LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1);
+                LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2);
+                LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3);
+                LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4);
+                LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5);
+                LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6);
+                LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7);
+                LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
+
+                RaisePropertyChanged("LstPeriodontogramaParte1");
+                RaisePropertyChanged("LstPeriodontogramaParte2");
+                RaisePropertyChanged("LstPeriodontogramaParte3");
+                RaisePropertyChanged("LstPeriodontogramaParte4");
+                RaisePropertyChanged("LstPeriodontogramaParte5");
+                RaisePropertyChanged("LstPeriodontogramaParte6");
+                RaisePropertyChanged("LstPeriodontogramaParte7");
+                RaisePropertyChanged("LstPeriodontogramaParte8");
+            }
+
             BusyBox.UserControlCargando(false);
         }
 
