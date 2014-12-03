@@ -64,7 +64,7 @@ namespace App2.Common
 
         private static bool isRegister { get; set; }
 
-        /// <summary>
+       
         /// Initializes a new instance of the <see cref="NavigationHelper"/> class.
         /// </summary>
         /// <param name="page">A reference to the current page used for navigation.  

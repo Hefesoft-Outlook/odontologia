@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace testJsonDynamic.Controllers
@@ -36,11 +37,13 @@ namespace testJsonDynamic.Controllers
         }
 
         // POST api/<controller>
-        public dynamic Post(JObject json)
+        public async Task<dynamic> Post()
         {
-            var entidad = System.Web.Helpers.Json.Decode(json.ToString());
+            string value = await Request.Content.ReadAsStringAsync();
+            var entidad = System.Web.Helpers.Json.Decode(value);
             _azure.insert(entidad);
             return entidad;
+            //return new HttpResponseMessage(HttpStatusCode.OK);
         }
 
         // PUT api/<controller>/5

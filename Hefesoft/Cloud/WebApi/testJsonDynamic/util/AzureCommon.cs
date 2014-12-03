@@ -64,8 +64,8 @@ namespace testJsonDynamic
 
             InitializeCors(BlobClient, TableClient);
 
-            ImagesContainer = BlobClient.GetContainerReference(AzureCommon.ImageContainerName);
-            ImagesContainer.CreateIfNotExists(BlobContainerPublicAccessType.Container);
+            //ImagesContainer = BlobClient.GetContainerReference(AzureCommon.ImageContainerName);
+            //ImagesContainer.CreateIfNotExists(BlobContainerPublicAccessType.Container);
         }
 
         /// <summary>
@@ -89,12 +89,12 @@ namespace testJsonDynamic
             tableServiceProperties.Logging = null;
 
             // Enable and Configure CORS
-            ConfigureCors(blobServiceProperties);
-            ConfigureCors(tableServiceProperties);
+            //ConfigureCors(blobServiceProperties);
+            //ConfigureCors(tableServiceProperties);
             
-            // Commit the CORS changes into the Service Properties
-            blobClient.SetServiceProperties(blobServiceProperties);
-            tableClient.SetServiceProperties(tableServiceProperties);
+            //// Commit the CORS changes into the Service Properties
+            //blobClient.SetServiceProperties(blobServiceProperties);
+            //tableClient.SetServiceProperties(tableServiceProperties);
         }
 
         /// <summary>
