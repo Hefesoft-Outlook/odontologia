@@ -112,6 +112,14 @@
       <DependentUpon>Listado.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Pacientes.Locator\Pacientes.Locator.csproj">
+      <Project>{fd5dbae3-edf2-4ff1-adee-83f8515aad7c}</Project>
+      <Name>Pacientes.Locator</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight">
@@ -129,12 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Pacientes.Locator\Pacientes.Locator.csproj">
-      <Project>{fd5dbae3-edf2-4ff1-adee-83f8515aad7c}</Project>
-      <Name>Pacientes.Locator</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

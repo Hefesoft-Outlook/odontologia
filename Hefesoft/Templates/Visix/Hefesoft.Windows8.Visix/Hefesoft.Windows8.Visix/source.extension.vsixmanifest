@@ -15,5 +15,10 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.Assembly" d:Source="File" Path="RestTemplateWizard.dll" AssemblyName="RestTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9a76f51a8a9555f" />
     <Asset Type="Microsoft.VisualStudio.ProjectTemplate" d:Source="File" Path="ProjectTemplates" d:TargetPath="ProjectTemplates\RestTemplate.zip" />
+
+    <CustomExtension Type="CommonServiceLocator.1.3.nupkg">
+      packages/CommonServiceLocator.1.3.nupkg
+    </CustomExtension>
+    
   </Assets>
 </PackageManifest>
