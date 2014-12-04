@@ -22,5 +22,11 @@ namespace Hefesoft.Odontologia.Periodontograma.Data
             var result = await Hefesoft.Standard.Util.Blob.CrudBlob.getBlobByPartition(new Periodontograma());
             return result;
         }
+
+        public async Task<List<Periodontograma>> getPorPaciente(Periodontograma entidad)
+        {
+            var result = await Hefesoft.Standard.Util.table.crudTable.getTableByPartition(entidad);
+            return result;
+        }
     }
 }

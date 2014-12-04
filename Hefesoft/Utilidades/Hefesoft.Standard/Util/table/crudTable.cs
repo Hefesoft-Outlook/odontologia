@@ -114,7 +114,7 @@ namespace Hefesoft.Standard.Util.table
             }
 
             string json = JsonConvert.SerializeObject(entidad);
-            string parameters = string.Format("table/?nombreTabla={0}&partitionKey={1}&rowKey=", entidad.nombreTabla, entidad.PartitionKey, rowKey);
+            string parameters = string.Format("table/?nombreTabla={0}&partitionKey={1}&rowKey={2}", entidad.nombreTabla, entidad.PartitionKey, rowKey);
 
             HttpClientHandler handler = new HttpClientHandler();
             var httpClient = new HttpClient(handler);

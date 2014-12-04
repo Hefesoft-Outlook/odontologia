@@ -16,6 +16,26 @@ namespace Hefesoft.Odontologia.Periodontograma.Entidades
             RaisePropertyChanged("margenGingivalColor");
             RaisePropertyChanged("profundidadSondajeColor");
             Furca = Enumeradores.Furca.ninguno;
+            Clean();
+        }
+
+        public void Clean()
+        {
+            Tipo_Pieza = Enumeradores.Tipo_Pieza.normal;
+            Furca = Enumeradores.Furca.ninguno;
+            Furca2 = Enumeradores.Furca.ninguno;
+            SangradoSupuracion1 = Sangrado_Supuracion.ninguno;
+            SangradoSupuracion2 = Sangrado_Supuracion.ninguno;
+            SangradoSupuracion3 = Sangrado_Supuracion.ninguno;
+            Placa1 = Placa.ninguno;
+            Placa2 = Placa.ninguno;
+            Placa3 = Placa.ninguno;
+            MargenGingival1 = 0;
+            MargenGingival2 = 0;
+            MargenGingival3 = 0;
+            Movilidad = 0;
+            ProdundidadSondaje1 = 0;
+            FurcaVisualizacion = Furca_Visualizacion.No_Visible;
         }
 
         private int numero;

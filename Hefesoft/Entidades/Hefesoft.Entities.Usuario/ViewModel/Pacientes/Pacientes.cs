@@ -8,6 +8,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Hefesoft.Standard.Util.Collection.IEnumerable;
+using Hefesoft.Standard.Util.Collection.Observables;
+using System.Collections.ObjectModel;
 
 namespace Hefesoft.Usuario.ViewModel.Pacientes
 {
@@ -34,7 +37,13 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
 
                 lostFocus = new RelayCommand(() => 
                 {
-                    add.RaiseCanExecuteChanged();
+                    try
+                    {
+                        add.RaiseCanExecuteChanged();
+                    }
+                    catch
+                    {
+                    }
                 });
 
                 search = new GalaSoft.MvvmLight.Command.RelayCommand<string>(searchElement);
@@ -46,11 +55,11 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
             Listado = null;
             if(!string.IsNullOrEmpty(obj))
             {                
-                Listado = ListadoTodos.Where(a => a.nombre.Contains(obj));                
+                Listado = ListadoTodos.Where(a => a.nombre.Contains(obj)).ToObservableCollection();
             }
             else
             {
-                Listado = ListadoTodos;
+                Listado = ListadoTodos.ToObservableCollection();
             }
 
             RaisePropertyChanged("Listado");
@@ -59,11 +68,18 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
         private bool validateAdd()
         {
             var valido = true;
-            if(string.IsNullOrEmpty(Paciente.nombre))
+            if (Paciente != null)
             {
-                valido = false;
+                if (string.IsNullOrEmpty(Paciente.nombre))
+                {
+                    valido = false;
+                }
+                if (string.IsNullOrEmpty(Paciente.telefono))
+                {
+                    valido = false;
+                }
             }
-            if (string.IsNullOrEmpty(Paciente.telefono))
+            else
             {
                 valido = false;
             }
@@ -77,23 +93,25 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
             {
                 var item = ListadoTodos.FirstOrDefault(a => a.RowKey == Paciente.RowKey);
                 item = Paciente;
-                Listado = null;
-                Listado = ListadoTodos;
-                RaisePropertyChanged("Listado");
+                await insert(Paciente);
+                Listado.UpdateElementCollection(Paciente);
             }
-
-            if (Paciente != null)
+            else if (Paciente != null)
             {
                 await insert(Paciente);
+                Listado.Add(Paciente);
             }
+
+            RaisePropertyChanged("Listado");
             BusyBox.UserControlCargando(false);
         }
 
         private async void listar()
         {
            BusyBox.UserControlCargando(true);
-           ListadoTodos = await data.listarUsuarios(vmUsuario.UsuarioActivo.id, "", "Pacientes");
-           Listado = ListadoTodos;
+           var result = await data.listarUsuarios(vmUsuario.UsuarioActivo.id, "", "Pacientes");
+           ListadoTodos = result.ToList();
+           Listado = ListadoTodos.ToObservableCollection();
            RaisePropertyChanged("Listado");
            BusyBox.UserControlCargando(false);
         }
@@ -103,10 +121,8 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
             BusyBox.UserControlCargando(true);            
             usuario.nombreTabla = "Pacientes";
             usuario.PartitionKey = vmUsuario.UsuarioActivo.id;
-
-
             var usuarioCreado = await data.crearUsuario(usuario);
-            BusyBox.UserControlCargando(false);
+            BusyBox.UserControlCargando(false);            
             return usuarioCreado;
         }
 
@@ -123,6 +139,7 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
             set 
             {                
                 paciente = value;
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send("Paciente seleccionado", "Paciente seleccionado");
                 RaisePropertyChanged("Paciente"); 
             }
         }
@@ -136,11 +153,11 @@ namespace Hefesoft.Usuario.ViewModel.Pacientes
 
         public Usuarios vmUsuario { get; set; }
 
-        public IEnumerable<Entidades.Usuario> Listado { get; set; }
+        public ObservableCollection<Entidades.Usuario> Listado { get; set; }
 
         public RelayCommand createNew { get; set; }
 
-        public IEnumerable<Entidades.Usuario> ListadoTodos { get; set; }
+        public List<Entidades.Usuario> ListadoTodos { get; set; }
 
         public RelayCommand<string> search { get; set; }
     }

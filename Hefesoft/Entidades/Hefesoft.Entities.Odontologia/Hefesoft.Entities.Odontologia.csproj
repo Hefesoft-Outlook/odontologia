@@ -91,6 +91,9 @@
     <Compile Include="Entidades\Periodontograma\Enumeradores\Sangrado_Supuracion.cs" />
     <Compile Include="Entidades\Periodontograma\Enumeradores\Tipo_Pieza.cs" />
     <Compile Include="Entidades\Periodontograma\Util\Generar_datos.cs" />
+    <Compile Include="Entidades\Periodontograma\Util\LimpiarDatos.cs" />
+    <Compile Include="Entidades\Periodontograma\ViewModel\Partial\Periodontograma\Periodontograma.CrudOperations.cs" />
+    <Compile Include="Entidades\Periodontograma\ViewModel\Partial\Periodontograma\Periodontograma.Placa.Sangrado.Furca.Implante.cs" />
     <Compile Include="Entidades\Periodontograma\ViewModel\Periodontograma.cs" />
     <Compile Include="Entidades\Tercero\ActividadesEconomicasCollection.cs" />
     <Compile Include="Entidades\Convenio\ClasesTercero.cs" />

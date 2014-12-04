@@ -9,12 +9,15 @@
     xmlns:Busy="using:App2.Assets.BusyBox"
     xmlns:Auth="using:App2.Auth"
     xmlns:Pacientes="using:App2.Grillas.Pacientes"
+    xmlns:ListadoPeriodontogramas="using:App2.Assets.Periodontograma.Listados"
     x:Name="pageRoot"
     x:Class="App2.Assets.Periodontograma.Periodontograma"
+    
     mc:Ignorable="d">
 
     <Page.BottomAppBar>
-        <CommandBar x:Name="barraComandos" IsOpen="True">            
+        <CommandBar x:Name="barraComandos" IsOpen="True">
+            <AppBarToggleButton x:Name="Nuevo" Icon="Add" Label="Nuevo" Click="Nuevo_Click"/>
             <AppBarToggleButton x:Name="Guardar" Icon="Save" Label="Guardar" Click="Guardar_Click"/>
         </CommandBar>
     </Page.BottomAppBar>
@@ -56,11 +59,20 @@
             Grid.Row="1" 
             Padding="40,0">
 
-            <HubSection Header="Pacientes">
+            <HubSection Header="Listado">
                 <DataTemplate>
                     <Grid>
                         <Pacientes:SplitPacientes verTitulo="False"></Pacientes:SplitPacientes>
                     </Grid>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Padding="0,40,0,44"                
+                >
+                <DataTemplate>
+                    <StackPanel>
+                        <ListadoPeriodontogramas:liIstadoPeriodontogramas/>                        
+                    </StackPanel>
                 </DataTemplate>
             </HubSection>
 

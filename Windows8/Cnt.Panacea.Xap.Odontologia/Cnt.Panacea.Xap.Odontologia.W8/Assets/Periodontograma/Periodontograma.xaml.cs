@@ -55,11 +55,19 @@ namespace App2.Assets.Periodontograma
             vm.save();
         }
 
+        private void Nuevo_Click(object sender, RoutedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Hefesoft.Odontologia.Periodontograma.ViewModel.Periodontograma>();
+            vm.newCommand.Execute(null);
+        }
+
         public void addBusy()
         {
             var elemento = App2.Util.Busy.Busy.addBusy();
             Grid.SetRowSpan(elemento, 2);
             LayoutRoot.Children.Add(elemento);
         }
+
+       
     }
 }
