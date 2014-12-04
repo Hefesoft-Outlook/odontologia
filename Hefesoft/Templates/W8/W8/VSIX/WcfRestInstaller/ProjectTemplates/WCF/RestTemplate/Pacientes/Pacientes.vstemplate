@@ -1,0 +1,33 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Pacientes</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Pacientes</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Pacientes.csproj" File="Pacientes.csproj" ReplaceParameters="true">
+      <Folder Name="Pacientes" TargetFolderName="Pacientes">
+        <ProjectItem ReplaceParameters="true" TargetFileName="Listado.xaml">Listado.xaml</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="Listado.xaml.cs">Listado.xaml.cs</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+ 
+ <WizardExtension>
+    <Assembly>RestTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9a76f51a8a9555f</Assembly>
+    <FullClassName>RestTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>

@@ -1,0 +1,45 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Pacientes.Test</Name>
+    <Description>&lt;No description available&gt;</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Pacientes.Test</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="Pacientes.Test.csproj" File="Pacientes.Test.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml">App.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App.xaml.cs">App.xaml.cs</ProjectItem>
+      <Folder Name="Assets" TargetFolderName="Assets">
+        <ProjectItem ReplaceParameters="false" TargetFileName="Logo.scale-100.png">Logo.scale-100.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SmallLogo.scale-100.png">SmallLogo.scale-100.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="SplashScreen.scale-100.png">SplashScreen.scale-100.png</ProjectItem>
+        <ProjectItem ReplaceParameters="false" TargetFileName="StoreLogo.scale-100.png">StoreLogo.scale-100.png</ProjectItem>
+      </Folder>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml">MainPage.xaml</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="MainPage.xaml.cs">MainPage.xaml.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="Package.appxmanifest">Package.appxmanifest</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="packages.config">packages.config</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+      <Folder Name="ViewModel" TargetFolderName="ViewModel">
+        <ProjectItem ReplaceParameters="true" TargetFileName="MainViewModel.cs">MainViewModel.cs</ProjectItem>
+        <ProjectItem ReplaceParameters="true" TargetFileName="ViewModelLocator.cs">ViewModelLocator.cs</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+
+ <WizardExtension>
+    <Assembly>RestTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9a76f51a8a9555f</Assembly>
+    <FullClassName>RestTemplateWizard.ChildWizard</FullClassName>
+  </WizardExtension>
+
+</VSTemplate>

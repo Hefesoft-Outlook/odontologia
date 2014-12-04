@@ -1,0 +1,1 @@
+<%@ Application Codebehind="Global.asax.cs" Inherits="WcfRestHost.Global" Language="C#" %>

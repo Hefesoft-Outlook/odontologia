@@ -1,0 +1,41 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="ProjectGroup">
+  <TemplateData>
+    <Name>Windows 8 Template</Name>
+    <Description>Template para uso interno de hefesoft</Description>
+    <ProjectType>CSharp</ProjectType>
+    <TemplateGroupID>WCF</TemplateGroupID>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Hefesoft.NombreModulo</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <Icon>__TemplateIcon.png</Icon>
+    <PreviewImage>__PreviewImage.png</PreviewImage>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <PromptForSaveOnCreation>true</PromptForSaveOnCreation>
+    <RequiredFrameworkVersion>4.0</RequiredFrameworkVersion>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+
+      <ProjectTemplateLink ProjectName="$safeprojectname$">
+        Pacientes\Pacientes.vstemplate
+      </ProjectTemplateLink>
+
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Locator">
+        Pacientes.Locator\Pacientes.Locator.vstemplate
+      </ProjectTemplateLink>
+
+      <ProjectTemplateLink ProjectName="$safeprojectname$.Test">
+        Pacientes.Test\Pacientes.Test.vstemplate
+      </ProjectTemplateLink>
+
+
+    </ProjectCollection>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>RestTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9a76f51a8a9555f</Assembly>
+    <FullClassName>RestTemplateWizard.RootWizard</FullClassName>
+  </WizardExtension>
+</VSTemplate>
