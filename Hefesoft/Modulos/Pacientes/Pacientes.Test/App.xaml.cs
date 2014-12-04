@@ -1,16 +1,8 @@
-﻿using App2.Common;
-using App2.Util;
-using Cnt.Panacea.Xap.Odontologia.Vm.Contexto;
-using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
-using GalaSoft.MvvmLight.Ioc;
-using Microsoft.Practices.ServiceLocation;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.ServiceModel;
-using System.ServiceModel.Channels;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -23,9 +15,9 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Hub App template is documented at http://go.microsoft.com/fwlink/?LinkId=321221
+// The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
 
-namespace App2
+namespace Pacientes.Test
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.
@@ -33,32 +25,13 @@ namespace App2
     sealed partial class App : Application
     {
         /// <summary>
-        /// Initializes the singleton Application object.  This is the first line of authored code
+        /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().
         /// </summary>
         public App()
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            this.UnhandledException += App_UnhandledException;
-           
- 
-            //Datos prueba
-            Variables_Globales.IdIps = 21;
-            Variables_Globales.IdPaciente = 232431;
-            Variables_Globales.IdTratamientoActivo = 2;
-            Variables_Globales.Modo = Cnt.Panacea.Xap.Odontologia.Vm.Util.Modos.Modo.windows8;
-            Variables_Globales.PCL = new PCL();
-
-            //Se registra el busy Para que solo se cree una vez en memoria
-            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<Assets.BusyBox.BusyBox>();
-            Hefesoft.Standard.Util.SimpleIoc.RegistrarClase.registrarClaseUI<App2.Common.NavigationHelper>();            
-        }
-
-
-        void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            e.Handled = true;
         }
 
         /// <summary>
@@ -66,8 +39,9 @@ namespace App2
         /// will be used such as when the application is launched to open a specific file.
         /// </summary>
         /// <param name="e">Details about the launch request and process.</param>
-        protected override async void OnLaunched(LaunchActivatedEventArgs e)
+        protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
@@ -79,13 +53,10 @@ namespace App2
 
             // Do not repeat app initialization when the Window already has content,
             // just ensure that the window is active
-
             if (rootFrame == null)
             {
                 // Create a Frame to act as the navigation context and navigate to the first page
                 rootFrame = new Frame();
-                //Associate the frame with a SuspensionManager key                                
-                SuspensionManager.RegisterFrame(rootFrame, "AppFrame");
                 // Set the default language
                 rootFrame.Language = Windows.Globalization.ApplicationLanguages.Languages[0];
 
@@ -93,33 +64,23 @@ namespace App2
 
                 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated)
                 {
-                    // Restore the saved session state only when appropriate
-                    try
-                    {
-                        await SuspensionManager.RestoreAsync();
-                    }
-                    catch (SuspensionManagerException)
-                    {
-                        //Something went wrong restoring state.
-                        //Assume there is no state and continue
-                    }
+                    //TODO: Load state from previously suspended application
                 }
 
                 // Place the frame in the current Window
                 Window.Current.Content = rootFrame;
             }
+
             if (rootFrame.Content == null)
             {
                 // When the navigation stack isn't restored navigate to the first page,
                 // configuring the new page by passing required information as a navigation
                 // parameter
-                rootFrame.Navigate(typeof(App2.Assets.Auth.Autentication), e.Arguments);
+                rootFrame.Navigate(typeof(MainPage), e.Arguments);
             }
             // Ensure the current window is active
             Window.Current.Activate();
         }
-
-      
 
         /// <summary>
         /// Invoked when Navigation to a certain page fails
@@ -138,15 +99,11 @@ namespace App2
         /// </summary>
         /// <param name="sender">The source of the suspend request.</param>
         /// <param name="e">Details about the suspend request.</param>
-        private async void OnSuspending(object sender, SuspendingEventArgs e)
+        private void OnSuspending(object sender, SuspendingEventArgs e)
         {
             var deferral = e.SuspendingOperation.GetDeferral();
-            await SuspensionManager.SaveAsync();
+            //TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-
-        public static string FacebookId { get; set; }
-
-        public static string Token { get; set; }
     }
 }
