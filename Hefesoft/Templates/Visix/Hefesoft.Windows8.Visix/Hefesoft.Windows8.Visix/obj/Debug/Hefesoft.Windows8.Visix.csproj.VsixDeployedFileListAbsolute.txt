@@ -1,0 +1,17 @@
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\\extension.vsixmanifest
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\\Hefesoft.ico
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\\RestTemplateWizard.dll
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\ProjectTemplates\\RestTemplate.zip
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\CommonServiceLocator.1.3.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\MvvmLight.5.0.2.0.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\MvvmLightLibs.5.0.2.0.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\AutoMapper.3.0.0.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\BouncyCastle-PCL.1.0.0.4.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Microsoft.Bcl.1.1.9.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Microsoft.Bcl.Async.1.0.168.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Microsoft.Net.Http.2.2.28.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Newtonsoft.Json.6.0.3.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Portable.CommonServiceLocator.1.2.2.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Portable.MvvmLightLibs.4.1.27.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Hefesoft.Standard.Libs.0.0.0.1.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Hefesoft.Standard.Libs.0.0.0.2.nupkg
