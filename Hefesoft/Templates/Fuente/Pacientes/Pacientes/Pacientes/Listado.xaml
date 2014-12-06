@@ -10,17 +10,10 @@
     d:DesignWidth="400">
 
     <UserControl.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ms-appx:///Pacientes.Locator/Resources/LocatorPacientes.xaml"/>
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
+        <vm:ViewModelLocator x:Key="LocatorPacientes" xmlns:vm="using:Pacientes.Locator.ViewModel" />
     </UserControl.Resources>
 
-    <UserControl.DataContext>
-        <Binding Path="Main" Source="{StaticResource LocatorPacientes}"/>
-    </UserControl.DataContext>
-
+   
     <Grid Background="Red">
     
         <TextBlock Text="{Binding Texto}" 

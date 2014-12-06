@@ -124,8 +124,14 @@
       <IncludeInVSIX>true</IncludeInVSIX>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Packages\Microsoft.Bcl.Build.1.0.14.nupkg" />
-    <None Include="Packages\Windows.UI.Interactivity.1.2.0.0.nupkg" />
+    <Content Include="Packages\Microsoft.Bcl.Build.1.0.14.nupkg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Packages\Windows.UI.Interactivity.1.2.0.0.nupkg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>

@@ -15,3 +15,5 @@ C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefes
 C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Portable.MvvmLightLibs.4.1.27.nupkg
 C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Hefesoft.Standard.Libs.0.0.0.1.nupkg
 C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Hefesoft.Standard.Libs.0.0.0.2.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Microsoft.Bcl.Build.1.0.14.nupkg
+C:\Users\chibc_000\AppData\Local\Microsoft\VisualStudio\12.0Exp\Extensions\Hefesoft\Hefesoft.Windows8.Visix\1.0\Packages\\Windows.UI.Interactivity.1.2.0.0.nupkg
