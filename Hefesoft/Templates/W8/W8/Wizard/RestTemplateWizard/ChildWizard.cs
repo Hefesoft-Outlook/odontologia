@@ -45,6 +45,7 @@ namespace RestTemplateWizard
             {
                 var nombreProyectoSinHefesoft = RootWizard.GlobalDictionary["$saferootprojectname$"];
                 nombreProyectoSinHefesoft = nombreProyectoSinHefesoft.Replace(".Locator", "").Replace(".Test", "").Replace(".Hefesoft.", "").Replace("Hefesoft", "");
+                nombreProyectoSinHefesoft = nombreProyectoSinHefesoft.Replace(".", "");
                 //Declaramos una variable en la que solo van estar el nombre del proyecto para luego hacer los reemplazos
                 replacementsDictionary.Add("$nombreProyectoSinHefesoft$", nombreProyectoSinHefesoft);
             }
