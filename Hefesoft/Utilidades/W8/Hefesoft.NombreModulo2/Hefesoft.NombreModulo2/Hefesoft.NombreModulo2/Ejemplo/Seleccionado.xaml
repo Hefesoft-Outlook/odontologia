@@ -1,0 +1,27 @@
+﻿<UserControl
+    x:Class="Hefesoft.NombreModulo2.Ejemplo.Seleccionado"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hefesoft.NombreModulo2.Ejemplo"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+    
+    <Grid>
+        <Grid.Resources>
+            <vm:ViewModelLocator xmlns:vm="using:Hefesoft.NombreModulo2.Elastic.Locator" x:Key="LocatorNombreModulo2" />        
+        </Grid.Resources>
+        
+        <Grid.DataContext>
+            <Binding Mode="OneWay" Path="NombreModulo2" Source="{StaticResource LocatorNombreModulo2}"/>
+        </Grid.DataContext>
+        
+		<StackPanel>
+            <TextBox Text="{Binding Seleccionado.Descripcion, Mode=TwoWay}"></TextBox>
+            <Button Content="Guardar" Command="{Binding insertCommand}"></Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

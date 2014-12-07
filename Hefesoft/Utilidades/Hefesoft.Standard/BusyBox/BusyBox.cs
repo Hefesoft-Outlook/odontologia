@@ -10,9 +10,14 @@ namespace Hefesoft.Standard.BusyBox
     {
         public static void UserControlCargando(bool cargando = true, string mensaje = "Cargando")
         {
-            var busyVM = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
-            busyVM.IsBusy = cargando;
-            busyVM.Texto = mensaje;
+            try
+            {
+                var busyVM = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
+                busyVM.IsBusy = cargando;
+                busyVM.Texto = mensaje;
+            }
+            catch
+            { }
         }
     }
 }
