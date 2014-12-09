@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    
+	<!--
+	<PropertyGroup>
+        <BuildPath Condition="'$(BuildPath)' == ''">$(MSBuildProjectDirectory)</BuildPath>
+        <ExtensionTasksPath Condition="Exists('$(BuildPath)\..\..\BuildBinaries\MSBuild.ExtensionPack.dll')">$(BuildPath)\..\..\BuildBinaries\</ExtensionTasksPath>
+        <ExtensionTasksPath Condition="'$(ExtensionTasksPath)' == ''">$(MSBuildExtensionsPath)\ExtensionPack\4.0\</ExtensionTasksPath>
+    </PropertyGroup>
+	-->
+    
+    <!-- ============== Framework ============== -->    
+    <UsingTask AssemblyFile="C:\Cnt\Git\odontologia\Hefesoft\Templates\msbuild\Hefesoft.Msbuld.Nuget\Hefesoft.Msbuld.Nuget\bin\Debug\Hefesoft.Msbuild.Nuget.dll" 
+	TaskName="MSBuild.ExtensionPack.NuGet.Packager"/>    
+</Project>
