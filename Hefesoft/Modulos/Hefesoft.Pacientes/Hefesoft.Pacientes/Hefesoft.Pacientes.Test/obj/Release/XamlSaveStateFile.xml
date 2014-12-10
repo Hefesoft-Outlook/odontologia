@@ -1,0 +1,23 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\automapper.3.0.0\lib\windows8\automapper.dll" HashGuid="cab164d0-9888-aff8-c22f-88f6ccc80989" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\automapper.3.0.0\lib\windows8\automapper.winrt.dll" HashGuid="1496e631-3858-ee38-9a57-21375da91ae4" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\portable.mvvmlightlibs.4.1.27\lib\netcore45\galasoft.mvvmlight.dll" HashGuid="eeef421c-bdf1-fd3c-48a9-b74decdb3da9" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\portable.mvvmlightlibs.4.1.27\lib\netcore45\galasoft.mvvmlight.extras.dll" HashGuid="1052b234-4647-517f-5e59-6fe5dbdfaac1" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\portable.mvvmlightlibs.4.1.27\lib\netcore45\galasoft.mvvmlight.platforms.netcore45.dll" HashGuid="7ba79ffd-d0c4-648c-64b1-41dd53c66f04" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\hefesoft.standard.libs.0.0.0.2\lib\hefesoft.azure.helpers.dll" HashGuid="1a704687-6fbe-b7bf-cd02-585272ffe04b" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\hefesoft.pacientes\hefesoft.pacientes\bin\release\hefesoft.pacientes.dll" HashGuid="c4ba46a5-d685-873e-b590-48ccc42db9c3" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\hefesoft.pacientes\hefesoft.pacientes.elastic\bin\release\hefesoft.pacientes.elastic.dll" HashGuid="e383d474-c81e-a519-1c78-286339de4b60" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\hefesoft.standard.libs.0.0.0.2\lib\hefesoft.portable.xml.dll" HashGuid="2479a2ba-2481-b5cf-5a44-6e6c94666942" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\hefesoft.standard.libs.0.0.0.2\lib\hefesoft.standard.dll" HashGuid="b4efaae7-0c9c-fbde-0ab0-2d46a5b1b30f" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\dlls\hefesoft.usuario.dll" HashGuid="c098a12c-f411-2d72-b5d8-92eb1e95e1eb" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\hefesoft.util.w8.ui.0.0.0.1\lib\hefesoft.util.w8.ui.dll" HashGuid="6fb1f668-5396-eeb9-bd83-6734942c1a1e" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\portable.commonservicelocator.1.2.2\lib\portable-net4+sl4+wp7+win8\microsoft.practices.servicelocation.dll" HashGuid="c67d9cd8-1217-691e-44e5-b63ebf09d8b4" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\microsoft.bcl.async.1.0.168\lib\win8\microsoft.threading.tasks.dll" HashGuid="3a1beea5-1547-d5c6-af32-3b5c761c2a6a" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\microsoft.bcl.async.1.0.168\lib\win8\microsoft.threading.tasks.extensions.dll" HashGuid="79a01987-c06c-c9d7-37eb-629809787680" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\newtonsoft.json.6.0.3\lib\netcore45\newtonsoft.json.dll" HashGuid="7727b668-bdac-5612-b497-e55cbaabf5af" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\microsoft.net.http.2.2.28\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\hefesoft.pacientes\packages\windows.ui.interactivity.1.2.0.0\lib\win8\windows.ui.interactivity.dll" HashGuid="d2cf19b8-7413-a6d1-87a4-9386b3baa297" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Hefesoft.Pacientes" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Hefesoft.Pacientes">
+				<NamedResource name="Hefesoft.Pacientes.xr.xml" uri="ms-resource://Hefesoft.Pacientes/Files/Hefesoft.Pacientes/Hefesoft.Pacientes.xr.xml">
+					<Candidate type="Path">
+						<Value>Hefesoft.Pacientes\Hefesoft.Pacientes.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Controles">
+					<NamedResource name="Pacientes.xbf" uri="ms-resource://Hefesoft.Pacientes/Files/Hefesoft.Pacientes/Controles/Pacientes.xbf">
+						<Candidate type="Path">
+							<Value>Hefesoft.Pacientes\Controles\Pacientes.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<ResourceMapSubtree name="Grillas">
+						<NamedResource name="Add.xbf" uri="ms-resource://Hefesoft.Pacientes/Files/Hefesoft.Pacientes/Controles/Grillas/Add.xbf">
+							<Candidate type="Path">
+								<Value>Hefesoft.Pacientes\Controles\Grillas\Add.xbf</Value>
+							</Candidate>
+						</NamedResource>
+						<NamedResource name="SplitPacientes.xbf" uri="ms-resource://Hefesoft.Pacientes/Files/Hefesoft.Pacientes/Controles/Grillas/SplitPacientes.xbf">
+							<Candidate type="Path">
+								<Value>Hefesoft.Pacientes\Controles\Grillas\SplitPacientes.xbf</Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

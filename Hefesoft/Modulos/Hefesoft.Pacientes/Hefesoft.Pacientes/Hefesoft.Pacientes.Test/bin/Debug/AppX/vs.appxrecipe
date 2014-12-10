@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Test\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T21:45:17.261</Modified>
+      <Modified>2014-12-10T23:20:06.590</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Test\bin\Debug\Hefesoft.Pacientes.Test.exe">
       <PackagePath>Hefesoft.Pacientes.Test.exe</PackagePath>
-      <Modified>2014-12-10T21:45:15.461</Modified>
+      <Modified>2014-12-10T23:20:02.184</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll">
       <PackagePath>AutoMapper.dll</PackagePath>
@@ -170,7 +170,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Test\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-10T21:45:16.796</Modified>
+      <Modified>2014-12-10T23:20:04.812</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

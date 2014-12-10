@@ -1,0 +1,4 @@
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\Hefesoft.Periodontograma.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\Hefesoft.Periodontograma.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Hefesoft.Periodontograma.Test.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.csproj;neutral

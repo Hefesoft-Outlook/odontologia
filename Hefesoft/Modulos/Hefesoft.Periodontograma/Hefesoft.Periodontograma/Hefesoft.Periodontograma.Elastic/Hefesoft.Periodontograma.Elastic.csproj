@@ -71,6 +71,9 @@
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
     </Reference>
+    <Reference Include="Hefesoft.Pacientes.Elastic">
+      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll</HintPath>
+    </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
     </Reference>

@@ -40,7 +40,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
         private async void listarPorPaciente()
         {
             BusyBox.UserControlCargando(true);
-            var vmPaciente = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
+            var vmPaciente = ServiceLocator.Current.GetInstance<Hefesoft.Pacientes.Elastic.ViewModel.Pacientes>();
             Data.Crud crud = new Data.Crud();
 
             var query = new Hefesoft.Periodontograma.Elastic.Data.Periodontograma
@@ -56,7 +56,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
 
         public async void save()
         {
-            var vmPaciente = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
+            var vmPaciente = ServiceLocator.Current.GetInstance<Hefesoft.Pacientes.Elastic.ViewModel.Pacientes>();
             var vmUsuario = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
 
             if (vmPaciente.Paciente != null)

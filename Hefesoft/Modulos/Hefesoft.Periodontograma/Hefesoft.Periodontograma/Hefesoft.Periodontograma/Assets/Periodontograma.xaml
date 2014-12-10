@@ -11,7 +11,7 @@
     xmlns:ListadoPeriodontogramas="using:Hefesoft.Periodontograma.Assets.Listados"
     x:Name="pageRoot"
     x:Class="Hefesoft.Periodontograma.Assets.Periodontograma"
-    
+    xmlns:ListadoPacientes="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -65,7 +65,8 @@
             <HubSection Header="Listado">
                 <DataTemplate>
                     <Grid>
-                       
+                        <ListadoPacientes:SplitPacientes 
+                            verTitulo="False"/>
                     </Grid>
                 </DataTemplate>
             </HubSection>

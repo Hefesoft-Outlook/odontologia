@@ -32,6 +32,8 @@ namespace Hefesoft.Periodontograma.Assets
             addBusy();
             NavigationHelper = new Util.W8.UI.Common.NavigationHelper();
             NavigationHelper.setPage(this);
+
+            //Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
         }
 
         public NavigationHelper NavigationHelper { get; set; }

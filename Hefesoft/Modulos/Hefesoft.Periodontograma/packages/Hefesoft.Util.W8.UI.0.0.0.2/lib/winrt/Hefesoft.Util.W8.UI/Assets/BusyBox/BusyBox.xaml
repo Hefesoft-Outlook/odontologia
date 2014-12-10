@@ -1,0 +1,18 @@
+﻿<UserControl
+    x:FieldModifier="public"
+    x:Class="Hefesoft.Util.W8.UI.Assets.BusyBox.BusyBox"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+
+    <Grid x:Name="GrdBusy" x:FieldModifier="public" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="White" Opacity="0.5" Visibility="Collapsed">
+        <ProgressRing x:FieldModifier="public" HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
+        <TextBlock x:FieldModifier="public" x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
+    </Grid>
+    
+</UserControl>

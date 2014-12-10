@@ -31,6 +31,6 @@ namespace Hefesoft.Pacientes.Test
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(Hefesoft.Pacientes.Controles.Pacientes));
-        }
+        }   
     }
 }
