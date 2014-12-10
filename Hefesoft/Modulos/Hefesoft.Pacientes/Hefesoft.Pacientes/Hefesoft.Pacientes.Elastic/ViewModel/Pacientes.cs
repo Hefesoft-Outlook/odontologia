@@ -12,6 +12,7 @@ using Hefesoft.Standard.Util.Collection.IEnumerable;
 using Hefesoft.Standard.Util.Collection.Observables;
 using System.Collections.ObjectModel;
 using Hefesoft.Usuario.ViewModel.Pacientes;
+using GalaSoft.MvvmLight.Ioc;
 
 namespace Hefesoft.Pacientes.Elastic.ViewModel
 {
@@ -114,7 +115,10 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
         private async void listar()
         {
            BusyBox.UserControlCargando(true);
-           var result = await data.listarUsuarios(vmUsuario.UsuarioActivo.id, "", "Pacientes");
+
+           //Si esta en pruebas cargue un usurio de pruebas
+           var usuarioActivo = vmUsuario.UsuarioActivo.id == null  ? "028bd4cbdbb109f5" : vmUsuario.UsuarioActivo.id;
+           var result = await data.listarUsuarios(usuarioActivo, "", "Pacientes");
            ListadoTodos = result.ToList();
            Listado = ListadoTodos.ToObservableCollection();
            RaisePropertyChanged("Listado");
@@ -123,9 +127,10 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
 
         public async Task<Hefesoft.Usuario.Entidades.IUsuario> insert(Hefesoft.Usuario.Entidades.IUsuario usuario)
         {
+            var usuarioActivo = vmUsuario.UsuarioActivo.id == null ? "028bd4cbdbb109f5" : vmUsuario.UsuarioActivo.id;
             BusyBox.UserControlCargando(true);            
             usuario.nombreTabla = "Pacientes";
-            usuario.PartitionKey = vmUsuario.UsuarioActivo.id;
+            usuario.PartitionKey = usuarioActivo;
             var usuarioCreado = await data.crearUsuario(usuario);
             BusyBox.UserControlCargando(false);            
             return usuarioCreado;

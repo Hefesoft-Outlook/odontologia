@@ -1,0 +1,11 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <LocalAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes.test\obj\debug\intermediatexaml\pacientes.test.exe" HashGuid="924e8a18-3092-d764-4cc8-f336f2b7c314" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\packages\mvvmlightlibs.5.0.2.0\lib\netcore451\galasoft.mvvmlight.dll" HashGuid="da07be64-1093-25cd-c992-377d44b6dd02" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\packages\mvvmlightlibs.5.0.2.0\lib\netcore451\galasoft.mvvmlight.extras.dll" HashGuid="28bb2089-c7a4-73bb-7a72-1ea8b02698b0" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\packages\mvvmlightlibs.5.0.2.0\lib\netcore451\galasoft.mvvmlight.platform.dll" HashGuid="54c1f1ed-b921-337f-8ad6-f2d8c553df06" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\packages\commonservicelocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\microsoft.practices.servicelocation.dll" HashGuid="89de7f80-26d8-a17c-5ad9-b855f81ea5b2" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\bin\debug\pacientes.dll" HashGuid="7b31f3c4-2b99-f8f8-6fd5-89aa40c50a28" />
+    <ReferenceAssembly PathName="d:\hefesoft\odontologia\odontologia\hefesoft\modulos\pacientes\pacientes\pacientes.locator\bin\debug\pacientes.locator.dll" HashGuid="45816496-6fb8-f994-b134-e65edba7ea15" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

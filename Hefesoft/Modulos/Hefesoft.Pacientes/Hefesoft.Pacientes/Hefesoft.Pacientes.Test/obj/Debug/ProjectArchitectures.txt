@@ -1,0 +1,4 @@
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Elastic\Hefesoft.Pacientes.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Elastic\Hefesoft.Pacientes.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Test\Hefesoft.Pacientes.Test.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.csproj;neutral

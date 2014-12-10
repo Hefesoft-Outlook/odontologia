@@ -1,4 +1,5 @@
-﻿using Hefesoft.Usuario.Interfaces;
+﻿using GalaSoft.MvvmLight.Ioc;
+using Hefesoft.Usuario.Interfaces;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,11 @@ namespace Hefesoft.Usuario.Contexto
     {
         public static Interfaces.IUsuarios obtenerContexto() 
         {
+            if (!SimpleIoc.Default.IsRegistered<Hefesoft.Usuario.ViewModel.Usuarios>())
+            {
+                new Hefesoft.Usuario.Locator();
+            }
+
             var contexto = ServiceLocator.Current.GetInstance<IUsuarios>();
             return contexto;
         }

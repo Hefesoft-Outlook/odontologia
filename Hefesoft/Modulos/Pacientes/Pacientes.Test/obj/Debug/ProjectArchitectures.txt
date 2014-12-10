@@ -1,0 +1,4 @@
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\Pacientes.Test.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.Locator\Pacientes.Locator.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.Locator\Pacientes.Locator.csproj;neutral

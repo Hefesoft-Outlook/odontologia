@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HEFESOFT-TACTIL</Machine>
+    <WindowsUser>chibc_000</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d4b09148-78f1-45be-85b0-440ea79bf045</PackageIdentityName>
+    <IntermediateOutputPath>D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>8868B7A90B0BC58E4F10BCB331CEC2A0ACB054BA65CC1E8555576EA835C5C448</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>d4b09148-78f1-45be-85b0-440ea79bf045_1.0.0.0_neutral__bf0gw3942v87a</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>d4b09148-78f1-45be-85b0-440ea79bf045_bf0gw3942v87a!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>d4b09148-78f1-45be-85b0-440ea79bf045</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=chibc_000</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-04T21:09:16.896</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\Pacientes.Test.exe">
+      <PackagePath>Pacientes.Test.exe</PackagePath>
+      <Modified>2014-12-04T21:09:13.763</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2014-12-04T21:08:08.380</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2014-12-04T21:08:08.381</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\packages\MvvmLightLibs.5.0.2.0\lib\netcore451\GalaSoft.MvvmLight.Platform.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platform.dll</PackagePath>
+      <Modified>2014-12-04T21:08:08.386</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2014-12-04T21:08:08.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\bin\Debug\Pacientes.dll">
+      <PackagePath>Pacientes.dll</PackagePath>
+      <Modified>2014-12-04T21:09:11.345</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.Locator\bin\Debug\Pacientes.Locator.dll">
+      <PackagePath>Pacientes.Locator.dll</PackagePath>
+      <Modified>2014-12-04T21:09:07.396</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-04T20:07:27.500</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-04T20:07:27.500</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-04T20:07:27.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-04T20:07:27.501</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-12-04T21:09:13.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-12-04T21:09:13.447</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\bin\Debug\Pacientes\Listado.xbf">
+      <PackagePath>Pacientes\Pacientes\Listado.xbf</PackagePath>
+      <Modified>2014-12-04T21:09:10.994</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.Locator\bin\Debug\Resources\LocatorPacientes.xbf">
+      <PackagePath>Pacientes.Locator\Resources\LocatorPacientes.xbf</PackagePath>
+      <Modified>2014-12-04T21:09:06.924</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\Pacientes.Test.xr.xml">
+      <PackagePath>Pacientes.Test.xr.xml</PackagePath>
+      <Modified>2014-12-04T21:09:13.353</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\bin\Debug\Pacientes.xr.xml">
+      <PackagePath>Pacientes\Pacientes.xr.xml</PackagePath>
+      <Modified>2014-12-04T21:09:10.917</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes\Pacientes.Locator\bin\Debug\Pacientes.Locator.xr.xml">
+      <PackagePath>Pacientes.Locator\Pacientes.Locator.xr.xml</PackagePath>
+      <Modified>2014-12-04T21:09:06.367</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Pacientes\Pacientes.Test\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-12-04T21:09:16.264</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

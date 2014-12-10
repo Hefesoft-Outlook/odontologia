@@ -11,25 +11,31 @@ namespace Hefesoft.Usuario
 {
     public class Locator
     {
+        public static bool isRegistered;
+
         static Locator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+            if (!isRegistered)
+            {
+                isRegistered = true;
+                ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
-            if (ViewModelBase.IsInDesignModeStatic)
-            {
-                //SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
-            }
-            else
-            {
-                //SimpleIoc.Default.Register<IDataService, DataService>();
-            }
-            
+                if (ViewModelBase.IsInDesignModeStatic)
+                {
+                    //SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
+                }
+                else
+                {
+                    //SimpleIoc.Default.Register<IDataService, DataService>();
+                }
 
-            if (!SimpleIoc.Default.IsRegistered<IUsuarios>())
-            {
-                //Aca seleccionamos a que sevicio queremos conectarnos
-                SimpleIoc.Default.Register<IUsuarios>(() => new Usuario.Data.Usuarios());                
-            }            
+                SimpleIoc.Default.Register<ViewModel.Usuarios>();
+                if (!SimpleIoc.Default.IsRegistered<IUsuarios>())
+                {
+                    //Aca seleccionamos a que sevicio queremos conectarnos
+                    SimpleIoc.Default.Register<IUsuarios>(() => new Data.Usuarios(),true);
+                }
+            }
         }
 
         /// <summary>
@@ -45,6 +51,16 @@ namespace Hefesoft.Usuario
                 return ServiceLocator.Current.GetInstance<IUsuarios>();
             }
         }
+
+        public ViewModel.Usuarios vmUsuarios
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<ViewModel.Usuarios>();
+            }
+        }
+
+        
 
         /// <summary>
         /// Cleans up all the resources.

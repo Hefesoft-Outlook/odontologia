@@ -94,7 +94,10 @@ namespace Hefesoft.Usuario.ViewModel
 
         public Usuario.Entidades.Usuario UsuarioActivo
         {
-            get { return usuarioActivo; }
+            get 
+            { 
+                return usuarioActivo; 
+            }
             set 
             { 
                 usuarioActivo = value; 
