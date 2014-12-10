@@ -122,6 +122,12 @@
     <Compile Include="Util\Storage\Usuario.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.WinRT">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook">
       <HintPath>..\..\packages\Facebook.6.4.0\lib\win8\Facebook.dll</HintPath>
     </Reference>
@@ -232,6 +238,10 @@
   -->
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
     <ItemGroup>
+	 <Dependencies Include="AutoMapper">
+        <Framework>portable-net45+sl40+win+wp80</Framework>
+        <Version>3.0.0</Version>
+      </Dependencies>
       <Dependencies Include="LiveSDK">
         <Framework>win81</Framework>
         <Version>5.6</Version>

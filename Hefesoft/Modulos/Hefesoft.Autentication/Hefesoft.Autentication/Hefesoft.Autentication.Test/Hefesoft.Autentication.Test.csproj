@@ -14,6 +14,8 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateThumbprint>2E248339A5BD74C7C6A348249ED121BA9C17D9CE</PackageCertificateThumbprint>
+    <PackageCertificateKeyFile>Hefesoft.Autentication.Test_StoreKey.pfx</PackageCertificateKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -121,6 +123,8 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <None Include="Hefesoft.Autentication.Test_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -133,6 +137,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.WinRT">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
+    </Reference>
     <Reference Include="Facebook">
       <HintPath>..\..\packages\Facebook.6.4.0\lib\win8\Facebook.dll</HintPath>
     </Reference>
@@ -160,8 +170,9 @@
     <Reference Include="Hefesoft.Standard">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Usuario">
-      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
+    <Reference Include="Hefesoft.Usuario, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Entidades\Hefesoft.Entities.Usuario\bin\Debug\Hefesoft.Usuario.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Util.W8.UI">
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll</HintPath>
