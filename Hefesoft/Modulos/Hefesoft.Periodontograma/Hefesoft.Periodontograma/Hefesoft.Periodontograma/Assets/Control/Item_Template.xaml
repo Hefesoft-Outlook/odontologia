@@ -1,0 +1,113 @@
+﻿<UserControl
+    x:Class="Hefesoft.Periodontograma.Assets.Control.Item_Template"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hefesoft.Periodontograma.Assets.Control"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Pieza="using:Hefesoft.Periodontograma.Assets.Pieza"
+    xmlns:Margenes="using:Hefesoft.Periodontograma.Assets.Margenes"
+    xmlns:Furca="using:Hefesoft.Periodontograma.Assets.Furca"
+    xmlns:Menu_Opciones="using:Hefesoft.Periodontograma.Assets.Menu_Opciones"
+    xmlns:Entidades="using:Hefesoft.Periodontograma.Elastic.Entidades"    
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <StackPanel>
+    	<VisualStateManager.VisualStateGroups>
+    		<VisualStateGroup x:Name="VisualStateGroup">
+    			<VisualState x:Name="VisualState"/>
+    			<VisualState x:Name="VisualStateDosElementos">
+    				<Storyboard>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="Furca2">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<Visibility>Visible</Visibility>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Control.FontFamily)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<FontFamily>Global User Interface</FontFamily>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(Grid.ColumnSpan)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<x:Int32>1</x:Int32>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    					<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.HorizontalAlignment)" Storyboard.TargetName="Furca1">
+    						<DiscreteObjectKeyFrame KeyTime="0">
+    							<DiscreteObjectKeyFrame.Value>
+    								<HorizontalAlignment>Left</HorizontalAlignment>
+    							</DiscreteObjectKeyFrame.Value>
+    						</DiscreteObjectKeyFrame>
+    					</ObjectAnimationUsingKeyFrames>
+    				</Storyboard>
+    			</VisualState>
+    		</VisualStateGroup>
+    	</VisualStateManager.VisualStateGroups>
+        
+		
+		<Grid Width="100">
+        <Pieza:Pieza             
+                        x:FieldModifier="public"
+                        x:Name="Pieza"
+                        Numero="{Binding Numero}"
+                        Arriba_Abajo="{Binding Arriba_Abajo}"
+                        cara="{Binding Cara}"
+                        TipoPieza="{Binding Tipo_Pieza}"
+                        >
+        </Pieza:Pieza>
+
+        <Margenes:Margen color="{Binding margenGingivalColor}" 
+                         margen1="{Binding MargenGingival1}"
+                         margen2="{Binding MargenGingival2}"
+                         margen3="{Binding MargenGingival3}"
+                         >
+
+        </Margenes:Margen>
+
+        <Margenes:Margen color="{Binding profundidadSondajeColor}"
+                         margen1="{Binding ProdundidadSondaje1}"
+                         margen2="{Binding ProdundidadSondaje2}"
+                         margen3="{Binding ProdundidadSondaje3}"
+                         >
+        </Margenes:Margen>
+        
+		<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="60">
+        	<Grid.ColumnDefinitions>
+        		<ColumnDefinition Width="5*"/>
+        		<ColumnDefinition Width="5*"/>
+        	</Grid.ColumnDefinitions>
+
+        	<Furca:Furca 
+                x:Name="Furca1"
+                x:FieldModifier="public"
+                mostraRecuadro="False"
+        		Width="30"
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Center"
+        		FurcaProperty="{Binding Furca}" Grid.ColumnSpan="2" Height="30"/>
+
+        	<Furca:Furca
+                x:Name="Furca2"
+                x:FieldModifier="public"
+                mostraRecuadro="False"
+        		Width="30"
+        		VerticalAlignment="Center"
+        		HorizontalAlignment="Right"
+        		FurcaProperty="{Binding Furca2}" Visibility="Collapsed" Grid.ColumnSpan="1" Grid.Column="1" Height="30"/>
+
+        </Grid>
+
+    </Grid>        
+        <Menu_Opciones:Menu_Opciones x:FieldModifier="public" x:Name="menuOpciones">
+		</Menu_Opciones:Menu_Opciones>
+    </StackPanel>
+</UserControl>

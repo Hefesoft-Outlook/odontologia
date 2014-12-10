@@ -74,6 +74,12 @@ namespace MSBuild.ExtensionPack.NuGet
             set;
         }
 
+        public ITaskItem[] PrincipalDlls
+        {
+            get;
+            set;
+        }
+
         [Required]
         public string LicenseUrl
         {
@@ -256,9 +262,10 @@ namespace MSBuild.ExtensionPack.NuGet
             try
             {
                 string nugetspecification = this.GenerateSpecification(nugetDirectory);
-                Packager.PopulateFolder("lib", nugetDirectory, this.LibraryFiles);
+                Packager.PopulateFolder("lib", nugetDirectory, this.PrincipalDlls);
+                Packager.PopulateFolder("lib\\" + Id, nugetDirectory, this.LibraryFiles);
                 Packager.PopulateFolder("content", nugetDirectory, this.ContentFiles);
-                Packager.PopulateFolder("tools", nugetDirectory, this.LibraryFiles);
+                Packager.PopulateFolder("tools", nugetDirectory, this.LibraryFiles);                
                 this.PreparePackage(nugetspecification);
             }
             finally
@@ -276,7 +283,8 @@ namespace MSBuild.ExtensionPack.NuGet
             DirectoryInfo libDirectory = Directory.CreateDirectory(Path.Combine(packageDirectoryPath, folderName));
             foreach (ITaskItem item in items)
             {
-                string folder = item.GetMetadata("Folder");
+                string folder = item.GetMetadata("RelativeDir").ToLower().Replace("bin\\debug\\", "").Replace("bin\\release\\", "");
+                
                 if (string.IsNullOrWhiteSpace(folder))
                 {
                     File.Copy(item.ItemSpec, Path.Combine(libDirectory.FullName, Path.GetFileName(item.ItemSpec)));
@@ -292,6 +300,7 @@ namespace MSBuild.ExtensionPack.NuGet
                 }
             }
         }
+        
 
         private void PreparePackage(string nugetSpecificationFile)
         {

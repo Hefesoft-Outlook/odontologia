@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="C:\Hefesoft\Task\Hefesoft.Msbuild.Nuget.tasks" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CEE2BC1-CD36-40CB-A616-A29F46F7CD8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hefesoft.Periodontograma</RootNamespace>
+    <AssemblyName>Hefesoft.Periodontograma</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ExpressionBlendVersion>12.0.50320.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Control\Item_Template.xaml.cs">
+      <DependentUpon>Item_Template.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Control\Periodontograma.xaml.cs">
+      <DependentUpon>Periodontograma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Furca\Furca.xaml.cs">
+      <DependentUpon>Furca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Implante\Implante.xaml.cs">
+      <DependentUpon>Implante.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Listados\liIstadoPeriodontogramas.xaml.cs">
+      <DependentUpon>liIstadoPeriodontogramas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Margenes\Margen.xaml.cs">
+      <DependentUpon>Margen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Menu Opciones\Menu_Furca.xaml.cs">
+      <DependentUpon>Menu_Furca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Menu Opciones\Menu_Opciones.xaml.cs">
+      <DependentUpon>Menu_Opciones.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Menu Opciones\Placa.xaml.cs">
+      <DependentUpon>Placa.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Menu Opciones\Sangrado_Supuracion.xaml.cs">
+      <DependentUpon>Sangrado_Supuracion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Periodontograma.xaml.cs">
+      <DependentUpon>Periodontograma.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Pieza\Partial\Propiedades.Tipo.Dependencia.cs" />
+    <Compile Include="Assets\Pieza\Pieza.xaml.cs">
+      <DependentUpon>Pieza.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Placa\PlacaElemento.xaml.cs">
+      <DependentUpon>PlacaElemento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xaml.cs">
+      <DependentUpon>Sangrado_Supuracion_Elemento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Assets\Seleccionado\Seleccionado.xaml.cs">
+      <DependentUpon>Seleccionado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platforms.NetCore45">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Azure.Helpers">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.Crypto">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.xml">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Usuario">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Util.W8.UI">
+      <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.UI.Interactivity">
+      <HintPath>..\..\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\Control\Item_Template.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Control\Periodontograma.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Furca\Furca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Implante\Implante.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Listados\liIstadoPeriodontogramas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Margenes\Margen.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu Opciones\Menu_Furca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu Opciones\Menu_Opciones.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu Opciones\Placa.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu Opciones\Sangrado_Supuracion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Periodontograma.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Pieza\Pieza.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Placa\PlacaElemento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Seleccionado\Seleccionado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Periodontograma.Elastic\Hefesoft.Periodontograma.Elastic.csproj">
+      <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
+      <Name>Hefesoft.Periodontograma.Elastic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+    <!--
+    <ItemGroup> 
+     <Dependencies Include="log4net"> 
+       <Framework>net40</Framework> 
+       <Version>1.2.10</Version> 
+     </Dependencies> 
+   </ItemGroup> 
+  -->
+    <ItemGroup>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">        
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Paginas\*\*.*">        
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Controles\*\*.*">        
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*\*.*">        
+      </LibraryFiles>
+	  <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*.*">        
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\vm\*\*.*">        
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*\*.*">        
+      </LibraryFiles>
+	  <LibraryFiles Include="bin\$(ConfigurationName)\$(TargetName).xr.xml">        
+      </LibraryFiles>
+    
+	<!--La dll generada-->
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
+      </PrincipalDlls>
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).Elastic.dll">
+      </PrincipalDlls>
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).pri">
+      </PrincipalDlls>
+      
+
+	  </ItemGroup>
+	
+    <ItemGroup>
+      <LibraryFiles Include="Ejemplo\*\*.xaml">        
+      </LibraryFiles>
+      <LibraryFiles Include="Paginas\*\*.xaml">        
+      </LibraryFiles>
+      <LibraryFiles Include="Controles\*\*.xaml">        
+      </LibraryFiles>
+      <LibraryFiles Include="Assets\*\*.xaml">        
+      </LibraryFiles>
+	  <LibraryFiles Include="Assets\*.xaml">        
+      </LibraryFiles>
+      <LibraryFiles Include="vm\*\*.xaml">        
+      </LibraryFiles>
+      <LibraryFiles Include="viewmodel\*\*.xaml">        
+      </LibraryFiles>
+    </ItemGroup>
+	
+	<ItemGroup>
+      
+      <ContentFiles Include="Assets\Images\*\*.*">        
+      </ContentFiles>
+	  <ContentFiles Include="Assets\Images\*.*">        
+      </ContentFiles>
+      
+    </ItemGroup>
+	
+    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
+  </Target>
+</Project>
