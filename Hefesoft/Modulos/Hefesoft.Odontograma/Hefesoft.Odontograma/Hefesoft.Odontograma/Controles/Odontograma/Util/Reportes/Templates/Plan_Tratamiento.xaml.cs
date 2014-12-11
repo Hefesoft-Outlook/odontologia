@@ -97,10 +97,9 @@ namespace Hefesoft.Odontograma.Util.Reportes.Templates
         }
 
         public async Task exportarPdf()
-        {
-            //Esto esta dentro de la dll de dto ver el proyecto anterior
-            //var pathPdf = await Pdf.postPdf(document);
-            //await Launcher.LaunchUriAsync(new Uri(pathPdf, UriKind.Absolute));
+        {   
+            var pathPdf = await Hefesoft.Standard.Util.Pdf.Pdf.postPdf(document);
+            await Launcher.LaunchUriAsync(new Uri(pathPdf, UriKind.Absolute));
         }
     }
 }
