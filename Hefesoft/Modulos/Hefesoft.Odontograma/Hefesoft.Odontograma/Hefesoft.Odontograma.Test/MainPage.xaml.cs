@@ -30,7 +30,8 @@ namespace Hefesoft.Odontograma.Test
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Hefesoft.Odontograma.Paginas.Pagina));
+            System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("es-CO");
+            this.Frame.Navigate(typeof(App2.HubPage));
         }
     }
 }

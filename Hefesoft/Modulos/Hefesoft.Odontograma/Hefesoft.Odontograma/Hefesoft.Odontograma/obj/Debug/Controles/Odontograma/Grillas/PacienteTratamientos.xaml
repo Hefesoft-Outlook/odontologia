@@ -5,20 +5,25 @@
     xmlns:local="using:App2.Grillas"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    DataContext="{Binding Procedimentos_Paciente, Source={StaticResource Locator}}"
-    
+    mc:Ignorable="d"    
     d:DesignHeight="300"
     d:DesignWidth="400">
-	
-	<UserControl.Resources>
-		<DataTemplate x:Key="Seleccionar">
-			<Grid>
-				<HyperlinkButton x:ConnectionId='1' x:Name="HyprlnkBttnSeleccionar" Content="Seleccionar" HorizontalAlignment="Left" VerticalAlignment="Top"                                     />
-			</Grid>
-		</DataTemplate>
-	</UserControl.Resources>
+
+    <UserControl.Resources>
+
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+
+        <DataTemplate x:Key="Seleccionar">
+            <Grid>
+                <HyperlinkButton x:ConnectionId='1' x:Name="HyprlnkBttnSeleccionar" Content="Seleccionar" HorizontalAlignment="Left" VerticalAlignment="Top"                                     />
+            </Grid>
+        </DataTemplate>
+    </UserControl.Resources>
     
+    <UserControl.DataContext>
+        <Binding Path="Procedimentos_Paciente" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
     <Grid>
         <!-- xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid" -->
         <!--<telerikGrid:RadDataGrid ItemsSource="{Binding tratamientosPaciente}" AutoGenerateColumns="False">
@@ -29,8 +34,8 @@
                 <telerikGrid:DataGridTextColumn Header="Fecha final" PropertyName="FechaFinal"/>
                 <telerikGrid:DataGridTemplateColumn CellContentTemplate="{StaticResource Seleccionar}"/>
             </telerikGrid:RadDataGrid.Columns>
-        </telerikGrid:RadDataGrid>-->       
+        </telerikGrid:RadDataGrid>-->
     </Grid>
-    
+
 </UserControl>
 

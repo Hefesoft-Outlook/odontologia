@@ -10,6 +10,10 @@
     d:DesignHeight="300"
     d:DesignWidth="800">
     
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+    </UserControl.Resources>
+    
     <StackPanel>
 		<VisualStateManager.VisualStateGroups>
 			<VisualStateGroup x:Name="VisualStateGroup">

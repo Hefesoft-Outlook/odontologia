@@ -9,7 +9,12 @@
     DataContext="{Binding Grilla_Plan_Tratamiento, Source={StaticResource Locator}}"
     d:DesignHeight="300"
     d:DesignWidth="900">
-    
+
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
+    </UserControl.Resources>
+
     <StackPanel>
 		<Grid VerticalAlignment="Top">
 			<Grid.RowDefinitions>

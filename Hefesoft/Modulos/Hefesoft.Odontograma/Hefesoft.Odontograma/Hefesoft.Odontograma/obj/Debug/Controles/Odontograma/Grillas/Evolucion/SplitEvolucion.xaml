@@ -11,10 +11,14 @@
     DataContext="{Binding Grid_Evolucion, Source={StaticResource Locator}}"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:Cnt.Panacea.Xap.Odontologia.Assets"
-    mc:Ignorable="d">   
-    
-    
-	<StackPanel Orientation="Vertical">
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
+    </UserControl.Resources>
+
+    <StackPanel Orientation="Vertical">
 		<VisualStateManager.VisualStateGroups>
         <!-- Visual states reflect the application's view state -->
 			<VisualStateGroup x:Name="ViewStates">

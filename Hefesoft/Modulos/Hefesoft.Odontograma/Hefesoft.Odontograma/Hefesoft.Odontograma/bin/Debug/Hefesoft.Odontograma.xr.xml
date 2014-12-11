@@ -95,10 +95,10 @@
     <RootPropertyPathName Name="ProcedimientosEspecialidadValor" />
     <RootPropertyPathName Name="Especialidad" />
     <RootPropertyPathName Name="Listado" />
-    <RootPropertyPathName Name="DefaultViewModel" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImagePath" />
+    <RootPropertyPathName Name="Main" />
     <RootPropertyPathName Name="Frame" />
     <RootPropertyPathName Name="NavigationHelper" />
     <RootPropertyPathName Name="GoBackCommand" />
@@ -248,7 +248,6 @@
       <RootProperty Name="Source" />
       <RootProperty Name="FallbackValue" />
       <RootProperty Name="Mode" />
-      <RootProperty Name="RelativeSource" />
       <RootProperty Name="Path" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -422,6 +421,8 @@
       <RootProperty Name="Offset" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Boca" />
+    <RootType FullName="Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator" />
+    <RootType FullName="Cnt.Panacea.Xap.Odontologia.PublicResource" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="IsEnabled" />
@@ -509,13 +510,10 @@
     </RootType>
     <RootType FullName="App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Resources" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
       <RootProperty Name="BottomAppBar" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="App2.Assets.PopUp.Generico">
       <RootProperty Name="padre" />

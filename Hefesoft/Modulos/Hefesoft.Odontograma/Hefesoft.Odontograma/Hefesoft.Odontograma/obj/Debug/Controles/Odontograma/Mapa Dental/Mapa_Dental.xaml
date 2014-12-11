@@ -13,7 +13,10 @@
     d:DesignWidth="400">
     
     <UserControl.Resources>
-    	<ItemsPanelTemplate x:Key="ItemsPanelTemplateContainer">
+
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplateContainer">
     		<StackPanel Orientation="Horizontal" Margin="5,0,6,0"/>
     	</ItemsPanelTemplate>
     	

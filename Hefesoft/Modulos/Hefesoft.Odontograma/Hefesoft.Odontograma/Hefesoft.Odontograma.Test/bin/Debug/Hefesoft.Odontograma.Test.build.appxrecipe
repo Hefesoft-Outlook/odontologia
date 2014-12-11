@@ -31,6 +31,9 @@
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
       <PackagePath>Hefesoft.Azure.Helpers.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\bin\Debug\Hefesoft.Entities.Odontologia.dll">
+      <PackagePath>Hefesoft.Entities.Odontologia.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Odontograma.dll">
       <PackagePath>Hefesoft.Odontograma.dll</PackagePath>
     </AppxPackagedFile>
@@ -70,6 +73,39 @@
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
       <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\bin\Debug\AutoMapper.dll">
+      <PackagePath>AutoMapper.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\bin\Debug\Cnt.Panacea.Entities.Pcl.Odontologia.dll">
+      <PackagePath>Cnt.Panacea.Entities.Pcl.Odontologia.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\bin\Debug\Cnt.Std.SL.dll">
+      <PackagePath>Cnt.Std.SL.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\bin\Debug\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll">
+      <PackagePath>Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Microsoft.Xaml.Interactions.dll">
+      <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Pdf.Entities.dll">
+      <PackagePath>Hefesoft.Pdf.Entities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Microsoft.Xaml.Interactivity.dll">
+      <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\bin\Debug\es-CO\Hefesoft.Odontograma.Elastic.resources.dll">
+      <PackagePath>es-CO\Hefesoft.Odontograma.Elastic.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\es-CO\Hefesoft.Odontograma.resources.dll">
+      <PackagePath>es-CO\Hefesoft.Odontograma.resources.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll">
+      <PackagePath>Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Laboratorio.dll">
+      <PackagePath>Cnt.Panacea.Entities.Pcl.Laboratorio.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
@@ -86,11 +122,110 @@
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\Controles\Odontograma\Images\59229.png">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Images\59229.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Fotos\SplipFotos.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Fotos\SplipFotos.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Boca\Boca.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Boca\Boca.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\PacienteTratamientos.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\HubPage.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\HubPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Indices\Indices.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Indices\Indices.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Mapa Dental\Mapa_Dental.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Mapa Dental\Mapa_Dental.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Abajo.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Abajo.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Arriba.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Arriba.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Central.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Central.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Derecha.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Derecha.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Inferior.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Inferior.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Izquierda.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Izquierda.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Seleccionado.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Seleccionado.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Superior.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Superior.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Tipos.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Tipos.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Util\Reportes\Templates\Inicial.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Util\Reportes\Templates\Inicial.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Paleta\elementoMenu.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Paleta\elementoMenu.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Paleta\Paleta.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Paleta\Paleta.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Generico.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Generico.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Layouts\Agregar_Supernumerario.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Layouts\Agregar_Supernumerario.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Layouts\SobreEscribirAdicionar.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Layouts\SobreEscribirAdicionar.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Modal.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Modal.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Ejemplo\Seleccionado.xbf">
       <PackagePath>Hefesoft.Odontograma\Ejemplo\Seleccionado.xbf</PackagePath>

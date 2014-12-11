@@ -6,12 +6,20 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Class="App2.Tipos_Odontograma.Plan_Tratamiento"
-    mc:Ignorable="d"
-    DataContext="{Binding Plan_Tratamiento, Source={StaticResource Locator}}"
+    mc:Ignorable="d"    
     d:DesignHeight="300"
     d:DesignWidth="900">
     
-	<Grid>
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Plan_Tratamiento" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
+    <Grid>
 		<StackPanel Orientation="Vertical">
 			<Grid Height="100">
 				<Grid.ColumnDefinitions>

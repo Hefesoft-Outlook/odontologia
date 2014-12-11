@@ -12,58 +12,64 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
 {
     public class ViewModelLocator
     {
+        public static bool isRegistered;
+
         static ViewModelLocator()
         {
-            ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
-
-            if (ViewModelBase.IsInDesignModeStatic)
+            if (!isRegistered)
             {
-                //SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
+                isRegistered = true;
+                ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
+
+                if (ViewModelBase.IsInDesignModeStatic)
+                {
+                    //SimpleIoc.Default.Register<IDataService, Design.DesignDataService>();
+                }
+                else
+                {
+                    //SimpleIoc.Default.Register<IDataService, DataService>();
+                }
+
+
+                SimpleIoc.Default.Register<MainViewModel>();
+
+                if (!SimpleIoc.Default.IsRegistered<IContexto_Odontologia>())
+                {
+                    //Aca seleccionamos a que sevicio queremos conectarnos
+                    SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
+
+                    //Conexion a wcf
+                    //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());
+
+                    //Implementacion hefesoft
+                    SimpleIoc.Default.Register<Hefesoft.Usuario.Interfaces.IUsuarios>(() => new Hefesoft.Usuario.Data.Usuarios());
+                }
+
+                //View model donde se muestra el indice de placa bacteriana y demas
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Pieza_Seleccionada.vm.vm>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Paleta.Paleta>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Odontograma_Inicial>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Inicial.vm>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Evolucion>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Adjuntar.vm.vm>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.PopUp.vm.Bodega>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.Listado_Procedimientos>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado>();
+                SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
+
+                //Hefesoft Implementacion 
+                SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
+                SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
+                SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+
             }
-            else
-            {
-                //SimpleIoc.Default.Register<IDataService, DataService>();
-            }
-
-
-            SimpleIoc.Default.Register<MainViewModel>();
-
-            if (!SimpleIoc.Default.IsRegistered<IContexto_Odontologia>())
-            {
-                //Aca seleccionamos a que sevicio queremos conectarnos
-                SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data.Contexto_Odontologia());
-                
-                //Conexion a wcf
-                //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());
-
-                //Implementacion hefesoft
-                SimpleIoc.Default.Register<Hefesoft.Usuario.Interfaces.IUsuarios>(() => new Hefesoft.Usuario.Data.Usuarios());
-            }
-
-            //View model donde se muestra el indice de placa bacteriana y demas
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Pieza_Seleccionada.vm.vm>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Paleta.Paleta>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Odontograma_Inicial>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Plan_Tratamiento>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Inicial.vm>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.GridPlanTratamientoProcedimientosWizard>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm.Evolucion>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Contenedor.vm>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Adjuntar.vm.vm>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Assets.PopUp.vm.Bodega>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.Listado_Procedimientos>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado>();
-            SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
-
-            //Hefesoft Implementacion 
-            SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
-            SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();         
-            SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
-            
             
         }
 

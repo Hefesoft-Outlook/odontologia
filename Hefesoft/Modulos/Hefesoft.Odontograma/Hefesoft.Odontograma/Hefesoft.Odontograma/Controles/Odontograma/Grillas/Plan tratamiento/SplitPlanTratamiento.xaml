@@ -13,6 +13,10 @@
     DataContext="{Binding Wizard_Plan_Tratamiento, Source={StaticResource Locator}}"
     mc:Ignorable="d">   
     
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
+    </UserControl.Resources>
     
 	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Grid.ChildrenTransitions>

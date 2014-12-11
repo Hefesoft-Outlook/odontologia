@@ -115,7 +115,6 @@
     <Compile Include="Pieza Seleccionada\vm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursos\Mensajes.Designer.cs" />
-    <Compile Include="Recursos\Mensajes.es-CO.Designer.cs" />
     <Compile Include="Recursos\Mensajes.es-CO1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -273,21 +272,17 @@
   </Target>
   -->
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
-    
-    <ItemGroup> 
-     <Dependencies Include="Hefesoft.Vendors.Cnt"> 
-       <Framework>portable-net45+sl40+win+wp80</Framework>        
-     </Dependencies> 
-   </ItemGroup> 
-  
+    <ItemGroup>
+      <Dependencies Include="Hefesoft.Vendors.Cnt">
+        <Framework>portable-net45+sl40+win+wp80</Framework>
+      </Dependencies>
+    </ItemGroup>
     <ItemGroup>
       <!--La dll generada-->
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
       </PrincipalDlls>
-	  
-	  <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
+      <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
       </PrincipalDlls>
-	  
     </ItemGroup>
     <ItemGroup>
       <ContentFiles Include="Assets\Images\*\*.*">

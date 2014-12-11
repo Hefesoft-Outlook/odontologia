@@ -17,108 +17,112 @@
     xmlns:login="using:App2.Auth"
     x:Name="pageRoot"
     x:Class="App2.HubPage"
-    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Mode=Self}}"
     mc:Ignorable="d">
 
     <Page.Resources>
-        <!-- Grid-appropriate 310 by 260 pixel item template as seen in section 4 -->
+
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+
         <DataTemplate x:Key="Standard310x260ItemTemplate">
-        	<Grid Height="250" Width="310" Margin="5,10,5,10">
-        		<Grid.RowDefinitions>
-        			<RowDefinition Height="Auto"/>
-        			<RowDefinition Height="*"/>
-        		</Grid.RowDefinitions>
-        		<Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="150">
-        			<Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
-        		</Border>
-        		<StackPanel Grid.Row="1" Margin="0,10,0,0">
-        			<TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap"/>
-        			<TextBlock Text="{Binding Description}" Style="{StaticResource BodyTextBlockStyle}" MaxHeight="60" />
-        		</StackPanel>
-        	</Grid>
+            <Grid Height="250" Width="310" Margin="5,10,5,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Height="150">
+                    <Image Source="{Binding ImagePath}" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                </Border>
+                <StackPanel Grid.Row="1" Margin="0,10,0,0">
+                    <TextBlock Text="{Binding Title}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap"/>
+                    <TextBlock Text="{Binding Description}" Style="{StaticResource BodyTextBlockStyle}" MaxHeight="60" />
+                </StackPanel>
+            </Grid>
         </DataTemplate>
     </Page.Resources>
+    <Page.DataContext>
+        <Binding Mode="OneWay" Path="Main" Source="{StaticResource Locator}"/>
+    </Page.DataContext>
 
     <!--
     This grid acts as a root panel for the page.
   -->
-	<Grid Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">        
-		<Grid.ChildrenTransitions>
-			<TransitionCollection>
-				<EntranceThemeTransition/>
-			</TransitionCollection>
-		</Grid.ChildrenTransitions>
+    <Grid Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
 
-		<Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
+        <Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
 
-		<Hub>
-			<Hub.Header>
-				<!-- Back button and page title -->
-				<Grid>
-					<Grid.ColumnDefinitions>
-						<ColumnDefinition Width="80"/>
-						<ColumnDefinition Width="*"/>
-					</Grid.ColumnDefinitions>
-					<Button  x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
+        <Hub>
+            <Hub.Header>
+                <!-- Back button and page title -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button  x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
 						Margin="-1,-1,39,0" 
 						VerticalAlignment="Top"
 						Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
 						AutomationProperties.Name="Back"
 						AutomationProperties.AutomationId="BackButton"
 						AutomationProperties.ItemType="Navigation Button"/>
-					<TextBlock x:Name="pageTitle" Text="{StaticResource AppName}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                    <TextBlock x:Name="pageTitle"  Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
 						VerticalAlignment="Top" IsHitTestVisible="false" TextWrapping="NoWrap" FontFamily="Global User Interface" />
-				</Grid>
-			</Hub.Header>
+                </Grid>
+            </Hub.Header>
 
             <HubSection Width="600" Margin="0,0,20,0">
-				<HubSection.Background>
-					<ImageBrush ImageSource="ms-appx:///Assets/Images/Odontologia.jpg" Stretch="UniformToFill" />
-				</HubSection.Background>
-			</HubSection>
-            
-			<HubSection Width="900" Margin="0,0,20,0">
-				<DataTemplate>
-					<Pacientes:PacienteTratamientos/>
-				</DataTemplate>
-			</HubSection>
-            
-			<HubSection Width="270" x:Uid="Section1Header" Header="Diagnosticos procedimientos">
-				<DataTemplate>				
-					<Mapa_Dental1:Paleta/>
-				</DataTemplate>
-			</HubSection>
-			
-			<HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
-				<DataTemplate>
+                <HubSection.Background>
+                    <ImageBrush ImageSource="ms-appx:///Assets/Images/Odontologia.jpg" Stretch="UniformToFill" />
+                </HubSection.Background>
+            </HubSection>
+
+            <HubSection Width="900" Margin="0,0,20,0">
+                <DataTemplate>
+                    <Pacientes:PacienteTratamientos/>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Width="270" x:Uid="Section1Header" Header="Diagnosticos procedimientos">
+                <DataTemplate>
+                    <Mapa_Dental1:Paleta/>
+                </DataTemplate>
+            </HubSection>
+
+            <HubSection Width="880" x:Uid="Section2Header" Header="Mapa dental">
+                <DataTemplate>
                     <ScrollViewer>
-					<StackPanel Orientation="Vertical">
-                        <Tipos_Odontograma:Tipos></Tipos_Odontograma:Tipos>                        
-						<Viewbox>						
-							<Mapa_Dental:Mapa_Dental/>
-						</Viewbox>
-						<Odontologia:Boca/>
-					</StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <Tipos_Odontograma:Tipos></Tipos_Odontograma:Tipos>
+                            <Viewbox>
+                                <Mapa_Dental:Mapa_Dental/>
+                            </Viewbox>
+                            <Odontologia:Boca/>
+                        </StackPanel>
                     </ScrollViewer>
                 </DataTemplate>
-			</HubSection>
-            
-			<HubSection IsHeaderInteractive="True"
+            </HubSection>
+
+            <HubSection IsHeaderInteractive="True"
 				x:Uid="Section3Header" Header="Section 3">
-				<DataTemplate>
-					<StackPanel Orientation="Vertical">
-						<Piezas_Dentales:Seleccionado HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Piezas_Dentales:Seleccionado HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>
                         <Assets:Indices></Assets:Indices>
-					</StackPanel>
-				</DataTemplate>
-			</HubSection>
-		</Hub>
+                    </StackPanel>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
         <Generico:Modal padre="{Binding Frame, ElementName=pageRoot}"/>
 
-		<Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
-			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
-			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
-		</Grid>
+        <Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
+            <ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
+            <TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
+        </Grid>
         <!--<login:Usuario HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,12,10,0"/>-->
     </Grid>
 
@@ -127,17 +131,17 @@
             <AppBarToggleButton x:ConnectionId='1' Name="adicionarPaciente"  Icon="More" Label="Pacientes"                                />
             <AppBarToggleButton x:ConnectionId='2' Name="inicial"  Icon="More" Label="Inicial"                      />
             <AppBarToggleButton x:ConnectionId='3' Name="odontogramaPlanTratamientoBtn" Icon="More" Label="Plan tratamiento"                              />
-            <AppBarToggleButton x:ConnectionId='4' Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion"                        />            
-            
+            <AppBarToggleButton x:ConnectionId='4' Name="odontogramaEvolucionBtn" Icon="More" Label="Evolucion"                        />
+
             <AppBarSeparator/>
-                <AppBarToggleButton x:ConnectionId='5' Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed"                                     ></AppBarToggleButton>
-                <AppBarToggleButton x:ConnectionId='6' Name="adjuntarImagen" Icon="Attach"  Label="Adjuntar imagen"                       ></AppBarToggleButton>
-                <AppBarToggleButton x:ConnectionId='7' Name="foto" Icon="WebCam"  Label="Foto"                   ></AppBarToggleButton>
-                <AppBarToggleButton x:ConnectionId='8' Name="deshacer" Icon="Undo" Label="Deshacer"                       ></AppBarToggleButton>
+            <AppBarToggleButton x:ConnectionId='5' Name="finalizaTratamientoBtn" Icon="Accept" Label="Finalizar tratamiento" Visibility="Collapsed"                                     ></AppBarToggleButton>
+            <AppBarToggleButton x:ConnectionId='6' Name="adjuntarImagen" Icon="Attach"  Label="Adjuntar imagen"                       ></AppBarToggleButton>
+            <AppBarToggleButton x:ConnectionId='7' Name="foto" Icon="WebCam"  Label="Foto"                   ></AppBarToggleButton>
+            <AppBarToggleButton x:ConnectionId='8' Name="deshacer" Icon="Undo" Label="Deshacer"                       ></AppBarToggleButton>
             <AppBarSeparator/>
 
             <AppBarSeparator/>
-                <AppBarToggleButton x:ConnectionId='9' Name="verImagenes" Icon="Pictures" Label="Ver imagenes"                          ></AppBarToggleButton>
+            <AppBarToggleButton x:ConnectionId='9' Name="verImagenes" Icon="Pictures" Label="Ver imagenes"                          ></AppBarToggleButton>
             <AppBarSeparator/>
 
             <AppBarToggleButton x:ConnectionId='10' Icon="Save"  Label="Guardar"                           />

@@ -36,29 +36,36 @@ namespace App2
     public sealed partial class HubPage : Page, IDisposable
     {
         public HubPage()
-        {            
-            var contexto = ServiceLocator.Current.GetInstance<IContexto_Odontologia>();
-            contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
-            contexto.url("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
-
-            EndpointAddress endpointAddress = new EndpointAddress("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
-            var cliente = new OdontologiaServicioClient(new Inicializar_Servicio().CreateCustomBinding(), endpointAddress);
-            
-            //El inspector hay que seguir trabajando en el para guardar los datos en table storage
-            //Dinamicamente
-            //cliente.Endpoint.EndpointBehaviors.Add(new MyBehavior());
-            contexto.servicio(cliente);
-
-            // Metodo para pasarle los parametros al binding
-            //Ya que windows 8 no tiene archivos client config de configuracion
-            contexto.inicializarContexto();
-
+        {
             this.InitializeComponent();            
             oirMensaje();
             oirOcupado();
             oirCambiosBotones(); 
             NavigationHelper = new Hefesoft.Util.W8.UI.Common.NavigationHelper();
             NavigationHelper.setPage(this);
+
+            //Datos prueba
+            Variables_Globales.IdIps = 21;
+            Variables_Globales.IdPaciente = 232431;
+            Variables_Globales.IdTratamientoActivo = 2;
+            Variables_Globales.Modo = Cnt.Panacea.Xap.Odontologia.Vm.Util.Modos.Modo.windows8;
+            Variables_Globales.PCL = new PCL();
+
+            //var contexto = ServiceLocator.Current.GetInstance<IContexto_Odontologia>();
+            //contexto.binding(new Inicializar_Servicio().CreateCustomBinding());
+            //contexto.url("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
+
+            //EndpointAddress endpointAddress = new EndpointAddress("net.tcp://192.168.1.250:4520/Cnt.Panacea.Web.Host/Silverlight/Odontologia.OdontologiaServicio.svc");
+            //var cliente = new OdontologiaServicioClient(new Inicializar_Servicio().CreateCustomBinding(), endpointAddress);
+
+            ////El inspector hay que seguir trabajando en el para guardar los datos en table storage
+            ////Dinamicamente
+            ////cliente.Endpoint.EndpointBehaviors.Add(new MyBehavior());
+            //contexto.servicio(cliente);
+
+            // Metodo para pasarle los parametros al binding
+            //Ya que windows 8 no tiene archivos client config de configuracion
+            //contexto.inicializarContexto();
         }
 
         public NavigationHelper NavigationHelper { get; set; }

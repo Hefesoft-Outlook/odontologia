@@ -185,6 +185,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj">
       <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
       <Name>Hefesoft.Odontograma.Elastic</Name>

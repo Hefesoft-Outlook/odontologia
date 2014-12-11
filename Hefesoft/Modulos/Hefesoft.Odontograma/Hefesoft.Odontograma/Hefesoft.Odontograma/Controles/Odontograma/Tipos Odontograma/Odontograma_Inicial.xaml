@@ -5,11 +5,17 @@
     xmlns:local="using:App2.Tipos_Odontograma"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    DataContext="{Binding Odontograma_Inicial, Source={StaticResource Locator}}"
+    mc:Ignorable="d"    
     d:DesignHeight="20"
     d:DesignWidth="100">
     
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Odontograma_Inicial" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
     <Grid>
 
     </Grid>
