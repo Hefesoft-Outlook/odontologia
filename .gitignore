@@ -229,3 +229,6 @@ $RECYCLE.BIN/
 *.msi
 *.msm
 *.msp
+*.cache
+*.pdb
+*.cache

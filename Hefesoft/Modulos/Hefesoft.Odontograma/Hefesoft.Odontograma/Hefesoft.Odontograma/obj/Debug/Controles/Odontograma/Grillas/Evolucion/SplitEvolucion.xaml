@@ -7,16 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Name="pageRoot"
-    x:Class="App2.Grillas.Evolucion.SplitEvolucion"
-    DataContext="{Binding Grid_Evolucion, Source={StaticResource Locator}}"
+    x:Class="App2.Grillas.Evolucion.SplitEvolucion"    
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:Cnt.Panacea.Xap.Odontologia.Assets"
     mc:Ignorable="d">
 
     <UserControl.Resources>
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
-        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
     </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Grid_Evolucion" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
 
     <StackPanel Orientation="Vertical">
 		<VisualStateManager.VisualStateGroups>
@@ -91,8 +93,8 @@
 
 		<!-- Details for selected item -->
 			<StackPanel>
-            
-				<TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}" 
+
+                <TextBlock x:Uid="Sesion" Text=""  
 					HorizontalAlignment="Center" FontSize="16"/>
 
 				<ComboBox x:Name="CmbxSesiones"
@@ -209,7 +211,7 @@
 						<StackPanel>
                         
 						<!--Estado del procedimiento-->
-							<TextBlock Text="{Binding Mensajes.Procedimientos_Realizados, Source={StaticResource publicResource}}" FontFamily="Global User Interface"/>
+                            <TextBlock x:Uid="Procedimientos_Realizados" Text="" FontFamily="Global User Interface"/>
 							<CheckBox x:ConnectionId='1'
 								                       
 								VerticalAlignment="Stretch" 
@@ -219,14 +221,14 @@
 								FontFamily="Global User Interface"/>
 
 						<!--Legalizado-->
-							<TextBlock Text="{Binding Mensajes.Procedimientos_Legalizados, Source={StaticResource publicResource}}"/>
+                            <TextBlock x:Uid="Procedimientos_Legalizados" Text=""/>
 							<CheckBox VerticalAlignment="Stretch" 
 								IsEnabled="False" 
                                 IsChecked="{Binding SelectedItem.Legalizado, ElementName=itemListView, Mode=TwoWay}" 
 								FontFamily="Global User Interface"/>
 
 						<!--Odontologos e Higienistas-->
-							<TextBlock Text="{Binding Mensajes.Prestador, Source={StaticResource publicResource}}"/>
+                            <TextBlock x:Uid="Greeting" Text="Prestador"/>
 							<ComboBox 
 								ItemsSource="{Binding Grid_Evolucion.OdontologosHigienistasIps, Source={StaticResource Locator}}" 
 								DisplayMemberPath="NombreCompleto" 
@@ -234,7 +236,7 @@
 								FontFamily="Global User Interface"/>
 
 						<!--Finalidad procedimiento-->
-							<TextBlock Text="{Binding Mensajes.Finalidad_Procedimiento, Source={StaticResource publicResource}}"/>
+                            <TextBlock x:Uid="Finalidad_Procedimiento" Text=""/>
 							<ComboBox
 								ItemsSource="{Binding Grid_Evolucion.FinalidadesProcedimiento, Source={StaticResource Locator}}" 
 								DisplayMemberPath="Descripcion" 
@@ -243,7 +245,7 @@
 
                         
 						<!--Observaciones-->
-							<TextBlock Text="{Binding Mensajes.Observaciones, Source={StaticResource publicResource}}"/>
+                            <TextBlock x:Uid="Observaciones" Text="Observaciones"/>
 							
                             <TextBox 
 								AcceptsReturn="True" 

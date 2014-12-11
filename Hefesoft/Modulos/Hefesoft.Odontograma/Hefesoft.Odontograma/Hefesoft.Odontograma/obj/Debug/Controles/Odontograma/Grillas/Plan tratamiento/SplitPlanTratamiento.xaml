@@ -7,18 +7,23 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:Cnt.Panacea.Xap.Odontologia.Assets"
-    xmlns:Util="using:Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util" xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:Util="using:Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Util" 
+    xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
     x:Name="pageRoot"
-    x:Class="App2.Grillas.Plan_tratamiento.SplitPlanTratamiento"
-    DataContext="{Binding Wizard_Plan_Tratamiento, Source={StaticResource Locator}}"
+    x:Class="App2.Grillas.Plan_tratamiento.SplitPlanTratamiento"    
     mc:Ignorable="d">   
+    
     
     <UserControl.Resources>
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
-        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
     </UserControl.Resources>
-    
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Wizard_Plan_Tratamiento" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Grid.ChildrenTransitions>
 			<TransitionCollection>
 				<EntranceThemeTransition/>
@@ -179,14 +184,14 @@
 						<TextBlock Text="{Binding SelectedItem.ConfigurarDiagnosticoProcedimOtraEntity.Descripcion, ElementName=itemListView, Mode=TwoWay}"/>
 
 						<!--Especialidad-->
-						<TextBlock Text="{Binding Mensajes.Especialidad, Source={StaticResource publicResource}}"/>                    
+                        <TextBlock x:Uid="Especialidad"/>
 						<ComboBox  
 							ItemsSource="{Binding Wizard_Plan_Tratamiento.ProcedimientosEspecialidad, Source={StaticResource Locator}}"
 							SelectedValue="{Binding SelectedItem.ProcedimientosEspecialidadValor, ElementName=itemListView, Mode=TwoWay}"
 							DisplayMemberPath="Nombre"/>
 
 						<!--Tipo de sesion-->
-						<TextBlock Text="{Binding Mensajes.Tipo_Sesion, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Tipo_Sesion"/>
 						<ComboBox 
 							x:Name="CmbBxTipoSesion"
 							ItemsSource="{Binding Wizard_Plan_Tratamiento.OpcionTratamiento, Source={StaticResource Locator}}" 
@@ -194,26 +199,26 @@
                                   />
 
 						<!--Sesion-->
-						<TextBlock Text="{Binding Mensajes.Sesion, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Sesion"/>
 						<ComboBox x:Name="CmbBxNumeroSesiones"
 							ItemsSource="{Binding SelectedItem.NumeroSesiones, ElementName=itemListView}"                                               
 							SelectedValue="{Binding SelectedItem.numeroSesion, ElementName=itemListView, Mode=TwoWay}"
                                   />
 
 						<!--Numero de sesiones-->
-						<TextBlock Text="{Binding Mensajes.Numero_Sesiones, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Numero_Sesiones"/>
 						<TextBox   Text="{Binding SelectedItem.NumeroSesionesProcedimiento, ElementName=itemListView, Mode=TwoWay}" InputScope="Number"/>
 
 						<!--Valor del procedimiento-->
-						<TextBlock Text="{Binding Mensajes.Valor_Procedimiento, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Valor_Procedimiento"/>
 						<TextBlock Text="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.ValorServicio, ElementName=itemListView, Mode=TwoWay}"/>
 
 						<!--Valor paciente-->
-						<TextBlock Text="{Binding Mensajes.Valor_Paciente, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Valor_Paciente"/>
 						<TextBlock Text="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.ValorPaciente, ElementName=itemListView, Mode=TwoWay}"/>
 
 						<!--Odontologo-->
-						<TextBlock Text="{Binding Mensajes.Odontologo, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Odontologo"/>
 						<ComboBox x:Name="CmbBxOdontologia"
 							ItemsSource="{Binding Wizard_Plan_Tratamiento.OdontologosIps, Source={StaticResource Locator}}" 
 							DisplayMemberPath="NombreCompleto"                                   
@@ -227,7 +232,7 @@
 						</ComboBox>
 
 						<!--Higienista-->
-						<TextBlock Text="{Binding Mensajes.Higienista, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Higienista"/>
 						<ComboBox x:Name="CmbBxHigienista"
 							DisplayMemberPath="NombreCompleto" 
 							ItemsSource="{Binding Wizard_Plan_Tratamiento.HigientistasIps, Source={StaticResource Locator}}" 
@@ -241,16 +246,16 @@
 						</ComboBox>
                         
 						<!--Cobro-->
-						<TextBlock Text="{Binding Mensajes.Cobro, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Cobro"/>
 						<CheckBox VerticalAlignment="Center"                                               
 							IsChecked="{Binding SelectedItem.OdontogramaEntity.PlanTratamiento.Cobra, ElementName=itemListView, Mode=TwoWay}" 
                                               />
 						<!--Tercero-->
-						<TextBlock Text="{Binding Mensajes.Tercero, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Tercero"/>
 						<TextBlock Text="{Binding SelectedItem.PrestadorAtencion.NombreCompleto, ElementName=itemListView, Mode=TwoWay}"/>
 
 						<!--Convenio-->
-						<TextBlock Text="{Binding Mensajes.Convenio, Source={StaticResource publicResource}}"/>
+                        <TextBlock x:Uid="Convenio"/>
 						<TextBlock Text="{Binding SelectedItem.ConvenioAtencion.Nombre, ElementName=itemListView, Mode=TwoWay}"/>                        
 
 					</StackPanel>

@@ -29,8 +29,7 @@ namespace Hefesoft.Odontograma.Test
         }
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
-        {
-            System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("es-CO");
+        {            
             this.Frame.Navigate(typeof(App2.HubPage));
         }
     }

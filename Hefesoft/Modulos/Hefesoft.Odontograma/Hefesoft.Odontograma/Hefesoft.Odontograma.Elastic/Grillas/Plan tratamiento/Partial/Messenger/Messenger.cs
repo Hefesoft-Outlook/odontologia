@@ -61,7 +61,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental
             {
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                 {
-                    Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Solo_Lectura
+                    Mensaje = "Solo lectura"
                 });
             }
         }

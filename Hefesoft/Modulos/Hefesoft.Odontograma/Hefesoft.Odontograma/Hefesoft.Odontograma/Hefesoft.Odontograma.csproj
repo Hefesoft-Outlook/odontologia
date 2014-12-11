@@ -103,24 +103,6 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\Hefesoft.Odontograma.Elastic\Recursos\Mensajes.es-CO1.Designer.cs">
-      <Link>Recursos\Mensajes.es-CO1.Designer.cs</Link>
-    </Compile>
-    <Compile Include="..\Hefesoft.Odontograma.Elastic\Recursos\Mensajes.es-CO2.Designer.cs">
-      <Link>Recursos\Mensajes.es-CO2.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mensajes.es-CO.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\Hefesoft.Odontograma.Elastic\Recursos\Mensajes2.Designer.cs">
-      <Link>Recursos\Mensajes2.Designer.cs</Link>
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mensajes.resx</DependentUpon>
-    </Compile>
-    <Compile Include="..\Hefesoft.Odontograma.Elastic\Recursos\PublicResource.cs">
-      <Link>Recursos\PublicResource.cs</Link>
-    </Compile>
     <Compile Include="Controles\Fotos\SplipFotos.xaml.cs">
       <DependentUpon>SplipFotos.xaml</DependentUpon>
     </Compile>
@@ -244,6 +226,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -315,6 +301,7 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+    <PRIResource Include="Strings\en-US\Mensajes.resw" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controles\Fotos\SplipFotos.xaml">
@@ -473,18 +460,6 @@
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="..\Hefesoft.Odontograma.Elastic\Recursos\Mensajes.es-CO.resx">
-      <Link>Recursos\Mensajes.es-CO.resx</Link>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Mensajes.es-CO2.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="..\Hefesoft.Odontograma.Elastic\Recursos\Mensajes.resx">
-      <Link>Recursos\Mensajes.resx</Link>
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Mensajes2.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

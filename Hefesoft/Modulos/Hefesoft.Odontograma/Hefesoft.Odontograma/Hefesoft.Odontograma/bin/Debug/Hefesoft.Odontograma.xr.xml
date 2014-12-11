@@ -13,17 +13,12 @@
     <RootPropertyPathName Name="ProcedimientosDiagnosticosBoca" />
     <RootPropertyPathName Name="Grid_Evolucion" />
     <RootPropertyPathName Name="Observaciones" />
-    <RootPropertyPathName Name="Mensajes" />
     <RootPropertyPathName Name="FinalidadesProcedimiento" />
     <RootPropertyPathName Name="FinalidadesProcedimientoValor" />
-    <RootPropertyPathName Name="Finalidad_Procedimiento" />
     <RootPropertyPathName Name="OdontologosHigienistasIps" />
     <RootPropertyPathName Name="OdontologosHigienistasIpsValor" />
-    <RootPropertyPathName Name="Prestador" />
     <RootPropertyPathName Name="Legalizado" />
-    <RootPropertyPathName Name="Procedimientos_Legalizados" />
     <RootPropertyPathName Name="Realizado" />
-    <RootPropertyPathName Name="Procedimientos_Realizados" />
     <RootPropertyPathName Name="ConfigurarDiagnosticoProcedimOtraEntity" />
     <RootPropertyPathName Name="OdontogramaEntity" />
     <RootPropertyPathName Name="Procedimiento" />
@@ -37,63 +32,41 @@
     <RootPropertyPathName Name="NumeroSesionesConfiguradas" />
     <RootPropertyPathName Name="cambioSesionCommand" />
     <RootPropertyPathName Name="SelectedValue" />
-    <RootPropertyPathName Name="Sesion" />
     <RootPropertyPathName Name="Procedimentos_Paciente" />
     <RootPropertyPathName Name="Grilla_Plan_Tratamiento" />
     <RootPropertyPathName Name="CalculoValoresTratamientoCommand" />
-    <RootPropertyPathName Name="Valores" />
     <RootPropertyPathName Name="PuedeModificar" />
-    <RootPropertyPathName Name="Valor_Cuota_Inicial" />
     <RootPropertyPathName Name="MaximoProcedimientosSesion" />
-    <RootPropertyPathName Name="Maximo_Procedimientos_Por_Sesion" />
-    <RootPropertyPathName Name="No" />
     <RootPropertyPathName Name="HabilitarControlesPagoSesion" />
-    <RootPropertyPathName Name="Si" />
     <RootPropertyPathName Name="TieneCuotaInicial" />
-    <RootPropertyPathName Name="Cuota_Inicial" />
-    <RootPropertyPathName Name="Cotizacion" />
     <RootPropertyPathName Name="EsCotizacion" />
     <RootPropertyPathName Name="ValorTotalTratamiento" />
     <RootPropertyPathName Name="ValorCuotaTratamiento" />
-    <RootPropertyPathName Name="Valor_Total" />
-    <RootPropertyPathName Name="Valor_Cuota_Sesion" />
     <RootPropertyPathName Name="NumeroSesionesTratamiento" />
-    <RootPropertyPathName Name="Sesion_Cuotas" />
     <RootPropertyPathName Name="ValorCuotaInicial" />
     <RootPropertyPathName Name="FormaPagoOdontologia" />
     <RootPropertyPathName Name="FormaPagoSeleccionado" />
-    <RootPropertyPathName Name="Pago_Por" />
     <RootPropertyPathName Name="Wizard_Plan_Tratamiento" />
     <RootPropertyPathName Name="ConvenioAtencion" />
-    <RootPropertyPathName Name="Convenio" />
     <RootPropertyPathName Name="PrestadorAtencion" />
     <RootPropertyPathName Name="NombreCompleto" />
-    <RootPropertyPathName Name="Tercero" />
     <RootPropertyPathName Name="PlanTratamiento" />
     <RootPropertyPathName Name="Cobra" />
-    <RootPropertyPathName Name="Cobro" />
     <RootPropertyPathName Name="HigientistasIps" />
     <RootPropertyPathName Name="HigienistasIpsValor" />
     <RootPropertyPathName Name="higienistaSeleccionadoCommand" />
-    <RootPropertyPathName Name="Higienista" />
     <RootPropertyPathName Name="OdontologosIps" />
     <RootPropertyPathName Name="OdontologosIpsValor" />
     <RootPropertyPathName Name="odontologoSeleccionadoCommand" />
-    <RootPropertyPathName Name="Odontologo" />
     <RootPropertyPathName Name="ValorPaciente" />
-    <RootPropertyPathName Name="Valor_Paciente" />
     <RootPropertyPathName Name="ValorServicio" />
-    <RootPropertyPathName Name="Valor_Procedimiento" />
     <RootPropertyPathName Name="NumeroSesionesProcedimiento" />
-    <RootPropertyPathName Name="Numero_Sesiones" />
     <RootPropertyPathName Name="NumeroSesiones" />
     <RootPropertyPathName Name="numeroSesion" />
     <RootPropertyPathName Name="OpcionTratamiento" />
     <RootPropertyPathName Name="OpcionesTratamientoValor" />
-    <RootPropertyPathName Name="Tipo_Sesion" />
     <RootPropertyPathName Name="ProcedimientosEspecialidad" />
     <RootPropertyPathName Name="ProcedimientosEspecialidadValor" />
-    <RootPropertyPathName Name="Especialidad" />
     <RootPropertyPathName Name="Listado" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
@@ -148,13 +121,12 @@
     <RootPropertyPathName Name="Odontograma_Inicial" />
     <RootPropertyPathName Name="Plan_Tratamiento" />
     <RootPropertyPathName Name="mostrarGrillaTratamientosCommand" />
-    <RootPropertyPathName Name="Ver_Tratamientos" />
     <RootPropertyPathName Name="TratamientoPadre" />
+    <RootPropertyPathName Name="Tercero" />
     <RootPropertyPathName Name="TiposTratamiento" />
     <RootPropertyPathName Name="TiposTratamientoSeleccionado" />
     <RootPropertyPathName Name="HabilitarTipoTratamiento" />
     <RootPropertyPathName Name="siguientePasoCommand" />
-    <RootPropertyPathName Name="Tipo_Tratamiento" />
     <RootPropertyPathName Name="Superficie" />
     <RootPropertyPathName Name="TotalPageCount" />
     <RootPropertyPathName Name="CurrentPageNumber" />
@@ -173,8 +145,8 @@
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
-      <RootProperty Name="DataContext" />
       <RootProperty Name="Resources" />
+      <RootProperty Name="DataContext" />
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
@@ -330,6 +302,7 @@
       <RootProperty Name="Value" />
     </RootType>
     <RootType FullName="App2.Fotos.SplitFotos" />
+    <RootType FullName="Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
@@ -421,14 +394,11 @@
       <RootProperty Name="Offset" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Boca" />
-    <RootType FullName="Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator" />
-    <RootType FullName="Cnt.Panacea.Xap.Odontologia.PublicResource" />
     <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="IsChecked" />
       <RootProperty Name="FontFamily" />
-      <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootEvent Name="Click" />
     </RootType>
@@ -475,7 +445,6 @@
     <RootType FullName="App2.Grillas.Evolucion.SplitEvolucion" />
     <RootType FullName="App2.Grillas.PacienteTratamientos" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
-      <RootProperty Name="Content" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="HorizontalAlignment" />
@@ -505,7 +474,6 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ContentTemplate" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Background" />
       <RootProperty Name="IsHeaderInteractive" />
     </RootType>
     <RootType FullName="App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento" />
@@ -542,10 +510,6 @@
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental" />
     <RootType FullName="App2.Mapa_Dental.Paleta" />
-    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
-      <RootProperty Name="ImageSource" />
-      <RootProperty Name="Stretch" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Name" />
       <RootProperty Name="IsOpen" />
@@ -589,6 +553,10 @@
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactions.Core.GoToStateAction">
       <RootProperty Name="StateName" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Media.ImageBrush">
+      <RootProperty Name="Stretch" />
+      <RootProperty Name="ImageSource" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo">
       <RootProperty Name="Item" />

@@ -151,8 +151,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             
 
             var odontogramaPaciente = new OdontogramasPacienteEntity();            
-            odontogramaPaciente.Descripcion = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Odontograma_Inicial;            
-            odontogramaPaciente.CantidadDientes = Convert.ToInt32(Variables_Globales.Numero_Piezas_Dentales);//JICR 17886
+            odontogramaPaciente.Descripcion = "Odontograma inicial";  
+            odontogramaPaciente.CantidadDientes = Convert.ToInt32(Variables_Globales.Numero_Piezas_Dentales);
             odontogramaPaciente.Usuario = Variables_Globales.UsuarioActual;
             odontogramaPaciente.IPOrigen = Variables_Globales.IpCliente;
 

@@ -24,7 +24,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento
                 if (pivot.NumeroSesionesValor == 0)
                 {
                     valido.valido = false;
-                    valido.mensaje += Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Realice_Configuracion_Sesiones + System.Environment.NewLine;
+                    valido.mensaje += "Realice configuracion sesiones" + System.Environment.NewLine;
                     break;
                 }
             }

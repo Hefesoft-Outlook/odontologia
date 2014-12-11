@@ -23,7 +23,7 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Messaging;
 using FormaPago = Cnt.Panacea.Entities.Odontologia.FormaPago;
-using Mensajes = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes;
+
 
 namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 {
@@ -611,7 +611,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
 
                     Messenger.Default.Send(new Mostrar_Mensaje_Usuario
                     {
-                        Mensaje = Mensajes.Solo_Lectura
+                        Mensaje = "Solo lectura"
                     });
                 }
                 else if ((Variables_Globales.ParametroConvenio.RequiereClasificador &&

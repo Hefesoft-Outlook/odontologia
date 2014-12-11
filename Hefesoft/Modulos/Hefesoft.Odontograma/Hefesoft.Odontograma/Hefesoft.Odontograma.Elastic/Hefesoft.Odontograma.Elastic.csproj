@@ -114,18 +114,6 @@
     <Compile Include="Pieza Seleccionada\Seleccionado.cs" />
     <Compile Include="Pieza Seleccionada\vm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Recursos\Mensajes.Designer.cs" />
-    <Compile Include="Recursos\Mensajes.es-CO1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mensajes.es-CO.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Recursos\Mensajes1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Mensajes.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Recursos\PublicResource.cs" />
     <Compile Include="Service References\Proxy.cs" />
     <Compile Include="Servicio\Client.cs" />
     <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
@@ -238,16 +226,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Messenger\Validaciones\" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Recursos\Mensajes.es-CO.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Mensajes.es-CO1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Recursos\Mensajes.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Mensajes1.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
+    <Folder Include="Recursos\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

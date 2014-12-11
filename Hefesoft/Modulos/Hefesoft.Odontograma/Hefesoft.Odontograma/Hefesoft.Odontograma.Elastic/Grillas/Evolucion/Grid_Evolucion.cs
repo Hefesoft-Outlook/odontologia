@@ -275,7 +275,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
 
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                 {
-                    Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Solo_Lectura
+                    Mensaje = "Solo lectura"
                 });
 
             }
@@ -367,7 +367,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion
             {
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                 {
-                    Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.No_Existen_Sessiones_Asociadas
+                    Mensaje = "No existen sesiones asociadas"
                 });
             }
 

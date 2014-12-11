@@ -6,11 +6,16 @@
 	xmlns:Clases="clr-namespace:Cnt.Panacea.Xap.Odontologia.Clases" 
     xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"     
     xmlns:Custom="http://www.galasoft.ch/mvvmlight"
-	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
+	xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
+    xmlns:Core="using:Microsoft.Xaml.Interactions.Core"
 	mc:Ignorable="d"
 	x:Class="Cnt.Panacea.Xap.Odontologia.Boca" 
 	d:DesignWidth="302" d:DesignHeight="190">
 
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+    </UserControl.Resources>
+    
 	<Grid x:Name="LayoutRoot">
 		<Grid>
 			<Grid.ColumnDefinitions>

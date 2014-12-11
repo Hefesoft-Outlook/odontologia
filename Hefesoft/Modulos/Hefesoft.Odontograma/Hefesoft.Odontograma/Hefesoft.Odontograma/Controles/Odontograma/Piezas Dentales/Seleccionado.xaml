@@ -6,11 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
-    mc:Ignorable="d"
-    DataContext="{Binding Seleccionado, Source={StaticResource Locator}}"
+    mc:Ignorable="d"    
     d:DesignHeight="180"
     d:DesignWidth="150">
     
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Seleccionado" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
     <Grid HorizontalAlignment="Center">
         <StackPanel HorizontalAlignment="Center">
             <HyperlinkButton Content="{Binding Elemento_Seleccionado.codigoSPiezaDental}" HorizontalAlignment="Center" FontSize="26.667"/>

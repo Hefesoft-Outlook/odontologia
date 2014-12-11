@@ -153,7 +153,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
                     
                     GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                     {
-                        Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Guardar_Odontograma
+                        Mensaje = "Guardar odontograma"
                     });
                     
                     //Le enviamos un mensaje diciendole al mapa dental que guarde las imagenes que tiene en este momento en cola
@@ -173,7 +173,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             {                
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                 {
-                    Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Ningun_Cambio
+                    Mensaje = "No se ha detectado ningun cambio"
                 });
             }
         }
@@ -188,7 +188,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Tipos_Odontogramas.Vm
             {
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Mensajes.Mostrar_Mensaje_Usuario()
                 {
-                    Mensaje = Cnt.Panacea.Xap.Odontologia.Recursos.Mensajes.Justificacion_Guardar_Sistema
+                    Mensaje = "Indique una justificacion"
                 });                
             }
         }

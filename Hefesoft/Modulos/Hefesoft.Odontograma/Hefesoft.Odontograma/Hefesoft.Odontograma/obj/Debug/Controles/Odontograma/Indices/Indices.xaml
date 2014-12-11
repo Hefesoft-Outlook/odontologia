@@ -8,7 +8,12 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    
+
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
+    </UserControl.Resources>
+
+
     <Grid>
         <StackPanel  DataContext="{Binding Pieza_Dental_Seleccionada, Source={StaticResource Locator}}" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right">
             <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10,0,0,0">

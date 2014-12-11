@@ -39,13 +39,12 @@
             </Grid>
         </DataTemplate>
     </Page.Resources>
+    
     <Page.DataContext>
         <Binding Mode="OneWay" Path="Main" Source="{StaticResource Locator}"/>
     </Page.DataContext>
 
-    <!--
-    This grid acts as a root panel for the page.
-  -->
+    
     <Grid Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ChildrenTransitions>
             <TransitionCollection>
@@ -75,12 +74,6 @@
                 </Grid>
             </Hub.Header>
 
-            <HubSection Width="600" Margin="0,0,20,0">
-                <HubSection.Background>
-                    <ImageBrush ImageSource="ms-appx:///Assets/Images/Odontologia.jpg" Stretch="UniformToFill" />
-                </HubSection.Background>
-            </HubSection>
-
             <HubSection Width="900" Margin="0,0,20,0">
                 <DataTemplate>
                     <Pacientes:PacienteTratamientos/>
@@ -108,7 +101,7 @@
             </HubSection>
 
             <HubSection IsHeaderInteractive="True"
-				x:Uid="Section3Header" Header="Section 3">
+				x:Uid="Section3Header" Header="Seleccionado">
                 <DataTemplate>
                     <StackPanel Orientation="Vertical">
                         <Piezas_Dentales:Seleccionado HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>

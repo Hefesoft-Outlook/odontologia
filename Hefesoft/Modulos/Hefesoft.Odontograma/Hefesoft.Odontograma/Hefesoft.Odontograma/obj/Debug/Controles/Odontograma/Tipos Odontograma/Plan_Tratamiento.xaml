@@ -11,8 +11,7 @@
     d:DesignWidth="900">
     
     <UserControl.Resources>
-        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
-        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
+        <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />        
     </UserControl.Resources>
 
     <UserControl.DataContext>
@@ -35,8 +34,8 @@
 					<RowDefinition Height="0.25*" />
 					<RowDefinition Height="0.*" />
 				</Grid.RowDefinitions>
-				<TextBlock HorizontalAlignment="Left" Margin="0" Text="{Binding Mensajes.Tipo_Tratamiento, Source={StaticResource publicResource}}" TextWrapping="Wrap" VerticalAlignment="Center" />
-				<TextBlock Grid.Row="1" HorizontalAlignment="Left" Text="{Binding Mensajes.Tercero, Source={StaticResource publicResource}}" TextWrapping="Wrap" d:LayoutOverrides="Height" VerticalAlignment="Center" />
+                <TextBlock HorizontalAlignment="Left" Margin="0" x:Uid="Tipo_Tratamiento" Text="" TextWrapping="Wrap" VerticalAlignment="Center" />
+                <TextBlock Grid.Row="1" HorizontalAlignment="Left" x:Uid="Tercero" Text="" TextWrapping="Wrap" d:LayoutOverrides="Height" VerticalAlignment="Center" />
 				<StackPanel Grid.Column="4" Orientation="Horizontal">
 
 					<HyperlinkButton x:Name="HyprlnkBttnContinuar" 
@@ -53,19 +52,19 @@
 					VerticalAlignment="Center" 
 					Grid.Column="1" />
 				<TextBlock Margin="10,0,0,0" Text="{Binding ConvenioAtencion.Tercero.NombreCompleto}" TextWrapping="Wrap" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Width="300" />
-				<TextBlock Text="{Binding Mensajes.Convenio, Source={StaticResource publicResource}}" TextWrapping="Wrap" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <TextBlock x:Uid="Convenio"  TextWrapping="Wrap" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
 				<TextBlock Margin="0" Text="{Binding ConvenioAtencion.Nombre}" TextWrapping="Wrap" Grid.Column="4" Width="300" HorizontalAlignment="Left" Grid.Row="1" VerticalAlignment="Center" />
 			</Grid>
 
 			<StackPanel Height="65">
-				<TextBlock HorizontalAlignment="Left" Text="{Binding Mensajes.Descripcion, Source={StaticResource publicResource}}" TextWrapping="Wrap" />
+                <TextBlock HorizontalAlignment="Left" x:Uid="Descripcion"  TextWrapping="Wrap" />
 				<TextBox x:Name="TxtDescripcionTratamiento" TextWrapping="Wrap" Height="49"  Text="{Binding TratamientoPadre.Descripcion, Mode=TwoWay}">
 				</TextBox>
 			</StackPanel>
 
 			<HyperlinkButton x:Name="HyprlinkBttnMensajeVerOdontogramaTratamiento" 
 				Command="{Binding mostrarGrillaTratamientosCommand}"
-				Content="{Binding Mensajes.Ver_Tratamientos, Source={StaticResource publicResource}}" 
+				x:Uid="Ver_Tratamientos" 
 				HorizontalAlignment="Left" 
 				VerticalAlignment="Center" 
 	/>

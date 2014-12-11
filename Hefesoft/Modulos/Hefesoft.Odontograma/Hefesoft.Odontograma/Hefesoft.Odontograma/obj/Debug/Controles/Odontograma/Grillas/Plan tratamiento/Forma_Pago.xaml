@@ -5,15 +5,18 @@
     xmlns:local="using:App2.Grillas.Plan_tratamiento"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    DataContext="{Binding Grilla_Plan_Tratamiento, Source={StaticResource Locator}}"
+    mc:Ignorable="d"    
     d:DesignHeight="300"
     d:DesignWidth="900">
 
+    
     <UserControl.Resources>
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
-        <recursos:PublicResource x:Key="publicResource" xmlns:recursos="using:Cnt.Panacea.Xap.Odontologia" />
     </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Grilla_Plan_Tratamiento" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
 
     <StackPanel>
 		<Grid VerticalAlignment="Top">
@@ -30,7 +33,7 @@
 				<ColumnDefinition Width="0.271*"/>
 				<ColumnDefinition Width="0.263*"/>
 			</Grid.ColumnDefinitions>
-			<TextBlock Margin="0" TextWrapping="Wrap" Text="{Binding Mensajes.Pago_Por, Source={StaticResource publicResource}}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="54"/>
+            <TextBlock Margin="0" x:Uid="Pago_Por" Text="" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="54"/>
 			<ComboBox Grid.Column="1" ItemsSource="{Binding FormaPagoOdontologia}" DisplayMemberPath="Value" SelectedItem="{Binding FormaPagoSeleccionado, Mode=TwoWay}"  SelectedValue="{Binding FormaPagoSeleccionado, Mode=TwoWay}">
 				<!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="SelectionChanged">
@@ -47,16 +50,16 @@
                     </i:Interaction.Triggers>-->
 			</TextBox>
 
-			<TextBlock Margin="0,0,70,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center"><Run Text="{Binding Mensajes.Sesion_Cuotas, Source={StaticResource publicResource}}"/></TextBlock>
+            <TextBlock Margin="0,0,70,0" Grid.Row="3" TextWrapping="Wrap" VerticalAlignment="Center"><Run x:Uid="Sesion_Cuotas" Text=""/></TextBlock>
 			<TextBlock  x:Name="txtSesiones" Grid.Column="1" Margin="0,2,0,1" Grid.Row="3" TextWrapping="Wrap" Height="25" Width="200" HorizontalAlignment="Left" Text="{Binding NumeroSesionesTratamiento, Mode=TwoWay}"/>
-			<TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111"><Run Text="{Binding Mensajes.Valor_Cuota_Sesion, Source={StaticResource publicResource}}"/></TextBlock>
-			<TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="2" TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Total, Source={StaticResource publicResource}}" VerticalAlignment="Center" HorizontalAlignment="Left" Width="64"/>
+            <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Center" HorizontalAlignment="Left" Width="111"><Run x:Uid="Valor_Cuota_Sesion"/></TextBlock>
+            <TextBlock Grid.Column="3" Margin="8,0,0,0" Grid.Row="2" TextWrapping="Wrap" x:Uid="Valor_Total" Text="" VerticalAlignment="Center" HorizontalAlignment="Left" Width="64"/>
 
 			<TextBox x:Name="TxtValorCuota" Grid.Column="4" Grid.Row="1" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorCuotaTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
 
 			<TextBox x:Name="txtbxValorTotal"  Grid.Column="4" Grid.Row="2" TextWrapping="Wrap" TextAlignment="Right" Text="{Binding ValorTotalTratamiento, Mode=TwoWay}" VerticalAlignment="Center"/>
 
-			<CheckBox x:Name="checkBox" Content="{Binding Mensajes.Cotizacion, Source={StaticResource publicResource}}" Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" IsChecked="{Binding EsCotizacion, Mode=TwoWay}">
+            <CheckBox x:Name="checkBox" x:Uid="Cotizacion"  Grid.Column="3" Margin="8,0,0,0" VerticalAlignment="Center" IsChecked="{Binding EsCotizacion, Mode=TwoWay}">
 				<!--<i:Interaction.Triggers>
                         <i:EventTrigger EventName="Checked">
                             <ei:ControlStoryboardAction Storyboard="{StaticResource StoryboardComprobantes}"/>
@@ -64,10 +67,10 @@
                     </i:Interaction.Triggers>-->
 			</CheckBox>
 
-			<TextBlock TextWrapping="Wrap" Text="{Binding Mensajes.Cuota_Inicial, Source={StaticResource publicResource}}" Margin="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="73"/>
+            <TextBlock TextWrapping="Wrap" x:Uid="Cuota_Inicial"  Margin="0" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Left" Width="73"/>
 
 			<StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Left" >
-				<RadioButton Content="{Binding Mensajes.Si, Source={StaticResource publicResource}}" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="{Binding TieneCuotaInicial, Mode=TwoWay}">
+				<RadioButton x:Uid="Si"  Margin="0" VerticalAlignment="Center" HorizontalAlignment="Left" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="{Binding TieneCuotaInicial, Mode=TwoWay}">
 					<!--<i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ei:ChangePropertyAction TargetObject="{Binding ElementName=txtCuotaInicial}" PropertyName="IsEnabled" Value="True"/>
@@ -76,7 +79,7 @@
 				</RadioButton>
 
 
-				<RadioButton Content="{Binding Mensajes.No, Source={StaticResource publicResource}}" Margin="5,0,0,0" Grid.Column="1" Grid.Row="1" d:LayoutOverrides="Height" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="True">
+				<RadioButton x:Uid="No"  Margin="5,0,0,0" Grid.Column="1" Grid.Row="1" d:LayoutOverrides="Height" HorizontalAlignment="Left" VerticalAlignment="Center" IsEnabled="{Binding HabilitarControlesPagoSesion, Mode=OneWay}" IsChecked="True">
 					<!--i:Interaction.Triggers>
                             <i:EventTrigger EventName="Click">
                                 <ei:ChangePropertyAction TargetObject="{Binding ElementName=txtCuotaInicial}" PropertyName="IsEnabled" Value="False"/>
@@ -86,14 +89,14 @@
 
 			</StackPanel>
 
-			<TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" Text="{Binding Mensajes.Maximo_Procedimientos_Por_Sesion, Source={StaticResource publicResource}}"/>
+            <TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" x:Uid="Maximo_Procedimientos_Por_Sesion"/>
 
 
 			<TextBlock Margin="8,0,0,0" TextWrapping="Wrap" Grid.Column="4" Grid.Row="3" VerticalAlignment="Center" Text="{Binding MaximoProcedimientosSesion}"/>
 
-			<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="{Binding Mensajes.Valor_Cuota_Inicial, Source={StaticResource publicResource}}" VerticalAlignment="Center" Margin="0"/>
+            <TextBlock Grid.Row="2" TextWrapping="Wrap" x:Uid="Valor_Cuota_Inicial"  VerticalAlignment="Center" Margin="0"/>
 
-			<HyperlinkButton x:Name="HyprlnkBttnValores" Command="{Binding CalculoValoresTratamientoCommand, Mode=OneWay}"  Content="{Binding Mensajes.Valores, Source={StaticResource publicResource}}"   HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,0,0,0" Grid.Column="4" IsEnabled="{Binding PuedeModificar}" Visibility="Collapsed" />
+            <HyperlinkButton x:Name="HyprlnkBttnValores" Command="{Binding CalculoValoresTratamientoCommand, Mode=OneWay}"  x:Uid="Valores"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="9,0,0,0" Grid.Column="4" IsEnabled="{Binding PuedeModificar}" Visibility="Collapsed" />
 		</Grid>
 		<Button x:ConnectionId='1' x:Name="BttnGuardar" Content="Guardar" HorizontalAlignment="Center" VerticalAlignment="Center"                           Margin="0,10,0,0"/>
 	</StackPanel>
