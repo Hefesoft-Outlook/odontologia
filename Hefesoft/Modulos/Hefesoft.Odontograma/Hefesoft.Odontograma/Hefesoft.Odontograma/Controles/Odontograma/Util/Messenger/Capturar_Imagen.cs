@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media.Imaging;
 
-namespace App2.Util.Messenger
+namespace Hefesoft.Odontograma.Util.Messenger
 {
     public class Capturar_Imagen
     {

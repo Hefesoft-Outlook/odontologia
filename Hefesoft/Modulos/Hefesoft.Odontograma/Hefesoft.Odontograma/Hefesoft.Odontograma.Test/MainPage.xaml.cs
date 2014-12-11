@@ -30,7 +30,7 @@ namespace Hefesoft.Odontograma.Test
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {            
-            this.Frame.Navigate(typeof(App2.HubPage));
+            this.Frame.Navigate(typeof(Hefesoft.Odontograma.Odontograma));
         }
     }
 }

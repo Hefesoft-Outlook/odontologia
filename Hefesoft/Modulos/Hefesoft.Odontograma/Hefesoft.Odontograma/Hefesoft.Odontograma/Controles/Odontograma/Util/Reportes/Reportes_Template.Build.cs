@@ -8,7 +8,7 @@ using Windows.Foundation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace App2.Util.Reportes
+namespace Hefesoft.Odontograma.Util.Reportes
 {
     public partial class Reportes_Template : FrameworkElement    
     {

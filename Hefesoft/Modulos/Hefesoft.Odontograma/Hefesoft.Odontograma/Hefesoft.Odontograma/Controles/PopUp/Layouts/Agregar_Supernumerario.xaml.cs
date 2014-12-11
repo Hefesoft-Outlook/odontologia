@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Assets.PopUp.Layouts
+namespace Hefesoft.Odontograma.Assets.PopUp.Layouts
 {
     public sealed partial class Agregar_Supernumerario : UserControl
     {

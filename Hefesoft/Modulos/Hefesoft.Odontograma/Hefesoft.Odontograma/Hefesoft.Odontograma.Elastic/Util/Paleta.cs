@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace App2.Util
+namespace Hefesoft.Odontograma.Util
 {
     public class Aplicar_Tratamiento_A
     {

@@ -1,4 +1,4 @@
-﻿using App2.Hub_Partial;
+﻿using Hefesoft.Odontograma.Hub_Partial;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 
-namespace App2.Util.Helpers
+namespace Hefesoft.Odontograma.Util.Helpers
 {
     class Layout
     {

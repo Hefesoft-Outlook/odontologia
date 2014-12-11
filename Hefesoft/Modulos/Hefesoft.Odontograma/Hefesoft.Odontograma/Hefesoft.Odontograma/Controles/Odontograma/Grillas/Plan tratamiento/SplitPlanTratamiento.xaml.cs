@@ -1,4 +1,4 @@
-﻿using App2.Hub_Partial;
+﻿using Hefesoft.Odontograma.Hub_Partial;
 using Cnt.Panacea.Xap.Odontologia;
 using Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento;
 using Microsoft.Practices.ServiceLocation;
@@ -22,7 +22,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace App2.Grillas.Plan_tratamiento
+namespace Hefesoft.Odontograma.Grillas.Plan_tratamiento
 {
     public sealed partial class SplitPlanTratamiento : UserControl
     {

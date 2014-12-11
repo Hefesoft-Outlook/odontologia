@@ -13,9 +13,9 @@ using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace App2
+namespace Hefesoft.Odontograma
 {
-    public sealed partial class HubPage : Page, IDisposable
+    public sealed partial class Odontograma : Page, IDisposable
     {   
 
         private async Task adjuntarImagenes(object sender)

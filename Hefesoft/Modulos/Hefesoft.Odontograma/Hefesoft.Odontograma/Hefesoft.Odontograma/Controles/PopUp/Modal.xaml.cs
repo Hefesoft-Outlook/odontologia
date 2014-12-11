@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 using Microsoft.Practices.ServiceLocation;
 
-namespace App2.Assets.PopUp
+namespace Hefesoft.Odontograma.Assets.PopUp
 {
     public sealed partial class Modal : UserControl, IDisposable
     {
@@ -38,27 +38,27 @@ namespace App2.Assets.PopUp
             if (obj.Nombre == "Plan tratamiento")
             {
                 elementoOtraVentana = obj;
-                var wizard = new App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento() {HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch};
+                var wizard = new Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento() {HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch};
                 var vCerrada = MostrarModal(wizard, "Plan de tratamiento");
                 vCerrada = cerrar;
             }
             else if (obj.Nombre == "Evolucion")
             {
                 elementoOtraVentana = obj;
-                var wizard = new App2.Grillas.Evolucion.SplitEvolucion() { HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch };
+                var wizard = new Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion() { HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch };
                 var vCerrada = MostrarModal(wizard, "Evolucion");
                 vCerrada = cerrar;
             }
             else if (obj.Nombre == "Tratamientos")
             {
                 elementoOtraVentana = obj;
-                var reporte = new App2.Util.Reportes.Templates.Plan_Tratamiento();
+                var reporte = new Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento();
                 MostrarModal(reporte, "Reporte plan de tratamiento");                
             }
             else if (obj.Nombre == "Listado imagenes")
             {
                 elementoOtraVentana = obj;
-                var reporte = new App2.Fotos.SplitFotos() { DataContext = obj.Propiedad_Adicional };
+                var reporte = new Hefesoft.Odontograma.Fotos.SplitFotos() { DataContext = obj.Propiedad_Adicional };
                 MostrarModal(reporte, "Imagenes");
             }
         }

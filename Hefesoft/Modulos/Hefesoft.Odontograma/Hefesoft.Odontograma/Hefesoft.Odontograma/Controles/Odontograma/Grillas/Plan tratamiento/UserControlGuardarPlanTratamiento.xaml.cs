@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Grillas.Plan_tratamiento
+namespace Hefesoft.Odontograma.Grillas.Plan_tratamiento
 {
     public sealed partial class UserControlGuardarPlanTratamiento : UserControl
     {

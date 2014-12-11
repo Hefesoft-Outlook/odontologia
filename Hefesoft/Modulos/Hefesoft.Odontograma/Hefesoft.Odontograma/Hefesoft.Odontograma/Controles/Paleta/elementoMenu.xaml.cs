@@ -9,7 +9,7 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Media;
 using Windows.UI;
-using App2.Util;
+using Hefesoft.Odontograma.Util;
 
 namespace Cnt.Panacea.Xap.Odontologia.Assets
 {

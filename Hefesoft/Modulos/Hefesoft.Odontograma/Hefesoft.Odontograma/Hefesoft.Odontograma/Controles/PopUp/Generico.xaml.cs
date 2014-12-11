@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Assets.PopUp
+namespace Hefesoft.Odontograma.Assets.PopUp
 {
     public sealed partial class Generico : UserControl,IDisposable
     {

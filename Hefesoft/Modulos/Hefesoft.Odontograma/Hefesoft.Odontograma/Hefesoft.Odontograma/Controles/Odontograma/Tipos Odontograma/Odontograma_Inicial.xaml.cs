@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Control de usuario está documentada en http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Tipos_Odontograma
+namespace Hefesoft.Odontograma.Tipos_Odontograma
 {
     public sealed partial class Odontograma_Inicial : UserControl
     {

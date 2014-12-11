@@ -20,7 +20,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace App2.Grillas.Evolucion
+namespace Hefesoft.Odontograma.Grillas.Evolucion
 {
     public sealed partial class SplitEvolucion : UserControl, IDisposable
     {

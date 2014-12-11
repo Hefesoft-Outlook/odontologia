@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Util.Reportes.Templates
+namespace Hefesoft.Odontograma.Util.Reportes.Templates
 {
     public sealed partial class Inicial : UserControl
     {

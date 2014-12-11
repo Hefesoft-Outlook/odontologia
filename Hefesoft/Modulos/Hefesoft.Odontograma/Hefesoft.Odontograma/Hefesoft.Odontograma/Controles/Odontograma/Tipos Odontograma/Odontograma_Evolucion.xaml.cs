@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Tipos_Odontograma
+namespace Hefesoft.Odontograma.Tipos_Odontograma
 {
     public sealed partial class Odontograma_Evolucion : UserControl
     {

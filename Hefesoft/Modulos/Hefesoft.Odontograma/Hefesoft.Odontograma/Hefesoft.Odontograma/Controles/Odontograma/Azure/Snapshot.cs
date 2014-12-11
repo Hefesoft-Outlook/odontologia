@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace App2.Hub_Partial
+namespace Hefesoft.Odontograma.Hub_Partial
 {
     class Snapshot
     {

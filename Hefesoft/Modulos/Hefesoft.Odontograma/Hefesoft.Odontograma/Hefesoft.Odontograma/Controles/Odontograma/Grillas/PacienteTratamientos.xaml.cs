@@ -20,7 +20,7 @@ using Windows.UI.Xaml.Navigation;
 
 // La plantilla de elemento Control de usuario está documentada en http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Grillas
+namespace Hefesoft.Odontograma.Grillas
 {
     public sealed partial class PacienteTratamientos : UserControl
     {

@@ -10,10 +10,8 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
-      <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
-    <RootType FullName="Hefesoft.Odontograma.Ejemplo.Seleccionado" />
     <RootType FullName="Hefesoft.Odontograma.Test.MainPage" />
   </Roots.RootTypes>
 </Roots>

@@ -14,7 +14,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Hefesoft.Standard.BusyBox;
 
-namespace App2.Util.Fotos
+namespace Hefesoft.Odontograma.Util.Fotos
 {
     public class WebCam
     {

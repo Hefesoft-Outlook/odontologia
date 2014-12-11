@@ -1,4 +1,4 @@
-﻿using App2.Hub_Partial;
+﻿using Hefesoft.Odontograma.Hub_Partial;
 using Cnt.Panacea.Xap.Odontologia;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;
@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-namespace App2.Fotos
+namespace Hefesoft.Odontograma.Fotos
 {
     public sealed partial class SplitFotos : UserControl
     {

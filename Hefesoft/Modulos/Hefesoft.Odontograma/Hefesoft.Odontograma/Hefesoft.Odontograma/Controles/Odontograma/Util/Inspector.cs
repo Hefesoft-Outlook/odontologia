@@ -17,7 +17,7 @@ using System.Xml.Linq;
 using System.Xml.Serialization;
 using Windows.Data.Xml.Dom;
 
-namespace App2.Util
+namespace Hefesoft.Odontograma.Util
 {
     class Inspector : IClientMessageInspector 
     {

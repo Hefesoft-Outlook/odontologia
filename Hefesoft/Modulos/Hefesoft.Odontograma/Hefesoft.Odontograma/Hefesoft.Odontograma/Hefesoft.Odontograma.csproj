@@ -125,8 +125,8 @@
     <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
       <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles\Odontograma\HubPage.xaml.cs">
-      <DependentUpon>HubPage.xaml</DependentUpon>
+    <Compile Include="Controles\Odontograma\Odontograma.xaml.cs">
+      <DependentUpon>Odontograma.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\Odontograma\Hub\Hub.Partial.BarClick.cs" />
     <Compile Include="Controles\Odontograma\Hub\Hub.Partial.Fotos.cs" />
@@ -213,15 +213,6 @@
     <Compile Include="Controles\PopUp\Modal.Partial\Modal.UiWindow.cs" />
     <Compile Include="Controles\PopUp\Modal.xaml.cs">
       <DependentUpon>Modal.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Ejemplo\Listado.xaml.cs">
-      <DependentUpon>Listado.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Ejemplo\Seleccionado.xaml.cs">
-      <DependentUpon>Seleccionado.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Paginas\Pagina.xaml.cs">
-      <DependentUpon>Pagina.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -332,7 +323,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controles\Odontograma\HubPage.xaml">
+    <Page Include="Controles\Odontograma\Odontograma.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -432,18 +423,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Ejemplo\Seleccionado.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Ejemplo\Listado.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Paginas\Pagina.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
@@ -493,7 +472,7 @@
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Paginas\*.*">
       </LibraryFiles>
-      <LibraryFiles Include="bin\$(ConfigurationName)\Controles\*\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Controles\**\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Controles\*.*">
       </LibraryFiles>
@@ -505,19 +484,32 @@
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*.*">
       </LibraryFiles>
+      
       <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*.*">
       </LibraryFiles>
+
+      <LibraryFiles Include="bin\$(ConfigurationName)\String\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\String\*.*">
+      </LibraryFiles>
+      
       <LibraryFiles Include="bin\$(ConfigurationName)\$(TargetName).xr.xml">
       </LibraryFiles>
+      
       <!--La dll generada-->
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
       </PrincipalDlls>
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).Elastic.dll">
       </PrincipalDlls>
+	  <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
+      </PrincipalDlls>
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).pri">
       </PrincipalDlls>
+	  
+	  
+	  
     </ItemGroup>
     <ItemGroup>
       <LibraryFiles Include="Ejemplo\*\*.xaml">
@@ -528,9 +520,19 @@
       </LibraryFiles>
       <LibraryFiles Include="Paginas\*.xaml">
       </LibraryFiles>
-      <LibraryFiles Include="Controles\*\*.xaml">
+      <LibraryFiles Include="Controles\**\*.xaml">
       </LibraryFiles>
+	  
+	  <LibraryFiles Include="Controles\**\*.png">
+      </LibraryFiles>
+	  
+	  <LibraryFiles Include="Controles\**\*.jpg">
+      </LibraryFiles>
+	  
       <LibraryFiles Include="Controles\*.xaml">
+	  
+	  
+	  
       </LibraryFiles>
       <LibraryFiles Include="Assets\*\*.xaml">
       </LibraryFiles>
@@ -544,11 +546,27 @@
       </LibraryFiles>
       <LibraryFiles Include="viewmodel\*.xaml">
       </LibraryFiles>
+
+      <LibraryFiles Include="String\*\*.resw">
+      </LibraryFiles>
+      <LibraryFiles Include="String\*.resw">
+      </LibraryFiles>
+      
     </ItemGroup>
     <ItemGroup>
       <ContentFiles Include="Assets\Images\*\*.*">
       </ContentFiles>
       <ContentFiles Include="Assets\Images\*.*">
+      </ContentFiles>
+	  
+	  <ContentFiles Include="Controles\Odontograma\Images\*\*.*">
+      </ContentFiles>
+      <ContentFiles Include="Controles\Odontograma\Images\*.*">
+      </ContentFiles>
+	  
+      <ContentFiles Include="String\*\*.*">
+      </ContentFiles>
+      <ContentFiles Include="String\*.*">
       </ContentFiles>
     </ItemGroup>
     <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />

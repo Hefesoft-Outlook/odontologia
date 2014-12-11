@@ -33,15 +33,15 @@ namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
         //Captura la imagen del contenedor para los reportes
         private void oirCapturarImagen()
         {            
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<App2.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental", elemento => 
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Hefesoft.Odontograma.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental", elemento => 
             {
                 sacarImagen(elemento);                        
             });
         }
 
-        private async void sacarImagen(App2.Util.Messenger.Capturar_Imagen item)
+        private async void sacarImagen(Hefesoft.Odontograma.Util.Messenger.Capturar_Imagen item)
         {            
-            var snap = new App2.Hub_Partial.Snapshot();
+            var snap = new Hefesoft.Odontograma.Hub_Partial.Snapshot();
             RenderTargetBitmap result = await snap.snapShot(this.LayoutRoot);
             item.Imagen(result);
         }
@@ -145,7 +145,7 @@ namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
 
         public void Dispose()
         {
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<App2.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental");
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Hefesoft.Odontograma.Util.Messenger.Capturar_Imagen>(this, "Capturar mapa dental");
         }
     }
 }

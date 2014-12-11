@@ -15,7 +15,7 @@ using Windows.UI.Xaml.Navigation;
 
 // The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
 
-namespace App2.Mapa_Dental
+namespace Hefesoft.Odontograma.Mapa_Dental
 {
     public sealed partial class Paleta : UserControl
     {

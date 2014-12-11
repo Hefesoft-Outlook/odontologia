@@ -140,7 +140,6 @@
     <RootPropertyPathName Name="SeleccionadoW8" />
     <RootPropertyPathName Name="agregarSuperNumerarioCommand" />
     <RootPropertyPathName Name="Tag" />
-    <RootPropertyPathName Name="insertCommand" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -163,8 +162,6 @@
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Resources" />
-      <RootProperty Name="DataContext" />
       <RootEvent Name="Tapped" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
@@ -301,7 +298,7 @@
       <RootProperty Name="KeyTime" />
       <RootProperty Name="Value" />
     </RootType>
-    <RootType FullName="App2.Fotos.SplitFotos" />
+    <RootType FullName="Hefesoft.Odontograma.Fotos.SplitFotos" />
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="Margin" />
@@ -442,8 +439,8 @@
       <RootProperty Name="Height" />
       <RootProperty Name="FontFamily" />
     </RootType>
-    <RootType FullName="App2.Grillas.Evolucion.SplitEvolucion" />
-    <RootType FullName="App2.Grillas.PacienteTratamientos" />
+    <RootType FullName="Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion" />
+    <RootType FullName="Hefesoft.Odontograma.Grillas.PacienteTratamientos" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
@@ -454,19 +451,17 @@
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
     </RootType>
-    <RootType FullName="App2.Grillas.Plan_tratamiento.Forma_Pago">
+    <RootType FullName="Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="App2.Grillas.Plan_tratamiento.SplitPlanTratamiento">
+    <RootType FullName="Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento">
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Header" />
       <RootProperty Name="Sections" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="Header" />
@@ -476,17 +471,17 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="IsHeaderInteractive" />
     </RootType>
-    <RootType FullName="App2.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento" />
+    <RootType FullName="Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Resources" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="Content" />
       <RootProperty Name="BottomAppBar" />
     </RootType>
-    <RootType FullName="App2.Assets.PopUp.Generico">
+    <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Generico">
       <RootProperty Name="padre" />
     </RootType>
-    <RootType FullName="App2.Assets.PopUp.Modal">
+    <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Modal">
       <RootProperty Name="padre" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
@@ -495,13 +490,13 @@
       <RootProperty Name="IsActive" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="App2.Piezas_Dentales.Seleccionado">
+    <RootType FullName="Hefesoft.Odontograma.Piezas_Dentales.Seleccionado">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="App2.Assets.Indices.Indices" />
-    <RootType FullName="App2.Tipos_Odontograma.Tipos" />
+    <RootType FullName="Hefesoft.Odontograma.Assets.Indices.Indices" />
+    <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Tipos" />
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
       <RootProperty Name="Margin" />
@@ -509,7 +504,7 @@
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental" />
-    <RootType FullName="App2.Mapa_Dental.Paleta" />
+    <RootType FullName="Hefesoft.Odontograma.Mapa_Dental.Paleta" />
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="Name" />
       <RootProperty Name="IsOpen" />
@@ -523,7 +518,7 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
-    <RootType FullName="App2.HubPage" />
+    <RootType FullName="Hefesoft.Odontograma.Odontograma" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />
     </RootType>
@@ -648,18 +643,18 @@
       <RootProperty Name="Item" />
       <RootProperty Name="Margin" />
     </RootType>
-    <RootType FullName="App2.Tipos_Odontograma.Odontograma_Evolucion">
+    <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion">
       <RootProperty Name="Visibility" />
     </RootType>
-    <RootType FullName="App2.Tipos_Odontograma.Odontograma_Inicial">
+    <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial">
       <RootProperty Name="Visibility" />
     </RootType>
-    <RootType FullName="App2.Tipos_Odontograma.Plan_Tratamiento">
+    <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento">
       <RootProperty Name="Visibility" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.FontFamily" />
-    <RootType FullName="App2.Util.Reportes.Templates.Inicial" />
-    <RootType FullName="App2.Util.Reportes.Reportes_Template">
+    <RootType FullName="Hefesoft.Odontograma.Util.Reportes.Templates.Inicial" />
+    <RootType FullName="Hefesoft.Odontograma.Util.Reportes.Reportes_Template">
       <RootProperty Name="Title" />
       <RootProperty Name="Height" />
       <RootProperty Name="ItemsSource" />
@@ -670,15 +665,11 @@
       <RootProperty Name="PageFooterTemplate" />
       <RootProperty Name="ReportFooterTemplate" />
     </RootType>
-    <RootType FullName="App2.Util.Reportes.Templates.Plan_Tratamiento" />
+    <RootType FullName="Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento" />
     <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
       <RootProperty Name="Margin" />
     </RootType>
-    <RootType FullName="App2.Assets.PopUp.Layouts.Agregar_Supernumerario" />
-    <RootType FullName="App2.Assets.PopUp.Layouts.SobreEscribirAdicionar" />
-    <RootType FullName="Hefesoft.Odontograma.Elastic.Locator.ViewModelLocator" />
-    <RootType FullName="Hefesoft.Odontograma.Ejemplo.Seleccionado" />
-    <RootType FullName="Hefesoft.Odontograma.Ejemplo.Listado" />
-    <RootType FullName="Hefesoft.Odontograma.Paginas.Pagina" />
+    <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario" />
+    <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar" />
   </Roots.RootTypes>
 </Roots>

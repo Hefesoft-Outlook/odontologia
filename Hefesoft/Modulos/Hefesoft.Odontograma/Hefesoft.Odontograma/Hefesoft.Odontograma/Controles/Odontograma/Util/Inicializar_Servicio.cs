@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace App2.Util
+namespace Hefesoft.Odontograma.Util
 {
     public class Inicializar_Servicio
     {

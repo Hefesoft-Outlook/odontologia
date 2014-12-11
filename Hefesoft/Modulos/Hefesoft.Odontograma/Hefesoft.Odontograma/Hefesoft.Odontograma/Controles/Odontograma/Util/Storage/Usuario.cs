@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
-namespace App2.Util.Storage
+namespace Hefesoft.Odontograma.Util.Storage
 {
     public class Usuario
     {

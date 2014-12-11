@@ -19,7 +19,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace App2.Util.Reportes.Templates
+namespace Hefesoft.Odontograma.Util.Reportes.Templates
 {
     public sealed partial class Plan_Tratamiento : UserControl
     {
@@ -75,7 +75,7 @@ namespace App2.Util.Reportes.Templates
         private async void HyprlnkBttnExportarPdf_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Exportando... tomara un tiempo...");
-            App2.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
+            Hefesoft.Odontograma.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
             int i = 0;
             foreach (var item in Report._pageTrees)
             {
@@ -88,7 +88,7 @@ namespace App2.Util.Reportes.Templates
             Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(false);
         }
 
-        private async Task<string> guardarImagen(App2.Hub_Partial.Snapshot snap, UIElement item, string nombre)
+        private async Task<string> guardarImagen(Hefesoft.Odontograma.Hub_Partial.Snapshot snap, UIElement item, string nombre)
         {
             nombre = string.Format("{0}.png", nombre);
             var result = await snap.snapShot((FrameworkElement)item, nombre);
@@ -98,8 +98,9 @@ namespace App2.Util.Reportes.Templates
 
         public async Task exportarPdf()
         {
-            var pathPdf = await Pdf.postPdf(document);
-            await Launcher.LaunchUriAsync(new Uri(pathPdf, UriKind.Absolute));
+            //Esto esta dentro de la dll de dto ver el proyecto anterior
+            //var pathPdf = await Pdf.postPdf(document);
+            //await Launcher.LaunchUriAsync(new Uri(pathPdf, UriKind.Absolute));
         }
     }
 }
