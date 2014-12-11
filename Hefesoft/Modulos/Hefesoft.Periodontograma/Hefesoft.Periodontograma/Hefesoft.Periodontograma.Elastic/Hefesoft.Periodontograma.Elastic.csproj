@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="C:\Hefesoft\Task\Hefesoft.Msbuild.Nuget.tasks" />
   <PropertyGroup>
     <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -136,4 +137,27 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+<Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+    <!--
+    <ItemGroup> 
+     <Dependencies Include="log4net"> 
+       <Framework>net40</Framework> 
+       <Version>1.2.10</Version> 
+     </Dependencies> 
+   </ItemGroup> 
+  -->
+	<ItemGroup>    
+      <!--La dll generada-->
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
+      </PrincipalDlls>      
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ContentFiles Include="Assets\Images\*\*.*">
+      </ContentFiles>
+      <ContentFiles Include="Assets\Images\*.*">
+      </ContentFiles>
+    </ItemGroup>
+    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
+  </Target>
 </Project>

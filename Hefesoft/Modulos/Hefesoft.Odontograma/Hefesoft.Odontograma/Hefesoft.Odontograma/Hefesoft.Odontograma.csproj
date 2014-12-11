@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="C:\Hefesoft\Task\Hefesoft.Msbuild.Nuget.tasks" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4CEE2BC1-CD36-40CB-A616-A29F46F7CD8D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hefesoft.Odontograma</RootNamespace>
+    <AssemblyName>Hefesoft.Odontograma</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformVersion>8.1</TargetPlatformVersion>
+    <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ExpressionBlendVersion>12.0.50429.0</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_APP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Controles\Fotos\SplipFotos.xaml.cs">
+      <DependentUpon>SplipFotos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Azure\Snapshot.cs" />
+    <Compile Include="Controles\Odontograma\Boca\Boca.xaml.cs">
+      <DependentUpon>Boca.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml.cs">
+      <DependentUpon>SplitEvolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Grillas\PacienteTratamientos.xaml.cs">
+      <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml.cs">
+      <DependentUpon>Forma_Pago.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml.cs">
+      <DependentUpon>SplitPlanTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
+      <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\HubPage.xaml.cs">
+      <DependentUpon>HubPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.BarClick.cs" />
+    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.Fotos.cs" />
+    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.Login.cs" />
+    <Compile Include="Controles\Odontograma\Indices\Indices.xaml.cs">
+      <DependentUpon>Indices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Mapa Dental\Mapa_Dental.xaml.cs">
+      <DependentUpon>Mapa_Dental.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Abajo.xaml.cs">
+      <DependentUpon>Abajo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Arriba.xaml.cs">
+      <DependentUpon>Arriba.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Central.xaml.cs">
+      <DependentUpon>Central.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Derecha.xaml.cs">
+      <DependentUpon>Derecha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Inferior.xaml.cs">
+      <DependentUpon>Inferior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Izquierda.xaml.cs">
+      <DependentUpon>Izquierda.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Seleccionado.xaml.cs">
+      <DependentUpon>Seleccionado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xaml.cs">
+      <DependentUpon>SuperficieCompleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\Superior.xaml.cs">
+      <DependentUpon>Superior.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml.cs">
+      <DependentUpon>UserControlColorDienteCompleto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml.cs">
+      <DependentUpon>Odontograma_Evolucion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xaml.cs">
+      <DependentUpon>Odontograma_Inicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Tipos Odontograma\Tipos.xaml.cs">
+      <DependentUpon>Tipos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Util\Colores.cs" />
+    <Compile Include="Controles\Odontograma\Util\Fotos\WebCam.cs" />
+    <Compile Include="Controles\Odontograma\Util\Helpers\Layout.cs" />
+    <Compile Include="Controles\Odontograma\Util\Inicializar_Servicio.cs" />
+    <Compile Include="Controles\Odontograma\Util\Inspector.cs" />
+    <Compile Include="Controles\Odontograma\Util\Messenger\Capturar_Imagen.cs" />
+    <Compile Include="Controles\Odontograma\Util\Reportes\Events.cs" />
+    <Compile Include="Controles\Odontograma\Util\Reportes\Reportes_Template.Build.cs" />
+    <Compile Include="Controles\Odontograma\Util\Reportes\Reportes_Template.cs" />
+    <Compile Include="Controles\Odontograma\Util\Reportes\Templates\Inicial.xaml.cs">
+      <DependentUpon>Inicial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xaml.cs">
+      <DependentUpon>Plan_Tratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Util\Storage\Usuario.cs" />
+    <Compile Include="Controles\Paleta\elementoMenu.xaml.cs">
+      <DependentUpon>elementoMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Paleta\Paleta.xaml.cs">
+      <DependentUpon>Paleta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PopUp\Generico.xaml.cs">
+      <DependentUpon>Generico.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PopUp\Layouts\Agregar_Supernumerario.xaml.cs">
+      <DependentUpon>Agregar_Supernumerario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PopUp\Layouts\SobreEscribirAdicionar.xaml.cs">
+      <DependentUpon>SobreEscribirAdicionar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\PopUp\Modal.Partial\Modal.UiWindow.cs" />
+    <Compile Include="Controles\PopUp\Modal.xaml.cs">
+      <DependentUpon>Modal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplo\Listado.xaml.cs">
+      <DependentUpon>Listado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ejemplo\Seleccionado.xaml.cs">
+      <DependentUpon>Seleccionado.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginas\Pagina.xaml.cs">
+      <DependentUpon>Pagina.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Std.SL">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Std.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Platforms.NetCore45">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Azure.Helpers">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Pdf.Entities">
+      <HintPath>..\..\packages\Hefesoft.Pdf.1.0.0\lib\Hefesoft.Pdf.Entities.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.Crypto">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.xml">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Usuario">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Util.W8.UI">
+      <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Windows.UI.Interactivity">
+      <HintPath>..\..\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Controles\Fotos\SplipFotos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Boca\Boca.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Grillas\PacienteTratamientos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\HubPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Indices\Indices.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Mapa Dental\Mapa_Dental.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Abajo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Arriba.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Central.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Derecha.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Inferior.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Izquierda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Seleccionado.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\Superior.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Tipos Odontograma\Tipos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Util\Reportes\Templates\Inicial.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Paleta\elementoMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Paleta\Paleta.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\PopUp\Generico.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\PopUp\Layouts\Agregar_Supernumerario.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\PopUp\Layouts\SobreEscribirAdicionar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\PopUp\Modal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Ejemplo\Seleccionado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ejemplo\Listado.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Paginas\Pagina.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj">
+      <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
+      <Name>Hefesoft.Odontograma.Elastic</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controles\Odontograma\Images\59229.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
+    <VisualStudioVersion>12.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+    <ItemGroup>
+      <Dependencies Include="Newtonsoft.Json">
+        <Framework>win81</Framework>
+        <Version>6.0.3</Version>
+      </Dependencies>
+    </ItemGroup>
+    <ItemGroup>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Paginas\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Paginas\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Controles\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Controles\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\vm\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\vm\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="bin\$(ConfigurationName)\$(TargetName).xr.xml">
+      </LibraryFiles>
+      <!--La dll generada-->
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
+      </PrincipalDlls>
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).Elastic.dll">
+      </PrincipalDlls>
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).pri">
+      </PrincipalDlls>
+    </ItemGroup>
+    <ItemGroup>
+      <LibraryFiles Include="Ejemplo\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Ejemplo\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Paginas\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Paginas\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Controles\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Controles\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Assets\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="Assets\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="vm\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="vm\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="viewmodel\*\*.xaml">
+      </LibraryFiles>
+      <LibraryFiles Include="viewmodel\*.xaml">
+      </LibraryFiles>
+    </ItemGroup>
+    <ItemGroup>
+      <ContentFiles Include="Assets\Images\*\*.*">
+      </ContentFiles>
+      <ContentFiles Include="Assets\Images\*.*">
+      </ContentFiles>
+    </ItemGroup>
+    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
+  </Target>
+</Project>

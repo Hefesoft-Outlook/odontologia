@@ -47,3 +47,4 @@ C:\Cnt\Git\odontologia\Hefesoft\Templates\Visix\Hefesoft.Windows8.Visix\Hefesoft
 C:\Cnt\Git\odontologia\Hefesoft\Templates\Visix\Hefesoft.Windows8.Visix\Hefesoft.Windows8.Visix\bin\Debug\Packages\Windows.UI.Interactivity.1.2.0.0.nupkg
 C:\Cnt\Git\odontologia\Hefesoft\Templates\Visix\Hefesoft.Windows8.Visix\Hefesoft.Windows8.Visix\bin\Debug\Packages\Hefesoft.Util.W8.UI.0.0.0.2.nupkg
 C:\Cnt\Git\odontologia\Hefesoft\Templates\Visix\Hefesoft.Windows8.Visix\Hefesoft.Windows8.Visix\obj\Debug\Hefesoft.Windows8.Visix.csprojResolveAssemblyReference.cache
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Templates\Visix\Hefesoft.Windows8.Visix\Hefesoft.Windows8.Visix\bin\Debug\Packages\Hefesoft.Util.W8.UI.0.0.0.2.nupkg

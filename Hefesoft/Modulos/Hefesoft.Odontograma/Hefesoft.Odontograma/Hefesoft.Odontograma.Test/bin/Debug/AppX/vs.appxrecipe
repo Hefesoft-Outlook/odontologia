@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>HEFESOFT-TACTIL</Machine>
+    <WindowsUser>chibc_000</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d4b09148-78f1-45be-85b0-440ea79bf045</PackageIdentityName>
+    <IntermediateOutputPath>D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>31CBC0F726BE6B53CCD5DEE90F5708D41C9B3ABE2BA04851E24625BFA20CAC4C</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>d4b09148-78f1-45be-85b0-440ea79bf045_1.0.0.0_neutral__bf0gw3942v87a</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>d4b09148-78f1-45be-85b0-440ea79bf045_bf0gw3942v87a!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>d4b09148-78f1-45be-85b0-440ea79bf045</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=chibc_000</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-11T00:12:27.119</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.Test.exe">
+      <PackagePath>Hefesoft.Odontograma.Test.exe</PackagePath>
+      <Modified>2014-12-11T00:12:25.148</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2014-12-11T00:11:00.332</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2014-12-11T00:11:00.654</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platforms.NetCore45.dll</PackagePath>
+      <Modified>2014-12-11T00:11:00.668</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
+      <PackagePath>Hefesoft.Azure.Helpers.dll</PackagePath>
+      <Modified>2014-12-11T00:10:48.181</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Odontograma.dll">
+      <PackagePath>Hefesoft.Odontograma.dll</PackagePath>
+      <Modified>2014-12-11T00:12:20.696</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\bin\Debug\Hefesoft.Odontograma.Elastic.dll">
+      <PackagePath>Hefesoft.Odontograma.Elastic.dll</PackagePath>
+      <Modified>2014-12-11T00:12:16.319</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll">
+      <PackagePath>Hefesoft.Portable.xml.dll</PackagePath>
+      <Modified>2014-12-11T00:10:48.190</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll">
+      <PackagePath>Hefesoft.Standard.dll</PackagePath>
+      <Modified>2014-12-11T00:10:48.472</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll">
+      <PackagePath>Hefesoft.Usuario.dll</PackagePath>
+      <Modified>2014-12-11T00:10:48.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll">
+      <PackagePath>Hefesoft.Util.W8.UI.dll</PackagePath>
+      <Modified>2014-12-11T00:11:59.892</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2014-12-11T00:10:58.768</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-12-11T00:10:54.981</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+      <Modified>2014-12-11T00:10:54.998</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-12-11T00:11:12.206</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-12-11T00:10:57.906</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-12-11T00:10:57.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
+      <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
+      <Modified>2014-12-11T00:11:16.925</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-11T00:11:13.927</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-11T00:11:13.933</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-11T00:11:13.936</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-11T00:11:13.940</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-12-11T00:12:24.643</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-12-11T00:12:24.644</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Ejemplo\Seleccionado.xbf">
+      <PackagePath>Hefesoft.Odontograma\Ejemplo\Seleccionado.xbf</PackagePath>
+      <Modified>2014-12-11T00:12:19.934</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Ejemplo\Listado.xbf">
+      <PackagePath>Hefesoft.Odontograma\Ejemplo\Listado.xbf</PackagePath>
+      <Modified>2014-12-11T00:12:19.934</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Paginas\Pagina.xbf">
+      <PackagePath>Hefesoft.Odontograma\Paginas\Pagina.xbf</PackagePath>
+      <Modified>2014-12-11T00:12:19.935</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.Test.xr.xml">
+      <PackagePath>Hefesoft.Odontograma.Test.xr.xml</PackagePath>
+      <Modified>2014-12-11T00:12:24.626</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Odontograma.xr.xml">
+      <PackagePath>Hefesoft.Odontograma\Hefesoft.Odontograma.xr.xml</PackagePath>
+      <Modified>2014-12-11T00:12:19.628</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml">
+      <PackagePath>Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml</PackagePath>
+      <Modified>2014-12-11T00:11:59.900</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf">
+      <PackagePath>Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf</PackagePath>
+      <Modified>2014-12-11T00:11:59.896</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-12-11T00:12:26.482</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

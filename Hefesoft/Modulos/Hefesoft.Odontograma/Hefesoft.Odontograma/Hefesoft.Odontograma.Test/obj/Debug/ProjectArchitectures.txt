@@ -1,0 +1,4 @@
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Hefesoft.Odontograma.Test.csproj;neutral
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.csproj;neutral

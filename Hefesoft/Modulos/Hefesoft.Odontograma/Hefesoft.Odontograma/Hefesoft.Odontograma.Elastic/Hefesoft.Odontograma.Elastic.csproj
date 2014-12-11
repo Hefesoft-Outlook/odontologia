@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="C:\Hefesoft\Task\Hefesoft.Msbuild.Nuget.tasks" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F6E0C1A1-44A2-4251-BED2-9EE2842EAB4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hefesoft.Odontograma.Elastic</RootNamespace>
+    <AssemblyName>Hefesoft.Odontograma.Elastic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile154</TargetFrameworkProfile>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Adjuntar\vm\vm.cs" />
+    <Compile Include="Boca\Boca.cs" />
+    <Compile Include="Bodega\Bodega.cs" />
+    <Compile Include="Contenedor\vm.cs" />
+    <Compile Include="Contexto\Interfaces\IContexto_Odontologia.cs" />
+    <Compile Include="Contexto\Sample data\Contexto_Sample_Data.cs" />
+    <Compile Include="Contexto\Variables Globales\Contexto.cs" />
+    <Compile Include="Contexto\Wcf\Contexto_Odontologia.cs" />
+    <Compile Include="Convenio\vm.cs" />
+    <Compile Include="Datos de prueba\Paleta.cs" />
+    <Compile Include="Diagnosticos Procedimientos\Tiene_Diagnosticos.cs" />
+    <Compile Include="Entidades\Odontograma.cs" />
+    <Compile Include="Estaticas\Variables_Globales.cs" />
+    <Compile Include="Extensiones\Clases\ConfigurarDiagnosticoProcedimOtraEntity_Extend.cs" />
+    <Compile Include="Extensiones\Clases\DiagnosticoProcedimiento_Extend.cs" />
+    <Compile Include="Extensiones\Collection.cs" />
+    <Compile Include="Extensiones\EnumHelper.cs" />
+    <Compile Include="Extensiones\fillTable.cs" />
+    <Compile Include="Extensiones\Nomenclatura.cs" />
+    <Compile Include="Extensiones\Numero_Sessiones.cs" />
+    <Compile Include="Extensiones\Odontograma_Entity.cs" />
+    <Compile Include="Grillas\Evolucion\Grid_Evolucion.cs" />
+    <Compile Include="Grillas\Evolucion\Partial\Grid_Evolucion.partial.cs" />
+    <Compile Include="Grillas\Evolucion\Util\Convertir_Elemento_Grilla_Dibujo_Odontograma.cs" />
+    <Compile Include="Grillas\Evolucion\Util\ProcedimientosGrillaEvolucion.cs" />
+    <Compile Include="Grillas\General\Pedir_Datos_Grilla_Plan_Tratamiento.cs" />
+    <Compile Include="Grillas\Inicial\vm.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Listado_Procedimientos.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Fijar elementos modo edicion\Wizard.FijarEelementosCombos.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Forma Pago\Forma_Pago.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\UserControlGuardarPlanTratamiento.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Json\Sample data\Wizard.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Messenger\Messenger.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Partial\Tratamiento\Tratamiento.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Util\Convertir_Elemento_Grilla_Dibujo_Odontograma.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Vm.cs" />
+    <Compile Include="Grillas\Plan tratamiento\Wizard.cs" />
+    <Compile Include="Locator\MainViewModel.cs" />
+    <Compile Include="Locator\ViewModelLocator.cs" />
+    <Compile Include="Mapa Dental\util\listado.cs" />
+    <Compile Include="Mapa Dental\Vm.cs" />
+    <Compile Include="Messenger\Barra\Barra.cs" />
+    <Compile Include="Messenger\Boca\Boca.cs" />
+    <Compile Include="Messenger\Finalizar\Consultar_Usuario_Cierra.cs" />
+    <Compile Include="Messenger\Finalizar\Finalizar.cs" />
+    <Compile Include="Messenger\Guardar\Activar_Elementos.cs" />
+    <Compile Include="Messenger\Guardar\Guardar.cs" />
+    <Compile Include="Messenger\Imagenes\Adjuntar.cs" />
+    <Compile Include="Messenger\Imagenes\Guardar_Imagenes.cs" />
+    <Compile Include="Messenger\Imagenes\listado_Imagenes_Cargadas.cs" />
+    <Compile Include="Messenger\Imprimir\Imprimir.cs" />
+    <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Carga_Odontograma_Inicial.cs" />
+    <Compile Include="Messenger\Indices %28Ceo, Ceop%29\Recalcular_Indices.cs" />
+    <Compile Include="Messenger\Mapa_Dental\Pedir_Pintar_Datos.cs" />
+    <Compile Include="Messenger\Mapa_Dental\Validaciones.cs" />
+    <Compile Include="Messenger\Mensajes\Mostrar_Mensaje_Usuario.cs" />
+    <Compile Include="Messenger\Modo_Lectura\Modo_Lectuta.cs" />
+    <Compile Include="Messenger\Mostrar Ocupado\Busy.cs" />
+    <Compile Include="Messenger\Mostrar Ocupado\Mostrar_Cargando.cs" />
+    <Compile Include="Messenger\Odontograma\Cargar_Odontograma.cs" />
+    <Compile Include="Messenger\Odontograma\Diagnosticos procedimientos\Procedimiento_Realizado.cs" />
+    <Compile Include="Messenger\Odontograma\Estado_DesHacer.cs" />
+    <Compile Include="Messenger\Odontograma\Tipo\Cambiar_Tipo_Odontograma.cs" />
+    <Compile Include="Messenger\Paciente\Cargar_Recursos_Ui.cs" />
+    <Compile Include="Messenger\Paciente\Inicializar_Valor_Paciente.cs" />
+    <Compile Include="Messenger\Paleta\Aplicar_Tratamiento.cs" />
+    <Compile Include="Messenger\Paleta\Cargar_Diagnosticos.cs" />
+    <Compile Include="Messenger\Paleta\cargar_Diagnosticos_Procedimientos.cs" />
+    <Compile Include="Messenger\Paleta\Paleta.cs" />
+    <Compile Include="Messenger\Paleta\Placa Bacteriana\Placa.cs" />
+    <Compile Include="Messenger\PopUp\Cerrar_Pop_Up_Generico.cs" />
+    <Compile Include="Messenger\Pop_Up\Mostrar_Ventana.cs" />
+    <Compile Include="Odontograma\DiagnosticoProcedimiento.cs" />
+    <Compile Include="Odontograma\Odontograma.cs" />
+    <Compile Include="Odontograma\util\Inicializar_Datos.cs" />
+    <Compile Include="Paleta\Vm.cs" />
+    <Compile Include="Pieza Seleccionada\Seleccionado.cs" />
+    <Compile Include="Pieza Seleccionada\vm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursos\Mensajes.Designer.cs" />
+    <Compile Include="Recursos\Mensajes.es-CO.Designer.cs" />
+    <Compile Include="Recursos\Mensajes.es-CO1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.es-CO.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\Mensajes1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Mensajes.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Recursos\PublicResource.cs" />
+    <Compile Include="Service References\Proxy.cs" />
+    <Compile Include="Servicio\Client.cs" />
+    <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
+    <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Inicial\Json Objects\Inicial.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Json Implementation\vm.partial.cs" />
+    <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Sample Data\Sample.cs" />
+    <Compile Include="Tipos_Odontograma\Validaciones\Plan_Tratamiento.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Evolucion.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Odontograma_Inicial.cs" />
+    <Compile Include="Tipos_Odontograma\Vm\Plan_Tratamiento.cs" />
+    <Compile Include="Util\diagnosticoProcedimiento.cs" />
+    <Compile Include="Util\Evolucion\Convertir_Elementos_Grilla_Plan_Evolucion.cs" />
+    <Compile Include="Util\Evolucion\Finalizar_Tratamiento.cs" />
+    <Compile Include="Util\Imagenes\Imagenes.cs" />
+    <Compile Include="Util\Inicial\GrillaTratamiento.cs" />
+    <Compile Include="Util\Mapa dental\Supernumerario.cs" />
+    <Compile Include="Util\Mapa dental\ui.cs" />
+    <Compile Include="Util\Mapa dental\Validaciones.cs" />
+    <Compile Include="Util\Modos\Modo.cs" />
+    <Compile Include="Util\Paleta.cs" />
+    <Compile Include="Util\Plan Tratamiento\PlanTratamientoEstadoNuevoEliminadoModificado.cs" />
+    <Compile Include="Util\Plan Tratamiento\ProcedimientosGrillaPlanTratamiento.cs" />
+    <Compile Include="Util\Plan Tratamiento\Validaciones.cs" />
+    <Compile Include="Util\PopUp\EstadoSobreEscribirAdicionar.cs" />
+    <Compile Include="Util\superficie.cs" />
+    <Compile Include="Util\TipoOdontograma.cs" />
+    <Compile Include="View Model Locator\MainViewModel.cs" />
+    <Compile Include="View Model Locator\ViewModelLocator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="bouncy_castle_hmac_sha_pcl">
+      <HintPath>..\..\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
+    </Reference>
+    <Reference Include="Cnt.Std.SL">
+      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Std.SL.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.dll</HintPath>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras">
+      <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\portable-net45+sl4+wp71+win8\GalaSoft.MvvmLight.Extras.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Azure.Helpers">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.Crypto">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Portable.xml">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Standard">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Usuario">
+      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Threading.Tasks.Extensions">
+      <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net40+sl4+win8+wp71+wpa81\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\portable-net40+sl4+wp7+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\..\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\..\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Messenger\Validaciones\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Recursos\Mensajes.es-CO.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes.es-CO1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursos\Mensajes.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Mensajes1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+    
+    <ItemGroup> 
+     <Dependencies Include="Hefesoft.Vendors.Cnt"> 
+       <Framework>portable-net45+sl40+win+wp80</Framework>        
+     </Dependencies> 
+   </ItemGroup> 
+  
+    <ItemGroup>
+      <!--La dll generada-->
+      <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
+      </PrincipalDlls>
+	  
+	  <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
+      </PrincipalDlls>
+	  
+    </ItemGroup>
+    <ItemGroup>
+      <ContentFiles Include="Assets\Images\*\*.*">
+      </ContentFiles>
+      <ContentFiles Include="Assets\Images\*.*">
+      </ContentFiles>
+    </ItemGroup>
+    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
+  </Target>
+</Project>
