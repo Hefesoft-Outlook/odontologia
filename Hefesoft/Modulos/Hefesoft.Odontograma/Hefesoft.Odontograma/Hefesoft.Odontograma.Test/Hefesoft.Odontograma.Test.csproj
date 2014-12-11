@@ -119,7 +119,6 @@
     <Content Include="Assets\SmallLogo.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
-    <Content Include="controles\odontograma\images\59229.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -165,18 +164,6 @@
     </Reference>
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Entities.Odontologia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Hefesoft.Odontograma.0.0.0.1\lib\Hefesoft.Entities.Odontologia.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Odontograma, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Hefesoft.Odontograma.0.0.0.1\lib\Hefesoft.Odontograma.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Odontograma.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\packages\Hefesoft.Odontograma.0.0.0.1\lib\Hefesoft.Odontograma.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Pdf.Entities">
       <HintPath>..\..\packages\Hefesoft.Pdf.1.0.0\lib\Hefesoft.Pdf.Entities.dll</HintPath>
@@ -229,6 +216,20 @@
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
       <Name>Behaviors SDK %28XAML%29</Name>
     </SDKReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj">
+      <Project>{b6817929-a852-471d-8be3-5d9dedd02b7e}</Project>
+      <Name>Hefesoft.Entities.Odontologia</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj">
+      <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
+      <Name>Hefesoft.Odontograma.Elastic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hefesoft.Odontograma\Hefesoft.Odontograma.csproj">
+      <Project>{4cee2bc1-cd36-40cb-a616-a29f46f7cd8d}</Project>
+      <Name>Hefesoft.Odontograma</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
