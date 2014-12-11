@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Hefesoft.Util.W8.UI" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Hefesoft.Util.W8.UI">
+				<NamedResource name="Hefesoft.Util.W8.UI.xr.xml" uri="ms-resource://Hefesoft.Util.W8.UI/Files/Hefesoft.Util.W8.UI/Hefesoft.Util.W8.UI.xr.xml">
+					<Candidate type="Path">
+						<Value>Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Assets">
+					<ResourceMapSubtree name="BusyBox">
+						<NamedResource name="BusyBox.xbf" uri="ms-resource://Hefesoft.Util.W8.UI/Files/Hefesoft.Util.W8.UI/Assets/BusyBox/BusyBox.xbf">
+							<Candidate type="Path">
+								<Value>Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf</Value>
+							</Candidate>
+						</NamedResource>
+					</ResourceMapSubtree>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>

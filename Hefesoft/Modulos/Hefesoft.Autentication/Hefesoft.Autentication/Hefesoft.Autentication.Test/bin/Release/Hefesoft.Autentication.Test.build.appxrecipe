@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WINDOWS8</Machine>
+    <WindowsUser>chibc_000</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Release|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>d4b09148-78f1-45be-85b0-440ea79bf045</PackageIdentityName>
+    <IntermediateOutputPath>C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\obj\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\Hefesoft.Autentication.Test.exe">
+      <PackagePath>Hefesoft.Autentication.Test.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platforms.NetCore45.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication.dll">
+      <PackagePath>Hefesoft.Autentication.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication.Elastic.dll">
+      <PackagePath>Hefesoft.Autentication.Elastic.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
+      <PackagePath>Hefesoft.Azure.Helpers.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll">
+      <PackagePath>Hefesoft.Portable.Crypto.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll">
+      <PackagePath>Hefesoft.Portable.xml.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll">
+      <PackagePath>Hefesoft.Standard.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll">
+      <PackagePath>Hefesoft.Usuario.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll">
+      <PackagePath>Hefesoft.Util.W8.UI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
+      <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\Hefesoft.Autentication.Test.xr.xml">
+      <PackagePath>Hefesoft.Autentication.Test.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication\Hefesoft.Autentication.xr.xml">
+      <PackagePath>Hefesoft.Autentication\Hefesoft.Autentication.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication\Ejemplo\Listado.xbf">
+      <PackagePath>Hefesoft.Autentication\Ejemplo\Listado.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication\Ejemplo\Seleccionado.xbf">
+      <PackagePath>Hefesoft.Autentication\Ejemplo\Seleccionado.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication\Paginas\Pagina.xbf">
+      <PackagePath>Hefesoft.Autentication\Paginas\Pagina.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml">
+      <PackagePath>Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf">
+      <PackagePath>Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Release\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

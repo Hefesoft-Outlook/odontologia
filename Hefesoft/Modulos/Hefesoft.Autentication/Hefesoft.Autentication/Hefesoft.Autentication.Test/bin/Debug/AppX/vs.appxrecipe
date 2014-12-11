@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>WINDOWS8</Machine>
+    <WindowsUser>chibc_000</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>13819Hefesoft.Odontology</PackageIdentityName>
+    <IntermediateOutputPath>C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>8738B62FDB1D5B955CD7CB039CB1479938FE011DDB3686794B0345BD86938854</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>13819Hefesoft.Odontology_1.1.0.0_neutral__xxn0hzvd6n02r</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>13819Hefesoft.Odontology_xxn0hzvd6n02r!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>13819Hefesoft.Odontology</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=FDFAF492-FD4C-4771-B30F-3BA878AA623D</RegisteredPackagePublisher>
+    <RegisteredVersion>1.1.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-10T11:32:50.039</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\Hefesoft.Autentication.Test.exe">
+      <PackagePath>Hefesoft.Autentication.Test.exe</PackagePath>
+      <Modified>2014-12-10T11:32:47.559</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll">
+      <PackagePath>AutoMapper.dll</PackagePath>
+      <Modified>2014-12-09T23:15:59.622</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll">
+      <PackagePath>AutoMapper.WinRT.dll</PackagePath>
+      <Modified>2014-12-09T23:15:59.642</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client.dll">
+      <PackagePath>Facebook.Client.dll</PackagePath>
+      <Modified>2014-12-10T01:13:37.338</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.6.4.0\lib\win8\Facebook.dll">
+      <PackagePath>Facebook.dll</PackagePath>
+      <Modified>2014-12-10T01:13:35.542</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll">
+      <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
+      <Modified>2014-12-09T23:15:45.393</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
+      <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
+      <Modified>2014-12-09T23:15:45.788</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll">
+      <PackagePath>GalaSoft.MvvmLight.Platforms.NetCore45.dll</PackagePath>
+      <Modified>2014-12-09T23:15:45.831</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Hefesoft.Autentication.dll">
+      <PackagePath>Hefesoft.Autentication.dll</PackagePath>
+      <Modified>2014-12-10T11:32:42.180</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\bin\Debug\Hefesoft.Autentication.Elastic.dll">
+      <PackagePath>Hefesoft.Autentication.Elastic.dll</PackagePath>
+      <Modified>2014-12-10T02:23:16.092</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
+      <PackagePath>Hefesoft.Azure.Helpers.dll</PackagePath>
+      <Modified>2014-12-09T23:15:22.284</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll">
+      <PackagePath>Hefesoft.Portable.Crypto.dll</PackagePath>
+      <Modified>2014-12-09T23:15:22.660</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll">
+      <PackagePath>Hefesoft.Portable.xml.dll</PackagePath>
+      <Modified>2014-12-09T23:15:22.716</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll">
+      <PackagePath>Hefesoft.Standard.dll</PackagePath>
+      <Modified>2014-12-09T23:15:23.139</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entities.Usuario\bin\Debug\Hefesoft.Usuario.dll">
+      <PackagePath>Hefesoft.Usuario.dll</PackagePath>
+      <Modified>2014-12-10T11:22:17.160</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll">
+      <PackagePath>Hefesoft.Util.W8.UI.dll</PackagePath>
+      <Modified>2014-12-09T23:17:41.050</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\LiveSDK.5.6\WindowsXAML\Microsoft.Live.dll">
+      <PackagePath>Microsoft.Live.dll</PackagePath>
+      <Modified>2014-12-10T01:12:14.923</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll">
+      <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
+      <Modified>2014-12-09T23:15:42.663</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+      <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-12-09T23:15:35.742</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+      <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
+      <Modified>2014-12-09T23:15:35.772</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+      <Modified>2014-12-09T23:16:07.651</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+      <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
+      <Modified>2014-12-09T23:15:40.908</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+      <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
+      <Modified>2014-12-09T23:15:40.946</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
+      <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
+      <Modified>2014-12-09T23:16:15.918</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll">
+      <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
+      <Modified>2014-12-09T23:16:01.771</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll">
+      <PackagePath>System.IO.dll</PackagePath>
+      <Modified>2014-12-09T23:15:27.713</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+      <Modified>2014-12-09T23:15:39.688</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+      <Modified>2014-12-09T23:15:27.776</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll">
+      <PackagePath>System.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-12-09T23:15:28.189</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\images\Facebook.png">
+      <PackagePath>Assets\images\Facebook.png</PackagePath>
+      <Modified>2014-12-10T02:26:50.141</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\images\Microsoft-Outlook.png">
+      <PackagePath>Assets\images\Microsoft-Outlook.png</PackagePath>
+      <Modified>2014-12-10T02:26:50.161</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-09T23:16:10.686</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-09T23:16:10.701</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-09T23:16:10.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2014-12-09T23:16:10.735</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\Assets\images\Facebook.png">
+      <PackagePath>Hefesoft.Autentication\Assets\images\Facebook.png</PackagePath>
+      <Modified>2014-12-10T02:26:26.010</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\Assets\images\Microsoft-Outlook.png">
+      <PackagePath>Hefesoft.Autentication\Assets\images\Microsoft-Outlook.png</PackagePath>
+      <Modified>2014-12-10T02:26:25.966</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Fonts\LiveSymbol.ttf">
+      <PackagePath>Fonts\LiveSymbol.ttf</PackagePath>
+      <Modified>2014-12-10T02:31:36.415</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\Fonts\LiveSymbol.ttf">
+      <PackagePath>Hefesoft.Autentication\Fonts\LiveSymbol.ttf</PackagePath>
+      <Modified>2014-12-10T01:12:19.094</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2014-12-09T23:20:36.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2014-12-10T02:10:39.073</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Autentication.xbf">
+      <PackagePath>Hefesoft.Autentication\Controles\Autentication.xbf</PackagePath>
+      <Modified>2014-12-10T02:27:05.119</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\fbLogin.xbf">
+      <PackagePath>Hefesoft.Autentication\Controles\fbLogin.xbf</PackagePath>
+      <Modified>2014-12-10T01:23:07.274</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Login.xbf">
+      <PackagePath>Hefesoft.Autentication\Controles\Login.xbf</PackagePath>
+      <Modified>2014-12-10T01:23:07.275</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Usuario.xbf">
+      <PackagePath>Hefesoft.Autentication\Controles\Usuario.xbf</PackagePath>
+      <Modified>2014-12-10T02:27:05.119</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\windows.xbf">
+      <PackagePath>Hefesoft.Autentication\Controles\windows.xbf</PackagePath>
+      <Modified>2014-12-10T01:23:07.276</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\Hefesoft.Autentication.Test.xr.xml">
+      <PackagePath>Hefesoft.Autentication.Test.xr.xml</PackagePath>
+      <Modified>2014-12-10T02:10:39.042</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Hefesoft.Autentication.xr.xml">
+      <PackagePath>Hefesoft.Autentication\Hefesoft.Autentication.xr.xml</PackagePath>
+      <Modified>2014-12-10T02:19:52.249</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\FacebookDialogPage.xaml">
+      <PackagePath>Facebook.Client\FacebookDialogPage.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.404</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Controls\FriendPicker\FriendPicker.xaml">
+      <PackagePath>Facebook.Client\Controls\FriendPicker\FriendPicker.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.372</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Controls\LoginButton\LoginButton.xaml">
+      <PackagePath>Facebook.Client\Controls\LoginButton\LoginButton.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.385</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Controls\PlacePicker\PlacePicker.xaml">
+      <PackagePath>Facebook.Client\Controls\PlacePicker\PlacePicker.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.394</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Controls\ProfilePicture\ProfilePicture.xaml">
+      <PackagePath>Facebook.Client\Controls\ProfilePicture\ProfilePicture.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.400</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Images\fb_blank_place_profile_square.png">
+      <PackagePath>Facebook.Client\Images\fb_blank_place_profile_square.png</PackagePath>
+      <Modified>2014-12-10T01:13:37.412</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Images\fb_blank_profile_portrait.png">
+      <PackagePath>Facebook.Client\Images\fb_blank_profile_portrait.png</PackagePath>
+      <Modified>2014-12-10T01:13:37.418</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Images\fb_blank_profile_square.png">
+      <PackagePath>Facebook.Client\Images\fb_blank_profile_square.png</PackagePath>
+      <Modified>2014-12-10T01:13:37.427</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\Themes\Generic.xaml">
+      <PackagePath>Facebook.Client\Themes\Generic.xaml</PackagePath>
+      <Modified>2014-12-10T01:13:37.432</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml">
+      <PackagePath>Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml</PackagePath>
+      <Modified>2014-12-09T23:17:41.105</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf">
+      <PackagePath>Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf</PackagePath>
+      <Modified>2014-12-09T23:17:41.095</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2014-12-10T11:32:49.436</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PriInfo>
+	<ResourceMap name="Hefesoft.Autentication" version="1.0" primary="true">
+		<Qualifiers/>
+		<ResourceMapSubtree name="Files">
+			<ResourceMapSubtree name="Hefesoft.Autentication">
+				<NamedResource name="Hefesoft.Autentication.xr.xml" uri="ms-resource://Hefesoft.Autentication/Files/Hefesoft.Autentication/Hefesoft.Autentication.xr.xml">
+					<Candidate type="Path">
+						<Value>Hefesoft.Autentication\Hefesoft.Autentication.xr.xml</Value>
+					</Candidate>
+				</NamedResource>
+				<ResourceMapSubtree name="Ejemplo">
+					<NamedResource name="Listado.xbf" uri="ms-resource://Hefesoft.Autentication/Files/Hefesoft.Autentication/Ejemplo/Listado.xbf">
+						<Candidate type="Path">
+							<Value>Hefesoft.Autentication\Ejemplo\Listado.xbf</Value>
+						</Candidate>
+					</NamedResource>
+					<NamedResource name="Seleccionado.xbf" uri="ms-resource://Hefesoft.Autentication/Files/Hefesoft.Autentication/Ejemplo/Seleccionado.xbf">
+						<Candidate type="Path">
+							<Value>Hefesoft.Autentication\Ejemplo\Seleccionado.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+				<ResourceMapSubtree name="Paginas">
+					<NamedResource name="Pagina.xbf" uri="ms-resource://Hefesoft.Autentication/Files/Hefesoft.Autentication/Paginas/Pagina.xbf">
+						<Candidate type="Path">
+							<Value>Hefesoft.Autentication\Paginas\Pagina.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
+			</ResourceMapSubtree>
+		</ResourceMapSubtree>
+	</ResourceMap>
+</PriInfo>
