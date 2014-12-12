@@ -1,0 +1,32 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hefesoft.Terceros.Paginas"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Ejemplo="using:Hefesoft.Terceros.Ejemplo"
+    x:Class="Hefesoft.Terceros.Paginas.Pagina"
+    mc:Ignorable="d">
+
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Hub Header="Hub" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch">
+            <HubSection Header="Listado">
+                <DataTemplate>
+                    <Grid Height="500" Width="300">
+                        <Ejemplo:Listado></Ejemplo:Listado>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+            <HubSection Header="Adicionar">
+                <DataTemplate>
+                    <Grid>
+                        <Ejemplo:Seleccionado></Ejemplo:Seleccionado>
+                    </Grid>
+                </DataTemplate>
+            </HubSection>
+        </Hub>
+
+        
+
+    </Grid>
+</Page>

@@ -10,8 +10,8 @@
     <ProjectGuid>{4CEE2BC1-CD36-40CB-A616-A29F46F7CD8D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Hefesoft.ParamDiagnosticos</RootNamespace>
-    <AssemblyName>Hefesoft.ParamDiagnosticos</AssemblyName>
+    <RootNamespace>Hefesoft.NivelesSeveridad</RootNamespace>
+    <AssemblyName>Hefesoft.NivelesSeveridad</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformVersion>8.1</TargetPlatformVersion>
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
@@ -105,36 +105,15 @@
     <Compile Include="Controles\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles\elementoMenu.xaml.cs">
-      <DependentUpon>elementoMenu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controles\List.xaml.cs">
       <DependentUpon>List.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Paginas\Diagnosticos_Procedimientos.xaml.cs">
-      <DependentUpon>Diagnosticos_Procedimientos.xaml</DependentUpon>
+    <Compile Include="Paginas\Niveles_Severidad.xaml.cs">
+      <DependentUpon>Niveles_Severidad.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
-      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
-    </Reference>
-    <Reference Include="Cnt.Panacea.Entities.Pcl.Laboratorio">
-      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Laboratorio.dll</HintPath>
-    </Reference>
-    <Reference Include="Cnt.Panacea.Entities.Pcl.Odontologia">
-      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Odontologia.dll</HintPath>
-    </Reference>
-    <Reference Include="Cnt.Panacea.Entities.Pcl.Parametrizacion">
-      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Parametrizacion.dll</HintPath>
-    </Reference>
-    <Reference Include="Cnt.Std.SL">
-      <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Std.SL.dll</HintPath>
-    </Reference>
-    <Reference Include="Color_Picker">
-      <HintPath>..\..\packages\RadialColorPickerCV.1.2.8\lib\Color_Picker.dll</HintPath>
-    </Reference>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll</HintPath>
     </Reference>
@@ -146,12 +125,6 @@
     </Reference>
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Entities.Odontologia">
-      <HintPath>..\..\packages\Hefesoft.Odontograma.Elastic.0.0.0.1\lib\Hefesoft.Entities.Odontologia.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Odontograma.Elastic">
-      <HintPath>..\..\packages\Hefesoft.Odontograma.Elastic.0.0.0.1\lib\Hefesoft.Odontograma.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
@@ -189,16 +162,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Controles\Add.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controles\elementoMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -206,21 +173,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Paginas\Diagnosticos_Procedimientos.xaml">
+    <Page Include="Paginas\Niveles_Severidad.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Hefesoft.ParamDiagnosticos.Elastic\Hefesoft.ParamDiagnosticos.Elastic.csproj">
+    <ProjectReference Include="..\Hefesoft.NivelesSeveridad.Elastic\Hefesoft.NivelesSeveridad.Elastic.csproj">
       <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
-      <Name>Hefesoft.ParamDiagnosticos.Elastic</Name>
+      <Name>Hefesoft.NivelesSeveridad.Elastic</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0">
-      <Name>Behaviors SDK %28XAML%29</Name>
-    </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
@@ -239,22 +201,14 @@
   </Target>
   -->
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
-    <ItemGroup>
-    
-    <Dependencies Include="RadialColorPickerCV">
-        <Framework>win81</Framework>
-        <Version>1.2.8</Version>
-    </Dependencies>
-	
-	<Dependencies Include="AutoMapper">
-        <Framework>win81</Framework>
-        <Version>3.0.0</Version>
-    </Dependencies>
-	
-	
-    
-	
-	</ItemGroup>
+    <!--
+    <ItemGroup> 
+     <Dependencies Include="log4net"> 
+       <Framework>net40</Framework> 
+       <Version>1.2.10</Version> 
+     </Dependencies> 
+   </ItemGroup> 
+  -->
     <ItemGroup>
       <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">
       </LibraryFiles>
@@ -298,7 +252,9 @@
       <LibraryFiles Include="Paginas\*\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Paginas\*.xaml">
-      </LibraryFiles>     
+      </LibraryFiles>
+      <LibraryFiles Include="Controles\*\*.xaml">
+      </LibraryFiles>
       <LibraryFiles Include="Controles\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Assets\*\*.xaml">

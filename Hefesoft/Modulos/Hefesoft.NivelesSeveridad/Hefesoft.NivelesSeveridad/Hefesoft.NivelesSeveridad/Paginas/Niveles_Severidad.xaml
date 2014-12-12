@@ -1,0 +1,54 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="Hefesoft.NivelesSeveridad.Paginas.Niveles_Severidad"    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:NivelesSeveridad="using:Hefesoft.NivelesSeveridad.Controles"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Hefesoft.NivelesSeveridad.Elastic.Locator" x:Key="Locator" />
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="NivelesSeveridad" Source="{StaticResource Locator}"/>
+    </UserControl.DataContext>
+
+
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="140"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Back button and page title -->
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+                        Style="{StaticResource NavigationBackButtonNormalStyle}"
+                        VerticalAlignment="Top"
+                        AutomationProperties.Name="Back"
+                        AutomationProperties.AutomationId="BackButton"
+                        AutomationProperties.ItemType="Navigation Button"/>
+            <TextBlock x:Name="pageTitle" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="39,0,0,0">
+
+        	<NivelesSeveridad:List/>
+        	<NivelesSeveridad:Add Margin="10,0,0,0"/>
+
+        </StackPanel>
+
+    </Grid>
+</Page>
