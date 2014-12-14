@@ -35,3 +35,5 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentic
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\obj\Debug\Hefesoft.Autentication.Elastic.csproj.App.config
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\obj\Debug\Hefesoft.Autentication.Elastic.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\obj\Debug\Hefesoft.Autentication.Elastic.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\bin\Debug\Hefesoft.Usuario.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\obj\Debug\Hefesoft.Autentication.Elastic.csprojResolveAssemblyReference.cache

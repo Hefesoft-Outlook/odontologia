@@ -7,10 +7,10 @@
 
     For more information on package manifest files, see http://go.microsoft.com/fwlink/?LinkID=241727
   -->
-  <Identity Name="d4b09148-78f1-45be-85b0-440ea79bf045" Publisher="CN=chibc_000" Version="1.0.0.0" ProcessorArchitecture="neutral" />
+  <Identity Name="13819Hefesoft.Odontology" Publisher="CN=FDFAF492-FD4C-4771-B30F-3BA878AA623D" Version="1.1.0.0" ProcessorArchitecture="neutral" />
   <Properties>
-    <DisplayName>Pacientes.Test</DisplayName>
-    <PublisherDisplayName>chibc_000</PublisherDisplayName>
+    <DisplayName>Odontology</DisplayName>
+    <PublisherDisplayName>Hefesoft</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -22,7 +22,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="Hefesoft.Autentication.Test.exe" EntryPoint="Pacientes.Test.App">
-      <m2:VisualElements DisplayName="Pacientes.Test" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Pacientes.Test" ForegroundText="light" BackgroundColor="#464646">
+      <m2:VisualElements DisplayName="Odontology" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Pacientes.Test" ForegroundText="light" BackgroundColor="#464646">
         <m2:SplashScreen Image="Assets\SplashScreen.png" />
       </m2:VisualElements>
     </Application>

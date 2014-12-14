@@ -170,10 +170,6 @@
     <Reference Include="Hefesoft.Standard">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Usuario, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Entidades\Hefesoft.Entities.Usuario\bin\Debug\Hefesoft.Usuario.dll</HintPath>
-    </Reference>
     <Reference Include="Hefesoft.Util.W8.UI">
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
@@ -209,6 +205,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
+      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
+      <Name>Hefesoft.Usuario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hefesoft.Autentication.Elastic\Hefesoft.Autentication.Elastic.csproj">
       <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
       <Name>Hefesoft.Autentication.Elastic</Name>

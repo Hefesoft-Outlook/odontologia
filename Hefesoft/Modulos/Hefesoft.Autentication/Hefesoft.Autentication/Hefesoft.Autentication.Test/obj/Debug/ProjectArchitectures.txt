@@ -1,3 +1,7 @@
+C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj;neutral
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\Hefesoft.Autentication.Elastic.csproj;neutral
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\Hefesoft.Autentication.Elastic.csproj;neutral
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Hefesoft.Autentication.Test.csproj;neutral

@@ -2,6 +2,7 @@
 <Roots >
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="Usuarios" />
+    <RootPropertyPathName Name="vmUsuarios" />
     <RootPropertyPathName Name="UsuarioActivo" />
     <RootPropertyPathName Name="nombre" />
     <RootPropertyPathName Name="imagenRuta" />
@@ -17,7 +18,6 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
       <RootProperty Name="Source" />
-      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">

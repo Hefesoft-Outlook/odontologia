@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hefesoft.Autentication.Elas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hefesoft.Autentication.Test", "Hefesoft.Autentication\Hefesoft.Autentication.Test\Hefesoft.Autentication.Test.csproj", "{143A1459-67D6-4A14-8D72-04B96A1B94E7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hefesoft.Usuario", "..\..\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj", "{F6E9726E-6319-40F6-BCCF-1E6795770AC4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,16 @@ Global
 		{143A1459-67D6-4A14-8D72-04B96A1B94E7}.Release|x86.ActiveCfg = Release|x86
 		{143A1459-67D6-4A14-8D72-04B96A1B94E7}.Release|x86.Build.0 = Release|x86
 		{143A1459-67D6-4A14-8D72-04B96A1B94E7}.Release|x86.Deploy.0 = Release|x86
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Release|ARM.ActiveCfg = Release|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Release|x64.ActiveCfg = Release|Any CPU
+		{F6E9726E-6319-40F6-BCCF-1E6795770AC4}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

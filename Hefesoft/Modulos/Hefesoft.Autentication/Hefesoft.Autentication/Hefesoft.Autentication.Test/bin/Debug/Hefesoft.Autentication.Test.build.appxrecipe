@@ -88,20 +88,23 @@
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
       <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll">
-      <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll">
       <PackagePath>System.IO.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entidades\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll">
       <PackagePath>System.Net.Http.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Entidades\Hefesoft.Entidades\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll">
       <PackagePath>System.Threading.Tasks.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\dlls\Hefesoft.Pdf.Entities.dll">
+      <PackagePath>Hefesoft.Pdf.Entities.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll">
+      <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\Assets\images\Facebook.png">
       <PackagePath>Assets\images\Facebook.png</PackagePath>

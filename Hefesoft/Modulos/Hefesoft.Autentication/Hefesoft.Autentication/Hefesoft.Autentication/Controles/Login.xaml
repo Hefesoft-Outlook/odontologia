@@ -19,8 +19,5 @@
     		 <login:fbLogin Name="facebook" HorizontalAlignment="Center"></login:fbLogin>
              <login:windows Name="outlook" HorizontalAlignment="Center"></login:windows>
     	</StackPanel>
-
-		<login:Usuario Grid.Column="1"/>
-
     </Grid>
 </UserControl>

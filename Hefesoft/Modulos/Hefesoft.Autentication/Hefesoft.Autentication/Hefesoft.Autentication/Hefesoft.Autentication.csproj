@@ -155,9 +155,6 @@
     <Reference Include="Hefesoft.Standard">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Usuario">
-      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
-    </Reference>
     <Reference Include="Hefesoft.Util.W8.UI">
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
@@ -215,6 +212,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Entidades\Hefesoft.Entities.Usuario\Hefesoft.Usuario.csproj">
+      <Project>{f6e9726e-6319-40f6-bccf-1e6795770ac4}</Project>
+      <Name>Hefesoft.Usuario</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hefesoft.Autentication.Elastic\Hefesoft.Autentication.Elastic.csproj">
       <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
       <Name>Hefesoft.Autentication.Elastic</Name>
@@ -238,7 +239,7 @@
   -->
   <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
     <ItemGroup>
-	 <Dependencies Include="AutoMapper">
+      <Dependencies Include="AutoMapper">
         <Framework>portable-net45+sl40+win+wp80</Framework>
         <Version>3.0.0</Version>
       </Dependencies>
@@ -266,7 +267,7 @@
       <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*.*">
-      </LibraryFiles>
+      </LibraryFiles>	  
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*.*">
@@ -297,10 +298,12 @@
       <LibraryFiles Include="Controles\*\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Controles\*.xaml">
+      </LibraryFiles>      
+	  <LibraryFiles Include="Assets\**\*.*">
+      </LibraryFiles>	  
+	  <LibraryFiles Include="Fonts\*\*.*">
       </LibraryFiles>
-      <LibraryFiles Include="Assets\*\*.xaml">
-      </LibraryFiles>
-      <LibraryFiles Include="Assets\*.xaml">
+	  <LibraryFiles Include="Fonts\**\*.*">
       </LibraryFiles>
       <LibraryFiles Include="vm\*\*.xaml">
       </LibraryFiles>

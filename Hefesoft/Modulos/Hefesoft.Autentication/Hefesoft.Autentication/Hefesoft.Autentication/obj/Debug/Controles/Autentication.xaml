@@ -17,8 +17,9 @@
     </UserControl.DataContext>
 
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <login:Login></login:Login>
+    <Grid x:FieldModifier="public" x:Name="LayoutRoot"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <login:Login></login:Login>        
+        
     </Grid>
 </Page>
 

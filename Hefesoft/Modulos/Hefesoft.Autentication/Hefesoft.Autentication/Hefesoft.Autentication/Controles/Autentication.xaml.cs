@@ -1,4 +1,5 @@
-﻿using Microsoft.Practices.ServiceLocation;
+﻿using Hefesoft.Util.W8.UI.Common;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,8 +27,23 @@ namespace Hefesoft.Autentication.Controles
         public static bool ingresoInicial = false;
         public Autentication()
         {
-            this.InitializeComponent();            
-            Loaded += Autentication_Loaded;
+            this.InitializeComponent();
+            Loaded += Autentication_Loaded; 
+            NavigationHelper = new NavigationHelper();
+        }
+
+        public NavigationHelper NavigationHelper { get; set; }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            removeBusyFromVisualThree(e);
+        }
+
+        private void removeBusyFromVisualThree(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            UIElement item = LayoutRoot.Children.LastOrDefault();
+            LayoutRoot.Children.Remove(item);
         }
 
         void Autentication_Loaded(object sender, RoutedEventArgs e)
@@ -62,6 +78,14 @@ namespace Hefesoft.Autentication.Controles
                 Hefesoft.Autentication.Util.Storage.Usuario.guardarUsuario(item.Usuario);
                 //this.Frame.Navigate(typeof(Assets.Menu.Menu));
             });
+        }
+
+        public void addBusy()
+        {
+            var busy = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
+            var elemento = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
+            Grid.SetRowSpan(elemento, 2);
+            LayoutRoot.Children.Add(elemento);
         }
     }
 }
