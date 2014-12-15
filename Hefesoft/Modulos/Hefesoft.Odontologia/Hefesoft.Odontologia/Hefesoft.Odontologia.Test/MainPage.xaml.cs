@@ -66,7 +66,7 @@ namespace Hefesoft.Odontologia.Test
         {
             var busy = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
             var elemento = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
-            Grid.SetRowSpan(elemento, 2);
+            Grid.SetRow(elemento, 2);
             LayoutRoot.Children.Add(elemento);
         }
     }
