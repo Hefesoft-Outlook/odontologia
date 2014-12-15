@@ -36,7 +36,6 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\System.Net.Http.Extensions.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\System.Net.Http.Primitives.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Windows.UI.Interactivity.dll
-C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Periodontograma.Elastic.pdb
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\GalaSoft.MvvmLight.Platforms.NetCore45.pri
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Util.W8.UI.pri
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Microsoft.Practices.ServiceLocation.pdb
@@ -47,7 +46,6 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\System.Net.Http.Primitives.xml
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Windows.UI.Interactivity.xml
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Windows.UI.Interactivity.pri
-C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Hefesoft.Periodontograma.csprojResolveAssemblyReference.cache
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Control\Item_Template.g.i.cs
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Control\Item_Template.g.cs
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Control\Periodontograma.g.i.cs
@@ -123,3 +121,9 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\qualifiers.txt
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\qualifiers.txt.intermediate
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.Elastic.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.Elastic.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Periodontograma.Elastic.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Hefesoft.Periodontograma.csprojResolveAssemblyReference.cache

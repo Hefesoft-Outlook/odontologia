@@ -125,3 +125,131 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\He
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\qualifiers.txt
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\qualifiers.txt.intermediate
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.dll.config
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Item_Template.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Periodontograma.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Furca\Furca.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Implante\Implante.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Listados\liIstadoPeriodontogramas.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Margenes\Margen.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Furca.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Opciones.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Placa.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Sangrado_Supuracion.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Periodontograma.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Pieza\Pieza.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Placa\PlacaElemento.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Seleccionado\Seleccionado.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.xr.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactions.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactivity.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\GalaSoft.MvvmLight.Platforms.NetCore45.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Azure.Helpers.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Pacientes.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Pacientes.Elastic.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.Elastic.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Portable.Crypto.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Portable.xml.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Standard.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Usuario.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Util.W8.UI.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Threading.Tasks.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\System.Net.Http.Extensions.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\System.Net.Http.Primitives.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Windows.UI.Interactivity.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\GalaSoft.MvvmLight.Platforms.NetCore45.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Pacientes.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Util.W8.UI.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Practices.ServiceLocation.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Threading.Tasks.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\System.Net.Http.Extensions.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\System.Net.Http.Primitives.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Windows.UI.Interactivity.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Windows.UI.Interactivity.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Hefesoft.Periodontograma.csprojResolveAssemblyReference.cache
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Item_Template.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Item_Template.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Periodontograma.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Periodontograma.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Furca\Furca.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Furca\Furca.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Implante\Implante.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Implante\Implante.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Listados\liIstadoPeriodontogramas.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Listados\liIstadoPeriodontogramas.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Margenes\Margen.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Margenes\Margen.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Furca.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Furca.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Opciones.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Opciones.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Placa.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Placa.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Sangrado_Supuracion.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Sangrado_Supuracion.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Periodontograma.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Periodontograma.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Pieza\Pieza.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Pieza\Pieza.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Placa\PlacaElemento.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Placa\PlacaElemento.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Seleccionado\Seleccionado.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Seleccionado\Seleccionado.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\XamlTypeInfo.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Item_Template.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Periodontograma.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Furca\Furca.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Implante\Implante.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Listados\liIstadoPeriodontogramas.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Margenes\Margen.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Furca.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Opciones.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Placa.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Sangrado_Supuracion.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Periodontograma.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Pieza\Pieza.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Placa\PlacaElemento.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Seleccionado\Seleccionado.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Item_Template.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Control\Periodontograma.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Furca\Furca.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Implante\Implante.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Listados\liIstadoPeriodontogramas.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Margenes\Margen.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Furca.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Menu_Opciones.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Placa.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Menu Opciones\Sangrado_Supuracion.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Periodontograma.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Pieza\Pieza.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Placa\PlacaElemento.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Assets\Seleccionado\Seleccionado.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\XamlSaveStateFile.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Hefesoft.Periodontograma.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\Hefesoft.Periodontograma.pdb
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\priconfig.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\priconfig.xml.intermediate
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\layout.resfiles
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\layout.resfiles.intermediate
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\resources.resfiles
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\resources.resfiles.intermediate
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\pri.resfiles
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\pri.resfiles.intermediate
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\qualifiers.txt
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\qualifiers.txt.intermediate
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Pacientes.Elastic.pdb

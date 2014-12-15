@@ -30,7 +30,7 @@ namespace Hefesoft.MenuOdontologia.Test
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Hefesoft.MenuOdontologia.Menu));
+            this.Frame.Navigate(typeof(Hefesoft.Paginas.Menu));
         }
     }
 }

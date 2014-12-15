@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>HEFESOFT-TACTIL</Machine>
+    <Machine>WINDOWS8</Machine>
     <WindowsUser>chibc_000</WindowsUser>
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>d4b09148-78f1-45be-85b0-440ea79bf045</PackageIdentityName>
-    <IntermediateOutputPath>D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\obj\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>75F2B7EE3E3CE5BC09CDB97B69C5CA83DF09A27A061C1B19B4013D874727FA07</RegisteredManifestChecksum>
+    <IntermediateOutputPath>C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>B0F368031545252C9A446CD465E3EE7D387E689F624901D86AD84F4107A7A17A</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d4b09148-78f1-45be-85b0-440ea79bf045_1.0.0.0_neutral__bf0gw3942v87a</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d4b09148-78f1-45be-85b0-440ea79bf045_bf0gw3942v87a!App</RegisteredUserModeAppID>
     <RegisteredPackageID>d4b09148-78f1-45be-85b0-440ea79bf045</RegisteredPackageID>
@@ -17,1032 +17,1060 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T23:36:04.120</Modified>
+      <Modified>2014-12-15T05:57:51.385</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\Hefesoft.Periodontograma.Test.exe">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\Hefesoft.Periodontograma.Test.exe">
       <PackagePath>Hefesoft.Periodontograma.Test.exe</PackagePath>
-      <Modified>2014-12-10T23:46:54.143</Modified>
+      <Modified>2014-12-15T16:13:06.318</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.dll">
       <PackagePath>GalaSoft.MvvmLight.dll</PackagePath>
-      <Modified>2014-12-10T20:47:27.441</Modified>
+      <Modified>2014-12-11T04:10:00.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Extras.dll">
       <PackagePath>GalaSoft.MvvmLight.Extras.dll</PackagePath>
-      <Modified>2014-12-10T20:47:27.638</Modified>
+      <Modified>2014-12-11T04:10:00.168</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll">
       <PackagePath>GalaSoft.MvvmLight.Platforms.NetCore45.dll</PackagePath>
-      <Modified>2014-12-10T20:47:27.699</Modified>
+      <Modified>2014-12-11T04:10:00.171</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll">
       <PackagePath>Hefesoft.Azure.Helpers.dll</PackagePath>
-      <Modified>2014-12-10T20:47:16.958</Modified>
+      <Modified>2014-12-11T04:09:56.620</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll">
       <PackagePath>Hefesoft.Pacientes.dll</PackagePath>
-      <Modified>2014-12-10T23:31:14.476</Modified>
+      <Modified>2014-12-11T04:09:56.477</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll">
       <PackagePath>Hefesoft.Pacientes.Elastic.dll</PackagePath>
-      <Modified>2014-12-10T23:31:14.526</Modified>
+      <Modified>2014-12-11T04:09:56.473</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.dll">
       <PackagePath>Hefesoft.Periodontograma.dll</PackagePath>
-      <Modified>2014-12-10T23:46:49.178</Modified>
+      <Modified>2014-12-15T16:13:00.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Debug\Hefesoft.Periodontograma.Elastic.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Debug\Hefesoft.Periodontograma.Elastic.dll">
       <PackagePath>Hefesoft.Periodontograma.Elastic.dll</PackagePath>
-      <Modified>2014-12-10T23:46:41.645</Modified>
+      <Modified>2014-12-15T07:04:51.377</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll">
+      <PackagePath>Hefesoft.Portable.Crypto.dll</PackagePath>
+      <Modified>2014-12-09T18:20:03.360</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll">
       <PackagePath>Hefesoft.Portable.xml.dll</PackagePath>
-      <Modified>2014-12-10T20:47:16.968</Modified>
+      <Modified>2014-12-11T04:09:56.627</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll">
       <PackagePath>Hefesoft.Standard.dll</PackagePath>
-      <Modified>2014-12-10T20:47:17.170</Modified>
+      <Modified>2014-12-11T04:09:56.634</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll">
       <PackagePath>Hefesoft.Usuario.dll</PackagePath>
-      <Modified>2014-12-10T21:38:10.324</Modified>
+      <Modified>2014-12-11T04:09:56.638</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll">
       <PackagePath>Hefesoft.Util.W8.UI.dll</PackagePath>
-      <Modified>2014-12-10T21:12:30.245</Modified>
+      <Modified>2014-12-11T04:09:56.654</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll">
       <PackagePath>Microsoft.Practices.ServiceLocation.dll</PackagePath>
-      <Modified>2014-12-10T20:47:26.308</Modified>
+      <Modified>2014-12-11T04:10:00.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.dll">
       <PackagePath>Microsoft.Threading.Tasks.dll</PackagePath>
-      <Modified>2014-12-10T20:47:22.361</Modified>
+      <Modified>2014-12-11T04:09:58.977</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll">
       <PackagePath>Microsoft.Threading.Tasks.Extensions.dll</PackagePath>
-      <Modified>2014-12-10T20:47:22.375</Modified>
+      <Modified>2014-12-11T04:09:58.963</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
-      <Modified>2014-12-10T20:47:40.026</Modified>
+      <Modified>2014-12-11T04:09:59.941</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Extensions.dll">
       <PackagePath>System.Net.Http.Extensions.dll</PackagePath>
-      <Modified>2014-12-10T20:47:25.652</Modified>
+      <Modified>2014-12-11T04:09:59.623</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Net.Http.2.2.28\lib\win8\System.Net.Http.Primitives.dll">
       <PackagePath>System.Net.Http.Primitives.dll</PackagePath>
-      <Modified>2014-12-10T20:47:25.665</Modified>
+      <Modified>2014-12-11T04:09:59.627</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Windows.UI.Interactivity.1.2.0.0\lib\win8\Windows.UI.Interactivity.dll">
       <PackagePath>Windows.UI.Interactivity.dll</PackagePath>
-      <Modified>2014-12-10T20:47:43.962</Modified>
+      <Modified>2014-12-11T04:10:00.260</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactivity.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactivity.dll">
       <PackagePath>Microsoft.Xaml.Interactivity.dll</PackagePath>
-      <Modified>2014-04-29T19:23:50.000</Modified>
+      <Modified>2013-10-02T17:08:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactions.dll">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
-      <Modified>2014-04-29T19:23:50.000</Modified>
+      <Modified>2013-10-02T17:08:44.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Facebook.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\AutoMapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\AutoMapper.dll">
+      <PackagePath>AutoMapper.dll</PackagePath>
+      <Modified>2014-12-11T04:09:56.345</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll">
+      <PackagePath>bouncy_castle_hmac_sha_pcl.dll</PackagePath>
+      <Modified>2014-12-11T04:09:56.449</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.IO.dll">
+      <PackagePath>System.IO.dll</PackagePath>
+      <Modified>2014-12-11T04:09:57.443</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Net.Http.2.2.28\lib\portable-net40+sl4+win8+wp71+wpa81\System.Net.Http.dll">
+      <PackagePath>System.Net.Http.dll</PackagePath>
+      <Modified>2014-12-11T04:09:59.397</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Runtime.dll">
+      <PackagePath>System.Runtime.dll</PackagePath>
+      <Modified>2014-12-11T04:09:57.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Microsoft.Bcl.1.1.9\lib\portable-net40+sl4+win8+wp8+wpa81\System.Threading.Tasks.dll">
+      <PackagePath>System.Threading.Tasks.dll</PackagePath>
+      <Modified>2014-12-11T04:09:57.506</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Facebook.png">
       <PackagePath>Assets\Images\Facebook.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.792</Modified>
+      <Modified>2014-12-09T23:09:22.798</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Microsoft-Outlook.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Microsoft-Outlook.png">
       <PackagePath>Assets\Images\Microsoft-Outlook.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.792</Modified>
+      <Modified>2014-12-09T23:09:22.820</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\cuadrado.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\cuadrado.png">
       <PackagePath>Assets\Images\Periodontograma\cuadrado.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.812</Modified>
+      <Modified>2014-12-09T23:09:22.866</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\fondo-grafico-inf.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\fondo-grafico-inf.png">
       <PackagePath>Assets\Images\Periodontograma\fondo-grafico-inf.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.813</Modified>
+      <Modified>2014-12-09T23:09:22.894</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\fondo-grafico.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\fondo-grafico.png">
       <PackagePath>Assets\Images\Periodontograma\fondo-grafico.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.813</Modified>
+      <Modified>2014-12-09T23:09:22.919</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\lleno.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\lleno.png">
       <PackagePath>Assets\Images\Periodontograma\lleno.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.814</Modified>
+      <Modified>2014-12-09T23:09:22.947</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\mediolleno.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\mediolleno.png">
       <PackagePath>Assets\Images\Periodontograma\mediolleno.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.814</Modified>
+      <Modified>2014-12-09T23:09:22.969</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-31.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-31.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-31.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.828</Modified>
+      <Modified>2014-12-09T23:09:22.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-31b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-31b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-31b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.828</Modified>
+      <Modified>2014-12-09T23:09:23.025</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-32.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-32.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-32.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.828</Modified>
+      <Modified>2014-12-09T23:09:23.050</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-32b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-32b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-32b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.829</Modified>
+      <Modified>2014-12-09T23:09:23.076</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-33.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-33.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-33.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.829</Modified>
+      <Modified>2014-12-09T23:09:23.105</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-33b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-33b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-33b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.830</Modified>
+      <Modified>2014-12-09T23:09:23.130</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-34.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-34.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-34.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.830</Modified>
+      <Modified>2014-12-09T23:09:23.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-34b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-34b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-34b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.831</Modified>
+      <Modified>2014-12-09T23:09:23.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-35.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-35.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-35.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.831</Modified>
+      <Modified>2014-12-09T23:09:23.205</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-35b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-35b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-35b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.831</Modified>
+      <Modified>2014-12-09T23:09:23.233</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-36.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-36.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-36.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.846</Modified>
+      <Modified>2014-12-09T23:09:23.265</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-36b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-36b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-36b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.846</Modified>
+      <Modified>2014-12-09T23:09:23.365</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-37.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-37.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-37.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.847</Modified>
+      <Modified>2014-12-09T23:09:23.397</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-37b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-37b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-37b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.847</Modified>
+      <Modified>2014-12-09T23:09:23.425</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-38.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-38.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-38.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.848</Modified>
+      <Modified>2014-12-09T23:09:23.453</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-38b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-38b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-38b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.848</Modified>
+      <Modified>2014-12-09T23:09:23.481</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-41.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-41.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-41.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.849</Modified>
+      <Modified>2014-12-09T23:09:23.513</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-41b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-41b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-41b.png</PackagePath>
-      <Modified>2014-12-10T19:53:13.849</Modified>
+      <Modified>2014-12-09T23:09:23.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-42.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-42.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-42.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.028</Modified>
+      <Modified>2014-12-09T23:09:23.568</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-42b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-42b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-42b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.028</Modified>
+      <Modified>2014-12-09T23:09:23.596</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-43.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-43.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-43.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.029</Modified>
+      <Modified>2014-12-09T23:09:23.626</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-43b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-43b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-43b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.080</Modified>
+      <Modified>2014-12-09T23:09:23.653</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-44.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-44.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-44.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.080</Modified>
+      <Modified>2014-12-09T23:09:23.680</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-44b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-44b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-44b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.081</Modified>
+      <Modified>2014-12-09T23:09:23.726</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-45.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-45.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-45.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.081</Modified>
+      <Modified>2014-12-09T23:09:23.755</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-45b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-45b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-45b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.082</Modified>
+      <Modified>2014-12-09T23:09:23.800</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-46.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-46.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-46.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.082</Modified>
+      <Modified>2014-12-09T23:09:23.841</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-46b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-46b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-46b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.082</Modified>
+      <Modified>2014-12-09T23:09:23.872</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-47.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-47.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-47.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.083</Modified>
+      <Modified>2014-12-09T23:09:23.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-47b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-47b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-47b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.083</Modified>
+      <Modified>2014-12-09T23:09:23.960</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-48.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-48.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-48.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.084</Modified>
+      <Modified>2014-12-09T23:09:24.012</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-48b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-48b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-48b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.084</Modified>
+      <Modified>2014-12-09T23:09:24.056</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.084</Modified>
+      <Modified>2014-12-09T23:09:24.095</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-31b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.135</Modified>
+      <Modified>2014-12-09T23:09:24.144</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.135</Modified>
+      <Modified>2014-12-09T23:09:24.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-32b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.136</Modified>
+      <Modified>2014-12-09T23:09:24.243</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.307</Modified>
+      <Modified>2014-12-09T23:09:24.296</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-33b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.308</Modified>
+      <Modified>2014-12-09T23:09:24.353</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.308</Modified>
+      <Modified>2014-12-09T23:09:24.393</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-34b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.309</Modified>
+      <Modified>2014-12-09T23:09:24.426</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.309</Modified>
+      <Modified>2014-12-09T23:09:24.465</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-35b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.309</Modified>
+      <Modified>2014-12-09T23:09:24.494</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.310</Modified>
+      <Modified>2014-12-09T23:09:24.530</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-36b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.310</Modified>
+      <Modified>2014-12-09T23:09:24.566</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.311</Modified>
+      <Modified>2014-12-09T23:09:24.595</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-37b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.311</Modified>
+      <Modified>2014-12-09T23:09:24.634</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.312</Modified>
+      <Modified>2014-12-09T23:09:24.665</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-38b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.313</Modified>
+      <Modified>2014-12-09T23:09:24.697</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.313</Modified>
+      <Modified>2014-12-09T23:09:24.727</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-41b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.314</Modified>
+      <Modified>2014-12-09T23:09:24.760</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.314</Modified>
+      <Modified>2014-12-09T23:09:24.790</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-42b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.315</Modified>
+      <Modified>2014-12-09T23:09:24.817</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.315</Modified>
+      <Modified>2014-12-09T23:09:24.849</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-43b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.316</Modified>
+      <Modified>2014-12-09T23:09:24.881</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.316</Modified>
+      <Modified>2014-12-09T23:09:24.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-44b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.317</Modified>
+      <Modified>2014-12-09T23:09:24.945</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.317</Modified>
+      <Modified>2014-12-09T23:09:25.020</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-45b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.319</Modified>
+      <Modified>2014-12-09T23:09:25.058</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.319</Modified>
+      <Modified>2014-12-09T23:09:25.090</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-46b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.320</Modified>
+      <Modified>2014-12-09T23:09:25.120</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.320</Modified>
+      <Modified>2014-12-09T23:09:25.150</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-47b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.321</Modified>
+      <Modified>2014-12-09T23:09:25.180</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.321</Modified>
+      <Modified>2014-12-09T23:09:25.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tachados-48b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.322</Modified>
+      <Modified>2014-12-09T23:09:25.245</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.323</Modified>
+      <Modified>2014-12-09T23:09:25.294</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-31b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.323</Modified>
+      <Modified>2014-12-09T23:09:25.326</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.323</Modified>
+      <Modified>2014-12-09T23:09:25.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-32b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.324</Modified>
+      <Modified>2014-12-09T23:09:25.394</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.325</Modified>
+      <Modified>2014-12-09T23:09:25.423</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-33b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.325</Modified>
+      <Modified>2014-12-09T23:09:25.458</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.326</Modified>
+      <Modified>2014-12-09T23:09:25.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-34b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.326</Modified>
+      <Modified>2014-12-09T23:09:25.517</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.327</Modified>
+      <Modified>2014-12-09T23:09:25.548</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-35b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.327</Modified>
+      <Modified>2014-12-09T23:09:25.579</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.328</Modified>
+      <Modified>2014-12-09T23:09:25.605</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-36b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.357</Modified>
+      <Modified>2014-12-09T23:09:25.636</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.357</Modified>
+      <Modified>2014-12-09T23:09:25.666</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-37b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.358</Modified>
+      <Modified>2014-12-09T23:09:25.701</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.358</Modified>
+      <Modified>2014-12-09T23:09:25.732</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-38b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.359</Modified>
+      <Modified>2014-12-09T23:09:25.764</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.359</Modified>
+      <Modified>2014-12-09T23:09:25.797</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-41b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.391</Modified>
+      <Modified>2014-12-09T23:09:25.830</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.391</Modified>
+      <Modified>2014-12-09T23:09:25.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-42b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.391</Modified>
+      <Modified>2014-12-09T23:09:25.889</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.392</Modified>
+      <Modified>2014-12-09T23:09:25.921</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-43b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.392</Modified>
+      <Modified>2014-12-09T23:09:25.951</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.392</Modified>
+      <Modified>2014-12-09T23:09:25.980</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-44b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.393</Modified>
+      <Modified>2014-12-09T23:09:26.013</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.393</Modified>
+      <Modified>2014-12-09T23:09:26.059</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-45b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.394</Modified>
+      <Modified>2014-12-09T23:09:26.092</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.394</Modified>
+      <Modified>2014-12-09T23:09:26.122</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-46b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.394</Modified>
+      <Modified>2014-12-09T23:09:26.152</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.395</Modified>
+      <Modified>2014-12-09T23:09:26.182</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-47b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.558</Modified>
+      <Modified>2014-12-09T23:09:26.212</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.559</Modified>
+      <Modified>2014-12-09T23:09:26.241</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-abajo-tornillo-48b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.560</Modified>
+      <Modified>2014-12-09T23:09:26.271</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-11.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-11.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-11.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.560</Modified>
+      <Modified>2014-12-09T23:09:26.303</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-11b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-11b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-11b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.561</Modified>
+      <Modified>2014-12-09T23:09:26.332</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-12.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-12.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-12.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.561</Modified>
+      <Modified>2014-12-09T23:09:26.363</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-12b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-12b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-12b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.562</Modified>
+      <Modified>2014-12-09T23:09:26.402</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-13.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-13.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-13.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.562</Modified>
+      <Modified>2014-12-09T23:09:26.433</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-13b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-13b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-13b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.563</Modified>
+      <Modified>2014-12-09T23:09:26.462</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-14.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-14.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-14.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.563</Modified>
+      <Modified>2014-12-09T23:09:26.489</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-14b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-14b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-14b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.564</Modified>
+      <Modified>2014-12-09T23:09:26.524</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-15.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-15.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-15.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.564</Modified>
+      <Modified>2014-12-09T23:09:26.554</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-15b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-15b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-15b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.565</Modified>
+      <Modified>2014-12-09T23:09:26.583</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-16.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-16.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-16.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.565</Modified>
+      <Modified>2014-12-09T23:09:26.616</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-16b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-16b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-16b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.566</Modified>
+      <Modified>2014-12-09T23:09:26.648</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-17.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-17.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-17.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.566</Modified>
+      <Modified>2014-12-09T23:09:26.681</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-17b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-17b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-17b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.567</Modified>
+      <Modified>2014-12-09T23:09:26.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-18.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-18.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-18.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.568</Modified>
+      <Modified>2014-12-09T23:09:26.745</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-18b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-18b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-18b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.568</Modified>
+      <Modified>2014-12-09T23:09:26.777</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-21.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-21.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-21.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.569</Modified>
+      <Modified>2014-12-09T23:09:26.811</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-21b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-21b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-21b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.569</Modified>
+      <Modified>2014-12-09T23:09:26.838</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-22.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-22.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-22.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.570</Modified>
+      <Modified>2014-12-09T23:09:26.869</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-22b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-22b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-22b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.570</Modified>
+      <Modified>2014-12-09T23:09:26.902</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-23.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-23.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-23.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.571</Modified>
+      <Modified>2014-12-09T23:09:26.936</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-23b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-23b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-23b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.571</Modified>
+      <Modified>2014-12-09T23:09:26.964</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-24.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-24.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-24.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.572</Modified>
+      <Modified>2014-12-09T23:09:26.995</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-24b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-24b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-24b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.572</Modified>
+      <Modified>2014-12-09T23:09:27.029</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-25.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-25.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-25.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.602</Modified>
+      <Modified>2014-12-09T23:09:27.070</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-25b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-25b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-25b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.602</Modified>
+      <Modified>2014-12-09T23:09:27.099</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-26.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-26.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-26.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.603</Modified>
+      <Modified>2014-12-09T23:09:27.132</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-26b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-26b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-26b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.603</Modified>
+      <Modified>2014-12-09T23:09:27.161</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-27.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-27.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-27.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.603</Modified>
+      <Modified>2014-12-09T23:09:27.191</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-27b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-27b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-27b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.604</Modified>
+      <Modified>2014-12-09T23:09:27.219</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-28.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-28.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-28.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.604</Modified>
+      <Modified>2014-12-09T23:09:27.253</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-28b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-28b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-28b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.605</Modified>
+      <Modified>2014-12-09T23:09:27.283</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.605</Modified>
+      <Modified>2014-12-09T23:09:27.314</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-11b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.606</Modified>
+      <Modified>2014-12-09T23:09:27.349</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.606</Modified>
+      <Modified>2014-12-09T23:09:27.386</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-12b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.607</Modified>
+      <Modified>2014-12-09T23:09:27.418</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.607</Modified>
+      <Modified>2014-12-09T23:09:27.456</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-13b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.607</Modified>
+      <Modified>2014-12-09T23:09:27.485</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.608</Modified>
+      <Modified>2014-12-09T23:09:27.522</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-14b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.608</Modified>
+      <Modified>2014-12-09T23:09:27.561</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.608</Modified>
+      <Modified>2014-12-09T23:09:27.599</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-15b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.609</Modified>
+      <Modified>2014-12-09T23:09:27.628</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.609</Modified>
+      <Modified>2014-12-09T23:09:27.669</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-16b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.609</Modified>
+      <Modified>2014-12-09T23:09:27.703</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.610</Modified>
+      <Modified>2014-12-09T23:09:27.736</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-17b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.610</Modified>
+      <Modified>2014-12-09T23:09:27.770</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.611</Modified>
+      <Modified>2014-12-09T23:09:27.806</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-18b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.611</Modified>
+      <Modified>2014-12-09T23:09:27.839</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.647</Modified>
+      <Modified>2014-12-09T23:09:27.873</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-21b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.647</Modified>
+      <Modified>2014-12-09T23:09:27.903</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.648</Modified>
+      <Modified>2014-12-09T23:09:27.940</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-22b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.727</Modified>
+      <Modified>2014-12-09T23:09:27.974</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.728</Modified>
+      <Modified>2014-12-09T23:09:28.008</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-23b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.728</Modified>
+      <Modified>2014-12-09T23:09:28.041</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.728</Modified>
+      <Modified>2014-12-09T23:09:28.081</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-24b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.729</Modified>
+      <Modified>2014-12-09T23:09:28.115</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.729</Modified>
+      <Modified>2014-12-09T23:09:28.161</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-25b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.729</Modified>
+      <Modified>2014-12-09T23:09:28.196</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.730</Modified>
+      <Modified>2014-12-09T23:09:28.231</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-26b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.730</Modified>
+      <Modified>2014-12-09T23:09:28.325</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.731</Modified>
+      <Modified>2014-12-09T23:09:28.361</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-27b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.731</Modified>
+      <Modified>2014-12-09T23:09:28.401</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.731</Modified>
+      <Modified>2014-12-09T23:09:28.440</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tachados-28b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.732</Modified>
+      <Modified>2014-12-09T23:09:28.479</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.732</Modified>
+      <Modified>2014-12-09T23:09:28.542</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-11b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.732</Modified>
+      <Modified>2014-12-09T23:09:28.618</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.733</Modified>
+      <Modified>2014-12-09T23:09:28.692</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-12b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.733</Modified>
+      <Modified>2014-12-09T23:09:28.762</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.733</Modified>
+      <Modified>2014-12-09T23:09:28.817</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-13b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.734</Modified>
+      <Modified>2014-12-09T23:09:28.858</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.734</Modified>
+      <Modified>2014-12-09T23:09:28.896</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-14b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.735</Modified>
+      <Modified>2014-12-09T23:09:28.938</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.735</Modified>
+      <Modified>2014-12-09T23:09:28.970</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-15b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.735</Modified>
+      <Modified>2014-12-09T23:09:29.004</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.736</Modified>
+      <Modified>2014-12-09T23:09:29.038</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-16b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.736</Modified>
+      <Modified>2014-12-09T23:09:29.082</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.737</Modified>
+      <Modified>2014-12-09T23:09:29.122</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-17b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.737</Modified>
+      <Modified>2014-12-09T23:09:29.153</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.737</Modified>
+      <Modified>2014-12-09T23:09:29.195</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-18b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.738</Modified>
+      <Modified>2014-12-09T23:09:29.226</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.738</Modified>
+      <Modified>2014-12-09T23:09:29.256</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-21b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.739</Modified>
+      <Modified>2014-12-09T23:09:29.286</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.739</Modified>
+      <Modified>2014-12-09T23:09:29.321</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-22b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.739</Modified>
+      <Modified>2014-12-09T23:09:29.352</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.740</Modified>
+      <Modified>2014-12-09T23:09:29.383</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-23b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.740</Modified>
+      <Modified>2014-12-09T23:09:29.417</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.740</Modified>
+      <Modified>2014-12-09T23:09:29.449</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-24b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.741</Modified>
+      <Modified>2014-12-09T23:09:29.497</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.741</Modified>
+      <Modified>2014-12-09T23:09:29.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-25b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.742</Modified>
+      <Modified>2014-12-09T23:09:29.566</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.742</Modified>
+      <Modified>2014-12-09T23:09:29.601</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-26b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.742</Modified>
+      <Modified>2014-12-09T23:09:29.636</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.743</Modified>
+      <Modified>2014-12-09T23:09:29.669</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-27b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.743</Modified>
+      <Modified>2014-12-09T23:09:29.702</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.744</Modified>
+      <Modified>2014-12-09T23:09:29.733</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28b.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28b.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-dientes-arriba-tornillo-28b.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.847</Modified>
+      <Modified>2014-12-09T23:09:29.768</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-oblicuas.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\periodontograma-oblicuas.png">
       <PackagePath>Assets\Images\Periodontograma\periodontograma-oblicuas.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.847</Modified>
+      <Modified>2014-12-09T23:09:29.804</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\vacio.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Periodontograma\vacio.png">
       <PackagePath>Assets\Images\Periodontograma\vacio.png</PackagePath>
-      <Modified>2014-12-10T19:53:14.848</Modified>
+      <Modified>2014-12-09T23:09:29.837</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T19:53:14.848</Modified>
+      <Modified>2014-12-09T19:32:08.712</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T19:53:14.848</Modified>
+      <Modified>2014-12-09T19:32:08.725</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T19:53:14.849</Modified>
+      <Modified>2014-12-09T19:32:08.738</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-12-10T19:53:14.849</Modified>
+      <Modified>2014-12-09T19:32:08.750</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Odontologia.jpg">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\Assets\Images\Odontologia.jpg">
       <PackagePath>Assets\Images\Odontologia.jpg</PackagePath>
-      <Modified>2014-12-10T19:53:13.812</Modified>
+      <Modified>2014-12-09T23:09:22.834</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:59.636</Modified>
+      <Modified>2014-12-15T05:57:46.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\MainPage.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:59.637</Modified>
+      <Modified>2014-12-15T05:57:46.155</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Item_Template.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Item_Template.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Control\Item_Template.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.183</Modified>
+      <Modified>2014-12-15T07:05:05.468</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Periodontograma.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Control\Periodontograma.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Control\Periodontograma.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.186</Modified>
+      <Modified>2014-12-15T07:05:05.506</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Furca\Furca.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Furca\Furca.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Furca\Furca.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.189</Modified>
+      <Modified>2014-12-15T07:05:05.511</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Implante\Implante.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Implante\Implante.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Implante\Implante.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.190</Modified>
+      <Modified>2014-12-15T07:05:05.514</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Listados\liIstadoPeriodontogramas.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Listados\liIstadoPeriodontogramas.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Listados\liIstadoPeriodontogramas.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.190</Modified>
+      <Modified>2014-12-15T07:05:05.515</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Margenes\Margen.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Margenes\Margen.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Margenes\Margen.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.191</Modified>
+      <Modified>2014-12-15T07:05:05.518</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Furca.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Furca.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Menu Opciones\Menu_Furca.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.191</Modified>
+      <Modified>2014-12-15T07:05:05.523</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Opciones.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Menu_Opciones.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Menu Opciones\Menu_Opciones.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.192</Modified>
+      <Modified>2014-12-15T07:05:05.526</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Placa.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Placa.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Menu Opciones\Placa.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.193</Modified>
+      <Modified>2014-12-15T07:05:05.531</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Sangrado_Supuracion.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Menu Opciones\Sangrado_Supuracion.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Menu Opciones\Sangrado_Supuracion.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.193</Modified>
+      <Modified>2014-12-15T07:05:05.532</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Periodontograma.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Periodontograma.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Periodontograma.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.194</Modified>
+      <Modified>2014-12-15T16:10:25.909</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Pieza\Pieza.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Pieza\Pieza.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Pieza\Pieza.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.194</Modified>
+      <Modified>2014-12-15T07:05:05.537</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Placa\PlacaElemento.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Placa\PlacaElemento.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Placa\PlacaElemento.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.195</Modified>
+      <Modified>2014-12-15T07:05:05.540</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Sangrado_Supuracion\Sangrado_Supuracion_Elemento.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.196</Modified>
+      <Modified>2014-12-15T07:05:05.542</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Seleccionado\Seleccionado.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Assets\Seleccionado\Seleccionado.xbf">
       <PackagePath>Hefesoft.Periodontograma\Assets\Seleccionado\Seleccionado.xbf</PackagePath>
-      <Modified>2014-12-10T23:35:53.197</Modified>
+      <Modified>2014-12-15T07:05:05.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\Hefesoft.Periodontograma.Test.xr.xml">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\Hefesoft.Periodontograma.Test.xr.xml">
       <PackagePath>Hefesoft.Periodontograma.Test.xr.xml</PackagePath>
-      <Modified>2014-12-10T23:35:59.572</Modified>
+      <Modified>2014-12-11T04:09:54.777</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.xr.xml">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Debug\Hefesoft.Periodontograma.xr.xml">
       <PackagePath>Hefesoft.Periodontograma\Hefesoft.Periodontograma.xr.xml</PackagePath>
-      <Modified>2014-12-10T23:35:52.562</Modified>
+      <Modified>2014-12-15T16:10:25.791</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Hefesoft.Pacientes.xr.xml">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Hefesoft.Pacientes.xr.xml">
       <PackagePath>Hefesoft.Pacientes\Hefesoft.Pacientes.xr.xml</PackagePath>
-      <Modified>2014-12-10T23:31:14.556</Modified>
+      <Modified>2014-12-11T04:09:56.487</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Pacientes.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Pacientes.xbf">
       <PackagePath>Hefesoft.Pacientes\Controles\Pacientes.xbf</PackagePath>
-      <Modified>2014-12-10T23:31:14.548</Modified>
+      <Modified>2014-12-11T04:09:56.510</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Grillas\Add.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Grillas\Add.xbf">
       <PackagePath>Hefesoft.Pacientes\Controles\Grillas\Add.xbf</PackagePath>
-      <Modified>2014-12-10T23:31:14.545</Modified>
+      <Modified>2014-12-11T04:09:56.528</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Grillas\SplitPacientes.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes\Controles\Grillas\SplitPacientes.xbf">
       <PackagePath>Hefesoft.Pacientes\Controles\Grillas\SplitPacientes.xbf</PackagePath>
-      <Modified>2014-12-10T23:31:14.546</Modified>
+      <Modified>2014-12-11T04:09:56.546</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml">
       <PackagePath>Hefesoft.Util.W8.UI\Hefesoft.Util.W8.UI.xr.xml</PackagePath>
-      <Modified>2014-12-10T21:12:30.254</Modified>
+      <Modified>2014-12-11T04:09:56.662</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf">
       <PackagePath>Hefesoft.Util.W8.UI\Assets\BusyBox\BusyBox.xbf</PackagePath>
-      <Modified>2014-12-10T21:12:30.250</Modified>
+      <Modified>2014-12-11T04:09:56.685</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Test\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-10T23:45:18.621</Modified>
+      <Modified>2014-12-15T16:13:09.687</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -12,7 +12,6 @@
     xmlns:Pacientes="using:Hefesoft.Usuario.ViewModel.Pacientes"
     x:Name="pageRoot"
     x:Class="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes"
-    
     >
 
     <UserControl.Resources>
@@ -20,7 +19,7 @@
     </UserControl.Resources>
 
     <UserControl.DataContext>
-        <Binding Mode="OneWay" Path="Pacientes" Source="{StaticResource LocatorPacientes}"/>
+        <Binding Path="Pacientes" Source="{StaticResource LocatorPacientes}"/>
     </UserControl.DataContext>
 
     <ScrollViewer>

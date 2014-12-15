@@ -287,11 +287,14 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="Header" />
+      <RootProperty Name="Background" />
       <RootProperty Name="ContentTemplate" />
       <RootProperty Name="Padding" />
     </RootType>
     <RootType FullName="Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado" />
     <RootType FullName="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes">
+      <RootProperty Name="Width" />
+      <RootProperty Name="Height" />
       <RootProperty Name="verTitulo" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">

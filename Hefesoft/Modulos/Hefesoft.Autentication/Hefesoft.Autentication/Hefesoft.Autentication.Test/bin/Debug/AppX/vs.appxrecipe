@@ -26,7 +26,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\Hefesoft.Autentication.Test.exe">
       <PackagePath>Hefesoft.Autentication.Test.exe</PackagePath>
-      <Modified>2014-12-14T21:31:25.046</Modified>
+      <Modified>2014-12-15T03:54:41.387</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll">
       <PackagePath>AutoMapper.dll</PackagePath>
@@ -58,7 +58,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Hefesoft.Autentication.dll">
       <PackagePath>Hefesoft.Autentication.dll</PackagePath>
-      <Modified>2014-12-14T21:31:18.176</Modified>
+      <Modified>2014-12-15T03:54:32.552</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Elastic\bin\Debug\Hefesoft.Autentication.Elastic.dll">
       <PackagePath>Hefesoft.Autentication.Elastic.dll</PackagePath>
@@ -198,7 +198,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Autentication.xbf">
       <PackagePath>Hefesoft.Autentication\Controles\Autentication.xbf</PackagePath>
-      <Modified>2014-12-14T21:31:17.102</Modified>
+      <Modified>2014-12-15T03:51:49.475</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\fbLogin.xbf">
       <PackagePath>Hefesoft.Autentication\Controles\fbLogin.xbf</PackagePath>
@@ -206,7 +206,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Login.xbf">
       <PackagePath>Hefesoft.Autentication\Controles\Login.xbf</PackagePath>
-      <Modified>2014-12-14T21:10:38.518</Modified>
+      <Modified>2014-12-15T03:51:49.477</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Controles\Usuario.xbf">
       <PackagePath>Hefesoft.Autentication\Controles\Usuario.xbf</PackagePath>
@@ -222,7 +222,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication\bin\Debug\Hefesoft.Autentication.xr.xml">
       <PackagePath>Hefesoft.Autentication\Hefesoft.Autentication.xr.xml</PackagePath>
-      <Modified>2014-12-14T21:15:15.892</Modified>
+      <Modified>2014-12-15T03:51:49.441</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\packages\Facebook.Client.0.9.1-alpha\lib\win8\Facebook.Client\FacebookDialogPage.xaml">
       <PackagePath>Facebook.Client\FacebookDialogPage.xaml</PackagePath>
@@ -270,7 +270,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Autentication\Hefesoft.Autentication\Hefesoft.Autentication.Test\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2014-12-14T21:31:27.699</Modified>
+      <Modified>2014-12-15T03:54:44.234</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

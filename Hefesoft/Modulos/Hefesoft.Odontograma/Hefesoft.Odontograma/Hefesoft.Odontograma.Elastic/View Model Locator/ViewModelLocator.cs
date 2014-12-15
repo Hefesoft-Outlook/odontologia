@@ -41,8 +41,11 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                     //Conexion a wcf
                     //SimpleIoc.Default.Register<IContexto_Odontologia>(() => new Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Wcf.Contexto_Odontologia());
 
-                    //Implementacion hefesoft
-                    SimpleIoc.Default.Register<Hefesoft.Usuario.Interfaces.IUsuarios>(() => new Hefesoft.Usuario.Data.Usuarios());
+                    // Puede estar registrado cuando esta dentro de la aplicacion principal
+                    if (!SimpleIoc.Default.IsRegistered<Hefesoft.Usuario.Interfaces.IUsuarios>())
+                    {
+                        SimpleIoc.Default.Register<Hefesoft.Usuario.Interfaces.IUsuarios>(() => new Hefesoft.Usuario.Data.Usuarios());
+                    }
                 }
 
                 //View model donde se muestra el indice de placa bacteriana y demas
@@ -65,9 +68,21 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                 SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
 
                 //Hefesoft Implementacion 
-                SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
-                SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
-                SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+                // Puede estar registrado cuando esta dentro de la aplicacion principal
+                if (!SimpleIoc.Default.IsRegistered<Hefesoft.Usuario.ViewModel.Usuarios>())
+                {
+                    SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Usuarios>();
+                }
+
+                if (!SimpleIoc.Default.IsRegistered<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>())
+                {
+                    SimpleIoc.Default.Register<Hefesoft.Usuario.ViewModel.Pacientes.Pacientes>();
+                }
+
+                if (!SimpleIoc.Default.IsRegistered<Hefesoft.Standard.BusyBox.Busy>())
+                {
+                    SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+                }
 
             }
             

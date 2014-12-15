@@ -4,12 +4,12 @@
     xmlns:local="using:Hefesoft.Odontologia.Test"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:ControlesPacientes="using:Hefesoft.Odontologia.Ejemplo"
+    xmlns:ControlesPacientes="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
     xmlns:Controles="using:Hefesoft.Autentication.Controles"    
     x:Class="Hefesoft.Odontologia.Test.MainPage"
     mc:Ignorable="d">
 
-	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="19*"/>
 			<RowDefinition Height="109*"/>
@@ -17,6 +17,5 @@
 		<Frame x:Name="Host" Grid.Row="1"/>
         
 		<Controles:Usuario HorizontalAlignment="Right" VerticalAlignment="Center"/>
-        
 	</Grid>
 </Page>

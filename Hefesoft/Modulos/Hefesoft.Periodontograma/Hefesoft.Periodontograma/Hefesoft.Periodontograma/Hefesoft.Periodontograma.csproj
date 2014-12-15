@@ -164,11 +164,13 @@
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Pacientes">
+    <Reference Include="Hefesoft.Pacientes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Pacientes.Elastic">
-      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll</HintPath>
+    <Reference Include="Hefesoft.Pacientes.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Elastic\bin\Release\Hefesoft.Pacientes.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
@@ -273,13 +275,13 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Hefesoft.Periodontograma.Elastic\Hefesoft.Periodontograma.Elastic.csproj">
       <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
       <Name>Hefesoft.Periodontograma.Elastic</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>

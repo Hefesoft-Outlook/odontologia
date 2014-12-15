@@ -34,7 +34,12 @@ namespace Hefesoft.Periodontograma.Elastic.Locator
             {
                 isRegistered = true;
                 SimpleIoc.Default.Register<MainViewModel>();
-                SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+
+                if (!SimpleIoc.Default.IsRegistered<Hefesoft.Standard.BusyBox.Busy>())
+                {
+                    SimpleIoc.Default.Register<Hefesoft.Standard.BusyBox.Busy>();
+                }
+
                 SimpleIoc.Default.Register<Hefesoft.Periodontograma.Elastic.ViewModel.Periodontograma>();
             }
         }

@@ -26,13 +26,7 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
             }
             else
             {
-                try
-                {
-                    data = Hefesoft.Usuario.Contexto.Contexto.obtenerContexto();
-                    vmUsuario = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
-                    listar();
-                }
-                catch { }
+                inicializarElementos();
 
                 add = new GalaSoft.MvvmLight.Command.RelayCommand(addElement, validateAdd);
                 createNew = new GalaSoft.MvvmLight.Command.RelayCommand(() => 
@@ -54,6 +48,17 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
 
                 search = new GalaSoft.MvvmLight.Command.RelayCommand<string>(searchElement);
             }
+        }
+
+        public void inicializarElementos()
+        {
+            try
+            {
+                data = Hefesoft.Usuario.Contexto.Contexto.obtenerContexto();
+                vmUsuario = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+                listar();
+            }
+            catch { }
         }
 
         private void searchElement(string obj)
@@ -112,7 +117,7 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
             BusyBox.UserControlCargando(false);
         }
 
-        private async void listar()
+        public async void listar()
         {
            BusyBox.UserControlCargando(true);
 

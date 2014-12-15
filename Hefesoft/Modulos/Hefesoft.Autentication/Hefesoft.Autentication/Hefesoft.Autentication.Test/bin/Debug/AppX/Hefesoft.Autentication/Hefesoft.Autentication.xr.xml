@@ -26,8 +26,6 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
-      <RootMethod Name="GetColumn" />
-      <RootMethod Name="SetColumn" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Hefesoft.Autentication.Controles.Login" />
@@ -60,7 +58,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Hefesoft.Autentication.Controles.Usuario" />
     <RootType FullName="Hefesoft.Autentication.Controles.windows">
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
@@ -86,5 +83,6 @@
       <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.MenuFlyoutSeparator" />
+    <RootType FullName="Hefesoft.Autentication.Controles.Usuario" />
   </Roots.RootTypes>
 </Roots>

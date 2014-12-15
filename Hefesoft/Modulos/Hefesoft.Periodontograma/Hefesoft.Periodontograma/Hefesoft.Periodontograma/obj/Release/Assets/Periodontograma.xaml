@@ -5,13 +5,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:PeriodontogramaControl="using:Hefesoft.Periodontograma.Assets.Control"    
     xmlns:Seleccionado="using:Hefesoft.Periodontograma.Assets.Seleccionado"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:Busy="using:App2.Assets.BusyBox"
-    xmlns:Auth="using:App2.Auth"    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"    
     xmlns:ListadoPeriodontogramas="using:Hefesoft.Periodontograma.Assets.Listados"
     x:Name="pageRoot"
     x:Class="Hefesoft.Periodontograma.Assets.Periodontograma"
-    
+    xmlns:ListadoPacientes="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -36,7 +34,7 @@
 			<RowDefinition Height="*"/>
 		</Grid.RowDefinitions>
 
-		<Grid>
+        <Grid x:FieldModifier="public">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="120"/>
 				<ColumnDefinition Width="*"/>
@@ -57,6 +55,7 @@
 
         <Hub 
             x:Name="HbPeriododntograma"
+            x:FieldModifier="public"
             HorizontalAlignment="Left" 
             VerticalAlignment="Top" 
             Grid.Row="1" 
@@ -65,7 +64,10 @@
             <HubSection Header="Listado">
                 <DataTemplate>
                     <Grid>
-                       
+                        <ListadoPacientes:SplitPacientes
+                            Width="300"
+                            Height="500"
+                            verTitulo="False"/>
                     </Grid>
                 </DataTemplate>
             </HubSection>

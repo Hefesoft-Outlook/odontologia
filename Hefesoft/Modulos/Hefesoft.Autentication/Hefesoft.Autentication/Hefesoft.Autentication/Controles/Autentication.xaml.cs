@@ -22,8 +22,19 @@ namespace Hefesoft.Autentication.Controles
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Autentication : Page
+    public sealed partial class Autentication : Page, IDisposable
     {
+
+        public event EventHandler usuarioIngreso;
+
+        public void onUsuarioIngreso(object sender, EventArgs e)
+        {
+            if (usuarioIngreso != null)
+            {
+                usuarioIngreso(sender, e);
+            }
+        }
+
         public static bool ingresoInicial = false;
         public Autentication()
         {
@@ -63,7 +74,8 @@ namespace Hefesoft.Autentication.Controles
             {
                 var UsuarioVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
                 UsuarioVm.UsuarioActivo = usuario;
-                //this.Frame.Navigate(typeof(Assets.Menu.Menu));
+                onUsuarioIngreso(UsuarioVm.UsuarioActivo, EventArgs.Empty);
+                usuarioIngresoMessage(UsuarioVm.UsuarioActivo);
             }
 
             oirUsuarioCreado();
@@ -76,7 +88,8 @@ namespace Hefesoft.Autentication.Controles
             {
                 var valorUsuario = item.Usuario;
                 Hefesoft.Autentication.Util.Storage.Usuario.guardarUsuario(item.Usuario);
-                //this.Frame.Navigate(typeof(Assets.Menu.Menu));
+                onUsuarioIngreso(item.Usuario, EventArgs.Empty);
+                usuarioIngresoMessage(item.Usuario);
             });
         }
 
@@ -86,6 +99,16 @@ namespace Hefesoft.Autentication.Controles
             var elemento = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
             Grid.SetRowSpan(elemento, 2);
             LayoutRoot.Children.Add(elemento);
+        }
+
+        private void usuarioIngresoMessage(Hefesoft.Usuario.Entidades.IUsuario usuario)
+        {            
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send<string>("Usuario logueado", "Usuario logueado");
+        }
+
+        public void Dispose()
+        {
+            usuarioIngreso = null;
         }
     }
 }
