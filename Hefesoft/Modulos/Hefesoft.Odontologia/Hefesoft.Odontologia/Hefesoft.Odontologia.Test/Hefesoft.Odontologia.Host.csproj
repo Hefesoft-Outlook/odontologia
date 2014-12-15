@@ -118,8 +118,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\images\Facebook.png" />
-    <Content Include="Assets\images\Microsoft-Outlook.png" />
     <Content Include="Assets\images\Odontologia.jpg" />
     <Content Include="Assets\images\periodontograma\cuadrado.png" />
     <Content Include="Assets\images\periodontograma\fondo-grafico-inf.png" />
@@ -338,12 +336,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper">
-      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.dll</HintPath>
-    </Reference>
-    <Reference Include="AutoMapper.WinRT">
-      <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
-    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -435,9 +427,6 @@
     <Reference Include="Hefesoft.Util.W8.UI">
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Live">
-      <HintPath>..\..\packages\LiveSDK.5.6\WindowsXAML\Microsoft.Live.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
       <HintPath>..\..\packages\Portable.CommonServiceLocator.1.2.2\lib\portable-net4+sl4+wp7+win8\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
@@ -446,11 +435,7 @@
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks.Extensions">
       <HintPath>..\..\packages\Microsoft.Bcl.Async.1.0.168\lib\win8\Microsoft.Threading.Tasks.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Xaml.Interactivity, Version=12.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\..\..\Program Files\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactivity.dll</HintPath>
-    </Reference>
+    </Reference>    
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.3\lib\netcore45\Newtonsoft.Json.dll</HintPath>
@@ -467,7 +452,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="controles\odontograma\images\59229.png" />
-    <Content Include="Fonts\LiveSymbol.ttf" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
