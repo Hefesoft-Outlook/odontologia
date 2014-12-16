@@ -118,6 +118,9 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Back1.png" />
+    <Content Include="Assets\Back2.png" />
+    <Content Include="Assets\Back3.png" />
     <Content Include="Assets\Background.png" />
     <Content Include="Assets\images\Odontologia.jpg" />
     <Content Include="Assets\images\periodontograma\cuadrado.png" />
@@ -320,7 +323,42 @@
     <Content Include="Assets\images\periodontograma\periodontograma-oblicuas.png" />
     <Content Include="Assets\images\periodontograma\vacio.png" />
     <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-140.png" />
+    <Content Include="Assets\Logo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-80.png" />
+    <Content Include="Assets\scaled\120.png" />
+    <Content Include="Assets\scaled\126.scale-100.png" />
+    <Content Include="Assets\scaled\126.scale-140.png" />
+    <Content Include="Assets\scaled\126.scale-180.png" />
+    <Content Include="Assets\scaled\126.scale-80.png" />
+    <Content Include="Assets\scaled\150.png" />
+    <Content Include="Assets\scaled\16.png" />
+    <Content Include="Assets\scaled\210.png" />
+    <Content Include="Assets\scaled\24.png" />
+    <Content Include="Assets\scaled\256.png" />
+    <Content Include="Assets\scaled\270.png" />
+    <Content Include="Assets\scaled\30.png" />
+    <Content Include="Assets\scaled\32.png" />
+    <Content Include="Assets\scaled\33.png" />
+    <Content Include="Assets\scaled\42.png" />
+    <Content Include="Assets\scaled\43.scale-100.png" />
+    <Content Include="Assets\scaled\43.scale-140.png" />
+    <Content Include="Assets\scaled\43.scale-180.png" />
+    <Content Include="Assets\scaled\48.png" />
+    <Content Include="Assets\scaled\50.png" />
+    <Content Include="Assets\scaled\54.png" />
+    <Content Include="Assets\scaled\56.png" />
+    <Content Include="Assets\scaled\70.png" />
+    <Content Include="Assets\scaled\90.png" />
+    <Content Include="Assets\scaled\98.png" />
     <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-140.png" />
+    <Content Include="Assets\SmallLogo.scale-180.png" />
+    <Content Include="Assets\SmallLogo.scale-80.png" />
+    <Content Include="Assets\SmallLogo.targetsize-16.png" />
+    <Content Include="Assets\SmallLogo.targetsize-256.png" />
+    <Content Include="Assets\SmallLogo.targetsize-32.png" />
+    <Content Include="Assets\SmallLogo.targetsize-48.png" />
     <Content Include="Assets\SplashScreen.scale-100.png" />
     <Content Include="Assets\SplashScreen.scale-140.png" />
     <Content Include="Assets\SplashScreen.scale-180.png" />
@@ -482,6 +520,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
     <Content Include="controles\odontograma\images\59229.png" />
     <None Include="packages.config">
       <SubType>Designer</SubType>

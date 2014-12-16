@@ -16,7 +16,9 @@
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Pacientes.Test.App">
       <m2:VisualElements DisplayName="Odontology" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="Pacientes.Test" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+        <m2:DefaultTile ShortName="Hefesoft Dentist" Square70x70Logo="Assets\scaled\126.png">
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.png" BackgroundColor="#1A9B1A" />
       </m2:VisualElements>
     </Application>
   </Applications>
