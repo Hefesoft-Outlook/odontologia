@@ -7,6 +7,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -35,9 +36,12 @@ namespace Hefesoft.Odontologia.Test
             
             addBusy();
             NavigationHelper = new Util.W8.UI.Common.NavigationHelper();
-            NavigationHelper.setPage(this);
+            NavigationHelper.setPage(this);            
             Host.Navigating += Host_Navigating;
             Host.Navigated += Host_Navigated;
+            backButtonHost.Command = NavigationHelper.GoBackCommand;
+
+            
         }
 
         void Host_Navigated(object sender, NavigationEventArgs e)
@@ -65,9 +69,13 @@ namespace Hefesoft.Odontologia.Test
         public void addBusy()
         {
             var busy = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
-            var elemento = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
-            Grid.SetRow(elemento, 2);
-            LayoutRoot.Children.Add(elemento);
+            var busyBox = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
+            Grid.SetRow(busyBox, 1);
+            LayoutRoot.Children.Add(busyBox);
+
+            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Prueba");
         }
+
+        
     }
 }

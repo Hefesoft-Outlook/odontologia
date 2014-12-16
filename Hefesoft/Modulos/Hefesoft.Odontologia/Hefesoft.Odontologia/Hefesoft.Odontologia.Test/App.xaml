@@ -3,6 +3,16 @@
 			 xmlns:local="using:Hefesoft.Odontologia.Test"
 			 RequestedTheme="Light"
 			 >
-  <Application.Resources>    
-  </Application.Resources>
+  <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Light">
+                    <SolidColorBrush x:Name="ApplicationPageBackgroundThemeBrush">Transparent</SolidColorBrush>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+        </ResourceDictionary>
+
+
+    </Application.Resources>
 </Application>

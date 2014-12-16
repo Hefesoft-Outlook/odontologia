@@ -1,4 +1,5 @@
-﻿<Page xmlns:Pacientes="using:Hefesoft.Pacientes.Pacientes" 
+﻿<Page 
+    xmlns:Pacientes="using:Hefesoft.Pacientes.Pacientes" 
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:Hefesoft.Odontologia.Test"
@@ -9,13 +10,35 @@
     x:Class="Hefesoft.Odontologia.Test.MainPage"
     mc:Ignorable="d">
 
-    <Grid x:Name="LayoutRoot" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="19*"/>
-			<RowDefinition Height="109*"/>
-		</Grid.RowDefinitions>
-		<Frame x:Name="Host" Grid.Row="1"/>
-        
-		<Controles:Usuario HorizontalAlignment="Right" VerticalAlignment="Center"/>
-	</Grid>
+    <Grid x:Name="LayoutRoot">
+    	<Grid.Background>
+    		<ImageBrush Stretch="Fill" ImageSource="Assets/Background.png"/>
+    	</Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="109*"/>
+        </Grid.RowDefinitions>
+
+        <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
+
+            <Controles:Usuario HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
+
+            	<Button 
+            		x:Name="backButtonHost"
+            		VerticalAlignment="Center"        		
+            		Style="{StaticResource NavigationBackButtonNormalStyle}"
+            		AutomationProperties.Name="BackHost"
+            		AutomationProperties.AutomationId="BackButtonHost"
+            		AutomationProperties.ItemType="Navigation Button" 
+				/>
+
+            	<TextBlock x:Uid="AppName" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" Margin="20,0,0,0" FontSize="32" VerticalAlignment="Center"/>
+
+            </StackPanel>
+
+        </Grid>
+
+        <Frame x:Name="Host" Grid.Row="1"/>
+    </Grid>
 </Page>
