@@ -38,6 +38,25 @@ namespace Hefesoft.Periodontograma.Elastic.Entidades
             FurcaVisualizacion = Furca_Visualizacion.No_Visible;
         }
 
+        public void actualizarElemento(PeriodontogramaEntity _periodontograma)
+        {
+            Tipo_Pieza = _periodontograma.Tipo_Pieza;
+            Furca = _periodontograma.Furca;
+            Furca2 = _periodontograma.Furca2;
+            SangradoSupuracion1 = _periodontograma.SangradoSupuracion1;
+            SangradoSupuracion2 = _periodontograma.SangradoSupuracion2;
+            SangradoSupuracion3 = _periodontograma.SangradoSupuracion3;
+            Placa1 = _periodontograma.Placa1;
+            Placa2 = _periodontograma.Placa2;
+            Placa3 = _periodontograma.Placa3;
+            MargenGingival1 = _periodontograma.MargenGingival1;
+            MargenGingival2 = _periodontograma.MargenGingival2;
+            MargenGingival3 = _periodontograma.MargenGingival3;
+            Movilidad = _periodontograma.Movilidad;
+            ProdundidadSondaje1 = _periodontograma.ProdundidadSondaje1;
+            FurcaVisualizacion = _periodontograma.FurcaVisualizacion;
+        }
+
         private int numero;
 
         public int Numero
@@ -71,6 +90,16 @@ namespace Hefesoft.Periodontograma.Elastic.Entidades
             set 
             { 
                 cara = value;
+
+                if(value == Enumeradores.Cara.a)
+                {
+                    CaraString = "A";
+                }
+                else if (value == Enumeradores.Cara.b)
+                {
+                    CaraString = "B";
+                }
+
                 RaisePropertyChanged("Cara");
             }
         }
@@ -270,5 +299,14 @@ namespace Hefesoft.Periodontograma.Elastic.Entidades
                 RaisePropertyChanged("FurcaVisualizacion");
             }
         }
+
+        private string caraString;
+
+        public string CaraString
+        {
+            get { return caraString; }
+            set { caraString = value; RaisePropertyChanged("CaraString"); }
+        }
+        
     }
 }

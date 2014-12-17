@@ -472,10 +472,12 @@
     <Reference Include="Hefesoft.Pdf.Entities">
       <HintPath>..\..\packages\Hefesoft.Pdf.1.0.0\lib\Hefesoft.Pdf.Entities.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Periodontograma">
+    <Reference Include="Hefesoft.Periodontograma, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Periodontograma.0.0.0.1\lib\Hefesoft.Periodontograma.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Periodontograma.Elastic">
+    <Reference Include="Hefesoft.Periodontograma.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Periodontograma.0.0.0.1\lib\Hefesoft.Periodontograma.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">

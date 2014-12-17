@@ -28,11 +28,13 @@ namespace Hefesoft.Periodontograma.Assets
 
         public Periodontograma()
         {
-            this.InitializeComponent();            
+            this.InitializeComponent();          
             addBusy();
             NavigationHelper = new Util.W8.UI.Common.NavigationHelper();
             NavigationHelper.setPage(this);
         }
+
+        
 
         public NavigationHelper NavigationHelper { get; set; }
 

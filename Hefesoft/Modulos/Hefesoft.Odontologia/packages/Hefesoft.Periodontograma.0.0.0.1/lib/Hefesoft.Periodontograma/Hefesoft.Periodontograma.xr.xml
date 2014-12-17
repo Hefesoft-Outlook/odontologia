@@ -15,8 +15,10 @@
     <RootPropertyPathName Name="Arriba_Abajo" />
     <RootPropertyPathName Name="Cara" />
     <RootPropertyPathName Name="Tipo_Pieza" />
+    <RootPropertyPathName Name="CaraString" />
     <RootPropertyPathName Name="FurcaVisualizacion" />
     <RootPropertyPathName Name="Periodontograma" />
+    <RootPropertyPathName Name="MenuPiezaDental" />
     <RootPropertyPathName Name="LstPeriodontogramaParte8" />
     <RootPropertyPathName Name="Seleccionado" />
     <RootPropertyPathName Name="LstPeriodontogramaParte7" />
@@ -52,11 +54,11 @@
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
       <RootProperty Name="Orientation" />
-      <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualStateManager">
       <RootMethod Name="GetVisualStateGroups" />
@@ -94,7 +96,6 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Background" />
       <RootProperty Name="ChildrenTransitions" />
-      <RootProperty Name="RowDefinitions" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
@@ -129,15 +130,26 @@
       <RootEvent Name="PointerPressed" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="FallbackValue" />
       <RootProperty Name="Mode" />
-      <RootProperty Name="Path" />
       <RootProperty Name="Source" />
+      <RootProperty Name="Path" />
       <RootProperty Name="ElementName" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
+      <RootProperty Name="TextWrapping" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="Hefesoft.Periodontograma.Assets.Control.Item_Template">
       <RootProperty Name="furcaVisualizacion" />
-      <RootProperty Name="mostrarRecuadro" />
       <RootProperty Name="mostrarOpciones" />
+      <RootProperty Name="mostrarRecuadro" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="DataContext" />
@@ -152,17 +164,16 @@
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBlock">
-      <RootProperty Name="Style" />
-      <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
-      <RootProperty Name="FontFamily" />
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="HorizontalScrollMode" />
+      <RootProperty Name="HorizontalScrollBarVisibility" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="Content" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemTemplate" />
@@ -171,10 +182,7 @@
       <RootProperty Name="ItemsPanel" />
       <RootProperty Name="FontFamily" />
     </RootType>
-    <RootType FullName="Hefesoft.Periodontograma.Assets.Control.Periodontograma">
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-    </RootType>
+    <RootType FullName="Hefesoft.Periodontograma.Assets.Control.Periodontograma" />
     <RootType FullName="Windows.UI.Xaml.Shapes.Rectangle">
       <RootProperty Name="Fill" />
       <RootProperty Name="Stroke" />
@@ -187,7 +195,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
-      <RootProperty Name="Height" />
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
@@ -276,8 +283,19 @@
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.TransitionCollection" />
     <RootType FullName="Windows.UI.Xaml.Media.Animation.EntranceThemeTransition" />
-    <RootType FullName="Windows.UI.Xaml.Controls.RowDefinition">
-      <RootProperty Name="Height" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Button">
+      <RootProperty Name="Command" />
+      <RootProperty Name="Style" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
+      <RootMethod Name="GetName" />
+      <RootMethod Name="SetName" />
+      <RootMethod Name="GetAutomationId" />
+      <RootMethod Name="SetAutomationId" />
+      <RootMethod Name="GetItemType" />
+      <RootMethod Name="SetItemType" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="HorizontalAlignment" />
@@ -287,28 +305,17 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="Header" />
-      <RootProperty Name="ContentTemplate" />
       <RootProperty Name="Padding" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="ContentTemplate" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado" />
     <RootType FullName="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes">
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
       <RootProperty Name="verTitulo" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Command" />
-      <RootProperty Name="Style" />
-      <RootProperty Name="VerticalAlignment" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
-      <RootMethod Name="GetName" />
-      <RootMethod Name="SetName" />
-      <RootMethod Name="GetAutomationId" />
-      <RootMethod Name="SetAutomationId" />
-      <RootMethod Name="GetItemType" />
-      <RootMethod Name="SetItemType" />
     </RootType>
     <RootType FullName="Hefesoft.Periodontograma.Assets.Periodontograma" />
     <RootType FullName="Windows.UI.Xaml.Controls.Slider">

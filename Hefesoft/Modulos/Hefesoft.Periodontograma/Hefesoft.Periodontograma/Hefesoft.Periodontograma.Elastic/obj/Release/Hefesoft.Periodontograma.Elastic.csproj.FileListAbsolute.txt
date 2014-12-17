@@ -33,7 +33,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\He
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Release\System.Runtime.xml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Release\System.Threading.Tasks.xml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.csproj.App.config
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.csprojResolveAssemblyReference.cache
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.dll
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.pdb
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Release\Hefesoft.Periodontograma.Elastic.dll.config
@@ -74,3 +73,4 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.csproj.App.config
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.pdb
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Release\Hefesoft.Portable.Crypto.dll

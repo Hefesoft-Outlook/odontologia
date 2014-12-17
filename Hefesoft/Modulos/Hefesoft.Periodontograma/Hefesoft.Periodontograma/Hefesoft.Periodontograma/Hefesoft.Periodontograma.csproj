@@ -167,11 +167,7 @@
     <Reference Include="Hefesoft.Pacientes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Pacientes.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes.Elastic\bin\Release\Hefesoft.Pacientes.Elastic.dll</HintPath>
-    </Reference>
+    </Reference>    
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
     </Reference>

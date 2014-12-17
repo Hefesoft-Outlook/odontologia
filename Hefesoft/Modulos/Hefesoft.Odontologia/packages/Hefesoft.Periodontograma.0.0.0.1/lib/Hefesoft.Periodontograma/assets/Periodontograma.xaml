@@ -28,77 +28,66 @@
 			<TransitionCollection>
 				<EntranceThemeTransition/>
 			</TransitionCollection>
-		</Grid.ChildrenTransitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="140"/>
-			<RowDefinition Height="*"/>
-		</Grid.RowDefinitions>
+		</Grid.ChildrenTransitions>		
 
-        <Grid x:FieldModifier="public">
-			<Grid.ColumnDefinitions>
-				<ColumnDefinition Width="120"/>
-				<ColumnDefinition Width="*"/>
-			</Grid.ColumnDefinitions>
-            
-			<Button x:Name="backButton" Margin="39,59,39,0" 
-				Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
-				Style="{StaticResource NavigationBackButtonNormalStyle}"
-				VerticalAlignment="Top"
-				AutomationProperties.Name="Back"
-				AutomationProperties.AutomationId="BackButton"
-				AutomationProperties.ItemType="Navigation Button"/>
-            
-			<TextBlock x:Name="pageTitle" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-				IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,30,40"/>
+        <ScrollViewer HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontFamily="Global User Interface" HorizontalScrollMode="Auto" HorizontalScrollBarVisibility="Auto">
+
+        	<StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Orientation="Horizontal" Margin="0,20,0,0">
+        		<Button x:Name="backButton" 
+        			Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+        			Style="{StaticResource NavigationBackButtonNormalStyle}"
+        			VerticalAlignment="Top"
+        			AutomationProperties.Name="Back"
+        			AutomationProperties.AutomationId="BackButton"
+        			AutomationProperties.ItemType="Navigation Button" Margin="40,0"/>
 			
-		</Grid>
+        		<Hub 
+        			x:Name="HbPeriododntograma"
+        			x:FieldModifier="public"
+        			HorizontalAlignment="Stretch" 
+        			VerticalAlignment="Stretch" 
+        			Padding="40,0">
 
-        <Hub 
-            x:Name="HbPeriododntograma"
-            x:FieldModifier="public"
-            HorizontalAlignment="Left" 
-            VerticalAlignment="Top" 
-            Grid.Row="1" 
-            Padding="40,0">
+        			<HubSection Header="Listado" Padding="40,0" FontFamily="Global User Interface">
+        				<DataTemplate>
+        					<Grid>
+        						<ListadoPacientes:SplitPacientes
+        							Width="300"
+        							Height="500"
+        							verTitulo="False"/>
+        					</Grid>
+        				</DataTemplate>
+        			</HubSection>
 
-            <HubSection Header="Listado">
-                <DataTemplate>
-                    <Grid>
-                        <ListadoPacientes:SplitPacientes
-                            Width="300"
-                            Height="500"
-                            verTitulo="False"/>
-                    </Grid>
-                </DataTemplate>
-            </HubSection>
-
-            <HubSection Padding="0,40,0,44"                
+        			<HubSection Padding="0"                
                 >
-                <DataTemplate>
-                    <StackPanel>
-                        <ListadoPeriodontogramas:liIstadoPeriodontogramas/>                        
-                    </StackPanel>
-                </DataTemplate>
-            </HubSection>
+        				<DataTemplate>
+        					<StackPanel>
+        						<ListadoPeriodontogramas:liIstadoPeriodontogramas/>                        
+        					</StackPanel>
+        				</DataTemplate>
+        			</HubSection>
 
-            <HubSection Header="Periodontograma">
-				<DataTemplate>
-					<Grid>
-						<Viewbox Height="600" VerticalAlignment="Top">
-							<PeriodontogramaControl:Periodontograma Height="768" Width="1366"/>       
-						</Viewbox>        
-					</Grid>
-				</DataTemplate>
-			</HubSection>
+        			<HubSection Header="Periodontograma" Padding="40,0" HorizontalAlignment="Stretch" Width="1100">
+        				<DataTemplate>
+        					<Grid>
+        						<Viewbox VerticalAlignment="Top">
+        							<PeriodontogramaControl:Periodontograma/>       
+        						</Viewbox>        
+        					</Grid>
+        				</DataTemplate>
+        			</HubSection>
             
-			<HubSection Header="Seleccionado">
-				<DataTemplate>
-					<Grid>
-						<Seleccionado:Seleccionado/>
-					</Grid>
-				</DataTemplate>
-			</HubSection>
-		</Hub>
+        			<HubSection Header="Seleccionado">
+        				<DataTemplate>
+        					<Grid>
+        						<Seleccionado:Seleccionado/>
+        					</Grid>
+        				</DataTemplate>
+        			</HubSection>
+        		</Hub>
+        	</StackPanel>
+        </ScrollViewer>
 	</Grid>
 
 </Page>

@@ -36,7 +36,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
                 placaCommand = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo);
                 placaCommand2 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo2);
                 placaCommand3 = new RelayCommand<Entidades.PeriodontogramaEntity>(placaMetodonMetodo3);
-                newCommand = new RelayCommand(newMethod);
+                newCommand = new RelayCommand(limpiarSinRecargarImagenes);
                 saveCommand = new RelayCommand(save);
                 cargarPeriododntogramaSeleccionadoCommand = new RelayCommand<Data.Periodontograma>(cargarPeriodontogramaSeleccionado);
 
@@ -55,7 +55,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
             {
                 BusyBox.UserControlCargando(true);
                 listarPorPaciente();
-                newMethod();
+                limpiarSinRecargarImagenes();
                 BusyBox.UserControlCargando(false);
             });
         }
@@ -63,21 +63,37 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
 
         #region Propiedades
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte1 { get; set; }
+        private bool menuPiezaDental = true;
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte2 { get; set; }
+        public bool MenuPiezaDental
+        {
+            get 
+            { 
+                return menuPiezaDental; 
+            }
+            set 
+            { 
+                menuPiezaDental = value;
+                RaisePropertyChanged("MenuPiezaDental");
+            }
+        }
+        
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte3 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte1 { get; set; }
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte4 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte2 { get; set; }
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte5 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte3 { get; set; }
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte6 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte4 { get; set; }
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte7 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte5 { get; set; }
 
-        public IEnumerable<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte8 { get; set; }
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte6 { get; set; }
+
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte7 { get; set; }
+
+        public ObservableCollection<Entidades.PeriodontogramaEntity> LstPeriodontogramaParte8 { get; set; }
 
         private Entidades.PeriodontogramaEntity seleccionado;
 
@@ -87,6 +103,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
             set 
             { 
                 seleccionado = value;
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(value, "Pieza Seleccionada");
                 RaisePropertyChanged("Seleccionado");
             }
         }

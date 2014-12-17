@@ -14,7 +14,7 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
 {
     public partial class Periodontograma : ViewModelBase
     {
-        private void newMethod()
+        private void limpiarSinRecargarImagenes()
         {
             Hefesoft.Periodontograma.Elastic.Util.LimpiarDatos.limpiarListado(LstPeriodontogramaParte1);
             Hefesoft.Periodontograma.Elastic.Util.LimpiarDatos.limpiarListado(LstPeriodontogramaParte2);
@@ -95,14 +95,14 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
 
             Hefesoft.Periodontograma.Elastic.Util.Generar_datos datos = new Util.Generar_datos();
             var data = datos.inicializarDatos();
-            LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1);
-            LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2);
-            LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3);
-            LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4);
-            LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5);
-            LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6);
-            LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7);
-            LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
+            LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1).ToObservableCollection();
+            LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2).ToObservableCollection();
+            LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3).ToObservableCollection();
+            LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4).ToObservableCollection();
+            LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5).ToObservableCollection();
+            LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6).ToObservableCollection();
+            LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7).ToObservableCollection();
+            LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8).ToObservableCollection();
 
             actualizarListadosUi();
 
@@ -121,7 +121,6 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
             if (result.Any())
             {
                 var data = result.First().Listado;
-
                 periodontogramaAListadoUi(data);
             }
 
@@ -130,18 +129,25 @@ namespace Hefesoft.Periodontograma.Elastic.ViewModel
 
         private void periodontogramaAListadoUi(List<PeriodontogramaEntity> data)
         {
-            limpiarListados();
-
-            LstPeriodontogramaParte1 = data.Where(a => a.Parte == Enumeradores.Parte.parte1);
-            LstPeriodontogramaParte2 = data.Where(a => a.Parte == Enumeradores.Parte.parte2);
-            LstPeriodontogramaParte3 = data.Where(a => a.Parte == Enumeradores.Parte.parte3);
-            LstPeriodontogramaParte4 = data.Where(a => a.Parte == Enumeradores.Parte.parte4);
-            LstPeriodontogramaParte5 = data.Where(a => a.Parte == Enumeradores.Parte.parte5);
-            LstPeriodontogramaParte6 = data.Where(a => a.Parte == Enumeradores.Parte.parte6);
-            LstPeriodontogramaParte7 = data.Where(a => a.Parte == Enumeradores.Parte.parte7);
-            LstPeriodontogramaParte8 = data.Where(a => a.Parte == Enumeradores.Parte.parte8);
-
+            limpiarSinRecargarImagenes();
+            actualizarValor(LstPeriodontogramaParte1, data);
+            actualizarValor(LstPeriodontogramaParte2, data);
+            actualizarValor(LstPeriodontogramaParte3, data);
+            actualizarValor(LstPeriodontogramaParte4, data);
+            actualizarValor(LstPeriodontogramaParte5, data);
+            actualizarValor(LstPeriodontogramaParte6, data);
+            actualizarValor(LstPeriodontogramaParte7, data);
+            actualizarValor(LstPeriodontogramaParte8, data);
             actualizarListadosUi();
+        }
+
+        private void actualizarValor(IEnumerable<PeriodontogramaEntity> lst, List<PeriodontogramaEntity> data)
+        {
+            foreach (var item in lst)
+            {
+                var elemento = data.FirstOrDefault(a => a.Numero == item.Numero);
+                item.actualizarElemento(elemento);
+            }
         }
 
         private void actualizarListadosUi()

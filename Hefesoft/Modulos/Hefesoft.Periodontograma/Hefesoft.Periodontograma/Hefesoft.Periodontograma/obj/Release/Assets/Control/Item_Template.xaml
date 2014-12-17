@@ -54,6 +54,16 @@
     	</VisualStateManager.VisualStateGroups>
         
 		
+		<StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+        
+		
+    		<TextBlock TextWrapping="Wrap" Text="{Binding Numero, FallbackValue=0}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<TextBlock TextWrapping="Wrap" Text="{Binding CaraString, FallbackValue=A}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0"/>
+        
+		
+    	</StackPanel>
+        
+		
 		<Grid Width="100">
         <Pieza:Pieza             
                         x:FieldModifier="public"
@@ -62,25 +72,21 @@
                         Arriba_Abajo="{Binding Arriba_Abajo}"
                         cara="{Binding Cara}"
                         TipoPieza="{Binding Tipo_Pieza}"
-                        >
-        </Pieza:Pieza>
+                        />
 
-        <Margenes:Margen color="{Binding margenGingivalColor}" 
+        <Margenes:Margen x:Name="Margen1" color="{Binding margenGingivalColor}" 
                          margen1="{Binding MargenGingival1}"
                          margen2="{Binding MargenGingival2}"
                          margen3="{Binding MargenGingival3}"
-                         >
+                         />
 
-        </Margenes:Margen>
-
-        <Margenes:Margen color="{Binding profundidadSondajeColor}"
+        <Margenes:Margen x:Name="Margen2" color="{Binding profundidadSondajeColor}"
                          margen1="{Binding ProdundidadSondaje1}"
                          margen2="{Binding ProdundidadSondaje2}"
                          margen3="{Binding ProdundidadSondaje3}"
-                         >
-        </Margenes:Margen>
+                         />
         
-		<Grid HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="60">
+		<Grid x:Name="GridFurca" HorizontalAlignment="Center" VerticalAlignment="Center" Height="30" Width="60">
         	<Grid.ColumnDefinitions>
         		<ColumnDefinition Width="5*"/>
         		<ColumnDefinition Width="5*"/>
@@ -107,8 +113,7 @@
         </Grid>
 
     </Grid>        
-        <Menu_Opciones:Menu_Opciones x:FieldModifier="public" x:Name="menuOpciones">
-		</Menu_Opciones:Menu_Opciones>
+        <Menu_Opciones:Menu_Opciones x:FieldModifier="public" x:Name="menuOpciones"/>
     </StackPanel>
 </UserControl>
 
