@@ -16,8 +16,8 @@
     </Page.DataContext>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-		<Hub Header="Menu">
-			<HubSection Header="">
+		<Hub Padding="40,0">
+			<HubSection>
 				<DataTemplate>
 					<Grid>
 						<Menu_Control:Menu x:Name="MenuControl"/>

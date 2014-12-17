@@ -33,28 +33,10 @@ namespace Hefesoft.Odontologia.Test
             oirMenuSeleccionado();
             this.InitializeComponent();
             Loaded += MainPage_Loaded;
-            
-            addBusy();
-            NavigationHelper = new Util.W8.UI.Common.NavigationHelper();
-            NavigationHelper.setPage(this);            
-            Host.Navigating += Host_Navigating;
-            Host.Navigated += Host_Navigated;
-            backButtonHost.Command = NavigationHelper.GoBackCommand;
-
-            
+            navegacion();
         }
 
-        void Host_Navigated(object sender, NavigationEventArgs e)
-        {
-            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(false);
-        }
-
-        void Host_Navigating(object sender, NavigatingCancelEventArgs e)
-        {
-            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true);
-        }
-
-        public NavigationHelper NavigationHelper { get; set; }
+     
 
         void MainPage_Loaded(object sender, RoutedEventArgs e)
         {  
@@ -65,17 +47,5 @@ namespace Hefesoft.Odontologia.Test
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<string>(this, "Usuario logueado");
         }
-
-        public void addBusy()
-        {
-            var busy = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
-            var busyBox = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
-            Grid.SetRow(busyBox, 1);
-            LayoutRoot.Children.Add(busyBox);
-
-            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Prueba");
-        }
-
-        
     }
 }

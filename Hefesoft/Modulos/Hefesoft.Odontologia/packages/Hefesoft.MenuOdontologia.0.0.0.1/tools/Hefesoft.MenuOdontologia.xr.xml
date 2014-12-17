@@ -139,11 +139,10 @@
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
-      <RootProperty Name="Header" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Sections" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
-      <RootProperty Name="Header" />
       <RootProperty Name="ContentTemplate" />
     </RootType>
     <RootType FullName="Hefesoft.Paginas.Menu" />

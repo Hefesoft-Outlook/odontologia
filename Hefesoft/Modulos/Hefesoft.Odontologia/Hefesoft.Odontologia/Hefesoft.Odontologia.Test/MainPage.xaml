@@ -8,6 +8,7 @@
     xmlns:ControlesPacientes="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
     xmlns:Controles="using:Hefesoft.Autentication.Controles"    
     x:Class="Hefesoft.Odontologia.Test.MainPage"
+	x:Name="pageRoot"
     mc:Ignorable="d">
 
     <Grid x:Name="LayoutRoot">
@@ -21,19 +22,26 @@
 
         <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" >
 
-            <Controles:Usuario HorizontalAlignment="Right" VerticalAlignment="Center"/>
+            <Controles:Usuario HorizontalAlignment="Right" VerticalAlignment="Center" FontFamily="Global User Interface" Margin="0,0,0,-20"/>
             <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15,0,0,0">
 
+                <!-- No funciona validar Porque
             	<Button 
             		x:Name="backButtonHost"
-            		VerticalAlignment="Center"        		
-            		Style="{StaticResource NavigationBackButtonNormalStyle}"
+            		VerticalAlignment="Center"
+					Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
             		AutomationProperties.Name="BackHost"
             		AutomationProperties.AutomationId="BackButtonHost"
-            		AutomationProperties.ItemType="Navigation Button" 
+            		AutomationProperties.ItemType="Navigation Button"
 				/>
+                -->
 
-            	<TextBlock x:Uid="AppName" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="Wrap" Margin="20,0,0,0" FontSize="32" VerticalAlignment="Center"/>
+            	<TextBlock x:Uid="AppName" 					
+					TextWrapping="Wrap" 
+					Margin="20,0,0,0" 
+					FontSize="32" 
+					VerticalAlignment="Center" 
+					Text="Hefesoft Dentist"/>
 
             </StackPanel>
 

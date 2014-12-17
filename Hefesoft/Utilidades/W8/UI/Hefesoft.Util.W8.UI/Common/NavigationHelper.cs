@@ -16,8 +16,25 @@ namespace Hefesoft.Util.W8.UI.Common
     [Windows.Foundation.Metadata.WebHostHidden]
     public class NavigationHelper : DependencyObject
     {
+        public Modo Mode { get; set; }
+
+        public Frame  FrameNavigation { get; set; }
+
         private Page Page { get; set; }
-        private Frame Frame { get { return this.Page.Frame; } }
+        private Frame Frame 
+        { 
+            get 
+            {
+                if (Mode == Modo.Page)
+                {
+                    return this.Page.Frame;
+                }
+                else
+                {
+                    return FrameNavigation;
+                }
+            } 
+        }
 
         private static bool isRegister { get; set; }
     
@@ -408,5 +425,11 @@ namespace Hefesoft.Util.W8.UI.Common
         {
             this.PageState = pageState;
         }
+    }
+
+    public enum Modo
+    {
+        Page = 0,
+        Frame = 1
     }
 }

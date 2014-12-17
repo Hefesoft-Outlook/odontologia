@@ -109,6 +109,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Main\Main.Navigation.cs" />
     <Compile Include="Main\Main.Messenger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -432,10 +433,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Odontograma.0.0.0.1\lib\Hefesoft.Entities.Odontologia.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.MenuOdontologia">
+    <Reference Include="Hefesoft.MenuOdontologia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.MenuOdontologia.0.0.0.1\lib\Hefesoft.MenuOdontologia.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.MenuOdontologia.Elastic">
+    <Reference Include="Hefesoft.MenuOdontologia.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.MenuOdontologia.0.0.0.1\lib\Hefesoft.MenuOdontologia.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.NivelesSeveridad">
@@ -493,7 +496,8 @@
     <Reference Include="Hefesoft.Usuario">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Util.W8.UI">
+    <Reference Include="Hefesoft.Util.W8.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
