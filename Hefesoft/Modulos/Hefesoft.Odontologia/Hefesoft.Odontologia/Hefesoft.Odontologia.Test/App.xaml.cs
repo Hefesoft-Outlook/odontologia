@@ -32,6 +32,12 @@ namespace Hefesoft.Odontologia.Test
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            this.UnhandledException += App_UnhandledException;
+        }
+
+        void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;            
         }
 
         /// <summary>

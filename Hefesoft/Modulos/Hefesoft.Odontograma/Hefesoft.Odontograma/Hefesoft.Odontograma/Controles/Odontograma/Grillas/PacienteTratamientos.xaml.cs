@@ -2,6 +2,7 @@
 using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using GalaSoft.MvvmLight.Messaging;
+using Hefesoft.Standard.BusyBox;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -27,16 +28,23 @@ namespace Hefesoft.Odontograma.Grillas
         public PacienteTratamientos()
         {
             this.InitializeComponent();
+            oirPacienteSeleccionado();
         }
 
-        private void HyprlnkBttnSeleccionar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void oirPacienteSeleccionado()
         {
-            HyperlinkButton hp = sender as HyperlinkButton;
-            var item = hp.DataContext as TratamientoEntity;
-            Variables_Globales.IdTratamientoActivo = item.Identificador;
-            var PacienteViewModel = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
-            PacienteViewModel.seleccionarTratamiento(item);
-            Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Paciente seleccionado", item =>
+            {
+                var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
+                var vmPaciente = ServiceLocator.Current.GetInstance<Hefesoft.Pacientes.Elastic.ViewModel.Pacientes>();
+                var vmUsuario = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
+                Variables_Globales.IdPacienteHefesoft = vmPaciente.Paciente.RowKey;
+
+                BusyBox.UserControlCargando(true);
+                vm.cargarDatosPaciente();
+                BusyBox.UserControlCargando(false);
+            });
         }
+      
     }
 }

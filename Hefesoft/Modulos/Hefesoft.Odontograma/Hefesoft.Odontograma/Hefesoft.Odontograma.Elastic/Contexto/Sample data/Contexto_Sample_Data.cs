@@ -129,7 +129,14 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         {
             Busy.UserControlCargando();
             var lst = new ObservableCollection<TratamientoEntity>();
-            var result = await new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity().getTableByPartition();
+
+            //Aca deberia ir la variablde de paciente de hefesoft
+            var query = new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity() 
+            { 
+                PartitionKey = Variables_Globales.IdPacienteHefesoft
+            };
+
+            var result = await Hefesoft.Standard.Util.table.crudTable.getTableByPartition(query);
             lst = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), lst);
             Busy.UserControlCargando(false);
             return lst;
@@ -341,7 +348,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //La entidad que tiene la lista se usa para llenar la que se persistira en el blob
             odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
             odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
+            odontogramaInsertar.PartitionKey = Variables_Globales.IdPacienteHefesoft;
             odontogramaInsertar.generarIdentificador = true;
+
 
             Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await odontogramaInsertar.postBlob();
             odontogramaInsertar = result;
@@ -350,6 +359,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             //Se guarda el tratamiento en una tabla aparte para que el listado inicial cargue rapido
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
             odontogramaInsertar.tratamiento.Identificador = Convert.ToInt64(odontogramaInsertar.RowKey);
+            odontogramaInsertar.tratamiento.PartitionKey = odontogramaInsertar.PartitionKey;
+
             var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
 
             //Despues de insertado deberia llegar el consecutivo
@@ -615,8 +626,15 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
         }
 
         public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
-        {            
-            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await new Hefesoft.Entities.Odontologia.Odontograma.Odontograma().getBlobByPartitionAndRowKey(idTratamiento.ToString());
+        {
+
+            var query = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma()
+            {
+                PartitionKey = Variables_Globales.IdPacienteHefesoft,
+                RowKey = idTratamiento.ToString()
+            };
+
+            Hefesoft.Entities.Odontologia.Odontograma.Odontograma result = await Hefesoft.Standard.Util.Blob.CrudBlob.getBlobByPartitionAndRowKey(query, idTratamiento.ToString());
             long identificador = long.Parse(result.RowKey);
 
             result.tratamiento.RowKey = identificador.ToString();

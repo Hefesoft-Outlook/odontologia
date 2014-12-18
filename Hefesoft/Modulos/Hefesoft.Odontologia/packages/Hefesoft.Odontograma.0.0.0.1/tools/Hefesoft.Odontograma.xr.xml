@@ -32,7 +32,12 @@
     <RootPropertyPathName Name="NumeroSesionesConfiguradas" />
     <RootPropertyPathName Name="cambioSesionCommand" />
     <RootPropertyPathName Name="SelectedValue" />
+    <RootPropertyPathName Name="FechaRegistro" />
+    <RootPropertyPathName Name="FechaFinal" />
+    <RootPropertyPathName Name="FechaInicial" />
     <RootPropertyPathName Name="Procedimentos_Paciente" />
+    <RootPropertyPathName Name="tratamientosPaciente" />
+    <RootPropertyPathName Name="Seleccionado" />
     <RootPropertyPathName Name="Grilla_Plan_Tratamiento" />
     <RootPropertyPathName Name="CalculoValoresTratamientoCommand" />
     <RootPropertyPathName Name="PuedeModificar" />
@@ -102,7 +107,6 @@
     <RootPropertyPathName Name="Habilitado_Superficie7" />
     <RootPropertyPathName Name="Realizado_Superficie2" />
     <RootPropertyPathName Name="Habilitado_Superficie2" />
-    <RootPropertyPathName Name="Seleccionado" />
     <RootPropertyPathName Name="Elemento_Seleccionado" />
     <RootPropertyPathName Name="PiezaCompleta" />
     <RootPropertyPathName Name="Superficie4" />
@@ -158,9 +162,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Name" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
+      <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
       <RootEvent Name="Tapped" />
       <RootMethod Name="GetColumn" />
@@ -257,9 +261,9 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
       <RootProperty Name="Content" />
+      <RootProperty Name="Command" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Command" />
       <RootProperty Name="Margin" />
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Visibility" />
@@ -462,6 +466,8 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Hub">
       <RootProperty Name="Header" />
       <RootProperty Name="Sections" />
+      <RootProperty Name="Padding" />
+      <RootProperty Name="Margin" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HubSection">
       <RootProperty Name="Header" />
@@ -475,9 +481,20 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Resources" />
       <RootProperty Name="DataContext" />
-      <RootProperty Name="Content" />
       <RootProperty Name="BottomAppBar" />
+      <RootProperty Name="Content" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="PrimaryCommands" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarToggleButton">
+      <RootProperty Name="Icon" />
+      <RootProperty Name="Label" />
+      <RootProperty Name="Visibility" />
+      <RootEvent Name="Click" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
     <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Generico">
       <RootProperty Name="padre" />
     </RootType>
@@ -505,19 +522,9 @@
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental" />
     <RootType FullName="Hefesoft.Odontograma.Mapa_Dental.Paleta" />
-    <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
-      <RootProperty Name="Name" />
-      <RootProperty Name="IsOpen" />
-      <RootProperty Name="PrimaryCommands" />
+    <RootType FullName="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes">
+      <RootProperty Name="verTitulo" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarToggleButton">
-      <RootProperty Name="Name" />
-      <RootProperty Name="Icon" />
-      <RootProperty Name="Label" />
-      <RootProperty Name="Visibility" />
-      <RootEvent Name="Click" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.AppBarSeparator" />
     <RootType FullName="Hefesoft.Odontograma.Odontograma" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
       <RootProperty Name="Template" />

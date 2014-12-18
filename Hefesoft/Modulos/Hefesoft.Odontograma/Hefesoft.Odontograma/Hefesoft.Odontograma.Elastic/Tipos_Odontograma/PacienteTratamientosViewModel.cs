@@ -18,6 +18,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using GalaSoft.MvvmLight;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp;
 using Microsoft.Practices.ServiceLocation;
+using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 
 
 namespace Cnt.Panacea.Xap.ViewModels
@@ -43,8 +44,7 @@ namespace Cnt.Panacea.Xap.ViewModels
             {   
                 nuevoTratamientoCommand = new RelayCommand(nuevoTratamiento);
                 seleccionarTratamientoCommand = new RelayCommand<TratamientoEntity>(seleccionarTratamiento);
-                odontogramaSinTratamientoCommand = new RelayCommand<OdontogramasPacienteEntity>(odontogramaSinTratamiento);
-                cargarDatosPaciente();
+                odontogramaSinTratamientoCommand = new RelayCommand<OdontogramasPacienteEntity>(odontogramaSinTratamiento);                
                 oirNuevoElementoAgregado();
             }
             catch (Exception ex)
@@ -100,19 +100,22 @@ namespace Cnt.Panacea.Xap.ViewModels
 
         public async void seleccionarTratamiento(TratamientoEntity tratamiento)
         {
-            Variables_Globales.NuevoOdontograma = false;            
-            Variables_Globales.OdontogramaPacientetity = tratamiento.IdOdontogramaInicial;
-            Variables_Globales.IdTratamientoActivo = tratamiento.Identificador;
-            Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Util.Messenger.Cargar_Odontograma() { Odontogra_Cargar = "Inicial" });
-            Messenger.Default.Send(new Cerrar_Pop_Up_Generico() { });
-            Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos() { valor = "Todos" });
-            Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paciente.Inicializar_Valor_Paciente());
+            if (tratamiento != null)
+            {
+                Variables_Globales.NuevoOdontograma = false;
+                Variables_Globales.OdontogramaPacientetity = tratamiento.IdOdontogramaInicial;
+                Variables_Globales.IdTratamientoActivo = tratamiento.Identificador;
+                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Util.Messenger.Cargar_Odontograma() { Odontogra_Cargar = "Inicial" });
+                Messenger.Default.Send(new Cerrar_Pop_Up_Generico() { });
+                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Activar_Elementos() { valor = "Todos" });
+                Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paciente.Inicializar_Valor_Paciente());
 
-            //Con esta variable se hacen la mayoria de calculos
-            Busy.UserControlCargando(true, "Cargando tratamientos guardados");
-            Variables_Globales.TratamientosPadre = await Contexto_Odontologia.obtenerContexto().SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
-            modoLectura();
-            Busy.UserControlCargando(false);   
+                //Con esta variable se hacen la mayoria de calculos
+                Busy.UserControlCargando(true, "Cargando tratamientos guardados");
+                Variables_Globales.TratamientosPadre = await Contexto_Odontologia.obtenerContexto().SeleccionarTratamientoActivo(Variables_Globales.IdTratamientoActivo);
+                modoLectura();
+                Busy.UserControlCargando(false);
+            }
         }        
 
         #endregion Constructor / Destructor
@@ -165,9 +168,21 @@ namespace Cnt.Panacea.Xap.ViewModels
         /// <summary>
         /// Propiedad que almacena los odontogramas sin tratamiento que tiene un paciente
         /// </summary>
-        public ObservableCollection<OdontogramasPacienteEntity> OdontogramasSinTratamiento { get; set; }      
+        public ObservableCollection<OdontogramasPacienteEntity> OdontogramasSinTratamiento { get; set; }
 
+        private TratamientoEntity seleccionado;
 
+        public TratamientoEntity Seleccionado
+        {
+            get { return seleccionado; }
+            set 
+            { 
+                seleccionado = value;
+                seleccionarTratamiento(value);
+                enviarMensajes(value);
+                RaisePropertyChanged("Seleccionado"); 
+            }
+        }
 
         #endregion Propiedades
 
@@ -182,6 +197,18 @@ namespace Cnt.Panacea.Xap.ViewModels
 
         #region Metodos
 
+        private void enviarMensajes(TratamientoEntity item)
+        {
+            if (item != null)
+            {
+                Variables_Globales.IdTratamientoActivo = item.Identificador;
+                var PacienteViewModel = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.ViewModels.PacienteTratamientosViewModel>();
+                PacienteViewModel.seleccionarTratamiento(item);
+                Messenger.Default.Send(new Cambiar_Tipo_Odontograma() { Tipo_Odontograma = Tipo_Odontograma.Inicial });
+            }
+        }
+
+
         /// <summary>
         /// Carga la informacion del paciente en el control paciente, y carga los datagrid
         /// con los tratamientos y los odontogramas de un paciente 
@@ -190,7 +217,7 @@ namespace Cnt.Panacea.Xap.ViewModels
         {
             IdentificadorPaciente = Variables_Globales.IdPaciente;
             RaisePropertyChanged("IdentificadorPaciente");
-            CargarParametrosConvenio();//LFDO Bug 14541 Se realiza el llamado al iniciar la navegacion
+            CargarParametrosConvenio();
 
             await cargarTratamientosPaciente();
             await odontogramasSinTratamiento();

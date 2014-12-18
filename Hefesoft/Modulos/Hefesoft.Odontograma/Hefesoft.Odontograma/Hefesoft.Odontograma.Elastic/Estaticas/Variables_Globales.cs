@@ -149,6 +149,8 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Estaticas
         public static PCL PCL { get; set; }
 
         public static Util.Modos.Modo Modo { get; set; }
+
+        public static string IdPacienteHefesoft { get; set; }
     }
 
     public class PCL

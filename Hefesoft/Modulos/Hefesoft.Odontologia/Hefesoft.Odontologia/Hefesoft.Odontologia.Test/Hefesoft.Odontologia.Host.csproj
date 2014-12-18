@@ -364,6 +364,7 @@
     <Content Include="Assets\SplashScreen.scale-140.png" />
     <Content Include="Assets\SplashScreen.scale-180.png" />
     <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="controles\odontograma\images\59229.png" />
     <None Include="Hefesoft.Odontologia.Host_StoreKey.pfx" />
     <None Include="Package.StoreAssociation.xml" />
     <PRIResource Include="Strings\en-US\Resources.resw" />
@@ -528,7 +529,6 @@
   <ItemGroup>
     <Content Include="Assets\StoreLogo.scale-140.png" />
     <Content Include="Assets\StoreLogo.scale-180.png" />
-    <Content Include="controles\odontograma\images\59229.png" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>

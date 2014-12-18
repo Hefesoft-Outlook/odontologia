@@ -253,4 +253,7 @@
   <data name="AppName.Text" xml:space="preserve">
     <value>Hefesoft Dentist</value>
   </data>
+  <data name="odontograma.Title.Text" xml:space="preserve">
+    <value>Odontograma</value>
+  </data>
 </root>

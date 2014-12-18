@@ -13,28 +13,35 @@
 
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
 
-        <DataTemplate x:Key="Seleccionar">
-            <Grid>
-                <HyperlinkButton x:Name="HyprlnkBttnSeleccionar" Content="Seleccionar" HorizontalAlignment="Left" VerticalAlignment="Top" Click="HyprlnkBttnSeleccionar_Click"/>
-            </Grid>
+        
+        <DataTemplate x:Key="DataTemplateTratamientos">
+            <StackPanel>
+                <TextBlock x:Uid="FechaInicial" Text="Fecha Inicial"/>
+                <TextBlock Text="{Binding FechaInicial}"/>
+
+                <TextBlock x:Uid="FechaFinal" Text="Fecha Final"/>
+                <TextBlock Text="{Binding FechaFinal}"/>
+
+                <TextBlock x:Uid="FechaRegistro" Text="Fecha Registro"/>
+                <TextBlock Text="{Binding FechaRegistro}"/>
+
+                <TextBlock x:Uid="Descripcion" Text="Descripcion"/>
+                <TextBlock Text="{Binding Descripcion}"/>
+            </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
-    
+
     <UserControl.DataContext>
         <Binding Path="Procedimentos_Paciente" Source="{StaticResource Locator}"/>
     </UserControl.DataContext>
 
     <Grid>
-        <!-- xmlns:telerikGrid="using:Telerik.UI.Xaml.Controls.Grid" -->
-        <!--<telerikGrid:RadDataGrid ItemsSource="{Binding tratamientosPaciente}" AutoGenerateColumns="False">
-            <telerikGrid:RadDataGrid.Columns>
-                <telerikGrid:DataGridTextColumn Header="Identificador" PropertyName="Identificador"/>
-                <telerikGrid:DataGridTextColumn Header="Descripcion" PropertyName="Descripcion"/>
-                <telerikGrid:DataGridTextColumn Header="Fecha inicial" PropertyName="FechaInicial"/>
-                <telerikGrid:DataGridTextColumn Header="Fecha final" PropertyName="FechaFinal"/>
-                <telerikGrid:DataGridTemplateColumn CellContentTemplate="{StaticResource Seleccionar}"/>
-            </telerikGrid:RadDataGrid.Columns>
-        </telerikGrid:RadDataGrid>-->
+
+        <ListView 
+            ItemsSource="{Binding tratamientosPaciente}" 
+            ItemTemplate="{StaticResource DataTemplateTratamientos}" 
+            SelectedItem="{Binding Seleccionado, Mode=TwoWay}">
+        </ListView>        
     </Grid>
 
 </UserControl>

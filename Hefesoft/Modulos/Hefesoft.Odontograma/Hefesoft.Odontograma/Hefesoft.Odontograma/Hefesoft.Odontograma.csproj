@@ -128,9 +128,9 @@
     <Compile Include="Controles\Odontograma\Odontograma.xaml.cs">
       <DependentUpon>Odontograma.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.BarClick.cs" />
-    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.Fotos.cs" />
-    <Compile Include="Controles\Odontograma\Hub\Hub.Partial.Login.cs" />
+    <Compile Include="Controles\Odontograma\Odontograma\Odontograma.Partial.BarClick.cs" />
+    <Compile Include="Controles\Odontograma\Odontograma\Odontograma.Partial.Fotos.cs" />
+    <Compile Include="Controles\Odontograma\Odontograma\Odontograma.Partial.Login.cs" />
     <Compile Include="Controles\Odontograma\Indices\Indices.xaml.cs">
       <DependentUpon>Indices.xaml</DependentUpon>
     </Compile>
@@ -247,6 +247,12 @@
     </Reference>
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Pacientes">
+      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Pacientes.Elastic">
+      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Pdf.Entities">
       <HintPath>..\..\packages\Hefesoft.Pdf.1.0.0\lib\Hefesoft.Pdf.Entities.dll</HintPath>
@@ -484,32 +490,25 @@
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*.*">
       </LibraryFiles>
-      
       <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\viewmodel\*.*">
       </LibraryFiles>
-
       <LibraryFiles Include="bin\$(ConfigurationName)\String\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\String\*.*">
       </LibraryFiles>
-      
       <LibraryFiles Include="bin\$(ConfigurationName)\$(TargetName).xr.xml">
       </LibraryFiles>
-      
       <!--La dll generada-->
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
       </PrincipalDlls>
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).Elastic.dll">
       </PrincipalDlls>
-	  <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
+      <PrincipalDlls Include="bin\$(ConfigurationName)\Hefesoft.Entities.Odontologia.dll">
       </PrincipalDlls>
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).pri">
       </PrincipalDlls>
-	  
-	  
-	  
     </ItemGroup>
     <ItemGroup>
       <LibraryFiles Include="Ejemplo\*\*.xaml">
@@ -522,17 +521,11 @@
       </LibraryFiles>
       <LibraryFiles Include="Controles\**\*.xaml">
       </LibraryFiles>
-	  
-	  <LibraryFiles Include="Controles\**\*.png">
+      <LibraryFiles Include="Controles\**\*.png">
       </LibraryFiles>
-	  
-	  <LibraryFiles Include="Controles\**\*.jpg">
+      <LibraryFiles Include="Controles\**\*.jpg">
       </LibraryFiles>
-	  
       <LibraryFiles Include="Controles\*.xaml">
-	  
-	  
-	  
       </LibraryFiles>
       <LibraryFiles Include="Assets\*\*.xaml">
       </LibraryFiles>
@@ -546,24 +539,20 @@
       </LibraryFiles>
       <LibraryFiles Include="viewmodel\*.xaml">
       </LibraryFiles>
-
       <LibraryFiles Include="String\*\*.resw">
       </LibraryFiles>
       <LibraryFiles Include="String\*.resw">
       </LibraryFiles>
-      
     </ItemGroup>
     <ItemGroup>
       <ContentFiles Include="Assets\Images\*\*.*">
       </ContentFiles>
       <ContentFiles Include="Assets\Images\*.*">
       </ContentFiles>
-	  
-	  <ContentFiles Include="Controles\Odontograma\Images\*\*.*">
+      <ContentFiles Include="Controles\Odontograma\Images\*\*.*">
       </ContentFiles>
       <ContentFiles Include="Controles\Odontograma\Images\*.*">
       </ContentFiles>
-	  
       <ContentFiles Include="String\*\*.*">
       </ContentFiles>
       <ContentFiles Include="String\*.*">
