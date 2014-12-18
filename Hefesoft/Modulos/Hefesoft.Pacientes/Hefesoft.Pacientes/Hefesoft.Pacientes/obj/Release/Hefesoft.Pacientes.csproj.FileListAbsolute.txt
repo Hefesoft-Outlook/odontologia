@@ -93,7 +93,6 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\He
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\System.Net.Http.Extensions.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\System.Net.Http.Primitives.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\Windows.UI.Interactivity.dll
-C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\Hefesoft.Pacientes.Elastic.pdb
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\AutoMapper.xml
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\GalaSoft.MvvmLight.Platforms.NetCore45.pri
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Pacientes\Hefesoft.Pacientes\Hefesoft.Pacientes\bin\Release\Hefesoft.Util.W8.UI.pri

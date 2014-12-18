@@ -386,6 +386,9 @@
     <Reference Include="AutoMapper.WinRT">
       <HintPath>..\..\packages\AutoMapper.3.0.0\lib\windows8\AutoMapper.WinRT.dll</HintPath>
     </Reference>
+    <Reference Include="bouncy_castle_hmac_sha_pcl">
+      <HintPath>..\..\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -426,9 +429,6 @@
     <Reference Include="Hefesoft.Autentication.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Autentication.0.0.0.1\lib\Hefesoft.Autentication.Elastic.dll</HintPath>
-    </Reference>
-    <Reference Include="Hefesoft.Azure.Helpers">
-      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Entities.Odontologia, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -481,8 +481,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Periodontograma.0.0.0.1\lib\Hefesoft.Periodontograma.Elastic.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Portable.Crypto">
-      <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
+    <Reference Include="Hefesoft.Portable.Crypto, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hefesoft.Portable.Crypto.0.0.0.1\lib\Hefesoft.Portable.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.xml">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.xml.dll</HintPath>

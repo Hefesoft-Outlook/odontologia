@@ -25,6 +25,8 @@
     <Capability Name="musicLibrary" />
     <Capability Name="picturesLibrary" />
     <Capability Name="removableStorage" />
+    <Capability Name="videosLibrary" />
     <DeviceCapability Name="location" />
+    <DeviceCapability Name="webcam" />
   </Capabilities>
 </Package>

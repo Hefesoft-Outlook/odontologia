@@ -176,5 +176,14 @@ namespace Hefesoft.Pacientes.Elastic.ViewModel
         public List<Hefesoft.Usuario.Entidades.Usuario> ListadoTodos { get; set; }
 
         public RelayCommand<string> search { get; set; }
+
+        private bool verSeleccionar = true;
+
+        public bool VerSeleccionar
+        {
+            get { return verSeleccionar; }
+            set { verSeleccionar = value; RaisePropertyChanged("VerSeleccionar"); }
+        }
+        
     }
 }

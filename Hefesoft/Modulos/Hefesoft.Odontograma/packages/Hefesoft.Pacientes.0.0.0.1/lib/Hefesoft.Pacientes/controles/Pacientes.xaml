@@ -33,7 +33,7 @@
 			</TransitionCollection>
 		</Grid.ChildrenTransitions>
 
-		<Hub>
+		<Hub Padding="40,10,40,0">
 			<Hub.Header>
 				<!-- Back button and page title -->
 				<Grid>
@@ -58,29 +58,18 @@
 				</Grid>
 			</Hub.Header>
 
-			<HubSection Width="780" Margin="0,0,80,0">
-				<HubSection.Background>
-					<ImageBrush Stretch="UniformToFill" />
-				</HubSection.Background>
-				<DataTemplate>
-					<Grillas:SplitPacientes Width="700" verTitulo="False"/>
+			<HubSection>				
+                <DataTemplate>
+					<Grillas:SplitPacientes verTitulo="False"/>
 				</DataTemplate>
 			</HubSection>
 
-			<HubSection Width="500" Margin="0,0,0,0">
-				<HubSection.Background>
-					<ImageBrush Stretch="UniformToFill" />
-				</HubSection.Background>
+			<HubSection Width="500" Margin="0,0,0,0">				
 				<DataTemplate>
 					<Grillas:Add Width="500"/>
 				</DataTemplate>
 			</HubSection>
-		</Hub>
-        
-        <!--
-		<Auth:Usuario HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,33,10,0"/>
-        -->
-        
+		</Hub>        
 	</Grid>
 
 </Page>

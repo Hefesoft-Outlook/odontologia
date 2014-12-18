@@ -1,8 +1,6 @@
 ﻿<UserControl
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:App2.Grillas.Plan_tratamiento"
-    xmlns:common="using:App2.Common"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Interactivity="using:Microsoft.Xaml.Interactivity" 
@@ -10,11 +8,13 @@
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     xmlns:Assets="using:Cnt.Panacea.Xap.Odontologia.Assets"
     xmlns:Pacientes="using:Hefesoft.Usuario.ViewModel.Pacientes"
+    xmlns:Converter="using:Hefesoft.Pacientes.Controles.Converter"
     x:Name="pageRoot"
     x:Class="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes"
     >
 
     <UserControl.Resources>
+        <Converter:booleanToVisibility x:Key="booleanToVisibility"/>
         <vm:ViewModelLocator xmlns:vm="using:Hefesoft.Pacientes.Elastic.Locator" x:Key="LocatorPacientes" />
     </UserControl.Resources>
 
@@ -23,17 +23,17 @@
     </UserControl.DataContext>
 
     <ScrollViewer>
-		<VisualStateManager.VisualStateGroups>
-<!-- Visual states reflect the application's view state -->
-			<VisualStateGroup x:Name="ViewStates">
-				<VisualState x:Name="PrimaryView" />
-				<VisualState x:Name="SinglePane">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Padding">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,60"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
+        <VisualStateManager.VisualStateGroups>
+            <!-- Visual states reflect the application's view state -->
+            <VisualStateGroup x:Name="ViewStates">
+                <VisualState x:Name="PrimaryView" />
+                <VisualState x:Name="SinglePane">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Padding">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="120,0,90,60"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
                 <!--
                     When an item is selected and only one pane is shown the details display requires more extensive changes:
                      * Hide the master list and the column it was in
@@ -41,27 +41,27 @@
                      * Move the title directly above the details
                      * Adjust padding for details
                  -->
-				<VisualState x:Name="SinglePane_Detail">
-					<Storyboard>
-						<ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Visibility">
-							<DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
-						</ObjectAnimationUsingKeyFrames>
-					</Storyboard>
-				</VisualState>
-			</VisualStateGroup>
-		</VisualStateManager.VisualStateGroups>   
-    
-    
-		<StackPanel Orientation="Vertical">
-    
-    
-			<TextBlock
-                x:Name="TxtBlckTitulo"
-                Style="{StaticResource HeaderTextBlockStyle}" 
-                TextWrapping="Wrap" 
-                Text="Pacientes" 
-                Margin="20,10,0,0" 
-                FontFamily="Global User Interface"/>
+                <VisualState x:Name="SinglePane_Detail">
+                    <Storyboard>
+                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="itemListView" Storyboard.TargetProperty="Visibility">
+                            <DiscreteObjectKeyFrame KeyTime="0" Value="Collapsed"/>
+                        </ObjectAnimationUsingKeyFrames>
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <StackPanel Orientation="Vertical">
+
+
+            <TextBlock
+				x:Name="TxtBlckTitulo"
+				Style="{StaticResource HeaderTextBlockStyle}" 
+				TextWrapping="Wrap" 
+				Text="Pacientes" 
+				Margin="20,10,0,0" 
+				FontFamily="Global User Interface"/>
 
             <SearchBox  x:Name="textBox" Margin="0,10,0,0">
                 <Interactivity:Interaction.Behaviors>
@@ -78,17 +78,33 @@
 				TabIndex="1"
 				ItemsSource="{Binding Listado}"
 				SelectedItem="{Binding Paciente, Mode=TwoWay}" 
-                Margin="20,10,0,0"
+				Margin="20,10,0,0"
             >
-				<ListView.ItemTemplate>
-					<DataTemplate>
-						<StackPanel>
-							<TextBlock Text="{Binding nombre}"/>
-                            <HyperlinkButton Content="Seleccionar" Click="HyperlinkButton_Click"></HyperlinkButton>
-						</StackPanel>
-					</DataTemplate>
-				</ListView.ItemTemplate>				
-			</ListView>
-		</StackPanel>
-	</ScrollViewer>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            
+                            <StackPanel Orientation="Horizontal">
+
+                                <Grid x:FieldModifier="public" Height="40" Width="40">
+                                    <Image Source="{Binding imagenRuta}"/>
+                                    <Path Data="M57.5,30 L57.5,57.5 L30,57.5 C45.1878,57.5 57.5,45.1878 57.5,30 z M2.5,30 C2.5,45.1878 14.8122,57.5 30,57.5 L2.5,57.5 z M30,2.5 L57.5,2.5 L57.5,30 C57.5,14.8122 45.1878,2.5 30,2.5 z M2.5,2.5 L30,2.5 C14.8122,2.5 2.5,14.8122 2.5,30 z" Stretch="Fill" Stroke="White" StrokeThickness="5" UseLayoutRounding="False" Fill="White"/>
+                                </Grid>
+
+                                <TextBlock Text="{Binding nombre}"/>
+                                <HyperlinkButton Visibility="{Binding Pacientes.VerSeleccionar, 
+                                                          Converter={StaticResource booleanToVisibility}, 
+                                                          FallbackValue=True, 
+                                                          Source={StaticResource LocatorPacientes}}" 
+                                             
+                                             Content="Seleccionar" 
+                                             Click="HyperlinkButton_Click"/>
+
+                            </StackPanel>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackPanel>
+    </ScrollViewer>
 </UserControl>

@@ -149,7 +149,7 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[24];
+            _typeNameTable = new string[25];
             _typeNameTable[0] = "Hefesoft.Pacientes.Elastic.Locator.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Hefesoft.Pacientes.Elastic.Locator.MainViewModel";
@@ -169,13 +169,14 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
             _typeNameTable[16] = "Windows.UI.Xaml.Data.IValueConverter";
             _typeNameTable[17] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.Add";
             _typeNameTable[18] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[19] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
-            _typeNameTable[20] = "Boolean";
-            _typeNameTable[21] = "Hefesoft.Pacientes.Controles.Pacientes";
-            _typeNameTable[22] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[23] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
+            _typeNameTable[19] = "Hefesoft.Pacientes.Controles.Converter.booleanToVisibility";
+            _typeNameTable[20] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
+            _typeNameTable[21] = "Boolean";
+            _typeNameTable[22] = "Hefesoft.Pacientes.Controles.Pacientes";
+            _typeNameTable[23] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[24] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
 
-            _typeTable = new global::System.Type[24];
+            _typeTable = new global::System.Type[25];
             _typeTable[0] = typeof(global::Hefesoft.Pacientes.Elastic.Locator.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Hefesoft.Pacientes.Elastic.Locator.MainViewModel);
@@ -195,11 +196,12 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
             _typeTable[16] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
             _typeTable[17] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.Add);
             _typeTable[18] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[19] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
-            _typeTable[20] = typeof(global::System.Boolean);
-            _typeTable[21] = typeof(global::Hefesoft.Pacientes.Controles.Pacientes);
-            _typeTable[22] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[23] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
+            _typeTable[19] = typeof(global::Hefesoft.Pacientes.Controles.Converter.booleanToVisibility);
+            _typeTable[20] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
+            _typeTable[21] = typeof(global::System.Boolean);
+            _typeTable[22] = typeof(global::Hefesoft.Pacientes.Controles.Pacientes);
+            _typeTable[23] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[24] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -244,9 +246,10 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
         private object Activate_12_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
         private object Activate_14_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
         private object Activate_17_Add() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.Add(); }
-        private object Activate_19_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
-        private object Activate_21_Pacientes() { return new global::Hefesoft.Pacientes.Controles.Pacientes(); }
-        private object Activate_23_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
+        private object Activate_19_booleanToVisibility() { return new global::Hefesoft.Pacientes.Controles.Converter.booleanToVisibility(); }
+        private object Activate_20_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
+        private object Activate_22_Pacientes() { return new global::Hefesoft.Pacientes.Controles.Pacientes(); }
+        private object Activate_24_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
         private void VectorAdd_8_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
@@ -387,31 +390,39 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
                 xamlType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 19:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
-                userType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_19_SplitPacientes;
-                userType.AddMemberName("verTitulo");
+            case 19:   //  Hefesoft.Pacientes.Controles.Converter.booleanToVisibility
+                userType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_19_booleanToVisibility;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 20:   //  Boolean
+            case 20:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
+                userType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_20_SplitPacientes;
+                userType.AddMemberName("verTitulo");
+                userType.AddMemberName("verSeleccionado");
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 21:   //  Boolean
                 xamlType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 21:   //  Hefesoft.Pacientes.Controles.Pacientes
+            case 22:   //  Hefesoft.Pacientes.Controles.Pacientes
                 userType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_21_Pacientes;
+                userType.Activator = Activate_22_Pacientes;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 22:   //  Windows.UI.Xaml.Controls.Page
+            case 23:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 23:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
+            case 24:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
                 userType = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
@@ -587,12 +598,22 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
             var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
             that.verTitulo = (global::System.Boolean)Value;
         }
-        private object get_14_Pacientes_NavigationHelper(object instance)
+        private object get_14_SplitPacientes_verSeleccionado(object instance)
+        {
+            var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
+            return that.verSeleccionado;
+        }
+        private void set_14_SplitPacientes_verSeleccionado(object instance, object Value)
+        {
+            var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
+            that.verSeleccionado = (global::System.Boolean)Value;
+        }
+        private object get_15_Pacientes_NavigationHelper(object instance)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Pacientes)instance;
             return that.NavigationHelper;
         }
-        private void set_14_Pacientes_NavigationHelper(object instance, object Value)
+        private void set_15_Pacientes_NavigationHelper(object instance, object Value)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Pacientes)instance;
             that.NavigationHelper = (global::Hefesoft.Util.W8.UI.Common.NavigationHelper)Value;
@@ -700,11 +721,18 @@ namespace Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo
                 xamlMember.Getter = get_13_SplitPacientes_verTitulo;
                 xamlMember.Setter = set_13_SplitPacientes_verTitulo;
                 break;
+            case "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes.verSeleccionado":
+                userType = (global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes");
+                xamlMember = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlMember(this, "verSeleccionado", "Boolean");
+                xamlMember.SetIsDependencyProperty();
+                xamlMember.Getter = get_14_SplitPacientes_verSeleccionado;
+                xamlMember.Setter = set_14_SplitPacientes_verSeleccionado;
+                break;
             case "Hefesoft.Pacientes.Controles.Pacientes.NavigationHelper":
                 userType = (global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Pacientes.Controles.Pacientes");
                 xamlMember = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Hefesoft.Util.W8.UI.Common.NavigationHelper");
-                xamlMember.Getter = get_14_Pacientes_NavigationHelper;
-                xamlMember.Setter = set_14_Pacientes_NavigationHelper;
+                xamlMember.Getter = get_15_Pacientes_NavigationHelper;
+                xamlMember.Setter = set_15_Pacientes_NavigationHelper;
                 break;
             }
             return xamlMember;

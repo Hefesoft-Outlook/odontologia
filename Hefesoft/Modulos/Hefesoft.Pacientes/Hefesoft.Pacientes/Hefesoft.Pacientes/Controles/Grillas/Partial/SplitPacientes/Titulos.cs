@@ -56,5 +56,37 @@ namespace Hefesoft.Pacientes.Controles.Grillas.Pacientes
         }
 
         #endregion
+
+
+        #region verSeleccionado (DependencyProperty)
+
+        /// <summary>
+        /// A description of the property.
+        /// </summary>
+        public bool verSeleccionado
+        {
+            get { return (bool)GetValue(verSeleccionadoProperty); }
+            set { SetValue(verSeleccionadoProperty, value); }
+        }
+        public static readonly DependencyProperty verSeleccionadoProperty =
+            DependencyProperty.Register("verSeleccionado", typeof(bool), typeof(SplitPacientes),
+            new PropertyMetadata(true, new PropertyChangedCallback(OnverSeleccionadoChanged)));
+
+        private static void OnverSeleccionadoChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            ((SplitPacientes)d).OnverSeleccionadoChanged(e);
+        }
+
+        private void OnverSeleccionadoChanged(DependencyPropertyChangedEventArgs e)
+        {
+            var vm = ServiceLocator.Current.GetInstance<Hefesoft.Pacientes.Elastic.ViewModel.Pacientes>();
+            var item = (bool)e.NewValue;
+            vm.VerSeleccionar = item;
+        }
+
+        
+
+        #endregion
+        
     }
 }

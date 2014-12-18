@@ -103,6 +103,7 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Controles\Converter\booleanToVisibility.cs" />
     <Compile Include="Controles\Grillas\Add.xaml.cs">
       <DependentUpon>Add.xaml</DependentUpon>
     </Compile>
@@ -133,6 +134,14 @@
     </Reference>
     <Reference Include="Hefesoft.Azure.Helpers">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Pacientes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
+    </Reference>
+    <Reference Include="Hefesoft.Pacientes.Elastic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.Elastic.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
@@ -185,12 +194,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hefesoft.Pacientes.Elastic\Hefesoft.Pacientes.Elastic.csproj">
-      <Project>{f6e0c1a1-44a2-4251-bed2-9ee2842eab4c}</Project>
-      <Name>Hefesoft.Pacientes.Elastic</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <SDKReference Include="BehaviorsXamlSDKManaged, Version=12.0" />
