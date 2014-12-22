@@ -149,7 +149,7 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[18];
+            _typeNameTable = new string[20];
             _typeNameTable[0] = "Hefesoft.Autentication.Elastic.Locator.ViewModelLocator";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "Hefesoft.Autentication.Elastic.Locator.MainViewModel";
@@ -166,10 +166,12 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
             _typeNameTable[13] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
             _typeNameTable[14] = "Windows.UI.Xaml.DependencyObject";
             _typeNameTable[15] = "Hefesoft.Autentication.Controles.fbLogin";
-            _typeNameTable[16] = "Hefesoft.Autentication.Controles.windows";
-            _typeNameTable[17] = "Hefesoft.Autentication.Controles.Usuario";
+            _typeNameTable[16] = "Hefesoft.Util.W8.UI.Util.Storage";
+            _typeNameTable[17] = "Facebook.FacebookClient";
+            _typeNameTable[18] = "Hefesoft.Autentication.Controles.windows";
+            _typeNameTable[19] = "Hefesoft.Autentication.Controles.Usuario";
 
-            _typeTable = new global::System.Type[18];
+            _typeTable = new global::System.Type[20];
             _typeTable[0] = typeof(global::Hefesoft.Autentication.Elastic.Locator.ViewModelLocator);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::Hefesoft.Autentication.Elastic.Locator.MainViewModel);
@@ -186,8 +188,10 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
             _typeTable[13] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
             _typeTable[14] = typeof(global::Windows.UI.Xaml.DependencyObject);
             _typeTable[15] = typeof(global::Hefesoft.Autentication.Controles.fbLogin);
-            _typeTable[16] = typeof(global::Hefesoft.Autentication.Controles.windows);
-            _typeTable[17] = typeof(global::Hefesoft.Autentication.Controles.Usuario);
+            _typeTable[16] = typeof(global::Hefesoft.Util.W8.UI.Util.Storage);
+            _typeTable[17] = typeof(global::Facebook.FacebookClient);
+            _typeTable[18] = typeof(global::Hefesoft.Autentication.Controles.windows);
+            _typeTable[19] = typeof(global::Hefesoft.Autentication.Controles.Usuario);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -232,8 +236,10 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
         private object Activate_11_Autentication() { return new global::Hefesoft.Autentication.Controles.Autentication(); }
         private object Activate_13_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
         private object Activate_15_fbLogin() { return new global::Hefesoft.Autentication.Controles.fbLogin(); }
-        private object Activate_16_windows() { return new global::Hefesoft.Autentication.Controles.windows(); }
-        private object Activate_17_Usuario() { return new global::Hefesoft.Autentication.Controles.Usuario(); }
+        private object Activate_16_Storage() { return new global::Hefesoft.Util.W8.UI.Util.Storage(); }
+        private object Activate_17_FacebookClient() { return new global::Facebook.FacebookClient(); }
+        private object Activate_18_windows() { return new global::Hefesoft.Autentication.Controles.windows(); }
+        private object Activate_19_Usuario() { return new global::Hefesoft.Autentication.Controles.Usuario(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -338,21 +344,35 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
                 userType = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_15_fbLogin;
                 userType.AddMemberName("UserVm");
+                userType.AddMemberName("storage");
+                userType.AddMemberName("_fb");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 16:   //  Hefesoft.Autentication.Controles.windows
+            case 16:   //  Hefesoft.Util.W8.UI.Util.Storage
+                userType = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 17:   //  Facebook.FacebookClient
+                userType = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 18:   //  Hefesoft.Autentication.Controles.windows
                 userType = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_16_windows;
+                userType.Activator = Activate_18_windows;
                 userType.AddMemberName("UserVm");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 17:   //  Hefesoft.Autentication.Controles.Usuario
+            case 19:   //  Hefesoft.Autentication.Controles.Usuario
                 userType = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_17_Usuario;
+                userType.Activator = Activate_19_Usuario;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -461,12 +481,32 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
             var that = (global::Hefesoft.Autentication.Controles.fbLogin)instance;
             that.UserVm = (global::Hefesoft.Usuario.ViewModel.Usuarios)Value;
         }
-        private object get_7_windows_UserVm(object instance)
+        private object get_7_fbLogin_storage(object instance)
+        {
+            var that = (global::Hefesoft.Autentication.Controles.fbLogin)instance;
+            return that.storage;
+        }
+        private void set_7_fbLogin_storage(object instance, object Value)
+        {
+            var that = (global::Hefesoft.Autentication.Controles.fbLogin)instance;
+            that.storage = (global::Hefesoft.Util.W8.UI.Util.Storage)Value;
+        }
+        private object get_8_fbLogin__fb(object instance)
+        {
+            var that = (global::Hefesoft.Autentication.Controles.fbLogin)instance;
+            return that._fb;
+        }
+        private void set_8_fbLogin__fb(object instance, object Value)
+        {
+            var that = (global::Hefesoft.Autentication.Controles.fbLogin)instance;
+            that._fb = (global::Facebook.FacebookClient)Value;
+        }
+        private object get_9_windows_UserVm(object instance)
         {
             var that = (global::Hefesoft.Autentication.Controles.windows)instance;
             return that.UserVm;
         }
-        private void set_7_windows_UserVm(object instance, object Value)
+        private void set_9_windows_UserVm(object instance, object Value)
         {
             var that = (global::Hefesoft.Autentication.Controles.windows)instance;
             that.UserVm = (global::Hefesoft.Usuario.ViewModel.Usuarios)Value;
@@ -521,11 +561,23 @@ namespace Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo
                 xamlMember.Getter = get_6_fbLogin_UserVm;
                 xamlMember.Setter = set_6_fbLogin_UserVm;
                 break;
+            case "Hefesoft.Autentication.Controles.fbLogin.storage":
+                userType = (global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Autentication.Controles.fbLogin");
+                xamlMember = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlMember(this, "storage", "Hefesoft.Util.W8.UI.Util.Storage");
+                xamlMember.Getter = get_7_fbLogin_storage;
+                xamlMember.Setter = set_7_fbLogin_storage;
+                break;
+            case "Hefesoft.Autentication.Controles.fbLogin._fb":
+                userType = (global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Autentication.Controles.fbLogin");
+                xamlMember = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlMember(this, "_fb", "Facebook.FacebookClient");
+                xamlMember.Getter = get_8_fbLogin__fb;
+                xamlMember.Setter = set_8_fbLogin__fb;
+                break;
             case "Hefesoft.Autentication.Controles.windows.UserVm":
                 userType = (global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Autentication.Controles.windows");
                 xamlMember = new global::Hefesoft.Autentication.Hefesoft_Autentication_XamlTypeInfo.XamlMember(this, "UserVm", "Hefesoft.Usuario.ViewModel.Usuarios");
-                xamlMember.Getter = get_7_windows_UserVm;
-                xamlMember.Setter = set_7_windows_UserVm;
+                xamlMember.Getter = get_9_windows_UserVm;
+                xamlMember.Setter = set_9_windows_UserVm;
                 break;
             }
             return xamlMember;

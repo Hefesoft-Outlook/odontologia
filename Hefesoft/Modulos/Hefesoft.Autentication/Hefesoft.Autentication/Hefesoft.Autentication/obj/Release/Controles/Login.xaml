@@ -16,9 +16,9 @@
     		<ColumnDefinition Width="67*"/>
     	</Grid.ColumnDefinitions>
     	<StackPanel>
-    		 <login:fbLogin Name="facebook" HorizontalAlignment="Center"></login:fbLogin>
+    		 <login:fbLogin Name="facebook" HorizontalAlignment="Center" FontFamily="Global User Interface"></login:fbLogin>
              <login:windows Name="outlook" HorizontalAlignment="Center"></login:windows>
-    	</StackPanel>
+    	</StackPanel>    	
     </Grid>
 </UserControl>
 

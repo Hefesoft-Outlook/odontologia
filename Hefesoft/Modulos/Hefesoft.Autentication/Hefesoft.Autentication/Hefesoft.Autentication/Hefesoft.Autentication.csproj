@@ -155,8 +155,9 @@
     <Reference Include="Hefesoft.Standard">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Standard.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Util.W8.UI">
-      <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.2\lib\winrt\Hefesoft.Util.W8.UI.dll</HintPath>
+    <Reference Include="Hefesoft.Util.W8.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Live">
       <HintPath>..\..\packages\LiveSDK.5.6\WindowsXAML\Microsoft.Live.dll</HintPath>
@@ -267,7 +268,7 @@
       <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Assets\*.*">
-      </LibraryFiles>	  
+      </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\vm\*.*">
@@ -298,12 +299,12 @@
       <LibraryFiles Include="Controles\*\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Controles\*.xaml">
-      </LibraryFiles>      
-	  <LibraryFiles Include="Assets\**\*.*">
-      </LibraryFiles>	  
-	  <LibraryFiles Include="Fonts\*\*.*">
       </LibraryFiles>
-	  <LibraryFiles Include="Fonts\**\*.*">
+      <LibraryFiles Include="Assets\**\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="Fonts\*\*.*">
+      </LibraryFiles>
+      <LibraryFiles Include="Fonts\**\*.*">
       </LibraryFiles>
       <LibraryFiles Include="vm\*\*.xaml">
       </LibraryFiles>

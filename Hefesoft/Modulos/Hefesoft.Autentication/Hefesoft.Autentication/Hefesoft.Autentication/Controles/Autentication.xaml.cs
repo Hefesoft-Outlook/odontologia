@@ -41,6 +41,7 @@ namespace Hefesoft.Autentication.Controles
             this.InitializeComponent();
             Loaded += Autentication_Loaded; 
             NavigationHelper = new NavigationHelper();
+            NavigationHelper.setPage(this);
         }
 
         public NavigationHelper NavigationHelper { get; set; }
@@ -109,6 +110,11 @@ namespace Hefesoft.Autentication.Controles
         public void Dispose()
         {
             usuarioIngreso = null;
+        }
+
+        private void menu_Click(object sender, RoutedEventArgs e)
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Send<string>("Usuario logueado", "Usuario logueado");
         }
     }
 }

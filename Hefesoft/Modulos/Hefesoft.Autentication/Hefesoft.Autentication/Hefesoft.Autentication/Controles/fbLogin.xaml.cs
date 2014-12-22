@@ -11,6 +11,7 @@ using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.Security.Authentication.Web;
 using Windows.Storage;
+using Windows.System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -30,8 +31,29 @@ namespace Hefesoft.Autentication.Controles
         {
             Hefesoft.Autentication.Static.Global.FacebookId = "734443959971377";
             oirAutologin();
+            oirLogOut();
             UserVm = ServiceLocator.Current.GetInstance<Hefesoft.Usuario.ViewModel.Usuarios>();
             this.InitializeComponent();
+
+            _fb = new FacebookClient();
+            storage = new Hefesoft.Util.W8.UI.Util.Storage();
+        }
+
+        private void oirLogOut()
+        {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Cambio Usuario", item => 
+            {
+                Out();
+            });
+        }
+
+        /// <summary>
+        /// Falta por validar
+        /// </summary>
+        private async void Out()
+        {
+            //var result = await logOut();
+            //await Launcher.LaunchUriAsync(result);
         }
 
         private void oirAutologin()
@@ -52,54 +74,80 @@ namespace Hefesoft.Autentication.Controles
         }
 
         private async Task<dynamic> logIn()
-        {   
-            FacebookClient _fb = new FacebookClient();
-            
-            var loginUrl = _fb.GetLoginUrl(new
+        {
+            //Se pregunta si en el storage de la app esta guardado el token del usuario
+            //Si esta se usa para loguearse
+            if (storage.exist("fbToken"))
             {
-                client_id = Static.Global.FacebookId,
-                redirect_uri = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri().AbsoluteUri,
-                scope = "public_profile",
-                display = "popup",
-                response_type = "token"
-            });
-
-            Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Ingresando");
-            WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(
-                  WebAuthenticationOptions.None,
-                  loginUrl);
-
-            if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
-            {
-                var callbackUri = new Uri(WebAuthenticationResult.ResponseData.ToString());
-                var facebookOAuthResult = _fb.ParseOAuthCallbackUrl(callbackUri);
-
-                // Retrieve the Access Token. You can now interact with Facebook on behalf of the user
-                // using the Access Token.
-                var accessToken = facebookOAuthResult.AccessToken;
-                Static.Global.Token = accessToken;
+                var accessToken = storage.get("fbToken").ToString();
                 return await LoadUserInfo(accessToken);
-            }
-            else if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.ErrorHttp)
-            {
-                // handle authentication failure
-                return null;
             }
             else
             {
-                // The user canceled the authentication
-                return null;
+                var loginUrl = _fb.GetLoginUrl(new
+                {
+                    client_id = Static.Global.FacebookId,
+                    redirect_uri = Windows.Security.Authentication.Web.WebAuthenticationBroker.GetCurrentApplicationCallbackUri().AbsoluteUri,
+                    scope = "public_profile",
+                    display = "popup",
+                    response_type = "token"
+                });
+
+                Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Ingresando");
+                WebAuthenticationResult WebAuthenticationResult = await WebAuthenticationBroker.AuthenticateAsync(
+                      WebAuthenticationOptions.None,
+                      loginUrl);
+
+                if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.Success)
+                {
+                    var callbackUri = new Uri(WebAuthenticationResult.ResponseData.ToString());
+                    var facebookOAuthResult = _fb.ParseOAuthCallbackUrl(callbackUri);
+
+                    // Retrieve the Access Token. You can now interact with Facebook on behalf of the user
+                    // using the Access Token.
+                    var accessToken = facebookOAuthResult.AccessToken;
+                    Static.Global.Token = accessToken;
+                    storage.Add("fbToken", Static.Global.Token);
+                    return await LoadUserInfo(accessToken);
+                }
+                else if (WebAuthenticationResult.ResponseStatus == WebAuthenticationStatus.ErrorHttp)
+                {
+                    // handle authentication failure
+                    return null;
+                }
+                else
+                {
+                    // The user canceled the authentication
+                    return null;
+                }
             }
         }
 
-        private async Task<dynamic> LoadUserInfo(string token)
+
+        private async Task<Uri> logOut()
         {
-            FacebookClient fb = new FacebookClient(token);
+            var accessToken = storage.get("fbToken").ToString();
+
+             var logoutParameters = new Dictionary<string, object>
+                  {
+                      {"access_token", accessToken },
+                      { "next", "http://www.google.com" }
+                  };
+
+             var logOutUrl = _fb.GetLogoutUrl(logoutParameters);
+             storage.remove("fbToken");
+
+             //Navigate to the uri and in the onloadcompleted event,close or dispose the webview.Your user will be logged out  
+             return new Uri(logOutUrl.AbsoluteUri);
+        }
+
+        private async Task<dynamic> LoadUserInfo(string token)
+        {            
             dynamic parameters = new ExpandoObject();
             parameters.access_token = token;
             parameters.fields = "name,picture";
 
-            dynamic result = await fb.GetTaskAsync("me", parameters);
+            dynamic result = await _fb.GetTaskAsync("me", parameters);
             string profilePictureUrl = string.Format("https://graph.facebook.com/{0}/picture", result.id);
             
             ApplicationData.Current.LocalSettings.Values["login"] = "Facebook";
@@ -142,5 +190,9 @@ namespace Hefesoft.Autentication.Controles
         }
 
         public Hefesoft.Usuario.ViewModel.Usuarios UserVm { get; set; }
+
+        public Hefesoft.Util.W8.UI.Util.Storage storage { get; set; }
+
+        public FacebookClient _fb { get; set; }
     }
 }

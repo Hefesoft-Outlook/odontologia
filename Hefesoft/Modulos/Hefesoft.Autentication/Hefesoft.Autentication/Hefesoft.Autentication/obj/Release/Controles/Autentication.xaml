@@ -1,4 +1,5 @@
 ﻿<Page
+    x:Name="pageRoot"
     x:Class="Hefesoft.Autentication.Controles.Autentication"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -9,15 +10,31 @@
     mc:Ignorable="d">
 
     <Page.Resources>
-        <vm:ViewModelLocator xmlns:vm="using:Hefesoft.Autentication.Elastic.Locator" x:Key="LocatorAutenticacion" />
+        <vm:ViewModelLocator xmlns:vm="using:Hefesoft.Autentication.Elastic.Locator" 
+                             x:Key="LocatorAutenticacion" />
     </Page.Resources>
 
     <UserControl.DataContext>
         <Binding Path="Usuarios" Source="{StaticResource LocatorAutenticacion}"/>
     </UserControl.DataContext>
 
+    <Page.BottomAppBar>
+        <CommandBar x:Name="barraComandos" IsOpen="True">
+            <AppBarToggleButton x:ConnectionId='1' x:Name="menu" Icon="AllApps" Label="Menu"                    />  
+        </CommandBar>
+    </Page.BottomAppBar>
 
-    <Grid x:FieldModifier="public" x:Name="LayoutRoot"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">        
+
+    <Grid x:FieldModifier="public" x:Name="LayoutRoot"  Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Button x:Name="backButton" 
+        			Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+        			Style="{StaticResource NavigationBackButtonNormalStyle}"
+        			VerticalAlignment="Top"
+        			AutomationProperties.Name="Back"
+        			AutomationProperties.AutomationId="BackButton"
+        			AutomationProperties.ItemType="Navigation Button" Margin="40,0"/>
+
         <login:Login></login:Login>
     </Grid>
 </Page>

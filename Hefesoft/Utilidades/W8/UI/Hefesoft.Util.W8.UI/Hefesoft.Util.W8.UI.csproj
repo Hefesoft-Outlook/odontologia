@@ -112,6 +112,7 @@
     <Compile Include="Common\RelayCommand.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util\Storage.cs" />
     <Compile Include="Util\WebCam.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -156,15 +157,10 @@
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
-
-  
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <Import Project="..\..\..\..\..\..\..\..\Users\chibc_000\Downloads\eraseme\Hefesoft.NombreModulo1\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\..\..\..\..\..\..\..\Users\chibc_000\Downloads\eraseme\Hefesoft.NombreModulo1\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
-
   </Target>
-  
-  
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
@@ -172,8 +168,7 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
-<Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
+  <Target Name="AfterBuild" Condition="'$(Configuration)' == 'Release' ">
     <!--
     <ItemGroup> 
      <Dependencies Include="log4net"> 
@@ -183,13 +178,13 @@
    </ItemGroup> 
   -->
     <ItemGroup>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\Common\*\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Common\*\*.*">
       </LibraryFiles>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\Common\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Common\*.*">
       </LibraryFiles>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\Util\*\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Util\*\*.*">
       </LibraryFiles>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\Util\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Util\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">
       </LibraryFiles>
@@ -219,16 +214,16 @@
       </LibraryFiles>
       <!--La dll generada-->
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetFileName)">
-      </PrincipalDlls>      
+      </PrincipalDlls>
       <PrincipalDlls Include="bin\$(ConfigurationName)\$(TargetName).pri">
       </PrincipalDlls>
     </ItemGroup>
     <ItemGroup>
-	  <LibraryFiles Include="Common\*\*.xaml">
+      <LibraryFiles Include="Common\*\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Common\*.xaml">
       </LibraryFiles>
-	  <LibraryFiles Include="Util\*\*.xaml">
+      <LibraryFiles Include="Util\*\*.xaml">
       </LibraryFiles>
       <LibraryFiles Include="Util\*.xaml">
       </LibraryFiles>
