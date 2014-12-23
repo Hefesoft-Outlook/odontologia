@@ -316,7 +316,7 @@ namespace MSBuild.ExtensionPack.NuGet
             };
             using (Process process = Process.Start(processStartInfo))
             {
-                process.WaitForExit(20000);
+                process.WaitForExit(100000);
                 if (process.ExitCode == 0)
                 {
                     string[] files = Directory.GetFiles(executionDirectory, string.Concat(this.Id, ".", this.Version, "*.nupkg"));

@@ -172,7 +172,7 @@
     </Reference>
     <Reference Include="Hefesoft.Util.W8.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\Utilidades\W8\UI\Hefesoft.Util.W8.UI\bin\Release\Hefesoft.Util.W8.UI.dll</HintPath>
+      <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Live, Version=5.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
