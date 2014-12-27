@@ -71,10 +71,13 @@
         			<HubSection Header="Periodontograma" Padding="40,0" HorizontalAlignment="Stretch" Width="1100">
         				<DataTemplate>
         					<Grid>
-        						<Viewbox VerticalAlignment="Top">
-        							<PeriodontogramaControl:Periodontograma/>       
-        						</Viewbox>        
-        					</Grid>
+                                <StackPanel>
+                                    <menu:Mostrar_Menu_Por_Pieza_Dental xmlns:menu="using:Hefesoft.Periodontograma.Assets.Menu"></menu:Mostrar_Menu_Por_Pieza_Dental>
+                                    <Viewbox VerticalAlignment="Top">
+                                        <PeriodontogramaControl:Periodontograma/>
+                                    </Viewbox>
+                                </StackPanel>
+                            </Grid>
         				</DataTemplate>
         			</HubSection>
             

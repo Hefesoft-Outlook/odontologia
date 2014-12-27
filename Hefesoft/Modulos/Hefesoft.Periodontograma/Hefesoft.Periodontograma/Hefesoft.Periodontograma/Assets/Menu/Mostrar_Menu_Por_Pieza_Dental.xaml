@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Hefesoft.Periodontograma.Assets.Menu"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="50"
+    d:DesignWidth="400">
+
+    <UserControl.Resources>
+        <vm:ViewModelLocator xmlns:vm="using:Hefesoft.Periodontograma.Elastic.Locator" x:Key="LocatorPeriodontograma" />
+    </UserControl.Resources>
+
+    <UserControl.DataContext>
+        <Binding Mode="OneWay" Path="Periodontograma" Source="{StaticResource LocatorPeriodontograma}"/>
+    </UserControl.DataContext>
+
+    <Grid>
+        <CheckBox x:Uid="ChckBxMostrarMenuPiezaDental" IsChecked="{Binding MenuPiezaDental, Mode=TwoWay}"/>
+    </Grid>
+</UserControl>

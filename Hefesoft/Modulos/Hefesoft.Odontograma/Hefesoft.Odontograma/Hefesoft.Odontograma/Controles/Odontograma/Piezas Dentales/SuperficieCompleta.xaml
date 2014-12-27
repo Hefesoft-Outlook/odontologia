@@ -21,11 +21,11 @@
 
 				<Pieza_Dental:Inferior Item="{Binding DiagnosticoProcedimiento.Superficie7[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="7" Margin="5,28,0,0" Width="19" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}"/>
 
-				<Pieza_Dental:Izquierda  Item="{Binding DiagnosticoProcedimiento.Superficie2[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" RenderTransformOrigin="0.5,0.5" Width="9" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" Height="17"/>
+				<Pieza_Dental:Izquierda  Item="{Binding DiagnosticoProcedimiento.Superficie2[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" RenderTransformOrigin="0.5,0.5" Width="9" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" Height="17" FontFamily="Global User Interface"/>
                 
 				<Pieza_Dental:Arriba Item="{Binding DiagnosticoProcedimiento.Superficie5[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,6,0,0" Height="7" RenderTransformOrigin="0.5,0.5" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie5}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie5}" Width="22"/>
                 
-				<Pieza_Dental:Central Item="{Binding DiagnosticoProcedimiento.Superficie1[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10,0,0" Width="15" Height="15" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}"/>
+				<Pieza_Dental:Central Item="{Binding DiagnosticoProcedimiento.Superficie1[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10.5,0,0" Width="16" Height="14" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}"/>
                 
 				<Pieza_Dental:Abajo
                     x:Name="superficie4"

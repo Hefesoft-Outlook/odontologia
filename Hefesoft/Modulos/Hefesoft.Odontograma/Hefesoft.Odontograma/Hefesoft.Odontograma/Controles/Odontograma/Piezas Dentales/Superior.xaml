@@ -84,13 +84,22 @@
 
 
 
-		<Path x:Name="path"  Data="M7.03125,7.46875 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.7152,8.0935 L18.8412,6.37456 L15.4982,5.68708 L12.9988,5.65583 L10.6869,6.12457 L8.96855,6.6558 L7.00028,7.49952" HorizontalAlignment="Left" Height="7.894" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893"/>
-		<Path x:Name="path_fondo"  Data="M7.03125,7.46875 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.7152,8.0935 L18.8412,6.37456 L15.4982,5.68708 L12.9988,5.65583 L10.6869,6.12457 L8.96855,6.6558 L7.00028,7.49952" HorizontalAlignment="Left" Height="7.894" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893" Fill="#FFD31414" Opacity="0"/>
-		<Path x:Name="path_realizado"  Data="M7.03125,7.46875 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.7152,8.0935 L18.8412,6.37456 L15.4982,5.68708 L12.9988,5.65583 L10.6869,6.12457 L8.96855,6.6558 L7.00028,7.49952" HorizontalAlignment="Left" Height="7.894" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893" Opacity="0.8" Visibility="Collapsed">
+		<Path x:Name="path"  Data="M7.03125,7.10334 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.7152,7.24097 L18.8412,5.76561 L15.6219,5.19992 L12.9988,5.04688 L10.6869,5.63741 L8.72113,6.29043 L7.00028,7.13413" HorizontalAlignment="Left" Height="7.018" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893"/>
+		<Path x:Name="path_fondo"  Data="M7.08794,6.96673 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.6585,7.25665 L18.8412,5.64916 L15.4982,5.07328 L12.9988,5.04203 L10.6869,5.56657 L8.96855,6.1536 L7.17035,6.94178" HorizontalAlignment="Left" Height="7.039" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893" Fill="#FFD31414" Opacity="0" Margin="0,0,0,-0.039" d:IsLocked="True"/>
+		<Path x:Name="path_realizado"  Data="M7.03125,7.46875 L5.06275,0.49975 L24.652,0.531 L24.1524,2.781 L22.7152,8.0935 L18.8412,6.37456 L15.4982,5.68708 L12.9988,5.65583 L10.6869,6.12457 L8.96855,6.6558 L7.00028,7.49952" HorizontalAlignment="Left" Height="7.894" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.893" Opacity="0.8" Visibility="Collapsed" d:IsLocked="True">
 			<Path.Fill>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/59229.png"/>
 			</Path.Fill>
 		</Path>
-		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="10.667" Margin="6,-6,8,-2"/>
+		
+		<TextBlock 
+		x:Name="texto" 
+		TextWrapping="Wrap" 
+		HorizontalAlignment="Center" 
+		VerticalAlignment="Center" 
+		FontSize="5.333" 
+		Margin="6,-2,7,0"
+		Text="A"
+		/>
 	</Grid>
 </UserControl>

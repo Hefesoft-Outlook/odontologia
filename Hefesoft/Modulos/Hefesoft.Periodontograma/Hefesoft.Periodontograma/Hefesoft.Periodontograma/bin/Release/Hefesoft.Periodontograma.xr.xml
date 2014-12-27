@@ -170,11 +170,6 @@
       <RootProperty Name="HorizontalScrollMode" />
       <RootProperty Name="HorizontalScrollBarVisibility" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
-      <RootProperty Name="Content" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="IsChecked" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsSource" />
@@ -266,6 +261,10 @@
       <RootProperty Name="VerticalAlignment" />
       <RootEvent Name="PointerPressed" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="IsChecked" />
+    </RootType>
+    <RootType FullName="Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Resources" />
       <RootProperty Name="BottomAppBar" />

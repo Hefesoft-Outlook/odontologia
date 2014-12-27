@@ -21,6 +21,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental
         public Central()
         {
             InitializeComponent();
+            texto.Text = "";
         }
 
         #region Item (DependencyProperty)

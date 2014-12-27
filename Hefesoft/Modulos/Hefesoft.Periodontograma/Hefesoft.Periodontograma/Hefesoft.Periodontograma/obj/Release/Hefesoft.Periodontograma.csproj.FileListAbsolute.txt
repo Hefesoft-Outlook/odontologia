@@ -124,7 +124,6 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.Elastic.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.pri
-C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Pacientes.Elastic.pdb
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Periodontograma.Elastic.pdb
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Hefesoft.Periodontograma.csprojResolveAssemblyReference.cache
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Hefesoft.Periodontograma.dll.config
@@ -255,3 +254,8 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\He
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\qualifiers.txt
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\qualifiers.txt.intermediate
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\MultipleQualifiersPerDimensionFound.txt
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\bin\Release\Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.g.i.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.g.cs
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.xaml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma\obj\Release\Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.xbf

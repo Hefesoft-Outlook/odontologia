@@ -45,6 +45,7 @@
     <Compile Include="Contexto\Wcf\Contexto_Odontologia.cs" />
     <Compile Include="Convenio\vm.cs" />
     <Compile Include="Datos de prueba\Paleta.cs" />
+    <Compile Include="Design Data\Odontograma_Elemento.cs" />
     <Compile Include="Diagnosticos Procedimientos\Tiene_Diagnosticos.cs" />
     <Compile Include="Entidades\Odontograma.cs" />
     <Compile Include="Estaticas\Variables_Globales.cs" />

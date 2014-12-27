@@ -149,7 +149,7 @@ namespace Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[49];
+            _typeNameTable = new string[50];
             _typeNameTable[0] = "Hefesoft.Periodontograma.Assets.Menu_Opciones.Menu_Opciones";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Hefesoft.Periodontograma.Assets.Pieza.Pieza";
@@ -194,13 +194,14 @@ namespace Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo
             _typeNameTable[41] = "Hefesoft.Periodontograma.Elastic.Enumeradores.Placa";
             _typeNameTable[42] = "Hefesoft.Periodontograma.Assets.Sangrado_Supuracion.Sangrado_Supuracion_Elemento";
             _typeNameTable[43] = "Hefesoft.Periodontograma.Elastic.Enumeradores.Sangrado_Supuracion";
-            _typeNameTable[44] = "Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado";
-            _typeNameTable[45] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
-            _typeNameTable[46] = "Hefesoft.Periodontograma.Assets.Periodontograma";
-            _typeNameTable[47] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[48] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
+            _typeNameTable[44] = "Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental";
+            _typeNameTable[45] = "Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado";
+            _typeNameTable[46] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
+            _typeNameTable[47] = "Hefesoft.Periodontograma.Assets.Periodontograma";
+            _typeNameTable[48] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[49] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
 
-            _typeTable = new global::System.Type[49];
+            _typeTable = new global::System.Type[50];
             _typeTable[0] = typeof(global::Hefesoft.Periodontograma.Assets.Menu_Opciones.Menu_Opciones);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::Hefesoft.Periodontograma.Assets.Pieza.Pieza);
@@ -245,11 +246,12 @@ namespace Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo
             _typeTable[41] = typeof(global::Hefesoft.Periodontograma.Elastic.Enumeradores.Placa);
             _typeTable[42] = typeof(global::Hefesoft.Periodontograma.Assets.Sangrado_Supuracion.Sangrado_Supuracion_Elemento);
             _typeTable[43] = typeof(global::Hefesoft.Periodontograma.Elastic.Enumeradores.Sangrado_Supuracion);
-            _typeTable[44] = typeof(global::Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado);
-            _typeTable[45] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
-            _typeTable[46] = typeof(global::Hefesoft.Periodontograma.Assets.Periodontograma);
-            _typeTable[47] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[48] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
+            _typeTable[44] = typeof(global::Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental);
+            _typeTable[45] = typeof(global::Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado);
+            _typeTable[46] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
+            _typeTable[47] = typeof(global::Hefesoft.Periodontograma.Assets.Periodontograma);
+            _typeTable[48] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[49] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -306,10 +308,11 @@ namespace Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo
         private object Activate_39_Placa() { return new global::Hefesoft.Periodontograma.Assets.Menu_Opciones.Placa(); }
         private object Activate_40_PlacaElemento() { return new global::Hefesoft.Periodontograma.Assets.Placa.PlacaElemento(); }
         private object Activate_42_Sangrado_Supuracion_Elemento() { return new global::Hefesoft.Periodontograma.Assets.Sangrado_Supuracion.Sangrado_Supuracion_Elemento(); }
-        private object Activate_44_Seleccionado() { return new global::Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado(); }
-        private object Activate_45_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
-        private object Activate_46_Periodontograma() { return new global::Hefesoft.Periodontograma.Assets.Periodontograma(); }
-        private object Activate_48_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
+        private object Activate_44_Mostrar_Menu_Por_Pieza_Dental() { return new global::Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental(); }
+        private object Activate_45_Seleccionado() { return new global::Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado(); }
+        private object Activate_46_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
+        private object Activate_47_Periodontograma() { return new global::Hefesoft.Periodontograma.Assets.Periodontograma(); }
+        private object Activate_49_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
         private void VectorAdd_26_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
@@ -637,33 +640,40 @@ namespace Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 44:   //  Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado
+            case 44:   //  Hefesoft.Periodontograma.Assets.Menu.Mostrar_Menu_Por_Pieza_Dental
                 userType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_44_Seleccionado;
+                userType.Activator = Activate_44_Mostrar_Menu_Por_Pieza_Dental;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
+            case 45:   //  Hefesoft.Periodontograma.Assets.Seleccionado.Seleccionado
                 userType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_45_SplitPacientes;
+                userType.Activator = Activate_45_Seleccionado;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 46:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
+                userType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_46_SplitPacientes;
                 userType.AddMemberName("verTitulo");
                 xamlType = userType;
                 break;
 
-            case 46:   //  Hefesoft.Periodontograma.Assets.Periodontograma
+            case 47:   //  Hefesoft.Periodontograma.Assets.Periodontograma
                 userType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_46_Periodontograma;
+                userType.Activator = Activate_47_Periodontograma;
                 userType.AddMemberName("NavigationHelper");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Windows.UI.Xaml.Controls.Page
+            case 48:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 48:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
+            case 49:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
                 userType = new global::Hefesoft.Periodontograma.Hefesoft_Periodontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;

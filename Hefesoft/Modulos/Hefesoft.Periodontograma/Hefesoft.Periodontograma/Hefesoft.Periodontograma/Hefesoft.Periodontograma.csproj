@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <Import Project="C:\Hefesoft\Task\Hefesoft.Msbuild.Nuget.tasks" />
+  <Import Project="N:\Tasks\Hefesoft.Msbuild.Nuget.tasks" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -133,6 +133,9 @@
     <Compile Include="Assets\Menu Opciones\Sangrado_Supuracion.xaml.cs">
       <DependentUpon>Sangrado_Supuracion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.xaml.cs">
+      <DependentUpon>Mostrar_Menu_Por_Pieza_Dental.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Assets\Periodontograma.xaml.cs">
       <DependentUpon>Periodontograma.xaml</DependentUpon>
     </Compile>
@@ -167,7 +170,7 @@
     <Reference Include="Hefesoft.Pacientes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
-    </Reference>    
+    </Reference>
     <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Portable.Crypto.dll</HintPath>
     </Reference>
@@ -207,6 +210,7 @@
     <None Include="packages.config">
       <SubType>Designer</SubType>
     </None>
+    <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Assets\Control\Item_Template.xaml">
@@ -248,6 +252,10 @@
     <Page Include="Assets\Menu Opciones\Sangrado_Supuracion.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu\Mostrar_Menu_Por_Pieza_Dental.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Assets\Periodontograma.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -351,6 +359,6 @@
       <ContentFiles Include="Assets\Images\*.*">
       </ContentFiles>
     </ItemGroup>
-    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="C:\nuget\temp\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
+    <MSBuild.ExtensionPack.NuGet.Packager TaskAction="Pack" Id="$(ProjectName)" Description="$(ProjectName) Package" ProjectUrl="http://www.hefesoft.com" LicenseUrl="http://www.hefesoft.com" PrincipalDlls="@(PrincipalDlls)" ContentFiles="@(ContentFiles)" LibraryFiles="@(LibraryFiles)" OutputFile="N:\Hefesoft\$(ProjectName).nupkg" Authors="Hefesoft" Owners="Hefesoft" Dependencies="@(Dependencies)" Version="0.0.0.1" />
   </Target>
 </Project>

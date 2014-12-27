@@ -74,3 +74,4 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Period
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.pdb
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\bin\Release\Hefesoft.Portable.Crypto.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Periodontograma\Hefesoft.Periodontograma\Hefesoft.Periodontograma.Elastic\obj\Release\Hefesoft.Periodontograma.Elastic.csprojResolveAssemblyReference.cache

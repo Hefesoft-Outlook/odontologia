@@ -17,6 +17,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental
         public Superior()
         {
             InitializeComponent();
+            texto.Text = "";
         }
 
         #region Item (DependencyProperty)
