@@ -78,7 +78,7 @@
 
 		<Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
 
-		<Hub Padding="40,0" Margin="0,10,0,0">
+		<Hub Padding="40,0,0,0" Margin="0,10,0,0">
 			<Hub.Header>
 				<!-- Back button and page title -->
 				<Grid>
@@ -109,7 +109,7 @@
 
 			<HubSection>
 				<DataTemplate>
-						<Pacientes1:SplitPacientes verTitulo="False"/>
+                    <Pacientes1:SplitPacientes verTitulo="False" verSeleccionado="False"/>
 				</DataTemplate>
 			</HubSection>
 
@@ -143,18 +143,20 @@
 				x:Uid="Section3Header" Header="Seleccionado">
 				<DataTemplate>
 					<StackPanel Orientation="Vertical">
-						<Piezas_Dentales:Seleccionado HorizontalAlignment="Center" VerticalAlignment="Center" Width="180"/>
-						<Assets:Indices/>
+						<Piezas_Dentales:Seleccionado 
+                            HorizontalAlignment="Center" 
+                            VerticalAlignment="Center"/>
+                        
+						<Assets:Indices 
+                            HorizontalAlignment="Center"
+                            />                        
 					</StackPanel>
 				</DataTemplate>
 			</HubSection>
 		</Hub>
+        
 		<Generico:Modal padre="{Binding Frame, ElementName=pageRoot}"/>
-
-		<Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
-			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
-			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
-		</Grid>
+		
 	</Grid>
 
 </Page>

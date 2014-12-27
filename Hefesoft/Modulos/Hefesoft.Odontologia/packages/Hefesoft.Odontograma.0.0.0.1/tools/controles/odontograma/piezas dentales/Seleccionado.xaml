@@ -7,22 +7,29 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
     mc:Ignorable="d"    
-    d:DesignHeight="180"
-    d:DesignWidth="150">
+    d:DesignHeight="500"
+    d:DesignWidth="500">
     
     <UserControl.Resources>
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
     </UserControl.Resources>
+    
     <UserControl.DataContext>
         <Binding Mode="OneWay" Path="Seleccionado" Source="{StaticResource Locator}"/>
     </UserControl.DataContext>
 
-    <Grid HorizontalAlignment="Center">
+    <Grid HorizontalAlignment="Center" Width="300">
+        
         <StackPanel HorizontalAlignment="Center">
-            <HyperlinkButton Content="{Binding Elemento_Seleccionado.codigoSPiezaDental}" HorizontalAlignment="Center" FontSize="26.667"/>
-            <Grid Height="165" Width="150">
-				
-            	<Odontologia:SuperficieCompleta 
+            <HyperlinkButton 
+                Content="{Binding Elemento_Seleccionado.codigoSPiezaDental, FallbackValue=00}" 
+                HorizontalAlignment="Center" 
+                FontSize="26.667" Padding="0,4,0,5" Margin="0,0,40,0"/>
+            
+            <Grid 
+                HorizontalAlignment="Center">
+            	
+                <Odontologia:SuperficieCompleta 
             		HorizontalAlignment="Center" 
             		VerticalAlignment="Top" 
             		DataContext="{Binding Elemento_Seleccionado}" 
@@ -33,12 +40,12 @@
             		IsRightTapEnabled="False" 
             		IsTapEnabled="False" />
             	
-            	<Grid Background="#FF54BD35" Opacity="0">
-            		<Odontologia:SuperficieCompleta HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            	<Grid Background="#FF54BD35" Opacity="0" HorizontalAlignment="Center">
+            		<Odontologia:SuperficieCompleta 
+                        HorizontalAlignment="Center" 
+                        VerticalAlignment="Top"/>
             	</Grid>
-				
             </Grid>
-
         </StackPanel>
     </Grid>
 </UserControl>

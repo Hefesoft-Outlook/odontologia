@@ -87,14 +87,20 @@
 					</Storyboard>
 				</VisualState>
 			</VisualStateGroup>
-		</VisualStateManager.VisualStateGroups><Ellipse x:Name="Ellipse" Stroke="Black" />
+		</VisualStateManager.VisualStateGroups><Ellipse x:Name="Ellipse" Stroke="Black" StrokeThickness="0.4" />
 		<Ellipse x:Name="Ellipse_Fondo" Fill="#FFF72A2A" Opacity="0" />
 		<Ellipse x:Name="Ellipse_Realizado" Opacity="0.8" Visibility="Collapsed" >
 			<Ellipse.Fill>
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/59229.png"/>
 			</Ellipse.Fill>
 		</Ellipse>
-		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16"/>
+		
+		<TextBlock 
+		x:Name="texto" 
+		TextWrapping="Wrap" 
+		HorizontalAlignment="Center" 
+		VerticalAlignment="Center" 
+		FontSize="12" Text="A"/>
 
 	</Grid>
 

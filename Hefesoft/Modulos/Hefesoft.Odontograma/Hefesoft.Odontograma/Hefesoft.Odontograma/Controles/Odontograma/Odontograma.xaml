@@ -156,11 +156,7 @@
 		</Hub>
         
 		<Generico:Modal padre="{Binding Frame, ElementName=pageRoot}"/>
-
-		<Grid x:Name="GrdBusy" Background="White" Opacity="0.5" Visibility="Collapsed">
-			<ProgressRing HorizontalAlignment="Center" VerticalAlignment="Center" IsActive="True" Width="55"/>
-			<TextBlock x:Name="TxtBlckCargando" HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" FontSize="16" Margin="0,0,0,100"/>
-		</Grid>
+		
 	</Grid>
 
 </Page>

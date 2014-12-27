@@ -86,7 +86,15 @@
 			</Path.Fill>
 		</Path>
 		<Path x:Name="path_plan_tratamiento_espera_aplicar" Data="M4.27083,26.2917 L9.1665,22.333 L11.2494,23.6249 L11.9577,24.1249 L12.9372,24.2499 L13.77,24.3332 L15.6447,24.479 L17.0611,24.229 L18.0396,23.7499 L19.0599,23.2291 L19.476,22.875 L23.892,26.8955 L21.4132,28.3327 L19.7676,29.0622 L17.5389,29.6658 L15.0186,30.0612 L11.4776,29.6867 L7.83247,28.6243 L5.81203,27.5411 L4.229,26.2704" HorizontalAlignment="Left" Height="7.829" Stretch="Fill" Stroke="Black" StrokeThickness="0.1" UseLayoutRounding="False" VerticalAlignment="Top" Width="19.767" Fill="#FF4A89E4" Visibility="Collapsed"/>
-		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="13.333" Margin="6,-6,6,-4"/>
+		
+		<TextBlock
+		Text="A" 
+		x:Name="texto" 
+		TextWrapping="Wrap" 
+		HorizontalAlignment="Center" 
+		VerticalAlignment="Center" 
+		FontSize="5.333" 
+		Margin="0,1,0,0"/>
 
 	</Grid>
 </UserControl>

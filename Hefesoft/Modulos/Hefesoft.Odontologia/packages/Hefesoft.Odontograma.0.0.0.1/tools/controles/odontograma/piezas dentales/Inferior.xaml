@@ -84,6 +84,14 @@
                 <ImageBrush Stretch="Fill" ImageSource="ms-appx:///Images/59229.png"/>
 			</Path.Fill>
 		</Path>
-		<TextBlock x:Name="texto" TextWrapping="Wrap" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Margin="6,-6,7,-3"/>
+		
+		<TextBlock 
+		x:Name="texto" 
+		TextWrapping="Wrap" 
+		HorizontalAlignment="Center" 
+		VerticalAlignment="Center" 
+		FontSize="5.333"
+		Text="A" Margin="0,1.9,0,0"
+		/>
 	</Grid>
 </UserControl>

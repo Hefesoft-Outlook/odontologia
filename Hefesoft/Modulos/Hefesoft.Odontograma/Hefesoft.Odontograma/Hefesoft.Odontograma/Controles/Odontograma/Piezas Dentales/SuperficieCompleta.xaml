@@ -8,7 +8,7 @@
 	xmlns:Assets="using:Cnt.Panacea.Xap.Odontologia.Assets" 
 	mc:Ignorable="d"
 	x:Class="Cnt.Panacea.Xap.Odontologia.SuperficieCompleta" 
-    
+	
 	d:DesignWidth="29" d:DesignHeight="37">
 
 	<Grid x:Name="LayoutRoot">
@@ -22,31 +22,31 @@
 				<Pieza_Dental:Inferior Item="{Binding DiagnosticoProcedimiento.Superficie7[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="7" Margin="5,28,0,0" Width="19" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie7}"/>
 
 				<Pieza_Dental:Izquierda  Item="{Binding DiagnosticoProcedimiento.Superficie2[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,10,0,0" RenderTransformOrigin="0.5,0.5" Width="9" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie2}" Height="17" FontFamily="Global User Interface"/>
-                
+				
 				<Pieza_Dental:Arriba Item="{Binding DiagnosticoProcedimiento.Superficie5[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,6,0,0" Height="7" RenderTransformOrigin="0.5,0.5" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie5}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie5}" Width="22"/>
-                
+				
 				<Pieza_Dental:Central Item="{Binding DiagnosticoProcedimiento.Superficie1[0]}" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="7,10.5,0,0" Width="16" Height="14" IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}" IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie1}"/>
-                
+				
 				<Pieza_Dental:Abajo
-                    x:Name="superficie4"
-                    Item="{Binding DiagnosticoProcedimiento.Superficie4[0]}"
-                    HorizontalAlignment="Left"
-                    VerticalAlignment="Top"
-                    Margin="4,22,0,0"
-                    Height="8"
-                    Width="19"
-                    IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie4}"
-                    IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie4}"/>
+					x:Name="superficie4"
+					Item="{Binding DiagnosticoProcedimiento.Superficie4[0]}"
+					HorizontalAlignment="Left"
+					VerticalAlignment="Top"
+					Margin="4,22,0,0"
+					Height="8"
+					Width="19"
+					IsEnabled="{Binding DiagnosticoProcedimiento.Habilitado_Superficie4}"
+					IsHitTestVisible="{Binding DiagnosticoProcedimiento.Habilitado_Superficie4}"/>
 
 				<Path Data="M7.1880498,27.856876 L5.375,34.337456 L23.988636,34.337456 L21.227274,28.453932 M6.909091,7.3076262 L5.125,0.5 L24.734375,0.50000048 L22.863636,8.1556377 M28.5,17.757339 C28.5,24.365761 22.106985,29.88575 14.375,29.88575 C6.643014,29.88575 0.5,24.365761 0.5,17.757339 C0.5,11.148922 6.7680135,5.5573649 14.5,5.5573649 C22.231985,5.5573649 28.5,11.148922 28.5,17.757339 z M21.953125,17.444839 C21.953125,21.221081 19.308903,24.360453 14.890625,24.360453 C10.472347,24.360453 6.890625,21.299206 6.890625,17.522964 C6.890625,13.746727 10.472347,10.841728 14.890625,10.841728 C19.308903,10.841728 21.953125,13.668602 21.953125,17.444839 z M3.703125,9.7750149 L9.2714996,12.967424 M20.32225,13.21282 L25.443377,10.227751 M19.541,22.765923 L23.666,26.717171 M9.150568,22.306206 L4.6428485,25.998457" Stroke="Black" UseLayoutRounding="False" Margin="0,0.127,6,2.036" StrokeThickness="0.8"/>
 
-                <Assets:UserControlColorDienteCompleto
-                    x:Name="piezaCompleta"
-                    Item="{Binding DiagnosticoProcedimiento.PiezaCompleta[0]}" 
-                    Margin="0,0,6,2"/>
-               
+				<Assets:UserControlColorDienteCompleto
+					x:Name="piezaCompleta"
+					Item="{Binding DiagnosticoProcedimiento.PiezaCompleta[0]}" 
+					Margin="0,0,6,2"/>
+			   
 			</Grid>
-			            
+						
 		</Viewbox>
 	</Grid>
 </UserControl>

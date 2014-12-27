@@ -39,7 +39,7 @@ namespace Hefesoft.Odontograma
         {
             this.InitializeComponent();            
             oirMensaje();
-            oirOcupado();
+            addBusy();
             oirCambiosBotones(); 
             NavigationHelper = new Hefesoft.Util.W8.UI.Common.NavigationHelper();
             NavigationHelper.setPage(this);
@@ -74,23 +74,6 @@ namespace Hefesoft.Odontograma
         {
             Hefesoft.Odontograma.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
             await snap.snapShot(LayoutRoot,"imagenprueba.png");
-        }
-
-        private void oirOcupado()
-        {
-            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Mostrar_Cargando>(this, item => 
-            {
-                if(item.mostrar_Cargando)
-                {
-                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Visible;
-                    TxtBlckCargando.Text = item.texto;
-                }
-                else
-                {
-                    GrdBusy.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-                    TxtBlckCargando.Text = "Cargando....";
-                }            
-            });            
         }
 
         private void oirMensaje()
@@ -142,7 +125,6 @@ namespace Hefesoft.Odontograma
             Variables_Globales.IdTratamientoActivo = 0;
             odontogramaEvolucionBtn.IsEnabled = false;
             odontogramaPlanTratamientoBtn.IsEnabled = false;
-
             snap();
         }
 
@@ -162,6 +144,14 @@ namespace Hefesoft.Odontograma
         {
             odontogramaPlanTratamientoBtn.IsEnabled = true;
             odontogramaEvolucionBtn.IsEnabled = true;
+        }
+
+        public void addBusy()
+        {
+            var busy = ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
+            var elemento = Hefesoft.Util.W8.UI.Assets.BusyBox.Busy.addBusy(busy);
+            Grid.SetRowSpan(elemento, 2);
+            LayoutRoot.Children.Add(elemento);
         }
 
         public void Dispose()

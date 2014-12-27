@@ -162,10 +162,10 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Opacity" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="Name" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Opacity" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="Tapped" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
@@ -268,6 +268,7 @@
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontSize" />
+      <RootProperty Name="Padding" />
       <RootProperty Name="Tag" />
       <RootProperty Name="CommandParameter" />
       <RootEvent Name="Click" />
@@ -501,18 +502,13 @@
     <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Modal">
       <RootProperty Name="padre" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ProgressRing">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="IsActive" />
-      <RootProperty Name="Width" />
-    </RootType>
     <RootType FullName="Hefesoft.Odontograma.Piezas_Dentales.Seleccionado">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Hefesoft.Odontograma.Assets.Indices.Indices" />
+    <RootType FullName="Hefesoft.Odontograma.Assets.Indices.Indices">
+      <RootProperty Name="HorizontalAlignment" />
+    </RootType>
     <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Tipos" />
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
@@ -524,6 +520,7 @@
     <RootType FullName="Hefesoft.Odontograma.Mapa_Dental.Paleta" />
     <RootType FullName="Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes">
       <RootProperty Name="verTitulo" />
+      <RootProperty Name="verSeleccionado" />
     </RootType>
     <RootType FullName="Hefesoft.Odontograma.Odontograma" />
     <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
@@ -584,13 +581,13 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Shapes.Ellipse">
       <RootProperty Name="Stroke" />
+      <RootProperty Name="StrokeThickness" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="StrokeThickness" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
     </RootType>
@@ -635,6 +632,7 @@
       <RootProperty Name="IsEnabled" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="Height" />
+      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior">
       <RootProperty Name="Item" />
