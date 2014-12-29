@@ -100,20 +100,30 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma>(this, "Pieza Seleccionada", elemento =>
             {
                 Elemento_Seleccionado = elemento;
+                Listado_Diagnostico_Procedimientos = elemento.DiagnosticoProcedimiento.lst;
+                Listado_Diagnostico_Procedimientos_Agrupados_Superficie = from diag in Listado_Diagnostico_Procedimientos group diag by diag.Superficie into grp orderby grp.Key select grp;
                 RaisePropertyChanged("Elemento_Seleccionado");
+                RaisePropertyChanged("Listado_Diagnostico_Procedimientos");
+                RaisePropertyChanged("Listado_Diagnostico_Procedimientos_Agrupados_Superficie");
             });
         }
 
-        public Odontograma.Odontograma Elemento_Seleccionado { get; set; }
+        public Odontograma.Odontograma Elemento_Seleccionado { get; set; }        
 
+        public RelayCommand<string> tabCommand { get; set; }
+
+        public Tipo_Odontograma Modo_Odontograma { get; set; }
+
+        public List<Extensiones.Clases.DiagnosticoProcedimiento_Extend> Listado_Diagnostico_Procedimientos { get; set; }
+
+        public IOrderedEnumerable<IGrouping<string, Extensiones.Clases.DiagnosticoProcedimiento_Extend>> Listado_Diagnostico_Procedimientos_Agrupados_Superficie { get; set; }
+
+        #region Dispose
         public void Dispose()
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma>(this);
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cambiar_Tipo_Odontograma>(this);
         }
-
-        public RelayCommand<string> tabCommand { get; set; }
-
-        public Tipo_Odontograma Modo_Odontograma { get; set; }
+        #endregion
     }
 }

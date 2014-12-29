@@ -1,5 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
+    <LocalAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\hefesoft.odontograma\hefesoft.odontograma\obj\debug\intermediatexaml\hefesoft.odontograma.dll" HashGuid="b092b361-34b2-8239-fc65-c64ccd3645f6" />
     <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactions.dll" HashGuid="95a94f94-3917-d473-4f7c-18c4bd437046" />
     <ReferenceAssembly PathName="c:\program files\microsoft sdks\windows\v8.1\extensionsdks\behaviorsxamlsdkmanaged\12.0\references\commonconfiguration\neutral\microsoft.xaml.interactivity.dll" HashGuid="d25f59e6-dd81-900a-0dfc-55b39f6898ef" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\automapper.3.0.0\lib\portable-windows8+net40+wp71+sl4\automapper.dll" HashGuid="cab164d0-9888-aff8-c22f-88f6ccc80989" />
@@ -13,7 +14,7 @@
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\portable.mvvmlightlibs.4.1.27\lib\netcore45\galasoft.mvvmlight.extras.dll" HashGuid="1052b234-4647-517f-5e59-6fe5dbdfaac1" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\portable.mvvmlightlibs.4.1.27\lib\netcore45\galasoft.mvvmlight.platforms.netcore45.dll" HashGuid="7ba79ffd-d0c4-648c-64b1-41dd53c66f04" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\hefesoft.odontograma\hefesoft.entities.odontologia\bin\debug\hefesoft.entities.odontologia.dll" HashGuid="aa5b5233-c49f-9f6e-321c-41a266f0f268" />
-    <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\hefesoft.odontograma\hefesoft.odontograma.elastic\bin\debug\hefesoft.odontograma.elastic.dll" HashGuid="51729293-e241-7c23-d0b0-58253556bc14" />
+    <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\hefesoft.odontograma\hefesoft.odontograma.elastic\bin\debug\hefesoft.odontograma.elastic.dll" HashGuid="b2e1c38e-6d62-a78a-610b-50fbfca1d273" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\hefesoft.pacientes.0.0.0.1\lib\hefesoft.pacientes.dll" HashGuid="eda7671f-2da0-1f7a-147a-a16d9bc6c8dd" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\hefesoft.pacientes.0.0.0.1\lib\hefesoft.pacientes.elastic.dll" HashGuid="6964ed87-9f37-f45a-aca9-a4bc26bf9313" />
     <ReferenceAssembly PathName="c:\cnt\git\odontologia\hefesoft\modulos\hefesoft.odontograma\packages\hefesoft.pdf.1.0.0\lib\hefesoft.pdf.entities.dll" HashGuid="36d51c8d-0eb2-c1ad-bc90-253d104fc301" />

@@ -14,14 +14,42 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Extensiones.Clases
         public int Codigo_Pieza_Dental { get; set; }
         public referenciaSupernumerario Referencia_SuperNumerario { get; set; }
         public bool Es_Supernumerario { get; set; }
-        public string Superficie { get; set; }
-        public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity { get; set; }
+        public string Superficie { get; set; }        
+
+        private ConfigurarDiagnosticoProcedimOtraEntity configurarDiagnosticoProcedimOtraEntity;
+
+        public ConfigurarDiagnosticoProcedimOtraEntity ConfigurarDiagnosticoProcedimOtraEntity
+        {
+            get 
+            { 
+                return configurarDiagnosticoProcedimOtraEntity; 
+            }
+            
+            set 
+            { 
+                configurarDiagnosticoProcedimOtraEntity = value;
+                procesarValor(value);
+            }
+        }
+
+        private void procesarValor(Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity value)
+        {
+            if (value.TipoPanel == TipoPanel.Diagnostico)
+            {
+                Descripcion = value.Descripcion;
+            }
+            else if (value.TipoPanel == TipoPanel.Procedimiento)
+            {
+                Descripcion = value.Descripcion;
+            }
+        }
+        
 
         public Tipo_Odontograma Tipo_Odontograma_Actual { get; set; }
         public NivelSeveridadDXEntity Nivel_Severidad { get; set; }
-
         public OdontogramaEntity OdontogramaEntity { get; set; }
-    }
+    
+public  string Descripcion { get; set; }}
 
     public enum DiagnosticoProcedimiento_Validaciones
     {

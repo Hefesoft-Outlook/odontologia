@@ -1,8 +1,8 @@
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Hefesoft.Odontograma.Test.csproj;neutral
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\Hefesoft.Entities.Odontologia.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\Hefesoft.Odontograma.Elastic.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\Hefesoft.Odontograma.Test.csproj;neutral
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.csproj;neutral

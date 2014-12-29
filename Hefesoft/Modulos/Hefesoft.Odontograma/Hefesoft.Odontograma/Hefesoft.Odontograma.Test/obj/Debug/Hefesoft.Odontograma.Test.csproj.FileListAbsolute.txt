@@ -219,3 +219,11 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontogram
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\AutoMapper.WinRT.dll
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Cnt.Panacea.Entities.Pcl.Laboratorio.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\bouncy_castle_hmac_sha_pcl.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Cnt.Panacea.Entities.Pcl.Laboratorio.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Pacientes.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Pacientes.Elastic.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Portable.Crypto.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Pacientes.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\obj\Debug\Hefesoft.Pacientes.pri.xml

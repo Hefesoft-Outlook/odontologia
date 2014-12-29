@@ -167,6 +167,9 @@
     <Compile Include="Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml.cs">
       <DependentUpon>UserControlColorDienteCompleto.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xaml.cs">
+      <DependentUpon>Diagnostico_Procedimientos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml.cs">
       <DependentUpon>Odontograma_Evolucion.xaml</DependentUpon>
     </Compile>
@@ -381,6 +384,10 @@
     <Page Include="Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xaml">
       <Generator>MSBuild:Compile</Generator>
