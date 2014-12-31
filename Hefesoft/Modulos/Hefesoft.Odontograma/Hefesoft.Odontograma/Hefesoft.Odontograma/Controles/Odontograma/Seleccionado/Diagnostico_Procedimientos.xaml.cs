@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,13 @@ namespace Hefesoft.Odontograma.Controles.Odontograma.Seleccionado
         public Diagnostico_Procedimientos()
         {
             this.InitializeComponent();
+        }
+
+        private void HyperlinkButton_Click(object sender, RoutedEventArgs e)
+        {
+            var hp = sender as HyperlinkButton;
+            var vm = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado>();
+            vm.eliminar(hp.DataContext);
         }
     }
 }

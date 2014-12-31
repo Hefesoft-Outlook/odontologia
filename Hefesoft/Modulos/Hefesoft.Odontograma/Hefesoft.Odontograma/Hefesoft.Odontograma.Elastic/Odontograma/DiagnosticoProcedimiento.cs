@@ -14,6 +14,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Vm.Extensiones.Clases;
 using Cnt.Panacea.Xap.Odontologia.Vm.Util;
 using Microsoft.Practices.ServiceLocation;
+using Hefesoft.Odontograma.Elastic.Util.Extenciones;
 
 namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
 {
@@ -21,6 +22,51 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
     {
         public DiagnosticoProcedimiento()
         {
+            lst = new Lista_Hefesoft<DiagnosticoProcedimiento_Extend>();
+            lst.OnAdd += (m, n) =>
+            {
+                var elemento = (DiagnosticoProcedimiento_Extend)m;
+                GalaSoft.MvvmLight.Messaging.Messenger.Default.Send<DiagnosticoProcedimiento_Extend>(elemento, "Diagnostico procedimiento agregado");
+            };
+
+            lst.OnRemove += (m, n) =>
+            {
+                var elemento = (DiagnosticoProcedimiento_Extend)m;
+
+                if (elemento.Superficie == "Superficie1")
+                {
+                    Superficie1.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie2")
+                {
+                    Superficie2.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie3")
+                {
+                    Superficie3.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie4")
+                {
+                    Superficie4.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie5")
+                {
+                    Superficie5.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie6")
+                {
+                    Superficie6.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie7")
+                {
+                    Superficie7.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+                else if (elemento.Superficie == "Superficie8")
+                {
+                    Superficie8.Remove(elemento.ConfigurarDiagnosticoProcedimOtraEntity);
+                }
+            }; 
+
             this.habilitarSuperficies();
 
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Pedir_Pintar_Datos>(this, elemento => 
@@ -183,7 +229,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
         }
 
         //listado Diagnosticos procedimientos guardados
-        public List<DiagnosticoProcedimiento_Extend> lst = new List<DiagnosticoProcedimiento_Extend>();
+        public Lista_Hefesoft<DiagnosticoProcedimiento_Extend> lst;
 
         #region OdontogramaInicial
         internal DiagnosticoProcedimiento_Validaciones agregarOdontogramaInicial(ConfigurarDiagnosticoProcedimOtraEntity item, Cambiar_Tipo_Odontograma Tipo_Odontograma_Actual, string SuperficieSeleccionada, NivelSeveridadDXEntity Nivel,int CodigoPiezaDental) 
@@ -277,6 +323,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
                 //Valida que la superficie ya tengo un plan de tratamiento para mostrar el menu adicionaro sobreescribir superficie
                 if (!lst.Any(a => a.Tipo_Odontograma_Actual == Tipo_Odontograma.Plan_Tratamiento && (a.Superficie == SuperficieSeleccionada || SuperficieSeleccionada == "Pieza_Completa")))
                 {
+                    
                     Superficie1.Clear();
                     lst.Add(new DiagnosticoProcedimiento_Extend() { Superficie = SuperficieSeleccionada, Tipo_Odontograma_Actual = Tipo_Odontograma_Actual.Tipo_Odontograma, ConfigurarDiagnosticoProcedimOtraEntity = item, Codigo_Pieza_Dental = CodigoPiezaDental });
                     Superficie1.Add(item);

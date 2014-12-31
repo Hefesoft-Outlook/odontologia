@@ -120,6 +120,9 @@
     <RootPropertyPathName Name="Realizado_Superficie6" />
     <RootPropertyPathName Name="Realizado_Pieza_Completa" />
     <RootPropertyPathName Name="Fill" />
+    <RootPropertyPathName Name="eliminarCommand" />
+    <RootPropertyPathName Name="Listado_Diagnostico_Procedimientos_Agrupados_Superficie" />
+    <RootPropertyPathName Name="Key" />
     <RootPropertyPathName Name="Evolucion" />
     <RootPropertyPathName Name="usuarioAbandonoCommand" />
     <RootPropertyPathName Name="Odontograma_Inicial" />
@@ -269,8 +272,8 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="Padding" />
-      <RootProperty Name="Tag" />
       <RootProperty Name="CommandParameter" />
+      <RootProperty Name="Tag" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
@@ -502,6 +505,7 @@
     <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Modal">
       <RootProperty Name="padre" />
     </RootType>
+    <RootType FullName="Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos" />
     <RootType FullName="Hefesoft.Odontograma.Piezas_Dentales.Seleccionado">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
@@ -532,6 +536,7 @@
       <RootProperty Name="SelectedItem" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="ItemsPanel" />
+      <RootProperty Name="GroupStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.VisualTransition">
       <RootProperty Name="GeneratedDuration" />
@@ -647,6 +652,16 @@
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto">
       <RootProperty Name="Item" />
       <RootProperty Name="Margin" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.CollectionViewSource">
+      <RootProperty Name="IsSourceGrouped" />
+      <RootProperty Name="Source" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsWrapGrid">
+      <RootProperty Name="MaximumRowsOrColumns" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.GroupStyle">
+      <RootProperty Name="HeaderTemplate" />
     </RootType>
     <RootType FullName="Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion">
       <RootProperty Name="Visibility" />

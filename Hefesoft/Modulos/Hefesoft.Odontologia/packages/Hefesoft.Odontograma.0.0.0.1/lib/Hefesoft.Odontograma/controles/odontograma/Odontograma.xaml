@@ -16,6 +16,7 @@
     xmlns:Assets="using:Hefesoft.Odontograma.Assets.Indices"
     xmlns:login="using:Hefesoft.Odontograma.Auth"
     xmlns:Pacientes1="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
+    xmlns:Seleccionado="using:Hefesoft.Odontograma.Controles.Odontograma.Seleccionado"
     x:Name="pageRoot"
     x:Class="Hefesoft.Odontograma.Odontograma"
     mc:Ignorable="d">
@@ -153,6 +154,13 @@
 					</StackPanel>
 				</DataTemplate>
 			</HubSection>
+            
+            <HubSection>
+                <DataTemplate>
+                    <Seleccionado:Diagnostico_Procedimientos></Seleccionado:Diagnostico_Procedimientos>
+                </DataTemplate>
+            </HubSection>
+            
 		</Hub>
         
 		<Generico:Modal padre="{Binding Frame, ElementName=pageRoot}"/>

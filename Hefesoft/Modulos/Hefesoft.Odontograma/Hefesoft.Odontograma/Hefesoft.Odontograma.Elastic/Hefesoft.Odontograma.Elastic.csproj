@@ -129,6 +129,8 @@
     <Compile Include="Util\diagnosticoProcedimiento.cs" />
     <Compile Include="Util\Evolucion\Convertir_Elementos_Grilla_Plan_Evolucion.cs" />
     <Compile Include="Util\Evolucion\Finalizar_Tratamiento.cs" />
+    <Compile Include="Util\Extenciones\Elemento_Agrupador.cs" />
+    <Compile Include="Util\Extenciones\Lista_Hefesoft.cs" />
     <Compile Include="Util\Imagenes\Imagenes.cs" />
     <Compile Include="Util\Inicial\GrillaTratamiento.cs" />
     <Compile Include="Util\Mapa dental\Supernumerario.cs" />

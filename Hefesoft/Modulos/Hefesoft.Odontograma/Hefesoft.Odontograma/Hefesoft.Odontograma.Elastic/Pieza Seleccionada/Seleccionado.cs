@@ -2,6 +2,7 @@
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,37 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
             {
                 Modo_Odontograma = Tipo_Odontograma.Inicial;
                 oirPiezaSeleccionada();
+                oirDiagnosticoAgregado();
                 oirTipoOdontogramaSeleccionado();
                 tabCommand = new RelayCommand<string>(tab);
+                eliminarCommand = new RelayCommand<object>(eliminar);
             }
+        }
+
+        public void eliminar(object obj)
+        {
+            var diagnosticoProcedimiento = (Extensiones.Clases.DiagnosticoProcedimiento_Extend)obj;
+            var vmMapaDental = ServiceLocator.Current.GetInstance<Cnt.Panacea.Xap.Odontologia.Assets.Mapa_Dental.VM.Vm>();
+            var elemento = vmMapaDental.lstOdontograma.First(a => a.codigoPiezaDental == Elemento_Seleccionado.codigoPiezaDental);
+            elemento.DiagnosticoProcedimiento.lst.Remove(diagnosticoProcedimiento);
+            Listado_Diagnostico_Procedimientos.Remove(diagnosticoProcedimiento);
+            Listado_Diagnostico_Procedimientos_Agrupados_Superficie = from diag in Listado_Diagnostico_Procedimientos group diag by diag.Nombre_Superficie into grp orderby grp.Key select grp;
+            RaisePropertyChanged("Listado_Diagnostico_Procedimientos_Agrupados_Superficie");
+        }
+
+        private void oirDiagnosticoAgregado()
+        {            
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma>(this, item => 
+            {           
+                try
+                {
+                    mostrarDiagnosticosProcedimientos(item);
+                }
+                catch (Exception ex)
+                {
+                    ex.Message.ToString();
+                }
+            });
         }
 
         private void oirTipoOdontogramaSeleccionado()
@@ -99,13 +128,19 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
         {
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Odontograma.Odontograma>(this, "Pieza Seleccionada", elemento =>
             {
-                Elemento_Seleccionado = elemento;
-                Listado_Diagnostico_Procedimientos = elemento.DiagnosticoProcedimiento.lst;
-                Listado_Diagnostico_Procedimientos_Agrupados_Superficie = from diag in Listado_Diagnostico_Procedimientos group diag by diag.Superficie into grp orderby grp.Key select grp;
-                RaisePropertyChanged("Elemento_Seleccionado");
-                RaisePropertyChanged("Listado_Diagnostico_Procedimientos");
-                RaisePropertyChanged("Listado_Diagnostico_Procedimientos_Agrupados_Superficie");
+                mostrarDiagnosticosProcedimientos(elemento);
             });
+        }
+
+        private void mostrarDiagnosticosProcedimientos(Odontograma.Odontograma elemento)
+        {
+            Elemento_Seleccionado = elemento;
+            Listado_Diagnostico_Procedimientos = elemento.DiagnosticoProcedimiento.lst;
+            Listado_Diagnostico_Procedimientos_Agrupados_Superficie = from diag in Listado_Diagnostico_Procedimientos group diag by diag.Nombre_Superficie into grp orderby grp.Key select grp;
+
+            RaisePropertyChanged("Elemento_Seleccionado");
+            RaisePropertyChanged("Listado_Diagnostico_Procedimientos");
+            RaisePropertyChanged("Listado_Diagnostico_Procedimientos_Agrupados_Superficie");
         }
 
         public Odontograma.Odontograma Elemento_Seleccionado { get; set; }        
@@ -125,5 +160,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada
             GalaSoft.MvvmLight.Messaging.Messenger.Default.Unregister<Cambiar_Tipo_Odontograma>(this);
         }
         #endregion
+
+        public RelayCommand<object> eliminarCommand { get; set; }
     }
 }
