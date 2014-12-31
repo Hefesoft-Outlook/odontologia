@@ -54,20 +54,22 @@ namespace Hefesoft.Odontograma.Assets.PopUp
 
         private Action<object> MostrarModal(UIElement elementoMostrar, string titulo = "")
         {
-            TxtBlckTitulo.Text = titulo;
-            Contenedor.Children.Clear();
-            Contenedor.Children.Add(elementoMostrar);
-            this.Visibility = Windows.UI.Xaml.Visibility.Visible;
-
-
+            var bounds = Window.Current.Bounds;
+            this.Visibility = Windows.UI.Xaml.Visibility.Visible;            
+            Dialog.Width = bounds.Width;
+            Dialog.Title = titulo;            
+            Dialog.Content = elementoMostrar;
+            Dialog.HorizontalContentAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch;
+            Dialog.IsOpen = true;
             return ventanaCerrada;
         }
 
         private void ocultarModal(bool dialogResult)
-        {
-            TxtBlckTitulo.Text = "";
-            Contenedor.Children.Clear();
+        {            
+            Dialog.Title = "";
+            Dialog.Content = null;            
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+            Dialog.IsOpen = false;
 
             if (dialogResult)
             {

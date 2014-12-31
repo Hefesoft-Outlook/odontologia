@@ -111,7 +111,6 @@ C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontogram
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\GalaSoft.MvvmLight.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\GalaSoft.MvvmLight.Extras.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\GalaSoft.MvvmLight.Platforms.NetCore45.dll
-C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Azure.Helpers.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Entities.Odontologia.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.dll
 C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.Elastic.dll
@@ -200,3 +199,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Portable.Crypto.dll
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Pacientes.pri
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\obj\Debug\Hefesoft.Pacientes.pri.xml
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Callisto.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Callisto.pri
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\obj\Debug\Callisto.pri.xml

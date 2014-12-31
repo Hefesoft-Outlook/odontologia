@@ -460,3 +460,5 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.g.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xbf
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Callisto.dll
+C:\Cnt\Git\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Callisto.pri

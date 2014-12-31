@@ -25,8 +25,6 @@ namespace Hefesoft.Odontograma.Assets.PopUp
         {
             this.InitializeComponent();
             oirMostrarVentana();
-            flyout = new Flyout();
-
         }
 
         private void oirMostrarVentana()
@@ -48,8 +46,9 @@ namespace Hefesoft.Odontograma.Assets.PopUp
                 }
                 var supernumerario = SimpleIoc.Default.GetInstance<Layouts.Agregar_Supernumerario>();
                 supernumerario.Cerrar = (p) =>
-                {   
-                    flyout.Hide();
+                {
+                    Dialog.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
+                    Dialog.IsOpen = false;
                 };
                 var ventana = mostrarVentana(supernumerario);
             }
@@ -99,7 +98,7 @@ namespace Hefesoft.Odontograma.Assets.PopUp
                 confirmacion.Cerrar = (p) => 
                 {
                     obj.Resultado(confirmacion.EstadoSobreEscribirAdicionar);
-                    flyout.Hide();
+                    Dialog.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
                 };                
                 var ventana = mostrarVentana(confirmacion);                
             }
@@ -141,11 +140,12 @@ namespace Hefesoft.Odontograma.Assets.PopUp
             }
         }        
 
-        private Flyout mostrarVentana(UIElement elemento)
+        private Callisto.Controls.CustomDialog mostrarVentana(UIElement elemento)
         {            
-            flyout.Content = elemento;
-            flyout.ShowAt(padre);
-            return flyout;
+            Dialog.Content = elemento;
+            Dialog.Visibility = Windows.UI.Xaml.Visibility.Visible;
+            Dialog.IsOpen = true;
+            return Dialog;
         }
 
 
@@ -183,7 +183,6 @@ namespace Hefesoft.Odontograma.Assets.PopUp
         {
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana>(this);
         }
-
-        public Flyout flyout { get; set; }
+        
     }
 }

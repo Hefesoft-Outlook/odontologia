@@ -227,6 +227,9 @@
     <Reference Include="bouncy_castle_hmac_sha_pcl">
       <HintPath>..\..\packages\BouncyCastle-PCL.1.0.0.4\lib\bouncy_castle_hmac_sha_pcl.dll</HintPath>
     </Reference>
+    <Reference Include="Callisto">
+      <HintPath>..\..\packages\Callisto.1.4.0\lib\netcore451\Callisto.dll</HintPath>
+    </Reference>
     <Reference Include="Cnt.Panacea.Entities.Pcl.Autorizaciones">
       <HintPath>..\..\packages\Hefesoft.Vendors.Cnt.1.0.0\lib\Cnt.Panacea.Entities.Pcl.Autorizaciones.dll</HintPath>
     </Reference>
@@ -479,6 +482,12 @@
         <Framework>win81</Framework>
         <Version>6.0.3</Version>
       </Dependencies>
+	  
+	 <Dependencies Include="Callisto">
+        <Framework>win81</Framework>
+        <Version>1.4.0</Version>
+     </Dependencies>
+	  
     </ItemGroup>
     <ItemGroup>
       <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">

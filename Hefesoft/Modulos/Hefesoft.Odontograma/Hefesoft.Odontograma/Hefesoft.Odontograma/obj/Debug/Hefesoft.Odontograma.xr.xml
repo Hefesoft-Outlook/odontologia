@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.Interfaces>
+    <RootInterface FullName="Windows.UI.Xaml.Data.IValueConverter" />
+  </Roots.Interfaces>
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="SelectedItem" />
     <RootPropertyPathName Name="Ruta" />
@@ -147,6 +150,7 @@
     <RootPropertyPathName Name="SeleccionadoW8" />
     <RootPropertyPathName Name="agregarSuperNumerarioCommand" />
     <RootPropertyPathName Name="Tag" />
+    <RootPropertyPathName Name="Background" />
   </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
@@ -169,7 +173,7 @@
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Opacity" />
       <RootProperty Name="Visibility" />
-      <RootEvent Name="Tapped" />
+      <RootProperty Name="Resources" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
       <RootMethod Name="GetRowSpan" />
@@ -225,6 +229,8 @@
       <RootProperty Name="FallbackValue" />
       <RootProperty Name="Mode" />
       <RootProperty Name="Path" />
+      <RootProperty Name="Converter" />
+      <RootProperty Name="RelativeSource" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
       <RootProperty Name="Children" />
@@ -279,6 +285,7 @@
     <RootType FullName="Windows.UI.Xaml.FrameworkElement">
       <RootProperty Name="Margin" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="MinWidth" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Setter">
       <RootProperty Name="Property" />
@@ -356,6 +363,10 @@
       <RootProperty Name="DataContext" />
       <RootProperty Name="Fill" />
       <RootProperty Name="Opacity" />
+      <RootProperty Name="IsHitTestVisible" />
+      <RootProperty Name="StrokeEndLineCap" />
+      <RootProperty Name="StrokeDashArray" />
+      <RootProperty Name="StrokeDashOffset" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Interactivity.Interaction">
       <RootMethod Name="GetBehaviors" />
@@ -379,6 +390,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="TextAlignment" />
+      <RootProperty Name="Opacity" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.StaticResourceExtension" />
     <RootType FullName="Microsoft.Xaml.Interactions.Core.EventTriggerBehavior">
@@ -424,6 +436,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Style" />
       <RootProperty Name="Command" />
+      <RootProperty Name="CommandParameter" />
+      <RootProperty Name="Visibility" />
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu">
@@ -517,8 +531,6 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Viewbox">
       <RootProperty Name="Child" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental" />
     <RootType FullName="Hefesoft.Odontograma.Mapa_Dental.Paleta" />
@@ -689,7 +701,51 @@
     <RootType FullName="Windows.UI.Xaml.Controls.SearchBox">
       <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="Callisto.Controls.CustomDialog">
+      <RootProperty Name="Title" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="BackButtonVisibility" />
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="Style" />
+    </RootType>
     <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario" />
     <RootType FullName="Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar" />
+    <RootType FullName="Callisto.Converters.ColorContrastConverter" />
+    <RootType FullName="Windows.UI.Xaml.Media.SolidColorBrush" />
+    <RootType FullName="System.Double" />
+    <RootType FullName="System.String" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Control">
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="Background" />
+      <RootProperty Name="Template" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="FontSize" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ControlTemplate">
+      <RootProperty Name="TargetType" />
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Primitives.Popup">
+      <RootProperty Name="IsOpen" />
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.Tools.DirectUI.ProxyTypes.TemplateBindingExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ContentPresenter">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Foreground" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.RelativeSource">
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="Callisto.Controls.DynamicTextBlock">
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+    </RootType>
   </Roots.RootTypes>
 </Roots>

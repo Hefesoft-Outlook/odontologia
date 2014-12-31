@@ -29,8 +29,6 @@ namespace Hefesoft.Odontograma.Assets.PopUp
             oirCerraVentana();            
 
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            this.Titulo.Margin = new Thickness(20, 20, 20, 0);
-            this.LayoutRoot.Margin = new Thickness(20, 0, 20, 20);
         }
 
         private void generarVentana(Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana obj)

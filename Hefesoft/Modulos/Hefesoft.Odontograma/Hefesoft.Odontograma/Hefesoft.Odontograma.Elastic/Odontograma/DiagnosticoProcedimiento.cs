@@ -289,7 +289,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Odontograma
         {
             if (lst.Any(a => a.Superficie == SuperficieSeleccionada || a.Superficie == "Pieza_Completa"))
             {
-                if (lst.Any(a => a.ConfigurarDiagnosticoProcedimOtraEntity == item))
+                if (lst.Any(a => a.ConfigurarDiagnosticoProcedimOtraEntity == item && a.Superficie == SuperficieSeleccionada))
                 {
                     return DiagnosticoProcedimiento_Validaciones.Existe;
                 }
