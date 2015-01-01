@@ -6,10 +6,15 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:Calisto="using:Callisto.Controls"
     d:DesignHeight="300"
     d:DesignWidth="400">
     
     <Grid>
-
+        <Calisto:CustomDialog x:FieldModifier="public" x:Name="Dialog" 
+                       Title="Bacon Terms and Conditions" 
+                       Background="Teal" BackButtonVisibility="Visible">
+            
+        </Calisto:CustomDialog>
     </Grid>
 </UserControl>

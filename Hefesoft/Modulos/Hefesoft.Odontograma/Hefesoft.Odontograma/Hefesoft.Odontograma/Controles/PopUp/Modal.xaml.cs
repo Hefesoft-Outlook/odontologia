@@ -26,47 +26,47 @@ namespace Hefesoft.Odontograma.Assets.PopUp
         {            
             this.InitializeComponent();            
             oirMostrarVentana();
-            oirCerraVentana();            
-
+            oirCerraVentana();
             this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
         }
 
         private void generarVentana(Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana obj)
         {
+            modal = ServiceLocator.Current.GetInstance<Hefesoft.Util.W8.UI.PopUp.Modal>();
             if (obj.Nombre == "Plan tratamiento")
             {
                 elementoOtraVentana = obj;
                 var wizard = new Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento() {HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch};
-                var vCerrada = MostrarModal(wizard, "Plan de tratamiento");
+                var vCerrada = modal.MostrarModal(wizard, "Plan de tratamiento");
                 vCerrada = cerrar;
             }
             else if (obj.Nombre == "Evolucion")
             {
                 elementoOtraVentana = obj;
                 var wizard = new Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion() { HorizontalAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch, VerticalAlignment = Windows.UI.Xaml.VerticalAlignment.Stretch };
-                var vCerrada = MostrarModal(wizard, "Evolucion");
+                var vCerrada = modal.MostrarModal(wizard, "Evolucion");
                 vCerrada = cerrar;
             }
             else if (obj.Nombre == "Tratamientos")
             {
                 elementoOtraVentana = obj;
                 var reporte = new Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento();
-                MostrarModal(reporte, "Reporte plan de tratamiento");                
+                modal.MostrarModal(reporte, "Reporte plan de tratamiento");                
             }
             else if (obj.Nombre == "Listado imagenes")
             {
                 elementoOtraVentana = obj;
                 var reporte = new Hefesoft.Odontograma.Fotos.SplitFotos() { DataContext = obj.Propiedad_Adicional };
-                MostrarModal(reporte, "Imagenes");
+                modal.MostrarModal(reporte, "Imagenes");
             }
         }
+
+        public Hefesoft.Util.W8.UI.PopUp.Modal modal { get; set; }
 
         public void Dispose()
         {
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana>(this);
             Messenger.Default.Unregister<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this);
         }
-
-        
     }
 }

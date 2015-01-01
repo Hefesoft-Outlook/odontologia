@@ -27,7 +27,10 @@ namespace Hefesoft.Odontograma.Assets.PopUp
         {
             Messenger.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Messenger.PopUp.Cerrar_Pop_Up_Generico>(this, elemento =>
             {
-                ocultarModal(true);
+                if (modal != null)
+                {
+                    modal.ocultarModal(true);
+                }
             });
         }
 
@@ -49,33 +52,6 @@ namespace Hefesoft.Odontograma.Assets.PopUp
             else if (elementoOtraVentana != null && elementoOtraVentana.Nombre == "Evolucion")
             {
                 Messenger.Default.Send(new Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Guardar.Guardar() { }, "Evolucion");
-            }
-        }
-
-        private Action<object> MostrarModal(UIElement elementoMostrar, string titulo = "")
-        {
-            var bounds = Window.Current.Bounds;
-            this.Visibility = Windows.UI.Xaml.Visibility.Visible;            
-            Dialog.Width = bounds.Width;
-            Dialog.Title = titulo;            
-            Dialog.Content = elementoMostrar;
-            Dialog.HorizontalContentAlignment = Windows.UI.Xaml.HorizontalAlignment.Stretch;
-            Dialog.IsOpen = true;
-            return ventanaCerrada;
-        }
-
-        private void ocultarModal(bool dialogResult)
-        {            
-            Dialog.Title = "";
-            Dialog.Content = null;            
-            this.Visibility = Windows.UI.Xaml.Visibility.Collapsed;
-            Dialog.IsOpen = false;
-
-            if (dialogResult)
-            {
-                //Callback
-                ventanaCerrada = cerrar;
-                ventanaCerrada(null);
             }
         }
 
@@ -108,7 +84,10 @@ namespace Hefesoft.Odontograma.Assets.PopUp
 
         private void Grid_Tapped(object sender, Windows.UI.Xaml.Input.TappedRoutedEventArgs e)
         {
-            ocultarModal(false);
+            if (modal != null)
+            {
+                modal.ocultarModal(false);
+            }
         }
 
         private Action<object> ventanaCerrada { get; set; }

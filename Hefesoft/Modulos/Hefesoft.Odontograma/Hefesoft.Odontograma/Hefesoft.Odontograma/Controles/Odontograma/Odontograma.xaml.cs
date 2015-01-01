@@ -66,6 +66,12 @@ namespace Hefesoft.Odontograma
             // Metodo para pasarle los parametros al binding
             //Ya que windows 8 no tiene archivos client config de configuracion
             //contexto.inicializarContexto();
+
+            #if DEBUG
+            Hefesoft.Util.W8.UI.Util.RegisterElement.registrarClaseUI<Hefesoft.Util.W8.UI.PopUp.Modal>();
+            var modal = ServiceLocator.Current.GetInstance<Hefesoft.Util.W8.UI.PopUp.Modal>();
+            this.LayoutRoot.Children.Add(modal);
+            #endif
         }
 
         public NavigationHelper NavigationHelper { get; set; }

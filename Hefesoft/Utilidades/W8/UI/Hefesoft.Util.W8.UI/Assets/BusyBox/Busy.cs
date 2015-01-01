@@ -10,7 +10,6 @@ namespace Hefesoft.Util.W8.UI.Assets.BusyBox
 {
     public class Busy
     {
-
         /// <summary>
         /// Se utiliza este metodo para utilizar siempre el mismo busybox que esta en 
         /// memoria y no sobrecargar la ram del dispositivo

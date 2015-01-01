@@ -34,6 +34,12 @@ namespace Hefesoft.Odontologia.Test
             this.InitializeComponent();
             Loaded += MainPage_Loaded;
             navegacion();
+
+
+            Hefesoft.Util.W8.UI.Util.RegisterElement.registrarClaseUI<Hefesoft.Util.W8.UI.PopUp.Modal>();
+            var modal = ServiceLocator.Current.GetInstance<Hefesoft.Util.W8.UI.PopUp.Modal>();
+            this.LayoutRoot.Children.Add(modal);
+
         }
 
      

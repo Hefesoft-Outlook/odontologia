@@ -18,6 +18,13 @@
 						</NamedResource>
 					</ResourceMapSubtree>
 				</ResourceMapSubtree>
+				<ResourceMapSubtree name="PopUp">
+					<NamedResource name="Modal.xbf" uri="ms-resource://Hefesoft.Util.W8.UI/Files/Hefesoft.Util.W8.UI/PopUp/Modal.xbf">
+						<Candidate type="Path">
+							<Value>Hefesoft.Util.W8.UI\PopUp\Modal.xbf</Value>
+						</Candidate>
+					</NamedResource>
+				</ResourceMapSubtree>
 			</ResourceMapSubtree>
 		</ResourceMapSubtree>
 	</ResourceMap>

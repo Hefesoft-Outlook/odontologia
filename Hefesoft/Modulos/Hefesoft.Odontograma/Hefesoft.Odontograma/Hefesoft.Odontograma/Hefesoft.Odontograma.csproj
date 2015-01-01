@@ -276,7 +276,8 @@
     <Reference Include="Hefesoft.Usuario">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Util.W8.UI">
+    <Reference Include="Hefesoft.Util.W8.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
@@ -482,12 +483,10 @@
         <Framework>win81</Framework>
         <Version>6.0.3</Version>
       </Dependencies>
-	  
-	 <Dependencies Include="Callisto">
+      <Dependencies Include="Callisto">
         <Framework>win81</Framework>
         <Version>1.4.0</Version>
-     </Dependencies>
-	  
+      </Dependencies>
     </ItemGroup>
     <ItemGroup>
       <LibraryFiles Include="bin\$(ConfigurationName)\Ejemplo\*\*.*">

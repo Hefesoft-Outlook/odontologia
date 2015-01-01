@@ -236,8 +236,6 @@ namespace Hefesoft.Odontograma.Test.Hefesoft_Odontograma_Test_XamlTypeInfo
                     _otherProviders.Add(provider); 
                     provider = new global::Hefesoft.Pacientes.Hefesoft_Pacientes_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
                     _otherProviders.Add(provider); 
-                    provider = new global::Hefesoft.Util.W8.UI.Hefesoft_Util_W8_UI_XamlTypeInfo.XamlMetaDataProvider() as global::Windows.UI.Xaml.Markup.IXamlMetadataProvider;
-                    _otherProviders.Add(provider); 
                 }
                 return _otherProviders;
             }
