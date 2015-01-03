@@ -116,6 +116,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Util\RegisterElement.cs" />
+    <Compile Include="Util\SnapShot.cs" />
     <Compile Include="Util\Storage.cs" />
     <Compile Include="Util\WebCam.cs" />
   </ItemGroup>
@@ -188,11 +189,11 @@
       </Dependencies>
     </ItemGroup>
     <ItemGroup>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\Common\*\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\Common\*\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\PopUp\*\*.*">
       </LibraryFiles>
-	  <LibraryFiles Include="bin\$(ConfigurationName)\PopUp\*.*">
+      <LibraryFiles Include="bin\$(ConfigurationName)\PopUp\*.*">
       </LibraryFiles>
       <LibraryFiles Include="bin\$(ConfigurationName)\Common\*.*">
       </LibraryFiles>

@@ -12,7 +12,6 @@ namespace Hefesoft.Azure.Helpers
 {
     public class Azure_Helper
     {
-
         public static async Task<string> PutBlob_async(String containerName, String blobName, Byte[] blobContent)
         {
             String requestMethod = "PUT";
@@ -48,16 +47,19 @@ namespace Hefesoft.Azure.Helpers
             
             HttpContent requestContent = new ByteArrayContent(blobContent);
             HttpResponseMessage response = await client.PutAsync(uri, requestContent);
-            
+
             if (response.IsSuccessStatusCode == true)
             {
-                foreach (var aHeader in response.Headers)
-                {
-                    if (aHeader.Key == "ETag") return aHeader.Value.ElementAt(0);
-                }
+                return response.RequestMessage.RequestUri.ToString();
+                //foreach (var aHeader in response.Headers)
+                //{
+                //    if (aHeader.Key == "ETag") return aHeader.Value.ElementAt(0);
+                //}
             }
-            
-            return null;
+            else
+            {
+                return null;
+            }
 
         }
 

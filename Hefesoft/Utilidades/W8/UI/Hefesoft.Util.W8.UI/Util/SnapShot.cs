@@ -21,10 +21,16 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
-namespace Hefesoft.Odontograma.Hub_Partial
+namespace Hefesoft.Util.W8.UI.Util
 {
-    class Snapshot
+    public class Snapshot
     {
+        /// <summary>
+        /// Devuelve la ruta de la imagen guardada en un blob
+        /// </summary>
+        /// <param name="uielement"></param>
+        /// <param name="nombreImagen"></param>
+        /// <returns></returns>
         public async Task<string> snapShot(FrameworkElement uielement, string nombreImagen)
         {
             var bitmap = new RenderTargetBitmap();
@@ -51,6 +57,37 @@ namespace Hefesoft.Odontograma.Hub_Partial
             return result;
         }
 
+        public async Task<string> snapShot(FrameworkElement uielement, string nombreImagen, double height, double width)
+        {
+            var bitmap = new RenderTargetBitmap();
+            await bitmap.RenderAsync(uielement);
+
+            // Get the pixels
+            IBuffer pixelBuffer = await bitmap.GetPixelsAsync();
+            byte[] pixels = pixelBuffer.ToArray();
+
+            var stream = new InMemoryRandomAccessStream();
+            var encoder = await BitmapEncoder.CreateAsync(BitmapEncoder.PngEncoderId, stream);
+
+            encoder.SetPixelData(BitmapPixelFormat.Bgra8, BitmapAlphaMode.Straight, (uint)bitmap.PixelWidth, (uint)bitmap.PixelHeight, height, width, pixels);
+
+            await encoder.FlushAsync();
+            stream.Seek(0);
+
+            var reader = new DataReader(stream.GetInputStreamAt(0));
+            var bytes = new byte[stream.Size];
+            await reader.LoadAsync((uint)stream.Size);
+            reader.ReadBytes(bytes);
+
+            var result = await Hefesoft.Azure.Helpers.Azure_Helper.PutBlob_async("imagenes", nombreImagen, bytes);
+            return result;
+        }
+
+        /// <summary>
+        /// Devuelve una imagen del elemento que se captura
+        /// </summary>
+        /// <param name="uielement"></param>
+        /// <returns></returns>
         public async Task<RenderTargetBitmap> snapShot(FrameworkElement uielement)
         {
             var bitmap = new RenderTargetBitmap();

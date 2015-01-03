@@ -66,6 +66,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                 SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Plan_tratamiento.Listado_Procedimientos>();
                 SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado>();
                 SimpleIoc.Default.Register<Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca>();
+                SimpleIoc.Default.Register<Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM>();
 
                 //Hefesoft Implementacion 
                 // Puede estar registrado cuando esta dentro de la aplicacion principal
@@ -302,6 +303,22 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
             }
         }
 
+        /// <summary>
+        /// Muestra los odontogramas disponibles para este paciente
+        /// Por ejemplo un paciente puede tener odontograma inicial de plan de tratamiento o 
+        /// de evolucion o solo inicial dependiendo en donde se encuentre su tratamiento en el momento actual
+        /// </summary>
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
+    "CA1822:MarkMembersAsStatic",
+    Justification = "This non-static member is needed for data binding purposes.")]
+        public Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM Listado_Tipos_Odontogramas
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM>();
+            }
+        }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance",
     "CA1822:MarkMembersAsStatic",
     Justification = "This non-static member is needed for data binding purposes.")]
@@ -326,9 +343,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator
                 return ServiceLocator.Current.GetInstance<Hefesoft.Standard.BusyBox.Busy>();
             }
         }
-
-                
-         
         
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿using Hefesoft.Odontograma.Hub_Partial;
+﻿using Hefesoft.Util.W8.UI.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;

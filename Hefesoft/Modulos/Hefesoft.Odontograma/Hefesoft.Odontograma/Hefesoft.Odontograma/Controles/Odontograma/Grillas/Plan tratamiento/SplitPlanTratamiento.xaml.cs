@@ -1,5 +1,4 @@
-﻿using Hefesoft.Odontograma.Hub_Partial;
-using Cnt.Panacea.Xap.Odontologia;
+﻿using Cnt.Panacea.Xap.Odontologia;
 using Cnt.Panacea.Xap.Odontologia.Vm.Util.Plan_Tratamiento;
 using Microsoft.Practices.ServiceLocation;
 using Newtonsoft.Json;

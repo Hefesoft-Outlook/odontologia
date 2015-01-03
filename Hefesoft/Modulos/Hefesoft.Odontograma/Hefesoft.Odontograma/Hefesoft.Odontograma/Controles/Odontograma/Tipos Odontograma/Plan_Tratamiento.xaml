@@ -38,13 +38,14 @@
                 <TextBlock Grid.Row="1" HorizontalAlignment="Left" x:Uid="Tercero" Text="" TextWrapping="Wrap" d:LayoutOverrides="Height" VerticalAlignment="Center" />
 				<StackPanel Grid.Column="4" Orientation="Horizontal">
 
-					<HyperlinkButton x:Name="HyprlnkBttnContinuar" 
+				<HyperlinkButton x:Name="HyprlnkBttnContinuar" 
 						Content="Siguiente paso" 
 						VerticalAlignment="Center" 
 						HorizontalAlignment="Center" 
 						Margin="10,0,0,0" 
 						Command="{Binding siguientePasoCommand}" />
 				</StackPanel>
+                
 				<ComboBox ItemsSource="{Binding TiposTratamiento}" DisplayMemberPath="Nombre"
 					SelectedItem="{Binding TiposTratamientoSeleccionado, Mode=TwoWay}" 
 					IsEnabled="{Binding HabilitarTipoTratamiento}"

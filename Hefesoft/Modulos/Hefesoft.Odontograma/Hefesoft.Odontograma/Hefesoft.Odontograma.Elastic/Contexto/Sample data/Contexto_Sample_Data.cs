@@ -130,17 +130,30 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             Busy.UserControlCargando();
             var lst = new ObservableCollection<TratamientoEntity>();
 
-            //Aca deberia ir la variablde de paciente de hefesoft
+            //Aca deberia ir la variable de paciente de hefesoft
             var query = new Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity() 
             { 
                 PartitionKey = Variables_Globales.IdPacienteHefesoft
             };
 
-            var result = await Hefesoft.Standard.Util.table.crudTable.getTableByPartition(query);
+            var result = await Hefesoft.Standard.Util.table.crudTable.getTableByPartition(query);            
             lst = Convertir_Observables.ConvertirObservables(result.ToObservableCollection(), lst);
+
+            foreach (var item in lst)
+            {
+                if(result.Any(a=>a.Identificador == item.Identificador))
+                {
+                    var elementoEntidadHefesoft = result.FirstOrDefault(a => a.Identificador == item.Identificador);
+                    inicializarConvenioCnt(item);
+                    item.Convenio.Adjuntos.Add(new ConvenioComentarioAdjuntoEntity() { Ruta = elementoEntidadHefesoft.urlPreviewOdontograma });
+                }
+            }
+            
             Busy.UserControlCargando(false);
             return lst;
         }
+
+        
 
         public Task<ObservableCollection<ConfiguracionProcedimientoOdontologiaDto>>
             ConsultarProcedimientosOdontologiaLigero(short idIps)
@@ -340,7 +353,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
             odontogramaPaciente.IdIps = idIps;
 
-            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();
+            var odontogramaInsertar = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma();            
             odontogramaInsertar.idIps = idIps;
             odontogramaInsertar.tratamiento = tratamiento.ConvertirEntidades<Hefesoft.Entities.Odontologia.Tratamiento.TratamientoEntity, TratamientoEntity>();
             odontogramaInsertar.odontogramaPaciente = odontogramaPaciente.ConvertirEntidades<Hefesoft.Entities.Odontologia.Odontograma.OdontogramasPacienteEntity, OdontogramasPacienteEntity>();
@@ -349,6 +362,7 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             odontogramaInsertar.odontogramaInicial = odontograma.ConvertirIEnumerable(odontogramaInsertar.odontogramaInicial);
             odontogramaInsertar.adjuntosImagen = adjuntosImagen.ConvertirIEnumerable(odontogramaInsertar.adjuntosImagen);
             odontogramaInsertar.PartitionKey = Variables_Globales.IdPacienteHefesoft;
+            odontogramaInsertar.urlPreviewOdontograma = Variables_Globales.urlImagenTratamiento; 
             odontogramaInsertar.generarIdentificador = true;
 
 
@@ -360,8 +374,9 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
             odontogramaInsertar.tratamiento.Identificador = Convert.ToInt64(odontogramaInsertar.RowKey);
             odontogramaInsertar.tratamiento.PartitionKey = odontogramaInsertar.PartitionKey;
-
+            odontogramaInsertar.tratamiento.urlPreviewOdontograma = Variables_Globales.urlImagenTratamiento;
             var tratamientoTableStorage = await odontogramaInsertar.tratamiento.postTable();
+            
 
             //Despues de insertado deberia llegar el consecutivo
             odontogramaInsertar.tratamiento.RowKey = odontogramaInsertar.RowKey;
@@ -627,7 +642,6 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         public async Task<TratamientoEntity> SeleccionarTratamientoActivo(long idTratamiento)
         {
-
             var query = new Hefesoft.Entities.Odontologia.Odontograma.Odontograma()
             {
                 PartitionKey = Variables_Globales.IdPacienteHefesoft,
@@ -642,6 +656,13 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
             result.odontogramaPaciente.Identificador = identificador;
             
             Variables_Globales.PCL.PlanTratamiento = result;
+
+            // Se crea una nueva opcion en la que se le mostraran al usuario los tipos de odontograma activos para este usuario
+            // Ejemplo: el uuario da click en un odontograma guardado y se le activa odontograma inicial, plan de tratamiento si se 
+            // a guardado un odontograma de plan de tratamiento y lo mismo con el de evolucion
+
+            var menusVm = ServiceLocator.Current.GetInstance<Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM>();
+            menusVm.ListadoOdontogramas = result;
 
             //Agrega las imagenes al mapa dental para ser mostradas cuando se necesite
             procesarImagenesExistentes();
@@ -757,6 +778,19 @@ namespace Cnt.Panacea.Xap.Odontologia.Vm.Contexto.Sample_data
 
         void IContexto_Odontologia.url(string url)
         {
+        }
+
+        private static void inicializarConvenioCnt(TratamientoEntity item)
+        {
+            if (item.Convenio == null)
+            {
+                item.Convenio = new ConvenioEntity();
+            }
+
+            if (item.Convenio.Adjuntos == null)
+            {
+                item.Convenio.Adjuntos = new ConvenioComentariosAdjuntosCollection();
+            }
         }
         
     }

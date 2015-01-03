@@ -16,6 +16,7 @@
         
         <DataTemplate x:Key="DataTemplateTratamientos">
             <StackPanel>
+                <Image Width="60" Source="{Binding Convenio.Adjuntos[0].Ruta}" />
                 <TextBlock x:Uid="FechaInicial" Text="Fecha Inicial"/>
                 <TextBlock Text="{Binding FechaInicial}"/>
 

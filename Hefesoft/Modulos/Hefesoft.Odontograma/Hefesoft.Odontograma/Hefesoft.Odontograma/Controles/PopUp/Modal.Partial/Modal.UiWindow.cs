@@ -29,7 +29,12 @@ namespace Hefesoft.Odontograma.Assets.PopUp
             {
                 if (modal != null)
                 {
-                    modal.ocultarModal(true);
+                    try
+                    {
+                        modal.ocultarModal(true);
+                    }
+                    catch
+                    { }
                 }
             });
         }

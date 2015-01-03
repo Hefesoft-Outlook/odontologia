@@ -1,4 +1,5 @@
 ﻿using Cnt.Panacea.Xap.Odontologia.Vm.Odontograma;
+using Hefesoft.Util.W8.UI.Util;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -40,8 +41,8 @@ namespace Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental
         }
 
         private async void sacarImagen(Hefesoft.Odontograma.Util.Messenger.Capturar_Imagen item)
-        {            
-            var snap = new Hefesoft.Odontograma.Hub_Partial.Snapshot();
+        {   
+            var snap = new Snapshot();
             RenderTargetBitmap result = await snap.snapShot(this.LayoutRoot);
             item.Imagen(result);
         }

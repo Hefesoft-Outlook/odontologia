@@ -11,6 +11,7 @@
 	xmlns:Mapa_Dental1="using:Hefesoft.Odontograma.Mapa_Dental"
 	xmlns:Pacientes="using:Hefesoft.Odontograma.Grillas"
 	xmlns:Tipos_Odontograma="using:Hefesoft.Odontograma.Tipos_Odontograma"
+    xmlns:Listado_Tipos_Odontograma="using:Hefesoft.Odontograma.Controles.Odontograma.Menus"
 	xmlns:Generico="using:Hefesoft.Odontograma.Assets.PopUp"
 	xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
 	xmlns:Assets="using:Hefesoft.Odontograma.Assets.Indices"
@@ -79,7 +80,7 @@
 
 		<Generico:Generico padre="{Binding Frame, ElementName=pageRoot}"/>
 
-		<Hub Padding="40,0,0,0" Margin="0,10,0,0">
+		<Hub x:Name="hbOdontograma" Padding="40,0,0,0" Margin="0,10,0,0">
 			<Hub.Header>
 				<!-- Back button and page title -->
 				<Grid>
@@ -120,6 +121,12 @@
 				</DataTemplate>
 			</HubSection>
 
+            <HubSection Margin="-10,0,0,0">
+                <DataTemplate>
+                    <Listado_Tipos_Odontograma:Listado_Tipos_Odontogramas></Listado_Tipos_Odontograma:Listado_Tipos_Odontogramas>
+                </DataTemplate>
+            </HubSection>
+            
 			<HubSection Width="270" x:Uid="Section1Header" Header="Diagnosticos procedimientos">
 				<DataTemplate>
 					<Mapa_Dental1:Paleta/>

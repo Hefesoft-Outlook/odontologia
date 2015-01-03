@@ -106,7 +106,6 @@
     <Compile Include="Controles\Fotos\SplipFotos.xaml.cs">
       <DependentUpon>SplipFotos.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles\Odontograma\Azure\Snapshot.cs" />
     <Compile Include="Controles\Odontograma\Boca\Boca.xaml.cs">
       <DependentUpon>Boca.xaml</DependentUpon>
     </Compile>
@@ -124,6 +123,9 @@
     </Compile>
     <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml.cs">
       <DependentUpon>UserControlGuardarPlanTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xaml.cs">
+      <DependentUpon>Listado_Tipos_Odontogramas.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\Odontograma\Odontograma.xaml.cs">
       <DependentUpon>Odontograma.xaml</DependentUpon>
@@ -254,6 +256,10 @@
     <Reference Include="GalaSoft.MvvmLight.Platforms.NetCore45">
       <HintPath>..\..\packages\Portable.MvvmLightLibs.4.1.27\lib\netcore45\GalaSoft.MvvmLight.Platforms.NetCore45.dll</HintPath>
     </Reference>
+    <Reference Include="Hefesoft.Azure.Helpers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Hefesoft.Azure.Helpers.0.0.0.1\lib\netcore451\Hefesoft.Azure.Helpers.dll</HintPath>
+    </Reference>
     <Reference Include="Hefesoft.Pacientes">
       <HintPath>..\..\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll</HintPath>
     </Reference>
@@ -263,8 +269,7 @@
     <Reference Include="Hefesoft.Pdf.Entities">
       <HintPath>..\..\packages\Hefesoft.Pdf.1.0.0\lib\Hefesoft.Pdf.Entities.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Portable.Crypto, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Hefesoft.Portable.Crypto">
       <HintPath>..\..\packages\Hefesoft.Portable.Crypto.0.0.0.1\lib\Hefesoft.Portable.Crypto.dll</HintPath>
     </Reference>
     <Reference Include="Hefesoft.Portable.xml">
@@ -276,8 +281,7 @@
     <Reference Include="Hefesoft.Usuario">
       <HintPath>..\..\packages\Hefesoft.Standard.Libs.0.0.0.2\lib\Hefesoft.Usuario.dll</HintPath>
     </Reference>
-    <Reference Include="Hefesoft.Util.W8.UI, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="Hefesoft.Util.W8.UI">
       <HintPath>..\..\packages\Hefesoft.Util.W8.UI.0.0.0.1\lib\Hefesoft.Util.W8.UI.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Practices.ServiceLocation">
@@ -336,6 +340,10 @@
     <Page Include="Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controles\Odontograma\Odontograma.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -461,6 +469,7 @@
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>

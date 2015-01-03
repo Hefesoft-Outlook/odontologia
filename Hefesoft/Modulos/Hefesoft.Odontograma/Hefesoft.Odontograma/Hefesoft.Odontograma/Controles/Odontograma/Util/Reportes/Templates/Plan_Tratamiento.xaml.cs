@@ -1,5 +1,6 @@
 ﻿using Cnt.Panacea.Xap.Odontologia.Vm.Estaticas;
 using Hefesoft.Standard.Util.Pdf;
+using Hefesoft.Util.W8.UI.Util;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -75,7 +76,7 @@ namespace Hefesoft.Odontograma.Util.Reportes.Templates
         private async void HyprlnkBttnExportarPdf_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
             Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(true, "Exportando... tomara un tiempo...");
-            Hefesoft.Odontograma.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
+            Snapshot snap = new Snapshot();
             int i = 0;
             foreach (var item in Report._pageTrees)
             {
@@ -88,7 +89,7 @@ namespace Hefesoft.Odontograma.Util.Reportes.Templates
             Hefesoft.Standard.BusyBox.BusyBox.UserControlCargando(false);
         }
 
-        private async Task<string> guardarImagen(Hefesoft.Odontograma.Hub_Partial.Snapshot snap, UIElement item, string nombre)
+        private async Task<string> guardarImagen(Snapshot snap, UIElement item, string nombre)
         {
             nombre = string.Format("{0}.png", nombre);
             var result = await snap.snapShot((FrameworkElement)item, nombre);

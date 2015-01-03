@@ -54,10 +54,15 @@ namespace System.Adaptation
         private static object ResolveAdapter(Assembly assembly, Type interfaceType)
         {
             string typeName = MakeAdapterTypeName(interfaceType);
-
-            Type type = assembly.GetType(typeName, throwOnError: false);
-            if (type != null)
-                return Activator.CreateInstance(type);
+            Type type = null;
+            try
+            {
+                type = assembly.GetType(typeName, throwOnError: true);
+                if (type != null)
+                    return Activator.CreateInstance(type);
+            }
+            catch
+            { }
 
             return type;
         }

@@ -149,7 +149,7 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[105];
+            _typeNameTable = new string[108];
             _typeNameTable[0] = "Hefesoft.Odontograma.Fotos.SplitFotos";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[2] = "Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator";
@@ -175,88 +175,91 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
             _typeNameTable[22] = "Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado";
             _typeNameTable[23] = "Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca";
             _typeNameTable[24] = "Hefesoft.Usuario.ViewModel.Usuarios";
-            _typeNameTable[25] = "Hefesoft.Usuario.ViewModel.Pacientes.Pacientes";
-            _typeNameTable[26] = "Hefesoft.Standard.BusyBox.Busy";
-            _typeNameTable[27] = "Microsoft.Xaml.Interactivity.Interaction";
-            _typeNameTable[28] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
-            _typeNameTable[29] = "Windows.UI.Xaml.DependencyObjectCollection";
-            _typeNameTable[30] = "Windows.UI.Xaml.DependencyObject";
-            _typeNameTable[31] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
-            _typeNameTable[32] = "Microsoft.Xaml.Interactivity.ActionCollection";
-            _typeNameTable[33] = "String";
-            _typeNameTable[34] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
-            _typeNameTable[35] = "System.Windows.Input.ICommand";
-            _typeNameTable[36] = "Windows.UI.Xaml.Data.IValueConverter";
-            _typeNameTable[37] = "Cnt.Panacea.Xap.Odontologia.Boca";
-            _typeNameTable[38] = "Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu";
-            _typeNameTable[39] = "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity";
-            _typeNameTable[40] = "Cnt.Std.EntidadBase`1<Int32>";
-            _typeNameTable[41] = "Hefesoft.Odontograma.Util.Tipo_Elemento";
-            _typeNameTable[42] = "System.Enum";
-            _typeNameTable[43] = "System.ValueType";
-            _typeNameTable[44] = "Cnt.Panacea.Xap.Odontologia.SuperficieCompleta";
-            _typeNameTable[45] = "Boolean";
-            _typeNameTable[46] = "Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion";
-            _typeNameTable[47] = "Hefesoft.Odontograma.Grillas.PacienteTratamientos";
-            _typeNameTable[48] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago";
-            _typeNameTable[49] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento";
-            _typeNameTable[50] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento";
-            _typeNameTable[51] = "Hefesoft.Odontograma.Assets.PopUp.Generico";
-            _typeNameTable[52] = "Windows.UI.Xaml.FrameworkElement";
-            _typeNameTable[53] = "Hefesoft.Odontograma.Assets.PopUp.Modal";
-            _typeNameTable[54] = "Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana";
-            _typeNameTable[55] = "Hefesoft.Util.W8.UI.PopUp.Modal";
-            _typeNameTable[56] = "Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos";
-            _typeNameTable[57] = "Hefesoft.Odontograma.Piezas_Dentales.Seleccionado";
-            _typeNameTable[58] = "Hefesoft.Odontograma.Assets.Indices.Indices";
-            _typeNameTable[59] = "Hefesoft.Odontograma.Tipos_Odontograma.Tipos";
-            _typeNameTable[60] = "Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental";
-            _typeNameTable[61] = "Hefesoft.Odontograma.Mapa_Dental.Paleta";
-            _typeNameTable[62] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
-            _typeNameTable[63] = "Hefesoft.Odontograma.Odontograma";
-            _typeNameTable[64] = "Windows.UI.Xaml.Controls.Page";
-            _typeNameTable[65] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
-            _typeNameTable[66] = "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior";
-            _typeNameTable[67] = "Microsoft.Xaml.Interactions.Core.ComparisonConditionType";
-            _typeNameTable[68] = "Microsoft.Xaml.Interactions.Core.GoToStateAction";
-            _typeNameTable[69] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo";
-            _typeNameTable[70] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba";
-            _typeNameTable[71] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central";
-            _typeNameTable[72] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha";
-            _typeNameTable[73] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior";
-            _typeNameTable[74] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda";
-            _typeNameTable[75] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior";
-            _typeNameTable[76] = "Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto";
-            _typeNameTable[77] = "Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion";
-            _typeNameTable[78] = "Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial";
-            _typeNameTable[79] = "Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento";
-            _typeNameTable[80] = "Hefesoft.Odontograma.Util.Reportes.Templates.Inicial";
-            _typeNameTable[81] = "Hefesoft.Odontograma.Util.Reportes.Reportes_Template";
-            _typeNameTable[82] = "System.Collections.IEnumerable";
-            _typeNameTable[83] = "Windows.UI.Xaml.DataTemplate";
-            _typeNameTable[84] = "Windows.UI.Xaml.Controls.Grid";
-            _typeNameTable[85] = "Windows.UI.Xaml.Controls.Image";
-            _typeNameTable[86] = "Int32";
-            _typeNameTable[87] = "Windows.UI.Xaml.Printing.PrintDocument";
-            _typeNameTable[88] = "Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento";
-            _typeNameTable[89] = "Hefesoft.Pdf.Entities.Document";
-            _typeNameTable[90] = "Callisto.Controls.CustomDialog";
-            _typeNameTable[91] = "Windows.UI.Xaml.Controls.ContentControl";
-            _typeNameTable[92] = "Windows.UI.Xaml.Visibility";
-            _typeNameTable[93] = "Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario";
-            _typeNameTable[94] = "System.Action`1<Boolean>";
-            _typeNameTable[95] = "System.MulticastDelegate";
-            _typeNameTable[96] = "System.Delegate";
-            _typeNameTable[97] = "Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar";
-            _typeNameTable[98] = "Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar";
-            _typeNameTable[99] = "System.Action`1<Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>";
-            _typeNameTable[100] = "Callisto.Converters.ColorContrastConverter";
-            _typeNameTable[101] = "Callisto.Controls.DynamicTextBlock";
-            _typeNameTable[102] = "Windows.UI.Xaml.TextWrapping";
-            _typeNameTable[103] = "Double";
-            _typeNameTable[104] = "Windows.UI.Xaml.LineStackingStrategy";
+            _typeNameTable[25] = "Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM";
+            _typeNameTable[26] = "Hefesoft.Usuario.ViewModel.Pacientes.Pacientes";
+            _typeNameTable[27] = "Hefesoft.Standard.BusyBox.Busy";
+            _typeNameTable[28] = "Microsoft.Xaml.Interactivity.Interaction";
+            _typeNameTable[29] = "Microsoft.Xaml.Interactivity.BehaviorCollection";
+            _typeNameTable[30] = "Windows.UI.Xaml.DependencyObjectCollection";
+            _typeNameTable[31] = "Windows.UI.Xaml.DependencyObject";
+            _typeNameTable[32] = "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior";
+            _typeNameTable[33] = "Microsoft.Xaml.Interactivity.ActionCollection";
+            _typeNameTable[34] = "String";
+            _typeNameTable[35] = "Microsoft.Xaml.Interactions.Core.InvokeCommandAction";
+            _typeNameTable[36] = "System.Windows.Input.ICommand";
+            _typeNameTable[37] = "Windows.UI.Xaml.Data.IValueConverter";
+            _typeNameTable[38] = "Cnt.Panacea.Xap.Odontologia.Boca";
+            _typeNameTable[39] = "Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu";
+            _typeNameTable[40] = "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity";
+            _typeNameTable[41] = "Cnt.Std.EntidadBase`1<Int32>";
+            _typeNameTable[42] = "Hefesoft.Odontograma.Util.Tipo_Elemento";
+            _typeNameTable[43] = "System.Enum";
+            _typeNameTable[44] = "System.ValueType";
+            _typeNameTable[45] = "Cnt.Panacea.Xap.Odontologia.SuperficieCompleta";
+            _typeNameTable[46] = "Boolean";
+            _typeNameTable[47] = "Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion";
+            _typeNameTable[48] = "Hefesoft.Odontograma.Grillas.PacienteTratamientos";
+            _typeNameTable[49] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago";
+            _typeNameTable[50] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento";
+            _typeNameTable[51] = "Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento";
+            _typeNameTable[52] = "Callisto.Converters.BooleanToVisibilityConverter";
+            _typeNameTable[53] = "Hefesoft.Odontograma.Controles.Odontograma.Menus.Listado_Tipos_Odontogramas";
+            _typeNameTable[54] = "Hefesoft.Odontograma.Assets.PopUp.Generico";
+            _typeNameTable[55] = "Windows.UI.Xaml.FrameworkElement";
+            _typeNameTable[56] = "Hefesoft.Odontograma.Assets.PopUp.Modal";
+            _typeNameTable[57] = "Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana";
+            _typeNameTable[58] = "Hefesoft.Util.W8.UI.PopUp.Modal";
+            _typeNameTable[59] = "Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos";
+            _typeNameTable[60] = "Hefesoft.Odontograma.Piezas_Dentales.Seleccionado";
+            _typeNameTable[61] = "Hefesoft.Odontograma.Assets.Indices.Indices";
+            _typeNameTable[62] = "Hefesoft.Odontograma.Tipos_Odontograma.Tipos";
+            _typeNameTable[63] = "Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental";
+            _typeNameTable[64] = "Hefesoft.Odontograma.Mapa_Dental.Paleta";
+            _typeNameTable[65] = "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes";
+            _typeNameTable[66] = "Hefesoft.Odontograma.Odontograma";
+            _typeNameTable[67] = "Windows.UI.Xaml.Controls.Page";
+            _typeNameTable[68] = "Hefesoft.Util.W8.UI.Common.NavigationHelper";
+            _typeNameTable[69] = "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior";
+            _typeNameTable[70] = "Microsoft.Xaml.Interactions.Core.ComparisonConditionType";
+            _typeNameTable[71] = "Microsoft.Xaml.Interactions.Core.GoToStateAction";
+            _typeNameTable[72] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo";
+            _typeNameTable[73] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba";
+            _typeNameTable[74] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central";
+            _typeNameTable[75] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha";
+            _typeNameTable[76] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior";
+            _typeNameTable[77] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda";
+            _typeNameTable[78] = "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior";
+            _typeNameTable[79] = "Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto";
+            _typeNameTable[80] = "Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion";
+            _typeNameTable[81] = "Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial";
+            _typeNameTable[82] = "Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento";
+            _typeNameTable[83] = "Hefesoft.Odontograma.Util.Reportes.Templates.Inicial";
+            _typeNameTable[84] = "Hefesoft.Odontograma.Util.Reportes.Reportes_Template";
+            _typeNameTable[85] = "System.Collections.IEnumerable";
+            _typeNameTable[86] = "Windows.UI.Xaml.DataTemplate";
+            _typeNameTable[87] = "Windows.UI.Xaml.Controls.Grid";
+            _typeNameTable[88] = "Windows.UI.Xaml.Controls.Image";
+            _typeNameTable[89] = "Int32";
+            _typeNameTable[90] = "Windows.UI.Xaml.Printing.PrintDocument";
+            _typeNameTable[91] = "Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento";
+            _typeNameTable[92] = "Hefesoft.Pdf.Entities.Document";
+            _typeNameTable[93] = "Callisto.Controls.CustomDialog";
+            _typeNameTable[94] = "Windows.UI.Xaml.Controls.ContentControl";
+            _typeNameTable[95] = "Windows.UI.Xaml.Visibility";
+            _typeNameTable[96] = "Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario";
+            _typeNameTable[97] = "System.Action`1<Boolean>";
+            _typeNameTable[98] = "System.MulticastDelegate";
+            _typeNameTable[99] = "System.Delegate";
+            _typeNameTable[100] = "Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar";
+            _typeNameTable[101] = "Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar";
+            _typeNameTable[102] = "System.Action`1<Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>";
+            _typeNameTable[103] = "Callisto.Converters.ColorContrastConverter";
+            _typeNameTable[104] = "Callisto.Controls.DynamicTextBlock";
+            _typeNameTable[105] = "Windows.UI.Xaml.TextWrapping";
+            _typeNameTable[106] = "Double";
+            _typeNameTable[107] = "Windows.UI.Xaml.LineStackingStrategy";
 
-            _typeTable = new global::System.Type[105];
+            _typeTable = new global::System.Type[108];
             _typeTable[0] = typeof(global::Hefesoft.Odontograma.Fotos.SplitFotos);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[2] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator);
@@ -282,86 +285,89 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
             _typeTable[22] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado);
             _typeTable[23] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca);
             _typeTable[24] = typeof(global::Hefesoft.Usuario.ViewModel.Usuarios);
-            _typeTable[25] = typeof(global::Hefesoft.Usuario.ViewModel.Pacientes.Pacientes);
-            _typeTable[26] = typeof(global::Hefesoft.Standard.BusyBox.Busy);
-            _typeTable[27] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
-            _typeTable[28] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
-            _typeTable[29] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
-            _typeTable[30] = typeof(global::Windows.UI.Xaml.DependencyObject);
-            _typeTable[31] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
-            _typeTable[32] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
-            _typeTable[33] = typeof(global::System.String);
-            _typeTable[34] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
-            _typeTable[35] = typeof(global::System.Windows.Input.ICommand);
-            _typeTable[36] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
-            _typeTable[37] = typeof(global::Cnt.Panacea.Xap.Odontologia.Boca);
-            _typeTable[38] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu);
-            _typeTable[39] = typeof(global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity);
-            _typeTable[40] = typeof(global::Cnt.Std.EntidadBase<global::System.Int32>);
-            _typeTable[41] = typeof(global::Hefesoft.Odontograma.Util.Tipo_Elemento);
-            _typeTable[42] = typeof(global::System.Enum);
-            _typeTable[43] = typeof(global::System.ValueType);
-            _typeTable[44] = typeof(global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta);
-            _typeTable[45] = typeof(global::System.Boolean);
-            _typeTable[46] = typeof(global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion);
-            _typeTable[47] = typeof(global::Hefesoft.Odontograma.Grillas.PacienteTratamientos);
-            _typeTable[48] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago);
-            _typeTable[49] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento);
-            _typeTable[50] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento);
-            _typeTable[51] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Generico);
-            _typeTable[52] = typeof(global::Windows.UI.Xaml.FrameworkElement);
-            _typeTable[53] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Modal);
-            _typeTable[54] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana);
-            _typeTable[55] = typeof(global::Hefesoft.Util.W8.UI.PopUp.Modal);
-            _typeTable[56] = typeof(global::Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos);
-            _typeTable[57] = typeof(global::Hefesoft.Odontograma.Piezas_Dentales.Seleccionado);
-            _typeTable[58] = typeof(global::Hefesoft.Odontograma.Assets.Indices.Indices);
-            _typeTable[59] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Tipos);
-            _typeTable[60] = typeof(global::Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental);
-            _typeTable[61] = typeof(global::Hefesoft.Odontograma.Mapa_Dental.Paleta);
-            _typeTable[62] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
-            _typeTable[63] = typeof(global::Hefesoft.Odontograma.Odontograma);
-            _typeTable[64] = typeof(global::Windows.UI.Xaml.Controls.Page);
-            _typeTable[65] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
-            _typeTable[66] = typeof(global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior);
-            _typeTable[67] = typeof(global::Microsoft.Xaml.Interactions.Core.ComparisonConditionType);
-            _typeTable[68] = typeof(global::Microsoft.Xaml.Interactions.Core.GoToStateAction);
-            _typeTable[69] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo);
-            _typeTable[70] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba);
-            _typeTable[71] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central);
-            _typeTable[72] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha);
-            _typeTable[73] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior);
-            _typeTable[74] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda);
-            _typeTable[75] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior);
-            _typeTable[76] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto);
-            _typeTable[77] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion);
-            _typeTable[78] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial);
-            _typeTable[79] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento);
-            _typeTable[80] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Templates.Inicial);
-            _typeTable[81] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template);
-            _typeTable[82] = typeof(global::System.Collections.IEnumerable);
-            _typeTable[83] = typeof(global::Windows.UI.Xaml.DataTemplate);
-            _typeTable[84] = typeof(global::Windows.UI.Xaml.Controls.Grid);
-            _typeTable[85] = typeof(global::Windows.UI.Xaml.Controls.Image);
-            _typeTable[86] = typeof(global::System.Int32);
-            _typeTable[87] = typeof(global::Windows.UI.Xaml.Printing.PrintDocument);
-            _typeTable[88] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento);
-            _typeTable[89] = typeof(global::Hefesoft.Pdf.Entities.Document);
-            _typeTable[90] = typeof(global::Callisto.Controls.CustomDialog);
-            _typeTable[91] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
-            _typeTable[92] = typeof(global::Windows.UI.Xaml.Visibility);
-            _typeTable[93] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario);
-            _typeTable[94] = typeof(global::System.Action<global::System.Boolean>);
-            _typeTable[95] = typeof(global::System.MulticastDelegate);
-            _typeTable[96] = typeof(global::System.Delegate);
-            _typeTable[97] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar);
-            _typeTable[98] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar);
-            _typeTable[99] = typeof(global::System.Action<global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>);
-            _typeTable[100] = typeof(global::Callisto.Converters.ColorContrastConverter);
-            _typeTable[101] = typeof(global::Callisto.Controls.DynamicTextBlock);
-            _typeTable[102] = typeof(global::Windows.UI.Xaml.TextWrapping);
-            _typeTable[103] = typeof(global::System.Double);
-            _typeTable[104] = typeof(global::Windows.UI.Xaml.LineStackingStrategy);
+            _typeTable[25] = typeof(global::Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM);
+            _typeTable[26] = typeof(global::Hefesoft.Usuario.ViewModel.Pacientes.Pacientes);
+            _typeTable[27] = typeof(global::Hefesoft.Standard.BusyBox.Busy);
+            _typeTable[28] = typeof(global::Microsoft.Xaml.Interactivity.Interaction);
+            _typeTable[29] = typeof(global::Microsoft.Xaml.Interactivity.BehaviorCollection);
+            _typeTable[30] = typeof(global::Windows.UI.Xaml.DependencyObjectCollection);
+            _typeTable[31] = typeof(global::Windows.UI.Xaml.DependencyObject);
+            _typeTable[32] = typeof(global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior);
+            _typeTable[33] = typeof(global::Microsoft.Xaml.Interactivity.ActionCollection);
+            _typeTable[34] = typeof(global::System.String);
+            _typeTable[35] = typeof(global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction);
+            _typeTable[36] = typeof(global::System.Windows.Input.ICommand);
+            _typeTable[37] = typeof(global::Windows.UI.Xaml.Data.IValueConverter);
+            _typeTable[38] = typeof(global::Cnt.Panacea.Xap.Odontologia.Boca);
+            _typeTable[39] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu);
+            _typeTable[40] = typeof(global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity);
+            _typeTable[41] = typeof(global::Cnt.Std.EntidadBase<global::System.Int32>);
+            _typeTable[42] = typeof(global::Hefesoft.Odontograma.Util.Tipo_Elemento);
+            _typeTable[43] = typeof(global::System.Enum);
+            _typeTable[44] = typeof(global::System.ValueType);
+            _typeTable[45] = typeof(global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta);
+            _typeTable[46] = typeof(global::System.Boolean);
+            _typeTable[47] = typeof(global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion);
+            _typeTable[48] = typeof(global::Hefesoft.Odontograma.Grillas.PacienteTratamientos);
+            _typeTable[49] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago);
+            _typeTable[50] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento);
+            _typeTable[51] = typeof(global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento);
+            _typeTable[52] = typeof(global::Callisto.Converters.BooleanToVisibilityConverter);
+            _typeTable[53] = typeof(global::Hefesoft.Odontograma.Controles.Odontograma.Menus.Listado_Tipos_Odontogramas);
+            _typeTable[54] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Generico);
+            _typeTable[55] = typeof(global::Windows.UI.Xaml.FrameworkElement);
+            _typeTable[56] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Modal);
+            _typeTable[57] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana);
+            _typeTable[58] = typeof(global::Hefesoft.Util.W8.UI.PopUp.Modal);
+            _typeTable[59] = typeof(global::Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos);
+            _typeTable[60] = typeof(global::Hefesoft.Odontograma.Piezas_Dentales.Seleccionado);
+            _typeTable[61] = typeof(global::Hefesoft.Odontograma.Assets.Indices.Indices);
+            _typeTable[62] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Tipos);
+            _typeTable[63] = typeof(global::Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental);
+            _typeTable[64] = typeof(global::Hefesoft.Odontograma.Mapa_Dental.Paleta);
+            _typeTable[65] = typeof(global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes);
+            _typeTable[66] = typeof(global::Hefesoft.Odontograma.Odontograma);
+            _typeTable[67] = typeof(global::Windows.UI.Xaml.Controls.Page);
+            _typeTable[68] = typeof(global::Hefesoft.Util.W8.UI.Common.NavigationHelper);
+            _typeTable[69] = typeof(global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior);
+            _typeTable[70] = typeof(global::Microsoft.Xaml.Interactions.Core.ComparisonConditionType);
+            _typeTable[71] = typeof(global::Microsoft.Xaml.Interactions.Core.GoToStateAction);
+            _typeTable[72] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo);
+            _typeTable[73] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba);
+            _typeTable[74] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central);
+            _typeTable[75] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha);
+            _typeTable[76] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior);
+            _typeTable[77] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda);
+            _typeTable[78] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior);
+            _typeTable[79] = typeof(global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto);
+            _typeTable[80] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion);
+            _typeTable[81] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial);
+            _typeTable[82] = typeof(global::Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento);
+            _typeTable[83] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Templates.Inicial);
+            _typeTable[84] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template);
+            _typeTable[85] = typeof(global::System.Collections.IEnumerable);
+            _typeTable[86] = typeof(global::Windows.UI.Xaml.DataTemplate);
+            _typeTable[87] = typeof(global::Windows.UI.Xaml.Controls.Grid);
+            _typeTable[88] = typeof(global::Windows.UI.Xaml.Controls.Image);
+            _typeTable[89] = typeof(global::System.Int32);
+            _typeTable[90] = typeof(global::Windows.UI.Xaml.Printing.PrintDocument);
+            _typeTable[91] = typeof(global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento);
+            _typeTable[92] = typeof(global::Hefesoft.Pdf.Entities.Document);
+            _typeTable[93] = typeof(global::Callisto.Controls.CustomDialog);
+            _typeTable[94] = typeof(global::Windows.UI.Xaml.Controls.ContentControl);
+            _typeTable[95] = typeof(global::Windows.UI.Xaml.Visibility);
+            _typeTable[96] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario);
+            _typeTable[97] = typeof(global::System.Action<global::System.Boolean>);
+            _typeTable[98] = typeof(global::System.MulticastDelegate);
+            _typeTable[99] = typeof(global::System.Delegate);
+            _typeTable[100] = typeof(global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar);
+            _typeTable[101] = typeof(global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar);
+            _typeTable[102] = typeof(global::System.Action<global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>);
+            _typeTable[103] = typeof(global::Callisto.Converters.ColorContrastConverter);
+            _typeTable[104] = typeof(global::Callisto.Controls.DynamicTextBlock);
+            _typeTable[105] = typeof(global::Windows.UI.Xaml.TextWrapping);
+            _typeTable[106] = typeof(global::System.Double);
+            _typeTable[107] = typeof(global::Windows.UI.Xaml.LineStackingStrategy);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -418,64 +424,67 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
         private object Activate_22_Seleccionado() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Pieza_Seleccionada.Seleccionado(); }
         private object Activate_23_Boca() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Boca.Boca(); }
         private object Activate_24_Usuarios() { return new global::Hefesoft.Usuario.ViewModel.Usuarios(); }
-        private object Activate_25_Pacientes() { return new global::Hefesoft.Usuario.ViewModel.Pacientes.Pacientes(); }
-        private object Activate_26_Busy() { return new global::Hefesoft.Standard.BusyBox.Busy(); }
-        private object Activate_28_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
-        private object Activate_31_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
-        private object Activate_32_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
-        private object Activate_34_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
-        private object Activate_37_Boca() { return new global::Cnt.Panacea.Xap.Odontologia.Boca(); }
-        private object Activate_38_elementoMenu() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu(); }
-        private object Activate_39_ConfigurarDiagnosticoProcedimOtraEntity() { return new global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity(); }
-        private object Activate_44_SuperficieCompleta() { return new global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta(); }
-        private object Activate_46_SplitEvolucion() { return new global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion(); }
-        private object Activate_47_PacienteTratamientos() { return new global::Hefesoft.Odontograma.Grillas.PacienteTratamientos(); }
-        private object Activate_48_Forma_Pago() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago(); }
-        private object Activate_49_SplitPlanTratamiento() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento(); }
-        private object Activate_50_UserControlGuardarPlanTratamiento() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento(); }
-        private object Activate_51_Generico() { return new global::Hefesoft.Odontograma.Assets.PopUp.Generico(); }
-        private object Activate_53_Modal() { return new global::Hefesoft.Odontograma.Assets.PopUp.Modal(); }
-        private object Activate_54_Mostrar_Ventana() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana(); }
-        private object Activate_55_Modal() { return new global::Hefesoft.Util.W8.UI.PopUp.Modal(); }
-        private object Activate_56_Diagnostico_Procedimientos() { return new global::Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos(); }
-        private object Activate_57_Seleccionado() { return new global::Hefesoft.Odontograma.Piezas_Dentales.Seleccionado(); }
-        private object Activate_58_Indices() { return new global::Hefesoft.Odontograma.Assets.Indices.Indices(); }
-        private object Activate_59_Tipos() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Tipos(); }
-        private object Activate_60_Mapa_Dental() { return new global::Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental(); }
-        private object Activate_61_Paleta() { return new global::Hefesoft.Odontograma.Mapa_Dental.Paleta(); }
-        private object Activate_62_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
-        private object Activate_63_Odontograma() { return new global::Hefesoft.Odontograma.Odontograma(); }
-        private object Activate_65_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
-        private object Activate_66_DataTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior(); }
-        private object Activate_68_GoToStateAction() { return new global::Microsoft.Xaml.Interactions.Core.GoToStateAction(); }
-        private object Activate_69_Abajo() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo(); }
-        private object Activate_70_Arriba() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba(); }
-        private object Activate_71_Central() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central(); }
-        private object Activate_72_Derecha() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha(); }
-        private object Activate_73_Inferior() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior(); }
-        private object Activate_74_Izquierda() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda(); }
-        private object Activate_75_Superior() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior(); }
-        private object Activate_76_UserControlColorDienteCompleto() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto(); }
-        private object Activate_77_Odontograma_Evolucion() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion(); }
-        private object Activate_78_Odontograma_Inicial() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial(); }
-        private object Activate_79_Plan_Tratamiento() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento(); }
-        private object Activate_80_Inicial() { return new global::Hefesoft.Odontograma.Util.Reportes.Templates.Inicial(); }
-        private object Activate_81_Reportes_Template() { return new global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template(); }
-        private object Activate_88_Plan_Tratamiento() { return new global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento(); }
-        private object Activate_89_Document() { return new global::Hefesoft.Pdf.Entities.Document(); }
-        private object Activate_90_CustomDialog() { return new global::Callisto.Controls.CustomDialog(); }
-        private object Activate_93_Agregar_Supernumerario() { return new global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario(); }
-        private object Activate_97_SobreEscribirAdicionar() { return new global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar(); }
-        private object Activate_98_EstadoSobreEscribirAdicionar() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar(); }
-        private object Activate_100_ColorContrastConverter() { return new global::Callisto.Converters.ColorContrastConverter(); }
-        private object Activate_101_DynamicTextBlock() { return new global::Callisto.Controls.DynamicTextBlock(); }
-        private void VectorAdd_28_BehaviorCollection(object instance, object item)
+        private object Activate_25_VM() { return new global::Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM(); }
+        private object Activate_26_Pacientes() { return new global::Hefesoft.Usuario.ViewModel.Pacientes.Pacientes(); }
+        private object Activate_27_Busy() { return new global::Hefesoft.Standard.BusyBox.Busy(); }
+        private object Activate_29_BehaviorCollection() { return new global::Microsoft.Xaml.Interactivity.BehaviorCollection(); }
+        private object Activate_32_EventTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior(); }
+        private object Activate_33_ActionCollection() { return new global::Microsoft.Xaml.Interactivity.ActionCollection(); }
+        private object Activate_35_InvokeCommandAction() { return new global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction(); }
+        private object Activate_38_Boca() { return new global::Cnt.Panacea.Xap.Odontologia.Boca(); }
+        private object Activate_39_elementoMenu() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu(); }
+        private object Activate_40_ConfigurarDiagnosticoProcedimOtraEntity() { return new global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity(); }
+        private object Activate_45_SuperficieCompleta() { return new global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta(); }
+        private object Activate_47_SplitEvolucion() { return new global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion(); }
+        private object Activate_48_PacienteTratamientos() { return new global::Hefesoft.Odontograma.Grillas.PacienteTratamientos(); }
+        private object Activate_49_Forma_Pago() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago(); }
+        private object Activate_50_SplitPlanTratamiento() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento(); }
+        private object Activate_51_UserControlGuardarPlanTratamiento() { return new global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento(); }
+        private object Activate_52_BooleanToVisibilityConverter() { return new global::Callisto.Converters.BooleanToVisibilityConverter(); }
+        private object Activate_53_Listado_Tipos_Odontogramas() { return new global::Hefesoft.Odontograma.Controles.Odontograma.Menus.Listado_Tipos_Odontogramas(); }
+        private object Activate_54_Generico() { return new global::Hefesoft.Odontograma.Assets.PopUp.Generico(); }
+        private object Activate_56_Modal() { return new global::Hefesoft.Odontograma.Assets.PopUp.Modal(); }
+        private object Activate_57_Mostrar_Ventana() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana(); }
+        private object Activate_58_Modal() { return new global::Hefesoft.Util.W8.UI.PopUp.Modal(); }
+        private object Activate_59_Diagnostico_Procedimientos() { return new global::Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos(); }
+        private object Activate_60_Seleccionado() { return new global::Hefesoft.Odontograma.Piezas_Dentales.Seleccionado(); }
+        private object Activate_61_Indices() { return new global::Hefesoft.Odontograma.Assets.Indices.Indices(); }
+        private object Activate_62_Tipos() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Tipos(); }
+        private object Activate_63_Mapa_Dental() { return new global::Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental(); }
+        private object Activate_64_Paleta() { return new global::Hefesoft.Odontograma.Mapa_Dental.Paleta(); }
+        private object Activate_65_SplitPacientes() { return new global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes(); }
+        private object Activate_66_Odontograma() { return new global::Hefesoft.Odontograma.Odontograma(); }
+        private object Activate_68_NavigationHelper() { return new global::Hefesoft.Util.W8.UI.Common.NavigationHelper(); }
+        private object Activate_69_DataTriggerBehavior() { return new global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior(); }
+        private object Activate_71_GoToStateAction() { return new global::Microsoft.Xaml.Interactions.Core.GoToStateAction(); }
+        private object Activate_72_Abajo() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo(); }
+        private object Activate_73_Arriba() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba(); }
+        private object Activate_74_Central() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central(); }
+        private object Activate_75_Derecha() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha(); }
+        private object Activate_76_Inferior() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior(); }
+        private object Activate_77_Izquierda() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda(); }
+        private object Activate_78_Superior() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior(); }
+        private object Activate_79_UserControlColorDienteCompleto() { return new global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto(); }
+        private object Activate_80_Odontograma_Evolucion() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion(); }
+        private object Activate_81_Odontograma_Inicial() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial(); }
+        private object Activate_82_Plan_Tratamiento() { return new global::Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento(); }
+        private object Activate_83_Inicial() { return new global::Hefesoft.Odontograma.Util.Reportes.Templates.Inicial(); }
+        private object Activate_84_Reportes_Template() { return new global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template(); }
+        private object Activate_91_Plan_Tratamiento() { return new global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento(); }
+        private object Activate_92_Document() { return new global::Hefesoft.Pdf.Entities.Document(); }
+        private object Activate_93_CustomDialog() { return new global::Callisto.Controls.CustomDialog(); }
+        private object Activate_96_Agregar_Supernumerario() { return new global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario(); }
+        private object Activate_100_SobreEscribirAdicionar() { return new global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar(); }
+        private object Activate_101_EstadoSobreEscribirAdicionar() { return new global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar(); }
+        private object Activate_103_ColorContrastConverter() { return new global::Callisto.Converters.ColorContrastConverter(); }
+        private object Activate_104_DynamicTextBlock() { return new global::Callisto.Controls.DynamicTextBlock(); }
+        private void VectorAdd_29_BehaviorCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
             collection.Add(newItem);
         }
-        private void VectorAdd_32_ActionCollection(object instance, object item)
+        private void VectorAdd_33_ActionCollection(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::Windows.UI.Xaml.DependencyObject>)instance;
             var newItem = (global::Windows.UI.Xaml.DependencyObject)item;
@@ -525,6 +534,7 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 userType.AddMemberName("Seleccionado");
                 userType.AddMemberName("Boca");
                 userType.AddMemberName("Usuarios");
+                userType.AddMemberName("Listado_Tipos_Odontogramas");
                 userType.AddMemberName("Pacientes");
                 userType.AddMemberName("Busy");
                 xamlType = userType;
@@ -659,42 +669,48 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 25:   //  Hefesoft.Usuario.ViewModel.Pacientes.Pacientes
+            case 25:   //  Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 26:   //  Hefesoft.Standard.BusyBox.Busy
+            case 26:   //  Hefesoft.Usuario.ViewModel.Pacientes.Pacientes
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 27:   //  Microsoft.Xaml.Interactivity.Interaction
+            case 27:   //  Hefesoft.Standard.BusyBox.Busy
+                userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("GalaSoft.MvvmLight.ViewModelBase"));
+                userType.SetIsReturnTypeStub();
+                xamlType = userType;
+                break;
+
+            case 28:   //  Microsoft.Xaml.Interactivity.Interaction
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.AddMemberName("Behaviors");
                 xamlType = userType;
                 break;
 
-            case 28:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
+            case 29:   //  Microsoft.Xaml.Interactivity.BehaviorCollection
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_28_BehaviorCollection;
+                userType.CollectionAdd = VectorAdd_29_BehaviorCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 29:   //  Windows.UI.Xaml.DependencyObjectCollection
+            case 30:   //  Windows.UI.Xaml.DependencyObjectCollection
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 30:   //  Windows.UI.Xaml.DependencyObject
+            case 31:   //  Windows.UI.Xaml.DependencyObject
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 31:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
+            case 32:   //  Microsoft.Xaml.Interactions.Core.EventTriggerBehavior
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_31_EventTriggerBehavior;
+                userType.Activator = Activate_32_EventTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("EventName");
@@ -703,20 +719,20 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 32:   //  Microsoft.Xaml.Interactivity.ActionCollection
+            case 33:   //  Microsoft.Xaml.Interactivity.ActionCollection
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObjectCollection"));
-                userType.CollectionAdd = VectorAdd_32_ActionCollection;
+                userType.CollectionAdd = VectorAdd_33_ActionCollection;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 33:   //  String
+            case 34:   //  String
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 34:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
+            case 35:   //  Microsoft.Xaml.Interactions.Core.InvokeCommandAction
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_34_InvokeCommandAction;
+                userType.Activator = Activate_35_InvokeCommandAction;
                 userType.AddMemberName("Command");
                 userType.AddMemberName("CommandParameter");
                 userType.AddMemberName("InputConverter");
@@ -725,44 +741,44 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 35:   //  System.Windows.Input.ICommand
+            case 36:   //  System.Windows.Input.ICommand
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 36:   //  Windows.UI.Xaml.Data.IValueConverter
+            case 37:   //  Windows.UI.Xaml.Data.IValueConverter
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 37:   //  Cnt.Panacea.Xap.Odontologia.Boca
+            case 38:   //  Cnt.Panacea.Xap.Odontologia.Boca
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_37_Boca;
+                userType.Activator = Activate_38_Boca;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 38:   //  Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu
+            case 39:   //  Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_38_elementoMenu;
+                userType.Activator = Activate_39_elementoMenu;
                 userType.AddMemberName("Item");
                 userType.AddMemberName("Tipo_Elemento_Seleccionado");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 39:   //  Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity
+            case 40:   //  Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Cnt.Std.EntidadBase`1<Int32>"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 40:   //  Cnt.Std.EntidadBase`1<Int32>
+            case 41:   //  Cnt.Std.EntidadBase`1<Int32>
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 41:   //  Hefesoft.Odontograma.Util.Tipo_Elemento
+            case 42:   //  Hefesoft.Odontograma.Util.Tipo_Elemento
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Simbolo", global::Hefesoft.Odontograma.Util.Tipo_Elemento.Simbolo);
                 userType.AddEnumValue("Letra", global::Hefesoft.Odontograma.Util.Tipo_Elemento.Letra);
@@ -770,80 +786,93 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 42:   //  System.Enum
+            case 43:   //  System.Enum
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.ValueType"));
                 xamlType = userType;
                 break;
 
-            case 43:   //  System.ValueType
+            case 44:   //  System.ValueType
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 44:   //  Cnt.Panacea.Xap.Odontologia.SuperficieCompleta
+            case 45:   //  Cnt.Panacea.Xap.Odontologia.SuperficieCompleta
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_44_SuperficieCompleta;
+                userType.Activator = Activate_45_SuperficieCompleta;
                 userType.AddMemberName("realizadoPiezaCompleta");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 45:   //  Boolean
+            case 46:   //  Boolean
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 46:   //  Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion
+            case 47:   //  Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_46_SplitEvolucion;
+                userType.Activator = Activate_47_SplitEvolucion;
                 userType.AddMemberName("vm");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 47:   //  Hefesoft.Odontograma.Grillas.PacienteTratamientos
+            case 48:   //  Hefesoft.Odontograma.Grillas.PacienteTratamientos
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_47_PacienteTratamientos;
+                userType.Activator = Activate_48_PacienteTratamientos;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 48:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago
+            case 49:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_48_Forma_Pago;
+                userType.Activator = Activate_49_Forma_Pago;
                 userType.AddMemberName("vm");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 49:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento
+            case 50:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.SplitPlanTratamiento
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_49_SplitPlanTratamiento;
+                userType.Activator = Activate_50_SplitPlanTratamiento;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 50:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento
+            case 51:   //  Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_50_UserControlGuardarPlanTratamiento;
+                userType.Activator = Activate_51_UserControlGuardarPlanTratamiento;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 51:   //  Hefesoft.Odontograma.Assets.PopUp.Generico
+            case 52:   //  Callisto.Converters.BooleanToVisibilityConverter
+                userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType.Activator = Activate_52_BooleanToVisibilityConverter;
+                xamlType = userType;
+                break;
+
+            case 53:   //  Hefesoft.Odontograma.Controles.Odontograma.Menus.Listado_Tipos_Odontogramas
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_51_Generico;
+                userType.Activator = Activate_53_Listado_Tipos_Odontogramas;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 54:   //  Hefesoft.Odontograma.Assets.PopUp.Generico
+                userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_54_Generico;
                 userType.AddMemberName("padre");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 52:   //  Windows.UI.Xaml.FrameworkElement
+            case 55:   //  Windows.UI.Xaml.FrameworkElement
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 53:   //  Hefesoft.Odontograma.Assets.PopUp.Modal
+            case 56:   //  Hefesoft.Odontograma.Assets.PopUp.Modal
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_53_Modal;
+                userType.Activator = Activate_56_Modal;
                 userType.AddMemberName("padre");
                 userType.AddMemberName("elementoOtraVentana");
                 userType.AddMemberName("modal");
@@ -851,90 +880,90 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 54:   //  Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana
+            case 57:   //  Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 55:   //  Hefesoft.Util.W8.UI.PopUp.Modal
+            case 58:   //  Hefesoft.Util.W8.UI.PopUp.Modal
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 56:   //  Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos
+            case 59:   //  Hefesoft.Odontograma.Controles.Odontograma.Seleccionado.Diagnostico_Procedimientos
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_56_Diagnostico_Procedimientos;
+                userType.Activator = Activate_59_Diagnostico_Procedimientos;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 57:   //  Hefesoft.Odontograma.Piezas_Dentales.Seleccionado
+            case 60:   //  Hefesoft.Odontograma.Piezas_Dentales.Seleccionado
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_57_Seleccionado;
+                userType.Activator = Activate_60_Seleccionado;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 58:   //  Hefesoft.Odontograma.Assets.Indices.Indices
+            case 61:   //  Hefesoft.Odontograma.Assets.Indices.Indices
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_58_Indices;
+                userType.Activator = Activate_61_Indices;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 59:   //  Hefesoft.Odontograma.Tipos_Odontograma.Tipos
+            case 62:   //  Hefesoft.Odontograma.Tipos_Odontograma.Tipos
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_59_Tipos;
+                userType.Activator = Activate_62_Tipos;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 60:   //  Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental
+            case 63:   //  Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental.Mapa_Dental
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_60_Mapa_Dental;
+                userType.Activator = Activate_63_Mapa_Dental;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 61:   //  Hefesoft.Odontograma.Mapa_Dental.Paleta
+            case 64:   //  Hefesoft.Odontograma.Mapa_Dental.Paleta
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_61_Paleta;
+                userType.Activator = Activate_64_Paleta;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 62:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
+            case 65:   //  Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_62_SplitPacientes;
+                userType.Activator = Activate_65_SplitPacientes;
                 userType.AddMemberName("verTitulo");
                 userType.AddMemberName("verSeleccionado");
                 xamlType = userType;
                 break;
 
-            case 63:   //  Hefesoft.Odontograma.Odontograma
+            case 66:   //  Hefesoft.Odontograma.Odontograma
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_63_Odontograma;
+                userType.Activator = Activate_66_Odontograma;
                 userType.AddMemberName("NavigationHelper");
                 userType.AddMemberName("mensaje");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 64:   //  Windows.UI.Xaml.Controls.Page
+            case 67:   //  Windows.UI.Xaml.Controls.Page
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 65:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
+            case 68:   //  Hefesoft.Util.W8.UI.Common.NavigationHelper
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 66:   //  Microsoft.Xaml.Interactions.Core.DataTriggerBehavior
+            case 69:   //  Microsoft.Xaml.Interactions.Core.DataTriggerBehavior
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_66_DataTriggerBehavior;
+                userType.Activator = Activate_69_DataTriggerBehavior;
                 userType.SetContentPropertyName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.Actions");
                 userType.AddMemberName("Actions");
                 userType.AddMemberName("Binding");
@@ -944,7 +973,7 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 67:   //  Microsoft.Xaml.Interactions.Core.ComparisonConditionType
+            case 70:   //  Microsoft.Xaml.Interactions.Core.ComparisonConditionType
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Enum"));
                 userType.AddEnumValue("Equal", global::Microsoft.Xaml.Interactions.Core.ComparisonConditionType.Equal);
                 userType.AddEnumValue("NotEqual", global::Microsoft.Xaml.Interactions.Core.ComparisonConditionType.NotEqual);
@@ -955,112 +984,112 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 68:   //  Microsoft.Xaml.Interactions.Core.GoToStateAction
+            case 71:   //  Microsoft.Xaml.Interactions.Core.GoToStateAction
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.DependencyObject"));
-                userType.Activator = Activate_68_GoToStateAction;
+                userType.Activator = Activate_71_GoToStateAction;
                 userType.AddMemberName("StateName");
                 userType.AddMemberName("UseTransitions");
                 userType.AddMemberName("TargetObject");
                 xamlType = userType;
                 break;
 
-            case 69:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo
+            case 72:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_69_Abajo;
+                userType.Activator = Activate_72_Abajo;
                 userType.AddMemberName("Item");
                 userType.AddMemberName("esperaAplicarPlanTratamiento");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 70:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba
+            case 73:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_70_Arriba;
+                userType.Activator = Activate_73_Arriba;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 71:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central
+            case 74:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_71_Central;
+                userType.Activator = Activate_74_Central;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 72:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha
+            case 75:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_72_Derecha;
+                userType.Activator = Activate_75_Derecha;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 73:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior
+            case 76:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_73_Inferior;
+                userType.Activator = Activate_76_Inferior;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 74:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda
+            case 77:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_74_Izquierda;
+                userType.Activator = Activate_77_Izquierda;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 75:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior
+            case 78:   //  Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_75_Superior;
+                userType.Activator = Activate_78_Superior;
                 userType.AddMemberName("Item");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 76:   //  Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto
+            case 79:   //  Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_76_UserControlColorDienteCompleto;
+                userType.Activator = Activate_79_UserControlColorDienteCompleto;
                 userType.AddMemberName("Item");
                 userType.AddMemberName("realizado");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 77:   //  Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion
+            case 80:   //  Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Evolucion
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_77_Odontograma_Evolucion;
+                userType.Activator = Activate_80_Odontograma_Evolucion;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 78:   //  Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial
+            case 81:   //  Hefesoft.Odontograma.Tipos_Odontograma.Odontograma_Inicial
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_78_Odontograma_Inicial;
+                userType.Activator = Activate_81_Odontograma_Inicial;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 79:   //  Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento
+            case 82:   //  Hefesoft.Odontograma.Tipos_Odontograma.Plan_Tratamiento
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_79_Plan_Tratamiento;
+                userType.Activator = Activate_82_Plan_Tratamiento;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 80:   //  Hefesoft.Odontograma.Util.Reportes.Templates.Inicial
+            case 83:   //  Hefesoft.Odontograma.Util.Reportes.Templates.Inicial
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_80_Inicial;
+                userType.Activator = Activate_83_Inicial;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 81:   //  Hefesoft.Odontograma.Util.Reportes.Reportes_Template
+            case 84:   //  Hefesoft.Odontograma.Util.Reportes.Reportes_Template
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.FrameworkElement"));
-                userType.Activator = Activate_81_Reportes_Template;
+                userType.Activator = Activate_84_Reportes_Template;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("ItemsSource");
                 userType.AddMemberName("PageHeaderTemplate");
@@ -1078,49 +1107,49 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 82:   //  System.Collections.IEnumerable
+            case 85:   //  System.Collections.IEnumerable
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, null);
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 83:   //  Windows.UI.Xaml.DataTemplate
+            case 86:   //  Windows.UI.Xaml.DataTemplate
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 84:   //  Windows.UI.Xaml.Controls.Grid
+            case 87:   //  Windows.UI.Xaml.Controls.Grid
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 85:   //  Windows.UI.Xaml.Controls.Image
+            case 88:   //  Windows.UI.Xaml.Controls.Image
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 86:   //  Int32
+            case 89:   //  Int32
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 87:   //  Windows.UI.Xaml.Printing.PrintDocument
+            case 90:   //  Windows.UI.Xaml.Printing.PrintDocument
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 88:   //  Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento
+            case 91:   //  Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_88_Plan_Tratamiento;
+                userType.Activator = Activate_91_Plan_Tratamiento;
                 userType.AddMemberName("document");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 89:   //  Hefesoft.Pdf.Entities.Document
+            case 92:   //  Hefesoft.Pdf.Entities.Document
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 90:   //  Callisto.Controls.CustomDialog
+            case 93:   //  Callisto.Controls.CustomDialog
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_90_CustomDialog;
+                userType.Activator = Activate_93_CustomDialog;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("BackButtonVisibility");
                 userType.AddMemberName("IsOpen");
@@ -1129,68 +1158,68 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 91:   //  Windows.UI.Xaml.Controls.ContentControl
+            case 94:   //  Windows.UI.Xaml.Controls.ContentControl
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 92:   //  Windows.UI.Xaml.Visibility
+            case 95:   //  Windows.UI.Xaml.Visibility
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 93:   //  Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario
+            case 96:   //  Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_93_Agregar_Supernumerario;
+                userType.Activator = Activate_96_Agregar_Supernumerario;
                 userType.AddMemberName("Cerrar");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 94:   //  System.Action`1<Boolean>
+            case 97:   //  System.Action`1<Boolean>
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.MulticastDelegate"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 95:   //  System.MulticastDelegate
+            case 98:   //  System.MulticastDelegate
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.Delegate"));
                 xamlType = userType;
                 break;
 
-            case 96:   //  System.Delegate
+            case 99:   //  System.Delegate
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 xamlType = userType;
                 break;
 
-            case 97:   //  Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar
+            case 100:   //  Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
-                userType.Activator = Activate_97_SobreEscribirAdicionar;
+                userType.Activator = Activate_100_SobreEscribirAdicionar;
                 userType.AddMemberName("EstadoSobreEscribirAdicionar");
                 userType.AddMemberName("Cerrar");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 98:   //  Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar
+            case 101:   //  Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 99:   //  System.Action`1<Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>
+            case 102:   //  System.Action`1<Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("System.MulticastDelegate"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
-            case 100:   //  Callisto.Converters.ColorContrastConverter
+            case 103:   //  Callisto.Converters.ColorContrastConverter
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
-                userType.Activator = Activate_100_ColorContrastConverter;
+                userType.Activator = Activate_103_ColorContrastConverter;
                 xamlType = userType;
                 break;
 
-            case 101:   //  Callisto.Controls.DynamicTextBlock
+            case 104:   //  Callisto.Controls.DynamicTextBlock
                 userType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.ContentControl"));
-                userType.Activator = Activate_101_DynamicTextBlock;
+                userType.Activator = Activate_104_DynamicTextBlock;
                 userType.AddMemberName("Text");
                 userType.AddMemberName("TextWrapping");
                 userType.AddMemberName("LineHeight");
@@ -1198,15 +1227,15 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 102:   //  Windows.UI.Xaml.TextWrapping
+            case 105:   //  Windows.UI.Xaml.TextWrapping
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 103:   //  Double
+            case 106:   //  Double
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 104:   //  Windows.UI.Xaml.LineStackingStrategy
+            case 107:   //  Windows.UI.Xaml.LineStackingStrategy
                 xamlType = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
             }
@@ -1366,645 +1395,650 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
             var that = (global::Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator)instance;
             return that.Usuarios;
         }
-        private object get_19_ViewModelLocator_Pacientes(object instance)
+        private object get_19_ViewModelLocator_Listado_Tipos_Odontogramas(object instance)
+        {
+            var that = (global::Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator)instance;
+            return that.Listado_Tipos_Odontogramas;
+        }
+        private object get_20_ViewModelLocator_Pacientes(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator)instance;
             return that.Pacientes;
         }
-        private object get_20_ViewModelLocator_Busy(object instance)
+        private object get_21_ViewModelLocator_Busy(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator)instance;
             return that.Busy;
         }
-        private object get_21_Interaction_Behaviors(object instance)
+        private object get_22_Interaction_Behaviors(object instance)
         {
             return global::Microsoft.Xaml.Interactivity.Interaction.GetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance);
         }
-        private void set_21_Interaction_Behaviors(object instance, object Value)
+        private void set_22_Interaction_Behaviors(object instance, object Value)
         {
             global::Microsoft.Xaml.Interactivity.Interaction.SetBehaviors((global::Windows.UI.Xaml.DependencyObject)instance, (global::Microsoft.Xaml.Interactivity.BehaviorCollection)Value);
         }
-        private object get_22_EventTriggerBehavior_Actions(object instance)
+        private object get_23_EventTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_23_EventTriggerBehavior_EventName(object instance)
+        private object get_24_EventTriggerBehavior_EventName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.EventName;
         }
-        private void set_23_EventTriggerBehavior_EventName(object instance, object Value)
+        private void set_24_EventTriggerBehavior_EventName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.EventName = (global::System.String)Value;
         }
-        private object get_24_EventTriggerBehavior_SourceObject(object instance)
+        private object get_25_EventTriggerBehavior_SourceObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.SourceObject;
         }
-        private void set_24_EventTriggerBehavior_SourceObject(object instance, object Value)
+        private void set_25_EventTriggerBehavior_SourceObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             that.SourceObject = (global::System.Object)Value;
         }
-        private object get_25_EventTriggerBehavior_AssociatedObject(object instance)
+        private object get_26_EventTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.EventTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_26_InvokeCommandAction_Command(object instance)
+        private object get_27_InvokeCommandAction_Command(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.Command;
         }
-        private void set_26_InvokeCommandAction_Command(object instance, object Value)
+        private void set_27_InvokeCommandAction_Command(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.Command = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_27_InvokeCommandAction_CommandParameter(object instance)
+        private object get_28_InvokeCommandAction_CommandParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.CommandParameter;
         }
-        private void set_27_InvokeCommandAction_CommandParameter(object instance, object Value)
+        private void set_28_InvokeCommandAction_CommandParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.CommandParameter = (global::System.Object)Value;
         }
-        private object get_28_InvokeCommandAction_InputConverter(object instance)
+        private object get_29_InvokeCommandAction_InputConverter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverter;
         }
-        private void set_28_InvokeCommandAction_InputConverter(object instance, object Value)
+        private void set_29_InvokeCommandAction_InputConverter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverter = (global::Windows.UI.Xaml.Data.IValueConverter)Value;
         }
-        private object get_29_InvokeCommandAction_InputConverterParameter(object instance)
+        private object get_30_InvokeCommandAction_InputConverterParameter(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterParameter;
         }
-        private void set_29_InvokeCommandAction_InputConverterParameter(object instance, object Value)
+        private void set_30_InvokeCommandAction_InputConverterParameter(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterParameter = (global::System.Object)Value;
         }
-        private object get_30_InvokeCommandAction_InputConverterLanguage(object instance)
+        private object get_31_InvokeCommandAction_InputConverterLanguage(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             return that.InputConverterLanguage;
         }
-        private void set_30_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
+        private void set_31_InvokeCommandAction_InputConverterLanguage(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.InvokeCommandAction)instance;
             that.InputConverterLanguage = (global::System.String)Value;
         }
-        private object get_31_elementoMenu_Item(object instance)
+        private object get_32_elementoMenu_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu)instance;
             return that.Item;
         }
-        private void set_31_elementoMenu_Item(object instance, object Value)
+        private void set_32_elementoMenu_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_32_elementoMenu_Tipo_Elemento_Seleccionado(object instance)
+        private object get_33_elementoMenu_Tipo_Elemento_Seleccionado(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu)instance;
             return that.Tipo_Elemento_Seleccionado;
         }
-        private void set_32_elementoMenu_Tipo_Elemento_Seleccionado(object instance, object Value)
+        private void set_33_elementoMenu_Tipo_Elemento_Seleccionado(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu)instance;
             that.Tipo_Elemento_Seleccionado = (global::Hefesoft.Odontograma.Util.Tipo_Elemento)Value;
         }
-        private object get_33_SuperficieCompleta_realizadoPiezaCompleta(object instance)
+        private object get_34_SuperficieCompleta_realizadoPiezaCompleta(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta)instance;
             return that.realizadoPiezaCompleta;
         }
-        private void set_33_SuperficieCompleta_realizadoPiezaCompleta(object instance, object Value)
+        private void set_34_SuperficieCompleta_realizadoPiezaCompleta(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.SuperficieCompleta)instance;
             that.realizadoPiezaCompleta = (global::System.Boolean)Value;
         }
-        private object get_34_SplitEvolucion_vm(object instance)
+        private object get_35_SplitEvolucion_vm(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion)instance;
             return that.vm;
         }
-        private void set_34_SplitEvolucion_vm(object instance, object Value)
+        private void set_35_SplitEvolucion_vm(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion)instance;
             that.vm = (global::Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion)Value;
         }
-        private object get_35_Forma_Pago_vm(object instance)
+        private object get_36_Forma_Pago_vm(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago)instance;
             return that.vm;
         }
-        private void set_35_Forma_Pago_vm(object instance, object Value)
+        private void set_36_Forma_Pago_vm(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago)instance;
             that.vm = (global::Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento)Value;
         }
-        private object get_36_Generico_padre(object instance)
+        private object get_37_Generico_padre(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Generico)instance;
             return that.padre;
         }
-        private void set_36_Generico_padre(object instance, object Value)
+        private void set_37_Generico_padre(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Generico)instance;
             that.padre = (global::Windows.UI.Xaml.FrameworkElement)Value;
         }
-        private object get_37_Modal_padre(object instance)
+        private object get_38_Modal_padre(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             return that.padre;
         }
-        private void set_37_Modal_padre(object instance, object Value)
+        private void set_38_Modal_padre(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             that.padre = (global::Windows.UI.Xaml.FrameworkElement)Value;
         }
-        private object get_38_Modal_elementoOtraVentana(object instance)
+        private object get_39_Modal_elementoOtraVentana(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             return that.elementoOtraVentana;
         }
-        private void set_38_Modal_elementoOtraVentana(object instance, object Value)
+        private void set_39_Modal_elementoOtraVentana(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             that.elementoOtraVentana = (global::Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana)Value;
         }
-        private object get_39_Modal_modal(object instance)
+        private object get_40_Modal_modal(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             return that.modal;
         }
-        private void set_39_Modal_modal(object instance, object Value)
+        private void set_40_Modal_modal(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Modal)instance;
             that.modal = (global::Hefesoft.Util.W8.UI.PopUp.Modal)Value;
         }
-        private object get_40_SplitPacientes_verTitulo(object instance)
+        private object get_41_SplitPacientes_verTitulo(object instance)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
             return that.verTitulo;
         }
-        private void set_40_SplitPacientes_verTitulo(object instance, object Value)
+        private void set_41_SplitPacientes_verTitulo(object instance, object Value)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
             that.verTitulo = (global::System.Boolean)Value;
         }
-        private object get_41_SplitPacientes_verSeleccionado(object instance)
+        private object get_42_SplitPacientes_verSeleccionado(object instance)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
             return that.verSeleccionado;
         }
-        private void set_41_SplitPacientes_verSeleccionado(object instance, object Value)
+        private void set_42_SplitPacientes_verSeleccionado(object instance, object Value)
         {
             var that = (global::Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes)instance;
             that.verSeleccionado = (global::System.Boolean)Value;
         }
-        private object get_42_Odontograma_NavigationHelper(object instance)
+        private object get_43_Odontograma_NavigationHelper(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Odontograma)instance;
             return that.NavigationHelper;
         }
-        private void set_42_Odontograma_NavigationHelper(object instance, object Value)
+        private void set_43_Odontograma_NavigationHelper(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Odontograma)instance;
             that.NavigationHelper = (global::Hefesoft.Util.W8.UI.Common.NavigationHelper)Value;
         }
-        private object get_43_Odontograma_mensaje(object instance)
+        private object get_44_Odontograma_mensaje(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Odontograma)instance;
             return that.mensaje;
         }
-        private void set_43_Odontograma_mensaje(object instance, object Value)
+        private void set_44_Odontograma_mensaje(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Odontograma)instance;
             that.mensaje = (global::System.String)Value;
         }
-        private object get_44_DataTriggerBehavior_Actions(object instance)
+        private object get_45_DataTriggerBehavior_Actions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             return that.Actions;
         }
-        private object get_45_DataTriggerBehavior_Binding(object instance)
+        private object get_46_DataTriggerBehavior_Binding(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             return that.Binding;
         }
-        private void set_45_DataTriggerBehavior_Binding(object instance, object Value)
+        private void set_46_DataTriggerBehavior_Binding(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             that.Binding = (global::System.Object)Value;
         }
-        private object get_46_DataTriggerBehavior_Value(object instance)
+        private object get_47_DataTriggerBehavior_Value(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             return that.Value;
         }
-        private void set_46_DataTriggerBehavior_Value(object instance, object Value)
+        private void set_47_DataTriggerBehavior_Value(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             that.Value = (global::System.Object)Value;
         }
-        private object get_47_DataTriggerBehavior_ComparisonCondition(object instance)
+        private object get_48_DataTriggerBehavior_ComparisonCondition(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             return that.ComparisonCondition;
         }
-        private void set_47_DataTriggerBehavior_ComparisonCondition(object instance, object Value)
+        private void set_48_DataTriggerBehavior_ComparisonCondition(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             that.ComparisonCondition = (global::Microsoft.Xaml.Interactions.Core.ComparisonConditionType)Value;
         }
-        private object get_48_DataTriggerBehavior_AssociatedObject(object instance)
+        private object get_49_DataTriggerBehavior_AssociatedObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.DataTriggerBehavior)instance;
             return that.AssociatedObject;
         }
-        private object get_49_GoToStateAction_StateName(object instance)
+        private object get_50_GoToStateAction_StateName(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             return that.StateName;
         }
-        private void set_49_GoToStateAction_StateName(object instance, object Value)
+        private void set_50_GoToStateAction_StateName(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             that.StateName = (global::System.String)Value;
         }
-        private object get_50_GoToStateAction_UseTransitions(object instance)
+        private object get_51_GoToStateAction_UseTransitions(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             return that.UseTransitions;
         }
-        private void set_50_GoToStateAction_UseTransitions(object instance, object Value)
+        private void set_51_GoToStateAction_UseTransitions(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             that.UseTransitions = (global::System.Boolean)Value;
         }
-        private object get_51_GoToStateAction_TargetObject(object instance)
+        private object get_52_GoToStateAction_TargetObject(object instance)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             return that.TargetObject;
         }
-        private void set_51_GoToStateAction_TargetObject(object instance, object Value)
+        private void set_52_GoToStateAction_TargetObject(object instance, object Value)
         {
             var that = (global::Microsoft.Xaml.Interactions.Core.GoToStateAction)instance;
             that.TargetObject = (global::Windows.UI.Xaml.FrameworkElement)Value;
         }
-        private object get_52_Abajo_Item(object instance)
+        private object get_53_Abajo_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo)instance;
             return that.Item;
         }
-        private void set_52_Abajo_Item(object instance, object Value)
+        private void set_53_Abajo_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_53_Abajo_esperaAplicarPlanTratamiento(object instance)
+        private object get_54_Abajo_esperaAplicarPlanTratamiento(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo)instance;
             return that.esperaAplicarPlanTratamiento;
         }
-        private void set_53_Abajo_esperaAplicarPlanTratamiento(object instance, object Value)
+        private void set_54_Abajo_esperaAplicarPlanTratamiento(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo)instance;
             that.esperaAplicarPlanTratamiento = (global::System.Boolean)Value;
         }
-        private object get_54_Arriba_Item(object instance)
+        private object get_55_Arriba_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba)instance;
             return that.Item;
         }
-        private void set_54_Arriba_Item(object instance, object Value)
+        private void set_55_Arriba_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_55_Central_Item(object instance)
+        private object get_56_Central_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central)instance;
             return that.Item;
         }
-        private void set_55_Central_Item(object instance, object Value)
+        private void set_56_Central_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_56_Derecha_Item(object instance)
+        private object get_57_Derecha_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha)instance;
             return that.Item;
         }
-        private void set_56_Derecha_Item(object instance, object Value)
+        private void set_57_Derecha_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_57_Inferior_Item(object instance)
+        private object get_58_Inferior_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior)instance;
             return that.Item;
         }
-        private void set_57_Inferior_Item(object instance, object Value)
+        private void set_58_Inferior_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_58_Izquierda_Item(object instance)
+        private object get_59_Izquierda_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda)instance;
             return that.Item;
         }
-        private void set_58_Izquierda_Item(object instance, object Value)
+        private void set_59_Izquierda_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_59_Superior_Item(object instance)
+        private object get_60_Superior_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior)instance;
             return that.Item;
         }
-        private void set_59_Superior_Item(object instance, object Value)
+        private void set_60_Superior_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_60_UserControlColorDienteCompleto_Item(object instance)
+        private object get_61_UserControlColorDienteCompleto_Item(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto)instance;
             return that.Item;
         }
-        private void set_60_UserControlColorDienteCompleto_Item(object instance, object Value)
+        private void set_61_UserControlColorDienteCompleto_Item(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto)instance;
             that.Item = (global::Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity)Value;
         }
-        private object get_61_UserControlColorDienteCompleto_realizado(object instance)
+        private object get_62_UserControlColorDienteCompleto_realizado(object instance)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto)instance;
             return that.realizado;
         }
-        private void set_61_UserControlColorDienteCompleto_realizado(object instance, object Value)
+        private void set_62_UserControlColorDienteCompleto_realizado(object instance, object Value)
         {
             var that = (global::Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto)instance;
             that.realizado = (global::System.Boolean)Value;
         }
-        private object get_62_Reportes_Template_Title(object instance)
+        private object get_63_Reportes_Template_Title(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.Title;
         }
-        private void set_62_Reportes_Template_Title(object instance, object Value)
+        private void set_63_Reportes_Template_Title(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_63_Reportes_Template_ItemsSource(object instance)
+        private object get_64_Reportes_Template_ItemsSource(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.ItemsSource;
         }
-        private void set_63_Reportes_Template_ItemsSource(object instance, object Value)
+        private void set_64_Reportes_Template_ItemsSource(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.ItemsSource = (global::System.Collections.IEnumerable)Value;
         }
-        private object get_64_Reportes_Template_PageHeaderTemplate(object instance)
+        private object get_65_Reportes_Template_PageHeaderTemplate(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.PageHeaderTemplate;
         }
-        private void set_64_Reportes_Template_PageHeaderTemplate(object instance, object Value)
+        private void set_65_Reportes_Template_PageHeaderTemplate(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.PageHeaderTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_65_Reportes_Template_ItemTemplate(object instance)
+        private object get_66_Reportes_Template_ItemTemplate(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.ItemTemplate;
         }
-        private void set_65_Reportes_Template_ItemTemplate(object instance, object Value)
+        private void set_66_Reportes_Template_ItemTemplate(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.ItemTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_66_Reportes_Template_PageFooterTemplate(object instance)
+        private object get_67_Reportes_Template_PageFooterTemplate(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.PageFooterTemplate;
         }
-        private void set_66_Reportes_Template_PageFooterTemplate(object instance, object Value)
+        private void set_67_Reportes_Template_PageFooterTemplate(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.PageFooterTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_67_Reportes_Template_ReportFooterTemplate(object instance)
+        private object get_68_Reportes_Template_ReportFooterTemplate(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.ReportFooterTemplate;
         }
-        private void set_67_Reportes_Template_ReportFooterTemplate(object instance, object Value)
+        private void set_68_Reportes_Template_ReportFooterTemplate(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.ReportFooterTemplate = (global::Windows.UI.Xaml.DataTemplate)Value;
         }
-        private object get_68_Reportes_Template_Grid(object instance)
+        private object get_69_Reportes_Template_Grid(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.Grid;
         }
-        private void set_68_Reportes_Template_Grid(object instance, object Value)
+        private void set_69_Reportes_Template_Grid(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.Grid = (global::Windows.UI.Xaml.Controls.Grid)Value;
         }
-        private object get_69_Reportes_Template_Texto(object instance)
+        private object get_70_Reportes_Template_Texto(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.Texto;
         }
-        private void set_69_Reportes_Template_Texto(object instance, object Value)
+        private void set_70_Reportes_Template_Texto(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.Texto = (global::System.Boolean)Value;
         }
-        private object get_70_Reportes_Template_Imagen(object instance)
+        private object get_71_Reportes_Template_Imagen(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.Imagen;
         }
-        private void set_70_Reportes_Template_Imagen(object instance, object Value)
+        private void set_71_Reportes_Template_Imagen(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.Imagen = (global::System.Boolean)Value;
         }
-        private object get_71_Reportes_Template_ImagenOdontograma(object instance)
+        private object get_72_Reportes_Template_ImagenOdontograma(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.ImagenOdontograma;
         }
-        private void set_71_Reportes_Template_ImagenOdontograma(object instance, object Value)
+        private void set_72_Reportes_Template_ImagenOdontograma(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             that.ImagenOdontograma = (global::Windows.UI.Xaml.Controls.Image)Value;
         }
-        private object get_72_Reportes_Template_CurrentPageNumber(object instance)
+        private object get_73_Reportes_Template_CurrentPageNumber(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.CurrentPageNumber;
         }
-        private object get_73_Reportes_Template_TotalPageCount(object instance)
+        private object get_74_Reportes_Template_TotalPageCount(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.TotalPageCount;
         }
-        private object get_74_Reportes_Template_PrintDocument(object instance)
+        private object get_75_Reportes_Template_PrintDocument(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Reportes_Template)instance;
             return that.PrintDocument;
         }
-        private object get_75_Plan_Tratamiento_document(object instance)
+        private object get_76_Plan_Tratamiento_document(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento)instance;
             return that.document;
         }
-        private void set_75_Plan_Tratamiento_document(object instance, object Value)
+        private void set_76_Plan_Tratamiento_document(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento)instance;
             that.document = (global::Hefesoft.Pdf.Entities.Document)Value;
         }
-        private object get_76_CustomDialog_Title(object instance)
+        private object get_77_CustomDialog_Title(object instance)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             return that.Title;
         }
-        private void set_76_CustomDialog_Title(object instance, object Value)
+        private void set_77_CustomDialog_Title(object instance, object Value)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             that.Title = (global::System.String)Value;
         }
-        private object get_77_CustomDialog_BackButtonVisibility(object instance)
+        private object get_78_CustomDialog_BackButtonVisibility(object instance)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             return that.BackButtonVisibility;
         }
-        private void set_77_CustomDialog_BackButtonVisibility(object instance, object Value)
+        private void set_78_CustomDialog_BackButtonVisibility(object instance, object Value)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             that.BackButtonVisibility = (global::Windows.UI.Xaml.Visibility)Value;
         }
-        private object get_78_CustomDialog_IsOpen(object instance)
+        private object get_79_CustomDialog_IsOpen(object instance)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             return that.IsOpen;
         }
-        private void set_78_CustomDialog_IsOpen(object instance, object Value)
+        private void set_79_CustomDialog_IsOpen(object instance, object Value)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             that.IsOpen = (global::System.Boolean)Value;
         }
-        private object get_79_CustomDialog_BackButtonCommand(object instance)
+        private object get_80_CustomDialog_BackButtonCommand(object instance)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             return that.BackButtonCommand;
         }
-        private void set_79_CustomDialog_BackButtonCommand(object instance, object Value)
+        private void set_80_CustomDialog_BackButtonCommand(object instance, object Value)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             that.BackButtonCommand = (global::System.Windows.Input.ICommand)Value;
         }
-        private object get_80_CustomDialog_BackButtonCommandParameter(object instance)
+        private object get_81_CustomDialog_BackButtonCommandParameter(object instance)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             return that.BackButtonCommandParameter;
         }
-        private void set_80_CustomDialog_BackButtonCommandParameter(object instance, object Value)
+        private void set_81_CustomDialog_BackButtonCommandParameter(object instance, object Value)
         {
             var that = (global::Callisto.Controls.CustomDialog)instance;
             that.BackButtonCommandParameter = (global::System.Object)Value;
         }
-        private object get_81_Agregar_Supernumerario_Cerrar(object instance)
+        private object get_82_Agregar_Supernumerario_Cerrar(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario)instance;
             return that.Cerrar;
         }
-        private void set_81_Agregar_Supernumerario_Cerrar(object instance, object Value)
+        private void set_82_Agregar_Supernumerario_Cerrar(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario)instance;
             that.Cerrar = (global::System.Action<global::System.Boolean>)Value;
         }
-        private object get_82_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar(object instance)
+        private object get_83_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar)instance;
             return that.EstadoSobreEscribirAdicionar;
         }
-        private void set_82_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar(object instance, object Value)
+        private void set_83_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar)instance;
             that.EstadoSobreEscribirAdicionar = (global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar)Value;
         }
-        private object get_83_SobreEscribirAdicionar_Cerrar(object instance)
+        private object get_84_SobreEscribirAdicionar_Cerrar(object instance)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar)instance;
             return that.Cerrar;
         }
-        private void set_83_SobreEscribirAdicionar_Cerrar(object instance, object Value)
+        private void set_84_SobreEscribirAdicionar_Cerrar(object instance, object Value)
         {
             var that = (global::Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar)instance;
             that.Cerrar = (global::System.Action<global::Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>)Value;
         }
-        private object get_84_DynamicTextBlock_Text(object instance)
+        private object get_85_DynamicTextBlock_Text(object instance)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             return that.Text;
         }
-        private void set_84_DynamicTextBlock_Text(object instance, object Value)
+        private void set_85_DynamicTextBlock_Text(object instance, object Value)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             that.Text = (global::System.String)Value;
         }
-        private object get_85_DynamicTextBlock_TextWrapping(object instance)
+        private object get_86_DynamicTextBlock_TextWrapping(object instance)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             return that.TextWrapping;
         }
-        private void set_85_DynamicTextBlock_TextWrapping(object instance, object Value)
+        private void set_86_DynamicTextBlock_TextWrapping(object instance, object Value)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             that.TextWrapping = (global::Windows.UI.Xaml.TextWrapping)Value;
         }
-        private object get_86_DynamicTextBlock_LineHeight(object instance)
+        private object get_87_DynamicTextBlock_LineHeight(object instance)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             return that.LineHeight;
         }
-        private void set_86_DynamicTextBlock_LineHeight(object instance, object Value)
+        private void set_87_DynamicTextBlock_LineHeight(object instance, object Value)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             that.LineHeight = (global::System.Double)Value;
         }
-        private object get_87_DynamicTextBlock_LineStackingStrategy(object instance)
+        private object get_88_DynamicTextBlock_LineStackingStrategy(object instance)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             return that.LineStackingStrategy;
         }
-        private void set_87_DynamicTextBlock_LineStackingStrategy(object instance, object Value)
+        private void set_88_DynamicTextBlock_LineStackingStrategy(object instance, object Value)
         {
             var that = (global::Callisto.Controls.DynamicTextBlock)instance;
             that.LineStackingStrategy = (global::Windows.UI.Xaml.LineStackingStrategy)Value;
@@ -2131,16 +2165,22 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlMember.Getter = get_18_ViewModelLocator_Usuarios;
                 xamlMember.SetIsReadOnly();
                 break;
+            case "Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator.Listado_Tipos_Odontogramas":
+                userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator");
+                xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Listado_Tipos_Odontogramas", "Hefesoft.Odontograma.Elastic.Menus.Tipos_Odontograma.VM");
+                xamlMember.Getter = get_19_ViewModelLocator_Listado_Tipos_Odontogramas;
+                xamlMember.SetIsReadOnly();
+                break;
             case "Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator.Pacientes":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Pacientes", "Hefesoft.Usuario.ViewModel.Pacientes.Pacientes");
-                xamlMember.Getter = get_19_ViewModelLocator_Pacientes;
+                xamlMember.Getter = get_20_ViewModelLocator_Pacientes;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator.Busy":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator.ViewModelLocator");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Busy", "Hefesoft.Standard.BusyBox.Busy");
-                xamlMember.Getter = get_20_ViewModelLocator_Busy;
+                xamlMember.Getter = get_21_ViewModelLocator_Busy;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactivity.Interaction.Behaviors":
@@ -2148,455 +2188,455 @@ namespace Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Behaviors", "Microsoft.Xaml.Interactivity.BehaviorCollection");
                 xamlMember.SetTargetTypeName("Windows.UI.Xaml.DependencyObject");
                 xamlMember.SetIsAttachable();
-                xamlMember.Getter = get_21_Interaction_Behaviors;
-                xamlMember.Setter = set_21_Interaction_Behaviors;
+                xamlMember.Getter = get_22_Interaction_Behaviors;
+                xamlMember.Setter = set_22_Interaction_Behaviors;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.Actions":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_22_EventTriggerBehavior_Actions;
+                xamlMember.Getter = get_23_EventTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.EventName":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "EventName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_23_EventTriggerBehavior_EventName;
-                xamlMember.Setter = set_23_EventTriggerBehavior_EventName;
+                xamlMember.Getter = get_24_EventTriggerBehavior_EventName;
+                xamlMember.Setter = set_24_EventTriggerBehavior_EventName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.SourceObject":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "SourceObject", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_24_EventTriggerBehavior_SourceObject;
-                xamlMember.Setter = set_24_EventTriggerBehavior_SourceObject;
+                xamlMember.Getter = get_25_EventTriggerBehavior_SourceObject;
+                xamlMember.Setter = set_25_EventTriggerBehavior_SourceObject;
                 break;
             case "Microsoft.Xaml.Interactions.Core.EventTriggerBehavior.AssociatedObject":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.EventTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_25_EventTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_26_EventTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.Command":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Command", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_26_InvokeCommandAction_Command;
-                xamlMember.Setter = set_26_InvokeCommandAction_Command;
+                xamlMember.Getter = get_27_InvokeCommandAction_Command;
+                xamlMember.Setter = set_27_InvokeCommandAction_Command;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.CommandParameter":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "CommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_27_InvokeCommandAction_CommandParameter;
-                xamlMember.Setter = set_27_InvokeCommandAction_CommandParameter;
+                xamlMember.Getter = get_28_InvokeCommandAction_CommandParameter;
+                xamlMember.Setter = set_28_InvokeCommandAction_CommandParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverter":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "InputConverter", "Windows.UI.Xaml.Data.IValueConverter");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_28_InvokeCommandAction_InputConverter;
-                xamlMember.Setter = set_28_InvokeCommandAction_InputConverter;
+                xamlMember.Getter = get_29_InvokeCommandAction_InputConverter;
+                xamlMember.Setter = set_29_InvokeCommandAction_InputConverter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterParameter":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "InputConverterParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_29_InvokeCommandAction_InputConverterParameter;
-                xamlMember.Setter = set_29_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Getter = get_30_InvokeCommandAction_InputConverterParameter;
+                xamlMember.Setter = set_30_InvokeCommandAction_InputConverterParameter;
                 break;
             case "Microsoft.Xaml.Interactions.Core.InvokeCommandAction.InputConverterLanguage":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.InvokeCommandAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "InputConverterLanguage", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_30_InvokeCommandAction_InputConverterLanguage;
-                xamlMember.Setter = set_30_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Getter = get_31_InvokeCommandAction_InputConverterLanguage;
+                xamlMember.Setter = set_31_InvokeCommandAction_InputConverterLanguage;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_31_elementoMenu_Item;
-                xamlMember.Setter = set_31_elementoMenu_Item;
+                xamlMember.Getter = get_32_elementoMenu_Item;
+                xamlMember.Setter = set_32_elementoMenu_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu.Tipo_Elemento_Seleccionado":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.elementoMenu");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Tipo_Elemento_Seleccionado", "Hefesoft.Odontograma.Util.Tipo_Elemento");
-                xamlMember.Getter = get_32_elementoMenu_Tipo_Elemento_Seleccionado;
-                xamlMember.Setter = set_32_elementoMenu_Tipo_Elemento_Seleccionado;
+                xamlMember.Getter = get_33_elementoMenu_Tipo_Elemento_Seleccionado;
+                xamlMember.Setter = set_33_elementoMenu_Tipo_Elemento_Seleccionado;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.SuperficieCompleta.realizadoPiezaCompleta":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.SuperficieCompleta");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "realizadoPiezaCompleta", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_33_SuperficieCompleta_realizadoPiezaCompleta;
-                xamlMember.Setter = set_33_SuperficieCompleta_realizadoPiezaCompleta;
+                xamlMember.Getter = get_34_SuperficieCompleta_realizadoPiezaCompleta;
+                xamlMember.Setter = set_34_SuperficieCompleta_realizadoPiezaCompleta;
                 break;
             case "Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion.vm":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "vm", "Cnt.Panacea.Xap.Odontologia.Vm.Grillas.Evolucion.Grid_Evolucion");
-                xamlMember.Getter = get_34_SplitEvolucion_vm;
-                xamlMember.Setter = set_34_SplitEvolucion_vm;
+                xamlMember.Getter = get_35_SplitEvolucion_vm;
+                xamlMember.Setter = set_35_SplitEvolucion_vm;
                 break;
             case "Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago.vm":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Grillas.Plan_tratamiento.Forma_Pago");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "vm", "Cnt.Panacea.Xap.Odontologia.Vm.Mapa_Dental.UserControlGuardarPlanTratamiento");
-                xamlMember.Getter = get_35_Forma_Pago_vm;
-                xamlMember.Setter = set_35_Forma_Pago_vm;
+                xamlMember.Getter = get_36_Forma_Pago_vm;
+                xamlMember.Setter = set_36_Forma_Pago_vm;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Generico.padre":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Generico");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "padre", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_36_Generico_padre;
-                xamlMember.Setter = set_36_Generico_padre;
+                xamlMember.Getter = get_37_Generico_padre;
+                xamlMember.Setter = set_37_Generico_padre;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Modal.padre":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Modal");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "padre", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_37_Modal_padre;
-                xamlMember.Setter = set_37_Modal_padre;
+                xamlMember.Getter = get_38_Modal_padre;
+                xamlMember.Setter = set_38_Modal_padre;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Modal.elementoOtraVentana":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Modal");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "elementoOtraVentana", "Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Pop_Up.Mostrar_Ventana");
-                xamlMember.Getter = get_38_Modal_elementoOtraVentana;
-                xamlMember.Setter = set_38_Modal_elementoOtraVentana;
+                xamlMember.Getter = get_39_Modal_elementoOtraVentana;
+                xamlMember.Setter = set_39_Modal_elementoOtraVentana;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Modal.modal":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Modal");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "modal", "Hefesoft.Util.W8.UI.PopUp.Modal");
-                xamlMember.Getter = get_39_Modal_modal;
-                xamlMember.Setter = set_39_Modal_modal;
+                xamlMember.Getter = get_40_Modal_modal;
+                xamlMember.Setter = set_40_Modal_modal;
                 break;
             case "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes.verTitulo":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "verTitulo", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_40_SplitPacientes_verTitulo;
-                xamlMember.Setter = set_40_SplitPacientes_verTitulo;
+                xamlMember.Getter = get_41_SplitPacientes_verTitulo;
+                xamlMember.Setter = set_41_SplitPacientes_verTitulo;
                 break;
             case "Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes.verSeleccionado":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Pacientes.Controles.Grillas.Pacientes.SplitPacientes");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "verSeleccionado", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_41_SplitPacientes_verSeleccionado;
-                xamlMember.Setter = set_41_SplitPacientes_verSeleccionado;
+                xamlMember.Getter = get_42_SplitPacientes_verSeleccionado;
+                xamlMember.Setter = set_42_SplitPacientes_verSeleccionado;
                 break;
             case "Hefesoft.Odontograma.Odontograma.NavigationHelper":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Odontograma");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "NavigationHelper", "Hefesoft.Util.W8.UI.Common.NavigationHelper");
-                xamlMember.Getter = get_42_Odontograma_NavigationHelper;
-                xamlMember.Setter = set_42_Odontograma_NavigationHelper;
+                xamlMember.Getter = get_43_Odontograma_NavigationHelper;
+                xamlMember.Setter = set_43_Odontograma_NavigationHelper;
                 break;
             case "Hefesoft.Odontograma.Odontograma.mensaje":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Odontograma");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "mensaje", "String");
-                xamlMember.Getter = get_43_Odontograma_mensaje;
-                xamlMember.Setter = set_43_Odontograma_mensaje;
+                xamlMember.Getter = get_44_Odontograma_mensaje;
+                xamlMember.Setter = set_44_Odontograma_mensaje;
                 break;
             case "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.Actions":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Actions", "Microsoft.Xaml.Interactivity.ActionCollection");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_44_DataTriggerBehavior_Actions;
+                xamlMember.Getter = get_45_DataTriggerBehavior_Actions;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.Binding":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Binding", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_45_DataTriggerBehavior_Binding;
-                xamlMember.Setter = set_45_DataTriggerBehavior_Binding;
+                xamlMember.Getter = get_46_DataTriggerBehavior_Binding;
+                xamlMember.Setter = set_46_DataTriggerBehavior_Binding;
                 break;
             case "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.Value":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Value", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_46_DataTriggerBehavior_Value;
-                xamlMember.Setter = set_46_DataTriggerBehavior_Value;
+                xamlMember.Getter = get_47_DataTriggerBehavior_Value;
+                xamlMember.Setter = set_47_DataTriggerBehavior_Value;
                 break;
             case "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.ComparisonCondition":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "ComparisonCondition", "Microsoft.Xaml.Interactions.Core.ComparisonConditionType");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_47_DataTriggerBehavior_ComparisonCondition;
-                xamlMember.Setter = set_47_DataTriggerBehavior_ComparisonCondition;
+                xamlMember.Getter = get_48_DataTriggerBehavior_ComparisonCondition;
+                xamlMember.Setter = set_48_DataTriggerBehavior_ComparisonCondition;
                 break;
             case "Microsoft.Xaml.Interactions.Core.DataTriggerBehavior.AssociatedObject":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.DataTriggerBehavior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "AssociatedObject", "Windows.UI.Xaml.DependencyObject");
-                xamlMember.Getter = get_48_DataTriggerBehavior_AssociatedObject;
+                xamlMember.Getter = get_49_DataTriggerBehavior_AssociatedObject;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Microsoft.Xaml.Interactions.Core.GoToStateAction.StateName":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.GoToStateAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "StateName", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_49_GoToStateAction_StateName;
-                xamlMember.Setter = set_49_GoToStateAction_StateName;
+                xamlMember.Getter = get_50_GoToStateAction_StateName;
+                xamlMember.Setter = set_50_GoToStateAction_StateName;
                 break;
             case "Microsoft.Xaml.Interactions.Core.GoToStateAction.UseTransitions":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.GoToStateAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "UseTransitions", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_50_GoToStateAction_UseTransitions;
-                xamlMember.Setter = set_50_GoToStateAction_UseTransitions;
+                xamlMember.Getter = get_51_GoToStateAction_UseTransitions;
+                xamlMember.Setter = set_51_GoToStateAction_UseTransitions;
                 break;
             case "Microsoft.Xaml.Interactions.Core.GoToStateAction.TargetObject":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Microsoft.Xaml.Interactions.Core.GoToStateAction");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "TargetObject", "Windows.UI.Xaml.FrameworkElement");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_51_GoToStateAction_TargetObject;
-                xamlMember.Setter = set_51_GoToStateAction_TargetObject;
+                xamlMember.Getter = get_52_GoToStateAction_TargetObject;
+                xamlMember.Setter = set_52_GoToStateAction_TargetObject;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_52_Abajo_Item;
-                xamlMember.Setter = set_52_Abajo_Item;
+                xamlMember.Getter = get_53_Abajo_Item;
+                xamlMember.Setter = set_53_Abajo_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo.esperaAplicarPlanTratamiento":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Abajo");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "esperaAplicarPlanTratamiento", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_53_Abajo_esperaAplicarPlanTratamiento;
-                xamlMember.Setter = set_53_Abajo_esperaAplicarPlanTratamiento;
+                xamlMember.Getter = get_54_Abajo_esperaAplicarPlanTratamiento;
+                xamlMember.Setter = set_54_Abajo_esperaAplicarPlanTratamiento;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Arriba");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_54_Arriba_Item;
-                xamlMember.Setter = set_54_Arriba_Item;
+                xamlMember.Getter = get_55_Arriba_Item;
+                xamlMember.Setter = set_55_Arriba_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Central");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_55_Central_Item;
-                xamlMember.Setter = set_55_Central_Item;
+                xamlMember.Getter = get_56_Central_Item;
+                xamlMember.Setter = set_56_Central_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Derecha");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_56_Derecha_Item;
-                xamlMember.Setter = set_56_Derecha_Item;
+                xamlMember.Getter = get_57_Derecha_Item;
+                xamlMember.Setter = set_57_Derecha_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Inferior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_57_Inferior_Item;
-                xamlMember.Setter = set_57_Inferior_Item;
+                xamlMember.Getter = get_58_Inferior_Item;
+                xamlMember.Setter = set_58_Inferior_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Izquierda");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_58_Izquierda_Item;
-                xamlMember.Setter = set_58_Izquierda_Item;
+                xamlMember.Getter = get_59_Izquierda_Item;
+                xamlMember.Setter = set_59_Izquierda_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.Pieza_Dental.Superior");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_59_Superior_Item;
-                xamlMember.Setter = set_59_Superior_Item;
+                xamlMember.Getter = get_60_Superior_Item;
+                xamlMember.Setter = set_60_Superior_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto.Item":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Item", "Cnt.Panacea.Entities.Odontologia.ConfigurarDiagnosticoProcedimOtraEntity");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_60_UserControlColorDienteCompleto_Item;
-                xamlMember.Setter = set_60_UserControlColorDienteCompleto_Item;
+                xamlMember.Getter = get_61_UserControlColorDienteCompleto_Item;
+                xamlMember.Setter = set_61_UserControlColorDienteCompleto_Item;
                 break;
             case "Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto.realizado":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Cnt.Panacea.Xap.Odontologia.Assets.UserControlColorDienteCompleto");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "realizado", "Boolean");
-                xamlMember.Getter = get_61_UserControlColorDienteCompleto_realizado;
-                xamlMember.Setter = set_61_UserControlColorDienteCompleto_realizado;
+                xamlMember.Getter = get_62_UserControlColorDienteCompleto_realizado;
+                xamlMember.Setter = set_62_UserControlColorDienteCompleto_realizado;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.Title":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_62_Reportes_Template_Title;
-                xamlMember.Setter = set_62_Reportes_Template_Title;
+                xamlMember.Getter = get_63_Reportes_Template_Title;
+                xamlMember.Setter = set_63_Reportes_Template_Title;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.ItemsSource":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "ItemsSource", "System.Collections.IEnumerable");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_63_Reportes_Template_ItemsSource;
-                xamlMember.Setter = set_63_Reportes_Template_ItemsSource;
+                xamlMember.Getter = get_64_Reportes_Template_ItemsSource;
+                xamlMember.Setter = set_64_Reportes_Template_ItemsSource;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.PageHeaderTemplate":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "PageHeaderTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_64_Reportes_Template_PageHeaderTemplate;
-                xamlMember.Setter = set_64_Reportes_Template_PageHeaderTemplate;
+                xamlMember.Getter = get_65_Reportes_Template_PageHeaderTemplate;
+                xamlMember.Setter = set_65_Reportes_Template_PageHeaderTemplate;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.ItemTemplate":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "ItemTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_65_Reportes_Template_ItemTemplate;
-                xamlMember.Setter = set_65_Reportes_Template_ItemTemplate;
+                xamlMember.Getter = get_66_Reportes_Template_ItemTemplate;
+                xamlMember.Setter = set_66_Reportes_Template_ItemTemplate;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.PageFooterTemplate":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "PageFooterTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_66_Reportes_Template_PageFooterTemplate;
-                xamlMember.Setter = set_66_Reportes_Template_PageFooterTemplate;
+                xamlMember.Getter = get_67_Reportes_Template_PageFooterTemplate;
+                xamlMember.Setter = set_67_Reportes_Template_PageFooterTemplate;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.ReportFooterTemplate":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "ReportFooterTemplate", "Windows.UI.Xaml.DataTemplate");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_67_Reportes_Template_ReportFooterTemplate;
-                xamlMember.Setter = set_67_Reportes_Template_ReportFooterTemplate;
+                xamlMember.Getter = get_68_Reportes_Template_ReportFooterTemplate;
+                xamlMember.Setter = set_68_Reportes_Template_ReportFooterTemplate;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.Grid":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Grid", "Windows.UI.Xaml.Controls.Grid");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_68_Reportes_Template_Grid;
-                xamlMember.Setter = set_68_Reportes_Template_Grid;
+                xamlMember.Getter = get_69_Reportes_Template_Grid;
+                xamlMember.Setter = set_69_Reportes_Template_Grid;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.Texto":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Texto", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_69_Reportes_Template_Texto;
-                xamlMember.Setter = set_69_Reportes_Template_Texto;
+                xamlMember.Getter = get_70_Reportes_Template_Texto;
+                xamlMember.Setter = set_70_Reportes_Template_Texto;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.Imagen":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Imagen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_70_Reportes_Template_Imagen;
-                xamlMember.Setter = set_70_Reportes_Template_Imagen;
+                xamlMember.Getter = get_71_Reportes_Template_Imagen;
+                xamlMember.Setter = set_71_Reportes_Template_Imagen;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.ImagenOdontograma":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "ImagenOdontograma", "Windows.UI.Xaml.Controls.Image");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_71_Reportes_Template_ImagenOdontograma;
-                xamlMember.Setter = set_71_Reportes_Template_ImagenOdontograma;
+                xamlMember.Getter = get_72_Reportes_Template_ImagenOdontograma;
+                xamlMember.Setter = set_72_Reportes_Template_ImagenOdontograma;
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.CurrentPageNumber":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "CurrentPageNumber", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_72_Reportes_Template_CurrentPageNumber;
+                xamlMember.Getter = get_73_Reportes_Template_CurrentPageNumber;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.TotalPageCount":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "TotalPageCount", "Int32");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_73_Reportes_Template_TotalPageCount;
+                xamlMember.Getter = get_74_Reportes_Template_TotalPageCount;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Reportes_Template.PrintDocument":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Reportes_Template");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "PrintDocument", "Windows.UI.Xaml.Printing.PrintDocument");
-                xamlMember.Getter = get_74_Reportes_Template_PrintDocument;
+                xamlMember.Getter = get_75_Reportes_Template_PrintDocument;
                 xamlMember.SetIsReadOnly();
                 break;
             case "Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento.document":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Util.Reportes.Templates.Plan_Tratamiento");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "document", "Hefesoft.Pdf.Entities.Document");
-                xamlMember.Getter = get_75_Plan_Tratamiento_document;
-                xamlMember.Setter = set_75_Plan_Tratamiento_document;
+                xamlMember.Getter = get_76_Plan_Tratamiento_document;
+                xamlMember.Setter = set_76_Plan_Tratamiento_document;
                 break;
             case "Callisto.Controls.CustomDialog.Title":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.CustomDialog");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_76_CustomDialog_Title;
-                xamlMember.Setter = set_76_CustomDialog_Title;
+                xamlMember.Getter = get_77_CustomDialog_Title;
+                xamlMember.Setter = set_77_CustomDialog_Title;
                 break;
             case "Callisto.Controls.CustomDialog.BackButtonVisibility":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.CustomDialog");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "BackButtonVisibility", "Windows.UI.Xaml.Visibility");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_77_CustomDialog_BackButtonVisibility;
-                xamlMember.Setter = set_77_CustomDialog_BackButtonVisibility;
+                xamlMember.Getter = get_78_CustomDialog_BackButtonVisibility;
+                xamlMember.Setter = set_78_CustomDialog_BackButtonVisibility;
                 break;
             case "Callisto.Controls.CustomDialog.IsOpen":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.CustomDialog");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "IsOpen", "Boolean");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_78_CustomDialog_IsOpen;
-                xamlMember.Setter = set_78_CustomDialog_IsOpen;
+                xamlMember.Getter = get_79_CustomDialog_IsOpen;
+                xamlMember.Setter = set_79_CustomDialog_IsOpen;
                 break;
             case "Callisto.Controls.CustomDialog.BackButtonCommand":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.CustomDialog");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "BackButtonCommand", "System.Windows.Input.ICommand");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_79_CustomDialog_BackButtonCommand;
-                xamlMember.Setter = set_79_CustomDialog_BackButtonCommand;
+                xamlMember.Getter = get_80_CustomDialog_BackButtonCommand;
+                xamlMember.Setter = set_80_CustomDialog_BackButtonCommand;
                 break;
             case "Callisto.Controls.CustomDialog.BackButtonCommandParameter":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.CustomDialog");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "BackButtonCommandParameter", "Object");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_80_CustomDialog_BackButtonCommandParameter;
-                xamlMember.Setter = set_80_CustomDialog_BackButtonCommandParameter;
+                xamlMember.Getter = get_81_CustomDialog_BackButtonCommandParameter;
+                xamlMember.Setter = set_81_CustomDialog_BackButtonCommandParameter;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario.Cerrar":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Layouts.Agregar_Supernumerario");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Cerrar", "System.Action`1<Boolean>");
-                xamlMember.Getter = get_81_Agregar_Supernumerario_Cerrar;
-                xamlMember.Setter = set_81_Agregar_Supernumerario_Cerrar;
+                xamlMember.Getter = get_82_Agregar_Supernumerario_Cerrar;
+                xamlMember.Setter = set_82_Agregar_Supernumerario_Cerrar;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar.EstadoSobreEscribirAdicionar":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "EstadoSobreEscribirAdicionar", "Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar");
-                xamlMember.Getter = get_82_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar;
-                xamlMember.Setter = set_82_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar;
+                xamlMember.Getter = get_83_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar;
+                xamlMember.Setter = set_83_SobreEscribirAdicionar_EstadoSobreEscribirAdicionar;
                 break;
             case "Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar.Cerrar":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Hefesoft.Odontograma.Assets.PopUp.Layouts.SobreEscribirAdicionar");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Cerrar", "System.Action`1<Cnt.Panacea.Xap.Odontologia.Vm.Util.PopUp.EstadoSobreEscribirAdicionar>");
-                xamlMember.Getter = get_83_SobreEscribirAdicionar_Cerrar;
-                xamlMember.Setter = set_83_SobreEscribirAdicionar_Cerrar;
+                xamlMember.Getter = get_84_SobreEscribirAdicionar_Cerrar;
+                xamlMember.Setter = set_84_SobreEscribirAdicionar_Cerrar;
                 break;
             case "Callisto.Controls.DynamicTextBlock.Text":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.DynamicTextBlock");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "Text", "String");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_84_DynamicTextBlock_Text;
-                xamlMember.Setter = set_84_DynamicTextBlock_Text;
+                xamlMember.Getter = get_85_DynamicTextBlock_Text;
+                xamlMember.Setter = set_85_DynamicTextBlock_Text;
                 break;
             case "Callisto.Controls.DynamicTextBlock.TextWrapping":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.DynamicTextBlock");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "TextWrapping", "Windows.UI.Xaml.TextWrapping");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_85_DynamicTextBlock_TextWrapping;
-                xamlMember.Setter = set_85_DynamicTextBlock_TextWrapping;
+                xamlMember.Getter = get_86_DynamicTextBlock_TextWrapping;
+                xamlMember.Setter = set_86_DynamicTextBlock_TextWrapping;
                 break;
             case "Callisto.Controls.DynamicTextBlock.LineHeight":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.DynamicTextBlock");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "LineHeight", "Double");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_86_DynamicTextBlock_LineHeight;
-                xamlMember.Setter = set_86_DynamicTextBlock_LineHeight;
+                xamlMember.Getter = get_87_DynamicTextBlock_LineHeight;
+                xamlMember.Setter = set_87_DynamicTextBlock_LineHeight;
                 break;
             case "Callisto.Controls.DynamicTextBlock.LineStackingStrategy":
                 userType = (global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlUserType)GetXamlTypeByName("Callisto.Controls.DynamicTextBlock");
                 xamlMember = new global::Hefesoft.Odontograma.Hefesoft_Odontograma_XamlTypeInfo.XamlMember(this, "LineStackingStrategy", "Windows.UI.Xaml.LineStackingStrategy");
                 xamlMember.SetIsDependencyProperty();
-                xamlMember.Getter = get_87_DynamicTextBlock_LineStackingStrategy;
-                xamlMember.Setter = set_87_DynamicTextBlock_LineStackingStrategy;
+                xamlMember.Getter = get_88_DynamicTextBlock_LineStackingStrategy;
+                xamlMember.Setter = set_88_DynamicTextBlock_LineStackingStrategy;
                 break;
             }
             return xamlMember;

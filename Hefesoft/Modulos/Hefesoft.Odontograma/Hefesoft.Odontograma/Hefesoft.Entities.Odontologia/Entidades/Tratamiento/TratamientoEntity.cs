@@ -49,6 +49,6 @@ namespace Hefesoft.Entities.Odontologia.Tratamiento
         public decimal? ValorSesion { get; set; }
 
         public bool generarIdentificador { get; set; }
-
+        public string urlPreviewOdontograma { get; set; }
     }
 }

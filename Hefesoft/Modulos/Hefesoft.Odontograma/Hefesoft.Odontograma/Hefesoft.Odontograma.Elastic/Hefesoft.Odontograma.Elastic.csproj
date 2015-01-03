@@ -77,6 +77,8 @@
     <Compile Include="Locator\ViewModelLocator.cs" />
     <Compile Include="Mapa Dental\util\listado.cs" />
     <Compile Include="Mapa Dental\Vm.cs" />
+    <Compile Include="Menus\Entidades\Menu_Odontograma.cs" />
+    <Compile Include="Menus\Tipos_Odontograma\VM.cs" />
     <Compile Include="Messenger\Barra\Barra.cs" />
     <Compile Include="Messenger\Boca\Boca.cs" />
     <Compile Include="Messenger\Finalizar\Consultar_Usuario_Cierra.cs" />
@@ -118,7 +120,7 @@
     <Compile Include="Service References\Proxy.cs" />
     <Compile Include="Servicio\Client.cs" />
     <Compile Include="Supernumerario\Agregar_Supernumerario.cs" />
-    <Compile Include="Tipos_Odontograma\PacienteTratamientosViewModel.cs" />
+    <Compile Include="Pacientes\PacienteTratamientosViewModel.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Inicial\Json Objects\Inicial.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Json Implementation\vm.partial.cs" />
     <Compile Include="Tipos_Odontograma\Partial\Plan tratamiento\Sample Data\Sample.cs" />

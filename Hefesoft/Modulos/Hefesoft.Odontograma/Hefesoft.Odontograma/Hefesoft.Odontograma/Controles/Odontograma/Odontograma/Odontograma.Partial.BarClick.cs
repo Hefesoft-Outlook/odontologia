@@ -6,6 +6,7 @@ using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Odontograma.Tipo;
 using Cnt.Panacea.Xap.Odontologia.Vm.Messenger.Paleta;
 using GalaSoft.MvvmLight.Messaging;
 using Hefesoft.Entities.Odontologia.Odontograma;
+using Hefesoft.Util.W8.UI.Util;
 using Microsoft.Practices.ServiceLocation;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,21 @@ namespace Hefesoft.Odontograma
 {
     public sealed partial class Odontograma : Page, IDisposable
     {
-
-        private void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        private void oirMoverHubMapaDental()
         {
+            GalaSoft.MvvmLight.Messaging.Messenger.Default.Register<string>(this, "Mover a mapa dental", Item=>
+            {
+                var elemento = hbOdontograma.Sections.ElementAt(4);
+                hbOdontograma.ScrollToSection(elemento);
+            });
+        }
+
+        private async void BttnGuardar_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            var elemento = hbOdontograma.Sections.ElementAt(4);
+            var snap = new Snapshot();
+            Variables_Globales.urlImagenTratamiento = await snap.snapShot(elemento, string.Format("{0}.jpg", Variables_Globales.IdTratamientoActivo), 10, 10);            
+
             if (Variables_Globales.Tipo_Odontograma_Activo == Tipo_Odontograma.Inicial)
             {
                 GalaSoft.MvvmLight.Messaging.Messenger.Default.Send(new Guardar_Barra_Comando(), "Inicial");

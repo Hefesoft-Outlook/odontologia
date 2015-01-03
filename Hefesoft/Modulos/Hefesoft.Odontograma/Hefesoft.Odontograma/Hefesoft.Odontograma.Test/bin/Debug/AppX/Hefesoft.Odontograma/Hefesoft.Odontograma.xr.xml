@@ -38,6 +38,8 @@
     <RootPropertyPathName Name="FechaRegistro" />
     <RootPropertyPathName Name="FechaFinal" />
     <RootPropertyPathName Name="FechaInicial" />
+    <RootPropertyPathName Name="Convenio" />
+    <RootPropertyPathName Name="Adjuntos" />
     <RootPropertyPathName Name="Procedimentos_Paciente" />
     <RootPropertyPathName Name="tratamientosPaciente" />
     <RootPropertyPathName Name="Seleccionado" />
@@ -76,6 +78,10 @@
     <RootPropertyPathName Name="ProcedimientosEspecialidad" />
     <RootPropertyPathName Name="ProcedimientosEspecialidadValor" />
     <RootPropertyPathName Name="Listado" />
+    <RootPropertyPathName Name="Listado_Tipos_Odontogramas" />
+    <RootPropertyPathName Name="UrlImagen" />
+    <RootPropertyPathName Name="verTitulosUrlImagen" />
+    <RootPropertyPathName Name="Lst" />
     <RootPropertyPathName Name="Description" />
     <RootPropertyPathName Name="Title" />
     <RootPropertyPathName Name="ImagePath" />
@@ -203,6 +209,8 @@
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemContainerStyle" />
       <RootProperty Name="SelectedItem" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="ItemsPanel" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Automation.AutomationProperties">
       <RootMethod Name="GetAutomationId" />
@@ -385,9 +393,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Visibility" />
       <RootProperty Name="IsHitTestVisible" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Visibility" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Opacity" />
@@ -496,6 +504,14 @@
       <RootProperty Name="IsHeaderInteractive" />
     </RootType>
     <RootType FullName="Hefesoft.Odontograma.Grillas.Plan_tratamiento.UserControlGuardarPlanTratamiento" />
+    <RootType FullName="Callisto.Converters.BooleanToVisibilityConverter" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ItemsStackPanel">
+      <RootProperty Name="Orientation" />
+    </RootType>
+    <RootType FullName="Hefesoft.Odontograma.Controles.Odontograma.Menus.Listado_Tipos_Odontogramas" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
       <RootProperty Name="Resources" />
       <RootProperty Name="DataContext" />
@@ -539,9 +555,6 @@
       <RootProperty Name="verSeleccionado" />
     </RootType>
     <RootType FullName="Hefesoft.Odontograma.Odontograma" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ItemsPanelTemplate">
-      <RootProperty Name="Template" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemTemplate" />
       <RootProperty Name="ItemsSource" />

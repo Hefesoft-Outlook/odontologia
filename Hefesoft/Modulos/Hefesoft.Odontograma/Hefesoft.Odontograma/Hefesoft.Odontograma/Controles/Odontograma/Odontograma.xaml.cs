@@ -25,6 +25,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Hefesoft.Util.W8.UI.Util;
 
 // The Hub Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=321224
 
@@ -40,7 +41,9 @@ namespace Hefesoft.Odontograma
             this.InitializeComponent();            
             oirMensaje();
             addBusy();
-            oirCambiosBotones(); 
+            oirCambiosBotones();
+            oirMoverHubMapaDental();
+
             NavigationHelper = new Hefesoft.Util.W8.UI.Common.NavigationHelper();
             NavigationHelper.setPage(this);
 
@@ -74,13 +77,8 @@ namespace Hefesoft.Odontograma
             #endif
         }
 
-        public NavigationHelper NavigationHelper { get; set; }
-
-        private async void snap()
-        {
-            Hefesoft.Odontograma.Hub_Partial.Snapshot snap = new Hub_Partial.Snapshot();
-            await snap.snapShot(LayoutRoot,"imagenprueba.png");
-        }
+        
+        public NavigationHelper NavigationHelper { get; set; }        
 
         private void oirMensaje()
         {
@@ -130,8 +128,7 @@ namespace Hefesoft.Odontograma
         {
             Variables_Globales.IdTratamientoActivo = 0;
             odontogramaEvolucionBtn.IsEnabled = false;
-            odontogramaPlanTratamientoBtn.IsEnabled = false;
-            snap();
+            odontogramaPlanTratamientoBtn.IsEnabled = false;            
         }
 
         private void planTratamientoUI()

@@ -270,7 +270,10 @@ namespace MSBuild.ExtensionPack.NuGet
             }
             finally
             {
-                Directory.Delete(nugetDirectory, true);
+                CultureInfo currentCulture = CultureInfo.CurrentCulture;
+                object[] outputFile = new object[] { this.OutputFile };
+                base.LogTaskMessage(MessageImportance.High, string.Format(currentCulture, "Directorio nuget {0}", nugetDirectory));
+                //Directory.Delete(nugetDirectory, true);
             }
         }
 
