@@ -20,13 +20,13 @@
     <AppXManifest Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-01-03T01:42:01.614</Modified>
+      <Modified>2015-01-06T00:57:52.067</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.Test.exe">
       <PackagePath>Hefesoft.Odontograma.Test.exe</PackagePath>
-      <Modified>2015-01-03T02:08:14.992</Modified>
+      <Modified>2015-01-06T01:11:07.790</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\BehaviorsXamlSDKManaged\12.0\References\CommonConfiguration\Neutral\Microsoft.Xaml.Interactions.dll">
       <PackagePath>Microsoft.Xaml.Interactions.dll</PackagePath>
@@ -90,15 +90,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Entities.Odontologia\bin\Debug\Hefesoft.Entities.Odontologia.dll">
       <PackagePath>Hefesoft.Entities.Odontologia.dll</PackagePath>
-      <Modified>2015-01-03T01:38:22.760</Modified>
+      <Modified>2015-01-06T00:57:27.504</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Odontograma.dll">
       <PackagePath>Hefesoft.Odontograma.dll</PackagePath>
-      <Modified>2015-01-03T02:08:04.103</Modified>
+      <Modified>2015-01-06T01:11:02.032</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Elastic\bin\Debug\Hefesoft.Odontograma.Elastic.dll">
       <PackagePath>Hefesoft.Odontograma.Elastic.dll</PackagePath>
-      <Modified>2015-01-03T02:07:58.672</Modified>
+      <Modified>2015-01-06T01:04:25.403</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Hefesoft.Pacientes.0.0.0.1\lib\Hefesoft.Pacientes.dll">
       <PackagePath>Hefesoft.Pacientes.dll</PackagePath>
@@ -186,147 +186,147 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-01-02T21:08:46.304</Modified>
+      <Modified>2015-01-06T00:57:48.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2015-01-02T21:08:46.304</Modified>
+      <Modified>2015-01-06T00:57:48.989</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Fotos\SplipFotos.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Fotos\SplipFotos.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.566</Modified>
+      <Modified>2015-01-06T00:57:42.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Boca\Boca.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Boca\Boca.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.566</Modified>
+      <Modified>2015-01-06T00:57:42.135</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.566</Modified>
+      <Modified>2015-01-06T00:57:42.136</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xbf">
-      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\PacienteTratamientos.xbf</PackagePath>
-      <Modified>2015-01-03T01:25:17.641</Modified>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Menus\PacienteTratamientos.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Menus\PacienteTratamientos.xbf</PackagePath>
+      <Modified>2015-01-06T01:11:01.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.566</Modified>
+      <Modified>2015-01-06T00:57:42.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.567</Modified>
+      <Modified>2015-01-06T00:57:42.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.567</Modified>
+      <Modified>2015-01-06T00:57:42.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xbf</PackagePath>
-      <Modified>2015-01-03T01:56:39.525</Modified>
+      <Modified>2015-01-06T00:57:42.137</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Odontograma.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Odontograma.xbf</PackagePath>
-      <Modified>2015-01-03T01:38:41.811</Modified>
+      <Modified>2015-01-06T00:57:42.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Indices\Indices.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Indices\Indices.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.567</Modified>
+      <Modified>2015-01-06T00:57:42.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Mapa Dental\Mapa_Dental.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Mapa Dental\Mapa_Dental.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.567</Modified>
+      <Modified>2015-01-06T00:57:42.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Abajo.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Abajo.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.567</Modified>
+      <Modified>2015-01-06T00:57:42.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Arriba.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Arriba.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Central.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Central.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Derecha.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Derecha.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Inferior.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Inferior.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Izquierda.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Izquierda.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Seleccionado.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Seleccionado.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\SuperficieCompleta.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.139</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\Superior.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\Superior.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Piezas Dentales\UserControlColorDienteCompleto.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.568</Modified>
+      <Modified>2015-01-06T00:57:42.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Seleccionado\Diagnostico_Procedimientos.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Odontograma_Evolucion.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Odontograma_Inicial.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Plan_Tratamiento.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Tipos Odontograma\Tipos.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Tipos Odontograma\Tipos.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Util\Reportes\Templates\Inicial.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Util\Reportes\Templates\Inicial.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Util\Reportes\Templates\Plan_Tratamiento.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.569</Modified>
+      <Modified>2015-01-06T00:57:42.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Paleta\elementoMenu.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Paleta\elementoMenu.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.570</Modified>
+      <Modified>2015-01-06T00:57:42.141</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Paleta\Paleta.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Paleta\Paleta.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.570</Modified>
+      <Modified>2015-01-06T00:57:42.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Generico.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Generico.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.570</Modified>
+      <Modified>2015-01-06T00:57:42.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Layouts\Agregar_Supernumerario.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Layouts\Agregar_Supernumerario.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.570</Modified>
+      <Modified>2015-01-06T00:57:42.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Layouts\SobreEscribirAdicionar.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Layouts\SobreEscribirAdicionar.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.571</Modified>
+      <Modified>2015-01-06T00:57:42.142</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\PopUp\Modal.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\PopUp\Modal.xbf</PackagePath>
-      <Modified>2015-01-02T23:25:09.571</Modified>
+      <Modified>2015-01-06T00:57:42.143</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\Hefesoft.Odontograma.Test.xr.xml">
       <PackagePath>Hefesoft.Odontograma.Test.xr.xml</PackagePath>
@@ -334,7 +334,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Odontograma.xr.xml">
       <PackagePath>Hefesoft.Odontograma\Hefesoft.Odontograma.xr.xml</PackagePath>
-      <Modified>2015-01-03T01:56:39.452</Modified>
+      <Modified>2015-01-06T01:11:00.996</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\packages\Callisto.1.4.0\lib\netcore451\Callisto\themes\Generic.xbf">
       <PackagePath>Callisto\themes\Generic.xbf</PackagePath>
@@ -370,7 +370,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma.Test\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-01-03T02:02:54.471</Modified>
+      <Modified>2015-01-06T01:11:09.099</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

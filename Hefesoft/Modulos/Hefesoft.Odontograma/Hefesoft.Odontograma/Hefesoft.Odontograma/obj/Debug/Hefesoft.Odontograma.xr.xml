@@ -35,11 +35,9 @@
     <RootPropertyPathName Name="NumeroSesionesConfiguradas" />
     <RootPropertyPathName Name="cambioSesionCommand" />
     <RootPropertyPathName Name="SelectedValue" />
-    <RootPropertyPathName Name="FechaRegistro" />
-    <RootPropertyPathName Name="FechaFinal" />
-    <RootPropertyPathName Name="FechaInicial" />
     <RootPropertyPathName Name="Convenio" />
     <RootPropertyPathName Name="Adjuntos" />
+    <RootPropertyPathName Name="FechaRegistro" />
     <RootPropertyPathName Name="Procedimentos_Paciente" />
     <RootPropertyPathName Name="tratamientosPaciente" />
     <RootPropertyPathName Name="Seleccionado" />
@@ -245,6 +243,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Background" />
       <RootProperty Name="DataContext" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
@@ -393,9 +392,9 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="Visibility" />
       <RootProperty Name="IsHitTestVisible" />
-      <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootProperty Name="TextAlignment" />
       <RootProperty Name="Opacity" />
@@ -470,6 +469,11 @@
       <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Hefesoft.Odontograma.Grillas.Evolucion.SplitEvolucion" />
+    <RootType FullName="Windows.UI.Xaml.Controls.GridView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="ItemTemplate" />
+      <RootProperty Name="SelectedItem" />
+    </RootType>
     <RootType FullName="Hefesoft.Odontograma.Grillas.PacienteTratamientos" />
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Margin" />

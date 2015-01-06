@@ -152,8 +152,8 @@
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xbf">
-      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\PacienteTratamientos.xbf</PackagePath>
+    <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Menus\PacienteTratamientos.xbf">
+      <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Menus\PacienteTratamientos.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf">
       <PackagePath>Hefesoft.Odontograma\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf</PackagePath>

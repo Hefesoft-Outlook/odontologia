@@ -15,8 +15,8 @@
         <vm:ViewModelLocator xmlns:vm="using:Cnt.Panacea.Xap.Odontologia.Vm.View_Model_Locator" x:Key="Locator" />
 
         <DataTemplate x:Key="DataTemplate">
-            <StackPanel>
-                <TextBlock Text="{Binding Descripcion}"/>
+            <StackPanel Background="#FF038B03">
+                <TextBlock Text="{Binding Descripcion}" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
         </DataTemplate>
 

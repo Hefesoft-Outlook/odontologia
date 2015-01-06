@@ -89,9 +89,12 @@ public static class Convertir_Observables
              {
                  try
                  {
-                     Mapper.CreateMap<T, P>();
-                     P elemento = Mapper.DynamicMap<P>(item);
-                     lst.Add(elemento);
+                     if (item != null)
+                     {
+                         Mapper.CreateMap<T, P>().ForAllMembers(op => op.Condition(x => !x.IsSourceValueNull));
+                         P elemento = Mapper.DynamicMap<P>(item);
+                         lst.Add(elemento);
+                     }
                  }
                  catch
                  {

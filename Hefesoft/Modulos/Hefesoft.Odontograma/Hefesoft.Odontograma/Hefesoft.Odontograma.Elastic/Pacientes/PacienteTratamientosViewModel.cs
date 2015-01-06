@@ -41,7 +41,12 @@ namespace Cnt.Panacea.Xap.ViewModels
         public PacienteTratamientosViewModel()
         {
             try
-            {   
+            {
+                if (IsInDesignMode)
+                {
+                    disenio();
+                }
+
                 nuevoTratamientoCommand = new RelayCommand(nuevoTratamiento);
                 seleccionarTratamientoCommand = new RelayCommand<TratamientoEntity>(seleccionarTratamiento);
                 odontogramaSinTratamientoCommand = new RelayCommand<OdontogramasPacienteEntity>(odontogramaSinTratamiento);                
@@ -52,6 +57,28 @@ namespace Cnt.Panacea.Xap.ViewModels
                 //Mostrar mensaje ex
             }
 
+        }
+
+        private void disenio()
+        {
+            if(tratamientosPaciente == null)
+            {
+                tratamientosPaciente = new ObservableCollection<TratamientoEntity>();
+                var elemento = new TratamientoEntity()
+                {
+                    FechaInicial = DateTime.Now,
+                    FechaFinal = DateTime.Now,
+                    FechaRegistro = DateTime.Now,
+                    Descripcion = "Texto descripcion",
+                    Convenio = new ConvenioEntity()
+                    {
+                        Adjuntos = new ConvenioComentariosAdjuntosCollection()
+                    }
+                };
+
+                elemento.Convenio.Adjuntos.Add(new ConvenioComentarioAdjuntoEntity() { Ruta = "https://hefesoft.blob.core.windows.net/imagenes/1001.jpg" });
+                tratamientosPaciente.Add(elemento);
+            }
         }
 
         /// <summary>

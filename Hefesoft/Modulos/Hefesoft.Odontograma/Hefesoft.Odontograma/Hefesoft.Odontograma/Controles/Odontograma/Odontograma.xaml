@@ -9,14 +9,14 @@
 	xmlns:Mapa_Dental="using:Cnt.Panacea.Xap.Odontologia.W8.Mapa_Dental"
 	xmlns:Piezas_Dentales="using:Hefesoft.Odontograma.Piezas_Dentales"
 	xmlns:Mapa_Dental1="using:Hefesoft.Odontograma.Mapa_Dental"
-	xmlns:Pacientes="using:Hefesoft.Odontograma.Grillas"
+	xmlns:Listado_Tratamientos="using:Hefesoft.Odontograma.Grillas"
 	xmlns:Tipos_Odontograma="using:Hefesoft.Odontograma.Tipos_Odontograma"
     xmlns:Listado_Tipos_Odontograma="using:Hefesoft.Odontograma.Controles.Odontograma.Menus"
 	xmlns:Generico="using:Hefesoft.Odontograma.Assets.PopUp"
 	xmlns:Odontologia="using:Cnt.Panacea.Xap.Odontologia"
 	xmlns:Assets="using:Hefesoft.Odontograma.Assets.Indices"
 	xmlns:login="using:Hefesoft.Odontograma.Auth"
-	xmlns:Pacientes1="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
+	xmlns:Pacientes="using:Hefesoft.Pacientes.Controles.Grillas.Pacientes"
 	xmlns:Seleccionado="using:Hefesoft.Odontograma.Controles.Odontograma.Seleccionado"
 	x:Name="pageRoot"
 	x:Class="Hefesoft.Odontograma.Odontograma"
@@ -111,13 +111,13 @@
 
 			<HubSection>
 				<DataTemplate>
-					<Pacientes1:SplitPacientes verTitulo="False" verSeleccionado="False"/>
+					<Pacientes:SplitPacientes verTitulo="False" verSeleccionado="False"/>
 				</DataTemplate>
 			</HubSection>
 
 			<HubSection Margin="0,0,20,0">
 				<DataTemplate>
-					<Pacientes:PacienteTratamientos/>
+                    <Listado_Tratamientos:PacienteTratamientos/>
 				</DataTemplate>
 			</HubSection>
 

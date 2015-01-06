@@ -11,6 +11,7 @@ using Hefesoft.Entities.Odontologia.Util;
 using Hefesoft.Standard.BusyBox;
 using Hefesoft.Standard.Util.Blob;
 using Hefesoft.Standard.Util.table;
+using Hefesoft.Standard.Util.Collection.Observables;
 
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Diagnosticos_Procedimientos

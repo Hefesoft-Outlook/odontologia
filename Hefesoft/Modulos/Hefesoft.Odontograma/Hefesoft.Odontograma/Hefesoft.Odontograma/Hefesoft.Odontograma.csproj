@@ -112,7 +112,7 @@
     <Compile Include="Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml.cs">
       <DependentUpon>SplitEvolucion.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controles\Odontograma\Grillas\PacienteTratamientos.xaml.cs">
+    <Compile Include="Controles\Odontograma\Menus\PacienteTratamientos.xaml.cs">
       <DependentUpon>PacienteTratamientos.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml.cs">
@@ -325,7 +325,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controles\Odontograma\Grillas\PacienteTratamientos.xaml">
+    <Page Include="Controles\Odontograma\Menus\PacienteTratamientos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

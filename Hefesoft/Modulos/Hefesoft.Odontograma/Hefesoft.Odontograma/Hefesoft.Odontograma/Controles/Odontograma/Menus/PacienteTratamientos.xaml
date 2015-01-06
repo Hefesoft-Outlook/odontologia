@@ -16,18 +16,26 @@
         
         <DataTemplate x:Key="DataTemplateTratamientos">
             <StackPanel>
-                <Image Width="60" Source="{Binding Convenio.Adjuntos[0].Ruta}" />
-                <TextBlock x:Uid="FechaInicial" Text="Fecha Inicial"/>
-                <TextBlock Text="{Binding FechaInicial}"/>
 
-                <TextBlock x:Uid="FechaFinal" Text="Fecha Final"/>
-                <TextBlock Text="{Binding FechaFinal}"/>
+            	<StackPanel Orientation="Horizontal">
 
-                <TextBlock x:Uid="FechaRegistro" Text="Fecha Registro"/>
-                <TextBlock Text="{Binding FechaRegistro}"/>
+            		<StackPanel Orientation="Vertical">
 
-                <TextBlock x:Uid="Descripcion" Text="Descripcion"/>
-                <TextBlock Text="{Binding Descripcion}"/>
+            			<TextBlock x:Uid="FechaRegistro" Text="Fecha Registro"/>
+            			<TextBlock Text="{Binding FechaRegistro}"/>
+
+            		</StackPanel>
+            		<StackPanel Orientation="Vertical" Margin="10,0,0,0">
+
+            			<TextBlock x:Uid="Descripcion" Text="Descripcion"/>
+            			<TextBlock Text="{Binding Descripcion}"/>
+
+            		</StackPanel>
+
+            	</StackPanel>
+
+            	<Image Width="400" Source="{Binding Convenio.Adjuntos[0].Ruta}" />
+                
             </StackPanel>
         </DataTemplate>
     </UserControl.Resources>
@@ -37,12 +45,11 @@
     </UserControl.DataContext>
 
     <Grid>
-
-        <ListView 
-            ItemsSource="{Binding tratamientosPaciente}" 
-            ItemTemplate="{StaticResource DataTemplateTratamientos}" 
-            SelectedItem="{Binding Seleccionado, Mode=TwoWay}">
-        </ListView>        
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition/>
+    	</Grid.ColumnDefinitions>
+      
+        <GridView ItemsSource="{Binding tratamientosPaciente}" ItemTemplate="{StaticResource DataTemplateTratamientos}" SelectedItem="{Binding Seleccionado, Mode=TwoWay}"/>        
     </Grid>
 
 </UserControl>

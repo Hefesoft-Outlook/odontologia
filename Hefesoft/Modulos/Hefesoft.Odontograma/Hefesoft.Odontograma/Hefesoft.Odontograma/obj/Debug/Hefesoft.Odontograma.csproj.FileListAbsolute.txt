@@ -2,7 +2,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Fotos\SplipFotos.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Boca\Boca.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf
@@ -81,8 +80,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Boca\Boca.g.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.g.i.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.g.cs
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.g.i.cs
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.g.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.g.i.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.g.cs
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.g.i.cs
@@ -141,7 +138,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Fotos\SplipFotos.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Boca\Boca.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xaml
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xaml
@@ -171,7 +167,6 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Fotos\SplipFotos.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Boca\Boca.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Evolucion\SplitEvolucion.xbf
-D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\PacienteTratamientos.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\Forma_Pago.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\SplitPlanTratamiento.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Grillas\Plan tratamiento\UserControlGuardarPlanTratamiento.xbf
@@ -470,3 +465,8 @@ D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefeso
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xaml
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\Listado_Tipos_Odontogramas.xbf
 D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Hefesoft.Azure.Helpers.dll
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\PacienteTratamientos.g.i.cs
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\PacienteTratamientos.g.cs
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\bin\Debug\Controles\Odontograma\Menus\PacienteTratamientos.xbf
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\PacienteTratamientos.xaml
+D:\Hefesoft\Odontologia\odontologia\Hefesoft\Modulos\Hefesoft.Odontograma\Hefesoft.Odontograma\Hefesoft.Odontograma\obj\Debug\Controles\Odontograma\Menus\PacienteTratamientos.xbf

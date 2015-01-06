@@ -8,6 +8,8 @@ using GalaSoft.MvvmLight.Command;
 using Hefesoft.Standard.BusyBox;
 using Hefesoft.Standard.Util.Blob;
 using Hefesoft.Standard.Util.table;
+using Hefesoft.Standard.Util.Collection.Observables;
+using Hefesoft.Standard.Util.Collection.IEnumerable;
 
 
 namespace Hefesoft.Entities.Odontologia.ViewModel.Niveles_Severidad
